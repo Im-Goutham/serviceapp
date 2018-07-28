@@ -51,7 +51,8 @@
 				<true/>
 			</dict>
 		</dict>
-		<key>CFBundleURLTypes</key>
+	</dict>
+	   <key>CFBundleURLTypes</key>
 		<array>
 		<dict>
 		<key>CFBundleURLSchemes</key>
@@ -71,6 +72,5 @@
 		<string>fbauth2</string>
 		<string>fbshareextension</string>
 		</array>
-	</dict>
 </dict>
 </plist>

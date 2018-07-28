@@ -2,27 +2,31 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
-import { LoginButton } from 'react-native-fbsdk';
-
+import { LoginButton, AccessToken } from 'react-native-fbsdk';
+import { createStackNavigator } from 'react-navigation';
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
       <LoginButton
-          publishPermissions={["email"]}
+          readPermissions={["public_profile email"]}
           onLoginFinished={
             (error, result) => {
               if (error) {
-                alert("Login failed with error: " + error.message);
+                alert("login has error: " + result.error);
               } else if (result.isCancelled) {
-                alert("Login was cancelled");
+                alert("login is cancelled.");
               } else {
-                alert("Login was successful with permissions: " + result.grantedPermissions)
+                AccessToken.getCurrentAccessToken().then(
+                  (data) => {
+                    alert(data.accessToken.toString())
+                  }
+                )
               }
             }
           }
-          onLogoutFinished={() => alert("User logged out")}/>
+          onLogoutFinished={() => alert("logout.")}/>
     </View>
     );
   }
