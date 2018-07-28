@@ -2,34 +2,21 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, View} from 'react-native';
-import { LoginButton, AccessToken } from 'react-native-fbsdk';
-import { createStackNavigator } from 'react-navigation';
+import FacebookLogin from './Components/FacebookLogin';
+import GoogleSignIn from './Components/GoogleSignIn';
+
 
 export default class App extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <LoginButton
-          readPermissions={["public_profile email"]}
-          onLoginFinished={
-            (error, result) => {
-              if (error) {
-                alert("login has error: " + result.error);
-              } else if (result.isCancelled) {
-                alert("login is cancelled.");
-              } else {
-                AccessToken.getCurrentAccessToken().then(
-                  (data) => {
-                    alert(data.accessToken.toString())
-                  }
-                )
-              }
-            }
-          }
-          onLogoutFinished={() => alert("logout.")}/>
+       <FacebookLogin />
+       <GoogleSignIn />
     </View>
     );
   }
+
+
 }
 
 const styles = StyleSheet.create({

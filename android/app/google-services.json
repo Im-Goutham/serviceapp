@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "954330942455",
+    "firebase_url": "https://atomx-sample.firebaseio.com",
+    "project_id": "atomx-sample",
+    "storage_bucket": "atomx-sample.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954330942455:android:5771b399020d6a72",
+        "android_client_info": {
+          "package_name": "com.spotjobs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954330942455-45ure4eh2lpqecb13b5sc6b9oiv7lgfg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.spotjobs",
+            "certificate_hash": "b4127a52e6da0cf8059938fddd064b0a8898505c"
+          }
+        },
+        {
+          "client_id": "954330942455-ulcceeg1amfqheblkiks8slos4v59mjv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAODX6YRTe9hr01DkvfcHKFhoyFe77I6a0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954330942455-ulcceeg1amfqheblkiks8slos4v59mjv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
