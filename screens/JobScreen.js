@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { Icon } from 'native-base';
 import Header from '../components/Header';
+import Map from '../components/Map';
 
 class JobScreen extends Component {
 
@@ -11,10 +11,7 @@ class JobScreen extends Component {
            <View style={{flex:1}}>
             <Header navigation={this.props.navigation}  title={'Jobs'}/>
             <View style={styles.container}>
-               <Text>JobScreen</Text>
-               <Text>JobScreen</Text>
-               <Text>JobScreen</Text>
-               <Text>CreateScreen</Text>
+               <Map/>
             </View>
            </View>
        )
