@@ -30,7 +30,7 @@ export default class GoogleSigninSampleApp extends Component {
 
     await GoogleSignin.configure({
       ...configPlatform,
-      webClientId: '954330942455-45ure4eh2lpqecb13b5sc6b9oiv7lgfg.apps.googleusercontent.com',
+      webClientId: '954330942455-t5gdbb0hc7rla4u7bsrotvdp6kvpd27c.apps.googleusercontent.com',
       offlineAccess: false,
     });
   }
