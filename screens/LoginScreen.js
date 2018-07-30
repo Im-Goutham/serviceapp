@@ -10,7 +10,6 @@ class LoginScreen extends Component {
       console.log('navigation props are ',this.props);
        return (
            <View style={{flex:1}}>
-               <Header navigation={this.props.navigation} title={'Settings'}/>
                <View style={styles.container}>
                <Text>LoginScreen</Text>
                <Text>LoginScreen</Text>
