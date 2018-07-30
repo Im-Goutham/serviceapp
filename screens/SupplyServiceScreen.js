@@ -4,17 +4,17 @@ import { View, Text, StyleSheet } from 'react-native';
 import Header from '../components/Header';
 
 
-class HomeScreen extends Component {
+class SupplyServiceScreen extends Component {
   
     render() {
        return (
            <View style={{flex:1}}>
-               <Header navigation={this.props.navigation} title={'Home'}/>
+               <Header navigation={this.props.navigation} title={'SupplyServiceScreen'}/>
                <View style={styles.container}>
-               <Text>HomeScreen</Text>
-               <Text>HomeScreen</Text>
-               <Text>HomeScreen</Text>
-               <Text>HomeScreen</Text>
+               <Text>SupplyServiceScreen</Text>
+               <Text>SupplyServiceScreen</Text>
+               <Text>SupplyServiceScreen</Text>
+               <Text>SupplyServiceScreen</Text>
                </View>
            </View>
        )
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default HomeScreen;
+export default SupplyServiceScreen;

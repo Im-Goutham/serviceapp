@@ -2,10 +2,10 @@ import React from 'react';
 import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'native-base';
 
-import FavoriteScreen from '../screens/FavoriteScreen';
+import JobScreen from '../screens/JobScreen';
 import HomeScreen from '../screens/HomeScreen';
-import MediaScreen from '../screens/MediaScreen';
-import CreateScreen from '../screens/CreateScreen';
+import ServiceScreen from '../screens/ServiceScreen';
+import NotificationScreen from '../screens/NotificationScreen';
 
 
 import CustomTabBar from '../components/CustomTabBar';
@@ -23,30 +23,31 @@ export default  TabNavigator({
             )
         }
      },
-    favorite: {
-       screen: FavoriteScreen,
+    job: {
+       screen: JobScreen,
        navigationOptions: {
            tabBarIcon: ({ tintColor }) => (
                <Icon name="ios-list" style={{ color: 'black'  }} />
            )
        }
      },
-    create: {
-       screen: CreateScreen,
+    services: {
+       screen: ServiceScreen,
         navigationOptions:  {
            tabBarIcon: ({ tintColor }) => (
               <Icon name="ios-add-circle-outline" style={{ color: 'black'  }} />
            )
        }
      },
-    media: { screen: MediaScreen,
+    notifications: {
+        screen: NotificationScreen,
         navigationOptions: {
             tabBarIcon: ({ tintColor }) => (
                 <Icon name="ios-image" style={{ color: 'black'  }} />
             )
         }
      },
-    account: {
+    profile: {
        screen: AccountStackNavigator,
       navigationOptions: {
           tabBarIcon: ({ tintColor }) => (

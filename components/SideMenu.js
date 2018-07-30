@@ -23,17 +23,38 @@ class SideMenu extends Component {
               <Text style={styles.navItemStyle} onPress={this.navigateToScreen('homePage')}>
                 Home
               </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('bookings')}>
-                Bookings
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('myBookings')}>
+                My Bookings
               </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('profile')}>
-                Profile
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('bookingrequests')}>
+                Booking Requests
               </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('contact')}>
-                Contact Us
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('postedJobs')}>
+                Posted Jobs
               </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('privacy')}>
-                Privacy
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('findJob')}>
+                Find Jobs
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('supplyService')}>
+                Supply Service
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('myFavourites')}>
+                My Favourites
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('chat')}>
+                Chat
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('support')}>
+                Support
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('findHelp')}>
+                Find Help
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('myAccount')}>
+                My Account
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('settings')}>
+                Settings
               </Text>
             </View>
           </View>

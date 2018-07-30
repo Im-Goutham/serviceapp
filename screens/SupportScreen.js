@@ -4,17 +4,17 @@ import { View, Text, StyleSheet } from 'react-native';
 import Header from '../components/Header';
 
 
-class FavoriteScreen extends Component {
+class SupportScreen extends Component {
   
     render() {
        return (
            <View style={{flex:1}}>
-               <Header navigation={this.props.navigation} title={'Settings'}/>
+               <Header navigation={this.props.navigation} title={'SupportScreen'}/>
                <View style={styles.container}>
-               <Text>FavoriteScreen</Text>
-               <Text>FavoriteScreen</Text>
-               <Text>FavoriteScreen</Text>
-               <Text>FavoriteScreen</Text>
+               <Text>SupportScreen</Text>
+               <Text>SupportScreen</Text>
+               <Text>SupportScreen</Text>
+               <Text>SupportScreen</Text>
                </View>
            </View>
        )
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default FavoriteScreen;
+export default SupportScreen;

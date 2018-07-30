@@ -4,22 +4,22 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Header from '../components/Header';
 
 
-class LoginScreen extends Component {
+class RegisterScreen extends Component {
   
     render() {
       console.log('navigation props are ',this.props);
        return (
            <View style={{flex:1}}>
                <View style={styles.container}>
-               <Text>LoginScreen</Text>
-               <Text>LoginScreen</Text>
-               <Text>LoginScreen</Text>
-               <Text>LoginScreen</Text>
-               <TouchableOpacity onPress={() => this.props.navigation.navigate('register')}>
-                  <Text>Register</Text>
+               <Text>RegisterScreen</Text>
+               <Text>RegisterScreen</Text>
+               <Text>RegisterScreen</Text>
+               <Text>RegisterScreen</Text>
+               <TouchableOpacity onPress={() => this.props.navigation.navigate('login')}>
+                  <Text>Login</Text>
                 </TouchableOpacity> 
                <TouchableOpacity onPress={() => this.props.navigation.navigate('selectServiceProvider')}>
-                  <Text>Sumbit</Text>
+                  <Text>Submit</Text>
                 </TouchableOpacity> 
                </View>
            </View>
@@ -35,4 +35,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default LoginScreen;
+export default RegisterScreen;

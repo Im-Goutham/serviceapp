@@ -4,17 +4,17 @@ import { View, Text, StyleSheet } from 'react-native';
 import Header from '../components/Header';
 
 
-class MediaScreen extends Component {
+class FindHelpScreen extends Component {
   
     render() {
        return (
            <View style={{flex:1}}>
-               <Header navigation={this.props.navigation} title={'Settings'}/>
+               <Header navigation={this.props.navigation} title={'FindHelp'}/>
                <View style={styles.container}>
-               <Text>MediaScreen</Text>
-               <Text>MediaScreen</Text>
-               <Text>MediaScreen</Text>
-               <Text>MediaScreen</Text>
+               <Text>FindHelpScreen</Text>
+               <Text>FindHelpScreen</Text>
+               <Text>FindHelpScreen</Text>
+               <Text>FindHelpScreen</Text>
                </View>
            </View>
        )
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default MediaScreen;
+export default FindHelpScreen;

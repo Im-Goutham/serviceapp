@@ -3,12 +3,12 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'native-base';
 
 import AccountScreen from '../screens/AccountScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import SettingScreen from '../screens/SettingScreen';
 
 
 export default StackNavigator({
        account: { screen: AccountScreen },
-       settings: { screen: SettingsScreen }
+       settings: { screen: SettingScreen }
    },{
      index: 0,
      initialRouteName: 'account',
