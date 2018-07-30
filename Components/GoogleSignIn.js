@@ -52,7 +52,7 @@ export default class GoogleSigninSampleApp extends Component {
       return (
         <View>
           <GoogleSigninButton
-            style={{ width: 212, height: 48 }}
+            style={{ width: 48, height: 48 }}
             size={GoogleSigninButton.Size.Standard}
             color={GoogleSigninButton.Color.Auto}
             onPress={this._signIn}
