@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
-import {StyleSheet} from 'react-native';
-
-import MapView, {Marker} from 'react-native-maps';
+import {StyleSheet, View,TouchableNativeFeedback} from 'react-native';
+import {Button, Text } from 'native-base';
+import MapView, { Callout, Marker, ProviderPropType } from 'react-native-maps';
 
 
 export default class Map extends Component {
@@ -19,9 +19,10 @@ export default class Map extends Component {
         coordinate: {
           latitude: 37.78825,
           longitude: -122.4324,
-        }
+        },
+        poi: null
      }
-
+     this.onPoiClick = this.onPoiClick.bind(this);
   }
 
   componentDidMount(){
@@ -57,102 +58,40 @@ export default class Map extends Component {
       }
   }
 
+
+
+  onPoiClick(e) {
+    const poi = e.nativeEvent;
+
+    this.setState({
+      poi,
+    });
+  }
+
+  callOutClicked(e){
+        console.log('event is ',e.nativeEvent);
+  }
+
   render() {
     let {region,coordinate} = this.state;
-    var mapStyle=[
-    {
-        "featureType": "all",
-        "elementType": "all",
-        "stylers": [
-            {
-                "invert_lightness": true
-            },
-            {
-                "saturation": "-9"
-            },
-            {
-                "lightness": "0"
-            },
-            {
-                "visibility": "simplified"
-            }
-        ]
-    },
-    {
-        "featureType": "landscape.man_made",
-        "elementType": "all",
-        "stylers": [
-            {
-                "weight": "1.00"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "all",
-        "stylers": [
-            {
-                "weight": "0.49"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "labels",
-        "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "weight": "0.01"
-            },
-            {
-                "lightness": "-7"
-            },
-            {
-                "saturation": "-35"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "labels.text",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
-    },
-    {
-        "featureType": "road.highway",
-        "elementType": "labels.icon",
-        "stylers": [
-            {
-                "visibility": "on"
-            }
-        ]
-    }
-];
+    
     return (
       <MapView
         style={ styles.map }
         initialRegion={region}
-        customMapStyle={mapStyle}
+        onPoiClick={this.onPoiClick}
       >
-        <Marker
-           coordinate={coordinate}
-           title={'Goutham'}
-           description={''}
-         />
+            <Marker
+              coordinate={coordinate}
+            >
+              <Callout onPress={this.callOutClicked}>
+                <View>
+                  <Text>Place Id: Testing ...........</Text>
+                  <Text>Name: Goutham</Text>
+                  <Button onPress={()=>{console.log('marker clicked')}}><Text> Apply </Text></Button>
+                </View>
+              </Callout>
+            </Marker>
       </MapView>
     );
   }
