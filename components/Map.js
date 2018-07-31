@@ -71,6 +71,9 @@ export default class Map extends Component {
   callOutClicked(e){
         console.log('event is ',e.nativeEvent);
   }
+  onRegionChange(region) {
+    console.log('regiom is ',region);
+  }
 
   render() {
     let {region,coordinate} = this.state;
@@ -79,6 +82,7 @@ export default class Map extends Component {
       <MapView
         style={ styles.map }
         initialRegion={region}
+        onRegionChange={this.onRegionChange}
         onPoiClick={this.onPoiClick}
       >
             <Marker
