@@ -7,6 +7,7 @@ import com.facebook.appevents.AppEventsLogger;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.sbugert.rnadmob.RNAdMobPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import co.apptailor.googlesignin.RNGoogleSigninPackage;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
@@ -38,6 +39,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNAdMobPackage(),
           new RNGoogleSigninPackage(),
           new MapsPackage(),
           new FBSDKPackage(mCallbackManager)
