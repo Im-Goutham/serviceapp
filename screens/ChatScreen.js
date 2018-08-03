@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Platform } from 'react-native';
 import { Icon } from 'native-base';
 import {GiftedChat, Actions, Bubble, SystemMessage} from 'react-native-gifted-chat';
+import SocketIOClient from 'socket.io-client';
 import Header from '../components/Header';
 import CustomActions from '../components/CustomActions';
 import CustomView from '../components/CustomView';
@@ -27,6 +28,8 @@ class ChatScreen extends Component {
         this.onLoadEarlier = this.onLoadEarlier.bind(this);
     
         this._isAlright = null;
+
+        this.socket = SocketIOClient('http://10.2.4.206:3000');
       }
       componentWillMount() {
         this._isMounted = true;
@@ -34,6 +37,21 @@ class ChatScreen extends Component {
           return {
             messages: require('../data/messages.js'),
           };
+        });
+      }
+
+      componentDidMount(){
+        this.socket.on('receiveMsg', function(msg){
+
+            console.log("msg = ----> ", msg)
+            // alert(msg)
+            //roomId = msg.roomId
+            // if("5b6149be84d1a004659916ae" == msg.messages.sender){
+            //     $('#messages').append($('<li class="me">').text(msg.messages.content));
+            // }else{
+            //     $('#messages').append($('<li class="user">').text(msg.messages.content));
+            // }
+
         });
       }
     
@@ -62,6 +80,19 @@ class ChatScreen extends Component {
       }
     
       onSend(messages = []) {
+        console.log('messages are .. ',JSON.stringify(messages));  
+        var roomId="5b62ee2776560d078e897e3d" ;
+                var data = {
+                    "userIds":["5b6149be84d1a004659916ae"],
+                    "msg":messages[0].text,
+                    "type":"text",
+                    "sender":"5b61474144cd9d03ff07c4d5",
+                    "originator":"5b61474144cd9d03ff07c4d5",
+                    "group":"private",
+                    "roomId":roomId
+                }
+        this.socket.emit('sendMsg',data);
+        console.log('message sent .. ');  
         this.setState((previousState) => {
           return {
             messages: GiftedChat.append(previousState.messages, messages),
