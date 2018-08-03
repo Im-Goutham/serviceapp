@@ -26,7 +26,7 @@ class SideMenu extends Component {
               <Text style={styles.navItemStyle} onPress={this.navigateToScreen('myBookings')}>
                 My Bookings
               </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('bookingrequests')}>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('bookingRequests')}>
                 Booking Requests
               </Text>
               <Text style={styles.navItemStyle} onPress={this.navigateToScreen('postedJobs')}>

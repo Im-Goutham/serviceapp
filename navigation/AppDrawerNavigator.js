@@ -5,6 +5,7 @@ import { Icon } from 'native-base';
 import SideMenu from '../components/SideMenu';
 
 import MyBookingScreen from '../screens/MyBookingScreen';
+import BookingRequestScreen from '../screens/BookingRequestScreen';
 import PostedJobScreen from '../screens/PostedJobScreen';
 import FindJobScreen from '../screens/FindJobScreen';
 import SupplyServiceScreen from '../screens/SupplyServiceScreen';
@@ -27,6 +28,9 @@ export default DrawerNavigator({
     myBookings: {
        screen: MyBookingScreen
      },
+    bookingRequests: {
+        screen: BookingRequestScreen
+      },
     postedjobs: {
        screen: PostedJobScreen
      },
