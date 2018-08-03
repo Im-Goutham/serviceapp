@@ -41,16 +41,20 @@ class ChatScreen extends Component {
       }
 
       componentDidMount(){
+        var self = this;
         this.socket.on('receiveMsg', function(msg){
 
             console.log("msg = ----> ", msg)
-            // alert(msg)
-            //roomId = msg.roomId
-            // if("5b6149be84d1a004659916ae" == msg.messages.sender){
-            //     $('#messages').append($('<li class="me">').text(msg.messages.content));
-            // }else{
-            //     $('#messages').append($('<li class="user">').text(msg.messages.content));
-            // }
+            roomId = msg.roomId
+            if("5b6149be84d1a004659916ae" == msg.messages.sender){
+                console.log('came here 1 ')
+                self.onReceive(msg.messages.content);
+              //  $('#messages').append($('<li class="me">').text(msg.messages.content));
+            }else{
+                console.log('came here 2 ')
+                
+                //$('#messages').append($('<li class="user">').text(msg.messages.content));
+            }
 
         });
       }
@@ -100,7 +104,7 @@ class ChatScreen extends Component {
         });
     
         // for demo purpose
-        this.answerDemo(messages);
+      //  this.answerDemo(messages);
       }
     
       answerDemo(messages) {
@@ -146,7 +150,7 @@ class ChatScreen extends Component {
               text: text,
               createdAt: new Date(),
               user: {
-                _id: 2,
+                _id: '5b6149be84d1a004659916ae',
                 name: 'React Native',
                 // avatar: 'https://facebook.github.io/react/img/logo_og.png',
               },
@@ -240,7 +244,7 @@ class ChatScreen extends Component {
                 isLoadingEarlier={this.state.isLoadingEarlier}
 
                 user={{
-                _id: 1, // sent messages should have same user._id
+                _id: '5b61474144cd9d03ff07c4d5', // sent messages should have same user._id
                 }}
 
                 renderActions={this.renderCustomActions}
