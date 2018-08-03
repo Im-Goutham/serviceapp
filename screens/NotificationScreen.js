@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Header from '../components/Header';
-
+import { BannerView } from 'react-native-fbads';
 
 class NotificationScreen extends Component {
   
@@ -16,6 +16,12 @@ class NotificationScreen extends Component {
                <Text>NotificationScreen</Text>
                <Text>NotificationScreen</Text>
                </View>
+               <BannerView
+                placementId="2061533000525974_2077225645623376"
+                type="standard"
+                onPress={() => console.log('click')}
+                onError={(err) => console.log('error', err)}
+            />
            </View>
        )
     }

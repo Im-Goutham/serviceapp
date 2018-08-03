@@ -53,8 +53,6 @@
 		981B76ECD9F14EADB5511696 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE8363538ABD4546B049D2D0 /* Foundation.ttf */; };
 		A02B3FCEA29E4BE1A119A0AF /* libRNGoogleSignin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A505403D2964914AE437065 /* libRNGoogleSignin.a */; };
 		A69B4FE2289F4F2FAC92E390 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B70B517BBB94D1097CC69CB /* Ionicons.ttf */; };
-		A9298D9D2113497B00FEEB92 /* FBAudienceNetworkDynamicFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9298D9B2113496300FEEB92 /* FBAudienceNetworkDynamicFramework.framework */; };
-		A9298D9E2113497B00FEEB92 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9298D9C2113497B00FEEB92 /* FBAudienceNetwork.framework */; };
 		A968DDC6210C8A9900643B9C /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A968DDC0210C8A9800643B9C /* GoogleUtilities.framework */; };
 		A968DDC7210C8A9900643B9C /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A968DDC1210C8A9800643B9C /* GoogleNetworkingUtilities.framework */; };
 		A968DDC8210C8A9900643B9C /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A968DDC2210C8A9800643B9C /* GoogleAppUtilities.framework */; };
@@ -413,8 +411,6 @@
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		91B1A900F5384ABA8E2BA492 /* RCTFBSDK.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTFBSDK.xcodeproj; path = "../node_modules/react-native-fbsdk/ios/RCTFBSDK.xcodeproj"; sourceTree = "<group>"; };
 		9B70B517BBB94D1097CC69CB /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		A9298D9B2113496300FEEB92 /* FBAudienceNetworkDynamicFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetworkDynamicFramework.framework; sourceTree = "<group>"; };
-		A9298D9C2113497B00FEEB92 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		A968DDC0210C8A9800643B9C /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = "../node_modules/react-native-google-signin/ios/GoogleSdk/GoogleUtilities.framework"; sourceTree = "<group>"; };
 		A968DDC1210C8A9800643B9C /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = "../node_modules/react-native-google-signin/ios/GoogleSdk/GoogleNetworkingUtilities.framework"; sourceTree = "<group>"; };
 		A968DDC2210C8A9800643B9C /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppUtilities.framework; path = "../node_modules/react-native-google-signin/ios/GoogleSdk/GoogleAppUtilities.framework"; sourceTree = "<group>"; };
@@ -464,7 +460,6 @@
 				A968DDCA210C8A9900643B9C /* GoogleSignIn.framework in Frameworks */,
 				A968DDC6210C8A9900643B9C /* GoogleUtilities.framework in Frameworks */,
 				A9D3F5A5210B6B1100530C47 /* FBSDKLoginKit.framework in Frameworks */,
-				A9298D9D2113497B00FEEB92 /* FBAudienceNetworkDynamicFramework.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				A968DDC9210C8A9900643B9C /* GoogleAuthUtilities.framework in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
@@ -472,7 +467,6 @@
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
-				A9298D9E2113497B00FEEB92 /* FBAudienceNetwork.framework in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
@@ -636,8 +630,6 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A9298D9C2113497B00FEEB92 /* FBAudienceNetwork.framework */,
-				A9298D9B2113496300FEEB92 /* FBAudienceNetworkDynamicFramework.framework */,
 				A968DDC2210C8A9800643B9C /* GoogleAppUtilities.framework */,
 				A968DDC3210C8A9800643B9C /* GoogleAuthUtilities.framework */,
 				A968DDC1210C8A9800643B9C /* GoogleNetworkingUtilities.framework */,
