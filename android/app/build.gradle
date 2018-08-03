@@ -101,6 +101,7 @@ android {
         applicationId "com.spotjobs"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+        multiDexEnabled true 
         versionCode 1
         versionName "1.0"
         ndk {
@@ -137,6 +138,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-fbads')
     compile project(':react-native-admob')
     compile project(':react-native-maps')
     compile project(':react-native-google-signin')

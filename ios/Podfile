@@ -41,6 +41,8 @@ target 'SpotJobs' do
   pod 'Google-Maps-iOS-Utils' # Remove this line if you don't want to support GoogleMaps on iOS
   # pod 'Google-Mobile-Ads-SDK'
   pod 'Google-Mobile-Ads-SDK'
+  pod 'ReactNativeFBAds', :path => '../node_modules/react-native-fbads'
+
 end
 
 post_install do |installer|
