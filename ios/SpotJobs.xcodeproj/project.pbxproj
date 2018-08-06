@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -59,6 +60,7 @@
 		A968DDCA210C8A9900643B9C /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A968DDC4210C8A9800643B9C /* GoogleSignIn.framework */; };
 		A968DDCB210C8A9900643B9C /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A968DDC5210C8A9900643B9C /* GoogleSymbolUtilities.framework */; };
 		A968DDCD210C917200643B9C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A968DDCC210C917200643B9C /* GoogleService-Info.plist */; };
+		A9BC06862118270800D0BDBE /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BC0668211826D400D0BDBE /* libRCTPushNotification.a */; };
 		A9D3F5A5210B6B1100530C47 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D3F5A1210B6AD900530C47 /* FBSDKLoginKit.framework */; };
 		A9D3F5A6210B6B1100530C47 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D3F5A2210B6AEF00530C47 /* FBSDKCoreKit.framework */; };
 		A9D3F5A7210B6B1100530C47 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D3F5A3210B6B0100530C47 /* Bolts.framework */; };
@@ -353,6 +355,20 @@
 			remoteGlobalIDString = 9FD355121D3E4A2900D06170;
 			remoteInfo = RNGoogleSignin;
 		};
+		A9BC0667211826D400D0BDBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9BC0655211826D400D0BDBE /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RCTPushNotification;
+		};
+		A9BC0669211826D400D0BDBE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9BC0655211826D400D0BDBE /* RCTPushNotification.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D05745F1DE6004600184BB4;
+			remoteInfo = "RCTPushNotification-tvOS";
+		};
 		A9D3F59F210B698900530C47 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91B1A900F5384ABA8E2BA492 /* RCTFBSDK.xcodeproj */;
@@ -417,6 +433,7 @@
 		A968DDC4210C8A9800643B9C /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = "../node_modules/react-native-google-signin/ios/GoogleSdk/GoogleSignIn.framework"; sourceTree = "<group>"; };
 		A968DDC5210C8A9900643B9C /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = "../node_modules/react-native-google-signin/ios/GoogleSdk/GoogleSymbolUtilities.framework"; sourceTree = "<group>"; };
 		A968DDCC210C917200643B9C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A9BC0655211826D400D0BDBE /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
 		A9D3F5A1210B6AD900530C47 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		A9D3F5A2210B6AEF00530C47 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		A9D3F5A3210B6B0100530C47 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -449,6 +466,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9BC06862118270800D0BDBE /* libRCTPushNotification.a in Frameworks */,
 				2938280265D840C7A533511A /* AddressBook.framework in Frameworks */,
 				EFBFDB817A1A4AFC834F2349 /* libz.tbd in Frameworks */,
 				B13D649E65F744878989F055 /* SafariServices.framework in Frameworks */,
@@ -679,6 +697,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A9BC0655211826D400D0BDBE /* RCTPushNotification.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -768,6 +787,15 @@
 			isa = PBXGroup;
 			children = (
 				A968DDBF210C89B800643B9C /* libRNGoogleSignin.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9BC0656211826D400D0BDBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9BC0668211826D400D0BDBE /* libRCTPushNotification.a */,
+				A9BC066A211826D400D0BDBE /* libRCTPushNotification-tvOS.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -943,6 +971,10 @@
 				{
 					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
 					ProjectRef = 00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */;
+				},
+				{
+					ProductGroup = A9BC0656211826D400D0BDBE /* Products */;
+					ProjectRef = A9BC0655211826D400D0BDBE /* RCTPushNotification.xcodeproj */;
 				},
 				{
 					ProductGroup = 139105B71AF99BAD00B5F7CC /* Products */;
@@ -1248,6 +1280,20 @@
 			fileType = archive.ar;
 			path = libRNGoogleSignin.a;
 			remoteRef = A968DDBE210C89B800643B9C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A9BC0668211826D400D0BDBE /* libRCTPushNotification.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTPushNotification.a;
+			remoteRef = A9BC0667211826D400D0BDBE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A9BC066A211826D400D0BDBE /* libRCTPushNotification-tvOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libRCTPushNotification-tvOS.a";
+			remoteRef = A9BC0669211826D400D0BDBE /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		A9D3F5A0210B698900530C47 /* libRCTFBSDK.a */ = {

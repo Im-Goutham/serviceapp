@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 import Header from '../components/Header';
 import {
     AdMobBanner,
@@ -8,10 +8,16 @@ import {
     PublisherBanner,
     AdMobRewarded,
   } from 'react-native-admob'
-  
+  import { pushNotifications } from '../services';
+
 
 class HomeScreen extends Component {
-  
+
+     handleOnPress = () => {
+        console.log('notification called ..')
+        pushNotifications.localNotification();
+      };
+     
     render() {
        return (
            <View style={{flex:1}}>
@@ -21,12 +27,15 @@ class HomeScreen extends Component {
                <Text>HomeScreen</Text>
                <Text>HomeScreen</Text>
                <Text>HomeScreen</Text>
+               <Button
+                title={'Press Me'}
+                onPress={this.handleOnPress.bind(this)}/>
                </View>
                <AdMobBanner
                 adSize="fullBanner"
                 adUnitID="ca-app-pub-3940256099942544/6300978111"
                 testDevices={[AdMobBanner.simulatorId]}
-                onAdFailedToLoad={error => console.error(error)}
+                onAdFailedToLoad={error => console.log(error)}
                 />  
            </View>
        )

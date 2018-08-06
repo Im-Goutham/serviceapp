@@ -4,8 +4,11 @@ import MainNavigator from './navigation/MainNavigator';
 import { Provider } from 'react-redux';
 // import SplashScreen from 'react-native-splash-screen'
 import { Root } from "native-base";
-
 import store from './store';
+
+import { pushNotifications } from './services';
+
+pushNotifications.configure();
 
 export default class App extends React.Component {
 
