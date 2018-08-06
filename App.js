@@ -6,9 +6,10 @@ import { Provider } from 'react-redux';
 import { Root } from "native-base";
 import store from './store';
 
-import { pushNotifications } from './services';
+import { pushNotifications, amplify } from './services';
 
 pushNotifications.configure();
+amplify.configure();
 
 export default class App extends React.Component {
 

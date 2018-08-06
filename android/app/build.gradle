@@ -138,6 +138,7 @@ android {
 }
 
 dependencies {
+    compile project(':amazon-cognito-identity-js')
     compile project(':react-native-push-notification')
     compile project(':react-native-fbads')
     compile project(':react-native-admob')

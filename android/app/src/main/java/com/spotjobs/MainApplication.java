@@ -7,6 +7,7 @@ import com.facebook.appevents.AppEventsLogger;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.amazonaws.RNAWSCognitoPackage;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import io.callstack.react.fbads.FBAdsPackage;
 import com.sbugert.rnadmob.RNAdMobPackage;
@@ -41,6 +42,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNAWSCognitoPackage(),
             new ReactNativePushNotificationPackage(),
             new FBAdsPackage(),
             new RNAdMobPackage(),

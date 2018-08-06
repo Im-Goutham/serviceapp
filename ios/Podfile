@@ -43,6 +43,8 @@ target 'SpotJobs' do
   pod 'Google-Mobile-Ads-SDK'
   pod 'ReactNativeFBAds', :path => '../node_modules/react-native-fbads'
 
+  pod 'RNAWSCognito', :path => '../node_modules/amazon-cognito-identity-js'
+
 end
 
 post_install do |installer|

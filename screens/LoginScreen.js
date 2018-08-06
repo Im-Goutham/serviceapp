@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ActivityIndicator, TouchableHighlight} from 're
 import { connect } from 'react-redux';
 import {  Item, Input, Icon, Button, Toast } from 'native-base';
 import * as actions from '../actions';
+import { Auth } from 'aws-amplify';
 import FacebookLogin from '../components/FacebookLogin';
 import GoogleSignIn from '../components/GoogleSignIn';
 
@@ -14,6 +15,11 @@ class LoginScreen extends Component {
     this.inputs = {};
   }
 
+
+  componentDidMount(){
+     console.log('login screen is called ...');
+  }
+
     focusNextField(id) {
         this.inputs[id]._root.focus();
     }
@@ -21,7 +27,9 @@ class LoginScreen extends Component {
 
 
      handleSubmit = async () => {
-     let {username,password} = this.state;
+     let {username , password} = this.state;
+
+
      if(!username){
            this.handleError("Username is required!")
            return false;
@@ -32,18 +40,34 @@ class LoginScreen extends Component {
      }
      this.setState({ error: null, loading: true });
 
-     try {
-         let data = {username:this.state.username,password:this.state.password};
-         this.props.signIn(data, () => {
-             this.props.navigation.navigate('main');
-         }).catch(error => {
-           return error;
-         });
-       this.props.navigation.navigate('home')
-       this.setState({ loading: false });
-     } catch (err) {
-       this.setState({ error: 'Something went wrong', loading: false });
-     }
+     console.log('username is '+username,'password is ',password);
+     Auth.signIn(username, password)
+       .then(data => {
+           console.log('data is ',data);
+           Auth.currentUserCredentials()
+           .then(credentials => {
+             console.log('Current user credentials are --- ',credentials);
+             this.props.navigation.navigate('home')
+             this.setState({ loading: false });
+           }).catch(err => {
+             console.log('error in signin --- ',err)
+           });
+       })
+       .catch(err => {
+         console.log('err is ',err );
+       });
+    //  try {
+    //      let data = {username:this.state.username,password:this.state.password};
+    //      this.props.signIn(data, () => {
+    //          this.props.navigation.navigate('main');
+    //      }).catch(error => {
+    //        return error;
+    //      });
+    //    this.props.navigation.navigate('home')
+    //    this.setState({ loading: false });
+    //  } catch (err) {
+    //    this.setState({ error: 'Something went wrong', loading: false });
+    //  }
    }
 
 
