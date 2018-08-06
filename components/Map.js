@@ -69,10 +69,10 @@ export default class Map extends Component {
   }
 
   callOutClicked(e){
-        console.log('event is ',e.nativeEvent);
+     //   console.log('event is ',e.nativeEvent);
   }
   onRegionChange(region) {
-    console.log('regiom is ',region);
+  //  console.log('regiom is ',region);
   }
 
   render() {
