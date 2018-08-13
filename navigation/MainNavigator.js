@@ -1,19 +1,18 @@
-import React from 'react';
-import { Platform } from 'react-native';
-import { TabNavigator, StackNavigator, DrawerNavigator } from 'react-navigation';
-import { Icon } from 'native-base';
+import {  StackNavigator } from 'react-navigation';
 
-import SelectLocationScreen from '../screens/SelectLocationScreen';
+
+import AppTutorialScreen from '../screens/AppTutorialScreen';
 import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
-import SelectServiceProviderScreen from '../screens/SelectServiceProviderScreen';
+import ForgotScreen from '../screens/ForgotScreen';
 import AppDrawerNavigator from './AppDrawerNavigator';
+import ProfileStackNavigator from './ProfileStackNavigator';
 
 
 export default StackNavigator(
   {
-    selectLocation: {
-      screen: SelectLocationScreen,
+    appTutorial: {
+      screen: AppTutorialScreen,
     },
     login: {
       screen: LoginScreen,
@@ -21,15 +20,18 @@ export default StackNavigator(
     register: {
       screen: RegisterScreen,
     },
-    selectServiceProvider: {
-      screen: SelectServiceProviderScreen,
+    forgot: {
+      screen: ForgotScreen,
+    },
+    profile: {
+      screen: ProfileStackNavigator,
     },
     home : {
       screen: AppDrawerNavigator
      },
       },{
         index: 0,
-        initialRouteName: 'selectLocation',
+        initialRouteName: 'profile',
         headerMode: 'none',
         navigationOptions: {
         gesturesEnabled: false

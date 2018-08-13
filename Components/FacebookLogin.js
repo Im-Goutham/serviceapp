@@ -1,32 +1,109 @@
 
 
 import React, {Component} from 'react';
-import { View, TouchableOpacity } from 'react-native'
+import { View, TouchableHighlight, StyleSheet,Text } from 'react-native'
 import { Button ,Icon} from 'native-base'
-import { LoginManager } from 'react-native-fbsdk'
+import { LoginManager, AccessToken, GraphRequest, GraphRequestManager } from 'react-native-fbsdk'
+import { Auth } from 'aws-amplify';
+
 
 export default class FacebookLogin extends Component {
-  handleFacebookLogin () {
-    LoginManager.logInWithReadPermissions(['public_profile', 'email']).then(
-      function (result) {
-        if (result.isCancelled) {
-          console.log('Login cancelled')
-        } else {
-          console.log('Login success with permissions: ' + result.grantedPermissions.toString())
-        }
-      },
-      function (error) {
-        console.log('Login fail with error: ' + error)
+
+
+    handleFacebookLogin () {
+      var self = this;
+      LoginManager
+        .logInWithReadPermissions(['public_profile'])
+        .then(function (result) {
+          if (result.isCancelled) {
+            alert('Login cancelled');
+          } else {
+            AccessToken
+              .getCurrentAccessToken()
+              .then((data) => {
+                console.log('token data is ',data);
+              //  alert(accessToken.toString())
+                let user = {};
+                user.accessToken = data.accessToken;
+                user.expiresIn = data.expirationTime;
+                const responseInfoCallback = (error, result) => {
+                  if (error) {
+                    console.log(error)
+                 //   alert('Error fetching data: ' + error.toString());
+                  } else {
+                    console.log('user data is ',result)
+                    user.name = result.name;
+                    self.facebookLogin(user);
+                //    alert('Success fetching data: ' + result.toString());
+                  }
+                }
+
+                const infoRequest = new GraphRequest('/me', {
+                  accessToken: data.accessToken,
+                  parameters: {
+                    fields: {
+                      string: 'email,name,first_name,middle_name,last_name'
+                    }
+                  }
+                }, responseInfoCallback);
+
+                // Start the graph request.
+                new GraphRequestManager()
+                  .addRequest(infoRequest)
+                  .start()
+
+              })
+          }
+        }, function (error) {
+          alert('Login fail with error: ' + error);
+        });
+    }
+
+    facebookLogin(user) {
+     console.log(JSON.stringify(user));
+      var data = {
+       token: user.accessToken,
+       expires: user.expiresIn,
+       name: user.name
       }
-    )
+      Auth.federatedSignIn('facebook', { token: data.token, expires_at: data.expires}, { name: data.name })
+        .then(credentials => {
+         console.log('get aws credentials', credentials);
+           Auth.currentUserCredentials()
+           .then(credentials => {
+             console.log('Current user credentials are --- ',credentials);
+           }).catch(err => {
+             console.log('error in facebook signin --- ',err)
+           });
+          }).catch(e => {
+           console.log('error in facebook signin --- ',e);
+          });
   }
   render() {
     return (
-      <View>
-      <TouchableOpacity onPress={this.handleFacebookLogin}>
-       <Icon name='logo-facebook' />
-     </TouchableOpacity>
-     </View>
+            <TouchableHighlight style={styles.button} onPress={() => this.handleFacebookLogin()}><Text style={styles.btnText}>Sign in with Facebook</Text></TouchableHighlight>
     );
   }
 }
+
+
+
+
+const styles = StyleSheet.create({
+    button:{
+      backgroundColor:'#3B5B95',
+      width: '100%',
+      borderRadius:20,
+      borderWidth: 1,
+      borderColor: '#fff',
+      paddingTop:10,
+      paddingBottom:10,
+      marginTop: 5,
+      marginBottom: 5
+    },
+    btnText: { 
+      textAlign :'center',
+      color:'white',
+      fontWeight:'bold'
+    }
+})

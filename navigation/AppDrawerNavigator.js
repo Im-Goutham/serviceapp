@@ -1,62 +1,64 @@
-import React from 'react';
-import { TabNavigator, StackNavigator , DrawerNavigator} from 'react-navigation';
-import { Icon } from 'native-base';
+import {DrawerNavigator} from 'react-navigation';
+
 
 import SideMenu from '../components/SideMenu';
 
-import MyBookingScreen from '../screens/MyBookingScreen';
-import BookingRequestScreen from '../screens/BookingRequestScreen';
-import PostedJobScreen from '../screens/PostedJobScreen';
-import FindJobScreen from '../screens/FindJobScreen';
-import SupplyServiceScreen from '../screens/SupplyServiceScreen';
-import MyFavouriteScreen from '../screens/MyFavouriteScreen';
-import ChatScreen from '../screens/ChatScreen';
-import SupportScreen from '../screens/SupportScreen';
+import HomeScreen from '../screens/HomeScreen';
+import FindJobsScreen from '../screens/FindJobsScreen';
+import PostJobScreen from '../screens/PostJobScreen';
 import FindHelpScreen from '../screens/FindHelpScreen';
-import MyAccountScreen from '../screens/MyAccountScreen';
-import SettingScreen from '../screens/SettingScreen';
+import MyJobsScreen from '../screens/MyJobsScreen';
+import FavouriteScreen from '../screens/FavouriteScreen';
+import NotificationsScreen from '../screens/NotificationsScreen';
+import ChatsScreen from '../screens/ChatsScreen';
+import MyRequestsScreen from '../screens/MyRequestsScreen';
+import TrackScreen from '../screens/TrackScreen';
+import AccountScreen from '../screens/AccountScreen';
+import SubscriptionScreen from '../screens/SubscriptionScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 
 
-import AppTabNavigator from './AppTabNavigator';
 
-//import AccountStackNavigator from './AccountStackNavigator';
 
 export default DrawerNavigator({
     homePage: {
-        screen: AppTabNavigator
+        screen: HomeScreen
      },
-    myBookings: {
-       screen: MyBookingScreen
-     },
-    bookingRequests: {
-        screen: BookingRequestScreen
-      },
-    postedjobs: {
-       screen: PostedJobScreen
-     },
-    findJob: {
-       screen: FindJobScreen
-     },
-    supplyService: {
-       screen: SupplyServiceScreen
+    findJobs: {
+       screen: FindJobsScreen
     },
-    myFavourites: {
-        screen: MyFavouriteScreen
+    postjob: {
+       screen: PostJobScreen
+    },
+    findHelp: {
+       screen: FindHelpScreen
+    },
+    myJobs: {
+       screen: MyJobsScreen
      },
-    chat: {
-        screen: ChatScreen
+    favourites: {
+        screen: FavouriteScreen
      },
-    support: {
-        screen: SupportScreen
+     notifications: {
+        screen: NotificationsScreen
      },
-     findHelp: {
-        screen: FindHelpScreen
+     chats: {
+        screen: ChatsScreen
      },
-     myAccount: {
-        screen: MyAccountScreen
+    myRequests: {
+        screen: MyRequestsScreen
+      },
+    trackNow: {
+        screen: TrackScreen
+    },
+     account: {
+        screen: AccountScreen
+     },
+     subscription: {
+        screen: SubscriptionScreen
      },
      settings: {
-        screen: SettingScreen
+        screen: SettingsScreen
      }
 },{
     contentComponent: SideMenu,

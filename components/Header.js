@@ -16,7 +16,7 @@ class HeaderComponent extends Component {
                 <Icon name='ios-menu' />
               </Button>
             </Left>
-            <Body style={{flex: 2}}>
+            <Body style={{flex: 5}}>
               <Title>{title}</Title>
             </Body>
            <Right  style={{flex: 1}}/>

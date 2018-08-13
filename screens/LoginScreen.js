@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, TouchableHighlight} from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator, TouchableHighlight, Image} from 'react-native';
 import { connect } from 'react-redux';
-import {  Item, Input, Icon, Button, Toast } from 'native-base';
+import {  Item, Input, CheckBox, Toast } from 'native-base';
 import * as actions from '../actions';
 import { Auth } from 'aws-amplify';
 import FacebookLogin from '../components/FacebookLogin';
@@ -10,7 +10,7 @@ import GoogleSignIn from '../components/GoogleSignIn';
 class LoginScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = { username: '', password: '', error: null, loading: false };
+    this.state = { username: '', password: '', error: null, loading: false, checked: true };
     this.focusNextField = this.focusNextField.bind(this);
     this.inputs = {};
   }
@@ -51,6 +51,7 @@ class LoginScreen extends Component {
              this.setState({ loading: false });
            }).catch(err => {
              console.log('error in signin --- ',err)
+             this.setState({ loading: false });
            });
        })
        .catch(err => {
@@ -81,11 +82,22 @@ class LoginScreen extends Component {
 
 
     render() {
+      let { checked } = this.state;
       return (  
         <View style={styles.container}>
-            <Item>
+        <View style={styles.logoContainer}>
+            <View style={{flex: 1}}>
+            <Image source={require('../images/logo.png')} style={styles.logo}/>
+             </View> 
+             <View style={{flex: 1}}>
+                <Text style={{fontSize: 20,textAlign: 'center',color: '#666666'}}>Semper est ante cras sagitis himenaeos sem</Text>
+             </View> 
+        </View>  
+        <View style={styles.inputContainer}>
+        <Text style={styles.inputLabel}>EMAIL / USER ID</Text>
+        <Item>
               <Input
-                  placeholder='User Name'
+                  style={styles.inputField}
                   value={this.state.username}
                   autoCapitalize='none'
                   onSubmitEditing={() => {
@@ -97,11 +109,11 @@ class LoginScreen extends Component {
                   }}
                   onChangeText={username => this.setState({ username })}
                   />
-              <Icon active name='ios-contact' />
             </Item>
+            <Text style={styles.inputLabel}>PASSWORD</Text>
             <Item>
               <Input
-                  placeholder='Password'
+                  style={styles.inputField}
                   value={this.state.password}
                   autoCapitalize='none'
                   secureTextEntry={true}
@@ -114,22 +126,30 @@ class LoginScreen extends Component {
                   }}
                   onChangeText={password => this.setState({ password })}
                   />
-              <Icon active name='ios-lock' />
             </Item>
-           <View style={{justifyContent: "center" }}>
+            <View style={{marginBottom: 10,marginTop: 10,flexDirection:'row'}}>
+                   <CheckBox checked={checked} color='grey' onPress={()=>this.setState({checked: !checked})}/> 
+                   <Text style={{marginLeft:20}}>Remember Me</Text>
+            </View>  
+            <View style={{justifyContent: "center" }}>
                 {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
-                <Button primary onPress={() => this.handleSubmit()} style={styles.loginButtom}><Text style={{color:'white'}}> Login </Text></Button>
+               <TouchableHighlight style={styles.button} onPress={() => this.handleSubmit()}><Text style={styles.btnText}>SIGN IN</Text></TouchableHighlight>
                 }
            </View>
-           <TouchableHighlight  onPress={() => {this.props.navigation.navigate('register')}}><Text> Register </Text></TouchableHighlight>
-           <View style={{flexDirection:'row'}}>
-            <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+         <Text style={styles.text} onPress={()=>{this.props.navigation.navigate('forgot')}}>Forgot ID/Password?</Text>  
+        </View>  
+        <View style={styles.socialLoginContainer}>
+        <View style={{flex: 1}}>
+             <Text style={{textAlign: 'center'}}>Or</Text>
+        </View>  
+        <View style={{flex: 2}}>
                 <FacebookLogin/>
-            </View> 
-            <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-                <GoogleSignIn/>
-            </View> 
-           </View>    
+                <GoogleSignIn />
+        </View> 
+        <View style={{flex: 1}}>
+        <Text style={{marginBottom:10,marginTop:10,textAlign: 'center'}}>Don't have an account  <Text style={{fontWeight: 'bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign up</Text></Text>
+        </View>       
+        </View> 
         </View>
 
       );
@@ -140,14 +160,67 @@ class LoginScreen extends Component {
 const styles = StyleSheet.create({
         container: {
           flex: 1,
+          backgroundColor: 'white',
+          paddingTop: 50
+      },
+      logoContainer: {
+          flex: 2,
           justifyContent: 'center',
           alignItems: 'center'
       },
-      loginButtom: {
-        width:200,
-        justifyContent:'center',
-        marginTop:20
-      }
+      logo: {
+        width: 80,
+        height: 80
+      },
+      inputContainer: {
+          flex: 3,
+          justifyContent: 'center',
+          padding: 10
+      },
+      inputLabel: {
+         textAlign:'left',
+         fontSize: 12
+      },
+      inputField: {
+          height: 40,
+          borderRadius:20,
+          backgroundColor: '#F2F2F2',
+          paddingLeft : 15,
+          paddingRight : 15,
+          marginTop: 10,
+          marginBottom: 10
+      },
+      orBox: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+      },
+      socialLoginContainer: {
+          flex: 2,
+          padding: 10
+      },
+      text: {
+        marginBottom: 15,
+        marginTop: 15,
+        fontSize: 15,
+        textAlign: 'center',
+      },
+      button:{
+        backgroundColor:'#4A4A4A',
+        width: '100%',
+        borderRadius:20,
+        borderWidth: 1,
+        borderColor: '#fff',
+        paddingTop:10,
+        paddingBottom:10,
+        marginTop: 5,
+        marginBottom: 5
+    },
+    btnText: { 
+        textAlign:'center',
+        color:'white',
+        fontWeight:'bold'
+    }
 })
 
 export default connect(null, actions)(LoginScreen);

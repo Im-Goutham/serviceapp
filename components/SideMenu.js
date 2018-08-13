@@ -23,38 +23,41 @@ class SideMenu extends Component {
               <Text style={styles.navItemStyle} onPress={this.navigateToScreen('homePage')}>
                 Home
               </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('myBookings')}>
-                My Bookings
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('bookingRequests')}>
-                Booking Requests
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('postedJobs')}>
-                Posted Jobs
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('findJob')}>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('findJobs')}>
                 Find Jobs
               </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('supplyService')}>
-                Supply Service
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('myFavourites')}>
-                My Favourites
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('chat')}>
-                Chat
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('support')}>
-                Support
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('postJob')}>
+                Post Job
               </Text>
               <Text style={styles.navItemStyle} onPress={this.navigateToScreen('findHelp')}>
                 Find Help
               </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('myAccount')}>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('myJobs')}>
+                My Jobs
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('favourites')}>
+                Favourites
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('notifications')}>
+                Notifications
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('chats')}>
+                Chats
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('myRequests')}>
+                My Requests
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('trackNow')}>
+                Track Now
+              </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('account')}>
                 My Account
               </Text>
+              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('subscription')}>
+                 Subscription
+              </Text>
               <Text style={styles.navItemStyle} onPress={this.navigateToScreen('settings')}>
-                Settings
+                 Settings
               </Text>
             </View>
           </View>

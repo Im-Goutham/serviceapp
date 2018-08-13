@@ -8,15 +8,10 @@ import {
     PublisherBanner,
     AdMobRewarded,
   } from 'react-native-admob'
-  import { pushNotifications } from '../services';
 
 
 class HomeScreen extends Component {
 
-     handleOnPress = () => {
-        console.log('notification called ..')
-        pushNotifications.localNotification();
-      };
      
     render() {
        return (
@@ -27,9 +22,6 @@ class HomeScreen extends Component {
                <Text>HomeScreen</Text>
                <Text>HomeScreen</Text>
                <Text>HomeScreen</Text>
-               <Button
-                title={'Press Me'}
-                onPress={this.handleOnPress.bind(this)}/>
                </View>
                <AdMobBanner
                 adSize="fullBanner"

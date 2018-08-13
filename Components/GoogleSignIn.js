@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View, TouchableOpacity, Platform } from 'react-native';
-
+import {  StyleSheet, Text, View, TouchableHighlight, Platform } from 'react-native';
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
+import { Auth } from 'aws-amplify';
 
 export default class GoogleSigninSampleApp extends Component {
   constructor(props) {
@@ -46,46 +46,42 @@ export default class GoogleSigninSampleApp extends Component {
     }
   }
 
-  render() {
-    const { user, error } = this.state;
-    if (!user) {
-      return (
-        <View>
-          <GoogleSigninButton
-            style={{ width: 48, height: 48 }}
-            size={GoogleSigninButton.Size.Standard}
-            color={GoogleSigninButton.Color.Auto}
-            onPress={this._signIn}
-          />
-          {error && (
-            <Text>
-              {error.toString()} code: {error.code}
-            </Text>
-          )}
-        </View>
-      );
-    } else {
-      return (
-        <View>
-          <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 20 }}>
-            Welcome {user.name}
-          </Text>
-          <Text>Your email is: {user.email}</Text>
 
-          <TouchableOpacity onPress={this._signOut}>
-            <View style={{ marginTop: 50 }}>
-              <Text>Log out</Text>
-            </View>
-          </TouchableOpacity>
-        </View>
-      );
+    googleSignIn = (response) => {
+    
+      var data = {
+        token: response.accessToken,
+        expires: response.accessTokenExpirationDate,
+        name: response.name
+      }
+      console.log('data before google login ',data);
+      Auth.federatedSignIn('google', { token: data.token, expires_at: data.expires}, { name: data.name })
+      .then(credentials => {
+        console.log('get aws credentials', credentials);
+        Auth.currentUserCredentials()
+        .then(credentials => {
+          console.log('Current user credentials are for google login --- ',credentials);
+        }).catch(err => {
+          console.log('error in google signin --- ',err)
+        });
+      }).catch(e => {
+        console.log('error in google signin --- ',e);
+      });
     }
+  
+
+  render() {
+      return (
+        <TouchableHighlight style={styles.button} onPress={() => {alert('clicked')}}><Text style={styles.btnText}>Sign in with Gmail</Text></TouchableHighlight>
+      );
   }
 
   _signIn = async () => {
     try {
       const user = await GoogleSignin.signIn();
       this.setState({ user, error: null });
+      this.googleSignIn(user);
+
     } catch (error) {
       if (error.code === 'CANCELED') {
         error.message = 'user canceled the login flow';
@@ -110,20 +106,35 @@ export default class GoogleSigninSampleApp extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+  button:{
+    backgroundColor:'#DC493D',
+    width: '100%',
+    borderRadius:20,
+    borderWidth: 1,
+    borderColor: '#fff',
+    paddingTop:10,
+    paddingBottom:10,
+    marginTop: 5,
+    marginBottom: 5
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  btnText: { 
+    textAlign :'center',
+    color:'white',
+    fontWeight:'bold'
+  }
 });
+
+
+// <View>
+// <GoogleSigninButton
+//   style={{ width: 48, height: 48 }}
+//   size={GoogleSigninButton.Size.Standard}
+//   color={GoogleSigninButton.Color.Auto}
+//   onPress={this._signIn}
+// />
+// {error && (
+//   <Text>
+//     {error.toString()} code: {error.code}
+//   </Text>
+// )}
+// </View>
