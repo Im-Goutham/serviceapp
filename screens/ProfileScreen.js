@@ -24,19 +24,19 @@ class ProfileScreen extends Component {
 
 
      handleSubmit = async () => {
-     let {firstname , lastname} = this.state;
+    //  let {firstname , lastname} = this.state;
 
 
-     if(!firstname){
-           this.handleError("Username is required!")
-           return false;
-     }
-     if(!lastname){
-          this.handleError("lastname is required!")
-           return false;
-     }
-     this.setState({ error: null, loading: true });
-
+    //  if(!firstname){
+    //        this.handleError("Username is required!")
+    //        return false;
+    //  }
+    //  if(!lastname){
+    //       this.handleError("lastname is required!")
+    //        return false;
+    //  }
+    //  this.setState({ error: null, loading: true });
+    this.props.navigation.navigate('home');
 
   
    }
@@ -180,9 +180,7 @@ class ProfileScreen extends Component {
                     </ListItem>
                 </List>
                 <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
-                {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
-               <TouchableHighlight style={styles.button}><Text style={styles.btnText}>ADD MORE SERVICES</Text></TouchableHighlight>
-                }
+                    <TouchableHighlight style={styles.button} onPress={()=>this.props.navigation.navigate('addServiceCatScreen')}><Text style={styles.btnText}>ADD MORE SERVICES</Text></TouchableHighlight>
                 </View>
             </View>  
             <View style={styles.inputContainer}>
@@ -421,6 +419,7 @@ const styles = StyleSheet.create({
         container: {
           backgroundColor: 'white',
           paddingTop: 50,
+          paddingBottom: 50,
           padding:5
       },
       logoContainer: {
