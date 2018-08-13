@@ -218,21 +218,21 @@ class ProfileScreen extends Component {
                     <View style={styles.imgsView}>
                      <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                      <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                     <Text>Certificate1.jpeg</Text>
+                     <Text style={{paddingTop:5,paddingBottom:5}}>Certificate1.jpeg</Text>
                      </View> 
                  </View>   
                  <View style={{flexDirection:'column',width:100}}>
                     <View style={styles.imgsView}>
                      <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                      <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                     <Text>Certificate1.jpeg</Text>
+                     <Text style={{paddingTop:5,paddingBottom:5}}></Text>
                      </View> 
                  </View> 
                  <View style={{flexDirection:'column',width:100}}>
                     <View style={styles.imgsView}>
                      <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                      <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                     <Text>Certificate1.jpeg</Text>
+                     <Text style={{paddingTop:5,paddingBottom:5}}></Text>
                      </View> 
                  </View> 
               </ScrollView>   
@@ -253,28 +253,28 @@ class ProfileScreen extends Component {
                     <View style={styles.imgsView}>
                      <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                      <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                     <Text>01.jpeg</Text>
+                     <Text style={{paddingTop:5,paddingBottom:5}}>01.jpeg</Text>
                      </View> 
                  </View>   
                  <View style={{flexDirection:'column',width:100}}>
                     <View style={styles.imgsView}>
                      <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                      <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                     <Text>02.jpeg</Text>
+                     <Text style={{paddingTop:5,paddingBottom:5}}>02.jpeg</Text>
                      </View> 
                  </View> 
                  <View style={{flexDirection:'column',width:100}}>
                     <View style={styles.imgsView}>
                      <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                      <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                     <Text>03.jpeg</Text>
+                     <Text style={{paddingTop:5,paddingBottom:5}}>03.jpeg</Text>
                     </View> 
                  </View> 
                  <View style={{flexDirection:'column',width:100}}>
                     <View style={styles.imgsView}>
                      <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                      <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                     <Text>04.jpeg</Text>
+                     <Text style={{paddingTop:5,paddingBottom:5}}>04.jpeg</Text>
                     </View> 
                  </View> 
               </ScrollView>   
@@ -295,27 +295,115 @@ class ProfileScreen extends Component {
                             <View style={styles.imgsView}>
                             <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                             <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                            <Text>id_01.jpeg</Text>
+                            <Text style={{paddingTop:5,paddingBottom:5}}>id_01.jpeg</Text>
                             </View> 
                         </View>   
                         <View style={{flexDirection:'column',width:100}}>
                             <View style={styles.imgsView}>
                             <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                             <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                            <Text>id_02.jpeg</Text>
+                            <Text style={{paddingTop:5,paddingBottom:5}}>id_02.jpeg</Text>
                             </View> 
                         </View> 
                         <View style={{flexDirection:'column',width:100}}>
                             <View style={styles.imgsView}>
                             <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                             <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                            <Text>id_03.jpeg</Text>
+                            <Text style={{paddingTop:5,paddingBottom:5}}>id_03.jpeg</Text>
                             </View> 
                         </View> 
                     </ScrollView>   
                     </View> 
                 </View> 
               {/* Upload ID ends here */}
+              {/* Upload Video link starts here */}
+              <View style={{flex:1,marginTop:10,marginBottom:10}}>
+            <View style={{flexDirection: 'row',alignItems:'center',padding:10}}>
+                 <Text style={{fontWeight:'bold'}}>Add video link</Text><Icon style={styles.plus} active name="md-add" />
+            </View>  
+            <View >
+            <List style={{paddingTop:20,paddingBottom:20}}>
+                    <ListItem avatar>
+                    <Left>
+                        <Image style={{width:80,height:60}} source={require('../images/img_placeholder.png')} />
+                    </Left>
+                    <Body>
+                        <Text style={{color:'#3399ff'}}>https://www.youtube.com/watch?v=1tIBMiuWaOg</Text>
+                    </Body>
+                    <Right>
+                         <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                    </Right>
+                    </ListItem>
+                </List>
+            </View> 
+           </View> 
+             {/* Upload Video link ends here */}
+            {/* Upload website link starts here */}
+            <View style={{flex:1,marginTop:10,marginBottom:10}}>
+                   <View style={{flexDirection: 'row',alignItems:'center',padding:10}}>
+                  <Text style={{fontWeight:'bold'}}>Add website link</Text><Icon style={styles.plus} active name="md-add" />
+            </View>  
+            <View>
+            <List style={{paddingTop:20,paddingBottom:20}}>
+                    <ListItem avatar>
+                    <Left>
+                        <Image style={{width:80,height:60}} source={require('../images/img_placeholder.png')} />
+                    </Left>
+                    <Body>
+                        <Text style={{color:'#3399ff'}}>https://www.youtube.com/watch?v=1tIBMiuWaOg</Text>
+                    </Body>
+                    <Right>
+                         <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                    </Right>
+                    </ListItem>
+                </List>
+            </View> 
+           </View> 
+              {/* Upload website link ends here */}
+            {/* Upload Linkedin Profile link starts here */}
+            <View style={{flex:1,marginTop:10,marginBottom:10}}>
+                   <View style={{flexDirection: 'row',alignItems:'center',padding:10}}>
+                  <Text style={{fontWeight:'bold'}}>Add Linkedin Profile link</Text><Icon style={styles.plus} active name="md-add" />
+            </View>  
+            <View>
+            <List style={{paddingTop:20,paddingBottom:20}}>
+                    <ListItem avatar>
+                    <Left>
+                        <Image style={{width:80,height:60}} source={require('../images/img_placeholder.png')} />
+                    </Left>
+                    <Body>
+                        <Text style={{color:'#3399ff'}}>https://www.youtube.com/watch?v=1tIBMiuWaOg</Text>
+                    </Body>
+                    <Right>
+                         <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                    </Right>
+                    </ListItem>
+                </List>
+            </View> 
+           </View> 
+              {/* Upload LinkedIn Profile link ends here */}
+            {/* Upload Other link starts here */}
+            <View style={{flex:1,marginTop:10,marginBottom:10}}>
+                            <View style={{flexDirection: 'row',alignItems:'center',padding:10}}>
+                            <Text style={{fontWeight:'bold'}}>Add Other link</Text><Icon style={styles.plus} active name="md-add" />
+                        </View>  
+                        <View>
+                        <List style={{paddingTop:20,paddingBottom:20}}>
+                                <ListItem avatar>
+                                <Left>
+                                    <Image style={{width:80,height:60}} source={require('../images/img_placeholder.png')} />
+                                </Left>
+                                <Body>
+                                    <Text style={{color:'#3399ff'}}>https://www.youtube.com/watch?v=1tIBMiuWaOg</Text>
+                                </Body>
+                                <Right>
+                                    <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                                </Right>
+                                </ListItem>
+                            </List>
+                        </View> 
+                    </View> 
+              {/* Upload Other link ends here */}
             <View style={{justifyContent: "center" }}>
                 {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
                <TouchableHighlight style={styles.button} onPress={() => this.handleSubmit()}><Text style={styles.btnText}>FINISH</Text></TouchableHighlight>
