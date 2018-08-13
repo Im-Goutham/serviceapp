@@ -21,20 +21,20 @@ class AddServiceSubCatScreen extends Component {
             <Text style={styles.headingTxt}>Select Sub Category</Text>
          </View>   
          <View style={styles.categoryContainer}>
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View> 
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>   
-      </View>  
+                <View style={styles.categoryBox}></View>  
+                <View style={styles.categoryBox}></View>  
+                <View style={styles.categoryBox}></View>  
+                <View style={styles.categoryBox}></View>  
+                <View style={styles.categoryBox}></View>  
+                <View style={styles.categoryBox}></View>  
+                <View style={styles.categoryBox}></View>  
+                <View style={styles.categoryBox}></View> 
+                <View style={styles.categoryBox}></View>  
+                <View style={styles.categoryBox}></View>  
+                <View style={styles.categoryBox}></View>  
+                <View style={styles.categoryBox}></View>  
+                <View style={styles.categoryBox}></View>   
+        </View>  
            {/* All categories ends here */}   
             <View style={{justifyContent: "center" }}>
                <TouchableHighlight style={styles.button} onPress={() => this.props.navigation.navigate('profile')}><Text style={styles.btnText}>ADD SERVICE</Text></TouchableHighlight>
