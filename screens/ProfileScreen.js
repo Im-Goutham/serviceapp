@@ -59,8 +59,9 @@ class ProfileScreen extends Component {
             <Text style={{fontSize: 28, fontWeight: 'bold'}}>Basic Profile</Text>
         </View> 
         <View style={styles.logoContainer}>
-            <View style={{flex: 1,padding:10}}>
-               <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
+            <View style={styles.imgsView}>
+               <Image source={require('../images/user_placeholder.png')} style={styles.user_placeholder}/>
+               <Image source={require('../images/camera_icon.png')} style={styles.camera_icon}/>
              </View> 
              <View style={{flex: 1,padding:10}}>
                 <Text style={{fontSize: 18,textAlign: 'center'}}>Set Profile Pic</Text>
@@ -136,7 +137,7 @@ class ProfileScreen extends Component {
             </Item>
             <View style={styles.serviceProviderBox}>
                <View style={{flex: 1}}><Text style={{fontWeight:'bold',fontSize: 17}}>Do you want to be a Service Provider</Text></View>
-               <View style={{flex: 1,flexDirection: 'row', justifyContent:'flex-end'}}><Text style={{paddingRight:10}}>Yes</Text><Switch value={true}  style={{ transform: [{ scaleX: .8 }, { scaleY: .8 }] }}/></View>
+               <View style={{flex: 1,flexDirection: 'row', justifyContent:'flex-end'}}><Text style={{paddingRight:10}}>Yes</Text><Switch value={true} style={styles.switch}/></View>
             </View>  
             <View style={styles.servicesBox}>
                  <Text style={{fontSize: 16,color: 'black'}}>Select which services you want to provide</Text>
@@ -147,7 +148,7 @@ class ProfileScreen extends Component {
                     </Left>
                     <Body>
                         <Text>Waiter</Text>
-                        <Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active <Switch value={true} style={{ transform: [{ scaleX: .5 }, { scaleY: .5 }] }}/></Text>
+                        <Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active <Switch value={true} style={styles.switch}/></Text>
                     </Body>
                     <Right>
                          <Icon style={{color:'#4d4d4d'}} active name="md-more" />
@@ -159,7 +160,7 @@ class ProfileScreen extends Component {
                     </Left>
                     <Body>
                         <Text>Painting</Text>
-                        <Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active <Switch value={true} style={{ transform: [{ scaleX: .5 }, { scaleY: .5 }] }}/></Text>
+                        <Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active <Switch value={true} style={styles.switch}/></Text>
                     </Body>
                     <Right>
                          <Icon style={{color:'#4d4d4d'}} active name="md-more" />
@@ -171,7 +172,7 @@ class ProfileScreen extends Component {
                     </Left>
                     <Body>
                         <Text>Dog Walking</Text>
-                        <Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active <Switch value={true} style={{ transform: [{ scaleX: .5 }, { scaleY: .5 }] }}/></Text>
+                        <Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active <Switch value={true} style={styles.switch}/></Text>
                     </Body>
                     <Right>
                          <Icon style={{color:'#4d4d4d'}} active name="md-more" />
@@ -203,6 +204,118 @@ class ProfileScreen extends Component {
                   />
             </Item>
          </View>
+         {/* Upload Certificates starts here */ }
+         <View style={{flex:1,marginTop:10,marginBottom:10}}>
+            <View style={{flexDirection: 'row',alignItems:'center',padding:10}}>
+                 <Text style={{fontWeight:'bold'}}>Upload Certificates</Text><Icon style={styles.plus} active name="md-add" />
+            </View>  
+            <View style={{flexDirection: 'row',alignItems:'center'}}>
+            <ScrollView
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}
+              >
+                 <View style={{flexDirection:'column',width:100}}>
+                    <View style={styles.imgsView}>
+                     <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
+                     <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                     <Text>Certificate1.jpeg</Text>
+                     </View> 
+                 </View>   
+                 <View style={{flexDirection:'column',width:100}}>
+                    <View style={styles.imgsView}>
+                     <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
+                     <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                     <Text>Certificate1.jpeg</Text>
+                     </View> 
+                 </View> 
+                 <View style={{flexDirection:'column',width:100}}>
+                    <View style={styles.imgsView}>
+                     <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
+                     <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                     <Text>Certificate1.jpeg</Text>
+                     </View> 
+                 </View> 
+              </ScrollView>   
+            </View> 
+         </View>   
+              {/* Upload Certificates ends here */ } 
+              {/* Upload Pics of work starts here */ } 
+              <View style={{flex:1,marginTop:10,marginBottom:10}}>
+            <View style={{flexDirection: 'row',alignItems:'center',padding:10}}>
+                 <Text style={{fontWeight:'bold'}}>Upload Pics of work</Text><Icon style={styles.plus} active name="md-add" />
+            </View>  
+            <View style={{flexDirection: 'row',alignItems:'center'}}>
+            <ScrollView
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}
+              >
+                 <View style={{flexDirection:'column',width:100}}>
+                    <View style={styles.imgsView}>
+                     <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
+                     <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                     <Text>01.jpeg</Text>
+                     </View> 
+                 </View>   
+                 <View style={{flexDirection:'column',width:100}}>
+                    <View style={styles.imgsView}>
+                     <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
+                     <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                     <Text>02.jpeg</Text>
+                     </View> 
+                 </View> 
+                 <View style={{flexDirection:'column',width:100}}>
+                    <View style={styles.imgsView}>
+                     <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
+                     <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                     <Text>03.jpeg</Text>
+                    </View> 
+                 </View> 
+                 <View style={{flexDirection:'column',width:100}}>
+                    <View style={styles.imgsView}>
+                     <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
+                     <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                     <Text>04.jpeg</Text>
+                    </View> 
+                 </View> 
+              </ScrollView>   
+            </View> 
+         </View> 
+              {/* Upload Pics of work ends here */ } 
+              {/* Upload ID start here */}
+              <View style={{flex:1,marginTop:10,marginBottom:10}}>
+                    <View style={{flexDirection: 'row',alignItems:'center',padding:10}}>
+                        <Text style={{fontWeight:'bold'}}>Upload ID</Text><Icon style={styles.plus} active name="md-add" />
+                    </View>  
+                    <View style={{flexDirection: 'row',alignItems:'center'}}>
+                    <ScrollView
+                    horizontal={true}
+                    showsHorizontalScrollIndicator={false}
+                    >
+                        <View style={{flexDirection:'column',width:100}}>
+                            <View style={styles.imgsView}>
+                            <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
+                            <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                            <Text>id_01.jpeg</Text>
+                            </View> 
+                        </View>   
+                        <View style={{flexDirection:'column',width:100}}>
+                            <View style={styles.imgsView}>
+                            <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
+                            <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                            <Text>id_02.jpeg</Text>
+                            </View> 
+                        </View> 
+                        <View style={{flexDirection:'column',width:100}}>
+                            <View style={styles.imgsView}>
+                            <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
+                            <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                            <Text>id_03.jpeg</Text>
+                            </View> 
+                        </View> 
+                    </ScrollView>   
+                    </View> 
+                </View> 
+              {/* Upload ID ends here */}
             <View style={{justifyContent: "center" }}>
                 {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
                <TouchableHighlight style={styles.button} onPress={() => this.handleSubmit()}><Text style={styles.btnText}>FINISH</Text></TouchableHighlight>
@@ -227,10 +340,38 @@ const styles = StyleSheet.create({
           justifyContent: 'center',
           alignItems: 'center'
       },
-      img_placeholder: {
+      user_placeholder: {
         width: 100,
         height: 100,
-        borderRadius:50
+        borderRadius:50,
+        position: 'relative',
+		top: 0,
+		left: 0
+      },
+      camera_icon: {
+        width: 34,
+        height: 34,
+        borderRadius:17,
+        borderWidth:5,
+        borderColor:'white',
+        position: 'absolute',
+		top: 10,
+		right: 10
+      },
+      img_placeholder: {
+        width: 90,
+        height: 90,
+        position: 'relative',
+		top: 0,
+		left: 0
+      },
+      close_img: {
+        width: 18,
+        height: 18,
+        borderRadius:9,
+        position: 'absolute',
+		top: 14,
+		right: 4
       },
       inputContainer: {
           justifyContent: 'center',
@@ -276,6 +417,9 @@ const styles = StyleSheet.create({
          borderColor:  '#808080',
          borderBottomWidth: 0.5
      },
+     switch: {
+          transform: [{ scaleX: .5 }, { scaleY: .5 }] 
+     },
       text: {
         marginBottom: 15,
         marginTop: 15,
@@ -297,6 +441,19 @@ const styles = StyleSheet.create({
         textAlign:'center',
         color:'white',
         fontWeight:'bold'
+    },
+    plus: {
+        color:'#3399ff',
+        paddingLeft:10,
+        fontSize:20,
+        fontWeight: 'bold'
+    },
+    imgsView: {
+        flex: 1,
+        padding:10,
+        position: 'relative',
+        top: 0,
+        left: 0
     }
 })
 
