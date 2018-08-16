@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, TouchableHighlight, Image} from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator, TouchableHighlight, Image,Platform, ScrollView} from 'react-native';
 import { connect } from 'react-redux';
 import {  Item, Input, CheckBox, Toast } from 'native-base';
 import * as actions from '../actions';
@@ -85,6 +85,7 @@ class LoginScreen extends Component {
       let { checked } = this.state;
       return (  
         <View style={styles.container}>
+               <ScrollView>
         <View style={styles.logoContainer}>
             <View style={{flex: 1}}>
             <Image source={require('../images/logo.png')} style={styles.logo}/>
@@ -150,8 +151,8 @@ class LoginScreen extends Component {
         <Text style={{marginBottom:10,marginTop:10,textAlign: 'center'}}>Don't have an account  <Text style={{fontWeight: 'bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign up</Text></Text>
         </View>       
         </View> 
+        </ScrollView>
         </View>
-
       );
     }
 }
@@ -161,7 +162,7 @@ const styles = StyleSheet.create({
         container: {
           flex: 1,
           backgroundColor: 'white',
-          paddingTop: 50
+          paddingTop: Platform.OS === 'ios' ? 50 : 0, 
       },
       logoContainer: {
           flex: 2,

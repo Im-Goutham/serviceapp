@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
-import {StyleSheet, View,TouchableNativeFeedback} from 'react-native';
-import {Button, Text } from 'native-base';
+import {StyleSheet, View,TouchableHighlight,Image,Dimensions} from 'react-native';
+import {Icon, Text } from 'native-base';
 import MapView, { Callout, Marker, ProviderPropType } from 'react-native-maps';
-
+const { width, height } = Dimensions.get('window')
 
 export default class Map extends Component {
 
@@ -88,12 +88,46 @@ export default class Map extends Component {
             <Marker
               coordinate={coordinate}
             >
-              <Callout onPress={this.callOutClicked}>
-                <View>
-                  <Text>Place Id: Testing ...........</Text>
-                  <Text>Name: Goutham</Text>
-                  <Button onPress={()=>{console.log('marker clicked')}}><Text> Apply </Text></Button>
-                </View>
+              <Callout onPress={this.callOutClicked} tooltip={true} style={{backgroundColor:'red'}}>
+              <View style={styles.li} >
+                <View style={{flex:1,flexDirection:'row'}}>
+                    <View style={{flex:1}}>
+                        <Text style={{fontSize:16,fontWeight:'bold'}}>Need Cook</Text>
+                    </View>   
+                    <View style={{flex:1}}>
+                        <Text style={{fontSize:16,color:'#008000'}}>$240</Text>
+                    </View> 
+                    <View style={{flex:1}}>
+                            <TouchableHighlight style={styles.button} onPress={()=>{alert('clicked')}}><Text style={styles.btnText}>APPLY</Text></TouchableHighlight>
+                    </View> 
+                </View>   
+              <View style={{flex:1,flexDirection:'row',marginTop:10}}>
+                <Text style={{fontSize:12}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
+              </View>   
+                  <View style={{flex:1,flexDirection:'row',marginTop:10}}>
+                            <View style={{flex:1,padding:1}}>
+                            <Image style={styles.imgStyle} source={require('../images/img_placeholder.png')} />
+                            </View>
+                            <View style={{flex:1,padding:1}}>
+                            <Image style={styles.imgStyle} source={require('../images/img_placeholder.png')} />
+                            </View>
+                            <View style={{flex:1,padding:1}}>
+                            <Image style={styles.imgStyle} source={require('../images/img_placeholder.png')} />
+                            </View>
+                  </View>  
+                  <View style={{flex:1,flexDirection:'row',marginTop:10}}>
+                      <View style={{flex:3,flexDirection:'row',padding:2,justifyContent:'center'}}>
+                         <Icon style={{color:'#007FFA',fontSize:18}} active name="ios-calendar-outline" /><Text style={{fontSize:12,fontWeight:'bold'}}>Before the 19 Sep 2018</Text>
+                      </View>  
+                      <View style={{flex:2,flexDirection:'row',padding:2,justifyContent:'center'}}>
+                      <Icon style={{color:'#c33c4c',fontSize:18}} active name="md-pin" /><Text style={{fontSize:12,fontWeight:'bold'}}> 3km </Text>
+                      </View>  
+                      <View style={{flex:1,flexDirection:'row',justifyContent:'space-around'}}>
+                        <Icon style={{color:'black',fontSize:18}} active name="md-heart-outline" />
+                        <Icon style={{color:'black',fontSize:18}} active name="md-share" />
+                      </View>  
+                </View> 
+              </View>
               </Callout>
             </Marker>
       </MapView>
@@ -119,6 +153,28 @@ const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
   },
+  li: {
+    backgroundColor: '#fff',
+    flex:1,
+    width:width-40,
+    padding:10
+  },
+    button:{
+      backgroundColor:'#008000',
+      width: '100%',
+      borderRadius:20,
+      borderWidth: 1,
+      borderColor: '#008000',
+      paddingTop:5,
+      paddingBottom:5,
+  },
+  btnText: { 
+      textAlign:'center',
+      color:'white',
+      fontWeight:'bold',
+      fontSize:12
+  },
+  imgStyle: {width:'100%',height:80}
 });
 
 

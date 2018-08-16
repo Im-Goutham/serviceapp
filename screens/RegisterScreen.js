@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, TouchableHighlight, Image} from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator, TouchableHighlight, Image,ScrollView} from 'react-native';
 import { connect } from 'react-redux';
 import {  Item, Input, CheckBox, Toast } from 'native-base';
 import * as actions from '../actions';
@@ -85,12 +85,13 @@ class RegisterScreen extends Component {
     render() {
       let { checked } = this.state;
       return (  
-        <View style={{flex: 1}}>
+        <View style={styles.container}>
           <Header navigation={this.props.navigation} title={'Sign in'}/>
+          <ScrollView>
           <View style={{padding: 10, backgroundColor:'white'}}>
            <Text style={{fontSize: 28, fontWeight: 'bold'}}>Sign Up</Text>
           </View> 
-        <View style={styles.container}>
+        <View >
           <View style={styles.inputContainer}> 
             <Text style={styles.inputLabel}>EMAIL</Text>
             <Item>
@@ -160,7 +161,7 @@ class RegisterScreen extends Component {
                 </Item>
                 <Item>
 
-                      <View style={{flex: 2,paddingRight:5}}>
+                      <View style={{flex: 3,paddingRight:5}}>
                       <Text style={styles.inputLabel}>COUNTRY CODE</Text>
                         <Item>
                           <Input
@@ -220,6 +221,7 @@ class RegisterScreen extends Component {
             </View>     
             </View> 
             </View>
+            </ScrollView>
         </View>  
         
 

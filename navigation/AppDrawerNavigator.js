@@ -27,7 +27,7 @@ export default DrawerNavigator({
     findJobs: {
        screen: FindJobsScreen
     },
-    postjob: {
+    postJob: {
        screen: PostJobScreen
     },
     findHelp: {

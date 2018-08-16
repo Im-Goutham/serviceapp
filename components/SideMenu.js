@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {NavigationActions} from 'react-navigation';
-import {ScrollView, Text, View, StyleSheet} from 'react-native';
+import { View, StyleSheet,Image} from 'react-native';
+import { List, ListItem, Left, Body, Right, Text , Icon} from 'native-base';
 
 class SideMenu extends Component {
   navigateToScreen = (route) => () => {
@@ -14,57 +15,161 @@ class SideMenu extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <ScrollView>
-        <View>
-            <Text style={styles.sectionHeadingStyle}>
-              Section
-            </Text>
-            <View style={styles.navSectionStyle}>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('homePage')}>
-                Home
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('findJobs')}>
-                Find Jobs
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('postJob')}>
-                Post Job
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('findHelp')}>
-                Find Help
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('myJobs')}>
-                My Jobs
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('favourites')}>
-                Favourites
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('notifications')}>
-                Notifications
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('chats')}>
-                Chats
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('myRequests')}>
-                My Requests
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('trackNow')}>
-                Track Now
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('account')}>
-                My Account
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('subscription')}>
-                 Subscription
-              </Text>
-              <Text style={styles.navItemStyle} onPress={this.navigateToScreen('settings')}>
-                 Settings
-              </Text>
+            <View style={styles.sectionHeadingStyle}>
+              <List style={{paddingTop:20,paddingBottom:20}}>
+                    <ListItem avatar>
+                    <Left>
+                        <Image style={{width:40,height:40,borderRadius:20}} source={require('../images/user_placeholder.png')} />
+                    </Left>
+                    <Body>
+                        <Text style={styles.textStyle}>John Doe</Text>
+                    </Body>
+                    <Right/>
+                    </ListItem>
+              </List>      
             </View>
-          </View>
-        </ScrollView>
-        <View style={styles.footerContainer}>
-          <Text>Log out</Text>
-        </View>
+            <View style={styles.navSectionStyle}>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('homePage')}>
+                    Home
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('findJobs')}>
+                  Find Jobs
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('postJob')}>
+                  Post Job
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('findHelp')}>
+                  Find Help
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('myJobs')}>
+                  My Jobs
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('favourites')}>
+                  Favourites
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('notifications')}>
+                  Notifications
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('chats')}>
+                  Chats
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('myRequests')}>
+                  My Requests
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('trackNow')}>
+                  Track Now
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('account')}>
+                  My Account
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('subscription')}>
+                  Subscription
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle} onPress={this.navigateToScreen('settings')}>
+                  Settings
+                  </Text>
+                </View>
+              </View>
+              <View style={styles.navItemStyle}>
+                <View style={{flex:1,alignItems:'center'}}>
+                  <Icon style={{color:'white',fontSize:15,marginTop:2}} active name="md-radio-button-off" />
+                </View>
+                <View style={{flex:3,alignItems:'flex-start'}}>
+                  <Text style={styles.textStyle}>
+                  Logout
+                  </Text>
+                </View>
+              </View>
+            </View>
       </View>
     );
   }
@@ -72,22 +177,26 @@ class SideMenu extends Component {
 
 const styles = StyleSheet.create({
     container: {
+      flex:1,
       paddingTop: 20,
-      flex: 1
+      backgroundColor:'#4A4A4A'
     },
     navItemStyle: {
-      padding: 10
+      flex:1,
+      flexDirection:'row',
     },
     navSectionStyle: {
-      backgroundColor: 'lightgrey'
+      flex:1,
+      flexDirection:'column'
     },
     sectionHeadingStyle: {
       paddingVertical: 10,
-      paddingHorizontal: 5
+      paddingHorizontal: 5,
     },
-    footerContainer: {
-      padding: 20,
-      backgroundColor: 'lightgrey'
+    textStyle: {
+        textAlign: 'left',
+        color:'white',
+        fontWeight:'bold'
     }
 });
 

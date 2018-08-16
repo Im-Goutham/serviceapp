@@ -1,15 +1,41 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, TouchableHighlight,ScrollView} from 'react-native';
+import { View, Text, StyleSheet, TouchableHighlight,ScrollView} from 'react-native';
 import { connect } from 'react-redux';
-import { Toast } from 'native-base';
+import { Icon } from 'native-base';
 import * as actions from '../actions';
 import Header from '../components/goBackHeader';
 
 import Advertisement from '../components/Advertisement';
 
 class AddServiceCatScreen extends Component {
-
+constructor(){
+     super();
+     this.state = {
+          popularCategories: [
+               {name:'Home Exterior'},
+               {name:'Handlooms'},
+               {name:'Water Servicing'},
+               {name:'External painting'},
+               {name:'Landscaping'},
+          ],
+          allCategories: [
+            {name:'Home Interior'},
+            {name:'Home Exterior'},
+            {name:'Landscaping'},
+            {name:'Handyman'},
+            {name:'Electrician'},
+            {name:'Pluming'},
+            {name:'Painting'},
+            {name:'Appliance repair'},
+            {name:'Mounting & installing'},
+            {name:'Future assembly'},
+            {name:'Cars & Vehicles'},
+            {name:'Cleaning & Housework'},
+       ]
+     }
+}
     render() {
+        let {popularCategories, allCategories} = this.state;
       return (  
         <ScrollView>
         <View>
@@ -25,27 +51,17 @@ class AddServiceCatScreen extends Component {
             <ScrollView
               horizontal={true}
               showsHorizontalScrollIndicator={false}
-              >
-                 <View style={{flexDirection:'column'}}>
-                    <View style={styles.categoryBox}>
-                          
-                     </View> 
-                 </View>   
-                 <View style={{flexDirection:'column'}}>
-                    <View style={styles.categoryBox}>
-                
-                     </View> 
-                 </View> 
-                 <View style={{flexDirection:'column'}}>
-                    <View style={styles.categoryBox}>
-                  
-                   </View> 
-                 </View>
-                 <View style={{flexDirection:'column'}}>
-                    <View style={styles.categoryBox}>
-                  
-                   </View> 
-                 </View>  
+              >     
+                 {
+                   popularCategories.map((category,key)=>{
+                         return    <View style={{flexDirection:'column'}} key={key}>
+                                        <View style={styles.categoryBox}>
+                                            <Icon style={{color:'#4d4d4d'}} active name="md-star" />
+                                            <Text>{category.name}</Text>
+                                        </View>
+                                 </View>     
+                   })
+                 }
               </ScrollView>   
             </View> 
          </View> 
@@ -55,19 +71,14 @@ class AddServiceCatScreen extends Component {
             <Text style={styles.headingTxt}>All Categories</Text>
          </View>   
          <View style={styles.categoryContainer}>
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View> 
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>  
-         <View style={styles.categoryBox}></View>   
+         {
+                   allCategories.map((category,key)=>{
+                         return    <View style={styles.categoryBox} key={key}>
+                                            <Icon style={{color:'#4d4d4d'}} active name="md-star" />
+                                            <Text>{category.name}</Text>
+                                 </View>    
+                   })
+          }  
       </View>  
            {/* All categories ends here */}   
             <View style={{justifyContent: "center" }}>
@@ -121,7 +132,9 @@ const styles = StyleSheet.create({
         margin:5,
         borderColor: 'grey',
         borderWidth:0.5,
-        borderRadius:10
+        borderRadius:10,
+        justifyContent:'center',
+        alignItems: 'center'
     },
     categoryContainer: {
         flex: 1,

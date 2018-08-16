@@ -1,15 +1,34 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator, TouchableHighlight,ScrollView} from 'react-native';
 import { connect } from 'react-redux';
-import { Toast } from 'native-base';
+import { Icon } from 'native-base';
 import * as actions from '../actions';
 import Header from '../components/goBackHeader';
 
 import Advertisement from '../components/Advertisement';
 
 class AddServiceSubCatScreen extends Component {
-
+    constructor(){
+        super();
+        this.state = {
+             subCategories: [
+               {name:'Hair'},
+               {name:'Manicure/ Pedicure'},
+               {name:'Makeup'},
+               {name:'Wax'},
+               {name:'Other'},
+               {name:'Pluming'},
+               {name:'Painting'},
+               {name:'Appliance repair'},
+               {name:'Mounting & installing'},
+               {name:'Future assembly'},
+               {name:'Cars & Vehicles'},
+               {name:'Cleaning & Housework'},
+          ]
+        }
+   }
     render() {
+        let {subCategories} = this.state;
       return (  
         <ScrollView>
         <View>
@@ -21,19 +40,14 @@ class AddServiceSubCatScreen extends Component {
             <Text style={styles.headingTxt}>Select Sub Category</Text>
          </View>   
          <View style={styles.categoryContainer}>
-                <View style={styles.categoryBox}></View>  
-                <View style={styles.categoryBox}></View>  
-                <View style={styles.categoryBox}></View>  
-                <View style={styles.categoryBox}></View>  
-                <View style={styles.categoryBox}></View>  
-                <View style={styles.categoryBox}></View>  
-                <View style={styles.categoryBox}></View>  
-                <View style={styles.categoryBox}></View> 
-                <View style={styles.categoryBox}></View>  
-                <View style={styles.categoryBox}></View>  
-                <View style={styles.categoryBox}></View>  
-                <View style={styles.categoryBox}></View>  
-                <View style={styles.categoryBox}></View>   
+         {
+                   subCategories.map((category,key)=>{
+                         return    <View style={styles.categoryBox} key={key}>
+                                            <Icon style={{color:'#4d4d4d'}} active name="md-star" />
+                                            <Text>{category.name}</Text>
+                                 </View>    
+                   })
+          }  
         </View>  
            {/* All categories ends here */}   
             <View style={{justifyContent: "center" }}>
@@ -87,7 +101,9 @@ const styles = StyleSheet.create({
         margin:5,
         borderColor: 'grey',
         borderWidth:0.5,
-        borderRadius:10
+        borderRadius:10,
+        justifyContent:'center',
+        alignItems: 'center'
     },
     categoryContainer: {
         flex: 1,

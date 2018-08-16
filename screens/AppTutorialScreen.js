@@ -18,7 +18,7 @@ class AppTutorialScreen extends Component {
            <Swiper showsButtons={false}>
                 <View style={styles.slide}>
                     <View style={{flex:6}}>
-                        <Image source={require('../images/tutorial.png')} style={{width: width}}/>
+                        <Image source={require('../images/tutorial.png')} style={styles.imgStyle}/>
                     </View>    
                     <View style={styles.tutorialText}>
                         <Text style={styles.text}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.  </Text>
@@ -26,7 +26,7 @@ class AppTutorialScreen extends Component {
                 </View>
                 <View style={styles.slide}>
                     <View style={{flex:6}}>
-                         <Image source={require('../images/tutorial.png')} style={{width: width}}/>
+                         <Image source={require('../images/tutorial.png')} style={styles.imgStyle}/>
                     </View>    
                     <View style={styles.tutorialText}>
                     <Text style={styles.text}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.  </Text>
@@ -34,7 +34,7 @@ class AppTutorialScreen extends Component {
                 </View>
                 <View style={styles.slide}>
                     <View style={{flex:6}}>
-                         <Image source={require('../images/tutorial.png')}  style={{width: width}}/>
+                         <Image source={require('../images/tutorial.png')} style={styles.imgStyle}/>
                     </View>    
                     <View style={styles.tutorialText}>
                     <Text style={styles.text}>Lorem Ipsum is simply dummy text of the printing and typesetting industry.  </Text>
@@ -97,7 +97,8 @@ const styles = StyleSheet.create({
         textAlign:'center',
         color:'white',
         fontWeight:'bold'
-    }
+    },
+    imgStyle: {width: width,height:height/1.6}
 })
 
 export default AppTutorialScreen;

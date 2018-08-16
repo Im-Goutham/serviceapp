@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ActivityIndicator, TouchableHighlight, Image, ScrollView} from 'react-native';
+import { View, StyleSheet, ActivityIndicator, TouchableHighlight, Image, ScrollView,Platform} from 'react-native';
 import { connect } from 'react-redux';
 import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Text, Icon, Textarea } from 'native-base';
 import * as actions from '../actions';
@@ -144,11 +144,11 @@ class ProfileScreen extends Component {
                  <List style={{paddingTop:20,paddingBottom:20}}>
                     <ListItem avatar>
                     <Left>
-                        <Thumbnail style={{width:40,height:40}} source={require('../images/img_placeholder.png')} />
+                        <Image style={{width:40,height:40,borderRadius:20}} source={require('../images/img_placeholder.png')} />
                     </Left>
                     <Body>
                         <Text>Waiter</Text>
-                        <Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active <Switch value={true} style={styles.switch}/></Text>
+                          <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active </Text><Switch value={true} style={styles.switch}/></View>   
                     </Body>
                     <Right>
                          <Icon style={{color:'#4d4d4d'}} active name="md-more" />
@@ -156,11 +156,11 @@ class ProfileScreen extends Component {
                     </ListItem>
                     <ListItem avatar>
                     <Left>
-                        <Thumbnail style={{width:40,height:40}} source={require('../images/img_placeholder.png')} />
+                        <Image  style={{width:40,height:40,borderRadius:20}} source={require('../images/img_placeholder.png')} />
                     </Left>
                     <Body>
                         <Text>Painting</Text>
-                        <Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active <Switch value={true} style={styles.switch}/></Text>
+                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active </Text><Switch value={true} style={styles.switch}/></View>   
                     </Body>
                     <Right>
                          <Icon style={{color:'#4d4d4d'}} active name="md-more" />
@@ -168,11 +168,11 @@ class ProfileScreen extends Component {
                     </ListItem>
                     <ListItem avatar>
                     <Left>
-                        <Thumbnail style={{width:40,height:40}} source={require('../images/img_placeholder.png')} />
+                        <Image style={{width:40,height:40,borderRadius:20}}source={require('../images/img_placeholder.png')} />
                     </Left>
                     <Body>
                         <Text>Dog Walking</Text>
-                        <Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active <Switch value={true} style={styles.switch}/></Text>
+                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active </Text><Switch value={true} style={styles.switch}/></View>   
                     </Body>
                     <Right>
                          <Icon style={{color:'#4d4d4d'}} active name="md-more" />
@@ -184,24 +184,24 @@ class ProfileScreen extends Component {
                 </View>
             </View>  
             <View style={styles.inputContainer}>
-          <Text style={styles.inputLabel}>WRITE ABOUT YOUR SELF</Text>
-        <Item>
-              <Textarea
-                  style={styles.textAreaField}
-                  value={this.state.about}
-                  autoCapitalize='none'
-                  rowSpan={4}
-                  onSubmitEditing={() => {
-                    this.handleSubmit();
-                  }}
-                  returnKeyType={ "done" }
-                  ref={ input => {
-                    this.inputs['about'] = input;
-                  }}
-                  onChangeText={about => this.setState({ about })}
-                  />
-            </Item>
-         </View>
+                 <Text style={styles.inputLabel}>WRITE ABOUT YOUR SELF</Text>
+                <Item>
+                    <Textarea
+                        style={styles.textAreaField}
+                        value={this.state.about}
+                        autoCapitalize='none'
+                        rowSpan={4}
+                        onSubmitEditing={() => {
+                            this.handleSubmit();
+                        }}
+                        returnKeyType={ "done" }
+                        ref={ input => {
+                            this.inputs['about'] = input;
+                        }}
+                        onChangeText={about => this.setState({ about })}
+                        />
+                    </Item>
+             </View>
          {/* Upload Certificates starts here */ }
          <View style={{flex:1,marginTop:10,marginBottom:10}}>
             <View style={{flexDirection: 'row',alignItems:'center',padding:10}}>
@@ -418,8 +418,8 @@ class ProfileScreen extends Component {
 const styles = StyleSheet.create({
         container: {
           backgroundColor: 'white',
-          paddingTop: 50,
-          paddingBottom: 50,
+          paddingTop: Platform.OS === 'ios' ? 50 : 0,
+          paddingBottom: Platform.OS === 'ios' ? 50 : 0, 
           padding:5
       },
       logoContainer: {
