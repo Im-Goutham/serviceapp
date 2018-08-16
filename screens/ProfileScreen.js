@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ActivityIndicator, TouchableHighlight, Image, ScrollView,Platform} from 'react-native';
+import { View, StyleSheet, ActivityIndicator, TouchableOpacity,TouchableHighlight, Image, ScrollView,Platform} from 'react-native';
 import { connect } from 'react-redux';
 import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Text, Icon, Textarea } from 'native-base';
+import ImagePicker  from 'react-native-image-picker';
+
+
 import * as actions from '../actions';
 
 class ProfileScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = { firstname: '', lastname: '', error: null, loading: false};
+    this.state = { 
+        firstname: '', 
+        lastname: '',
+        error: null,
+        loading: false,  
+        avatarSource: null,
+        videoSource: null};
     this.focusNextField = this.focusNextField.bind(this);
     this.inputs = {};
   }
@@ -24,23 +33,9 @@ class ProfileScreen extends Component {
 
 
      handleSubmit = async () => {
-    //  let {firstname , lastname} = this.state;
-
-
-    //  if(!firstname){
-    //        this.handleError("Username is required!")
-    //        return false;
-    //  }
-    //  if(!lastname){
-    //       this.handleError("lastname is required!")
-    //        return false;
-    //  }
-    //  this.setState({ error: null, loading: true });
-    this.props.navigation.navigate('home');
-
+        this.props.navigation.navigate('home');
   
    }
-
 
    handleError(error){
      Toast.show({
@@ -51,7 +46,72 @@ class ProfileScreen extends Component {
    }
 
 
+   selectPhotoTapped() {
+    const options = {
+      quality: 1.0,
+      maxWidth: 500,
+      maxHeight: 500,
+      storageOptions: {
+        skipBackup: true
+      }
+    };
+
+    ImagePicker.showImagePicker(options, (response) => {
+      console.log('Response = ', response);
+
+      if (response.didCancel) {
+        console.log('User cancelled photo picker');
+      }
+      else if (response.error) {
+        console.log('ImagePicker Error: ', response.error);
+      }
+      else if (response.customButton) {
+        console.log('User tapped custom button: ', response.customButton);
+      }
+      else {
+        let source = { uri: response.uri };
+
+        // You can also display the image using data:
+        // let source = { uri: 'data:image/jpeg;base64,' + response.data };
+
+        this.setState({
+          avatarSource: source
+        });
+      }
+    });
+  }
+
+  selectVideoTapped() {
+    const options = {
+      title: 'Video Picker',
+      takePhotoButtonTitle: 'Take Video...',
+      mediaType: 'video',
+      videoQuality: 'medium'
+    };
+
+    ImagePicker.showImagePicker(options, (response) => {
+      console.log('Response = ', response);
+
+      if (response.didCancel) {
+        console.log('User cancelled video picker');
+      }
+      else if (response.error) {
+        console.log('ImagePicker Error: ', response.error);
+      }
+      else if (response.customButton) {
+        console.log('User tapped custom button: ', response.customButton);
+      }
+      else {
+        this.setState({
+          videoSource: response.uri
+        });
+      }
+    });
+  }
+
+
     render() {
+      let {avatarSource} = this.state;  
       return ( 
         <ScrollView> 
         <View style={styles.container}>
@@ -59,10 +119,18 @@ class ProfileScreen extends Component {
             <Text style={{fontSize: 28, fontWeight: 'bold'}}>Basic Profile</Text>
         </View> 
         <View style={styles.logoContainer}>
-            <View style={styles.imgsView}>
-               <Image source={require('../images/user_placeholder.png')} style={styles.user_placeholder}/>
-               <Image source={require('../images/camera_icon.png')} style={styles.camera_icon}/>
-             </View> 
+        <TouchableOpacity onPress={this.selectPhotoTapped.bind(this)}>
+                <View style={styles.imgsView}>
+                {
+                    (avatarSource)?(
+                        <Image source={avatarSource} style={styles.user_placeholder} />
+                    ):(
+                        <Image source={require('../images/user_placeholder.png')} style={styles.user_placeholder}/>
+                    )
+                }
+                        <Image  source={require('../images/camera_icon.png')} style={styles.camera_icon}/>
+                </View>  
+        </TouchableOpacity>
              <View style={{flex: 1,padding:10}}>
                 <Text style={{fontSize: 18,textAlign: 'center'}}>Set Profile Pic</Text>
              </View> 

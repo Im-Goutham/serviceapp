@@ -31,7 +31,7 @@ export default StackNavigator(
      },
       },{
         index: 0,
-        initialRouteName: 'home',
+        initialRouteName: 'profile',
         headerMode: 'none',
         navigationOptions: {
         gesturesEnabled: false
