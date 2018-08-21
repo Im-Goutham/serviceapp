@@ -9,8 +9,8 @@ import {
 import MapView, { Marker, AnimatedRegion, Polyline } from "react-native-maps";
 import haversine from "haversine";
 
-const LATITUDE =  37.8025259;
-const LONGITUDE = -122.4351431;
+const LATITUDE = 29.95539;
+const LONGITUDE = 78.07513;
 const LATITUDE_DELTA = 0.009;
 const LONGITUDE_DELTA = 0.009;
 
@@ -102,26 +102,7 @@ class AnimatedMarkers extends React.Component {
           loadingEnabled
           region={this.getMapRegion()}
         >
-         <Polyline
-		coordinates={[
-			{ latitude: 37.8025259, longitude: -122.4351431 },
-			{ latitude: 37.7896386, longitude: -122.421646 },
-			{ latitude: 37.7665248, longitude: -122.4161628 },
-			{ latitude: 37.7734153, longitude: -122.4577787 },
-			{ latitude: 37.7948605, longitude: -122.4596065 },
-			{ latitude: 37.8025259, longitude: -122.4351431 }
-		]}
-		strokeColor="#000" // fallback for when `strokeColors` is not supported by the map-provider
-		strokeColors={[
-			'#7F0000',
-			'#00000000', // no color, creates a "long" gradient between the previous and next coordinate
-			'#B24112',
-			'#E5845C',
-			'#238C23',
-			'#7F0000'
-		]}
-		strokeWidth={6}
-	/>
+          <Polyline strokeColor='red' lineJoin='bevel' coordinates={this.state.routeCoordinates} strokeWidth={5} />
           <Marker.Animated 
             ref={marker => {
               this.marker = marker;
