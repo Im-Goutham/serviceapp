@@ -3,8 +3,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, ScrollView,Image } from 'react-native';
 import {  Header, Left, Body, Right, Button, Icon, Title,Tab, Tabs ,Text } from 'native-base'
 import Advertisement from '../components/Advertisement';
-import TracksList from '../components/TracksList';
-import Map from '../components/Map';
+import TrackMap from '../components/TrackMap';
 
 const TopHeader = (props) => {
     return  <Header style={{backgroundColor:'white'}}>
@@ -23,17 +22,20 @@ const TopHeader = (props) => {
   </Header>
 }
 
-class TracksScreen extends Component {
+class FindJobScreen extends Component {
 
+
+
+     
     render() {
        return (
            <View style={styles.container}>
-               <TopHeader navigation={this.props.navigation} title={'Track Screen'}/>
-               <ScrollView>
+               <TopHeader navigation={this.props.navigation} title={'Track the Service Provider'}/>
                <Advertisement/>
-                    <TracksList navigation={this.props.navigation}/>
-               <Advertisement/> 
-               </ScrollView>
+               <View style={{flex:1}}>
+                     <TrackMap/>
+               </View> 
+               <Advertisement/>
            </View>
        )
     }
@@ -41,10 +43,11 @@ class TracksScreen extends Component {
 
 const styles = StyleSheet.create({
       container: {
+          flex:1,
           padding:5,
           paddingBottom:40,
           backgroundColor:'white'
     }
 })
 
-export default TracksScreen;
+export default FindJobScreen;

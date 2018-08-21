@@ -4,7 +4,7 @@ import { View, StyleSheet, ScrollView,Image } from 'react-native';
 import {  Header, Left, Body, Right, Button, Icon, Title,Tab, Tabs ,Text } from 'native-base'
 import Advertisement from '../components/Advertisement';
 import JobsList from '../components/JobsList';
-import Map from '../components/Map';
+
 
 const TopHeader = (props) => {
     return  <Header style={{backgroundColor:'white'}}>
@@ -25,9 +25,6 @@ const TopHeader = (props) => {
 
 class MyJobsScreen extends Component {
 
-
-
-     
     render() {
        return (
            <View style={styles.container}>

@@ -12,7 +12,7 @@ import FavouriteScreen from '../screens/FavouriteScreen';
 import NotificationsScreen from '../screens/NotificationsScreen';
 import ChatsScreen from '../screens/ChatsScreen';
 import MyRequestsScreen from '../screens/MyRequestsScreen';
-import TrackScreen from '../screens/TrackScreen';
+import TrackStackNavigator from './TrackStackNavigator';
 import AccountScreen from '../screens/AccountScreen';
 import SubscriptionScreen from '../screens/SubscriptionScreen';
 import SettingsScreen from '../screens/SettingsScreen';
@@ -49,7 +49,7 @@ export default DrawerNavigator({
         screen: MyRequestsScreen
       },
     trackNow: {
-        screen: TrackScreen
+        screen: TrackStackNavigator
     },
      account: {
         screen: AccountScreen
