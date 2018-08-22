@@ -3,7 +3,7 @@ import Swipeout from 'react-native-swipeout';
 import React, {Component} from 'react';
 import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,TouchableHighlight} from 'react-native';
 import {Icon} from 'native-base';
-
+import Share, {ShareSheet, Button} from 'react-native-share';
 
 class JobsList extends Component {
 
@@ -37,6 +37,12 @@ class JobsList extends Component {
   }
 
   _renderRow(rowData, sectionID, rowID) {
+    let shareOptions = {
+      title: "React Native",
+      message: "Hola mundo",
+      url: "http://facebook.github.io/react-native/",
+      subject: "Share Link" //  for email
+    };
     const btnsTypes = [
         {
             component: <View style={{
@@ -60,11 +66,12 @@ class JobsList extends Component {
                 alignItems: 'center',
                 alignSelf: 'center',
                 alignContent: 'center'
-              }}>
-              <Icon name='md-share' style={{color: 'white', fontSize: 27, textAlign: 'center'}}/>
+              }}
+              >
+              <Icon name='md-share' style={{color: 'white', fontSize: 27, textAlign: 'center'}} />
             </View>,
             backgroundColor: '#007FFA',
-            onPress:()=>{console.log(rowData.text)}
+            onPress:()=>{ Share.open(shareOptions)}
         }
       ];
     return (
@@ -121,6 +128,18 @@ class JobsList extends Component {
         </TouchableWithoutFeedback>
       </Swipeout>
     );
+  }
+
+
+  shareJob(){
+    console.log('share icon clicked')
+    let shareOptions = {
+      title: "React Native",
+      message: "Hola mundo",
+      url: "http://facebook.github.io/react-native/",
+      subject: "Share Link" //  for email
+    };
+    Share.open(shareOptions);
   }
 
   render() {

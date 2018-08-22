@@ -67,6 +67,9 @@
 		A9D3F5A6210B6B1100530C47 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D3F5A2210B6AEF00530C47 /* FBSDKCoreKit.framework */; };
 		A9D3F5A7210B6B1100530C47 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D3F5A3210B6B0100530C47 /* Bolts.framework */; };
 		A9D3F5A8210B6B1100530C47 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9D3F5A4210B6B1100530C47 /* FBSDKShareKit.framework */; };
+		A9F1ABAA212D427400529E77 /* libRNShare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F1ABA9212D423600529E77 /* libRNShare.a */; };
+		A9F1ABAD212D42B400529E77 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F1ABAB212D42B400529E77 /* Social.framework */; };
+		A9F1ABAE212D42B400529E77 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9F1ABAC212D42B400529E77 /* MessageUI.framework */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
 		B13D649E65F744878989F055 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 821C9EFB53404AEFAC564BE5 /* SafariServices.framework */; };
 		C17CF23E91934B97A1D73655 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C9547F67E8B44468A802E03B /* Feather.ttf */; };
@@ -392,6 +395,13 @@
 			remoteGlobalIDString = 9350E0F11CE3B0920041D815;
 			remoteInfo = RCTFBSDK;
 		};
+		A9F1ABA8212D423600529E77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9F1AB78212D423600529E77 /* RNShare.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNShare;
+		};
 		ADBDB9261DFEBF0700ED6528 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
@@ -456,6 +466,9 @@
 		A9D3F5A2210B6AEF00530C47 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		A9D3F5A3210B6B0100530C47 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		A9D3F5A4210B6B1100530C47 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		A9F1AB78212D423600529E77 /* RNShare.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNShare.xcodeproj; path = "../node_modules/react-native-share/ios/RNShare.xcodeproj"; sourceTree = "<group>"; };
+		A9F1ABAB212D42B400529E77 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A9F1ABAC212D42B400529E77 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AAA06E2B1D52448583E1B3C8 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		AB5AE672078E32ABEB2ACC19 /* libPods-SpotJobs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpotJobs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
@@ -484,6 +497,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9F1ABAD212D42B400529E77 /* Social.framework in Frameworks */,
+				A9F1ABAE212D42B400529E77 /* MessageUI.framework in Frameworks */,
+				A9F1ABAA212D427400529E77 /* libRNShare.a in Frameworks */,
 				A904646A2125A23000EAEC93 /* libRNImagePicker.a in Frameworks */,
 				A967EF8321187DBE00FE7B5D /* libRNAWSCognito.a in Frameworks */,
 				A9BC06862118270800D0BDBE /* libRCTPushNotification.a in Frameworks */,
@@ -667,6 +683,8 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9F1ABAC212D42B400529E77 /* MessageUI.framework */,
+				A9F1ABAB212D42B400529E77 /* Social.framework */,
 				A968DDC2210C8A9800643B9C /* GoogleAppUtilities.framework */,
 				A968DDC3210C8A9800643B9C /* GoogleAuthUtilities.framework */,
 				A968DDC1210C8A9800643B9C /* GoogleNetworkingUtilities.framework */,
@@ -717,6 +735,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A9F1AB78212D423600529E77 /* RNShare.xcodeproj */,
 				A90464392125A20500EAEC93 /* RNImagePicker.xcodeproj */,
 				A967EF5321187D9100FE7B5D /* RNAWSCognito.xcodeproj */,
 				A9BC0655211826D400D0BDBE /* RCTPushNotification.xcodeproj */,
@@ -852,6 +871,14 @@
 			isa = PBXGroup;
 			children = (
 				A9D3F5A0210B698900530C47 /* libRCTFBSDK.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9F1AB79212D423600529E77 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9F1ABA9212D423600529E77 /* libRNShare.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1052,6 +1079,10 @@
 				{
 					ProductGroup = A904643A2125A20500EAEC93 /* Products */;
 					ProjectRef = A90464392125A20500EAEC93 /* RNImagePicker.xcodeproj */;
+				},
+				{
+					ProductGroup = A9F1AB79212D423600529E77 /* Products */;
+					ProjectRef = A9F1AB78212D423600529E77 /* RNShare.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1364,6 +1395,13 @@
 			fileType = archive.ar;
 			path = libRCTFBSDK.a;
 			remoteRef = A9D3F59F210B698900530C47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A9F1ABA9212D423600529E77 /* libRNShare.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNShare.a;
+			remoteRef = A9F1ABA8212D423600529E77 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */ = {
