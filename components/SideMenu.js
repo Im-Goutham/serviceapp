@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {NavigationActions} from 'react-navigation';
-import { View, StyleSheet,Image} from 'react-native';
+import { View, StyleSheet,Image, Platform} from 'react-native';
 import { List, ListItem, Left, Body, Right, Text , Icon} from 'native-base';
 
 class SideMenu extends Component {
@@ -178,7 +178,7 @@ class SideMenu extends Component {
 const styles = StyleSheet.create({
     container: {
       flex:1,
-      paddingTop: 20,
+      paddingTop: Platform.OS === 'ios' ? 20 : 0,
       backgroundColor:'#4A4A4A'
     },
     navItemStyle: {
@@ -190,7 +190,6 @@ const styles = StyleSheet.create({
       flexDirection:'column'
     },
     sectionHeadingStyle: {
-      paddingVertical: 10,
       paddingHorizontal: 5,
     },
     textStyle: {

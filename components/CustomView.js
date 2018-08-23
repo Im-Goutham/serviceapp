@@ -57,7 +57,10 @@ export default class CustomView extends React.Component {
     else if(this.props.currentMessage.audio){
       return (
         <TouchableOpacity style={[styles.audioContainer, this.props.containerStyle]}>
-             <Icon name="md-play" style={styles.play}  onPress={() => {
+             <Icon  
+                name="md-play"
+                style={[styles.play,{color:this.state.playAudio ? "red" : "blue"}]}
+                onPress={() => {
                         console.log('play clicked')
                         this.setState({
                             playAudio: true
