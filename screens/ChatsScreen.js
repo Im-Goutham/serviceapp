@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Platform } from 'react-native';
+import { View, Text, StyleSheet, Platform, KeyboardAvoidingView } from 'react-native';
 import { Icon } from 'native-base';
 import {GiftedChat, Actions, Bubble, SystemMessage} from 'react-native-gifted-chat';
 import SocketIOClient from 'socket.io-client';
 import Header from '../components/Header';
 import CustomActions from '../components/CustomActions';
 import CustomView from '../components/CustomView';
+
+
+
 
 
 class ChatScreen extends Component {
@@ -15,7 +18,7 @@ class ChatScreen extends Component {
           messages: [],
           loadEarlier: true,
           typingText: null,
-          isLoadingEarlier: false,
+          isLoadingEarlier: false
         };
     
         this._isMounted = false;
@@ -31,6 +34,9 @@ class ChatScreen extends Component {
 
         this.socket = SocketIOClient('http://10.2.4.206:3000');
       }
+
+
+
       componentWillMount() {
         this._isMounted = true;
         this.setState(() => {
@@ -39,6 +45,9 @@ class ChatScreen extends Component {
           };
         });
       }
+
+
+  
 
       componentDidMount(){
         var self = this;
@@ -58,6 +67,7 @@ class ChatScreen extends Component {
 
         });
       }
+
     
       componentWillUnmount() {
         this._isMounted = false;
@@ -160,28 +170,28 @@ class ChatScreen extends Component {
       }
     
       renderCustomActions(props) {
-        if (Platform.OS === 'ios') {
+     //   if (Platform.OS === 'ios') {
           return (
             <CustomActions
               {...props}
             />
           );
-        }
-        const options = {
-          'Action 1': (props) => {
-            alert('option 1');
-          },
-          'Action 2': (props) => {
-            alert('option 2');
-          },
-          'Cancel': () => {},
-        };
-        return (
-          <Actions
-            {...props}
-            options={options}
-          />
-        );
+      //  }
+        // const options = {
+        //   'Action 1': (props) => {
+        //     alert('option 1');
+        //   },
+        //   'Action 2': (props) => {
+        //     alert('option 2');
+        //   },
+        //   'Cancel': () => {},
+        // };
+        // return (
+        //   <Actions
+        //     {...props}
+        //     options={options}
+        //   />
+        // );
       }
     
       renderBubble(props) {
@@ -242,17 +252,36 @@ class ChatScreen extends Component {
                 loadEarlier={this.state.loadEarlier}
                 onLoadEarlier={this.onLoadEarlier}
                 isLoadingEarlier={this.state.isLoadingEarlier}
-
-                user={{
-                _id: '5b61474144cd9d03ff07c4d5', // sent messages should have same user._id
-                }}
-
+                renderActions={() => {
+                  if (Platform.OS === "ios") {
+                      return (
+                          <Icon
+                              name="ios-mic"
+                              size={35}
+                              hitSlop={{ top: 20, bottom: 20, left: 50, right: 50 }}
+                              color={this.state.startAudio ? "red" : "black"}
+                              style={{
+                                  bottom: 50,
+                                  right: Dimensions.get("window").width / 2,
+                                  position: "absolute",
+                                  shadowColor: "#000",
+                                  shadowOffset: { width: 0, height: 0 },
+                                  shadowOpacity: 0.5,
+                                  zIndex: 2,
+                                  backgroundColor: "transparent"
+                              }}
+                              onPress={this.handleAudio}
+                          />
+                      );
+                  }
+              }}
                 renderActions={this.renderCustomActions}
                 renderBubble={this.renderBubble}
                 renderSystemMessage={this.renderSystemMessage}
                 renderCustomView={this.renderCustomView}
                 renderFooter={this.renderFooter}
             />
+               <KeyboardAvoidingView />
            </View>
        )
     }

@@ -49,6 +49,10 @@ target 'SpotJobs' do
 
   pod 'RNShare', :path => '../node_modules/react-native-share'
 
+  pod 'RNAudio', :path => '../node_modules/react-native-audio'
+
+  pod 'RNSound', :path => '../node_modules/react-native-sound'
+
 end
 
 post_install do |installer|

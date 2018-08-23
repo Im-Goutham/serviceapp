@@ -1,16 +1,30 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {
+  Text,
   Linking,
   Platform,
   StyleSheet,
   TouchableOpacity,
   ViewPropTypes,
+  Alert
 } from 'react-native';
+import { Icon } from 'native-base';
 import MapView from 'react-native-maps';
+import Sound from "react-native-sound";
+
 
 export default class CustomView extends React.Component {
+
+  constructor(){
+      super();
+      this.state = {
+           playAudio: false,
+      };
+  }
+
   render() {
+    console.log('message is ',this.props.currentMessage);
     if (this.props.currentMessage.location) {
       return (
         <TouchableOpacity style={[styles.container, this.props.containerStyle]} onPress={() => {
@@ -40,7 +54,31 @@ export default class CustomView extends React.Component {
         </TouchableOpacity>
       );
     }
-    return null;
+    else if(this.props.currentMessage.audio){
+      return (
+        <TouchableOpacity style={[styles.audioContainer, this.props.containerStyle]}>
+             <Icon name="md-play" style={styles.play}  onPress={() => {
+                        console.log('play clicked')
+                        this.setState({
+                            playAudio: true
+                        });
+                        const sound = new Sound(this.props.currentMessage.audio, "", error => {
+                            if (error) {
+                                console.log("failed to load the sound", error);
+                            }
+                            this.setState({ playAudio: false });
+                            sound.play(success => {
+                                console.log(success, "success play");
+                                if (!success) {
+                                    Alert.alert("There was an error playing this audio");
+                                }
+                            });
+                        });
+                    }}/>
+        </TouchableOpacity>
+      );
+    }
+    else {return null};
   }
 }
 
@@ -53,6 +91,14 @@ const styles = StyleSheet.create({
     borderRadius: 13,
     margin: 3,
   },
+  audioContainer: {
+      height:24,
+      justifyContent: 'center',
+      alignItems: 'center'
+  },
+  play: {
+     fontSize: 18
+  }
 });
 
 CustomView.defaultProps = {
