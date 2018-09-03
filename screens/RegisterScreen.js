@@ -40,8 +40,20 @@ class RegisterScreen extends Component {
            return false;
      }
      this.setState({ error: null, loading: true });
-     this.props.navigation.navigate('profile')
-     console.log('username is '+email,'password is ',password);
+     Auth.signUp({
+      username: 'Goutham.m12',
+      password: 'Goutham@123',
+      attributes: {
+          name: 'Goutham Moka2',
+          email: 'goutham.moka1222@gmail.com'
+         }
+      })
+      .then(data => console.log(data))
+      .catch(err => console.log(err));
+
+
+    //  this.props.navigation.navigate('profile')
+    //  console.log('username is '+email,'password is ',password);
     //  Auth.signIn(email, password)
     //    .then(data => {
     //        console.log('data is ',data);
@@ -87,11 +99,13 @@ class RegisterScreen extends Component {
       return (  
         <View style={styles.container}>
           <Header navigation={this.props.navigation} title={'Sign in'}/>
-          <ScrollView>
-          <View style={{padding: 10, backgroundColor:'white'}}>
+          <ScrollView contentContainerStyle={{
+      flex: 1,
+      justifyContent: 'space-between'
+  }}>
+          <View style={{flex: 1,padding: 10, backgroundColor:'white'}}>
            <Text style={{fontSize: 28, fontWeight: 'bold'}}>Sign Up</Text>
           </View> 
-        <View >
           <View style={styles.inputContainer}> 
             <Text style={styles.inputLabel}>EMAIL</Text>
             <Item>
@@ -220,7 +234,6 @@ class RegisterScreen extends Component {
                     <GoogleSignIn />
             </View>     
             </View> 
-            </View>
             </ScrollView>
         </View>  
         

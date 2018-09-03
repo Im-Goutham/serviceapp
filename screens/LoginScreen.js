@@ -85,7 +85,10 @@ class LoginScreen extends Component {
       let { checked } = this.state;
       return (  
         <View style={styles.container}>
-               <ScrollView>
+         <ScrollView contentContainerStyle={{
+      flex: 1,
+      justifyContent: 'space-between'
+  }}>
         <View style={styles.logoContainer}>
             <View style={{flex: 1}}>
             <Image source={require('../images/logo.png')} style={styles.logo}/>

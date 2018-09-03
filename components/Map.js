@@ -12,9 +12,6 @@ export default class Map extends Component {
      this.state = {
        markers: [
           {latitude: 37.78825, longitude: -122.4324},
-          {latitude: 37.78824, longitude: -122.4324},
-          {latitude: 37.78825, longitude: -122.4324},
-          {latitude: 37.78825, longitude: -122.4324},
         ],
         region: {
           latitude: 37.78825,

@@ -3,6 +3,8 @@ import Swipeout from 'react-native-swipeout';
 import React, {Component} from 'react';
 import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,TouchableHighlight} from 'react-native';
 import {Icon} from 'native-base';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 
 class ServiceProvidersList extends Component {
@@ -33,6 +35,12 @@ class ServiceProvidersList extends Component {
       ]),
       sectionID: null,
       rowID: null,
+      images:['https://www.drupal.org/files/issues/sample_7.png',
+              'https://www.sample-videos.com/img/Sample-png-image-500kb.png',
+              'https://images.template.net/wp-content/uploads/2016/02/05070714/Landscape-Nature-Sunset-Trees-HD-Free-Background.jpg'
+      ],
+      imgIndex: 0,
+      photoShow:false
     };
   }
 
@@ -47,7 +55,7 @@ class ServiceProvidersList extends Component {
                 alignSelf: 'center',
                 alignContent: 'center'
               }}>
-              <Icon name='md-heart-outline' style={{color: 'white', fontSize: 27, textAlign: 'center'}}/>
+              <Icon name='md-heart-outline' style={{color: 'white', fontSize: 27}}/>
             </View>,
             backgroundColor: '#007FFA',
             onPress:()=>{console.log(rowData.text)}
@@ -61,12 +69,13 @@ class ServiceProvidersList extends Component {
                 alignSelf: 'center',
                 alignContent: 'center'
               }}>
-              <Icon name='md-share' style={{color: 'white', fontSize: 27, textAlign: 'center'}}/>
+              <Icon name='md-share' style={{color: 'white', fontSize: 27}}/>
             </View>,
             backgroundColor: '#007FFA',
             onPress:()=>{console.log(rowData.text)}
         }
       ];
+
     return (
       <Swipeout
         close={!(this.state.sectionID === sectionID && this.state.rowID === rowID)}
@@ -85,7 +94,7 @@ class ServiceProvidersList extends Component {
         onClose={() => console.log('===close') }
         scroll={event => console.log('scroll event') }
       >
-        <TouchableWithoutFeedback onPress={() => console.log('press children')}>
+       
           <View style={styles.li} >
             <View style={{flex:1,flexDirection:'row'}}>
                 <View style={{flex:2}}>
@@ -114,33 +123,46 @@ class ServiceProvidersList extends Component {
                  </View> 
             </View>    
             <View style={{flex:1,flexDirection:'row',marginTop:10}}>
-                <View style={{flex:1,padding:1}}>
-                    <Image style={styles.imgStyle} source={require('../images/img_placeholder.png')} />
-                 </View>   
-                 <View style={{flex:1,padding:1}}>
-                   <Image style={styles.imgStyle} source={require('../images/img_placeholder.png')} />
-                 </View>  
-                 <View style={{flex:1,padding:1}}>
-                   <Image style={styles.imgStyle} source={require('../images/img_placeholder.png')} />
-                 </View> 
+                {
+                    this.state.images.map((image,key)=>{
+                         return  <TouchableWithoutFeedback  onPress={()=>{this.showImage(key)}} key={key}>
+                                    <View style={{flex:1,padding:1}} >
+                                      <Image style={styles.imgStyle} source={{uri:image}}/>
+                                  </View>  
+                                 </TouchableWithoutFeedback>
+                    })
+                }
             </View>
             <View style={{flex:1,paddingTop:10,paddingBottom:10}}>
                       <Text style={{fontSize:12}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
             </View>
           </View>
-        </TouchableWithoutFeedback>
+
       </Swipeout>
     );
   }
 
+  showImage(index){
+    console.log('imgIndex',index);
+    let {images} = this.state;
+    let imagesArray = images.map((image)=>{
+        return {url:image}
+    })
+    this.props.showPhotoView({index,images:imagesArray,photoShow:true})
+    
+  }
+
   render() {
-    return (
+    let {images,imgIndex,photoShow} = this.state;
+    return ( 
+      <View>
         <ListView
           scrollEnabled
           dataSource={this.state.dataSource}
           renderRow={this._renderRow.bind(this)}
           style={styles.listview}
         />
+      </View>   
     );
   }
 
@@ -184,4 +206,4 @@ imgStyle:{
 }
   })
 
-export default ServiceProvidersList;
+export default connect(null, actions)(ServiceProvidersList);

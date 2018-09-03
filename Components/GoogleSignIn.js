@@ -72,13 +72,15 @@ export default class GoogleSigninSampleApp extends Component {
 
   render() {
       return (
-        <TouchableHighlight style={styles.button} onPress={() => {alert('clicked')}}><Text style={styles.btnText}>Sign in with Gmail</Text></TouchableHighlight>
+        <TouchableHighlight style={styles.button} onPress={this._signIn}><Text style={styles.btnText}>Sign in with Gmail</Text></TouchableHighlight>
       );
   }
 
   _signIn = async () => {
+    console.log('_signIn is ');
     try {
       const user = await GoogleSignin.signIn();
+      console.log('user is ',user);
       this.setState({ user, error: null });
       this.googleSignIn(user);
 
