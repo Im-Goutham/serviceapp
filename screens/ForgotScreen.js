@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, TouchableHighlight} from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator, TouchableOpacity, Dimensions,Image, Platform} from 'react-native';
 import { connect } from 'react-redux';
-import {  Item, Input, Toast } from 'native-base';
+import {  Item, Input, Toast, Icon } from 'native-base';
 import * as actions from '../actions';
 import { Auth } from 'aws-amplify';
 import Header from '../components/goBackHeader';
+import LinearGradient from 'react-native-linear-gradient';
+
+const { width, height } = Dimensions.get('window');
+const isAndroid = Platform.OS === 'android';
 
 
 class ForgotScreen extends Component {
@@ -80,16 +84,21 @@ class ForgotScreen extends Component {
 
     render() {
       return (  
-        <View style={{flex: 1}}>
-        <Header navigation={this.props.navigation} title={'Sign in'}/>
+        <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
+
         <View style={styles.container}>   
-        <View style={{marginBottom: 50}}>
-           <Text style={{fontSize: 18}}>Forget ID/password</Text>
+        <View style={{justifyContent:'flex-start',paddingHorizontal:10}}>
+           <Icon style={{color:'white'}} active name="ios-arrow-back"  onPress={() => this.props.navigation.goBack()}/>
+        </View>
+        <View style={{flex:1}}>
+        <View style={{flex:2,position:'relative'}}>
+           <View style={{paddingVertical:20,paddingLeft:10}}><Text style={styles.logoText}>Forget ID/password</Text></View>
+           <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
         </View>  
-        <Text style={styles.inputLabel}>EMAIL / USER ID</Text>
+        <View style={{flex:10,backgroundColor:'#F9FCFF',paddingHorizontal:10, paddingVertical:30}}>
+              <Text style={styles.inputLabel}>EMAIL / USER ID</Text>
         <Item>
               <Input
-                  style={styles.inputField}
                   value={this.state.username}
                   autoCapitalize='none'
                   onSubmitEditing={() => {
@@ -103,12 +112,17 @@ class ForgotScreen extends Component {
                   />
             </Item>
             <View style={{justifyContent: "center" }}>
+            
                 {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
-               <TouchableHighlight style={styles.button} onPress={() => this.handleSubmit()}><Text style={styles.btnText}>SUBMIT</Text></TouchableHighlight>
+                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
+                     <TouchableOpacity onPress={() => {this.handleSubmit()}}><Text style={styles.btnText}>SUBMIT</Text></TouchableOpacity>
+                  </LinearGradient>
                 }
            </View>
-         </View>
         </View>
+        </View>
+         </View>
+         </LinearGradient>
 
       );
     }
@@ -118,12 +132,15 @@ class ForgotScreen extends Component {
 const styles = StyleSheet.create({
         container: {
           flex: 1,
-          paddingLeft: 10,
-          paddingRight: 10,
-          paddingTop: 20,
-          backgroundColor: 'white'
+          paddingTop: isAndroid ? 0 : 50,
+ 
       },
-  
+      logoText: {
+        color:'white',
+        textAlign:'left',
+        fontSize:35,
+        fontWeight:'bold'
+    },
       inputLabel: {
          textAlign:'left',
          fontSize: 12
@@ -137,6 +154,7 @@ const styles = StyleSheet.create({
           marginTop: 10,
           marginBottom: 10
       },
+      borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
       text: {
         marginBottom: 15,
         marginTop: 15,
@@ -146,13 +164,12 @@ const styles = StyleSheet.create({
       button:{
         backgroundColor:'#4A4A4A',
         width: '100%',
-        borderRadius:20,
+        borderRadius:30,
         borderWidth: 1,
         borderColor: '#fff',
-        paddingTop:10,
-        paddingBottom:10,
-        marginTop: 5,
-        marginBottom: 5
+        marginTop:10,
+        paddingTop:16,
+        paddingBottom:16,
     },
     btnText: { 
         textAlign:'center',

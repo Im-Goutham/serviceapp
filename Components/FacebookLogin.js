@@ -81,7 +81,7 @@ export default class FacebookLogin extends Component {
   }
   render() {
     return (
-            <TouchableHighlight style={styles.button} onPress={() => this.handleFacebookLogin()}><Text style={styles.btnText}>Sign in with Facebook</Text></TouchableHighlight>
+            <TouchableHighlight style={styles.button} onPress={() => this.handleFacebookLogin()}><Text style={styles.btnText}> <Icon style={{color:'#fff',fontSize:22}} active name="logo-facebook" /> Facebook</Text></TouchableHighlight>
     );
   }
 }
@@ -93,15 +93,15 @@ const styles = StyleSheet.create({
     button:{
       backgroundColor:'#3B5B95',
       width: '100%',
-      borderRadius:20,
-      borderWidth: 1,
-      borderColor: '#fff',
-      paddingTop:10,
-      paddingBottom:10,
+      borderRadius:30,
+      paddingTop:15,
+      paddingBottom:15,
       marginTop: 5,
-      marginBottom: 5
+      marginBottom: 5,
+      elevation: 3,
     },
     btnText: { 
+      fontSize: 18,
       textAlign :'center',
       color:'white',
       fontWeight:'bold'

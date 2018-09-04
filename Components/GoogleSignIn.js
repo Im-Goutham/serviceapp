@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {  StyleSheet, Text, View, TouchableHighlight, Platform } from 'react-native';
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
+import { Icon} from 'native-base'
 import { Auth } from 'aws-amplify';
 
 export default class GoogleSigninSampleApp extends Component {
@@ -72,7 +73,7 @@ export default class GoogleSigninSampleApp extends Component {
 
   render() {
       return (
-        <TouchableHighlight style={styles.button} onPress={this._signIn}><Text style={styles.btnText}>Sign in with Gmail</Text></TouchableHighlight>
+        <TouchableHighlight style={styles.button} onPress={this._signIn}><Text style={styles.btnText}><Icon style={{color:'#fff',fontSize:22}} active name="logo-googleplus" /> Gmail</Text></TouchableHighlight>
       );
   }
 
@@ -111,15 +112,15 @@ const styles = StyleSheet.create({
   button:{
     backgroundColor:'#DC493D',
     width: '100%',
-    borderRadius:20,
-    borderWidth: 1,
-    borderColor: '#fff',
-    paddingTop:10,
-    paddingBottom:10,
+    borderRadius:30,
+    paddingTop:15,
+    paddingBottom:15,
     marginTop: 5,
-    marginBottom: 5
+    marginBottom: 5,
+    elevation: 3,
   },
   btnText: { 
+    fontSize: 18,
     textAlign :'center',
     color:'white',
     fontWeight:'bold'

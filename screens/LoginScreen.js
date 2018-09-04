@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, TouchableHighlight, Image,Platform, ScrollView} from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator, TouchableOpacity, Image,Platform, ScrollView, Dimensions} from 'react-native';
 import { connect } from 'react-redux';
 import {  Item, Input, CheckBox, Toast } from 'native-base';
 import * as actions from '../actions';
 import { Auth } from 'aws-amplify';
 import FacebookLogin from '../components/FacebookLogin';
 import GoogleSignIn from '../components/GoogleSignIn';
+import LinearGradient from 'react-native-linear-gradient';
+
+
+const { width, height } = Dimensions.get('window');
+const isAndroid = Platform.OS === 'android';
 
 class LoginScreen extends Component {
   constructor(props) {
@@ -89,71 +94,69 @@ class LoginScreen extends Component {
       flex: 1,
       justifyContent: 'space-between'
   }}>
-        <View style={styles.logoContainer}>
-            <View style={{flex: 1}}>
-            <Image source={require('../images/logo.png')} style={styles.logo}/>
-             </View> 
-             <View style={{flex: 1}}>
-                <Text style={{fontSize: 20,textAlign: 'center',color: '#666666'}}>Semper est ante cras sagitis himenaeos sem</Text>
-             </View> 
-        </View>  
-        <View style={styles.inputContainer}>
-        <Text style={styles.inputLabel}>EMAIL / USER ID</Text>
-        <Item>
-              <Input
-                  style={styles.inputField}
-                  value={this.state.username}
-                  autoCapitalize='none'
-                  onSubmitEditing={() => {
-                    this.focusNextField('password');
-                  }}
-                  returnKeyType={ "next" }
-                  ref={ input => {
-                    this.inputs['username'] = input;
-                  }}
-                  onChangeText={username => this.setState({ username })}
-                  />
-            </Item>
-            <Text style={styles.inputLabel}>PASSWORD</Text>
-            <Item>
-              <Input
-                  style={styles.inputField}
-                  value={this.state.password}
-                  autoCapitalize='none'
-                  secureTextEntry={true}
-                  onSubmitEditing={() => {
-                      this.handleSubmit()
-                  }}
-                  returnKeyType={ "done" }
-                  ref={ input => {
-                    this.inputs['password'] = input;
-                  }}
-                  onChangeText={password => this.setState({ password })}
-                  />
-            </Item>
-            <View style={{marginBottom: 10,marginTop: 10,flexDirection:'row'}}>
-                   <CheckBox checked={checked} color='grey' onPress={()=>this.setState({checked: !checked})}/> 
-                   <Text style={{marginLeft:20}}>Remember Me</Text>
-            </View>  
-            <View style={{justifyContent: "center" }}>
-                {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
-               <TouchableHighlight style={styles.button} onPress={() => this.handleSubmit()}><Text style={styles.btnText}>SIGN IN</Text></TouchableHighlight>
-                }
-           </View>
-         <Text style={styles.text} onPress={()=>{this.props.navigation.navigate('forgot')}}>Forgot ID/Password?</Text>  
-        </View>  
-        <View style={styles.socialLoginContainer}>
-        <View style={{flex: 1}}>
-             <Text style={{textAlign: 'center'}}>Or</Text>
-        </View>  
-        <View style={{flex: 2}}>
-                <FacebookLogin/>
-                <GoogleSignIn />
-        </View> 
-        <View style={{flex: 1}}>
-        <Text style={{marginBottom:10,marginTop:10,textAlign: 'center'}}>Don't have an account  <Text style={{fontWeight: 'bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign up</Text></Text>
-        </View>       
-        </View> 
+          <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.section1}>
+   
+            <View style={{flex:7,justifyContent:'center',padding:10}}>
+            <View style={{paddingVertical:20}}><Text style={styles.logoText}>SpotJobs</Text></View>
+              <View style={styles.loginBlox}>
+                 <Text style={styles.inputLabel}>EMAIL / USER ID</Text>
+                <Item success={'#3E85EF'}>
+                <Input
+                    value={this.state.username}
+                    autoCapitalize='none'
+                    onSubmitEditing={() => {
+                      this.focusNextField('password');
+                    }}
+                    returnKeyType={ "next" }
+                    ref={ input => {
+                      this.inputs['username'] = input;
+                    }}
+                    onChangeText={username => this.setState({ username })}
+                    />
+              </Item>
+              <Text style={styles.inputLabel}>PASSWORD</Text>
+              <Item>
+                <Input
+                    value={this.state.password}
+                    autoCapitalize='none'
+                    secureTextEntry={true}
+                    onSubmitEditing={() => {
+                        this.handleSubmit()
+                    }}
+                    returnKeyType={ "done" }
+                    ref={ input => {
+                      this.inputs['password'] = input;
+                    }}
+                    onChangeText={password => this.setState({ password })}
+                    />
+              </Item>
+              <View style={{marginBottom: 10,marginTop: 10,flexDirection:'row'}}>
+                    <CheckBox checked={checked} color='#666666' onPress={()=>this.setState({checked: !checked})}/> 
+                    <Text style={{marginLeft:20}}>Remember Me</Text>
+              </View>  
+              <View style={{justifyContent: "center" }}>
+                  {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
+                    <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
+                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>SIGN IN</Text></TouchableOpacity>
+                    </LinearGradient>
+                  }
+            </View>
+             <Text style={styles.text} onPress={()=>{this.props.navigation.navigate('forgot')}}>Forgot ID/Password?</Text>  
+                 </View>
+            </View>
+            <View style={{flex:2,flexDirection:'row',alignItems:'center'}}>
+                 <View style={{flex:1,paddingHorizontal:10}}>
+                      <FacebookLogin />
+                 </View>
+                 <View style={{flex:1,paddingHorizontal:10}}>
+                      <GoogleSignIn/>
+                 </View>
+            </View>
+            <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
+          </LinearGradient>
+          <View style={styles.signUpBlock}>
+              <Text style={{marginVertical:20,color:'#808080',fontSize:17,textAlign:'center'}}>Dont have an account  <Text style={{fontWeight: 'bold',color:'#3581fc'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign Up</Text></Text>
+            </View>
         </ScrollView>
         </View>
       );
@@ -165,66 +168,62 @@ const styles = StyleSheet.create({
         container: {
           flex: 1,
           backgroundColor: 'white',
-          paddingTop: Platform.OS === 'ios' ? 50 : 0, 
       },
-      logoContainer: {
-          flex: 2,
-          justifyContent: 'center',
-          alignItems: 'center'
-      },
-      logo: {
-        width: 80,
-        height: 80
-      },
-      inputContainer: {
-          flex: 3,
-          justifyContent: 'center',
-          padding: 10
-      },
-      inputLabel: {
-         textAlign:'left',
-         fontSize: 12
-      },
-      inputField: {
-          height: 40,
-          borderRadius:20,
-          backgroundColor: '#F2F2F2',
-          paddingLeft : 15,
-          paddingRight : 15,
-          marginTop: 10,
-          marginBottom: 10
-      },
-      orBox: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-      },
-      socialLoginContainer: {
-          flex: 2,
-          padding: 10
-      },
-      text: {
-        marginBottom: 15,
-        marginTop: 15,
-        fontSize: 15,
-        textAlign: 'center',
-      },
-      button:{
-        backgroundColor:'#4A4A4A',
-        width: '100%',
-        borderRadius:20,
-        borderWidth: 1,
-        borderColor: '#fff',
-        paddingTop:10,
-        paddingBottom:10,
-        marginTop: 5,
-        marginBottom: 5
+      section1: {
+        flex:10, 
+        backgroundColor:'white',
+        paddingHorizontal:10,
+        paddingVertical: isAndroid ? 0 : 50,
+        position:'relative'
     },
-    btnText: { 
-        textAlign:'center',
+    borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
+    inputLabel: {
+      textAlign:'left',
+      fontSize: 12,
+      color:'#666666',
+   },
+    logoText: {
         color:'white',
+        textAlign:'left',
+        fontSize:45,
         fontWeight:'bold'
-    }
+    },
+   text: {
+     fontSize: 16,
+     color:'#666666',
+     textAlign:'center',
+     marginVertical:15
+   },
+   signUpBlock: {
+       flex:2,
+       flexDirection:'column',
+       justifyContent: 'center',
+       backgroundColor:'#F9FCFF',
+   },
+   button:{
+       backgroundColor:'#4A4A4A',
+       width: '100%',
+       borderRadius:30,
+       borderWidth: 1,
+       borderColor: '#fff',
+       marginTop:10,
+       paddingTop:16,
+       paddingBottom:16,
+   },
+   btnText: { 
+       textAlign:'center',
+       color:'white',
+       fontSize: 16,
+       fontWeight:'bold'
+   },
+   loginBlox: {
+       flex:1,
+       elevation: 3,
+       justifyContent:'space-between',
+       borderRadius: 10,
+       backgroundColor:'white',
+       padding: 20
+   }
 })
 
 export default connect(null, actions)(LoginScreen);

@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, TouchableHighlight, Image,ScrollView} from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator, TouchableOpacity, Image,ScrollView,Platform, Dimensions} from 'react-native';
 import { connect } from 'react-redux';
-import {  Item, Input, CheckBox, Toast } from 'native-base';
+import {  Item, Input, CheckBox, Toast,Icon } from 'native-base';
 import * as actions from '../actions';
 import { Auth } from 'aws-amplify';
 import FacebookLogin from '../components/FacebookLogin';
 import GoogleSignIn from '../components/GoogleSignIn';
 import Header from '../components/goBackHeader';
+import LinearGradient from 'react-native-linear-gradient';
+
+
+const { width, height } = Dimensions.get('window');
+const isAndroid = Platform.OS === 'android';
 
 class RegisterScreen extends Component {
   constructor(props) {
@@ -97,146 +102,45 @@ class RegisterScreen extends Component {
     render() {
       let { checked } = this.state;
       return (  
-        <View style={styles.container}>
-          <Header navigation={this.props.navigation} title={'Sign in'}/>
-          <ScrollView contentContainerStyle={{
-      flex: 1,
-      justifyContent: 'space-between'
-  }}>
-          <View style={{flex: 1,padding: 10, backgroundColor:'white'}}>
-           <Text style={{fontSize: 28, fontWeight: 'bold'}}>Sign Up</Text>
-          </View> 
-          <View style={styles.inputContainer}> 
-            <Text style={styles.inputLabel}>EMAIL</Text>
-            <Item>
-                  <Input
-                      style={styles.inputField}
-                      value={this.state.email}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('userid');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['userid'] = input;
-                      }}
-                      onChangeText={email => this.setState({ email })}
-                      />
-                </Item>
-                <Text style={styles.inputLabel}>USER ID</Text>
-                <Item>
-                  <Input
-                      style={styles.inputField}
-                      value={this.state.userid}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={"next"}
-                      ref={ input => {
-                        this.inputs['userid'] = input;
-                      }}
-                      onChangeText={userid => this.setState({ userid })}
-                      />
-                </Item>
-                <Text style={styles.inputLabel}>PASSWORD</Text>
-                <Item>
-                  <Input
-                      style={styles.inputField}
-                      value={this.state.password}
-                      autoCapitalize='none'
-                      secureTextEntry={true}
-                      onSubmitEditing={() => {
-                        this.focusNextField('confirmPassword');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['password'] = input;
-                      }}
-                      onChangeText={password => this.setState({ password })}
-                      />
-                </Item>
-                <Text style={styles.inputLabel}>CONFIRM PASSWORD</Text>
-                <Item>
-                  <Input
-                      style={styles.inputField}
-                      value={this.state.confirmPassword}
-                      autoCapitalize='none'
-                      secureTextEntry={true}
-                      onSubmitEditing={() => {
-                        this.focusNextField('countryCode');
-                      }}
-                      returnKeyType={ "done" }
-                      ref={ input => {
-                        this.inputs['confirmPassword'] = input;
-                      }}
-                      onChangeText={confirmPassword => this.setState({ confirmPassword })}
-                      />
-                </Item>
-                <Item>
+        <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
 
-                      <View style={{flex: 3,paddingRight:5}}>
-                      <Text style={styles.inputLabel}>COUNTRY CODE</Text>
-                        <Item>
-                          <Input
-                              style={styles.inputField}
-                              value={this.state.countryCode}
-                              autoCapitalize='none'
-                              secureTextEntry={false}
-                              onSubmitEditing={() => {
-                                this.handleSubmit()
-                              }}
-                              returnKeyType={ "done" }
-                              ref={ input => {
-                                this.inputs['countryCode'] = input;
-                              }}
-                              onChangeText={countryCode => this.setState({ countryCode })}
-                              />
-                        </Item>
-                      </View>  
-                      <View style={{flex: 5,paddingLeft:5}}>
-                      <Text style={styles.inputLabel}>MOBILE NUMBER</Text>
-                      <Item>
-                        <Input
-                            style={styles.inputField}
-                            value={this.state.phoneNumber}
-                            autoCapitalize='none'
-                            secureTextEntry={false}
-                            onSubmitEditing={() => {
-                              this.handleSubmit()
-                            }}
-                            returnKeyType={ "done" }
-                            ref={ input => {
-                              this.inputs['phoneNumber'] = input;
-                            }}
-                            onChangeText={phoneNumber => this.setState({ phoneNumber })}
-                            />
-                      </Item>
-                      </View> 
-                </Item>
-                <Text style={{textAlign:'right', color:'#668349'}}>Verify now?</Text>
-                <View style={{marginBottom: 10,marginTop: 10,flexDirection:'row'}}>
-                      <CheckBox checked={checked} color='grey' onPress={()=>this.setState({checked: !checked})}/> 
-                      <Text style={{marginLeft:20}}>I agree with the <Text style={{fontWeight: 'bold'}}>terms and conditions</Text></Text>
-                </View>  
-                <View style={{justifyContent: "center" }}>
-                    {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
-                  <TouchableHighlight style={styles.button} onPress={() => this.handleSubmit()}><Text style={styles.btnText}>SIGN UP</Text></TouchableHighlight>
-                    }
-              </View>
-            </View>  
-            <View style={styles.socialLoginContainer}>
-            <View style={{flex: 1}}>
-                <Text style={{textAlign: 'center'}}>Or</Text>
-            </View>  
-            <View style={{flex: 4}}>
-                    <FacebookLogin/>
-                    <GoogleSignIn />
-            </View>     
-            </View> 
-            </ScrollView>
+        <View style={styles.container}>   
+        <View style={{justifyContent:'flex-start',paddingHorizontal:10}}>
+           <Icon style={{color:'white'}} active name="ios-arrow-back"  onPress={() => this.props.navigation.goBack()}/>
+        </View>
+        <View style={{flex:1}}>
+        <View style={{flex:2,position:'relative'}}>
+           <View style={{paddingVertical:20,paddingLeft:10}}><Text style={styles.logoText}>Sign Up</Text></View>
+           <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
         </View>  
-        
+        <View style={{flex:10,backgroundColor:'#F9FCFF',paddingHorizontal:10, paddingVertical:30}}>
+              <Text style={styles.inputLabel}>EMAIL</Text>
+        <Item>
+              <Input
+                  value={this.state.username}
+                  autoCapitalize='none'
+                  onSubmitEditing={() => {
+                    this.handleSubmit();
+                  }}
+                  returnKeyType={ "done" }
+                  ref={ input => {
+                    this.inputs['username'] = input;
+                  }}
+                  onChangeText={username => this.setState({ username })}
+                  />
+            </Item>
+            <View style={{justifyContent: "center" }}>
+            
+                {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
+                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
+                     <TouchableOpacity onPress={() => {this.handleSubmit()}}><Text style={styles.btnText}>SUBMIT</Text></TouchableOpacity>
+                  </LinearGradient>
+                }
+           </View>
+        </View>
+        </View>
+         </View>
+         </LinearGradient>
 
       );
     }
@@ -244,59 +148,52 @@ class RegisterScreen extends Component {
 
 
 const styles = StyleSheet.create({
-        container: {
-          flex: 1,
-          backgroundColor: 'white'
-      },
-      inputContainer: {
-          flex: 10,
-          justifyContent: 'center',
-          padding: 10
-      },
-      inputLabel: {
-         textAlign:'left',
-         fontSize: 12
-      },
-      inputField: {
-          height: 40,
-          borderRadius:20,
-          backgroundColor: '#F2F2F2',
-          paddingLeft : 15,
-          paddingRight : 15,
-          marginTop: 10,
-          marginBottom: 10
-      },
-      orBox: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-      },
-      socialLoginContainer: {
-          flex: 3,
-          padding: 10
-      },
-      text: {
-        marginBottom: 15,
-        marginTop: 15,
-        fontSize: 15,
-        textAlign: 'center',
-      },
-      button:{
-        backgroundColor:'#4A4A4A',
-        width: '100%',
-        borderRadius:20,
-        borderWidth: 1,
-        borderColor: '#fff',
-        paddingTop:10,
-        paddingBottom:10,
-        marginTop: 5,
-        marginBottom: 5
-    },
-    btnText: { 
-        textAlign:'center',
-        color:'white',
-        fontWeight:'bold'
-    }
+  container: {
+    flex: 1,
+    paddingTop: isAndroid ? 0 : 50,
+
+},
+logoText: {
+  color:'white',
+  textAlign:'left',
+  fontSize:35,
+  fontWeight:'bold'
+},
+inputLabel: {
+   textAlign:'left',
+   fontSize: 12
+},
+inputField: {
+    height: 40,
+    borderRadius:20,
+    backgroundColor: '#F2F2F2',
+    paddingLeft : 15,
+    paddingRight : 15,
+    marginTop: 10,
+    marginBottom: 10
+},
+borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
+text: {
+  marginBottom: 15,
+  marginTop: 15,
+  fontSize: 15,
+  textAlign: 'center',
+},
+button:{
+  backgroundColor:'#4A4A4A',
+  width: '100%',
+  borderRadius:30,
+  borderWidth: 1,
+  borderColor: '#fff',
+  marginTop:10,
+  paddingTop:16,
+  paddingBottom:16,
+},
+btnText: { 
+  textAlign:'center',
+  color:'white',
+  fontWeight:'bold'
+}
 })
 
 export default connect(null, actions)(RegisterScreen);

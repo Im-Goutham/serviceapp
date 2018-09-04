@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text,TouchableOpacity } from 'react-native';
 import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base'
+import LinearGradient from 'react-native-linear-gradient';
 
 import { DrawerActions } from 'react-navigation';
 
@@ -10,7 +11,7 @@ class HeaderComponent extends Component {
     render() {
       let {title} = this.props;
        return (
-          <Header style={{backgroundColor:'white'}}>
+          <Header>
           <Left style={{flex: 1}}>
               <Button transparent onPress={() => this.props.navigation.openDrawer()}>
                 <Icon name='ios-menu' style={{color:'black',fontSize:25}}/>
@@ -24,6 +25,7 @@ class HeaderComponent extends Component {
                 <View style={{flex: 1,alignItems:'flex-end'}}><Icon  name='md-person' style={{color:'black',fontSize:25,fontWeight:'bold'}}/></View>
            </Right>
         </Header>
+
        )
     }
 }
