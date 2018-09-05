@@ -113,8 +113,9 @@ class RegisterScreen extends Component {
            <View style={{paddingVertical:20,paddingLeft:10}}><Text style={styles.logoText}>Sign Up</Text></View>
            <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
         </View>  
-        <View style={{flex:10,backgroundColor:'#F9FCFF',paddingHorizontal:10, paddingVertical:30}}>
-              <Text style={styles.inputLabel}>EMAIL</Text>
+        <View style={{flex:10,backgroundColor:'#F9FCFF',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}>
+        <View>
+        <Text style={styles.inputLabel}>EMAIL</Text>
         <Item>
               <Input
                   value={this.state.username}
@@ -129,6 +130,58 @@ class RegisterScreen extends Component {
                   onChangeText={username => this.setState({ username })}
                   />
             </Item>
+            </View>
+            <View>
+        <Text style={styles.inputLabel}>User ID</Text>
+        <Item>
+              <Input
+                  value={this.state.username}
+                  autoCapitalize='none'
+                  onSubmitEditing={() => {
+                    this.handleSubmit();
+                  }}
+                  returnKeyType={ "done" }
+                  ref={ input => {
+                    this.inputs['username'] = input;
+                  }}
+                  onChangeText={username => this.setState({ username })}
+                  />
+            </Item>
+            </View>
+            <View>
+            <Text style={styles.inputLabel}>Password</Text>
+            <Item>
+                  <Input
+                      value={this.state.username}
+                      autoCapitalize='none'
+                      onSubmitEditing={() => {
+                        this.handleSubmit();
+                      }}
+                      returnKeyType={ "done" }
+                      ref={ input => {
+                        this.inputs['username'] = input;
+                      }}
+                      onChangeText={username => this.setState({ username })}
+                      />
+            </Item>
+            </View>
+            <View>
+            <Text style={styles.inputLabel}>Confirm Password</Text>
+            <Item>
+                  <Input
+                      value={this.state.username}
+                      autoCapitalize='none'
+                      onSubmitEditing={() => {
+                        this.handleSubmit();
+                      }}
+                      returnKeyType={ "done" }
+                      ref={ input => {
+                        this.inputs['username'] = input;
+                      }}
+                      onChangeText={username => this.setState({ username })}
+                      />
+            </Item>
+            </View>
             <View style={{justifyContent: "center" }}>
             
                 {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
