@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableHighlight,ScrollView} from 'react-native';
+import { View, Text, StyleSheet, Image,ScrollView, Dimensions,Platform} from 'react-native';
 import { connect } from 'react-redux';
 import { Icon } from 'native-base';
 import * as actions from '../actions';
 import Header from '../components/goBackHeader';
-
 import Advertisement from '../components/Advertisement';
+
+import LinearGradient from 'react-native-linear-gradient';
+
+const { width, height } = Dimensions.get('window');
+const isAndroid = Platform.OS === 'android';
+
+
 
 class AddServiceCatScreen extends Component {
 constructor(){
@@ -37,113 +43,69 @@ constructor(){
     render() {
         let {popularCategories, allCategories} = this.state;
       return (  
-        <ScrollView>
-        <View>
-        <Header navigation={this.props.navigation} title={'Add Service'}/>
-        <Advertisement />  
-        <View style={styles.container}>
-        {/* Popular categories starts here */}
-          <View style={styles.heading}>
-            <Text style={styles.headingTxt}>Popular Categories</Text>
-         </View> 
-         <View style={{marginTop:10,marginBottom:10}}> 
-            <View style={{flexDirection: 'row',alignItems:'center'}}>
-            <ScrollView
-              horizontal={true}
-              showsHorizontalScrollIndicator={false}
-              >     
-                 {
-                   popularCategories.map((category,key)=>{
-                         return    <View style={{flexDirection:'column'}} key={key}>
-                                        <View style={styles.categoryBox}>
-                                            <Icon style={{color:'#4d4d4d'}} active name="md-star" />
-                                            <Text>{category.name}</Text>
-                                        </View>
-                                 </View>     
-                   })
-                 }
-              </ScrollView>   
-            </View> 
-         </View> 
-          {/* Popular categories ends here */}  
-         {/* All categories starts here */}  
-         <View style={styles.heading}>
-            <Text style={styles.headingTxt}>All Categories</Text>
-         </View>   
-         <View style={styles.categoryContainer}>
-         {
-                   allCategories.map((category,key)=>{
-                         return    <View style={styles.categoryBox} key={key}>
-                                            <Icon style={{color:'#4d4d4d'}} active name="md-star" />
-                                            <Text>{category.name}</Text>
-                                 </View>    
-                   })
-          }  
-      </View>  
-           {/* All categories ends here */}   
-            <View style={{justifyContent: "center" }}>
-               <TouchableHighlight style={styles.button} onPress={() => this.props.navigation.navigate('addServiceSubCatScreen')}><Text style={styles.btnText}>CONTINUE</Text></TouchableHighlight>
-           </View>
-         </View>
-         <Advertisement />  
+        <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
+        <ScrollView contentContainerStyle={{
+      justifyContent: 'space-between'
+  }}>
+        <View style={styles.container}>   
+        <View style={{justifyContent:'flex-start',paddingHorizontal:10}}>
+           <Icon style={{color:'white'}} active name="ios-arrow-back"  onPress={() => this.props.navigation.goBack()}/>
         </View>
-        </ScrollView>
+
+        <View style={{position:'relative'}}>
+           <View style={{paddingTop:20,paddingBottom:40,paddingLeft:10}}><Text style={styles.logoText}>Add Service</Text></View>
+           <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
+        </View>  
+        <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}>
+
+
+        <View style={styles.servicesBox}>
+          
+        </View>  
+
+
+      <View style={styles.servicesBox}>
+           
+       
+      </View>  
+     
+      
+    
+
+        </View>
+         </View>
+         </ScrollView>
+         </LinearGradient>
       );
     }
 }
 
 
 const styles = StyleSheet.create({
-        container: {
-          flex: 1,
-          paddingLeft: 10,
-          paddingRight: 10,
-          paddingTop: 20,
-          paddingBottom: 50,
-          backgroundColor: 'white'
-      },
-      button:{
-        backgroundColor:'#007EFA',
-        width: '100%',
-        borderRadius:20,
-        borderWidth: 1,
-        borderColor: '#fff',
-        paddingTop:10,
-        paddingBottom:10,
-        marginTop: 5,
-        marginBottom: 5
-    },
-    btnText: { 
-        textAlign:'center',
-        color:'white',
-        fontWeight:'bold'
-    },
-    heading: {
-        margin: 20
-    },
-    headingTxt: {
-        textAlign: 'center',
-        fontWeight:'bold',
-        fontSize: 18
-    },
-    categoryBox: {
-        width: 100,
-        height: 100,
-        margin:5,
-        borderColor: 'grey',
-        borderWidth:0.5,
-        borderRadius:10,
-        justifyContent:'center',
-        alignItems: 'center'
-    },
-    categoryContainer: {
+    container: {
         flex: 1,
-        flexDirection: 'row',
-        flexWrap:'wrap',
-        justifyContent:'space-around',
-        marginTop:20,
-        marginBottom:20
-    }
+        paddingTop: isAndroid ? 0 : 50,
+        justifyContent: 'space-between'
+    },
+    logoText: {
+        color:'white',
+        textAlign:'left',
+        fontSize:35,
+        fontWeight:'bold'
+      },
+    borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
+    servicesBox: {
+        flex: 1,
+        marginVertical: 20,
+        paddingVertical: 25,
+        paddingHorizontal:20,
+        borderRadius:10,
+        backgroundColor:'white',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 2,
+        elevation: 1,
+    },
   
 })
 

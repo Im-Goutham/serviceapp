@@ -21,7 +21,7 @@ export default class Documents extends Component {
             {
                  documents ? (
                     documents.map((document,key)=>{
-                          return  <View style={{flexDirection:'column',width:100}}>
+                          return  <View style={styles.documentBox} key={key}>
                                         <View style={styles.imgsView}>
                                         <Image source={document.image} style={styles.img_placeholder}/>
                                         <Image source={require('../images/close_img.png')} style={styles.close_img}/>
@@ -61,5 +61,13 @@ const styles = StyleSheet.create({
 		top: 10,
 		right: 15
       },
+      documentBox: {
+        flexDirection:'column',
+        width:100,
+        shadowOffset: { width: 0, height: 3 },
+        shadowOpacity: 0.3,
+        shadowRadius: 2,
+        elevation: 2,
+      }
 })
 

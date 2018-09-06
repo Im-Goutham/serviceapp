@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator, TouchableOpacity, Dimensions,Image, Platform} from 'react-native';
 import { connect } from 'react-redux';
-import {  Item, Input, Toast, Icon } from 'native-base';
+import {  Item, Input, Toast, Icon,Label } from 'native-base';
 import * as actions from '../actions';
 import { Auth } from 'aws-amplify';
 import Header from '../components/goBackHeader';
@@ -96,8 +96,8 @@ class ForgotScreen extends Component {
            <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
         </View>  
         <View style={{flex:10,backgroundColor:'#F9FCFF',paddingHorizontal:10, paddingVertical:30}}>
-              <Text style={styles.inputLabel}>EMAIL / USER ID</Text>
-        <Item>
+        <Item floatingLabel>
+                  <Label style={styles.inputLabel}>EMAIL / USER ID</Label>
               <Input
                   value={this.state.username}
                   autoCapitalize='none'

@@ -475,22 +475,11 @@ class ProfileScreen extends Component {
                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>SIGN UP</Text></TouchableOpacity>
                     </LinearGradient>
             </View>
-
-
-
-
-
                 </View>
-                
               </View>
-      
-
                </View>
                </ScrollView>
                </LinearGradient>
-
-               
-
       );
     }
 }
