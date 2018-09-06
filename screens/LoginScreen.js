@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator, TouchableOpacity, Image,Platform, ScrollView, Dimensions} from 'react-native';
 import { connect } from 'react-redux';
-import {  Item, Input, CheckBox, Toast } from 'native-base';
+import {  Item, Input, CheckBox, Toast, Label } from 'native-base';
 import * as actions from '../actions';
 import { Auth } from 'aws-amplify';
 import FacebookLogin from '../components/FacebookLogin';
@@ -99,8 +99,8 @@ class LoginScreen extends Component {
             <View style={{flex:7,justifyContent:'center',padding:10}}>
             <View style={{paddingVertical:20}}><Text style={styles.logoText}>SpotJobs</Text></View>
               <View style={styles.loginBlox}>
-                 <Text style={styles.inputLabel}>EMAIL / USER ID</Text>
-                <Item success={'#3E85EF'}>
+                 <Item floatingLabel>
+                 <Label style={styles.inputLabel}>EMAIL / USER ID</Label>
                 <Input
                     value={this.state.username}
                     autoCapitalize='none'
@@ -114,8 +114,8 @@ class LoginScreen extends Component {
                     onChangeText={username => this.setState({ username })}
                     />
               </Item>
-              <Text style={styles.inputLabel}>PASSWORD</Text>
-              <Item>
+              <Item floatingLabel>
+                 <Label style={styles.inputLabel}>PASSWORD</Label>
                 <Input
                     value={this.state.password}
                     autoCapitalize='none'
@@ -222,7 +222,11 @@ const styles = StyleSheet.create({
        justifyContent:'space-between',
        borderRadius: 10,
        backgroundColor:'white',
-       padding: 20
+       padding: 20,
+       shadowOffset: { width: 0, height: 2 },
+       shadowOpacity: 0.2,
+       shadowRadius: 2,
+       elevation: 1,
    }
 })
 

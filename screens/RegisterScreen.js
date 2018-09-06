@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, ActivityIndicator, TouchableOpacity, Image,ScrollView,Platform, Dimensions} from 'react-native';
 import { connect } from 'react-redux';
-import {  Item, Input, CheckBox, Toast,Icon } from 'native-base';
+import {  Item, Input, CheckBox, Toast,Icon,Label } from 'native-base';
 import * as actions from '../actions';
 import { Auth } from 'aws-amplify';
 import FacebookLogin from '../components/FacebookLogin';
@@ -33,28 +33,29 @@ class RegisterScreen extends Component {
 
 
      handleSubmit = async () => {
-     let {email , password} = this.state;
+      this.props.navigation.navigate('profile');
+    //  let {email , password} = this.state;
 
 
-     if(!email){
-           this.handleError("Username is required!")
-           return false;
-     }
-     if(!password){
-          this.handleError("Password is required!")
-           return false;
-     }
-     this.setState({ error: null, loading: true });
-     Auth.signUp({
-      username: 'Goutham.m12',
-      password: 'Goutham@123',
-      attributes: {
-          name: 'Goutham Moka2',
-          email: 'goutham.moka1222@gmail.com'
-         }
-      })
-      .then(data => console.log(data))
-      .catch(err => console.log(err));
+    //  if(!email){
+    //        this.handleError("Username is required!")
+    //        return false;
+    //  }
+    //  if(!password){
+    //       this.handleError("Password is required!")
+    //        return false;
+    //  }
+    //  this.setState({ error: null, loading: true });
+    //  Auth.signUp({
+    //   username: 'Goutham.m12',
+    //   password: 'Goutham@123',
+    //   attributes: {
+    //       name: 'Goutham Moka2',
+    //       email: 'goutham.moka1222@gmail.com'
+    //      }
+    //   })
+    //   .then(data => console.log(data))
+    //   .catch(err => console.log(err));
 
 
     //  this.props.navigation.navigate('profile')
@@ -103,7 +104,10 @@ class RegisterScreen extends Component {
       let { checked } = this.state;
       return (  
         <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
-
+  <ScrollView contentContainerStyle={{
+      flex: 1,
+      justifyContent: 'space-between'
+  }}>
         <View style={styles.container}>   
         <View style={{justifyContent:'flex-start',paddingHorizontal:10}}>
            <Icon style={{color:'white'}} active name="ios-arrow-back"  onPress={() => this.props.navigation.goBack()}/>
@@ -115,8 +119,9 @@ class RegisterScreen extends Component {
         </View>  
         <View style={{flex:10,backgroundColor:'#F9FCFF',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}>
         <View>
-        <Text style={styles.inputLabel}>EMAIL</Text>
-        <Item>
+
+        <Item floatingLabel>
+        <Label style={styles.inputLabel}>Email</Label>
               <Input
                   value={this.state.username}
                   autoCapitalize='none'
@@ -132,8 +137,8 @@ class RegisterScreen extends Component {
             </Item>
             </View>
             <View>
-        <Text style={styles.inputLabel}>User ID</Text>
-        <Item>
+        <Item floatingLabel>
+        <Label style={styles.inputLabel}>User ID</Label>
               <Input
                   value={this.state.username}
                   autoCapitalize='none'
@@ -149,8 +154,8 @@ class RegisterScreen extends Component {
             </Item>
             </View>
             <View>
-            <Text style={styles.inputLabel}>Password</Text>
-            <Item>
+            <Item floatingLabel>
+            <Label style={styles.inputLabel}>Password</Label>
                   <Input
                       value={this.state.username}
                       autoCapitalize='none'
@@ -166,8 +171,8 @@ class RegisterScreen extends Component {
             </Item>
             </View>
             <View>
-            <Text style={styles.inputLabel}>Confirm Password</Text>
-            <Item>
+            <Item floatingLabel>
+            <Label style={styles.inputLabel}>Confirm Password</Label>
                   <Input
                       value={this.state.username}
                       autoCapitalize='none'
@@ -182,17 +187,29 @@ class RegisterScreen extends Component {
                       />
             </Item>
             </View>
+            <Text style={{textAlign:'right',color:'#3E85EF',fontSize:16,fontWeight:'bold'}}>Verify</Text>
+            <Text style={{fontSize:18,textAlign:'center'}}>  I agree with the <Text style={{color:'#3E85EF',fontSize:16,fontWeight:'bold'}}>Terms & Conditions</Text></Text>
             <View style={{justifyContent: "center" }}>
             
                 {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
                      <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                     <TouchableOpacity onPress={() => {this.handleSubmit()}}><Text style={styles.btnText}>SUBMIT</Text></TouchableOpacity>
+                     <TouchableOpacity onPress={() => {this.handleSubmit()}}><Text style={styles.btnText}>SIGN UP</Text></TouchableOpacity>
                   </LinearGradient>
                 }
            </View>
+           <View style={styles.socialBox}>
+            <View style={{flex:1,paddingHorizontal:10}}>
+                      <FacebookLogin />
+            </View>
+             <View style={{flex:1,paddingHorizontal:10}}>
+                      <GoogleSignIn/>
+            </View>
+           </View>
         </View>
+
         </View>
          </View>
+         </ScrollView>
          </LinearGradient>
 
       );
@@ -204,6 +221,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: isAndroid ? 0 : 50,
+    justifyContent: 'space-between'
 
 },
 logoText: {
@@ -214,7 +232,8 @@ logoText: {
 },
 inputLabel: {
    textAlign:'left',
-   fontSize: 12
+   fontSize: 16,
+
 },
 inputField: {
     height: 40,
@@ -246,6 +265,12 @@ btnText: {
   textAlign:'center',
   color:'white',
   fontWeight:'bold'
+},
+socialBox:{
+  flexDirection:'row',
+  backgroundColor:'white',
+  borderRadius:20,
+  elevation: 3,
 }
 })
 

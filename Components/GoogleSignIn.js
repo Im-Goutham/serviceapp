@@ -117,7 +117,10 @@ const styles = StyleSheet.create({
     paddingBottom:15,
     marginTop: 5,
     marginBottom: 5,
-    elevation: 3,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 1,
   },
   btnText: { 
     fontSize: 18,
