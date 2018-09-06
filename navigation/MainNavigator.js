@@ -31,11 +31,7 @@ export default StackNavigator(
      },
       },{
         index: 0,
-<<<<<<< HEAD
         initialRouteName: 'profile',
-=======
-        initialRouteName: 'appTutorial',
->>>>>>> 992a6c95987eb76f956c38cb2eaffeb9e35709b5
         headerMode: 'none',
         navigationOptions: {
         gesturesEnabled: false

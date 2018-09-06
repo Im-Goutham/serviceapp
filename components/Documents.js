@@ -6,6 +6,7 @@ import { Icon} from 'native-base';
 export default class Documents extends Component {
 
   render() {
+    let {documents} = this.props;  
     return (
         <ScrollView
           horizontal={true}
@@ -13,25 +14,23 @@ export default class Documents extends Component {
           >
             <View style={{flexDirection:'column',width:100}}>
                 <View style={styles.imgsView}>
-                <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
+                <Image source={require('../images/documents/doc_placeholder.png')} style={styles.img_placeholder}/>
                 <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                <Text style={{paddingTop:5,paddingBottom:5}}>Certificate1.jpeg</Text>
                 </View> 
             </View>   
-            <View style={{flexDirection:'column',width:100}}>
-                <View style={styles.imgsView}>
-                <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
-                <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                <Text style={{paddingTop:5,paddingBottom:5}}></Text>
-                </View> 
-            </View> 
-            <View style={{flexDirection:'column',width:100}}>
-                <View style={styles.imgsView}>
-                <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
-                <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                <Text style={{paddingTop:5,paddingBottom:5}}></Text>
-                </View> 
-            </View> 
+            {
+                 documents ? (
+                    documents.map((document,key)=>{
+                          return  <View style={{flexDirection:'column',width:100}}>
+                                        <View style={styles.imgsView}>
+                                        <Image source={document.image} style={styles.img_placeholder}/>
+                                        <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                                        <Text style={{paddingTop:5,paddingBottom:5}}>{document.name}</Text>
+                                        </View> 
+                                </View> 
+                    })
+                 ) : null
+            }
           </ScrollView>   
     );
   }
@@ -49,6 +48,7 @@ const styles = StyleSheet.create({
     img_placeholder: {
         width: 90,
         height: 90,
+        borderRadius:5,
         position: 'relative',
 		top: 0,
 		left: 0
@@ -58,8 +58,8 @@ const styles = StyleSheet.create({
         height: 18,
         borderRadius:9,
         position: 'absolute',
-		top: 14,
-		right: 4
+		top: 10,
+		right: 15
       },
 })
 
