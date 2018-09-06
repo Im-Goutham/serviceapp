@@ -8,67 +8,67 @@ let buttons = {
   data :[
     {
       title : "Home",
-      iconname : require('../assets/Icons/home.png'),
+      iconname : require('../assets/icons/home.png'),
       routename : "homePage",
     },
     {
       title : "Find Jobs",
-      iconname : require('../assets/Icons/search.png'),
+      iconname : require('../assets/icons/search.png'),
       routename : "findJobs"
     },
     {
       title : "Post Job",
-      iconname : require('../assets/Icons/post.png'),
+      iconname : require('../assets/icons/post.png'),
       routename : "postJob"
     },
     {
       title : "Find Help",
-      iconname : require('../assets/Icons/help.png'),
+      iconname : require('../assets/icons/help.png'),
       routename : "findHelp"
     },
     {
       title : "My Jobs",
-      iconname : require('../assets/Icons/list.png'),
+      iconname : require('../assets/icons/list.png'),
       routename : "myJobs"
     },
     {
       title : "Favourites",
-      iconname : require('../assets/Icons/heart.png'),
+      iconname : require('../assets/icons/heart.png'),
       routename : "favourites"
     },
     {
       title : "Notifications",
-      iconname : require('../assets/Icons/bell.png'),
+      iconname : require('../assets/icons/bell.png'),
       routename : "notifications"
     },
     {
       title : "Chats",
-      iconname : require('../assets/Icons/chat.png'),
+      iconname : require('../assets/icons/chat.png'),
       routename : "chats"
     },
     {
       title : "My Requests",
-      iconname : require('../assets/Icons/navigation.png'),
+      iconname : require('../assets/icons/navigation.png'),
       routename : "myRequests"
     },
     {
       title : "Track Now",
-      iconname : require('../assets/Icons/location.png'),
+      iconname : require('../assets/icons/location.png'),
       routename : "trackNow"
     },
     {
       title : "My Account",
-      iconname : require('../assets/Icons/account.png'),
+      iconname : require('../assets/icons/account.png'),
       routename : "account"
     },
     {
       title : "Subscription",
-      iconname : require('../assets/Icons/subscribe.png'),
+      iconname : require('../assets/icons/subscribe.png'),
       routename : "subscription"
     },
     {
       title : "Settings",
-      iconname : require('../assets/Icons/settings.png'),
+      iconname : require('../assets/icons/settings.png'),
       routename : "settings"
     },
     {

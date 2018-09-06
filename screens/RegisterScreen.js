@@ -128,7 +128,7 @@ class RegisterScreen extends Component {
                   onSubmitEditing={() => {
                     this.handleSubmit();
                   }}
-                  returnKeyType={ "done" }
+                  returnKeyType={ "next" }
                   ref={ input => {
                     this.inputs['username'] = input;
                   }}
@@ -145,7 +145,7 @@ class RegisterScreen extends Component {
                   onSubmitEditing={() => {
                     this.handleSubmit();
                   }}
-                  returnKeyType={ "done" }
+                  returnKeyType={ "next" }
                   ref={ input => {
                     this.inputs['username'] = input;
                   }}
@@ -162,7 +162,7 @@ class RegisterScreen extends Component {
                       onSubmitEditing={() => {
                         this.handleSubmit();
                       }}
-                      returnKeyType={ "done" }
+                      returnKeyType={ "next" }
                       ref={ input => {
                         this.inputs['username'] = input;
                       }}

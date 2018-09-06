@@ -138,17 +138,20 @@ class ProfileScreen extends Component {
                         <View style={styles.imgsView}>
                         {
                             (avatarSource)?(
-                                <Image source={avatarSource} style={styles.user_placeholder} />
+                               <View style={[styles.user_placeholder,{backgroundColor:'rgb(249, 252, 255)'}]}>
+                                <Image source={avatarSource} />
+                               </View> 
                             ):(
-                                <Image source={require('../images/user_placeholder.png')} style={styles.user_placeholder}/>
+                              <View  style={[styles.user_placeholder,{backgroundColor:'rgb(229, 239, 252)'}]}>
+                              <Image source={require('../images/user_placeholder.png')} />
+                             </View>  
                             )
                         }
-                                <Image  source={require('../images/camera_icon.png')} style={styles.camera_icon}/>
+                            <View  style={[styles.camera_icon,{backgroundColor:'rgb(62, 136, 235)'}]}>
+                                <Image  source={require('../images/camera.png')} />
+                            </View>
                         </View>  
                       </TouchableOpacity>
-                      <View style={{flex: 1,padding:10}}>
-                          <Text style={{fontSize: 18,textAlign: 'center'}}>Set Profile Pic</Text>
-                      </View> 
                 </View>  
                 <View style={{flex:6,justifyContent:'space-between',marginVertical:30}}>
                 <View style={{width:'100%',flexDirection:'row'}}>
@@ -304,7 +307,7 @@ class ProfileScreen extends Component {
 
 
             <View style={styles.servicesBox}>
-                 <Text style={{fontSize: 16,color: 'black',fontWeight:'bold'}}>Select which services you want to provide</Text>
+                 <Text style={styles.textStyle}>Select which services you want to provide</Text>
                  <List style={{paddingTop:20,paddingBottom:20}}>
                     <ListItem>
                     <Body>
@@ -360,7 +363,7 @@ class ProfileScreen extends Component {
                  </Item>
                   </View>
                 <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
-                    <Text style={{fontWeight:'bold'}}>Upload Certificates</Text>
+                    <Text style={styles.textStyle}>Upload Certificates</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents/>
@@ -370,7 +373,7 @@ class ProfileScreen extends Component {
               {/* Upload Pics starts here */ }
              <View style={styles.servicesBox}>
                 <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
-                    <Text style={{fontWeight:'bold'}}>Upload Pics of Work</Text>
+                    <Text style={styles.textStyle}>Upload Pics of Work</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents/>
@@ -379,9 +382,9 @@ class ProfileScreen extends Component {
               {/* Upload Pics ends here */}
              {/* Upload Id starts here */ }
           <View style={styles.servicesBox}>
-                <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
-                    <Text style={{fontWeight:'bold'}}>Upload ID</Text>
-                    <Text style={{fontSize:28,marginVertical:10}}>Being </Text>
+                <View style={{marginVertical:20}}>
+                    <Text style={styles.textStyle}>Upload ID</Text>
+                    <Text style={{fontSize:13,marginVertical:10,fontFamily:'Montserrat-Light'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents/>
@@ -426,7 +429,7 @@ const styles = StyleSheet.create({
     inputLabel: {
        textAlign:'left',
        fontSize: 16,
-    
+       fontFamily:'Montserrat-Light'
     },
     inputField: {
         height: 40,
@@ -479,22 +482,22 @@ const styles = StyleSheet.create({
       left: 0
     },
     user_placeholder: {
-      width: 100,
-      height: 100,
-      borderRadius:50,
-      position: 'relative',
-      top: 0,
-      left: 0
+      paddingTop:20,
+      width: 140,
+      height: 140,
+      borderRadius:70,
+      justifyContent:'center',
+      alignItems:'center',
     },
     camera_icon: {
-      width: 34,
-      height: 34,
-      borderRadius:17,
-      borderWidth:5,
-      borderColor:'white',
+      width: 40,
+      height: 40,
+      borderRadius:20,
       position: 'absolute',
-      top: 10,
-      right: 10
+      bottom: 10,
+      right: 10,
+      justifyContent:'center',
+      alignItems:'center',
     },
  servicesBox: {
     flex: 1,
@@ -508,6 +511,10 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 1,
 },
+textStyle: {
+  fontFamily:"Montserrat-Bold",
+  fontWeight:'bold'
+}
 
       
 })
