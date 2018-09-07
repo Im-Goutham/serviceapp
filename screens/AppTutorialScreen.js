@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
         fontWeight:'bold'
     },
     imgBox:{flex:4,justifyContent:'center',alignItems:'center'},
-    imgStyle: {width: 220,height:250}
+    imgStyle: {height:250}
 })
 
 export default AppTutorialScreen;

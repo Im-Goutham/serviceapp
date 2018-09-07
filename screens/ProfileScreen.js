@@ -22,7 +22,56 @@ class ProfileScreen extends Component {
         error: null,
         loading: false,  
         avatarSource: null,
-        videoSource: null};
+        videoSource: null,
+        certificates: [
+            {
+                name: 'certificate1.jpg',
+                image: require('../images/documents/cert1.png')
+            },
+            {
+              name: 'certificate2.jpg',
+              image: require('../images/documents/cert2.png')
+            }
+        ],
+        works: [
+              {
+                name: 'work1.jpg',
+                image: require('../images/documents/work1.png')
+             },
+            {
+              name: 'work2.jpg',
+              image: require('../images/documents/work2.png')
+             }
+        ],
+        ids: [
+              {
+                name: 'id1.jpg',
+                image: require('../images/documents/id1.png')
+              }
+          ],
+         videos: [
+            {
+              name: 'video1.jpg',
+              image: require('../images/documents/video1.png')
+            },
+            {
+              name: 'video2.jpg',
+              image: require('../images/documents/video2.png')
+            }
+        ], 
+        websites: [
+          {
+            name: 'video1.jpg',
+            image: require('../images/documents/website1.png')
+          },
+        ], 
+        profiles: [
+            {
+              name: 'profile1.jpg',
+              image: require('../images/documents/profile1.png')
+            },
+          ], 
+      };
     this.focusNextField = this.focusNextField.bind(this);
     this.inputs = {};
   }
@@ -117,17 +166,17 @@ class ProfileScreen extends Component {
 
 
     render() {
-      let {avatarSource} = this.state;  
+      let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;  
       return ( 
         <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
-
+              <ScrollView contentContainerStyle={{
+            justifyContent: 'space-between'
+        }}>
               <View style={styles.container}>   
               <View style={{justifyContent:'flex-start',paddingHorizontal:10}}>
                  <Icon style={{color:'white'}} active name="ios-arrow-back"  onPress={() => this.props.navigation.goBack()}/>
               </View>
-              <ScrollView contentContainerStyle={{
-            justifyContent: 'space-between'
-        }}>
+
               <View style={{position:'relative'}}>
                  <View style={{paddingTop:20,paddingBottom:40,paddingLeft:10}}><Text style={styles.logoText}>User Profile</Text></View>
                  <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
@@ -138,21 +187,24 @@ class ProfileScreen extends Component {
                         <View style={styles.imgsView}>
                         {
                             (avatarSource)?(
-                                <Image source={avatarSource} style={styles.user_placeholder} />
+                               <View style={[styles.user_placeholder,{backgroundColor:'rgb(249, 252, 255)'}]}>
+                                <Image source={avatarSource} />
+                               </View> 
                             ):(
-                                <Image source={require('../images/user_placeholder.png')} style={styles.user_placeholder}/>
+                              <View  style={[styles.user_placeholder,{backgroundColor:'rgb(229, 239, 252)'}]}>
+                              <Image source={require('../images/user_placeholder.png')} />
+                             </View>  
                             )
                         }
-                                <Image  source={require('../images/camera_icon.png')} style={styles.camera_icon}/>
+                            <View  style={[styles.camera_icon,{backgroundColor:'rgb(62, 136, 235)'}]}>
+                                <Image  source={require('../images/camera.png')} />
+                            </View>
                         </View>  
                       </TouchableOpacity>
-                      <View style={{flex: 1,padding:10}}>
-                          <Text style={{fontSize: 18,textAlign: 'center'}}>Set Profile Pic</Text>
-                      </View> 
                 </View>  
                 <View style={{flex:6,justifyContent:'space-between',marginVertical:30}}>
                 <View style={{width:'100%',flexDirection:'row'}}>
-                  <View style={{width:'50%'}}>
+                  <View style={{width:'50%',paddingRight:10}}>
                   <Item floatingLabel>
                     <Label style={styles.inputLabel}>First Name</Label>
                     <Input
@@ -169,7 +221,7 @@ class ProfileScreen extends Component {
                         />
                   </Item>
                   </View>
-                  <View style={{width:'50%'}}>
+                  <View style={{width:'50%',paddingLeft:10}}>
                   <Item floatingLabel>
                   <Label style={styles.inputLabel}>Last Name</Label>
                   <Input
@@ -225,7 +277,7 @@ class ProfileScreen extends Component {
   
     
                 <View style={{width:'100%',flexDirection:'row'}}>
-                  <View style={{width:'50%'}}>
+                  <View style={{width:'50%',paddingRight:10}}>
                   <Item floatingLabel>
                     <Label style={styles.inputLabel}>City</Label>
                     <Input
@@ -242,7 +294,7 @@ class ProfileScreen extends Component {
                         />
                   </Item>
                   </View>
-                  <View style={{width:'50%'}}>
+                  <View style={{width:'50%',paddingLeft:10}}>
                   <Item floatingLabel>
                   <Label style={styles.inputLabel}>State (Optional)</Label>
                   <Input
@@ -262,7 +314,7 @@ class ProfileScreen extends Component {
                 </View>
 
     <View style={{width:'100%',flexDirection:'row'}}>
-                  <View style={{width:'50%'}}>
+                  <View style={{width:'50%',paddingRight:10}}>
                   <Item floatingLabel>
                     <Label style={styles.inputLabel}>Zip</Label>
                     <Input
@@ -279,7 +331,7 @@ class ProfileScreen extends Component {
                         />
                   </Item>
                   </View>
-                  <View style={{width:'50%'}}>
+                  <View style={{width:'50%',paddingLeft:10}}>
                   <Item floatingLabel>
                   <Label style={styles.inputLabel}>Country</Label>
                   <Input
@@ -304,7 +356,7 @@ class ProfileScreen extends Component {
 
 
             <View style={styles.servicesBox}>
-                 <Text style={{fontSize: 16,color: 'black',fontWeight:'bold'}}>Select which services you want to provide</Text>
+                 <Text style={styles.textStyle}>Select which services you want to provide</Text>
                  <List style={{paddingTop:20,paddingBottom:20}}>
                     <ListItem>
                     <Body>
@@ -360,51 +412,74 @@ class ProfileScreen extends Component {
                  </Item>
                   </View>
                 <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
-                    <Text style={{fontWeight:'bold'}}>Upload Certificates</Text>
+                    <Text style={styles.textStyle}>Upload Certificates</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents/>
+                   <Documents documents={certificates}/>
                 </View> 
              </View>   
               {/* Upload Certificates ends here */ } 
               {/* Upload Pics starts here */ }
              <View style={styles.servicesBox}>
                 <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
-                    <Text style={{fontWeight:'bold'}}>Upload Pics of Work</Text>
+                    <Text style={styles.textStyle}>Upload Pics of Work</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents/>
+                   <Documents  documents={works}/>
                 </View> 
              </View>   
               {/* Upload Pics ends here */}
              {/* Upload Id starts here */ }
           <View style={styles.servicesBox}>
-                <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
-                    <Text style={{fontWeight:'bold'}}>Upload ID</Text>
-                    <Text style={{fontSize:28,marginVertical:10}}>Being </Text>
+                <View style={{marginVertical:20}}>
+                    <Text style={styles.textStyle}>Upload ID</Text>
+                    <Text style={{fontSize:13,marginVertical:10,fontFamily:'Montserrat-Light'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents/>
+                   <Documents documents={ids}/>
                 </View> 
              </View>   
               {/* Upload Id ends here */}
-
-        
-
-
-
-
-
+           {/* Upload Video starts here */ }
+           <View style={styles.servicesBox}>
+                <View style={{marginVertical:20}}>
+                    <Text style={styles.textStyle}>Add Video Link</Text>
+                </View>  
+                <View style={{flexDirection: 'row',alignItems:'center'}}>
+                   <Documents documents={videos}/>
+                </View> 
+             </View>   
+              {/* Upload Video ends here */}
+             {/* Upload Website starts here */ }
+           <View style={styles.servicesBox}>
+                <View style={{marginVertical:20}}>
+                    <Text style={styles.textStyle}>Add Video Link</Text>
+                </View>  
+                <View style={{flexDirection: 'row',alignItems:'center'}}>
+                   <Documents documents={websites}/>
+                </View> 
+             </View>   
+              {/* Upload Website ends here */}
+          {/* Upload Linkedin starts here */ }
+           <View style={styles.servicesBox}>
+                <View style={{marginVertical:20}}>
+                    <Text style={styles.textStyle}>Add Linkedin Profile Link</Text>
+                </View>  
+                <View style={{flexDirection: 'row',alignItems:'center'}}>
+                   <Documents documents={profiles}/>
+                </View> 
+             </View>   
+            {/* Upload Website ends here */}
+            <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
+                <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
+                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>SIGN UP</Text></TouchableOpacity>
+                    </LinearGradient>
+            </View>
                 </View>
-                
               </View>
-      
-              </ScrollView>
                </View>
+               </ScrollView>
                </LinearGradient>
-
-               
-
       );
     }
 }
@@ -426,10 +501,10 @@ const styles = StyleSheet.create({
     inputLabel: {
        textAlign:'left',
        fontSize: 16,
-    
+       fontFamily:'Montserrat-Light'
     },
     inputField: {
-        height: 40,
+        height: 60,
         borderRadius:20,
         backgroundColor: '#F2F2F2',
         paddingLeft : 15,
@@ -479,28 +554,28 @@ const styles = StyleSheet.create({
       left: 0
     },
     user_placeholder: {
-      width: 100,
-      height: 100,
-      borderRadius:50,
-      position: 'relative',
-      top: 0,
-      left: 0
+      paddingTop:20,
+      width: 140,
+      height: 140,
+      borderRadius:70,
+      justifyContent:'center',
+      alignItems:'center',
     },
     camera_icon: {
-      width: 34,
-      height: 34,
-      borderRadius:17,
-      borderWidth:5,
-      borderColor:'white',
+      width: 40,
+      height: 40,
+      borderRadius:20,
       position: 'absolute',
-      top: 10,
-      right: 10
+      bottom: 10,
+      right: 10,
+      justifyContent:'center',
+      alignItems:'center',
     },
  servicesBox: {
     flex: 1,
     marginVertical: 20,
     paddingVertical: 25,
-    paddingHorizontal:10,
+    paddingHorizontal:20,
     borderRadius:10,
     backgroundColor:'white',
     shadowOffset: { width: 0, height: 2 },
@@ -508,6 +583,10 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 1,
 },
+textStyle: {
+  fontFamily:"Montserrat-Bold",
+  fontWeight:'bold'
+}
 
       
 })
