@@ -9,19 +9,19 @@ let joblist = {
   data : [
     {
       jobtitle: 'Need Cook',
-      icon: require('../assets/Icons/crown.png'),
+      icon: require('../assets/icons/crown.png'),
       image: require('../images/tutorial.png'),
       detail: "Lorem Ipsum has been the industrys standard dummy text ever",
     },
     {
       jobtitle: 'Need Carpenter',
-      icon: require('../assets/Icons/crown.png'),
+      icon: require('../assets/icons/crown.png'),
       image: require('../images/tutorial.png'),
       detail: "Lorem Ipsum has been the industrys standard dummy text ever",
     },
     {
       jobtitle: 'Need Cook',
-      icon: require('../assets/Icons/crown.png'),
+      icon: require('../assets/icons/crown.png'),
       image: require('../images/tutorial.png'),
       detail: "Lorem Ipsum has been the industrys standard dummy text ever",
     },
