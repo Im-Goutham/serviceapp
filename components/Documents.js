@@ -13,7 +13,7 @@ export default class Documents extends Component {
           showsHorizontalScrollIndicator={false}
           >
             <View style={{flexDirection:'column',width:100}}>
-                <View style={styles.imgsView}>
+                <View>
                 <Image source={require('../images/documents/doc_placeholder.png')} style={styles.img_placeholder}/>
                 <Image source={require('../images/close_img.png')} style={styles.close_img}/>
                 </View> 
@@ -22,7 +22,7 @@ export default class Documents extends Component {
                  documents ? (
                     documents.map((document,key)=>{
                           return  <View style={styles.documentBox} key={key}>
-                                        <View style={styles.imgsView}>
+                                        <View >
                                         <Image source={document.image} style={styles.img_placeholder}/>
                                         <Image source={require('../images/close_img.png')} style={styles.close_img}/>
                                         <Text style={{paddingTop:5,paddingBottom:5}}>{document.name}</Text>
