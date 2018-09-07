@@ -1,79 +1,92 @@
 
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView,Image } from 'react-native';
+import { View, StyleSheet, ScrollView, Image, TouchableOpacity } from 'react-native';
 import { Text, Icon } from 'native-base';
 import Header from '../components/Header';
 import Advertisement from '../components/Advertisement';
-
-
+let logo = require('../images/logo.png');
+let menu = require('../assets/Icons/menu.png');
 class HomeScreen extends Component {
-
-     
     render() {
        return (
            <View style={{flex:1}}>
-               <Header navigation={this.props.navigation} title={'Home'}/>
+               <Header
+                 navigation={this.props.navigation}
+                 left = {
+                   <TouchableOpacity
+                     onPress={() => this.props.navigation.openDrawer()}
+                     style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
+                     <Image source={menu} style={{ width: '100%', height: 25}} resizeMode="contain" resizeMethod="resize"/>
+                   </TouchableOpacity>
+                 }
+                 title={
+                   <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"50%", height:54}}>
+                     <Image source={logo} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                   </View>
+                     }
+                 />
                <ScrollView>
                <Advertisement/>
                <View style={styles.container}>
              {/* Categories start here */}
                <View style={styles.categoryContainer}>
                     <View style={styles.categoryBox}>
-                        <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
+                      <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
+
                         <Text>Find Jobs</Text>
-                    </View>  
+                    </View>
                     <View style={styles.categoryBox}>
                         <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
                         <Text>Post a Job</Text>
-                    </View> 
+                    </View>
                     <View style={styles.categoryBox}>
                         <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
                         <Text>Find Help</Text>
-                    </View> 
+                    </View>
                     <View style={styles.categoryBox}>
                         <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
                         <Text>My Jobs</Text>
-                    </View> 
+                    </View>
                     <View style={styles.categoryBox}>
                         <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
                         <Text>Favourites</Text>
-                    </View> 
+                    </View>
                     <View style={styles.categoryBox}>
                         <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
                         <Text>Notifications</Text>
-                    </View>   
+                    </View>
                     <View style={styles.categoryBox}>
                         <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
                         <Text>Chats</Text>
-                    </View>  
+                    </View>
                     <View style={styles.categoryBox}>
                         <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
                         <Text>My Requests</Text>
-                    </View> 
+                    </View>
                     <View style={styles.categoryBox}>
                         <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
                         <Text>Track Now</Text>
-                    </View> 
+                    </View>
                     <View style={styles.categoryBox}>
                         <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
                         <Text>My Account</Text>
-                    </View>  
+                    </View>
                     <View style={styles.categoryBox}>
                         <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
                         <Text>Subscription</Text>
-                    </View> 
+                    </View>
                     <View style={styles.categoryBox}>
                         <Icon style={{color:'#4d4d4d',fontSize:40}} active name="ios-albums-outline" />
                         <Text>Settings</Text>
-                    </View> 
-                </View>  
+                    </View>
+                </View>
            {/* Categories end here */}
            { /* Subcategories Scroll starts here */}
             <View style={{marginTop:10,marginBottom:10,padding:5,backgroundColor:'#F2F2F2'}}>
             <View style={styles.categoryHeading}>
                 <View><Text style={{fontWeight:'bold',fontSize:18}}>Home Interior</Text></View>
                 <View><Text style={{textAlign:'right',fontSize:12}}>VIEW ALL</Text></View>
-            </View>  
+            </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                 <ScrollView
                 horizontal={true}
@@ -85,42 +98,42 @@ class HomeScreen extends Component {
                         <Icon style={styles.heart_icon} active name="md-heart-outline" />
                         <Icon style={styles.share_icon} active name="md-share" />
                         <Text style={{paddingTop:5,paddingBottom:5}}>Repair</Text>
-                        </View> 
-                    </View>   
+                        </View>
+                    </View>
                     <View style={{flexDirection:'column',width:100}}>
                         <View style={styles.imgsView}>
                         <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                         <Icon style={styles.heart_icon} active name="md-heart-outline" />
                         <Icon style={styles.share_icon} active name="md-share" />
                         <Text style={{paddingTop:5,paddingBottom:5}}>Wallpaper</Text>
-                        </View> 
-                    </View> 
+                        </View>
+                    </View>
                     <View style={{flexDirection:'column',width:100}}>
                         <View style={styles.imgsView}>
                         <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                         <Icon style={styles.heart_icon} active name="md-heart-outline" />
                         <Icon style={styles.share_icon} active name="md-share" />
                         <Text style={{paddingTop:5,paddingBottom:5}}>Flooring</Text>
-                        </View> 
-                    </View> 
+                        </View>
+                    </View>
                     <View style={{flexDirection:'column',width:100}}>
                         <View style={styles.imgsView}>
                         <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                         <Icon style={styles.heart_icon} active name="md-heart-outline" />
                         <Icon style={styles.share_icon} active name="md-share" />
                         <Text style={{paddingTop:5,paddingBottom:5}}>Wall Ceiling</Text>
-                        </View> 
-                    </View> 
-                </ScrollView>   
-                </View> 
-             </View>  
+                        </View>
+                    </View>
+                </ScrollView>
+                </View>
+             </View>
              { /* Subcategories Scroll end here */}
              { /* Service Provider scroll starts  here */}
              <View style={{marginTop:10,marginBottom:10,padding:5,backgroundColor:'#F2F2F2'}}>
             <View style={styles.categoryHeading}>
                 <View><Text style={{fontWeight:'bold',fontSize:18}}>See other Service Providers</Text></View>
                 <View><Text style={{textAlign:'right',fontSize:12}}>VIEW ALL</Text></View>
-            </View>  
+            </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                 <ScrollView
                 horizontal={true}
@@ -133,10 +146,10 @@ class HomeScreen extends Component {
                         <View style={{flexDirection:'row',padding:5}}>
                             <Icon active name="md-star" style={styles.star_icon} />
                             <Text style={{paddingLeft:2}}>3</Text>
-                        </View>    
+                        </View>
                         <Text style={{paddingTop:5,paddingBottom:5}}>Wesley R</Text>
-                        </View> 
-                    </View>   
+                        </View>
+                    </View>
                     <View style={{flexDirection:'column',width:100}}>
                         <View style={styles.imgsView}>
                         <Image source={require('../images/user_placeholder.png')} style={styles.user_placeholder}/>
@@ -145,8 +158,8 @@ class HomeScreen extends Component {
                             <Text style={{paddingLeft:2}}>2</Text>
                         </View>
                         <Text style={{paddingTop:5,paddingBottom:5}}>Brian B</Text>
-                        </View> 
-                    </View> 
+                        </View>
+                    </View>
                     <View style={{flexDirection:'column',width:100}}>
                         <View style={styles.imgsView}>
                         <Image source={require('../images/user_placeholder.png')} style={styles.user_placeholder}/>
@@ -156,8 +169,8 @@ class HomeScreen extends Component {
                             <Text style={{paddingLeft:2}}>1</Text>
                         </View>
                         <Text style={{paddingTop:5,paddingBottom:5}}>Leonard G</Text>
-                        </View> 
-                    </View> 
+                        </View>
+                    </View>
                     <View style={{flexDirection:'column',width:100}}>
                         <View style={styles.imgsView}>
                         <Image source={require('../images/user_placeholder.png')} style={styles.user_placeholder}/>
@@ -166,18 +179,18 @@ class HomeScreen extends Component {
                             <Text style={{paddingLeft:2}}>5</Text>
                         </View>
                         <Text style={{paddingTop:5,paddingBottom:5}}>Clayton F</Text>
-                        </View> 
-                    </View> 
-                </ScrollView>   
-                </View> 
-             </View> 
-             { /* Service Provider scroll ends  here */} 
+                        </View>
+                    </View>
+                </ScrollView>
+                </View>
+             </View>
+             { /* Service Provider scroll ends  here */}
              { /* Subcategories Scroll starts here */}
              <View style={{marginTop:10,marginBottom:10,padding:5,backgroundColor:'#F2F2F2'}}>
             <View style={styles.categoryHeading}>
                 <View><Text style={{fontWeight:'bold',fontSize:18}}>Cars & Vehicles</Text></View>
                 <View><Text style={{textAlign:'right',fontSize:12}}>VIEW ALL</Text></View>
-            </View>  
+            </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                 <ScrollView
                 horizontal={true}
@@ -189,35 +202,35 @@ class HomeScreen extends Component {
                         <Icon style={styles.heart_icon} active name="md-heart-outline" />
                         <Icon style={styles.share_icon} active name="md-share" />
                         <Text style={{paddingTop:5,paddingBottom:5}}>Repair</Text>
-                        </View> 
-                    </View>   
+                        </View>
+                    </View>
                     <View style={{flexDirection:'column',width:100}}>
                         <View style={styles.imgsView}>
                         <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                         <Icon style={styles.heart_icon} active name="md-heart-outline" />
                         <Icon style={styles.share_icon} active name="md-share" />
                         <Text style={{paddingTop:5,paddingBottom:5}}>Wallpaper</Text>
-                        </View> 
-                    </View> 
+                        </View>
+                    </View>
                     <View style={{flexDirection:'column',width:100}}>
                         <View style={styles.imgsView}>
                         <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                         <Icon style={styles.heart_icon} active name="md-heart-outline" />
                         <Icon style={styles.share_icon} active name="md-share" />
                         <Text style={{paddingTop:5,paddingBottom:5}}>Flooring</Text>
-                        </View> 
-                    </View> 
+                        </View>
+                    </View>
                     <View style={{flexDirection:'column',width:100}}>
                         <View style={styles.imgsView}>
                         <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
                         <Icon style={styles.heart_icon} active name="md-heart-outline" />
                         <Icon style={styles.share_icon} active name="md-share" />
                         <Text style={{paddingTop:5,paddingBottom:5}}>Wall Ceiling</Text>
-                        </View> 
-                    </View> 
-                </ScrollView>   
-                </View> 
-             </View>  
+                        </View>
+                    </View>
+                </ScrollView>
+                </View>
+             </View>
              { /* Subcategories Scroll end here */}
                </View>
                </ScrollView>

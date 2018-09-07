@@ -1,34 +1,47 @@
 import React, { Component } from 'react';
-import { View, Text,TouchableOpacity } from 'react-native';
-import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base'
+import { View, Text,TouchableOpacity, Platform} from 'react-native';
+// import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base'
+import { Icon } from 'native-base'
+
 import LinearGradient from 'react-native-linear-gradient';
 
 import { DrawerActions } from 'react-navigation';
 
-class HeaderComponent extends Component {
+class Header extends Component {
+  render() {
+    let {title, left} = this.props;
+    return (
+      <LinearGradient
+        colors={['#3E85EF', '#3EBDEF']}
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 0}}
+        style={{
+          // flex: 1,
+          height: Platform.OS === 'ios'? 64: 54,
+          justifyContent : 'flex-end',
+          flexDirection: 'row'
+          // borderRadius: 5
+        }}>
+        <View style={{width: "20%", backgroundColor: 'transparent', justifyContent:"center", alignItems: "center" }}>
+          {left}
+        </View>
+        <View style={{width: "60%", backgroundColor: 'transparent', justifyContent: "center", alignItems: 'flex-start'}}>
+          {title}
+        </View>
+        <View style={{width: "20%", backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+          <TouchableOpacity style={{width: "50%", backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+            <Icon  name='md-search' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
+          </TouchableOpacity>
+          <TouchableOpacity style={{width: "50%", backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+            <Icon  name='md-person' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
+          </TouchableOpacity>
 
+        </View>
 
-    render() {
-      let {title} = this.props;
-       return (
-          <Header>
-          <Left style={{flex: 1}}>
-              <Button transparent onPress={() => this.props.navigation.openDrawer()}>
-                <Icon name='ios-menu' style={{color:'black',fontSize:25}}/>
-              </Button>
-            </Left>
-            <Body style={{flex: 6,alignItems:'flex-start'}}>
-              <Title style={{textAlign:'left',paddingBottom:5,color:'black'}}>{title}</Title>
-            </Body>
-           <Right style={{flex: 2,flexDirection:'row'}}>
-                <View style={{flex: 1,alignItems:'flex-end'}}><Icon  name='md-search' style={{color:'black',fontSize:25,fontWeight:'bold'}}/></View>
-                <View style={{flex: 1,alignItems:'flex-end'}}><Icon  name='md-person' style={{color:'black',fontSize:25,fontWeight:'bold'}}/></View>
-           </Right>
-        </Header>
-
-       )
-    }
+      </LinearGradient>
+    )
+  }
 }
 
 
-export default HeaderComponent;
+export default Header;
