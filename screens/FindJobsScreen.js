@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import {
   View,
@@ -21,9 +20,8 @@ var {height, width} = Dimensions.get('window');
 let tabItems = ["List View", "Map View"];
 
 let logo = require('../images/logo.png');
-let menu = require('../assets/Icons/menu.png');
+let menu = require('../assets/icons/menu.png');
 let border_img = require('../images/border_img.png');
-
 
 class FindJobScreen extends Component {
   constructor(props){
@@ -101,9 +99,8 @@ class FindJobScreen extends Component {
            <View style={{backgroundColor :"rgb(249,252, 255)", flex:0.8}}>
              <Advertisement/>
              {this.state.tabindex === 0 ?<JobsList/>:<Map/>}
-
            </View>
-           </LinearGradient>
+         </LinearGradient>
        )
     }
 }

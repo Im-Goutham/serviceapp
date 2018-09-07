@@ -5,7 +5,7 @@ import { Text, Icon } from 'native-base';
 import Header from '../components/Header';
 import Advertisement from '../components/Advertisement';
 let logo = require('../images/logo.png');
-let menu = require('../assets/Icons/menu.png');
+let menu = require('../assets/icons/menu.png');
 class HomeScreen extends Component {
     render() {
        return (
