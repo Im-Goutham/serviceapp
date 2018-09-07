@@ -9,17 +9,15 @@ import { DrawerActions } from 'react-navigation';
 
 class Header extends Component {
   render() {
-    let {title, left} = this.props;
+    let {title, left, right} = this.props;
     return (
-      <LinearGradient
-        colors={['#3E85EF', '#3EBDEF']}
-        start={{x: 0, y: 0}}
-        end={{x: 1, y: 0}}
+      <View
         style={{
           // flex: 1,
-          height: Platform.OS === 'ios'? 64: 54,
-          justifyContent : 'flex-end',
-          flexDirection: 'row'
+          height: Platform.OS === 'ios'? 84: 54,
+          flexDirection: 'row',
+          backgroundColor:'transparent',
+          alignItems:'flex-end'
           // borderRadius: 5
         }}>
         <View style={{width: "20%", backgroundColor: 'transparent', justifyContent:"center", alignItems: "center" }}>
@@ -29,16 +27,10 @@ class Header extends Component {
           {title}
         </View>
         <View style={{width: "20%", backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-          <TouchableOpacity style={{width: "50%", backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-            <Icon  name='md-search' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
-          </TouchableOpacity>
-          <TouchableOpacity style={{width: "50%", backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-            <Icon  name='md-person' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
-          </TouchableOpacity>
-
+          {right}
         </View>
 
-      </LinearGradient>
+      </View>
     )
   }
 }

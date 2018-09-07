@@ -9,7 +9,7 @@ import {
   Platform,
   Text
 } from 'react-native';
-// import {  Header, Left, Body, Right, Button, Icon, Title,Tab, Tabs ,Text } from 'native-base'
+ import {  Icon } from 'native-base'
 import Advertisement from '../components/Advertisement';
 import JobsList from '../components/JobsList';
 import Map from '../components/Map';
@@ -86,6 +86,16 @@ class FindJobScreen extends Component {
                  <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"50%", height:54}}>
                    <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Find JOB</Text>
                  </View>
+               }
+               right={
+                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                 <Icon  name='md-search' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
+               </TouchableOpacity>
+                <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                  <Icon  name='md-person' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
+                </TouchableOpacity>
+                </View>
                }
                />
              <View style={{backgroundColor :"transparent", flex:0.2, justifyContent: "space-between"}}>
