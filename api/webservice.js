@@ -10,7 +10,6 @@ import {
    AppRegistry,
    AsyncStorage
 } from 'react-native'
-
 import Events from 'react-native-simple-events';
 import Constant from 'Domingo/Src/Screens/GeneralClass/Constant';
 import { NavigationActions } from 'react-navigation'

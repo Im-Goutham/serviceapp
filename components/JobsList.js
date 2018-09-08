@@ -53,7 +53,7 @@ class JobsList extends Component {
         {
             component:
             <LinearGradient
-              colors={['#3E85EF', '#3EBDEF']}
+              colors={['#3E85EF', '#3E85EF']}
               start={{x: 0, y: 0}}
               end={{x: 1, y: 0}}
               style={{
@@ -67,14 +67,14 @@ class JobsList extends Component {
               // alignContent: 'center'
             }}
               >
-              <Image source={require('../assets/icons/favourite.png')}/>
+              <Image source={require('../assets/icons/favourite.png')}  onPress={()=>console.warn(data.text)}/>
             </LinearGradient>,
             backgroundColor: 'transparent',
-            onPress:()=>{console.log(data.text)}
+
         },
         {
-            component:   <LinearGradient
-                colors={['#3E85EF', '#3EBDEF']}
+            component: <LinearGradient
+                colors={['#3EBDEF', '#3EBDEF']}
                 start={{x: 0, y: 0}}
                 end={{x: 1, y: 0}}
                 style={{
