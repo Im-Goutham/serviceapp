@@ -5,11 +5,12 @@ import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbna
 import ImagePicker  from 'react-native-image-picker';
 import LinearGradient from 'react-native-linear-gradient';
 import Documents from '../components/Documents';
-
+import Header from '../components/Header';
 
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
 
+let back_arrow = require('../assets/icons/back-arrow.png');
 
 import * as actions from '../actions';
 
@@ -169,13 +170,25 @@ class ProfileScreen extends Component {
       let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;  
       return ( 
         <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
-              <ScrollView contentContainerStyle={{
-            justifyContent: 'space-between'
-        }}>
+              <Header
+              navigation={this.props.navigation}
+              left = {
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.goBack()}
+                  style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
+                  <Image source={back_arrow} style={{ width: '100%', height: 25}} resizeMode="contain" resizeMethod="resize"/>
+                </TouchableOpacity>
+              }
+              title={
+                <View></View>
+              }
+              right={
+                <View></View>
+              }
+              />
+              <ScrollView >
               <View style={styles.container}>   
-              <View style={{justifyContent:'flex-start',paddingHorizontal:10}}>
-                 <Icon style={{color:'white'}} active name="ios-arrow-back"  onPress={() => this.props.navigation.goBack()}/>
-              </View>
+      
 
               <View style={{position:'relative'}}>
                  <View style={{paddingTop:20,paddingBottom:40,paddingLeft:10}}><Text style={styles.logoText}>User Profile</Text></View>
@@ -488,7 +501,6 @@ class ProfileScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        paddingTop: isAndroid ? 0 : 50,
         justifyContent: 'space-between'
     
     },
