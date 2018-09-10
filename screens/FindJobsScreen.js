@@ -18,6 +18,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Modal from 'react-native-modalbox';
 // import Icon from 'react-native-vector-icons/EvilIcons';
 
+import HeaderScreen from './HeaderScreen';
 
 var {height, width} = Dimensions.get('window');
 let tabItems = ["List View", "Map View"];
@@ -75,11 +76,11 @@ class FindJobScreen extends Component {
           style={{
             color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
             fontSize: 20,
-            fontFamily: 'Montserrat-Bold'
+            fontFamily: 'Montserrat-medium'
           }}>{value}</Text>
         <View style={{
             width: 70,
-            height: this.state.tabindex === index ? 5 : 0,
+            height: this.state.tabindex === index ? 3 : 0,
             backgroundColor: "#fff",
             borderRadius : 3
             // borderColor: this.state.tabindex === index ? "#fff": "transparent"
@@ -95,7 +96,7 @@ class FindJobScreen extends Component {
               <View style={{height:300,marginBottom: 10, width: "100%", backgroundColor:"#fff", borderRadius:10}} key={index}>
                   <View style={{ flexDirection:"row", justifyContent:"space-between", height:50, alignItems:"center", paddingHorizontal:20}} >
                       <View style={{ flexDirection:"row"}} >
-                          <Text>{data.jobtitle}</Text>
+                          <Text style={{color:"#000", fontFamily:"Montserrat-regular "}}>{data.jobtitle}</Text>
                           <Image style={{width:20,height:20, paddingHorizontal:15, backgroundColor:"transparent"}} source={data.icon}
                                  resizeMode="contain" resizeMethod="resize"/>
                       </View>
@@ -146,72 +147,70 @@ class FindJobScreen extends Component {
     render() {
        return (
            <View style={{flex:1}}>
-         <LinearGradient
-           colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
-           start={{x: 0, y: 0}}
-           end={{x: 1, y: 0}}
-           style={{
-             flex: 1,
-             // height: Platform.OS === 'ios'? 200: 250,
-             // justifyContent : 'flex-end',
-             // flexDirection: 'row'
-             // borderRadius: 5
-           }}>
-             <Header
-               navigation={this.props.navigation}
-               left = {
-                 <TouchableOpacity
-                   onPress={() => this.props.navigation.openDrawer()}
-                   style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
-                   <Image source={menu} style={{ width: '100%', height: 25}} resizeMode="contain" resizeMethod="resize"/>
-                 </TouchableOpacity>
-               }
-               title={
-                 <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"50%", height:54}}>
-                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Find JOB</Text>
-                 </View>
-               }
-               right={
-                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                 <Icon  name='md-search' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
-               </TouchableOpacity>
-                <TouchableOpacity onPress={() => this.refs.modal1.open()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                  <Icon  name='md-person' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
-                </TouchableOpacity>
-                </View>
-               }
-               />
-             <View style={{backgroundColor :"transparent", flex:0.2, justifyContent: "space-between"}}>
-             <View style={{ paddingTop:30,flexDirection:'row', paddingHorizontal: width/6}}>
-               {this.tabrender()}
-             </View>
-             <View style={{}}>
-               <Image source={border_img} style={{ width: '100%', height: 34}} resizeMode="contain" resizeMethod="resize"/>
-             </View>
-           </View>
-           <View style={{backgroundColor :"rgb(249,252, 255)", flex:0.8}}>
-             <Advertisement/>
-             {this.state.tabindex === 0 ?<JobsList/>:<Map/>}
-           </View>
-         </LinearGradient>
-           <Modal
-          style={[styles.modal, { height: height/2+50, width: width-40, backgroundColor:"transparent" }]}
-          position={"bottom"}
-          ref={"modal1"}
-          swipeToClose={false}
-           backdropPressToClose={false}>
-                       <View style={{width: 40,alignSelf:"flex-end", height: 40, backgroundColor: '#fff', justifyContent:'center', alignItems:'center', right:0}} >
-                      <Icon name="close" style={{}} onPress={() => this.refs.modal1.close()}/>
+               <LinearGradient
+                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   start={{x: 0, y: 0}}
+                   end={{x: 1, y: 0}}
+                   style={{
+                       flex: 1
+                   }}>
+                   <HeaderScreen
+                       header={
+                           <Header
+                               navigation={this.props.navigation}
+                               left = {
+                                   <TouchableOpacity
+                                       onPress={() => this.props.navigation.openDrawer()}
+                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
+                                       <Image source={menu} style={{ width: '100%', height: 25}} resizeMode="contain" resizeMethod="resize"/>
+                                   </TouchableOpacity>
+                               }
+                               title={
+                                   <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"50%", height:54}}>
+                                       <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Find JOB</Text>
+                                   </View>
+                               }
+                               right={
+                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                                       <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                           <Icon  name='md-search' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
+                                       </TouchableOpacity>
+                                       <TouchableOpacity onPress={() => this.refs.modal1.open()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                           <Icon  name='md-person' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
+                                       </TouchableOpacity>
+                                   </View>
+                               }
+                           />
+                       }
+                       content={
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
+                       <View style={{ paddingTop:30,flexDirection:'row', paddingHorizontal: width/6}}>
+                           {this.tabrender()}
+                           </View>
+                   </View>
+                       }
+                   />
+                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
+                       <Advertisement/>
+                       {this.state.tabindex === 0 ?<JobsList/>:<Map/>}
                        </View>
-
-               <ScrollView ScrollView contentContainerStyle={{}}>
-                   {this.rendermapdata()}
-               </ScrollView>
-           </Modal>
-        </View>
+               </LinearGradient>
+               <Modal
+                   style={[styles.modal, { height: height/2+50, width: width-40, backgroundColor:"transparent" }]}
+                   position={"bottom"}
+                   ref={"modal1"}
+                   swipeToClose={false}
+                   backdropPressToClose={false}>
+                   <View style={{ marginBottom: -10, width: 40, borderTopLeftRadius:10, borderTopRightRadius:10, paddingBottom:10, alignSelf:"flex-end", height: 50, backgroundColor: '#fff', justifyContent:'center', alignItems:'center', right:0}} >
+                       <Icon name="close" style={{}} onPress={() => this.refs.modal1.close()}/>
+                   </View>
+                   <ScrollView ScrollView contentContainerStyle={{}}>
+                       {this.rendermapdata()}
+                       </ScrollView>
+               </Modal>
+           </View>
        )
-    }
+  }
 }
 
 const styles = StyleSheet.create({

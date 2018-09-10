@@ -10,8 +10,6 @@ const configure = () => {
       }
   });
 };
-
-
 export {
     configure
 };
