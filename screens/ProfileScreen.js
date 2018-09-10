@@ -374,7 +374,7 @@ class ProfileScreen extends Component {
                     <ListItem>
                     <Body>
                         <Text>Waiter</Text>
-                          <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active </Text><Switch value={true} style={styles.switch}/></View>   
+                          <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>   
                     </Body>
                     <Right>
                          <Icon style={{color:'#3E85EF'}} active name="md-more" />
@@ -383,7 +383,7 @@ class ProfileScreen extends Component {
                     <ListItem>
                     <Body>
                         <Text>Painting</Text>
-                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active </Text><Switch value={true} style={styles.switch}/></View>   
+                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>   
                     </Body>
                     <Right>
                          <Icon style={{color:'#3E85EF'}} active name="md-more" />
@@ -392,7 +392,7 @@ class ProfileScreen extends Component {
                     <ListItem>
                     <Body>
                         <Text>Dog Walking</Text>
-                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active </Text><Switch value={true} style={styles.switch}/></View>   
+                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>   
                     </Body>
                     <Right>
                          <Icon style={{color:'#3E85EF'}} active name="md-more" />
