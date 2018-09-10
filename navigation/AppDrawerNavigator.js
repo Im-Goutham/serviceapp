@@ -60,7 +60,7 @@ export default DrawerNavigator({
         screen: SettingsScreen
      }
 },{
-  initialRouteName: 'findJobs',
+  initialRouteName: 'homePage',
     contentComponent: SideMenu,
     drawerWidth: 300
 });

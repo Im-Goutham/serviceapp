@@ -95,7 +95,7 @@ class SideMenu extends Component {
     return buttons.data.map((value, index)=>{
       return <TouchableOpacity style={styles.navItemStyle} key={index} onPress={()=>this.setState({selectedkey : index}, this.navigateToScreen(value.routename))}>
         <View style={{flex:1, alignItems:'center',justifyContent:"center" }}>
-          <Image source={value.iconname} style={{marginTop:2}} resizeMode="contain" resizeMethod="resize"/>
+          <Image source={value.iconname} style={{marginTop:2,width:25,height:25}} resizeMode="contain" resizeMethod="resize"/>
         </View>
         <View style={{flex:3,alignItems:'flex-start', justifyContent: 'center'}}>
           <Text style={[styles.textStyle,{ color: index === this.state.selectedkey ? "rgb(61, 133, 239)" : "#000" }]} >

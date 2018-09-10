@@ -216,7 +216,7 @@ class ProfileScreen extends Component {
                       </TouchableOpacity>
                 </View>  
                 <View style={{flex:6,justifyContent:'space-between',marginVertical:30}}>
-                <View style={{width:'100%',flexDirection:'row'}}>
+                <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:10}}>
                   <Item floatingLabel>
                     <Label style={styles.inputLabel}>First Name</Label>
@@ -253,7 +253,7 @@ class ProfileScreen extends Component {
                   </View>
                 </View>
 
-                <View>
+                <View style={styles.inputField}>
                 <Item floatingLabel>
                   <Label style={styles.inputLabel}>Date of Birth</Label>
                   <Input
@@ -270,7 +270,7 @@ class ProfileScreen extends Component {
                       />
                  </Item>
                 </View>
-                <View>
+                <View style={styles.inputField}>
                 <Item floatingLabel>
                   <Label style={styles.inputLabel}>Street Address</Label>
                   <Input
@@ -289,7 +289,7 @@ class ProfileScreen extends Component {
                 </View>
   
     
-                <View style={{width:'100%',flexDirection:'row'}}>
+                <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:10}}>
                   <Item floatingLabel>
                     <Label style={styles.inputLabel}>City</Label>
@@ -326,7 +326,7 @@ class ProfileScreen extends Component {
                   </View>
                 </View>
 
-    <View style={{width:'100%',flexDirection:'row'}}>
+                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:10}}>
                   <Item floatingLabel>
                     <Label style={styles.inputLabel}>Zip</Label>
@@ -374,7 +374,7 @@ class ProfileScreen extends Component {
                     <ListItem>
                     <Body>
                         <Text>Waiter</Text>
-                          <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active </Text><Switch value={true} style={styles.switch}/></View>   
+                          <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>   
                     </Body>
                     <Right>
                          <Icon style={{color:'#3E85EF'}} active name="md-more" />
@@ -383,7 +383,7 @@ class ProfileScreen extends Component {
                     <ListItem>
                     <Body>
                         <Text>Painting</Text>
-                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active </Text><Switch value={true} style={styles.switch}/></View>   
+                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>   
                     </Body>
                     <Right>
                          <Icon style={{color:'#3E85EF'}} active name="md-more" />
@@ -392,7 +392,7 @@ class ProfileScreen extends Component {
                     <ListItem>
                     <Body>
                         <Text>Dog Walking</Text>
-                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'#4d4d4d'}}>Satus: Active </Text><Switch value={true} style={styles.switch}/></View>   
+                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>   
                     </Body>
                     <Right>
                          <Icon style={{color:'#3E85EF'}} active name="md-more" />
@@ -516,13 +516,7 @@ const styles = StyleSheet.create({
        fontFamily:'Montserrat-Light'
     },
     inputField: {
-        height: 60,
-        borderRadius:20,
-        backgroundColor: '#F2F2F2',
-        paddingLeft : 15,
-        paddingRight : 15,
-        marginTop: 10,
-        marginBottom: 10
+        marginVertical: 10
     },
     borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
     text: {

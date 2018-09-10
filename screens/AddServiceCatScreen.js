@@ -5,6 +5,8 @@ import { Icon } from 'native-base';
 import * as actions from '../actions';
 import Header from '../components/Header';
 import Advertisement from '../components/Advertisement';
+import SearchBar from '../components/SearchBar';
+import CategoryContainer from '../components/CategoryContainer';
 
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -94,7 +96,9 @@ constructor(){
   }}>
         <View style={styles.container}>
         <View>
-           <View style={{paddingTop:20,paddingBottom:40,paddingLeft:10}}><Text style={styles.logoText}>Add Service</Text></View>
+            <View style={{paddingHorizontal:10,marginVertical:15}}>
+             <SearchBar/>
+           </View>
            <Image style={styles.borderImg} source={require('../images/border_img.png')} resizeMode='contain' resizeMethod='resize'/>
         </View>
         <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}>
@@ -111,12 +115,7 @@ constructor(){
             {
                  popularCategories ? (
                     popularCategories.map((category,key)=>{
-                          return  <View key={key} style={styles.mainBox}>
-                                        <View style={styles.categoryBox}>
-                                               <Image source={category.image} style={{ width: 25, height: 25}} />
-                                        </View>
-                                        <Text style={styles.categoryStyle}>{category.name}</Text>
-                                </View>
+                          return  <CategoryContainer category={category}/>
                     })
                  ) : null
             }
@@ -132,12 +131,7 @@ constructor(){
       {
                  allCategories ? (
                     allCategories.map((category,key)=>{
-                          return  <View key={key} style={styles.mainBox}>
-                                        <View style={styles.categoryBox} >
-                                          <Image source={category.image} style={{ width: 25, height: 25}} />
-                                        </View>
-                                        <Text style={styles.categoryStyle}>{category.name}</Text>
-                                </View>
+                          return  <CategoryContainer category={category}/>
                     })
                  ) : null
             }
@@ -188,28 +182,11 @@ const styles = StyleSheet.create({
       fontWeight:'bold',
       fontSize:17
     },
-    mainBox: {width:90,height:110,marginHorizontal:5,marginVertical:20},
-    categoryBox: {
-        paddingVertical:20,
-        flexDirection:'column',
-        borderRadius:10,
-        width: '100%',
-        height: 90,
-        justifyContent:'center',
-        alignItems:'center',
-        borderWidth:1,
-        borderColor:'rgb(237,237,237)',
-      },
       categoryContainer: {
         flex: 1,
         flexDirection: 'row',
         flexWrap:'wrap',
         justifyContent:'space-around',
-    },
-    categoryStyle: {
-        color:'rgb(82,82,82)',
-        fontSize: 13,
-        textAlign:'center'
     },
     btnText: { 
         textAlign:'center',

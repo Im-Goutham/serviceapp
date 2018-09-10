@@ -1,31 +1,19 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, ActivityIndicator, TouchableOpacity,TouchableHighlight, Image, ScrollView,Platform} from 'react-native';
+import { View, StyleSheet, ActivityIndicator, TouchableOpacity,TouchableHighlight, Image, ScrollView,Platform,Dimensions} from 'react-native';
 import { connect } from 'react-redux';
-import {  Header,Button,Item, Input,Title, Toast, Switch, List, ListItem, Left, Body, Right, Text, Icon, Textarea } from 'native-base';
+import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Text, Icon, Textarea,Label } from 'native-base';
 import ImagePicker  from 'react-native-image-picker';
+import LinearGradient from 'react-native-linear-gradient';
+import Documents from '../components/Documents';
+import Header from '../components/Header';
+
+const { width, height } = Dimensions.get('window');
+const isAndroid = Platform.OS === 'android';
+
+let back_arrow = require('../assets/icons/back-arrow.png');
+let menu = require('../assets/icons/menu.png');
+
 import * as actions from '../actions';
-import Advertisement from '../components/Advertisement';
-
-
-
-const TopHeader = (props) => {
-    return  <Header style={{backgroundColor:'white'}}>
-    <Left style={{flex: 1}}>
-        <Button transparent onPress={() => props.navigation.openDrawer()}>
-          <Icon name='ios-menu' style={{color:'black',fontSize:25}}/>
-        </Button>
-      </Left>
-      <Body style={{flex: 6,alignItems:'flex-start'}}>
-        <Title style={{textAlign:'left',paddingBottom:5}}>{props.title}</Title>
-      </Body>
-     <Right style={{flex: 2,flexDirection:'row'}}>
-          <View style={{flex: 1,alignItems:'flex-end'}}><Icon  name='md-search' style={{color:'black',fontSize:25,fontWeight:'bold'}}/></View>
-          <View style={{flex: 1,alignItems:'flex-end'}}><Icon  name='ios-funnel-outline' style={{color:'black',fontSize:24,fontWeight:'bold'}}/></View>
-     </Right>
-  </Header>
-}
-
-
 
 class PostJobScreen extends Component {
   constructor(props) {
@@ -36,7 +24,56 @@ class PostJobScreen extends Component {
         error: null,
         loading: false,  
         avatarSource: null,
-        videoSource: null};
+        videoSource: null,
+        certificates: [
+            {
+                name: 'certificate1.jpg',
+                image: require('../images/documents/cert1.png')
+            },
+            {
+              name: 'certificate2.jpg',
+              image: require('../images/documents/cert2.png')
+            }
+        ],
+        works: [
+              {
+                name: 'work1.jpg',
+                image: require('../images/documents/work1.png')
+             },
+            {
+              name: 'work2.jpg',
+              image: require('../images/documents/work2.png')
+             }
+        ],
+        ids: [
+              {
+                name: 'id1.jpg',
+                image: require('../images/documents/id1.png')
+              }
+          ],
+         videos: [
+            {
+              name: 'video1.jpg',
+              image: require('../images/documents/video1.png')
+            },
+            {
+              name: 'video2.jpg',
+              image: require('../images/documents/video2.png')
+            }
+        ], 
+        websites: [
+          {
+            name: 'video1.jpg',
+            image: require('../images/documents/website1.png')
+          },
+        ], 
+        profiles: [
+            {
+              name: 'profile1.jpg',
+              image: require('../images/documents/profile1.png')
+            },
+          ], 
+      };
     this.focusNextField = this.focusNextField.bind(this);
     this.inputs = {};
   }
@@ -131,346 +168,377 @@ class PostJobScreen extends Component {
 
 
     render() {
-      let {avatarSource} = this.state;  
+      let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;  
       return ( 
-        <View style={styles.container}>
-        <TopHeader navigation={this.props.navigation} title={'Post a Job'}/>
-        <Advertisement/>
-        <ScrollView> 
-        <View style={{marginTop:20,padding:10}}>
-             <Text style={{fontSize:16,fontWeight:'bold',paddingVertical:5}}>Select Category</Text>
-             <Text style={{fontSize:12,paddingVertical:10}}>Home Exterior</Text>
-        </View>
-        <View style={styles.inputContainer}>
-        <View style={{marginBottom:20}}>
-             <Text style={{fontSize:16,fontWeight:'bold',paddingVertical:5}}>Enter Job Address</Text>
-             <Text style={{fontSize:12,paddingVertical:5}}>(It will show only once the job is Booked or Scheduled)</Text>
-        </View>
-        <Text style={styles.inputLabel}>SELECT JOB ADDRESS</Text>
-        <Item>
-              <Input
-                  style={styles.inputField}
-                  value={this.state.address}
-                  autoCapitalize='none'
-                  onSubmitEditing={() => {
-                    this.focusNextField('country');
-                  }}
-                  returnKeyType={ "next" }
-                  ref={ input => {
-                    this.inputs['address'] = input;
-                  }}
-                  onChangeText={address => this.setState({ address })}
-                  />
-            </Item>
-            <Text style={styles.inputLabel}>COUNTRY</Text>
-            <Item>
-              <Input
-                  style={styles.inputField}
-                  value={this.state.country}
-                  autoCapitalize='none'
-                  secureTextEntry={false}
-                  onSubmitEditing={() => {
-                     this.focusNextField('city');
-                  }}
-                  returnKeyType={ "next" }
-                  ref={ input => {
-                    this.inputs['country'] = input;
-                  }}
-                  onChangeText={country => this.setState({ country })}
-                  />
-            </Item>
-            <View style={{flex:1,flexDirection:'row'}}>
-                 <View style={{flex:1}}>
-                 <Text style={styles.inputLabel}>CITY</Text>
-                        <Item>
-                        <Input
-                            style={styles.inputField}
-                            value={this.state.city}
-                            autoCapitalize='none'
-                            secureTextEntry={false}
-                            onSubmitEditing={() => {
-                                this.focusNextField('zip');
-                            }}
-                            returnKeyType={ "next" }
-                            ref={ input => {
-                                this.inputs['city'] = input;
-                            }}
-                            onChangeText={dob => this.setState({ city })}
-                            />
-                        </Item>
-                 </View>    
-                 <View style={{flex:1}}>
-                  <Text style={styles.inputLabel}>ZIP CODE</Text>
-                    <Item>
+        <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
+              <Header
+              navigation={this.props.navigation}
+              left = {
+                <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                <Image source={back_arrow} style={{ width: '50%', height: 25}} resizeMode="contain" resizeMethod="resize"/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                <Image source={menu} style={{ width: '50%', height: 25}} resizeMode="contain" resizeMethod="resize"/>
+                </TouchableOpacity>
+                </View>
+              }
+              title={
+                <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"50%", height:54}}>
+                    <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Post a Job</Text>
+                </View>
+              }
+              right={
+                <View></View>
+              }
+              />
+                   <ScrollView contentContainerStyle={{
+          justifyContent: 'space-between'
+        }}>
+              <View style={styles.container}>   
+              <View style={{position:'relative'}}>
+                 <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
+              </View>  
+              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}> 
+                <View style={{justifyContent:'space-between'}}>
+                <View style={{flexDirection:'row',marginVertical:10}}>
+                  <View style={{flex:1,flexDirection:'column',alignItems:'flex-start'}}>
+                        <Text style={{}}>Select a Category</Text>
+                        <Text style={[styles.inputLabel,{fontSize:13,marginVertical:5}]}>Home Exterior</Text>
+                   </View>
+                   <View style={{flex:1,alignItems:'flex-end'}}>
+                        <Icon name='ios-arrow-forward' style={{fontSize: 18,fontFamily:'Montserrat-Light'}}/>
+                    </View>
+                </View>
+                <View style={{flexDirection:'row',marginVertical:10}}>
+                  <View style={{flex:1}}>
+                        <Text>Enter Job Address</Text>
+                        <Text style={[styles.inputLabel,{fontSize:13,marginVertical:5}]}>It will show only the job is Booked or Scheduled</Text>
+                   </View>
+                </View>
+                <View style={styles.inputField}>
+                <Item floatingLabel>
+                  <Label style={styles.inputLabel}>Street Address</Label>
+                  <Input
+                      value={this.state.username}
+                      autoCapitalize='none'
+                      onSubmitEditing={() => {
+                        this.focusNextField('password');
+                      }}
+                      returnKeyType={ "next" }
+                      ref={ input => {
+                        this.inputs['username'] = input;
+                      }}
+                      onChangeText={username => this.setState({ username })}
+                      />
+                 </Item>
+                </View>
+                <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
+                  <View style={{width:'50%',paddingRight:10}}>
+                  <Item floatingLabel>
+                    <Label style={styles.inputLabel}>City</Label>
                     <Input
-                        style={styles.inputField}
-                        value={this.state.zip}
+                        value={this.state.city}
                         autoCapitalize='none'
-                        secureTextEntry={false}
                         onSubmitEditing={() => {
-                            this.focusNextField('zip');
+                          this.focusNextField('password');
                         }}
                         returnKeyType={ "next" }
                         ref={ input => {
-                            this.inputs['zip'] = input;
+                          this.inputs['city'] = input;
                         }}
-                        onChangeText={address => this.setState({ zip })}
+                        onChangeText={city => this.setState({ city })}
                         />
-                    </Item> 
-                 </View>   
-                  
+                  </Item>
+                  </View>
+                  <View style={{width:'50%',paddingLeft:10}}>
+                  <Item floatingLabel>
+                  <Label style={styles.inputLabel}>State</Label>
+                  <Input
+                      value={this.state.state}
+                      autoCapitalize='none'
+                      onSubmitEditing={() => {
+                        this.focusNextField('password');
+                      }}
+                      returnKeyType={ "next" }
+                      ref={ input => {
+                        this.inputs['state'] = input;
+                      }}
+                      onChangeText={state => this.setState({ state })}
+                      />
+                 </Item>
+                  </View>
+                </View>
+
+
+                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
+                  <View style={{width:'50%',paddingRight:10}}>
+                  <Item floatingLabel>
+                    <Label style={styles.inputLabel}>Zip Code</Label>
+                    <Input
+                        value={this.state.city}
+                        autoCapitalize='none'
+                        onSubmitEditing={() => {
+                          this.focusNextField('password');
+                        }}
+                        returnKeyType={ "next" }
+                        ref={ input => {
+                          this.inputs['city'] = input;
+                        }}
+                        onChangeText={city => this.setState({ city })}
+                        />
+                  </Item>
+                  </View>
+                  <View style={{width:'50%',paddingLeft:10}}>
+                  <Item floatingLabel>
+                  <Label style={styles.inputLabel}>Country</Label>
+                  <Input
+                      value={this.state.state}
+                      autoCapitalize='none'
+                      onSubmitEditing={() => {
+                        this.focusNextField('password');
+                      }}
+                      returnKeyType={ "next" }
+                      ref={ input => {
+                        this.inputs['state'] = input;
+                      }}
+                      onChangeText={state => this.setState({ state })}
+                      />
+                 </Item>
+                  </View>
+                </View>
+                <Text style={{marginVertical:10}}>Enter Job Basic Details</Text>
+                <View style={styles.inputField}>
+                <Item floatingLabel>
+                  <Label style={styles.inputLabel}>Job Title</Label>
+                  <Input
+                      value={this.state.username}
+                      autoCapitalize='none'
+                      onSubmitEditing={() => {
+                        this.focusNextField('password');
+                      }}
+                      returnKeyType={ "next" }
+                      ref={ input => {
+                        this.inputs['username'] = input;
+                      }}
+                      onChangeText={username => this.setState({ username })}
+                      />
+                 </Item>
+                </View>
+                <View style={styles.inputField}>
+                <Item floatingLabel>
+                  <Label style={styles.inputLabel}>Job Description</Label>
+                  <Input
+                      value={this.state.username}
+                      autoCapitalize='none'
+                      onSubmitEditing={() => {
+                        this.focusNextField('password');
+                      }}
+                      returnKeyType={ "next" }
+                      ref={ input => {
+                        this.inputs['username'] = input;
+                      }}
+                      onChangeText={username => this.setState({ username })}
+                      />
+                 </Item>
+                </View>
+                <View style={styles.inputField}>
+                <Item floatingLabel>
+                  <Label style={styles.inputLabel}>Budget</Label>
+                  <Input
+                      value={this.state.username}
+                      autoCapitalize='none'
+                      onSubmitEditing={() => {
+                        this.focusNextField('password');
+                      }}
+                      returnKeyType={ "next" }
+                      ref={ input => {
+                        this.inputs['username'] = input;
+                      }}
+                      onChangeText={username => this.setState({ username })}
+                      />
+                 </Item>
+                </View>
+                <Text style={{marginVertical:10}}>Set Dates</Text>
+                <View style={styles.inputField}>
+                <Item floatingLabel>
+                  <Label style={styles.inputLabel}>Need to be done before</Label>
+                  <Input
+                      value={this.state.username}
+                      autoCapitalize='none'
+                      onSubmitEditing={() => {
+                        this.focusNextField('password');
+                      }}
+                      returnKeyType={ "next" }
+                      ref={ input => {
+                        this.inputs['username'] = input;
+                      }}
+                      onChangeText={username => this.setState({ username })}
+                      />
+                 </Item>
+                </View>
+                <View style={styles.inputField}>
+                <Item floatingLabel>
+                  <Label style={styles.inputLabel}>Expiry Date & Time</Label>
+                  <Input
+                      value={this.state.username}
+                      autoCapitalize='none'
+                      onSubmitEditing={() => {
+                        this.focusNextField('password');
+                      }}
+                      returnKeyType={ "next" }
+                      ref={ input => {
+                        this.inputs['username'] = input;
+                      }}
+                      onChangeText={username => this.setState({ username })}
+                      />
+                 </Item>
+                </View>
+                
+    
+
+
+              {/* Upload Pics starts here */ }
+             <View style={styles.servicesBox}>
+                <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
+                    <Text style={styles.textStyle}>Upload Pics</Text>
+                </View>  
+                <View style={{flexDirection: 'row',alignItems:'center'}}>
+                   <Documents  documents={works}/>
+                </View> 
+             </View>   
+              {/* Upload Pics ends here */}
+
+           {/* Upload Video starts here */ }
+           <View style={styles.servicesBox}>
+                <View style={{marginVertical:20}}>
+                    <Text style={styles.textStyle}>Add Video Link</Text>
+                </View>  
+                <View style={{flexDirection: 'row',alignItems:'center'}}>
+                   <Documents documents={videos}/>
+                </View> 
+             </View>   
+              {/* Upload Video ends here */}
+
+            <View style={{justifyContent: "center" ,flexDirection:'row',marginBottom:20,marginTop:10}}>
+            <View style={{flex:1,paddingRight:10}}>
+                <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#CCCCCC', '#F2F2F2']} style={styles.button}>
+                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>CANCEL</Text></TouchableOpacity>
+                </LinearGradient>
             </View>
-         
-            
-            <View style={styles.inputContainer}>
-               <Text style={styles.inputLabel}>JOB TITLE</Text>
-                    <Item>
-                    <Input
-                        style={styles.inputField}
-                        value={this.state.title}
-                        autoCapitalize='none'
-                        secureTextEntry={false}
-                        onSubmitEditing={() => {
-                            this.focusNextField('description');
-                        }}
-                        returnKeyType={ "next" }
-                        ref={ input => {
-                            this.inputs['title'] = input;
-                        }}
-                        onChangeText={title => this.setState({ title })}
-                        />
-                    </Item> 
-                 <Text style={styles.inputLabel}>JOB DESCRIPTION</Text>
-                <Item>
-                    <Textarea
-                        style={styles.textAreaField}
-                        value={this.state.description}
-                        autoCapitalize='none'
-                        rowSpan={4}
-                        onSubmitEditing={() => {
-                            this.focusNextField('budget');
-                        }}
-                        returnKeyType={ "next" }
-                        ref={ input => {
-                            this.inputs['description'] = input;
-                        }}
-                        onChangeText={description => this.setState({ description })}
-                        />
-                    </Item>
-                    <Text style={styles.inputLabel}>BUDGET</Text>
-                    <Item>
-                    <Input
-                        style={styles.inputField}
-                        value={this.state.budget}
-                        autoCapitalize='none'
-                        secureTextEntry={false}
-                        onSubmitEditing={() => {
-                            this.focusNextField('beforeDate');
-                        }}
-                        returnKeyType={ "next" }
-                        ref={ input => {
-                            this.inputs['budget'] = input;
-                        }}
-                        onChangeText={budget => this.setState({ budget })}
-                        />
-                    </Item> 
-                    <Text style={styles.inputLabel}>NEED TO BE DONE BEFORE</Text>
-                    <Item>
-                    <Input
-                        style={styles.inputField}
-                        value={this.state.beforeDate}
-                        autoCapitalize='none'
-                        secureTextEntry={false}
-                        onSubmitEditing={() => {
-                            this.focusNextField('expiryDate');
-                        }}
-                        returnKeyType={ "next" }
-                        ref={ input => {
-                            this.inputs['beforeDate'] = input;
-                        }}
-                        onChangeText={beforeDate => this.setState({ beforeDate })}
-                        />
-                    </Item> 
-                    <Text style={styles.inputLabel}>EXPIRY DATE AND TIME</Text>
-                    <Item>
-                    <Input
-                        style={styles.inputField}
-                        value={this.state.expiryDate}
-                        autoCapitalize='none'
-                        secureTextEntry={false}
-                        onSubmitEditing={() => {
-                            this.handleSubmit();
-                        }}
-                        returnKeyType={ "next" }
-                        ref={ input => {
-                            this.inputs['expiryDate'] = input;
-                        }}
-                        onChangeText={expiryDate => this.setState({ expiryDate })}
-                        />
-                    </Item>
-             </View>
-  
-              {/* Upload Pics of work starts here */ } 
-              <View style={{flex:1,marginTop:10,marginBottom:10}}>
-            <View style={{flexDirection: 'row',alignItems:'center',padding:10}}>
-                 <Text style={{fontWeight:'bold'}}>Upload Pics</Text><Icon style={styles.plus} active name="md-add" />
-            </View>  
-            <View style={{flexDirection: 'row',alignItems:'center'}}>
-            <ScrollView
-              horizontal={true}
-              showsHorizontalScrollIndicator={false}
-              >
-                 <View style={{flexDirection:'column',width:100}}>
-                    <View style={styles.imgsView}>
-                     <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
-                     <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                     <Text style={{paddingTop:5,paddingBottom:5}}>01.jpeg</Text>
-                     </View> 
-                 </View>   
-                 <View style={{flexDirection:'column',width:100}}>
-                    <View style={styles.imgsView}>
-                     <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
-                     <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                     <Text style={{paddingTop:5,paddingBottom:5}}>02.jpeg</Text>
-                     </View> 
-                 </View> 
-                 <View style={{flexDirection:'column',width:100}}>
-                    <View style={styles.imgsView}>
-                     <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
-                     <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                     <Text style={{paddingTop:5,paddingBottom:5}}>03.jpeg</Text>
-                    </View> 
-                 </View> 
-                 <View style={{flexDirection:'column',width:100}}>
-                    <View style={styles.imgsView}>
-                     <Image source={require('../images/img_placeholder.png')} style={styles.img_placeholder}/>
-                     <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                     <Text style={{paddingTop:5,paddingBottom:5}}>04.jpeg</Text>
-                    </View> 
-                 </View> 
-              </ScrollView>   
-            </View> 
-         </View> 
-              {/* Upload Pics of work ends here */ } 
-              {/* Upload Video link starts here */}
-              <View style={{flex:1,marginTop:10,marginBottom:10}}>
-            <View style={{flexDirection: 'row',alignItems:'center',padding:10}}>
-                 <Text style={{fontWeight:'bold'}}>Add video link</Text><Icon style={styles.plus} active name="md-add" />
-            </View>  
-            <View >
-            <List style={{paddingTop:20,paddingBottom:20}}>
-                    <ListItem avatar>
-                    <Left>
-                        <Image style={{width:80,height:60}} source={require('../images/img_placeholder.png')} />
-                    </Left>
-                    <Body>
-                        <Text style={{color:'#3399ff'}}>https://www.youtube.com/watch?v=1tIBMiuWaOg</Text>
-                    </Body>
-                    <Right>
-                         <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                    </Right>
-                    </ListItem>
-                </List>
-            </View> 
-           </View> 
-             {/* Upload Video link ends here */}
-             <View style={{justifyContent: "center" }}>
-               <TouchableOpacity style={[styles.button,{backgroundColor:'white',borderColor:'grey'}]} onPress={() => this.handleSubmit()}><Text style={[styles.btnText,{color:'grey'}]}>CANCEL</Text></TouchableOpacity>
-           </View>
-            <View style={{justifyContent: "center" }}>
-                {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
-               <TouchableOpacity style={styles.button} onPress={() => this.handleSubmit()}><Text style={styles.btnText}>POST A JOB</Text></TouchableOpacity>
-                }
-           </View>
-        </View>  
-        </ScrollView> 
-        </View>
+            <View style={{flex:1,paddingLeft:10}}>
+                <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
+                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>SIGN UP</Text></TouchableOpacity>
+                </LinearGradient>
+            </View>   
+            </View>
+                </View>
+              </View>
+               </View>
+               </ScrollView>
+               </LinearGradient>
       );
     }
 }
 
 
 const styles = StyleSheet.create({
-        container: {
-          backgroundColor: 'white',
-          paddingBottom: Platform.OS === 'ios' ? 120 : 0, 
-          padding:5
-      },
-      img_placeholder: {
-        width: 90,
-        height: 90,
-        position: 'relative',
-		top: 0,
-		left: 0
-      },
-      close_img: {
-        width: 18,
-        height: 18,
-        borderRadius:9,
-        position: 'absolute',
-		top: 14,
-		right: 4
-      },
-      inputContainer: {
-          justifyContent: 'center',
-          padding: 10
-      },
-      inputLabel: {
-         textAlign:'left',
-         fontSize: 12
-      },
-      textAreaField: {
-        width:'100%',
-        borderRadius:20,
-        backgroundColor: '#F2F2F2',
-        padding:15,
-        marginTop: 10,
-        marginBottom: 10
-      },
-      inputField: {
-          height: 40,
-          borderRadius:20,
-          backgroundColor: '#F2F2F2',
-          paddingLeft : 15,
-          paddingRight : 15,
-          marginTop: 10,
-          marginBottom: 10
-      },
-      text: {
-        marginBottom: 15,
-        marginTop: 15,
-        fontSize: 15,
-        textAlign: 'center',
-      },
-      button:{
-        backgroundColor:'#007FFA',
-        width: '100%',
-        borderRadius:20,
-        borderWidth: 1,
-        borderColor: '#fff',
-        paddingTop:10,
-        paddingBottom:10,
-        marginTop: 5,
-        marginBottom: 5
+    container: {
+        flex: 1,
+        justifyContent: 'space-between',
+        marginTop:40
     },
-    btnText: { 
-        textAlign:'center',
-        color:'white',
-        fontWeight:'bold'
+    logoText: {
+      color:'white',
+      textAlign:'left',
+      fontSize:35,
+      fontWeight:'bold'
     },
-    plus: {
-        color:'#3399ff',
-        paddingLeft:10,
-        fontSize:20,
-        fontWeight: 'bold'
+    inputLabel: {
+       textAlign:'left',
+       fontSize: 16,
+       fontFamily:'Montserrat-Light'
+    },
+    inputField: {
+        marginVertical: 10
+    },
+    borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
+    text: {
+      marginBottom: 15,
+      marginTop: 15,
+      fontSize: 15,
+      textAlign: 'center',
+    },
+    button:{
+      backgroundColor:'#4A4A4A',
+      width: '100%',
+      borderRadius:30,
+      borderWidth: 1,
+      borderColor: '#fff',
+      marginTop:10,
+      paddingTop:16,
+      paddingBottom:16,
+  },
+  btnText: { 
+      textAlign:'center',
+      color:'white',
+      fontSize: 16,
+      fontWeight:'bold'
+  },
+    socialBox:{
+      flexDirection:'row',
+      backgroundColor:'white',
+      borderRadius:20,
+      elevation: 3,
+    },
+    logoContainer: {
+      flex:1,
+      justifyContent: 'center',
+      alignItems: 'center'
     },
     imgsView: {
-        flex: 1,
-        padding:10,
-        position: 'relative',
-        top: 0,
-        left: 0
-    }
+      flex: 1,
+      padding:10,
+      position: 'relative',
+      top: 0,
+      left: 0
+    },
+    user_placeholder: {
+      paddingTop:20,
+      width: 140,
+      height: 140,
+      borderRadius:70,
+      justifyContent:'center',
+      alignItems:'center',
+    },
+    camera_icon: {
+      width: 40,
+      height: 40,
+      borderRadius:20,
+      position: 'absolute',
+      bottom: 10,
+      right: 10,
+      justifyContent:'center',
+      alignItems:'center',
+    },
+ servicesBox: {
+    flex: 1,
+    marginVertical: 20,
+    paddingVertical: 25,
+    paddingHorizontal:20,
+    borderRadius:10,
+    backgroundColor:'white',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 1,
+},
+textStyle: {
+  fontFamily:"Montserrat-Bold",
+  fontWeight:'bold'
+}
+
+      
 })
 
 export default connect(null, actions)(PostJobScreen);
