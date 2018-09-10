@@ -2,7 +2,6 @@ import {DrawerNavigator} from 'react-navigation';
 
 
 import SideMenu from '../components/SideMenu';
-
 import HomeScreen from '../screens/HomeScreen';
 import FindJobsScreen from '../screens/FindJobsScreen';
 import PostJobScreen from '../screens/PostJobScreen';
