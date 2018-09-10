@@ -187,7 +187,7 @@ class FindJobScreen extends Component {
                {this.tabrender()}
              </View>
              <View style={{}}>
-               <Image source={border_img} style={{ width: '100%', height: 34}} resizeMode="contain" resizeMethod="resize"/>
+               <Image source={border_img} style={{ width: '100%', height: 31}} resizeMode="contain" resizeMethod="resize"/>
              </View>
            </View>
            <View style={{backgroundColor :"rgb(249,252, 255)", flex:0.8}}>

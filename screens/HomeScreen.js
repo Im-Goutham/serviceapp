@@ -20,55 +20,90 @@ constructor(){
      super();
      this.state = {
           categories: [
-            {name:'Repair',image: require('../assets/icons/home_interior.png')},
-            {name:'Wallpaper',image: require('../assets/icons/home_exterior.png')},
-            {name:'Flooring',image: require('../assets/icons/landscaping.png')},
-            {name:'Watering',image: require('../assets/icons/handyman.png')},
-            {name:'Electrician',image: require('../assets/icons/electrician.png')},
-            {name:'Pluming',image: require('../assets/icons/plumbing.png')},
+            {name:'Repair',image: require('../images/cat1.png')},
+            {name:'Wallpaper',image: require('../images/cat2.png')},
+            {name:'Wallpaper',image: require('../images/cat3.png')},
+            {name:'Flooring',image: require('../images/cat4.png')},
+            {name:'Watering',image: require('../images/cat1.png')},
+            {name:'Electrician',image: require('../images/cat2.png')},
+            {name:'Pluming',image: require('../images/cat3.png')},
           ],
-          allCategories: [
-            {name:'Home Interior',image: require('../assets/icons/home_interior.png')},
-            {name:'Home Exterior',image: require('../assets/icons/home_exterior.png')},
-            {name:'Landscaping',image: require('../assets/icons/landscaping.png')},
-            {name:'Handyman',image: require('../assets/icons/handyman.png')},
-            {name:'Electrician',image: require('../assets/icons/electrician.png')},
-            {name:'Pluming',image: require('../assets/icons/plumbing.png')},
-            {name:'Painting',image: require('../assets/icons/painting.png')},
-            {name:'Appliance repair',image: require('../assets/icons/appliance.png')},
-            {name:'Mounting & installing',image: require('../assets/icons/mounting.png')},
-            {name:'Future Assembly',image: require('../assets/icons/furniture.png')},
-            {name:'Cars & Vehicles',image: require('../assets/icons/cars.png')},
-            {name:'Cleaning & Housework',image: require('../assets/icons/cleaning.png')},
-            {name:'Moving / Delivery',image: require('../assets/icons/delivery.png')},
-            {name:'Moving / Delivery',image: require('../assets/icons/delivery.png')},
-            {name:'Beauty',image: require('../assets/icons/beauty.png')},
-            {name:'Relaxation',image: require('../assets/icons/relaxation.png')},
-            {name:'Babysitting',image: require('../assets/icons/babysitting.png')},
-            {name:'Pest Control',image: require('../assets/icons/pestcontrol.png')},
-            {name:'Adult Care',image: require('../assets/icons/adultcare.png')},
-            {name:'Pet Care',image: require('../assets/icons/petcare.png')},
-            {name:'Carpool',image: require('../assets/icons/carpool.png')},
-            {name:'Tutoring',image: require('../assets/icons/tutoring.png')},
-            {name:'Tech & Computers',image: require('../assets/icons/tech.png')},
-            {name:'Document Services',image: require('../assets/icons/document.png')},
-            {name:'Running Errands',image: require('../assets/icons/running.png')},
-            {name:'Shopping',image: require('../assets/icons/shopping.png')},
-            {name:'Decor',image: require('../assets/icons/decor.png')},
-            {name:'Fitness',image: require('../assets/icons/fitness.png')},
-            {name:'Music & Dance',image: require('../assets/icons/music.png')},
-            {name:'photo & Video',image: require('../assets/icons/photo.png')},
-            {name:'Food',image: require('../assets/icons/food.png')},
-            {name:'Wine & Gastronomy',image: require('../assets/icons/wine.png')},
-            {name:'Private Chef',image: require('../assets/icons/chef.png')},
-            {name:'Concierge',image: require('../assets/icons/concierge.png')},
-            {name:'Event Planning',image: require('../assets/icons/event.png')},
-            {name:'Other',image: require('../assets/icons/other.png')},
+          serviceProviders: [
+            {name:'Clayton',image: require('../images/svp1.png')},
+            {name:'Luis',image: require('../images/svp2.png')},
+            {name:'George',image: require('../images/svp3.png')},
+            {name:'Billy',image: require('../images/svp1.png')},
+            {name:'George',image: require('../images/svp1.png')},
+            {name:'Luis',image: require('../images/svp2.png')},
+            {name:'Clayton',image: require('../images/svp3.png')},
+          ],
+
+          screens: [
+            {
+              title : "Find Jobs",
+              iconname : require('../assets/icons/search.png'),
+              routename : "findJobs"
+            },
+            {
+              title : "Post Job",
+              iconname : require('../assets/icons/post.png'),
+              routename : "postJob"
+            },
+            {
+              title : "Find Help",
+              iconname : require('../assets/icons/help.png'),
+              routename : "findHelp"
+            },
+            {
+              title : "My Jobs",
+              iconname : require('../assets/icons/list.png'),
+              routename : "myJobs"
+            },
+            {
+              title : "Favourites",
+              iconname : require('../assets/icons/heart.png'),
+              routename : "favourites"
+            },
+            {
+              title : "Notifications",
+              iconname : require('../assets/icons/bell.png'),
+              routename : "notifications"
+            },
+            {
+              title : "Chats",
+              iconname : require('../assets/icons/chat.png'),
+              routename : "chats"
+            },
+            {
+              title : "My Requests",
+              iconname : require('../assets/icons/navigation.png'),
+              routename : "myRequests"
+            },
+            {
+              title : "Track Now",
+              iconname : require('../assets/icons/location.png'),
+              routename : "trackNow"
+            },
+            {
+              title : "My Account",
+              iconname : require('../assets/icons/account.png'),
+              routename : "account"
+            },
+            {
+              title : "Subscription",
+              iconname : require('../assets/icons/subscribe.png'),
+              routename : "subscription"
+            },
+            {
+              title : "Settings",
+              iconname : require('../assets/icons/settings.png'),
+              routename : "settings"
+            }
        ]
      }
 }
     render() {
-        let {popularCategories, allCategories} = this.state;
+        let {categories, serviceProviders, screens} = this.state;
       return (
         <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
           <Header
@@ -105,57 +140,105 @@ constructor(){
         </View>
         <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}>
 
+      <View style={styles.servicesBox}>
+        <View style={styles.categoryContainer}>
+        {
+                  screens ? (
+                      screens.map((screen,key)=>{
+                            return    <View style={styles.mainBox}>
+                            <View style={styles.mainCategoryBox}>
+                                  <Image source={screen.iconname} style={{ width: 35, height: 35}} resizeMode='contain' resizeMethod='resize' />
+                            </View>
+                            <Text style={styles.categoryStyle}>{screen.title}</Text>
+                          </View>  
+                      })
+                  ) : null
+              }
+        </View>
+      </View>
+
 
         <View style={styles.servicesBox}>
-            <View style={{flexDirection:'row',marginVertical:20}}>
+            <View style={{flexDirection:'row',justifyContent:'space-between'}}>
                 <Text style={styles.textStyle}>Home Interiors</Text>
-                <Text style={{fontSize:13,marginVertical:10,fontFamily:'Montserrat-Light'}}>VIEW ALL</Text>
+                <Text style={{fontSize:11,color:'#3E85EF',fontFamily:'Montserrat-Light'}}>VIEW ALL</Text>
             </View>  
-            <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center'}}>
+            <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
             <ScrollView
             horizontal={true}
             showsHorizontalScrollIndicator={false}
             >
-               {/*
+               {
                  categories ? (
                     categories.map((category,key)=>{
                           return  <View style={styles.categoryBox} key={key}>
-                                        <View>
-                                        <Image source={category.image} style={styles.img_placeholder}/>
-                                        <Text style={{paddingTop:5,paddingBottom:5}}>{category.name}</Text>
-                                        </View> 
-                                 </View> 
+                                      <View style={styles.imageShadow}>
+                                      <Image source={category.image} style={styles.img_placeholder}/>
+                                      </View>
+                                      <Text style={{paddingVertical:10,color:'#4A4A4A'}}>{category.name}</Text>
+                                </View> 
                     })
                  ) : null
-                */}
+                }
             </ScrollView>
             </View> 
         </View>   
 
 
-      <View style={styles.servicesBox}>
-      <View style={{marginVertical:20}}>
-          <Text style={styles.textStyle}>All Categories</Text>
-      </View>
-      <View style={styles.categoryContainer}>
-      {
-                 allCategories ? (
-                    allCategories.map((category,key)=>{
-                          return  <CategoryContainer category={category}/>
+        <View style={styles.servicesBox}>
+            <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                <Text style={styles.textStyle}>See other Service Providers</Text>
+                <Text style={{fontSize:11,color:'#3E85EF',fontFamily:'Montserrat-Light'}}>VIEW ALL</Text>
+            </View>  
+            <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
+            <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            >
+               {
+                 serviceProviders ? (
+                  serviceProviders.map((provider,key)=>{
+                          return  <View style={styles.categoryBox} key={key}>
+                                      <View style={styles.imageShadow}>
+                                      <Image source={provider.image} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
+                                      <Image source={require('../images/check.png')} style={styles.check}/>
+                                      </View>
+                                      <Text style={{paddingVertical:10,color:'#4A4A4A'}}>{provider.name}</Text>
+                                </View> 
                     })
                  ) : null
-            }
-      </View>
-      </View>
+                }
+            </ScrollView>
+            </View> 
+        </View>  
 
 
-
-
+        <View style={styles.servicesBox}>
+            <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                <Text style={styles.textStyle}>Cars and Vehicles</Text>
+                <Text style={{fontSize:11,color:'#3E85EF',fontFamily:'Montserrat-Light'}}>VIEW ALL</Text>
+            </View>  
+            <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
+            <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            >
+               {
+                 categories ? (
+                    categories.map((category,key)=>{
+                          return  <View style={styles.categoryBox} key={key}>
+                                      <View style={styles.imageShadow}>
+                                      <Image source={category.image} style={styles.img_placeholder}/>
+                                      </View>
+                                      <Text style={{paddingVertical:10,color:'#4A4A4A'}}>{category.name}</Text>
+                                </View> 
+                    })
+                 ) : null
+                }
+            </ScrollView>
+            </View> 
+        </View>  
         </View>
-   
-         </View>
-        <View style={{marginVertical: 30}}>
-         <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceSubCatScreen')}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
          </View>
          </ScrollView>
          </LinearGradient>
@@ -180,6 +263,7 @@ const styles = StyleSheet.create({
         flex: 1,
         marginVertical: 20,
         paddingHorizontal:20,
+        paddingVertical:20,
         borderRadius:10,
         backgroundColor:'white',
         shadowOffset: { width: 0, height: 2 },
@@ -188,8 +272,7 @@ const styles = StyleSheet.create({
         elevation: 1,
     },
     textStyle: {
-      fontFamily:"Montserrat-Bold",
-      fontWeight:'bold',
+      fontFamily:"Montserrat-SemiBold",
       fontSize:17
     },
       categoryContainer: {
@@ -207,19 +290,43 @@ const styles = StyleSheet.create({
     categoryBox: {
         flexDirection:'column',
         width:100,
+      },
+      imageShadow: {
         shadowOffset: { width: 0, height: 3 },
         shadowOpacity: 0.3,
         shadowRadius: 2,
         elevation: 2,
       },
       img_placeholder: {
-        width: 90,
-        height: 90,
+        width: 80,
+        height: 80,
         borderRadius:5,
         position: 'relative',
-		top: 0,
-		left: 0
-      }
+        top: 0,
+        left: 0
+      },
+      check: {
+        width: 18,
+        height: 18,
+        borderRadius:9,
+        position: 'absolute',
+        bottom: 0,
+        left: 0
+      },
+      mainBox: {width:90,height:110,marginHorizontal:5,marginVertical:20},
+      categoryStyle: {
+        color:'rgb(82,82,82)',
+        fontSize: 13,
+        textAlign:'center'
+    },
+    mainCategoryBox: {
+      paddingVertical:10,
+      flexDirection:'column',
+      width: '100%',
+      height: 70,
+      justifyContent:'center',
+      alignItems:'center',
+    },
 
 })
 

@@ -19,14 +19,6 @@ class CategoryContainer extends Component {
 
 
 const styles = StyleSheet.create({
-    inputBox: {
-        backgroundColor:'white',
-        borderRadius:10,
-        paddingHorizontal:15,
-    },
-    inputField: {
-     
-    },
     mainBox: {width:90,height:110,marginHorizontal:5,marginVertical:20},
     categoryBox: {
       paddingVertical:20,
