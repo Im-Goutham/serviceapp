@@ -1,9 +1,9 @@
-import {DrawerNavigator} from 'react-navigation';
+import {DrawerNavigator,StackNavigator} from 'react-navigation';
 
 
 import SideMenu from '../components/SideMenu';
 import HomeScreen from '../screens/HomeScreen';
-import FindJobsScreen from '../screens/FindJobsScreen';
+import FindJobsStackNavigator from './FindJobsStackNavigator';
 import PostJobScreen from '../screens/PostJobScreen';
 import FindHelpScreen from '../screens/FindHelpScreen';
 import MyJobsScreen from '../screens/MyJobsScreen';
@@ -24,7 +24,7 @@ export default DrawerNavigator({
         screen: HomeScreen
      },
     findJobs: {
-       screen: FindJobsScreen
+       screen: FindJobsStackNavigator
     },
     postJob: {
        screen: PostJobScreen
@@ -64,3 +64,6 @@ export default DrawerNavigator({
     contentComponent: SideMenu,
     drawerWidth: 300
 });
+
+
+
