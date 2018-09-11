@@ -1,308 +1,236 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Platform, KeyboardAvoidingView } from 'react-native';
-import { Icon } from 'native-base';
-import {GiftedChat, Actions, Bubble, SystemMessage} from 'react-native-gifted-chat';
-import SocketIOClient from 'socket.io-client';
+import {
+    View,
+    StyleSheet,
+    ScrollView,
+    Image,
+    TouchableOpacity,
+    Dimensions,
+    Platform,
+    Text, TouchableHighlight
+} from 'react-native';
+ import {  Icon } from 'native-base'
+import Advertisement from '../components/Advertisement';
+import ChatList from '../components/ChatList';
+import Map from '../components/Map';
 import Header from '../components/Header';
-import CustomActions from '../components/CustomActions';
-import CustomView from '../components/CustomView';
+import Modal from 'react-native-modalbox';
+import LinearGradient from 'react-native-linear-gradient';
 
+// import Icon from 'react-native-vector-icons/EvilIcons';
 
+import HeaderScreen from './HeaderScreen';
+import SearchBar from '../components/SearchBar';
+
+var {height, width} = Dimensions.get('window');
+let tabItems = ["List View", "Map View"];
+
+let logo = require('../images/logo.png');
+let menu = require('../assets/icons/menu.png');
+let border_img = require('../images/border_img.png');
+
+let maplocations = {
+    data : [
+         {
+      jobtitle: 'Need Cook',
+      icon: require('../assets/icons/crown.png'),
+      image: require('../images/cook.png'),
+      detail: "Lorem Ipsum has been the industrys standard dummy text ever",
+    },
+    {
+      jobtitle: 'Need Carpenter',
+      icon: require('../assets/icons/crown.png'),
+      image: require('../images/tutorial.png'),
+      detail: "Lorem Ipsum has been the industrys standard dummy text ever",
+    },
+    {
+      jobtitle: 'Need Cook',
+      icon: require('../assets/icons/crown.png'),
+      image: require('../images/tutorial.png'),
+      detail: "Lorem Ipsum has been the industrys standard dummy text ever",
+    }
+        ]
+}
 
 
 
 class ChatScreen extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          messages: [],
-          loadEarlier: true,
-          typingText: null,
-          isLoadingEarlier: false
-        };
-    
-        this._isMounted = false;
-        this.onSend = this.onSend.bind(this);
-        this.onReceive = this.onReceive.bind(this);
-        this.renderCustomActions = this.renderCustomActions.bind(this);
-        this.renderBubble = this.renderBubble.bind(this);
-        this.renderSystemMessage = this.renderSystemMessage.bind(this);
-        this.renderFooter = this.renderFooter.bind(this);
-        this.onLoadEarlier = this.onLoadEarlier.bind(this);
-    
-        this._isAlright = null;
+  constructor(props){
+      super(props);
+      this.state={
+        tabindex : 0
+      }
+  }
+  tabrender(){
+    return tabItems.map((value, index)=>{
+      return (
+        <TouchableOpacity key={index} onPress={()=>this.setState({
+            tabindex: index
+          })}
+          style={{
+          // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
+          height : 40,
+          width: "50%",
+          justifyContent: "space-between",
+          alignItems:'center',
+        }}>
+        <Text
+          style={{
+            color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
+            fontSize: 16,
+            fontFamily: 'Montserrat-Bold'
+          }}>{value}</Text>
+        <View style={{
+            width: 70,
+            height: this.state.tabindex === index ? 3 : 0,
+            backgroundColor: "#fff",
+            borderRadius : 3
+            // borderColor: this.state.tabindex === index ? "#fff": "transparent"
+          }}/>
+      </TouchableOpacity>
+    )
+    })
+  }
 
-        this.socket = SocketIOClient('http://10.2.4.206:3000');
-      }
+  rendermapdata(){
+      return maplocations.data.map((data, index)=>{
+          return(
+              <View style={{height:300,marginBottom: 10, width: "100%", backgroundColor:"#fff", borderRadius:10}} key={index}>
+                  <View style={{ flexDirection:"row", justifyContent:"space-between", height:50, alignItems:"center", paddingHorizontal:20}} >
+                      <View style={{ flexDirection:"row"}} >
+                          <Text style={{color:"#000", fontFamily:"Montserrat-regular"}}>{data.jobtitle}</Text>
+                          <Image style={{width:20,height:20, paddingHorizontal:15, backgroundColor:"transparent"}} source={data.icon}
+                                 resizeMode="contain" resizeMethod="resize"/>
+                      </View>
+                      <TouchableHighlight style={styles.button} onPress={()=>console.warn("nejkhknz")} >
+                          <LinearGradient
+                              colors={['#3E85EF', '#3EBDEF']}
+                              start={{x: 0, y: 0}}
+                              end={{x: 1, y: 0}}
+                              style={styles.button}>
+                              <Text style={styles.btnText}>APPLY</Text>
+                          </LinearGradient>
+                      </TouchableHighlight>
+                  </View>
+                  <View style={{ width:"100%", padding:20}} >
+                      <Text style={{fontFamily:"Montserrat",}}>{data.detail}</Text>
+                  </View>
+                  <View style={{flexDirection:"row", backgroundColor:"#fff"}}>
+                      <View style={{ width : "30%",marginHorizontal: 5}} >
+                      <Image style={{width:"100%", height:100, borderRadius:10}} source={data.image}
+                             resizeMode="contain" resizeMethod="resize"/>
+                      </View>
+                      <View style={{ width : "30%",marginHorizontal: 5}} >
+                      <Image style={{width:"100%", height:100, borderRadius:10}} source={data.image}
+                             resizeMode="contain" resizeMethod="resize"/>
+                      </View>
+                      <View style={{ width : "30%",marginHorizontal: 5}} >
+                      <Image style={{width:"100%", height:100, borderRadius:10}} source={data.image}
+                             resizeMode="contain" resizeMethod="resize"/>
+                      </View>
+                  </View>
+                  <View style={{flexDirection:'row', backgroundColor:"#fff", paddingHorizontal:20}}>
+                      <View style={{flexDirection:'column', backgroundColor:"transparent", width:"70%"}}>
+                          <Text style={{fontSize:12}}><Icon style={{color:'#007FFA',fontSize:20}} active name="ios-calendar-outline" /> <Text style={{paddingLeft:5, fontFamily:"Montserrat-Regular",fontSize:15}}>Before the 19 Sep 2018</Text></Text>
+                          <Text style={{fontSize:15,}}><Icon style={{color:'#c33c4c',fontSize:20}} active name="md-pin" />  <Text style={{paddingLeft:5, fontFamily:"Montserrat-Light"}}>3km </Text></Text>
+                      </View>
+                      <View style={{flexDirection:'column', backgroundColor:"transparent", width:"30%", flexDirection:"row", justifyContent:"space-between"}}>
+                          <Image source={require("../assets/icons/heart.png")}
+                                 style={{width:"100%", height:30}} resizeMode="contain" resizeMethod="resize"/>
+                          <Image source={require("../assets/icons/navigation.png")}
+                                 style={{width:"100%", height:30}} resizeMode="contain" resizeMethod="resize"/>
 
+                      </View>
 
-
-      componentWillMount() {
-        this._isMounted = true;
-        this.setState(() => {
-          return {
-            messages: require('../data/messages.js'),
-          };
-        });
-      }
-
-
-  
-
-      componentDidMount(){
-        var self = this;
-        this.socket.on('receiveMsg', function(msg){
-
-            console.log("msg = ----> ", msg)
-            roomId = msg.roomId
-            if("5b6149be84d1a004659916ae" == msg.messages.sender){
-                console.log('came here 1 ')
-                self.onReceive(msg.messages.content);
-              //  $('#messages').append($('<li class="me">').text(msg.messages.content));
-            }else{
-                console.log('came here 2 ')
-                
-                //$('#messages').append($('<li class="user">').text(msg.messages.content));
-            }
-
-        });
-      }
-
-    
-      componentWillUnmount() {
-        this._isMounted = false;
-      }
-    
-      onLoadEarlier() {
-        this.setState((previousState) => {
-          return {
-            isLoadingEarlier: true,
-          };
-        });
-    
-        setTimeout(() => {
-          if (this._isMounted === true) {
-            this.setState((previousState) => {
-              return {
-                messages: GiftedChat.prepend(previousState.messages, require('../data/old_messages.js')),
-                loadEarlier: false,
-                isLoadingEarlier: false,
-              };
-            });
-          }
-        }, 1000); // simulating network
-      }
-    
-      onSend(messages = []) {
-        console.log('messages are .. ',JSON.stringify(messages));  
-        var roomId="5b62ee2776560d078e897e3d" ;
-                var data = {
-                    "userIds":["5b6149be84d1a004659916ae"],
-                    "msg":messages[0].text,
-                    "type":"text",
-                    "sender":"5b61474144cd9d03ff07c4d5",
-                    "originator":"5b61474144cd9d03ff07c4d5",
-                    "group":"private",
-                    "roomId":roomId
-                }
-        this.socket.emit('sendMsg',data);
-        console.log('message sent .. ');  
-        this.setState((previousState) => {
-          return {
-            messages: GiftedChat.append(previousState.messages, messages),
-          };
-        });
-    
-        // for demo purpose
-      //  this.answerDemo(messages);
-      }
-    
-      answerDemo(messages) {
-        if (messages.length > 0) {
-          if ((messages[0].image || messages[0].location) || !this._isAlright) {
-            this.setState((previousState) => {
-              return {
-                typingText: 'React Native is typing'
-              };
-            });
-          }
-        }
-    
-        setTimeout(() => {
-          if (this._isMounted === true) {
-            if (messages.length > 0) {
-              if (messages[0].image) {
-                this.onReceive('Nice picture!');
-              } else if (messages[0].location) {
-                this.onReceive('My favorite place');
-              } else {
-                if (!this._isAlright) {
-                  this._isAlright = true;
-                  this.onReceive('Alright');
-                }
-              }
-            }
-          }
-    
-          this.setState((previousState) => {
-            return {
-              typingText: null,
-            };
-          });
-        }, 1000);
-      }
-    
-      onReceive(text) {
-        this.setState((previousState) => {
-          return {
-            messages: GiftedChat.append(previousState.messages, {
-              _id: Math.round(Math.random() * 1000000),
-              text: text,
-              createdAt: new Date(),
-              user: {
-                _id: '5b6149be84d1a004659916ae',
-                name: 'React Native',
-                // avatar: 'https://facebook.github.io/react/img/logo_og.png',
-              },
-            }),
-          };
-        });
-      }
-    
-      renderCustomActions(props) {
-     //   if (Platform.OS === 'ios') {
-          return (
-            <CustomActions
-              {...props}
-            />
-          );
-      //  }
-        // const options = {
-        //   'Action 1': (props) => {
-        //     alert('option 1');
-        //   },
-        //   'Action 2': (props) => {
-        //     alert('option 2');
-        //   },
-        //   'Cancel': () => {},
-        // };
-        // return (
-        //   <Actions
-        //     {...props}
-        //     options={options}
-        //   />
-        // );
-      }
-    
-      renderBubble(props) {
-        return (
-          <Bubble
-            {...props}
-            wrapperStyle={{
-              left: {
-                backgroundColor: '#f0f0f0',
-              }
-            }}
-          />
-        );
-      }
-    
-      renderSystemMessage(props) {
-        return (
-          <SystemMessage
-            {...props}
-            containerStyle={{
-              marginBottom: 15,
-            }}
-            textStyle={{
-              fontSize: 14,
-            }}
-          />
-        );
-      }
-    
-      renderCustomView(props) {
-        return (
-          <CustomView
-            {...props}
-          />
-        );
-      }
-    
-      renderFooter(props) {
-        if (this.state.typingText) {
-          return (
-            <View style={styles.footerContainer}>
-              <Text style={styles.footerText}>
-                {this.state.typingText}
-              </Text>
-            </View>
-          );
-        }
-        return null;
-      }
-
+                 </View>
+              </View>
+          )
+      })
+  }
     render() {
        return (
            <View style={{flex:1}}>
-            <Header navigation={this.props.navigation}  title={'Chat'}/>
-             <GiftedChat
-                messages={this.state.messages}
-                onSend={this.onSend}
-                loadEarlier={this.state.loadEarlier}
-                onLoadEarlier={this.onLoadEarlier}
-                isLoadingEarlier={this.state.isLoadingEarlier}
-                renderActions={() => {
-                  if (Platform.OS === "ios") {
-                      return (
-                          <Icon
-                              name="ios-mic"
-                              size={35}
-                              hitSlop={{ top: 20, bottom: 20, left: 50, right: 50 }}
-                              color={this.state.startAudio ? "red" : "black"}
-                              style={{
-                                  bottom: 50,
-                                  right: Dimensions.get("window").width / 2,
-                                  position: "absolute",
-                                  shadowColor: "#000",
-                                  shadowOffset: { width: 0, height: 0 },
-                                  shadowOpacity: 0.5,
-                                  zIndex: 2,
-                                  backgroundColor: "transparent"
-                              }}
-                              onPress={this.handleAudio}
-                          />
-                      );
-                  }
-              }}
-                renderActions={this.renderCustomActions}
-                renderBubble={this.renderBubble}
-                renderSystemMessage={this.renderSystemMessage}
-                renderCustomView={this.renderCustomView}
-                renderFooter={this.renderFooter}
-            />
-               <KeyboardAvoidingView />
+               <LinearGradient
+                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   start={{x: 0, y: 0}}
+                   end={{x: 1, y: 0}}
+                   style={{
+                       flex: 1
+                   }}>
+                   <HeaderScreen
+                       header={
+                           <Header
+                               navigation={this.props.navigation}
+                               left = {
+                                   <TouchableOpacity
+                                       onPress={() => this.props.navigation.openDrawer()}
+                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
+                                       <Image source={menu} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                   </TouchableOpacity>
+                               }
+                               title={
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Chats</Text>
+                               </View>
+                               }
+                               right={
+                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                                       <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                           <Icon  name='md-search' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
+                                       </TouchableOpacity>
+                                       <TouchableOpacity onPress={() => this.refs.modal1.open()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                           <Icon  name='md-person' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
+                                       </TouchableOpacity>
+                                   </View>
+                               }
+                           />
+                       }
+                       content={
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10,marginHorizontal:10}}>
+                                <SearchBar/>
+                   </View>
+                       }
+                   />
+                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
+                       <Advertisement/>
+                          <ChatList/>
+                       </View>
+               </LinearGradient>
+              
            </View>
        )
-    }
+  }
 }
 
 const styles = StyleSheet.create({
-      container: {
-         flex: 1,
-         justifyContent: 'center',
-         alignItems: 'center'
-    },
-    footerContainer: {
-        marginTop: 5,
-        marginLeft: 10,
-        marginRight: 10,
-        marginBottom: 10,
-      },
-      footerText: {
-        fontSize: 14,
-        color: '#aaa',
-      },
+  container: {
+    flex:1
+  },
+     modal: {
+    // justifyContent: 'center',
+    // alignItems: 'center'
+  },
+
+  modal2: {
+    height: 230,
+    backgroundColor: "#3B5998"
+  },
+
+  modal3: {
+    height: 300,
+    width: 300
+  },
+    button:{
+    justifyContent:'center',
+    alignItems:'center',
+    width: 100,
+    height: 40,
+    borderRadius:20,
+    // borderWidth: 1,
+    // borderColor: '#008000',
+    paddingTop:5,
+    paddingBottom:5,
+},
 })
 
 export default ChatScreen;
