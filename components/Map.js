@@ -11,18 +11,17 @@ export default class Map extends Component {
     super();
      this.state = {
        markers: [
-          {latitude: 37.78825, longitude: -122.4324},
+          {latitude: 23.0234539, longitude: 72.5766408},
+          {latitude: 23.01997813, longitude: 72.58144732},
+          {latitude: 23.016917, longitude: 72.57292862},
         ],
         region: {
-          latitude: 37.78825,
-          longitude: -122.4324,
+          latitude: 23.01713425,
+          longitude: 72.57917281,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         },
-        coordinate: {
-          latitude: 37.78825,
-          longitude: -122.4324,
-        },
+        coordinate: {latitude: 23.01713425, longitude: 72.57917281},
         poi: null
      }
      this.onPoiClick = this.onPoiClick.bind(this);
@@ -92,52 +91,18 @@ export default class Map extends Component {
          this.state.markers.map((coordinate,key)=>{
              return   <Marker
              coordinate={coordinate}
+             image={require('../assets/icons/map_location_blue.png')}
              key={key}
+             onPress={()=>this.props.pinPress()}
            >
-             <Callout onPress={this.callOutClicked} tooltip={true} style={{backgroundColor:'red'}}>
-             <View style={styles.li} >
-               <View style={{flex:1,flexDirection:'row'}}>
-                   <View style={{flex:1}}>
-                       <Text style={{fontSize:16,fontWeight:'bold'}}>Need Cook</Text>
-                   </View>   
-                   <View style={{flex:1}}>
-                       <Text style={{fontSize:16,color:'#008000'}}>$240</Text>
-                   </View> 
-                   <View style={{flex:1}}>
-                           <TouchableHighlight style={styles.button} onPress={()=>{alert('clicked')}}><Text style={styles.btnText}>APPLY</Text></TouchableHighlight>
-                   </View> 
-               </View>   
-             <View style={{flex:1,flexDirection:'row',marginTop:10}}>
-               <Text style={{fontSize:12}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
-             </View>   
-                 <View style={{flex:1,flexDirection:'row',marginTop:10}}>
-                           <View style={{flex:1,padding:1}}>
-                           <Image style={styles.imgStyle} source={require('../images/img_placeholder.png')} />
-                           </View>
-                           <View style={{flex:1,padding:1}}>
-                           <Image style={styles.imgStyle} source={require('../images/img_placeholder.png')} />
-                           </View>
-                           <View style={{flex:1,padding:1}}>
-                           <Image style={styles.imgStyle} source={require('../images/img_placeholder.png')} />
-                           </View>
-                 </View>  
-                 <View style={{flex:1,flexDirection:'row',marginTop:10}}>
-                     <View style={{flex:3,flexDirection:'row',padding:2,justifyContent:'center'}}>
-                        <Icon style={{color:'#007FFA',fontSize:18}} active name="ios-calendar-outline" /><Text style={{fontSize:12,fontWeight:'bold'}}>Before the 19 Sep 2018</Text>
-                     </View>  
-                     <View style={{flex:2,flexDirection:'row',padding:2,justifyContent:'center'}}>
-                     <Icon style={{color:'#c33c4c',fontSize:18}} active name="md-pin" /><Text style={{fontSize:12,fontWeight:'bold'}}> 3km </Text>
-                     </View>  
-                     <View style={{flex:1,flexDirection:'row',justifyContent:'space-around'}}>
-                       <Icon style={{color:'black',fontSize:18}} active name="md-heart-outline" />
-                       <Icon style={{color:'black',fontSize:18}} active name="md-share" />
-                     </View>  
-               </View> 
-             </View>
-             </Callout>
            </Marker>
          })
-      }   
+      }  
+       <Marker
+             coordinate={coordinate}
+             image={require('../assets/icons/map_location_red.png')}
+           >
+           </Marker> 
       </MapView>
     );
   }

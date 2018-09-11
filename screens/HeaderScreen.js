@@ -53,7 +53,7 @@ class HeaderScreen extends Component {
                {this.props.header}
                {this.props.content}
                <View style={{}}>
-                   <Image source={border_img} style={{ width: '100%', height: 34}} resizeMode="contain" resizeMethod="resize"/>
+                   <Image source={border_img} style={{ width: '100%', height: 31}} resizeMode="contain" resizeMethod="resize"/>
                    <View style={{height:20, backgroundColor:"#fff"}}/>
                </View>
            </View>

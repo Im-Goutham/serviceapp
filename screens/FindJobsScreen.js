@@ -56,7 +56,7 @@ class FindJobScreen extends Component {
   constructor(props){
       super(props);
       this.state={
-        tabindex : 1
+        tabindex : 0
       }
   }
   tabrender(){
@@ -75,8 +75,8 @@ class FindJobScreen extends Component {
         <Text
           style={{
             color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
-            fontSize: 20,
-            fontFamily: 'Montserrat-medium'
+            fontSize: 16,
+            fontFamily: 'Montserrat-Bold'
           }}>{value}</Text>
         <View style={{
             width: 70,
@@ -96,7 +96,7 @@ class FindJobScreen extends Component {
               <View style={{height:300,marginBottom: 10, width: "100%", backgroundColor:"#fff", borderRadius:10}} key={index}>
                   <View style={{ flexDirection:"row", justifyContent:"space-between", height:50, alignItems:"center", paddingHorizontal:20}} >
                       <View style={{ flexDirection:"row"}} >
-                          <Text style={{color:"#000", fontFamily:"Montserrat-regular "}}>{data.jobtitle}</Text>
+                          <Text style={{color:"#000", fontFamily:"Montserrat-regular"}}>{data.jobtitle}</Text>
                           <Image style={{width:20,height:20, paddingHorizontal:15, backgroundColor:"transparent"}} source={data.icon}
                                  resizeMode="contain" resizeMethod="resize"/>
                       </View>
@@ -139,6 +139,7 @@ class FindJobScreen extends Component {
                                  style={{width:"100%", height:30}} resizeMode="contain" resizeMethod="resize"/>
 
                       </View>
+
                  </View>
               </View>
           )
@@ -166,9 +167,9 @@ class FindJobScreen extends Component {
                                    </TouchableOpacity>
                                }
                                title={
-                                   <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"50%", height:54}}>
-                                       <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Find JOB</Text>
-                                   </View>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"50%", height:54}}>
+                                  <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Find JOB</Text>
+                               </View>
                                }
                                right={
                                    <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
@@ -192,7 +193,7 @@ class FindJobScreen extends Component {
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
                        <Advertisement/>
-                       {this.state.tabindex === 0 ?<JobsList/>:<Map/>}
+                       {this.state.tabindex === 0 ?<JobsList/>:<Map pinPress={() => this.refs.modal1.open()}/>}
                        </View>
                </LinearGradient>
                <Modal
@@ -201,7 +202,7 @@ class FindJobScreen extends Component {
                    ref={"modal1"}
                    swipeToClose={false}
                    backdropPressToClose={false}>
-                   <View style={{ marginBottom: -10, width: 40, borderTopLeftRadius:10, borderTopRightRadius:10, paddingBottom:10, alignSelf:"flex-end", height: 50, backgroundColor: '#fff', justifyContent:'center', alignItems:'center', right:0}} >
+                   <View style={{ marginBottom: -10, width: 40, borderTopLeftRadius:10, borderTopRightRadius:10, paddingBottom:10, alignSelf:"flex-end", height: 45, backgroundColor: 'rgba(213,213,213,0.4)', justifyContent:'center', alignItems:'center', right:0}} >
                        <Icon name="close" style={{}} onPress={() => this.refs.modal1.close()}/>
                    </View>
                    <ScrollView ScrollView contentContainerStyle={{}}>
