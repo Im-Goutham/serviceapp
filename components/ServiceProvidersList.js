@@ -5,7 +5,7 @@ import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,Touchab
 import {Icon} from 'native-base';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-
+import LinearGradient from 'react-native-linear-gradient';
 
 class ServiceProvidersList extends Component {
 
@@ -116,10 +116,7 @@ class ServiceProvidersList extends Component {
                  <View style={{flex:2,marginTop:3,marginBottom:3}}>
                         <View style={{flex:1,flexDirection:'row',justifyContent:'space-around'}}>
                            <View><Icon style={{color:'red',fontSize:15}} active name="md-heart" /></View><View><Icon style={{fontSize:15}} active name="md-share" /></View>
-                        </View>   
-                        <View style={{flex:1}}>
-                           <TouchableHighlight style={styles.button}><Text style={styles.btnText}>HIRE NOW</Text></TouchableHighlight>
-                        </View>    
+                        </View>     
                  </View> 
             </View>    
             <View style={{flex:1,flexDirection:'row',marginTop:10}}>
@@ -134,7 +131,14 @@ class ServiceProvidersList extends Component {
                 }
             </View>
             <View style={{flex:1,paddingTop:10,paddingBottom:10}}>
-                      <Text style={{fontSize:12}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
+                 <View style={{flex:2}}>
+                    <Text style={{fontSize:12}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
+                 </View>
+                 <View style={{flex:1}}>
+                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
+                       <TouchableOpacity><Text style={styles.btnText}>HIRE NOW</Text></TouchableOpacity>
+                     </LinearGradient>
+                 </View>
             </View>
           </View>
 
@@ -155,7 +159,7 @@ class ServiceProvidersList extends Component {
   render() {
     let {images,imgIndex,photoShow} = this.state;
     return ( 
-      <View>
+      <View style={{flex:1}}>
         <ListView
           scrollEnabled
           dataSource={this.state.dataSource}

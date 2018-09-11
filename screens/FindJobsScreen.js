@@ -163,7 +163,7 @@ class FindJobScreen extends Component {
                                    <TouchableOpacity
                                        onPress={() => this.props.navigation.openDrawer()}
                                        style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
-                                       <Image source={menu} style={{ width: '100%', height: 25}} resizeMode="contain" resizeMethod="resize"/>
+                                       <Image source={menu} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                    </TouchableOpacity>
                                }
                                title={
