@@ -193,7 +193,7 @@ class FindJobScreen extends Component {
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
                        <Advertisement/>
-                       {this.state.tabindex === 0 ?<JobsList/>:<Map pinPress={() => this.refs.modal1.open()}/>}
+                       {this.state.tabindex === 0 ?<JobsList  navigation={this.props.navigation}/>:<Map pinPress={() => this.refs.modal1.open()}/>}
                        </View>
                </LinearGradient>
                <Modal

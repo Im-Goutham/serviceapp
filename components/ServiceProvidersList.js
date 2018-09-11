@@ -1,7 +1,7 @@
 //  include react-native-swipeout
 import Swipeout from 'react-native-swipeout';
 import React, {Component} from 'react';
-import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,TouchableHighlight} from 'react-native';
+import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,TouchableOpacity} from 'react-native';
 import {Icon} from 'native-base';
 import { connect } from 'react-redux';
 import * as actions from '../actions';

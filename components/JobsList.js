@@ -110,7 +110,7 @@ class JobsList extends Component {
         onClose={() => console.log('===close') }
         scroll={event => console.log('scroll event')}
         >
-        <TouchableWithoutFeedback onPress={() => console.log('press children')}>
+        <TouchableWithoutFeedback onPress={() => {this.props.navigation.navigate('jobDetail')}}>
           <View style={styles.li} >
             <View style={{height:54,flexDirection:'row', backgroundColor: "transparent", justifyContent: 'space-between'}}>
               <View style={{width : "50%", flexDirection: 'row',  alignItems:'center',backgroundColor: "transparent" }}>
