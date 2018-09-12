@@ -167,8 +167,8 @@ class FindHelpScreen extends Component {
                                    </TouchableOpacity>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"50%", height:54}}>
-                                  <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Find Help</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Find Help</Text>
                                </View>
                                }
                                right={

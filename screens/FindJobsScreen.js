@@ -62,13 +62,13 @@ class FindJobScreen extends Component {
   tabrender(){
     return tabItems.map((value, index)=>{
       return (
+        <View>
         <TouchableOpacity key={index} onPress={()=>this.setState({
             tabindex: index
           })}
           style={{
           // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
           height : 40,
-          width: "50%",
           justifyContent: "space-between",
           alignItems:'center',
         }}>
@@ -86,6 +86,7 @@ class FindJobScreen extends Component {
             // borderColor: this.state.tabindex === index ? "#fff": "transparent"
           }}/>
       </TouchableOpacity>
+      </View>
     )
     })
   }
@@ -167,8 +168,8 @@ class FindJobScreen extends Component {
                                    </TouchableOpacity>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"50%", height:54}}>
-                                  <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Find JOB</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Find a Job</Text>
                                </View>
                                }
                                right={
@@ -184,11 +185,11 @@ class FindJobScreen extends Component {
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
-                       <View style={{ paddingTop:30,flexDirection:'row', paddingHorizontal: width/6}}>
-                           {this.tabrender()}
-                           </View>
-                   </View>
+                        <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
+                        <View style={{ paddingTop:30,flexDirection:'row',justifyContent:'space-around'}}>
+                            {this.tabrender()}
+                            </View>
+                    </View>
                        }
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
