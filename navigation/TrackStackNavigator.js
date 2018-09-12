@@ -1,11 +1,11 @@
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
 import TrackScreen from '../screens/TrackScreen';
 import JobTrackScreen from '../screens/JobTrackScreen';
 
 
 
-export default StackNavigator({
+export default createStackNavigator({
        trackNow: { screen: TrackScreen },
        jobTrack: { screen: JobTrackScreen }
    },{

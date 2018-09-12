@@ -1,14 +1,14 @@
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
 import JobDetailScreen from '../screens/JobDetailScreen';
 import FindJobsScreen from '../screens/FindJobsScreen';
 
-export default StackNavigator({
+export default createStackNavigator({
     findJobs: { screen: FindJobsScreen },
     jobDetail: { screen: JobDetailScreen }
    },{
      index: 0,
-     initialRouteName: 'findJobs',
+     initialRouteName: 'jobDetail',
      headerMode: 'none',
      navigationOptions: {
        gesturesEnabled: false

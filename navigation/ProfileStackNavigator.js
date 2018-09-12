@@ -1,11 +1,11 @@
-import { StackNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
 
 import ProfileScreen from '../screens/ProfileScreen';
 import AddServiceCatScreen from '../screens/AddServiceCatScreen';
 import AddServiceSubCatScreen from '../screens/AddServiceSubCatScreen';
 
 
-export default StackNavigator({
+export default createStackNavigator({
        profile: { screen: ProfileScreen },
        addServiceCatScreen: { screen: AddServiceCatScreen },
        addServiceSubCatScreen: { screen: AddServiceSubCatScreen }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TabNavigator, StackNavigator } from 'react-navigation';
+import { TabNavigator, createStackNavigator } from 'react-navigation';
 import { Icon } from 'native-base';
 
 import JobScreen from '../screens/JobScreen';

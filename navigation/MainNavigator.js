@@ -1,4 +1,4 @@
-import {  StackNavigator } from 'react-navigation';
+import {  createStackNavigator } from 'react-navigation';
 
 
 import AppTutorialScreen from '../screens/AppTutorialScreen';
@@ -9,7 +9,7 @@ import AppDrawerNavigator from './AppDrawerNavigator';
 import ProfileStackNavigator from './ProfileStackNavigator';
 
 
-export default StackNavigator(
+export default createStackNavigator(
   {
     appTutorial: {
       screen: AppTutorialScreen,

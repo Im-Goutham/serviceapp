@@ -1,4 +1,4 @@
-import {DrawerNavigator,StackNavigator} from 'react-navigation';
+import {createDrawerNavigator,createStackNavigator} from 'react-navigation';
 
 
 import SideMenu from '../components/SideMenu';
@@ -19,7 +19,7 @@ import SettingsScreen from '../screens/SettingsScreen';
 
 
 
-export default DrawerNavigator({
+export default createDrawerNavigator({
     homePage: {
         screen: HomeScreen
      },
@@ -60,10 +60,7 @@ export default DrawerNavigator({
         screen: SettingsScreen
      }
 },{
-  initialRouteName: 'homePage',
+  initialRouteName: 'findJobs',
     contentComponent: SideMenu,
     drawerWidth: 300
 });
-
-
-

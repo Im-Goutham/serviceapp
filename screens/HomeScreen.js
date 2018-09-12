@@ -150,7 +150,7 @@ constructor(){
                                   <Image source={screen.iconname} style={{ width: 35, height: 35}} resizeMode='contain' resizeMethod='resize' />
                             </View>
                             <Text style={styles.categoryStyle}>{screen.title}</Text>
-                          </View>  
+                          </View>
                       })
                   ) : null
               }
@@ -162,7 +162,7 @@ constructor(){
             <View style={{flexDirection:'row',justifyContent:'space-between'}}>
                 <Text style={styles.textStyle}>Home Interiors</Text>
                 <Text style={{fontSize:11,color:'#3E85EF',fontFamily:'Montserrat-Light'}}>VIEW ALL</Text>
-            </View>  
+            </View>
             <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
             <ScrollView
             horizontal={true}
@@ -176,20 +176,20 @@ constructor(){
                                       <Image source={category.image} style={styles.img_placeholder}/>
                                       </View>
                                       <Text style={{paddingVertical:10,color:'#4A4A4A'}}>{category.name}</Text>
-                                </View> 
+                                </View>
                     })
                  ) : null
                 }
             </ScrollView>
-            </View> 
-        </View>   
+            </View>
+        </View>
 
 
         <View style={styles.servicesBox}>
             <View style={{flexDirection:'row',justifyContent:'space-between'}}>
                 <Text style={styles.textStyle}>See other Service Providers</Text>
                 <Text style={{fontSize:11,color:'#3E85EF',fontFamily:'Montserrat-Light'}}>VIEW ALL</Text>
-            </View>  
+            </View>
             <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
             <ScrollView
             horizontal={true}
@@ -204,20 +204,20 @@ constructor(){
                                       <Image source={require('../images/check.png')} style={styles.check}/>
                                       </View>
                                       <Text style={{paddingVertical:10,color:'#4A4A4A'}}>{provider.name}</Text>
-                                </View> 
+                                </View>
                     })
                  ) : null
                 }
             </ScrollView>
-            </View> 
-        </View>  
+            </View>
+        </View>
 
 
         <View style={styles.servicesBox}>
             <View style={{flexDirection:'row',justifyContent:'space-between'}}>
                 <Text style={styles.textStyle}>Cars and Vehicles</Text>
                 <Text style={{fontSize:11,color:'#3E85EF',fontFamily:'Montserrat-Light'}}>VIEW ALL</Text>
-            </View>  
+            </View>
             <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
             <ScrollView
             horizontal={true}
@@ -231,13 +231,13 @@ constructor(){
                                       <Image source={category.image} style={styles.img_placeholder}/>
                                       </View>
                                       <Text style={{paddingVertical:10,color:'#4A4A4A'}}>{category.name}</Text>
-                                </View> 
+                                </View>
                     })
                  ) : null
                 }
             </ScrollView>
-            </View> 
-        </View>  
+            </View>
+        </View>
         </View>
          </View>
          </ScrollView>
@@ -281,7 +281,7 @@ const styles = StyleSheet.create({
         flexWrap:'wrap',
         justifyContent:'space-around',
     },
-    btnText: { 
+    btnText: {
         textAlign:'center',
         color:'white',
         fontSize: 16,
