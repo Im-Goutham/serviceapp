@@ -201,16 +201,16 @@ class ProfileScreen extends Component {
                         {
                             (avatarSource)?(
                                <View style={[styles.user_placeholder,{backgroundColor:'rgb(249, 252, 255)'}]}>
-                                <Image source={avatarSource} />
+                                <Image source={avatarSource} style={{width:'100%',height:'100%'}}   resizeMode="contain" resizeMethod="resize"/>
                                </View> 
                             ):(
                               <View  style={[styles.user_placeholder,{backgroundColor:'rgb(229, 239, 252)'}]}>
-                              <Image source={require('../images/user_placeholder.png')} />
+                              <Image source={require('../images/user_placeholder.png')}  style={{width:'100%',height:'100%'}}   resizeMode="contain" resizeMethod="resize"/>
                              </View>  
                             )
                         }
                             <View  style={[styles.camera_icon,{backgroundColor:'rgb(62, 136, 235)'}]}>
-                                <Image  source={require('../images/camera.png')} />
+                                <Image  source={require('../images/camera.png')}/>
                             </View>
                         </View>  
                       </TouchableOpacity>
@@ -560,7 +560,6 @@ const styles = StyleSheet.create({
       left: 0
     },
     user_placeholder: {
-      paddingTop:20,
       width: 140,
       height: 140,
       borderRadius:70,

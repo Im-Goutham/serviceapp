@@ -8,7 +8,7 @@ export default createStackNavigator({
     jobDetail: { screen: JobDetailScreen }
    },{
      index: 0,
-     initialRouteName: 'jobDetail',
+     initialRouteName: 'findJobs',
      headerMode: 'none',
      navigationOptions: {
        gesturesEnabled: false
