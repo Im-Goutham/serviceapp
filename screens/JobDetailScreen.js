@@ -153,7 +153,7 @@ export  default class JobDetailScreen extends Component {
                                    </TouchableOpacity>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"50%", height:54}}>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"100%", height:54}}>
                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Need Cook</Text>
                                </View>
                                }
