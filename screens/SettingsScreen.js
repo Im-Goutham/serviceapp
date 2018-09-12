@@ -89,12 +89,7 @@ class SettingsScreen extends Component {
                                }
                                right={
                                    <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                       <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                           <Icon  name='md-search' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
-                                       </TouchableOpacity>
-                                       <TouchableOpacity onPress={() => this.refs.modal1.open()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                           <Icon  name='md-person' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
-                                       </TouchableOpacity>
+                                       
                                    </View>
                                }
                            />
@@ -106,7 +101,7 @@ class SettingsScreen extends Component {
                        }
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
-                          <SettingsList/>
+                          <SettingsList navigation={this.props.navigation}/>
                        </View>
                </LinearGradient>
               
