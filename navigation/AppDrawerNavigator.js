@@ -4,6 +4,7 @@ import {createDrawerNavigator,createStackNavigator} from 'react-navigation';
 import SideMenu from '../components/SideMenu';
 import HomeScreen from '../screens/HomeScreen';
 import FindJobsStackNavigator from './FindJobsStackNavigator';
+import MyJobsStackNavigator from './MyJobsStackNavigator';
 import PostJobScreen from '../screens/PostJobScreen';
 import FindHelpScreen from '../screens/FindHelpScreen';
 import MyJobsScreen from '../screens/MyJobsScreen';
@@ -34,7 +35,7 @@ export default createDrawerNavigator({
        screen: FindHelpScreen
     },
     myJobs: {
-       screen: MyJobsScreen
+       screen: MyJobsStackNavigator
      },
     favourites: {
         screen: FavouriteScreen

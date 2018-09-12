@@ -144,10 +144,10 @@ class JobsList extends Component {
                    </View>
                    <View style={{flexDirection:'column',marginTop:5}}>
                      <View style={{flex:2}}>
-                       <Text style={{fontSize:12}}><Icon style={{color:'#007FFA',fontSize:20}} active name="ios-calendar-outline" /> <Text style={{paddingLeft:5, fontFamily:"Montserrat-Regular",fontSize:20,}}>Before the 19 Sep 2018</Text></Text>
+                       <Text style={{fontSize:12}}><Icon style={{color:'#007FFA',fontSize:20}} active name="ios-calendar-outline" /> <Text style={{paddingLeft:5, fontFamily:"Montserrat-Regular",fontSize:18,}}>Before the 19 Sep 2018</Text></Text>
                      </View>
                      <View style={{flex:1, flexDirection:'row', justifyContent: 'space-between'}}>
-                       <Text style={{fontSize:20,}}><Icon style={{color:'#c33c4c',fontSize:20}} active name="md-pin" />  <Text style={{paddingLeft:5, fontFamily:"Montserrat-Light"}}>3km </Text></Text>
+                       <Text style={{fontSize:18,}}><Icon style={{color:'#c33c4c',fontSize:20}} active name="md-pin" /> <Text style={{paddingLeft:5, fontFamily:"Montserrat-Light"}}>3 km </Text></Text>
                        <View style={{flexDirection:"row"}}>
                          <Text style={{fontSize:16,color:'#000', fontFamily:"Montserrat-Bold"}}>Budget : </Text>
                            <Text style={{fontSize:16,color:'#008000', fontFamily:"Montserrat-Bold"}}>$240</Text>
