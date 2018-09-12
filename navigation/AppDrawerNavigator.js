@@ -61,7 +61,7 @@ export default createDrawerNavigator({
         screen: SettingsScreen
      }
 },{
-  initialRouteName: 'myJobs',
+  initialRouteName: 'homePage',
     contentComponent: SideMenu,
     drawerWidth: 300
 });
