@@ -17,6 +17,7 @@ import AccountScreen from '../screens/AccountScreen';
 import SubscriptionScreen from '../screens/SubscriptionScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import AcountStackNavigator from './AcountStackNavigator';
+import SettingsStackNavigator from './SettingsStackNavigator';
 export default createDrawerNavigator({
     homePage: {
         screen: HomeScreen
@@ -55,7 +56,7 @@ export default createDrawerNavigator({
         screen: SubscriptionScreen
      },
      settings: {
-        screen: SettingsScreen
+        screen: SettingsStackNavigator
      }
 },{
   initialRouteName: 'account',
