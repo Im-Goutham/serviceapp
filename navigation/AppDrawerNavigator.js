@@ -16,10 +16,7 @@ import TrackStackNavigator from './TrackStackNavigator';
 import AccountScreen from '../screens/AccountScreen';
 import SubscriptionScreen from '../screens/SubscriptionScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-
-
-
-
+import AcountStackNavigator from './AcountStackNavigator';
 export default createDrawerNavigator({
     homePage: {
         screen: HomeScreen
@@ -52,7 +49,7 @@ export default createDrawerNavigator({
         screen: TrackStackNavigator
     },
      account: {
-        screen: AccountScreen
+        screen: AcountStackNavigator
      },
      subscription: {
         screen: SubscriptionScreen
@@ -61,7 +58,7 @@ export default createDrawerNavigator({
         screen: SettingsScreen
      }
 },{
-  initialRouteName: 'homePage',
+  initialRouteName: 'account',
     contentComponent: SideMenu,
     drawerWidth: 300
 });
