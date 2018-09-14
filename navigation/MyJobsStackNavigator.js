@@ -13,7 +13,7 @@ export default createStackNavigator({
     reviewrating: { screen: ReviewRating }
    },{
      index: 0,
-     initialRouteName: 'allServiceprovider',
+     initialRouteName: 'myJobs',
      headerMode: 'none',
      navigationOptions: {
        gesturesEnabled: false

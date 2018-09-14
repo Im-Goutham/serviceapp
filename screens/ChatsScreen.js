@@ -193,7 +193,7 @@ class ChatScreen extends Component {
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
                        <Advertisement/>
-                          <ChatList/>
+                          <ChatList navigation={this.props.navigation}/>
                        </View>
                </LinearGradient>
               

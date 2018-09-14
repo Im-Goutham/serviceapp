@@ -163,104 +163,105 @@ class ServiceProvidersList extends Component {
 }
 
 var styles = StyleSheet.create({
-    listview: {
-        flex: 1,
-    },
-    liText: {
-        color: '#333',
-        fontSize: 16,
-    },
-    button:{
-        width: '100%',
-        borderRadius:30,
-        paddingVertical:10
-    },
-    btnText: {
-        textAlign:'center',
-        color:'white',
-        fontFamily: 'Montserrat-Bold',
-        fontSize:15
-    },
-    imgBox: {
-        flex:1,
-        padding:1,
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
-        shadowRadius: 2,
-        elevation: 1,
-    },
-    overlay: {
-        position: 'absolute',
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0,
-        borderRadius:5,
-        backgroundColor: 'rgba(0,0,0,.6)',
-        opacity: 2,
-        justifyContent:'center',
-        alignItems:'center'
-    },
-    imgStyle:{
-        width:100,
-        height:100,
-    },
-    servicesBox: {
-        flex: 1,
-        marginVertical: 5,
-        marginHorizontal: 10,
-        paddingVertical: 25,
-        paddingHorizontal:20,
-        borderRadius:10,
-        backgroundColor:'white',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
-        shadowRadius: 2,
-        elevation: 1,
-    },
-    imageShadow: {
-        shadowOffset: { width: 0, height: 3 },
-        shadowOpacity: 0.3,
-        shadowRadius: 2,
-        elevation: 2,
-    },
-    img_placeholder: {
-        width: 80,
-        height: 80,
-        borderRadius:5,
-        position: 'relative',
-        top: 0,
-        left: 0
-    },
-    check: {
-        width: 18,
-        height: 18,
-        borderRadius:9,
-        position: 'absolute',
-        bottom: 0,
-        left: 0
-    },
-    iconStyle: {
-        width:15,
-        height:15
-    },
-    tagStyle:{
-        backgroundColor: 'rgb(239,186,47)',
-        borderRadius:10,
-        overflow:"hidden",
-        paddingVertical:2,
-        paddingLeft:10,
-        paddingRight:30,
-        color: 'white',
-        fontFamily: 'Montserrat-Bold'
-    },
-    iconButton: {
-        marginHorizontal:5,
-        width: 45,
-        height:45,
-        borderRadius:30,
-        justifyContent:'center',
-        alignItems:'center'
-    }
+   listview: {
+    flex: 1,
+  },
+  liText: {
+    color: '#333',
+    fontSize: 16,
+  },
+  button:{
+    width: '100%',
+    borderRadius:30,
+    paddingVertical:10
+},
+btnText: {
+    textAlign:'center',
+    color:'white',
+    fontFamily: 'Montserrat-Bold',
+    fontSize:15
+},
+imgBox: {
+    flex:1,
+    padding:1,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 1,
+},
+overlay: {
+  position: 'absolute',
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+  borderRadius:5,
+  backgroundColor: 'rgba(0,0,0,.6)',
+  opacity: 2,
+  justifyContent:'center',
+  alignItems:'center'
+},
+imgStyle:{
+    width:100,
+    height:100,
+
+},
+  servicesBox: {
+    flex: 1,
+    marginVertical: 5,
+    marginHorizontal: 10,
+    paddingVertical: 25,
+    paddingHorizontal:20,
+    borderRadius:10,
+    backgroundColor:'white',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 2,
+    elevation: 1,
+  },
+  imageShadow: {
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  img_placeholder: {
+    width: 80,
+    height: 80,
+    borderRadius:5,
+    position: 'relative',
+    top: 0,
+    left: 0
+  },
+  check: {
+    width: 18,
+    height: 18,
+    borderRadius:9,
+    position: 'absolute',
+    bottom: 0,
+    left: 0
+  },
+  iconStyle: {
+     width:15,
+     height:15
+  },
+  tagStyle:{
+     backgroundColor: 'rgb(239,186,47)',
+     borderRadius:10,
+     overflow:"hidden",
+     paddingVertical:2,
+     paddingLeft:10,
+     paddingRight:30,
+     color: 'white',
+     fontFamily: 'Montserrat-Bold'
+  },
+  iconButton: {
+    marginHorizontal:5,
+    width: 45,
+    height:45,
+    borderRadius:30,
+    justifyContent:'center',
+    alignItems:'center'
+  }
   })
 export default connect(null, actions)(ServiceProvidersList);

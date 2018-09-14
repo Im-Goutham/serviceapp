@@ -92,15 +92,6 @@ class FindJobScreen extends Component {
                             <Text style={{color:"#000", fontFamily:"Montserrat-regular"}}>{data.jobtitle}</Text>
                             <Image style={{width:20,height:20, paddingHorizontal:15, backgroundColor:"transparent"}} source={data.icon} resizeMode="contain" resizeMethod="resize"/>
                         </View>
-                        <TouchableHighlight style={styles.button} onPress={()=>console.warn("nejkhknz")} >
-                            <LinearGradient
-                                colors={['#3E85EF', '#3EBDEF']}
-                                start={{x: 0, y: 0}}
-                                end={{x: 1, y: 0}}
-                                style={styles.button}>
-                                <Text style={styles.btnText}>APPLY</Text>
-                            </LinearGradient>
-                        </TouchableHighlight>
                     </View>
                     <View style={{ width:"100%", padding:20}} >
                         <Text style={{fontFamily:"Montserrat",}}>{data.detail}</Text>

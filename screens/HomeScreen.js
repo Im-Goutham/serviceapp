@@ -145,7 +145,7 @@ constructor(){
         {
                   screens ? (
                       screens.map((screen,key)=>{
-                            return    <View style={styles.mainBox}>
+                            return    <View style={styles.mainBox} key={key}>
                             <View style={styles.mainCategoryBox}>
                                   <Image source={screen.iconname} style={{ width: 35, height: 35}} resizeMode='contain' resizeMethod='resize' />
                             </View>

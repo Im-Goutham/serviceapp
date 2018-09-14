@@ -7,17 +7,17 @@ import FindJobsStackNavigator from './FindJobsStackNavigator';
 import MyJobsStackNavigator from './MyJobsStackNavigator';
 import PostJobScreen from '../screens/PostJobScreen';
 import FindHelpScreen from '../screens/FindHelpScreen';
-import MyJobsScreen from '../screens/MyJobsScreen';
 import FavouriteScreen from '../screens/FavouriteScreen';
 import NotificationsScreen from '../screens/NotificationsScreen';
-import ChatsScreen from '../screens/ChatsScreen';
+import ChatStackNavigator from './ChatStackNavigator';
 import MyRequestsScreen from '../screens/MyRequestsScreen';
 import TrackStackNavigator from './TrackStackNavigator';
-import AccountScreen from '../screens/AccountScreen';
 import SubscriptionScreen from '../screens/SubscriptionScreen';
-import SettingsScreen from '../screens/SettingsScreen';
 import AcountStackNavigator from './AcountStackNavigator';
 import SettingsStackNavigator from './SettingsStackNavigator';
+
+
+
 export default createDrawerNavigator({
     homePage: {
         screen: HomeScreen
@@ -41,7 +41,7 @@ export default createDrawerNavigator({
         screen: NotificationsScreen
      },
      chats: {
-        screen: ChatsScreen
+        screen: ChatStackNavigator
      },
     myRequests: {
         screen: MyRequestsScreen
@@ -59,7 +59,7 @@ export default createDrawerNavigator({
         screen: SettingsStackNavigator
      }
 },{
-  initialRouteName: 'account',
+  initialRouteName: 'homePage',
     contentComponent: SideMenu,
     drawerWidth: 300
 });

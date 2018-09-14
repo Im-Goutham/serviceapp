@@ -11,7 +11,7 @@ class SearchBar extends Component {
       <View>
          <Item style={styles.inputBox}>
             <Icon active name='search' />
-            <Input placeholder='Search here...' style={styles.inputField}   placeholderTextColor={{color:'rgb(188,188,188)'}}/>
+            <Input placeholder='Search here...' style={styles.inputField}   placeholderTextColor='rgb(188,188,188)'/>
           </Item>
       </View>
     )
