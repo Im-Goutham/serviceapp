@@ -9,7 +9,7 @@ import {
     Platform,
     Text, TouchableHighlight
 } from 'react-native';
- import {  Icon } from 'native-base'
+ import {  Icon, Radio, Item, Input} from 'native-base'
 import Advertisement from '../components/Advertisement';
 import LanguageList from '../components/LanguageList';
 import Map from '../components/Map';
@@ -57,7 +57,17 @@ class DeleteAccountScreen extends Component {
   constructor(props){
       super(props);
       this.state={
-        tabindex : 0
+        tabindex : 0,
+        selectedkey:0,
+        options:[
+           "I'm getting too many email notifications(Did you know you can change your Notification settings)",
+           "My account was hacked",
+           "I can't find interesting jobs",
+           "I accidentally made another account",
+           "I don't use or like the app or website",
+           "I have a privacy concern",
+           "Other"
+        ]
       }
   }
   tabrender(){
@@ -188,10 +198,34 @@ class DeleteAccountScreen extends Component {
                    </View>
                        }
                    />
-                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
-                         {/*
-                        Write here code
-                        */}
+                   <View style={{flex:1}}>
+                   <View style={{flex:8.5,backgroundColor :"rgb(249,252, 255)",paddingHorizontal:20}}>
+                   <Text style={{color:'#22262C', fontSize:16,marginVertical:5,lineHeight:25,fontFamily:'Montserrat-Bold'}}>Are you sure you want to delete your account?</Text>
+                         <Text style={{color:'#9B9B9B', fontSize:14,marginVertical:5,lineHeight:25,fontFamily:'Montserrat-Bold'}}>Please let us know why you are leaving</Text>
+                         <View>
+                             {
+                                 this.state.options.map((option,index)=>{
+                                    return <TouchableOpacity  onPress={()=>this.setState({selectedkey : index})}>
+                                       <View style={[styles.selectBox,{paddingHorizontal:index === this.state.selectedkey ? 0 : 10}]}>
+                                            <Radio selected={index === this.state.selectedkey ? true : false} />
+                                            <Text style={styles.selectText}>
+                                                {option}
+                                            </Text>
+                                        </View>
+                                    </TouchableOpacity>
+                                 })
+                             }
+                         </View>
+                         <View style={{marginVertical:20,fontFamily:'Montserrat-Medium',color:'#9B9B9B'}}>
+                               <Text>Write the reason</Text>
+                               <Item>
+                                <Input placeholder="Type here" />
+                            </Item>
+                         </View>
+                   </View>
+                   <View style={{flex:1.5, justifyContent:'center',alignItems:'center'}}>
+                       <Text style={{fontSize:18,color:'white',fontFamily:'Montserrat-Bold'}}>Delete My Account</Text>
+                   </View>
                        </View>
                </LinearGradient>
               
@@ -204,20 +238,6 @@ const styles = StyleSheet.create({
   container: {
     flex:1
   },
-     modal: {
-    // justifyContent: 'center',
-    // alignItems: 'center'
-  },
-
-  modal2: {
-    height: 230,
-    backgroundColor: "#3B5998"
-  },
-
-  modal3: {
-    height: 300,
-    width: 300
-  },
     button:{
     justifyContent:'center',
     alignItems:'center',
@@ -229,6 +249,16 @@ const styles = StyleSheet.create({
     paddingTop:5,
     paddingBottom:5,
 },
+   selectText: {
+        fontFamily: 'Montserrat-Medium',
+        fontSize: 16,
+        paddingHorizontal:10,
+        color:'rgb(74,74,74)'
+   },
+   selectBox: {
+       flexDirection:'row',
+       marginVertical:10
+    }
 })
 
 export default DeleteAccountScreen;

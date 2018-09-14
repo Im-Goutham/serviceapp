@@ -7,10 +7,9 @@ import FindJobsStackNavigator from './FindJobsStackNavigator';
 import MyJobsStackNavigator from './MyJobsStackNavigator';
 import PostJobScreen from '../screens/PostJobScreen';
 import FindHelpScreen from '../screens/FindHelpScreen';
-import MyJobsScreen from '../screens/MyJobsScreen';
 import FavouriteScreen from '../screens/FavouriteScreen';
 import NotificationsScreen from '../screens/NotificationsScreen';
-import ChatsScreen from '../screens/ChatsScreen';
+import ChatStackNavigator from './ChatStackNavigator';
 import MyRequestsScreen from '../screens/MyRequestsScreen';
 import TrackStackNavigator from './TrackStackNavigator';
 import AccountScreen from '../screens/AccountScreen';
@@ -44,7 +43,7 @@ export default createDrawerNavigator({
         screen: NotificationsScreen
      },
      chats: {
-        screen: ChatsScreen
+        screen: ChatStackNavigator
      },
     myRequests: {
         screen: MyRequestsScreen
@@ -62,7 +61,7 @@ export default createDrawerNavigator({
         screen: SettingsStackNavigator
      }
 },{
-  initialRouteName: 'homePage',
+  initialRouteName: 'chats',
     contentComponent: SideMenu,
     drawerWidth: 300
 });

@@ -86,7 +86,7 @@ class ChatList extends Component {
         onClose={() => console.log('===close') }
         scroll={event => console.log('scroll event') }
       >
-       
+       <TouchableOpacity   onPress={() => {this.props.navigation.navigate('message')}}>
           <View style={styles.servicesBox} >
             <View style={{flex:1,flexDirection:'row'}}>
                 <View style={{flex:2}}>
@@ -104,7 +104,7 @@ class ChatList extends Component {
                  </View> 
             </View>    
           </View>
-
+          </TouchableOpacity>
       </Swipeout>
     );
   }
