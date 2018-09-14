@@ -9,7 +9,7 @@ export default createStackNavigator({
        rating: { screen: RatingScreen },
    },{
      index: 0,
-     initialRouteName: 'rating',
+     initialRouteName: 'account',
      headerMode: 'none',
      navigationOptions: {
        gesturesEnabled: false
