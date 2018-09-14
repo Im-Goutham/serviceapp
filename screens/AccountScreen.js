@@ -599,3 +599,4 @@ textStyle: {
 })
 
 export default connect(null, actions)(UserProfileScreen);
+// export ANDROID_HOME=/Users/indianic/Library/Android/sdk

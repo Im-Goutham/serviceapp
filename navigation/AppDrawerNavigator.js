@@ -14,12 +14,9 @@ import MyRequestsScreen from '../screens/MyRequestsScreen';
 import TrackStackNavigator from './TrackStackNavigator';
 import AccountScreen from '../screens/AccountScreen';
 import SubscriptionScreen from '../screens/SubscriptionScreen';
+import SettingsScreen from '../screens/SettingsScreen';
+import AcountStackNavigator from './AcountStackNavigator';
 import SettingsStackNavigator from './SettingsStackNavigator';
-
-
-
-
-
 export default createDrawerNavigator({
     homePage: {
         screen: HomeScreen
@@ -52,7 +49,7 @@ export default createDrawerNavigator({
         screen: TrackStackNavigator
     },
      account: {
-        screen: AccountScreen
+        screen: AcountStackNavigator
      },
      subscription: {
         screen: SubscriptionScreen
