@@ -12,11 +12,12 @@ import NotificationsScreen from '../screens/NotificationsScreen';
 import ChatStackNavigator from './ChatStackNavigator';
 import MyRequestsScreen from '../screens/MyRequestsScreen';
 import TrackStackNavigator from './TrackStackNavigator';
-import AccountScreen from '../screens/AccountScreen';
 import SubscriptionScreen from '../screens/SubscriptionScreen';
-import SettingsScreen from '../screens/SettingsScreen';
 import AcountStackNavigator from './AcountStackNavigator';
 import SettingsStackNavigator from './SettingsStackNavigator';
+
+
+
 export default createDrawerNavigator({
     homePage: {
         screen: HomeScreen
@@ -58,7 +59,7 @@ export default createDrawerNavigator({
         screen: SettingsStackNavigator
      }
 },{
-  initialRouteName: 'findJobs',
+  initialRouteName: 'homePage',
     contentComponent: SideMenu,
     drawerWidth: 300
 });

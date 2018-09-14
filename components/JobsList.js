@@ -11,19 +11,19 @@ let joblist = {
     {
       jobtitle: 'Need Cook',
       icon: require('../assets/icons/crown.png'),
-      image: require('../images/tutorial.png'),
+      image: require('../images/service1.png'),
       detail: "Lorem Ipsum has been the industrys standard dummy text ever",
     },
     {
       jobtitle: 'Need Carpenter',
       icon: require('../assets/icons/crown.png'),
-      image: require('../images/tutorial.png'),
+      image: require('../images/service2.png'),
       detail: "Lorem Ipsum has been the industrys standard dummy text ever",
     },
     {
       jobtitle: 'Need Cook',
       icon: require('../assets/icons/crown.png'),
-      image: require('../images/tutorial.png'),
+      image: require('../images/service3.png'),
       detail: "Lorem Ipsum has been the industrys standard dummy text ever",
     },
   ]
@@ -131,26 +131,26 @@ class JobsList extends Component {
                 </TouchableHighlight>
               </View>
             </View>
-            <View style={{flex:1,flexDirection:'row',marginTop:0, backgroundColor:"transparent"}}>
-                <View style={{flex:1, backgroundColor:"transparent"}}>
+            <View style={{flex:1,flexDirection:'row',marginTop:0,}}>
+                <View style={{flex:2, backgroundColor:"transparent",justifyContent:'center',alignItems:'center'}}>
                     <Image
-                      style={{width:"100%", height:100, borderRadius:10}}
+                      style={{width:"100%", height:100, borderRadius:10,}}
                       source={data.image}
                       resizeMode="contain" resizeMethod="resize"/>
                  </View>
-                 <View style={{flex:3,flexDirection:'column', backgroundColor:"transparent",padding:10}}>
-                   <View style={{flex:1}}>
+                 <View style={{flex:3,flexDirection:'column',justifyContent:'space-between',paddingHorizontal:10}}>
+                   <View >
                      <Text style={{fontSize:15, color:"#9B9B9B", fontFamily:"Montserrat-Medium"}} numberOfLines={2}>{data.detail}</Text>
                    </View>
-                   <View style={{flexDirection:'column',marginTop:5}}>
-                     <View style={{flex:2}}>
-                       <Text style={{fontSize:12}}><Icon style={{color:'#007FFA',fontSize:20}} active name="ios-calendar-outline" /> <Text style={{paddingLeft:5, fontFamily:"Montserrat-Regular",fontSize:18,}}>Before the 19 Sep 2018</Text></Text>
+                   <View style={{flexDirection:'column'}}>
+                     <View>
+                       <Text style={{fontSize:12}}><Image style={{width:15,height:15}} source={require('../assets/icons/calender.png')}   resizeMode="contain" resizeMethod="resize"/> <Text style={{paddingLeft:5, fontFamily:"Montserrat-Regular",fontSize:14,color:'rgb(101,101,101)'}}>Before the 19 Sep 2018</Text></Text>
                      </View>
-                     <View style={{flex:1, flexDirection:'row', justifyContent: 'space-between'}}>
-                       <Text style={{fontSize:18,}}><Icon style={{color:'#c33c4c',fontSize:20}} active name="md-pin" /> <Text style={{paddingLeft:5, fontFamily:"Montserrat-Light"}}>3 km </Text></Text>
-                       <View style={{flexDirection:"row"}}>
-                         <Text style={{fontSize:16,color:'#000', fontFamily:"Montserrat-Bold"}}>Budget : </Text>
-                           <Text style={{fontSize:16,color:'#008000', fontFamily:"Montserrat-Bold"}}>$240</Text>
+                     <View style={{flexDirection:'row', justifyContent: 'space-between'}}>
+                       <View style={{flex:1}}><Text style={{fontSize:18,}}><Image style={{width:15,height:15}} source={require('../assets/icons/location_red.png')}   resizeMode="contain" resizeMethod="resize"/>  <Text style={{paddingLeft:5,fontSize:14, fontFamily:"Montserrat-Light"}}>3 km </Text></Text></View>
+                       <View style={{flex:1,flexDirection:'row'}}>
+                         <Text style={{fontSize:14,color:'rgb(74,74,74)', fontFamily:"Montserrat-Bold"}}>Budget : </Text><Text style={{fontSize:14,color:'rgb(80,174,87)', fontFamily:"Montserrat-Bold"}}>$240</Text>
+
                        </View>
                       </View>
                    </View>
@@ -199,17 +199,18 @@ var styles = StyleSheet.create({
     flex: 1
   },
   li: {
-    backgroundColor: '#fff',
+    backgroundColor: 'white',
     borderRadius:10,
     borderBottomColor: '#eee',
     borderColor: '#9B9B9B',
     // borderWidth: 1,
     paddingHorizontal: 10,
+    paddingVertical:20,
     marginBottom:5,
-    // shadowOffset: { width:  0, height:  4 },
-    // shadowOpacity: 1,
-    // shadowRadius:  2,
-    elevation:  2,
+    shadowOffset: { width:  0, height:  2 },
+    shadowOpacity: 0.2,
+    shadowRadius:  2,
+    elevation:  1,
     // flex:1
   },
   liText: {

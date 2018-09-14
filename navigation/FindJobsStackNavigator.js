@@ -10,7 +10,7 @@ export default createStackNavigator({
     reviewrating: { screen: ReviewRating }
    },{
      index: 0,
-     initialRouteName: 'jobDetail',
+     initialRouteName: 'findJobs',
      headerMode: 'none',
      navigationOptions: {
        gesturesEnabled: false
