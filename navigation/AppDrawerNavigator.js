@@ -58,7 +58,7 @@ export default createDrawerNavigator({
         screen: SettingsStackNavigator
      }
 },{
-  initialRouteName: 'chats',
+  initialRouteName: 'findJobs',
     contentComponent: SideMenu,
     drawerWidth: 300
 });

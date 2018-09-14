@@ -18,26 +18,14 @@ import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import Modal from 'react-native-modalbox';
 import HeaderScreen from './HeaderScreen';
-import PhotoGrid from '../components/PhotoGrid';
+import PhotoGallery from '../components/PhotoGallery';
 var {height, width} = Dimensions.get('window');
 let tabItems = ["List View", "Map View"];
 
 let logo = require('../images/logo.png');
 let menu = require('../assets/icons/menu.png');
 let border_img = require('../images/border_img.png');
-const images = [
-    'https://drscdn.500px.org/photo/216465193/m%3D2048_k%3D1_a%3D1/dda61fd7cea5013f8ebe7661b7abea3a',
-    'https://drscdn.500px.org/photo/215467843/m%3D2048_k%3D1_a%3D1/344703e86f31e1fffb2d63effa2cee33',
-    'https://drscdn.500px.org/photo/216340727/m%3D2048_k%3D1_a%3D1/20d583e15467fb39d06d48131767edc2',
-    'https://drscdn.500px.org/photo/215498077/m%3D2048_k%3D1_a%3D1/f79e906eb96938807f6f9d758fc652fd',
-    'https://drscdn.500px.org/photo/216559713/m%3D2048_k%3D1_a%3D1/393ef5251fa94964fe62cad52a416b7e',
-    // 'https://drscdn.500px.org/photo/214943889/m%3D2048_k%3D1_a%3D1/90bd2e3619dfcaae53fed683561aae1b',
-    // 'https://drscdn.500px.org/photo/216158509/m%3D2048_k%3D1_a%3D1/cf70d51aab6ca4c4a3c1ecc225c69990',
-    // 'https://drscdn.500px.org/photo/216111469/m%3D2048_k%3D1_a%3D1/d2d83296c838258095dbf2bffda70602',
-    // 'https://drscdn.500px.org/photo/216051623/m%3D2048_k%3D1_a%3D1/5a3732bb413f240ad71b8279b038a3ff',
-    // 'https://drscdn.500px.org/photo/216047335/m%3D2048_k%3D1_a%3D1/4237ac4606474f0ec7ccc05ca311772e',
-    // 'https://drscdn.500px.org/photo/216000289/m%3D2048_k%3D1_a%3D1/5ac2a21092f9281feef3ab8484d2b19c'
-]
+
 export  default class JobDetailScreen extends Component {
     constructor(){
         super();
@@ -167,21 +155,14 @@ export  default class JobDetailScreen extends Component {
                     />
                     <ScrollView>
                         <View style={styles.container}>
-                            <View style={{ height:168, backgroundColor:"#fff", justifyContent:"center", alignItems:"center"}}>
-                                <PhotoGrid
-                                    source={images}
-                                    onPressImage={()=>console.log("hello")}
-                                    height={168}
-                                    width={width-20}
-                                />
-                            </View>
+                                <PhotoGallery />
                             <View style={styles.desc}>
                                 <View style={styles.budget}>
                                     <View style={{flexDirection:"row", height:40,width:"40%" , justifyContent:'center', alignItems:"center"}}>
                                         <Text style={styles.budgettext}>Budget:</Text>
-                                        <Text style={styles.pricetext}>$ 240</Text>
+                                        <Text style={styles.pricetext}>$240</Text>
                                     </View>
-                                    <View style={{flexDirection:"row", height:40,width:"40%", backgroundColor:"transparent" , justifyContent:'center', alignItems:"center"}}>
+                                    <View style={{flexDirection:"row", height:40,width:"40%", backgroundColor:"transparent" , justifyContent:'flex-end', alignItems:"center"}}>
                                         <Image source={require('../assets/icons/location_red.png')} style={styles.pinimage} resizeMode="contain" resizeMethod="resize"/>
                                         <Text style={styles.distance}>3 mi</Text>
                                     </View>
@@ -221,35 +202,35 @@ export  default class JobDetailScreen extends Component {
                                 </View>
                             </View>
                             <View style={styles.customerinfo}>
-                                <Text style={styles.categorytitle}>Customer's info</Text>
+                                <Text style={styles.textStyle}>Customer's info</Text>
                                 <View style={{flexDirection:"row", paddingVertical:20}}>
                                     <View style={{width: "30%"}}>
                                         <Image source={require('../images/svp2.png')} style={{width:"100%", height:70}} resizeMode="contain" resizeMethod="resize"/>
                                     </View>
                                     <View style={{width: "70%", justifyContent: "space-between"}}>
                                         <View style={{flexDirection:"row",}} >
-                                            <Text style={{fontFamily:"Montserrat-Medium", fontSize:18}}>Trevors S.</Text>
-                                            <Image source={require('../assets/icons/crown.png')} style={{width:20, height:20}} resizeMode="contain" resizeMethod="resize"/>
+                                            <Text style={{fontFamily:"Montserrat-Medium", fontSize:16}}>Trevors S.</Text>
+                                            <Image source={require('../assets/icons/crown.png')} style={{width:20, height:20,paddingHorizontal:20}} resizeMode="contain" resizeMethod="resize"/>
                                         </View>
                                         <View style={{flexDirection: "row", alignItems:"center",paddingVertical:5}}>
-                                            <View style={{flexDirection:"row", borderRightWidth:2,paddingRight: 10}} >
-                                                <Image source={require('../assets/icons/star_gold.png')} style={{width:20, height:20}} resizeMode="contain" resizeMethod="resize"/>
+                                            <View style={{flexDirection:"row", borderRightWidth:0.3,paddingRight: 10}} >
+                                                <Image source={require('../assets/icons/star_gold.png')} style={{width:15, height:15}} resizeMode="contain" resizeMethod="resize"/>
                                                 <Text style={{
-                                                    fontSize:18,
+                                                    fontSize:14,
                                                     color:"#000",
-                                                    fontFamily:"Montserrat-Regular",
+                                                    fontFamily:"Montserrat-Bold",
                                                     // paddingRight: 10
                                                     }}> 4 </Text>
                                             </View>
                                             <Text style={{
-                                                fontSize:18,
+                                                fontSize:14,
                                                 color:"rgb(61, 133, 239)",
                                                 fontFamily:"Montserrat-Regular",
                                                 paddingLeft: 10
-                                            }}> 2 Reviews</Text>
+                                            }}> 2  Reviews</Text>
                                         </View>
                                         <Text style={{
-                                            fontSize:18,
+                                            fontSize:14,
                                             color:"rgb(61, 133, 239)",
                                             fontFamily:"Montserrat-Bold"
                                         }}>Other posted jobs</Text>
@@ -298,9 +279,9 @@ export  default class JobDetailScreen extends Component {
                     style={{
                         bottom:30,
                         right:10,
-                        width:80, height:80, backgroundColor:"blue", justifyContent:"center", alignItems:"center" ,position:"absolute",
+                        width:60, height:60, backgroundColor:"blue", justifyContent:"center", alignItems:"center" ,position:"absolute",
                         borderRadius:40}}>
-                    <Image source={require('../assets/icons/chat_white.png')} style={{width:"100%", height:40}} resizeMode="contain" resizeMethod="resize"/>
+                    <Image source={require('../assets/icons/chat_white.png')} style={{width:"100%", height:30}} resizeMode="contain" resizeMethod="resize"/>
                 </LinearGradient>
             </View>
         );
@@ -314,6 +295,7 @@ const styles=StyleSheet.create({
     },
     desc:{
         // borderWidth:StyleSheet.hairlineWidth,
+        paddingHorizontal:20,
         marginTop:10,
         borderRadius:10,
         backgroundColor:"#fff",
@@ -324,6 +306,7 @@ const styles=StyleSheet.create({
     },
     category:{
         marginVertical:10,
+        paddingHorizontal:20,
         borderRadius:10,
         backgroundColor:"#fff",
         shadowOffset: { width:  0, height:  2 },
@@ -339,66 +322,71 @@ const styles=StyleSheet.create({
         // backgroundColor:"#666"
     },
     budgettext:{
-        fontSize:18,
-        color:"#000",
+        fontSize:15,
+        color:"rgb(74,74,74)",
         fontFamily:"Montserrat-Bold"
     },
     pricetext:{
-        fontSize:18,
+        fontSize:15,
+        paddingHorizontal:10,
         color:"#009933"
     },
     pinimage:{
-        width:20,
-        height:20
+        width:16,
+        height:16
     },
     distance:{
-        fontSize:20
+        fontSize: 15,
+        paddingHorizontal:10,
+        fontFamily: 'Montserrat-Regular',
+        color:"rgb(90,90,90)"
     },
     deadline:{
         height:54,
-        paddingHorizontal: 20,
         justifyContent:"center"
     },
     title:{
         color:"rgb(244, 41, 34)",
-        fontSize:18,
-        fontFamily:"Montserrat-Regular"
+        fontSize:15,
+        fontFamily:"Montserrat-SemiBold"
     },
     date:{
-        // color:"#000",
-        fontSize:18,
+        color:"rgb(83,83,83)",
+        fontSize:14,
+        paddingVertical:5,
         fontFamily:"Montserrat-Regular"
     },
     detail:{
-        padding:10
+        paddingVertical:10
     },
     detaildesc:{
         fontFamily:"Montserrat-Medium",
-        fontSize:18,
+        fontSize:15,
         lineHeight: 25,
-        color:"rgb(161,161,161)",
-        paddingHorizontal:10
+        color:"rgb(163,163,163)",
     },
     categoryrow:{
         flexDirection:"row",
         justifyContent :"space-between",
         // height:100,
         alignItems:'center',
-        paddingVertical:20,
-        paddingHorizontal:10,
+        paddingTop:20,
+        paddingBottom:10,
+
         // marginVertical:2,
         // backgroundColor:"red"
     },
     categorytitle:{
-        fontFamily:"Montserrat-Bold",
-        fontSize:18,
+        fontFamily:"Montserrat-SemiBold",
+        fontSize:14,
         paddingVertical:3,
         color:"rgb(74,74,74)"
     },
     categorytext:{
         fontFamily:"Montserrat-Regular",
-        fontSize:17,
-        color:"rgb(74,74,74)"
+        paddingVertical: 5,
+        fontSize:13,
+        color:"rgb(93,93,93)"
     },
     customerinfo:{
         // marginVertical:10,
@@ -423,8 +411,8 @@ const styles=StyleSheet.create({
         elevation: 1
     },
     textStyle: {
-        fontFamily:"Montserrat-Bold",
-        fontSize:17
+        fontFamily:"Montserrat-SemiBold",
+        fontSize:16
     },
     categoryBox: {
         flexDirection:'column',
