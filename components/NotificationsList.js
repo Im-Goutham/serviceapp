@@ -1,11 +1,8 @@
-//  include react-native-swipeout
-import Swipeout from 'react-native-swipeout';
 import React, {Component} from 'react';
 import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,TouchableOpacity,ImageBackground} from 'react-native';
 import {Icon} from 'native-base';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import LinearGradient from 'react-native-linear-gradient';
 
 class NotificationsList extends Component {
 
@@ -51,42 +48,7 @@ class NotificationsList extends Component {
   }
 
   _renderRow(rowData, sectionID, rowID) {
-    const btnsTypes = [
-        {
-            component: <View style={{
-                flex: 1,
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-                alignContent: 'center'
-              }}>
-              <Icon name='md-heart-outline' style={{color: 'white', fontSize: 27}}/>
-            </View>,
-            backgroundColor: '#007FFA',
-            onPress:()=>{console.log(rowData.text)}
-        }
-      ];
-
     return (
-      <Swipeout
-        close={!(this.state.sectionID === sectionID && this.state.rowID === rowID)}
-        left={null}
-        right={btnsTypes}
-        rowID={rowID}
-        sectionID={sectionID}
-        autoClose={rowData.autoClose}
-        backgroundColor={'rgb(249,252,255)'}
-        onOpen={(sectionID, rowID) => {
-          this.setState({
-            sectionID,
-            rowID,
-          })
-        }}
-        onClose={() => console.log('===close') }
-        scroll={event => console.log('scroll event') }
-      >
-       
           <View style={styles.servicesBox} >
             <View style={{flex:1,flexDirection:'row'}}>
                 <View style={{flex:2}}>
@@ -105,8 +67,6 @@ class NotificationsList extends Component {
                  </View> 
             </View>    
           </View>
-
-      </Swipeout>
     );
   }
 

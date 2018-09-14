@@ -9,7 +9,7 @@ export default createStackNavigator({
     message: { screen: MessageScreen }
    },{
      index: 0,
-     initialRouteName: 'message',
+     initialRouteName: 'chats',
      headerMode: 'none',
      navigationOptions: {
        gesturesEnabled: false

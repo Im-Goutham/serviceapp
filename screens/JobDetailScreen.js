@@ -7,8 +7,7 @@ import {
     TouchableOpacity,
     Dimensions,
     Platform,
-    Text,
-    TouchableHighlight
+    Text
 } from 'react-native';
 import { Icon } from 'native-base'
 import Advertisement from '../components/Advertisement';
@@ -240,7 +239,7 @@ export default class JobDetailScreen extends Component {
                             <View style={styles.servicesBox}>
                                 <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                     <Text style={styles.textStyle}>See people who applied</Text>
-                                    <Text style={{ fontSize: 11, color: '#3E85EF', fontFamily: 'Montserrat-Light' }}>VIEW ALL</Text>
+                                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('allServiceprovider')}}><Text style={{ fontSize: 11, color: '#3E85EF', fontFamily: 'Montserrat-Light' }}>VIEW ALL</Text></TouchableOpacity>
                                 </View>
                                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20 }}>
                                     <ScrollView

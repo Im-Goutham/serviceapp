@@ -29,18 +29,23 @@ class AllServiceList extends Component {
             photoShow:false
         };
     }
+
+    
     _renderRow(rowData, sectionID, rowID) {
         const btnsTypes = [{
-            component: <View style={{
-                flex: 1,
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-                alignContent: 'center'
-            }}>
-                <Icon name='md-heart-outline' style={{color: 'white', fontSize: 27}}/>
-            </View>,
+            component:   <LinearGradient
+                            colors={['#F42922', '#A50600']}
+                            start={{x: 0, y: 0}}
+                            end={{x: 1, y: 0}}
+                            style={{  flex: 1,
+                                flexDirection: 'row',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                alignSelf: 'center',
+                                alignContent: 'center'}}>
+                               <Icon name='md-heart-outline' style={{color: 'white', fontSize: 27}}/>
+                       </LinearGradient>
+               ,
             backgroundColor: '#007FFA',
             onPress:()=>{console.log(rowData.text)}
         }];
@@ -64,30 +69,40 @@ class AllServiceList extends Component {
                 <View style={styles.servicesBox} >
                     <View style={{backgroundColor:"transparent", paddingTop: 25,  }}>
                         <View style={{flex:1,flexDirection:'row', paddingHorizontal:10}}>
-                            <View style={{flex:2}}>
+                            <View style={{flex:2,justifyContent:'center',alignItems:'center'}}>
                                 <View style={styles.imageShadow}>
                                     <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
                                     <Image source={require('../images/check.png')} style={styles.check}/>
                                 </View>
                             </View>
-                            <View style={{flex:7,paddingHorizontal:20}}>
+                            <View style={{flex:7,paddingHorizontal:20,paddingVertical:10,justifyContent:'space-between'}}>
                                 <View style={{flex:1}}>
-                                    <Text style={{fontSize:17,color:'rgb(62,136,235)'}}>You have a new message from <Text style={{fontWeight:'bold'}}>Warren Pratt</Text></Text>
-                                    <Text style={{fontSize:12,color:'rgb(155,155,155)',marginVertical:10}}>On <Text style={{fontWeight:'bold'}}>06/18/2018</Text> at <Text style={{fontWeight:'bold'}}>08:00 PM</Text></Text>
+                                    <Text style={{fontSize:17,color:'rgb(85,85,85)'}}>Clayton L.</Text>
+                                     <View style={{flexDirection:'row',paddingVertical:5}}>
+                                       <Image source={require('../assets/icons/star_gold.png')} style={{widh:15,height:15}} resizeMode="contain" resizeMethod="resize" />
+                                       <Text style={{fontFamily: 'Montserrat-Bold'}}>5</Text>
+                                     </View>
+                                    <Text style={{fontSize:14,color:'rgb(155,155,155)'}}>Plumber & 5 More</Text>
                                 </View>
                             </View>
                         </View>
                         <View style={{flexDirection:"row", justifyContent:'space-between'}}>
-                            <TouchableOpacity style={{ width : "30%", backgroundColor:"#CCCCCC", height : 54, borderBottomLeftRadius:10,justifyContent:"center", alignItems:"center"}}>
-                                    <Text style={{color:"#000", fontFamily:"Montserrat-Regular", fontSize:18}}>Reject</Text>
+                            <TouchableOpacity style={{ width : "30%", backgroundColor:"#CCCCCC", height : 40, borderBottomLeftRadius:10,justifyContent:"center", alignItems:"center"}}>
+                                <LinearGradient
+                                        colors={['#F2F2F2', '#CCCCCC']}
+                                        start={{x: 0, y: 0}}
+                                        end={{x: 1, y: 0}}
+                                        style={{height : 40, backgroundColor:"transparent", width : "100%", borderBottomRightRadius:10,  justifyContent:"center", alignItems:"center"}}>
+                                        <Text style={{color:"black", fontFamily:"Montserrat-Regular", fontSize:15}}>REJECT</Text>
+                                    </LinearGradient>
                             </TouchableOpacity>
                             <TouchableOpacity style={{ width : "70%"}}>
                                 <LinearGradient
-                                    colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                                    colors={['#3EBDEF', '#3E85EF']}
                                     start={{x: 0, y: 0}}
                                     end={{x: 1, y: 0}}
-                                    style={{height : 54, backgroundColor:"transparent", width : "100%", borderBottomRightRadius:10,  justifyContent:"center", alignItems:"center"}}>
-                                    <Text style={{color:"#fff", fontFamily:"Montserrat-Regular", fontSize:18}}>Accept</Text>
+                                    style={{height : 40, backgroundColor:"transparent", width : "100%", borderBottomRightRadius:10,  justifyContent:"center", alignItems:"center"}}>
+                                    <Text style={{color:"#fff", fontFamily:"Montserrat-Bold", fontSize:15}}>ACCEPT</Text>
                                 </LinearGradient>
                             </TouchableOpacity>
                         </View>

@@ -53,17 +53,24 @@ class ChatList extends Component {
   _renderRow(rowData, sectionID, rowID) {
     const btnsTypes = [
         {
-            component: <View style={{
-                flex: 1,
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                alignSelf: 'center',
-                alignContent: 'center'
-              }}>
-              <Icon name='md-heart-outline' style={{color: 'white', fontSize: 27}}/>
-            </View>,
-            backgroundColor: '#007FFA',
+            component:  <LinearGradient
+            colors={['#F42922', '#A50600']}
+            start={{x: 0, y: 0}}
+            end={{x: 1, y: 0}}
+            style={{
+              flex:2,
+              width:70,
+              marginVertical:5,
+              justifyContent: 'center',
+              alignItems: 'center',
+              alignSelf: 'center',
+              alignContent: 'center',
+              borderRadius:10
+            }}>
+                <Image style={{width:30,height:30}} source={require('../assets/icons/user_block.png')}   resizeMode="contain" resizeMethod="resize"/>
+                <Text style={{color:'white', fontFamily:'Montserrat-Bold',paddingVertical:5}}>Block</Text>
+              </LinearGradient>,
+             backgroundColor: 'transparent',
             onPress:()=>{console.log(rowData.text)}
         }
       ];
