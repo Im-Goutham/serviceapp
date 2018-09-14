@@ -164,7 +164,7 @@ class RatingScreen extends Component {
     commmentsList(){
         return comments.data.map((data, index)=>{
             return(
-                <View style={styles.servicesBox} >
+                <View style={styles.servicesBox} key={index} >
                     <View style={{flex:1,flexDirection:'row'}}>
                         <View style={{flex:3}}>
                             <View style={styles.imageShadow}>
