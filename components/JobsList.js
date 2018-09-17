@@ -86,7 +86,7 @@ class JobsList extends Component {
                 }
             },
         ];
-        let i = 0
+        let i = 1;
         return (
             <Swipeout
                 close={!(this.state.sectionID === sectionID && this.state.rowID === rowID)}
@@ -136,18 +136,28 @@ class JobsList extends Component {
                                 justifyContent: 'center'
                             }}>
                                 {
-                                    i===1 ?
-                                <TouchableHighlight style={styles.button} onPress={() => console.warn("nejkhknz")}>
-                                    <LinearGradient
-                                        colors={['#3E85EF', '#3EBDEF']}
-                                        start={{x: 0, y: 0}}
-                                        end={{x: 1, y: 0}}
-                                        style={styles.button}>
-                                        <Text style={styles.btnText}>APPLY</Text>
-                                    </LinearGradient>
-                                </TouchableHighlight>
-                                    :
-                                        <Icon name='options-vertical' type ={"SimpleLineIcons"}style={{color: 'white', fontSize: 27, textAlign: 'center'}}/>
+                                    i===0 ?
+                                        <TouchableHighlight style={styles.button} onPress={() => console.warn("nejkhknz")}>
+                                            <LinearGradient
+                                                colors={['#3E85EF', '#3EBDEF']}
+                                                start={{x: 0, y: 0}}
+                                                end={{x: 1, y: 0}}
+                                                style={styles.button}>
+                                                <Text style={styles.btnText}>APPLY</Text>
+                                            </LinearGradient>
+                                        </TouchableHighlight>
+                                        :
+                                        <TouchableHighlight style={{
+                                            alignItems:"flex-end",
+                                            justifyContent:'flex-end',
+                                            // alignItems:'center',
+                                            height: 40,
+                                            width:"100%",
+                                            // backgroundColor:"red",
+                                            // borderRadius:20,
+                                        }} onPress={() => console.warn("nejkhknz")}>
+                                            <Icon name='options-vertical' type ={"SimpleLineIcons"}style={{color: '#000', fontSize: 27, textAlign: 'center'}}/>
+                                        </TouchableHighlight>
                                 }
                             </View>
                         </View>

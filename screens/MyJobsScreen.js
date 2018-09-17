@@ -62,7 +62,7 @@ class MyJobScreen extends Component {
   tabrender(){
     return tabItems.map((value, index)=>{
       return (
-          <View>
+          <View key={index}>
         <TouchableOpacity key={index} onPress={()=>this.setState({
             tabindex: index
           })}

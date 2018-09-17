@@ -47,7 +47,6 @@ export default class JobDetailScreen extends Component {
                 { name: 'Luis', image: require('../images/svp2.png') },
                 { name: 'Clayton', image: require('../images/svp3.png') },
             ],
-
             screens: [
                 {
                     title: "Find Jobs",
@@ -113,7 +112,10 @@ export default class JobDetailScreen extends Component {
         };
     }
     render() {
+
+        console.log(this.props.navigation);
         let { categories, serviceProviders, screens } = this.state;
+        let i=1
         return (
             <View style={{ flex: 1 }}>
                 <LinearGradient
@@ -144,7 +146,7 @@ export default class JobDetailScreen extends Component {
                                         <TouchableOpacity style={{ width: "50%", height: 54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}>
                                             <Icon name='md-search' style={{ color: '#fff', fontSize: 25, fontWeight: 'bold' }} />
                                         </TouchableOpacity>
-                                        <TouchableOpacity onPress={() => this.refs.modal1.open()} style={{ width: "50%", height: 54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}>
+                                        <TouchableOpacity  style={{ width: "50%", height: 54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}>
                                             <Icon name='md-person' style={{ color: '#fff', fontSize: 25, fontWeight: 'bold' }} />
                                         </TouchableOpacity>
                                     </View>
@@ -263,25 +265,109 @@ export default class JobDetailScreen extends Component {
                                     </ScrollView>
                                 </View>
                             </View>
+                            {
+                                this.props.navigation.state.routeName != "jobDetail" ?
+                                    <View style={styles.livetrackbox}>
+                                        <TouchableOpacity style={{
+                                            width: "50%",
+                                            height: 120,
+                                            justifyContent: "center",
+                                            alignItems: "center",
+                                            borderRightWidth: 2
+                                        }}>
+                                            <Image source={require('../assets/icons/calander_black.png')}/>
+                                            <TouchableOpacity style={{justifyContent: "center", alignItems: 'center'}}>
+                                                <Text style={{
+                                                    fontSize: 14,
+                                                    color: "rgb(61, 133, 239)",
+                                                    fontFamily: "Montserrat-Bold"
+                                                }}>{'Add to'}</Text>
+                                                <Text style={{
+                                                    fontSize: 14,
+                                                    color: "rgb(61, 133, 239)",
+                                                    fontFamily: "Montserrat-Bold"
+                                                }}>{'Google Calander'}</Text>
+                                            </TouchableOpacity>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity style={{
+                                            width: "50%",
+                                            height: 120,
+                                            justifyContent: "center",
+                                            alignItems: "center"}}>
+                                            <Image source={require('../assets/icons/location_pin_black.png')}/>
+                                            <TouchableOpacity style={{justifyContent: "center", alignItems: 'center'}}>
+                                                <Text style={{
+                                                    // paddingVertical:10,
+                                                    fontSize: 14,
+                                                    color: "rgb(61, 133, 239)",
+                                                    fontFamily: "Montserrat-Bold"}}>
+                                                    {'Live track'}</Text>
+                                                <Text style={{
+                                                    // paddingVertical:10,
+                                                    fontSize: 14,
+                                                    color: "rgb(61, 133, 239)",
+                                                    fontFamily: "Montserrat-Bold"}}>
+                                                    {'service provider'}</Text>
+                                            </TouchableOpacity>
+                                        </TouchableOpacity>
+                                    </View>
+                                    : <View/>
+                            }
+                            {
+                                this.props.navigation.state.routeName != "jobDetail" ?
+                                    <LinearGradient
+                                        colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                                        start={{x: 0, y: 0}}
+                                        end={{x: 1, y: 0}} style={{
+                                        borderRadius: 27,
+                                        marginVertical: 10
+                                    }}>
+                                        <TouchableOpacity
+                                            style={{height: 54, alignItems: "center", justifyContent: "center",}}>
+                                            <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>MARK
+                                                JOB AS COMPLETED</Text>
+                                        </TouchableOpacity>
+                                    </LinearGradient>
+                                    : <View/>
+                            }
+                            {
+                                this.props.navigation.state.routeName != "jobDetail" ?
+                                    <TouchableOpacity style={{ height:54,alignItems:"center", justifyContent:"center", borderRadius:27, backgroundColor:"#fff", marginBottom: 10 }}>
+                                        <Text style={{ fontFamily: "Montserrat-bold", fontSize: 20, color: "#666" }}>RATE & REVIEW</Text>
+                                    </TouchableOpacity>
+                                    :
+                                    <View/>
+                            }
                         </View>
-                        <View style={{ height: Platform.OS === 'ios' ? 100 : 64, backgroundColor: "transparent", justifyContent: "flex-start" }}>
-                            <TouchableOpacity style={{ height: 64, justifyContent: "center", alignItems: "center" }} >
-                                <Text style={{ fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff" }}>Apply for this job</Text>
-                            </TouchableOpacity>
-                        </View>
+                        {
+                                this.props.navigation.state.routeName === "jobDetail" ?
+                                <View style={{
+                                    height: Platform.OS === 'ios' ? 100 : 64,
+                                    backgroundColor: "transparent",
+                                    justifyContent: "flex-start"
+                                }}>
+                                    <TouchableOpacity
+                                        style={{height: 64, justifyContent: "center", alignItems: "center"}}>
+                                        <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>Apply
+                                            for this job</Text>
+                                    </TouchableOpacity>
+                                </View>
+                                :
+                                <View/>
+                        }
+                        <LinearGradient
+                            colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                            start={{ x: 0, y: 0 }}
+                            end={{ x: 1, y: 0 }}
+                            style={{
+                                bottom: 30,
+                                right: 10,
+                                width: 60, height: 60, backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
+                                borderRadius: 40
+                            }}>
+                            <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
+                        </LinearGradient>
                     </ScrollView>
-                </LinearGradient>
-                <LinearGradient
-                    colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
-                    start={{ x: 0, y: 0 }}
-                    end={{ x: 1, y: 0 }}
-                    style={{
-                        bottom: 30,
-                        right: 10,
-                        width: 60, height: 60, backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
-                        borderRadius: 40
-                    }}>
-                    <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
                 </LinearGradient>
             </View>
         );
@@ -439,4 +525,11 @@ const styles = StyleSheet.create({
         bottom: 0,
         left: 0
     },
+    livetrackbox:{
+        flexDirection : 'row',
+        // shadowOffset: { width: 0, height: 2 },
+        // shadowOpacity: 0.2,
+        // shadowRadius: 2,
+        // elevation: 1
+    }
 })

@@ -23,6 +23,7 @@ import ChatMessage from '../components/ChatMessage';
 import HeaderScreen from './HeaderScreen';
 
 var {height, width} = Dimensions.get('window');
+const isAndroid = Platform.OS === 'android';
 
 let menu = require('../assets/icons/menu.png');
 let back_arrow = require('../assets/icons/back-arrow.png');
@@ -231,7 +232,7 @@ class MessageScreen extends Component {
    
       return (
         <View style={{flex:1,flexDirection:'row'}}>
-          <View style={{flex:9,marginBottom:15,paddingLeft:20}}>
+          <View style={{flex:9,marginBottom: isAndroid ? 0 : 15,paddingLeft:20}}>
                <Input 
                    placeholder='Type here...'
                    value={this.state.message}
@@ -239,7 +240,7 @@ class MessageScreen extends Component {
                    onSubmitEditing={this.onSend}
                    />
           </View>
-          <View style={{flex:1,alignItems:'center',paddingRight:20}}>
+          <View style={{flex:1,marginTop:isAndroid ? 5 : 0,paddingRight:20}}>
              <Image source={require('../assets/icons/mic.png')} style={{ width: '100%', height: 22}} resizeMode="contain" resizeMethod="resize"/>
            </View>
           
