@@ -1,52 +1,175 @@
-
 import React, { Component } from 'react';
-import { View, StyleSheet, ScrollView,Image } from 'react-native';
-import {  Header, Left, Body, Right, Button, Icon, Title,Tab, Tabs ,Text } from 'native-base'
+import {
+    View,
+    StyleSheet,
+    ScrollView,
+    Image,
+    TouchableOpacity,
+    Dimensions,
+    Platform,
+    Text, TouchableHighlight
+} from 'react-native';
+ import {  Icon } from 'native-base'
 import Advertisement from '../components/Advertisement';
 import TrackMap from '../components/TrackMap';
+import Map from '../components/Map';
+import Header from '../components/Header';
+import Modal from 'react-native-modalbox';
+import LinearGradient from 'react-native-linear-gradient';
+// import Icon from 'react-native-vector-icons/EvilIcons';
 
-const TopHeader = (props) => {
-    return  <Header style={{backgroundColor:'white'}}>
-    <Left style={{flex: 1}}>
-        <Button transparent onPress={() => props.navigation.openDrawer()}>
-          <Icon name='ios-menu' style={{color:'black',fontSize:25}}/>
-        </Button>
-      </Left>
-      <Body style={{flex: 6,alignItems:'flex-start'}}>
-        <Title style={{textAlign:'left',paddingBottom:5}}>{props.title}</Title>
-      </Body>
-     <Right style={{flex: 2,flexDirection:'row'}}>
-          <View style={{flex: 1,alignItems:'flex-end'}}><Icon  name='md-search' style={{color:'black',fontSize:25,fontWeight:'bold'}}/></View>
-          <View style={{flex: 1,alignItems:'flex-end'}}><Icon  name='ios-funnel-outline' style={{color:'black',fontSize:24,fontWeight:'bold'}}/></View>
-     </Right>
-  </Header>
+import HeaderScreen from './HeaderScreen';
+
+var {height, width} = Dimensions.get('window');
+let tabItems = ["List View", "Map View"];
+
+let logo = require('../images/logo.png');
+let menu = require('../assets/icons/menu.png');
+let border_img = require('../images/border_img.png');
+
+let maplocations = {
+    data : [
+         {
+      jobtitle: 'Need Cook',
+      icon: require('../assets/icons/crown.png'),
+      image: require('../images/cook.png'),
+      detail: "Lorem Ipsum has been the industrys standard dummy text ever",
+    },
+    {
+      jobtitle: 'Need Carpenter',
+      icon: require('../assets/icons/crown.png'),
+      image: require('../images/tutorial.png'),
+      detail: "Lorem Ipsum has been the industrys standard dummy text ever",
+    },
+    {
+      jobtitle: 'Need Cook',
+      icon: require('../assets/icons/crown.png'),
+      image: require('../images/tutorial.png'),
+      detail: "Lorem Ipsum has been the industrys standard dummy text ever",
+    }
+        ]
 }
 
-class FindJobScreen extends Component {
 
 
+class JobTrackScreen extends Component {
+  constructor(props){
+      super(props);
+      this.state={
+        tabindex : 0
+      }
+  }
+  tabrender(){
+    return tabItems.map((value, index)=>{
+      return (
+        <TouchableOpacity key={index} onPress={()=>this.setState({
+            tabindex: index
+          })}
+          style={{
+          // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
+          height : 40,
+          width: "50%",
+          justifyContent: "space-between",
+          alignItems:'center',
+        }}>
+        <Text
+          style={{
+            color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
+            fontSize: 16,
+            fontFamily: 'Montserrat-Bold'
+          }}>{value}</Text>
+        <View style={{
+            width: 70,
+            height: this.state.tabindex === index ? 3 : 0,
+            backgroundColor: "#fff",
+            borderRadius : 3
+            // borderColor: this.state.tabindex === index ? "#fff": "transparent"
+          }}/>
+      </TouchableOpacity>
+    )
+    })
+  }
 
-     
+
     render() {
        return (
-           <View style={styles.container}>
-               <TopHeader navigation={this.props.navigation} title={'Track the Service Provider'}/>
-               <Advertisement/>
-               <View style={{flex:1}}>
-                     <TrackMap/>
-               </View> 
-               <Advertisement/>
+           <View style={{flex:1}}>
+               <LinearGradient
+                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   start={{x: 0, y: 0}}
+                   end={{x: 1, y: 0}}
+                   style={{
+                       flex: 1
+                   }}>
+                   <HeaderScreen
+                       header={
+                           <Header
+                               navigation={this.props.navigation}
+                               left = {
+                                   <TouchableOpacity
+                                       onPress={() => this.props.navigation.openDrawer()}
+                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
+                                       <Image source={menu} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                   </TouchableOpacity>
+                               }
+                               title={
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Track the Service Provider</Text>
+                               </View>
+                               }
+                               right={
+                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+
+                                   </View>
+                               }
+                           />
+                       }
+                       content={
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
+                       
+                   </View>
+                       }
+                   />
+                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
+                       <Advertisement/>
+                          <TrackMap/>
+                       </View>
+               </LinearGradient>
+              
            </View>
        )
-    }
+  }
 }
 
 const styles = StyleSheet.create({
-      container: {
-          flex:1,
-          padding:5,
-          backgroundColor:'white'
-    }
+  container: {
+    flex:1
+  },
+     modal: {
+    // justifyContent: 'center',
+    // alignItems: 'center'
+  },
+
+  modal2: {
+    height: 230,
+    backgroundColor: "#3B5998"
+  },
+
+  modal3: {
+    height: 300,
+    width: 300
+  },
+    button:{
+    justifyContent:'center',
+    alignItems:'center',
+    width: 100,
+    height: 40,
+    borderRadius:20,
+    // borderWidth: 1,
+    // borderColor: '#008000',
+    paddingTop:5,
+    paddingBottom:5,
+},
 })
 
-export default FindJobScreen;
+export default JobTrackScreen;

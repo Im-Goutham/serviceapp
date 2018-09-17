@@ -113,7 +113,7 @@ export default class JobDetailScreen extends Component {
     }
     render() {
 
-        console.log(this.props.navigation);
+        console.log('params are .. ',this.props.navigation.state);
         let { categories, serviceProviders, screens } = this.state;
         let i=1
         return (

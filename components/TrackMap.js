@@ -18,6 +18,7 @@ export default class RnDirectionsApp extends Component {
         {latitude: 23.022505, longitude: 72.571365},
         {latitude: 23.032469, longitude: 72.491236}
       ],
+        showMap:false
     }
   }
 
@@ -38,7 +39,7 @@ export default class RnDirectionsApp extends Component {
                     longitude : point[1]
                 }
             })
-            this.setState({coords: coords})
+            this.setState({coords: coords,showMap:true})
             return coords
         } catch(error) {
             alert(error)
@@ -49,27 +50,32 @@ export default class RnDirectionsApp extends Component {
   render() {
     return (
       <View>
-        <MapView style={styles.map} initialRegion={{
-          latitude:23.022505, 
-          longitude:72.571365, 
-          latitudeDelta: 0.0922,
-          longitudeDelta: 0.0421
-        }}>
+          {(this.state.showMap)?(
+              <MapView style={styles.map} initialRegion={{
+                  latitude:23.022505,
+                  longitude:72.571365,
+                  latitudeDelta: 0.0922,
+                  longitudeDelta: 0.0421
+                }}>
 
-        <MapView.Polyline 
-            coordinates={this.state.coords}
-            strokeWidth={4}
-            strokeColor="#ff9933"/>
-  {
-         this.state.markers.map((coordinate,key)=>{
-             return   <Marker
-             coordinate={coordinate}
-             key={key}
-           >
-           </Marker>
-         })
-      } 
-        </MapView>
+                {/*<MapView.Polyline*/}
+                    {/*coordinates={this.state.coords}*/}
+                    {/*strokeWidth={4}*/}
+                    {/*strokeColor="#ff9933"/>*/}
+                  {/*<Marker*/}
+                     {/*coordinate={latitude: 23.022505, longitude: 72.571365}*/}
+                     {/*image={require('../assets/icons/map_location_red.png')}*/}
+                   {/*/>*/}
+                   <Marker
+                     coordinate={latitude: 23.022505, longitude: 72.571365}
+                     image={require('../assets/icons/map_location_blue.png')}
+                    />
+
+              </MapView>
+          ):(
+               null
+          )}
+
       </View>
     );
   }
