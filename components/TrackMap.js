@@ -66,10 +66,10 @@ export default class RnDirectionsApp extends Component {
                      {/*coordinate={latitude: 23.022505, longitude: 72.571365}*/}
                      {/*image={require('../assets/icons/map_location_red.png')}*/}
                    {/*/>*/}
-                   <Marker
-                     coordinate={latitude: 23.022505, longitude: 72.571365}
-                     image={require('../assets/icons/map_location_blue.png')}
-                    />
+                   {/*<Marker*/}
+                     {/*coordinate={latitude: 23.022505, longitude: 72.571365}*/}
+                     {/*image={require('../assets/icons/map_location_blue.png')}*/}
+                    {/*/>*/}
 
               </MapView>
           ):(

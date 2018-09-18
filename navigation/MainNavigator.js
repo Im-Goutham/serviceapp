@@ -31,7 +31,7 @@ export default createStackNavigator(
      },
       },{
         index: 0,
-        initialRouteName: 'home',
+        initialRouteName: 'register',
         headerMode: 'none',
         navigationOptions: {
         gesturesEnabled: false
