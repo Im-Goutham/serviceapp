@@ -101,7 +101,7 @@ android {
         applicationId "com.spotjobs"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        multiDexEnabled true 
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
         ndk {
@@ -109,15 +109,15 @@ android {
         }
     }
     signingConfigs {
-        release {
-            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
-                storeFile file(MYAPP_RELEASE_STORE_FILE)
-                storePassword MYAPP_RELEASE_STORE_PASSWORD
-                keyAlias MYAPP_RELEASE_KEY_ALIAS
-                keyPassword MYAPP_RELEASE_KEY_PASSWORD
-            }
-        }
-    } 
+       release {
+           if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+               storeFile file(MYAPP_RELEASE_STORE_FILE)
+               storePassword MYAPP_RELEASE_STORE_PASSWORD
+               keyAlias MYAPP_RELEASE_KEY_ALIAS
+               keyPassword MYAPP_RELEASE_KEY_PASSWORD
+           }
+       }
+   }
 
     splits {
         abi {
@@ -131,7 +131,7 @@ android {
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-            signingConfig signingConfigs.release   
+            signingConfig signingConfigs.release
         }
     }
     // applicationVariants are e.g. debug, release
@@ -169,10 +169,10 @@ dependencies {
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     compile "com.facebook.react:react-native:+"  // From node_modules
-    compile (project(":react-native-google-signin")){         
+    compile (project(":react-native-google-signin")){
         exclude group: "com.google.android.gms" // very important
     }
-    compile 'com.google.android.gms:play-services-auth:15.0.0' 
+    compile 'com.google.android.gms:play-services-auth:15.0.0'
     compile (project(':react-native-maps')){
       exclude group: 'com.google.android.gms', module: 'play-services-base'
       exclude group: 'com.google.android.gms', module: 'play-services-maps'
