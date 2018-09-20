@@ -6,21 +6,21 @@
  */
 
 #import "AppDelegate.h"
-
-#import <React/RCTPushNotificationManager.h>
+#import <RCTPushNotificationManager.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import "RNSplashScreen.h" 
+#import "RNSplashScreen.h"
+#import "RNGoogleSignin.h"
+@import GoogleMaps;
 
- @import GoogleMaps;
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-  [GMSServices provideAPIKey:@"AIzaSyBBT2cgxdI4Mxsc2hbEI-oZrJ_tSQxmCog"];
+//  [GMSServices provideAPIKey:@"AIzaSyBBT2cgxdI4Mxsc2hbEI-oZrJ_tSQxmCog"];
   [[FBSDKApplicationDelegate sharedInstance] application:application
-  didFinishLaunchingWithOptions:launchOptions];
+                           didFinishLaunchingWithOptions:launchOptions];
 
   NSURL *jsCodeLocation;
 
@@ -37,54 +37,57 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
-  [RNSplashScreen show]; 
   return YES;
 }
 
-- (BOOL)application:(UIApplication *)application 
-            openURL:(NSURL *)url 
-            options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+//  - (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<NSString *,id> *)options {
+//    return [RNGoogleSignin application:application
+//                               openURL:url
+//                     sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+//                            annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+//  }
+- (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
 
-  BOOL handled = [[FBSDKApplicationDelegate sharedInstance] application:application
-    openURL:url
-    sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
-    annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
-  ];
+  BOOL handled = [[FBSDKApplicationDelegate sharedInstance]
+                  application:application openURL:url sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                  annotation:options[UIApplicationOpenURLOptionsAnnotationKey]
+                  ];
   // Add any custom logic here.
-  return handled;
+  BOOL googlehandle = [RNGoogleSignin application:application
+                                          openURL:url
+                                sourceApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]
+                                       annotation:options[UIApplicationOpenURLOptionsAnnotationKey]];
+  return handled || googlehandle;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
   [FBSDKAppEvents activateApp];
 }
 
- // Required to register for notifications
- - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
- {
+// Required to register for notifications
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
   [RCTPushNotificationManager didRegisterUserNotificationSettings:notificationSettings];
- }
- // Required for the register event.
- - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
- {
+}
+// Required for the register event.
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
   [RCTPushNotificationManager didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
- }
- // Required for the notification event. You must call the completion handler after handling the remote notification.
- - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-                                                        fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
- {
-   [RCTPushNotificationManager didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
- }
- // Required for the registrationError event.
- - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
- {
+}
+// Required for the notification event. You must call the completion handler after handling the remote notification.
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+  [RCTPushNotificationManager didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
+}
+// Required for the registrationError event.
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
   [RCTPushNotificationManager didFailToRegisterForRemoteNotificationsWithError:error];
- }
- // Required for the localNotification event.
- - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
- {
+}
+// Required for the localNotification event.
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
   [RCTPushNotificationManager didReceiveLocalNotification:notification];
- }
-
-
-
+}
 @end

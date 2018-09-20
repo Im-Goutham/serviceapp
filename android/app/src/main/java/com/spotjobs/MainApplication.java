@@ -7,6 +7,8 @@ import com.facebook.appevents.AppEventsLogger;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
+import com.airbnb.android.react.maps.MapsPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -18,10 +20,7 @@ import com.imagepicker.ImagePickerPackage;
 import com.amazonaws.RNAWSCognitoPackage;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
 import io.callstack.react.fbads.FBAdsPackage;
-import com.sbugert.rnadmob.RNAdMobPackage;
-import com.airbnb.android.react.maps.MapsPackage;
 import co.apptailor.googlesignin.RNGoogleSigninPackage;
-import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -51,6 +50,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new FBSDKPackage(),
+            new MapsPackage(),
             new LinearGradientPackage(),
             new RNI18nPackage(),
             new VectorIconsPackage(),
@@ -62,7 +63,6 @@ public class MainApplication extends Application implements ReactApplication {
             new RNAWSCognitoPackage(),
             new ReactNativePushNotificationPackage(),
             new FBAdsPackage(),
-            new RNAdMobPackage(),
           new RNGoogleSigninPackage(),
           new MapsPackage(),
           new FBSDKPackage(mCallbackManager)

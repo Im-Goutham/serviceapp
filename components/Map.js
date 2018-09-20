@@ -82,27 +82,27 @@ export default class Map extends Component {
     console.log('coordinate is - ',coordinate);
     return (
       <MapView
-        style={ styles.map }
-        initialRegion={region}
-        onRegionChange={this.onRegionChange}
-        onPoiClick={this.onPoiClick}
+      style={ styles.map }
+      initialRegion={region}
+      onRegionChange={this.onRegionChange}
+      onPoiClick={this.onPoiClick}
       >
       {
-         this.state.markers.map((coordinate,key)=>{
-             return   <Marker
-             coordinate={coordinate}
-             image={require('../assets/icons/map_location_blue.png')}
-             key={key}
-             onPress={()=>this.props.pinPress()}
-           >
-           </Marker>
-         })
+       this.state.markers.map((coordinate,key)=>{
+           return   <Marker
+           coordinate={coordinate}
+           image={require('../assets/icons/map_location_blue.png')}
+           key={key}
+           onPress={()=>this.props.pinPress()}
+         >
+         </Marker>
+       })
       }  
-       <Marker
-             coordinate={coordinate}
-             image={require('../assets/icons/map_location_red.png')}
-           >
-           </Marker> 
+      <Marker
+           coordinate={coordinate}
+           image={require('../assets/icons/map_location_red.png')}
+         >
+         </Marker> 
       </MapView>
     );
   }
@@ -149,15 +149,3 @@ const styles = StyleSheet.create({
   },
   imgStyle: {width:'100%',height:80}
 });
-
-
-// <MapView
-//   style={ styles.map }
-//   initialRegion={region}
-// >
-//   <Marker
-//      coordinate={coordinate}
-//      title={'Goutham'}
-//      description={''}
-//    />
-// </MapView>
