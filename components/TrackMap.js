@@ -6,7 +6,7 @@ import {
   Dimensions
 } from 'react-native';
 
-import MapView ,{ Marker } from 'react-native-maps';
+// import MapView ,{ Marker } from 'react-native-maps';
 import Polyline from '@mapbox/polyline';
 
 export default class RnDirectionsApp extends Component {
@@ -50,31 +50,7 @@ export default class RnDirectionsApp extends Component {
   render() {
     return (
       <View>
-          {(this.state.showMap)?(
-              <MapView style={styles.map} initialRegion={{
-                  latitude:23.022505,
-                  longitude:72.571365,
-                  latitudeDelta: 0.0922,
-                  longitudeDelta: 0.0421
-                }}>
-
-                {/*<MapView.Polyline*/}
-                    {/*coordinates={this.state.coords}*/}
-                    {/*strokeWidth={4}*/}
-                    {/*strokeColor="#ff9933"/>*/}
-                  {/*<Marker*/}
-                     {/*coordinate={latitude: 23.022505, longitude: 72.571365}*/}
-                     {/*image={require('../assets/icons/map_location_red.png')}*/}
-                   {/*/>*/}
-                   <Marker
-                     coordinate={latitude: 23.022505, longitude: 72.571365}
-                     image={require('../assets/icons/map_location_blue.png')}
-                    />
-
-              </MapView>
-          ):(
-               null
-          )}
+         
 
       </View>
     );
@@ -92,3 +68,30 @@ const styles = StyleSheet.create({
     height: Dimensions.get('window').height
   },
 });
+
+
+// {(this.state.showMap)?(
+//   <MapView style={styles.map} initialRegion={{
+//       latitude:23.022505,
+//       longitude:72.571365,
+//       latitudeDelta: 0.0922,
+//       longitudeDelta: 0.0421
+//     }}>
+
+//     {/*<MapView.Polyline*/}
+//         {/*coordinates={this.state.coords}*/}
+//         {/*strokeWidth={4}*/}
+//         {/*strokeColor="#ff9933"/>*/}
+//       {/*<Marker*/}
+//          {/*coordinate={latitude: 23.022505, longitude: 72.571365}*/}
+//          {/*image={require('../assets/icons/map_location_red.png')}*/}
+//        {/*/>*/}
+//        <Marker
+//          coordinate={latitude: 23.022505, longitude: 72.571365}
+//          image={require('../assets/icons/map_location_blue.png')}
+//         />
+
+//   </MapView>
+// ):(
+//    null
+// )}
