@@ -51,6 +51,31 @@ export default class RnDirectionsApp extends Component {
     return (
       <View>
          
+          {(this.state.showMap)?(
+              <MapView style={styles.map} initialRegion={{
+                  latitude:23.022505,
+                  longitude:72.571365,
+                  latitudeDelta: 0.0922,
+                  longitudeDelta: 0.0421
+                }}>
+
+                {/*<MapView.Polyline*/}
+                    {/*coordinates={this.state.coords}*/}
+                    {/*strokeWidth={4}*/}
+                    {/*strokeColor="#ff9933"/>*/}
+                  {/*<Marker*/}
+                     {/*coordinate={latitude: 23.022505, longitude: 72.571365}*/}
+                     {/*image={require('../assets/icons/map_location_red.png')}*/}
+                   {/*/>*/}
+                   {/*<Marker*/}
+                     {/*coordinate={latitude: 23.022505, longitude: 72.571365}*/}
+                     {/*image={require('../assets/icons/map_location_blue.png')}*/}
+                    {/*/>*/}
+
+              </MapView>
+          ):(
+               null
+          )}
 
       </View>
     );
