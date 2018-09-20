@@ -18,7 +18,7 @@ export default class RnDirectionsApp extends Component {
         {latitude: 23.022505, longitude: 72.571365},
         {latitude: 23.032469, longitude: 72.491236}
       ],
-        showMap:false
+        showDirection:false
     }
   }
 
@@ -29,9 +29,11 @@ export default class RnDirectionsApp extends Component {
   }
 
   async getDirections(startLoc, destinationLoc) {
+      var apiKey = 'AIzaSyC01ARNbZ6MXcpk-XTaaEAPpbPwhn_ntMM';
         try {
-            let resp = await fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${ startLoc }&destination=${ destinationLoc }`)
+            let resp = await fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${ startLoc }&destination=${ destinationLoc }&key=${apiKey}`)
             let respJson = await resp.json();
+            console.log('respJson is ',respJson);
             let points = Polyline.decode(respJson.routes[0].overview_polyline.points);
             let coords = points.map((point, index) => {
                 return  {
@@ -39,7 +41,7 @@ export default class RnDirectionsApp extends Component {
                     longitude : point[1]
                 }
             })
-            this.setState({coords: coords,showMap:true})
+            this.setState({coords: coords,showDirection:true})
             return coords
         } catch(error) {
             alert(error)
@@ -48,6 +50,7 @@ export default class RnDirectionsApp extends Component {
     }
 
   render() {
+      let {showDirection} = this.state;
     return (
       <View>
           {(this.state.showMap)?(
@@ -57,19 +60,25 @@ export default class RnDirectionsApp extends Component {
                   latitudeDelta: 0.0922,
                   longitudeDelta: 0.0421
                 }}>
+                  {
+                      (showDirection)?(
+                          <MapView.Polyline
+                            coordinates={this.state.coords}
+                            strokeWidth={4}
+                            strokeColor="#ff9933"/>
+                      ):(
+                           null
+                      )
+                  }
 
-                {/*<MapView.Polyline*/}
-                    {/*coordinates={this.state.coords}*/}
-                    {/*strokeWidth={4}*/}
-                    {/*strokeColor="#ff9933"/>*/}
-                  {/*<Marker*/}
-                     {/*coordinate={latitude: 23.022505, longitude: 72.571365}*/}
-                     {/*image={require('../assets/icons/map_location_red.png')}*/}
-                   {/*/>*/}
-                   {/*<Marker*/}
-                     {/*coordinate={latitude: 23.022505, longitude: 72.571365}*/}
-                     {/*image={require('../assets/icons/map_location_blue.png')}*/}
-                    {/*/>*/}
+                  <Marker
+                     coordinate={{latitude: 23.022505, longitude: 72.571365}}
+                     image={require('../assets/icons/map_location_red.png')}
+                   />
+                   <Marker
+                     coordinate={{latitude: 23.022505, longitude: 72.571365}}
+                     image={require('../assets/icons/map_location_blue.png')}
+                    />
 
               </MapView>
           ):(

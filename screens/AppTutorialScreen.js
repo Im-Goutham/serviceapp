@@ -21,30 +21,39 @@ class AppTutorialScreen extends Component {
             >
                 <View style={styles.slide}>
                     <View style={styles.imgBox}>
-                        <Image source={require('../images/tutorial/img1.png')} style={styles.imgStyle}/>
+                        <Image source={require('../images/tutorial/img1.png')} style={styles.imgStyle}  resizeMode="contain" resizeMethod="resize" />
                     </View>    
                     <View style={styles.tutorialText}>
-                        <Text style={[styles.text,{fontSize:20,fontWeight:'bold'}]}>Easy to post your jobs</Text>
-                        <Text style={styles.text}>Congue fames maecenas dignissm sem venenatis mi nam hac ullamcorper</Text>
+                        <Text style={[styles.text,{fontSize:20,  fontFamily:'Montserrat-Bold'}]}>Find Odd Jobs Near You.</Text>
+                        <Text style={styles.text}>Use paid services between individuals to earn extra cash. Get paid directly, no commision or transaction fees.</Text>
                     </View> 
                 </View>
                 <View style={styles.slide}>
                     <View style={styles.imgBox}>
-                         <Image source={require('../images/tutorial/img2.png')} style={styles.imgStyle}/>
+                         <Image source={require('../images/tutorial/img2.png')} style={styles.imgStyle}  resizeMode="contain" resizeMethod="resize" />
                     </View>    
                     <View style={styles.tutorialText}>
-                        <Text style={[styles.text,{fontSize:20,fontWeight:'bold'}]}>Find help for your jobs</Text>
-                        <Text style={styles.text}>Congue fames maecenas dignissm sem venenatis mi nam hac ullamcorper</Text>
+                        <Text style={[styles.text,{fontSize:20,  fontFamily:'Montserrat-Bold'}]}>Find Hlp For Your Project</Text>
+                        <Text style={styles.text}>Post a job and get help on budget. Chatting available for your convenience.</Text>
                     </View> 
                 </View>
                 <View style={styles.slide}>
                     <View style={styles.imgBox}>
-                         <Image source={require('../images/tutorial/img3.png')} style={styles.imgStyle}/>
+                         <Image source={require('../images/tutorial/img3.png')} style={styles.imgStyle}  resizeMode="contain" resizeMethod="resize" />
                     </View>    
                     <View style={styles.tutorialText}>
-                        <Text style={[styles.text,{fontSize:20,fontWeight:'bold'}]}>Provide your skill as a service</Text>
-                        <Text style={styles.text}>Congue fames maecenas dignissm sem venenatis mi nam hac ullamcorper</Text>
+                        <Text style={[styles.text,{fontSize:20,  fontFamily:'Montserrat-Bold'}]}>Track Service Provider</Text>
+                        <Text style={styles.text}>View location of service provider on his way to appointment.</Text>
                     </View> 
+                </View>
+                <View style={styles.slide}>
+                    <View style={styles.imgBox}>
+                         <Image source={require('../images/tutorial/img4.png')} style={styles.imgStyle}  resizeMode="contain" resizeMethod="resize" />
+                    </View>
+                    <View style={styles.tutorialText}>
+                        <Text style={[styles.text,{fontSize:20 ,fontFamily:'Montserrat-Bold'}]}>View Ads And Earn Points</Text>
+                        <Text style={styles.text}>Earn points and redeem them for premium membership and full access to all features.</Text>
+                    </View>
                 </View>
             </Swiper> 
             <Image style={{width:width,height:40,bottom:-10,position:'absolute'}} source={require('../images/border_img.png')}/>
@@ -84,13 +93,16 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     text: {
-      fontSize: 17,
+      fontSize: 18,
       color:'white',
+        fontFamily:'Montserrat-Regular',
+        lineHeight:25,
       textAlign:'center',
       marginVertical:15
     },
     signUpBlock: {
         flex:2,
+        paddingHorizontal:10,
         flexDirection:'column',
         justifyContent: 'center',
         backgroundColor:'#F9FCFF',
@@ -99,17 +111,20 @@ const styles = StyleSheet.create({
         backgroundColor:'#4A4A4A',
         width: '100%',
         borderRadius:30,
-        borderWidth: 1,
         borderColor: '#fff',
         marginTop:10,
         paddingTop:16,
         paddingBottom:16,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 2,
+        elevation: 3,
     },
     btnText: { 
         textAlign:'center',
         color:'white',
         fontSize: 16,
-        fontWeight:'bold'
+        fontFamily:'Montserrat-Bold'
     },
     imgBox:{flex:4,justifyContent:'center',alignItems:'center'},
     imgStyle: {height:250}

@@ -23,7 +23,7 @@ class SettingsList extends Component {
   render() {
     let { visible } = this.state;
     return (
-      <View style={{flex:1}}>
+      <ScrollView>
           <View style={styles.mainBox}>
               <View style={{flex:2,alignItems:'flex-start'}}><Text style={styles.textStyle}>Notifications</Text></View>
               <View style={{flex:1,alignItems:'flex-end'}}><Switch value={true} style={styles.switch}/></View>
@@ -60,7 +60,7 @@ class SettingsList extends Component {
           </View>
           </TouchableOpacity>
         <ChangePasswordModal visible={visible} closeModal={() => { this.setState({visible:false})}}/>
-      </View>   
+      </ScrollView>
     );
   }
 

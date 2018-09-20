@@ -1,25 +1,33 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image,ScrollView, Dimensions,Platform, TouchableOpacity} from 'react-native';
-import { connect } from 'react-redux';
-import { Icon } from 'native-base';
-import * as actions from '../actions';
+import {
+    View,
+    StyleSheet,
+    ScrollView,
+    Image,
+    TouchableOpacity,
+    Dimensions,
+    Platform,
+    Text, TouchableHighlight
+} from 'react-native';
+
 import Header from '../components/Header';
-import Advertisement from '../components/Advertisement';
+import LinearGradient from 'react-native-linear-gradient';
+
+
+
+import HeaderScreen from './HeaderScreen';
 import SearchBar from '../components/SearchBar';
 import CategoryContainer from '../components/CategoryContainer';
 
-import LinearGradient from 'react-native-linear-gradient';
-
-const { width, height } = Dimensions.get('window');
-const isAndroid = Platform.OS === 'android';
 
 let back_arrow = require('../assets/icons/back-arrow.png');
 
+
 class AddServiceCatScreen extends Component {
-constructor(){
-     super();
-     this.state = {
-          popularCategories: [
+  constructor(props){
+      super(props);
+      this.state={
+         popularCategories: [
             {name:'Home Interior',image: require('../assets/icons/home_interior.png')},
             {name:'Home Exterior',image: require('../assets/icons/home_exterior.png')},
             {name:'Landscaping',image: require('../assets/icons/landscaping.png')},
@@ -65,42 +73,55 @@ constructor(){
             {name:'Event Planning',image: require('../assets/icons/event.png')},
             {name:'Other',image: require('../assets/icons/other.png')},
        ]
-     }
-}
+      }
+  }
+
+
     render() {
-        let {popularCategories, allCategories} = this.state;
-      return (
-        <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
-          <Header
-              navigation={this.props.navigation}
-              left = {
-                <TouchableOpacity
-                  onPress={() => this.props.navigation.goBack()}
-                  style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
-                  <Image source={back_arrow} style={{ width: '100%', height: 25}} resizeMode="contain" resizeMethod="resize"/>
-                </TouchableOpacity>
-              }
-              title={
-                <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"100%", height:54}}>
-                  <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Add Service</Text>
-                </View>
-              }
-              right={
-                <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"100%", height:54}}>
-                 <Text style={{ fontFamily: 'Montserrat-Light', color:"#fff", fontSize: 16}}>Step 1/2</Text>
-               </View>
-              }
-              />
-        <ScrollView contentContainerStyle={{
+      let {popularCategories, allCategories} = this.state;
+       return (
+           <View style={{flex:1}}>
+               <LinearGradient
+                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   start={{x: 0, y: 0}}
+                   end={{x: 1, y: 0}}
+                   style={{
+                       flex: 1
+                   }}>
+                   <HeaderScreen
+                       header={
+                           <Header
+                               navigation={this.props.navigation}
+                               left = {
+                                   <TouchableOpacity
+                                       onPress={() => this.props.navigation.openDrawer()}
+                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
+                                       <Image source={back_arrow} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                   </TouchableOpacity>
+                               }
+                               title={
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Add Services</Text>
+                               </View>
+                               }
+                               right={
+                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', height:54 ,flexDirection:"row"}}>
+                                       <Text style={{ fontFamily: 'Montserrat-Regular', color:"#fff", fontSize: 14}}>Step 1/2</Text>
+                                   </View>
+                               }
+                           />
+                       }
+                       content={
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10,marginHorizontal:10}}>
+                                <SearchBar/>
+                   </View>
+                       }
+                   />
+                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
+   <ScrollView contentContainerStyle={{
       justifyContent: 'space-between'
   }}>
         <View style={styles.container}>
-        <View>
-            <View style={{paddingHorizontal:10,marginVertical:15}}>
-             <SearchBar/>
-           </View>
-           <Image style={styles.borderImg} source={require('../images/border_img.png')} resizeMode='contain' resizeMethod='resize'/>
-        </View>
         <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}>
 
 
@@ -108,54 +129,63 @@ constructor(){
           <View style={{marginVertical:20}}>
               <Text style={styles.textStyle}>Popular Categories</Text>
           </View>
-          <ScrollView
-          horizontal={true}
-          showsHorizontalScrollIndicator={false}
-          >
-            {
-                 popularCategories ? (
-                    popularCategories.map((category,key)=>{
-                          return  <CategoryContainer category={category}/>
-                    })
-                 ) : null
-            }
-          </ScrollView>
-        </View>
+                  <ScrollView
+                  horizontal={true}
+                  showsHorizontalScrollIndicator={false}
+                  >
+                    {
+                         popularCategories ? (
+                            popularCategories.map((category,key)=>{
+                                  return  <CategoryContainer category={category}/>
+                            })
+                         ) : null
+                    }
+                  </ScrollView>
+                </View>
 
 
-      <View style={styles.servicesBox}>
-      <View style={{marginVertical:20}}>
-          <Text style={styles.textStyle}>All Categories</Text>
-      </View>
-      <View style={styles.categoryContainer}>
-      {
-                 allCategories ? (
-                    allCategories.map((category,key)=>{
-                          return  <CategoryContainer category={category}/>
-                    })
-                 ) : null
-            }
-      </View>
-      </View>
+              <View style={styles.servicesBox}>
+              <View style={{marginVertical:20}}>
+                  <Text style={styles.textStyle}>All Categories</Text>
+              </View>
+              <View style={styles.categoryContainer}>
+              {
+                         allCategories ? (
+                            allCategories.map((category,key)=>{
+                                  return  <CategoryContainer category={category}/>
+                            })
+                         ) : null
+                    }
+              </View>
+              </View>
 
 
 
 
-        </View>
-   
-         </View>
-        <View style={{marginVertical: 30}}>
-         <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceSubCatScreen')}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
-         </View>
-         </ScrollView>
-         </LinearGradient>
-      );
-    }
+                </View>
+               <LinearGradient
+                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   start={{x: 0, y: 0}}
+                   end={{x: 1, y: 0}}
+                   style={{
+                      paddingVertical: 30
+                   }}>
+                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceSubCatScreen')}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
+               </LinearGradient>
+
+                 </View>
+
+                 </ScrollView>
+                       </View>
+               </LinearGradient>
+
+           </View>
+       )
+  }
 }
 
-
 const styles = StyleSheet.create({
-    container: {
+   container: {
         flex: 1,
         justifyContent: 'space-between'
     },
@@ -188,13 +218,12 @@ const styles = StyleSheet.create({
         flexWrap:'wrap',
         justifyContent:'space-around',
     },
-    btnText: { 
+    btnText: {
         textAlign:'center',
         color:'white',
-        fontSize: 16,
-        fontWeight:'bold'
+        fontSize: 18,
+        fontFamily:'Montserrat-Bold'
     }
-
 })
 
-export default connect(null, actions)(AddServiceCatScreen);
+export default AddServiceCatScreen;

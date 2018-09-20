@@ -201,77 +201,78 @@ class PostJobScreen extends Component {
               </View>  
               <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}> 
                 <View style={{justifyContent:'space-between'}}>
-                <View style={{flexDirection:'row',marginVertical:10}}>
-                  <View style={{flex:1,flexDirection:'column',alignItems:'flex-start'}}>
-                        <Text style={{}}>Select a Category</Text>
-                        <Text style={[styles.inputLabel,{fontSize:13,marginVertical:5}]}>Home Exterior</Text>
-                   </View>
-                   <View style={{flex:1,alignItems:'flex-end'}}>
-                        <Icon name='ios-arrow-forward' style={{fontSize: 18,fontFamily:'Montserrat-Light'}}/>
+
+                  <View style={styles.servicesBox}>
+                      <View style={{flex:1,flexDirection:'row'}}>
+                            <View style={{flex:1,flexDirection:'column',alignItems:'flex-start'}}>
+                                <Text style={styles.textStyle}>Select a Category</Text>
+                                <Text style={[styles.inputLabel,{fontSize:13,marginVertical:5,color:'#D8D8D8',fontFamily:'Montserrat-Medium'}]}>Home Exterior</Text>
+                            </View>
+                           <View style={{flex:1,alignItems:'flex-end',justifyContent:'center'}}>
+                                <Image source={require('../assets/icons/arrow_right.png')} style={{width:15,height: 15}} resizeMode="contain" resizeMethod="resize"/>
+                            </View>
+                      </View>
+
+                </View>
+                 <View style={styles.servicesBox}>
+                      <View style={{flex:1}}>
+                           <Text style={styles.textStyle}>Enter Job Address</Text>
+                            <Text style={[styles.inputLabel,{fontSize:13,color:'#D8D8D8',marginVertical:5,fontFamily:'Montserrat-Medium'}]}>It will show only the job is Booked or Scheduled</Text>
+                      </View>
+                     <View style={styles.inputField}>
+                        <Item floatingLabel>
+                          <Label style={styles.inputLabel}>Street Address</Label>
+                          <Input
+                              value={this.state.username}
+                              autoCapitalize='none'
+                              onSubmitEditing={() => {
+                                this.focusNextField('password');
+                              }}
+                              returnKeyType={ "next" }
+                              ref={ input => {
+                                this.inputs['username'] = input;
+                              }}
+                              onChangeText={username => this.setState({ username })}
+                              />
+                         </Item>
                     </View>
-                </View>
-                <View style={{flexDirection:'row',marginVertical:10}}>
-                  <View style={{flex:1}}>
-                        <Text>Enter Job Address</Text>
-                        <Text style={[styles.inputLabel,{fontSize:13,marginVertical:5}]}>It will show only the job is Booked or Scheduled</Text>
+                     <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
+                          <View style={{width:'50%',paddingRight:10}}>
+                          <Item floatingLabel>
+                            <Label style={styles.inputLabel}>City</Label>
+                            <Input
+                                value={this.state.city}
+                                autoCapitalize='none'
+                                onSubmitEditing={() => {
+                                  this.focusNextField('password');
+                                }}
+                                returnKeyType={ "next" }
+                                ref={ input => {
+                                  this.inputs['city'] = input;
+                                }}
+                                onChangeText={city => this.setState({ city })}
+                                />
+                          </Item>
+                      </View>
+                         <View style={{width:'50%',paddingLeft:10}}>
+                      <Item floatingLabel>
+                      <Label style={styles.inputLabel}>State</Label>
+                      <Input
+                          value={this.state.state}
+                          autoCapitalize='none'
+                          onSubmitEditing={() => {
+                            this.focusNextField('password');
+                          }}
+                          returnKeyType={ "next" }
+                          ref={ input => {
+                            this.inputs['state'] = input;
+                          }}
+                          onChangeText={state => this.setState({ state })}
+                          />
+                     </Item>
+                      </View>
                    </View>
-                </View>
-                <View style={styles.inputField}>
-                <Item floatingLabel>
-                  <Label style={styles.inputLabel}>Street Address</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
-                </View>
-                <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
-                  <View style={{width:'50%',paddingRight:10}}>
-                  <Item floatingLabel>
-                    <Label style={styles.inputLabel}>City</Label>
-                    <Input
-                        value={this.state.city}
-                        autoCapitalize='none'
-                        onSubmitEditing={() => {
-                          this.focusNextField('password');
-                        }}
-                        returnKeyType={ "next" }
-                        ref={ input => {
-                          this.inputs['city'] = input;
-                        }}
-                        onChangeText={city => this.setState({ city })}
-                        />
-                  </Item>
-                  </View>
-                  <View style={{width:'50%',paddingLeft:10}}>
-                  <Item floatingLabel>
-                  <Label style={styles.inputLabel}>State</Label>
-                  <Input
-                      value={this.state.state}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['state'] = input;
-                      }}
-                      onChangeText={state => this.setState({ state })}
-                      />
-                 </Item>
-                  </View>
-                </View>
-
-
-                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
+                     <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:10}}>
                   <Item floatingLabel>
                     <Label style={styles.inputLabel}>Zip Code</Label>
@@ -307,93 +308,114 @@ class PostJobScreen extends Component {
                  </Item>
                   </View>
                 </View>
-                <Text style={{marginVertical:10}}>Enter Job Basic Details</Text>
-                <View style={styles.inputField}>
-                <Item floatingLabel>
-                  <Label style={styles.inputLabel}>Job Title</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
+
                 </View>
-                <View style={styles.inputField}>
-                <Item floatingLabel>
-                  <Label style={styles.inputLabel}>Job Description</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
-                </View>
-                <View style={styles.inputField}>
-                <Item floatingLabel>
-                  <Label style={styles.inputLabel}>Budget</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
-                </View>
-                <Text style={{marginVertical:10}}>Set Dates</Text>
-                <View style={styles.inputField}>
-                <Item floatingLabel>
-                  <Label style={styles.inputLabel}>Need to be done before</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
-                </View>
-                <View style={styles.inputField}>
-                <Item floatingLabel>
-                  <Label style={styles.inputLabel}>Expiry Date & Time</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
-                </View>
+
+
+
+                    <View style={styles.servicesBox}>
+                     <Text style={styles.textStyle}>Enter Job Basic Details</Text>
+                        <View style={styles.inputField}>
+                        <Item floatingLabel>
+                          <Label style={styles.inputLabel}>Job Title</Label>
+                          <Input
+                              value={this.state.username}
+                              autoCapitalize='none'
+                              onSubmitEditing={() => {
+                                this.focusNextField('password');
+                              }}
+                              returnKeyType={ "next" }
+                              ref={ input => {
+                                this.inputs['username'] = input;
+                              }}
+                              onChangeText={username => this.setState({ username })}
+                              />
+                         </Item>
+                        </View>
+                        <View style={styles.inputField}>
+                        <Item floatingLabel>
+                          <Label style={styles.inputLabel}>Job Description</Label>
+                          <Input
+                              value={this.state.username}
+                              autoCapitalize='none'
+                              onSubmitEditing={() => {
+                                this.focusNextField('password');
+                              }}
+                              returnKeyType={ "next" }
+                              ref={ input => {
+                                this.inputs['username'] = input;
+                              }}
+                              onChangeText={username => this.setState({ username })}
+                              />
+                         </Item>
+                        </View>
+                          <View style={styles.inputField}>
+                            <Item floatingLabel>
+                              <Label style={styles.inputLabel}>Budget</Label>
+                              <Input
+                                  value={this.state.username}
+                                  autoCapitalize='none'
+                                  onSubmitEditing={() => {
+                                    this.focusNextField('password');
+                                  }}
+                                  returnKeyType={ "next" }
+                                  ref={ input => {
+                                    this.inputs['username'] = input;
+                                  }}
+                                  onChangeText={username => this.setState({ username })}
+                                  />
+                             </Item>
+                            </View>
+                    </View>
+
+
+
+                    <View style={styles.servicesBox}>
+                      <Text style={styles.textStyle}>Set Dates</Text>
+                        <View style={styles.inputField}>
+                        <Item floatingLabel>
+                          <Label style={styles.inputLabel}>Need to be done before</Label>
+                          <Input
+                              value={this.state.username}
+                              autoCapitalize='none'
+                              onSubmitEditing={() => {
+                                this.focusNextField('password');
+                              }}
+                              returnKeyType={ "next" }
+                              ref={ input => {
+                                this.inputs['username'] = input;
+                              }}
+                              onChangeText={username => this.setState({ username })}
+                              />
+                         </Item>
+                        </View>
+                        <View style={styles.inputField}>
+                        <Item floatingLabel>
+                          <Label style={styles.inputLabel}>Expiry Date & Time</Label>
+                          <Input
+                              value={this.state.username}
+                              autoCapitalize='none'
+                              onSubmitEditing={() => {
+                                this.focusNextField('password');
+                              }}
+                              returnKeyType={ "next" }
+                              ref={ input => {
+                                this.inputs['username'] = input;
+                              }}
+                              onChangeText={username => this.setState({ username })}
+                              />
+                         </Item>
+                        </View>
+
+
+
+                    </View>
+
+
+
+
+
+
                 
     
 
@@ -428,7 +450,7 @@ class PostJobScreen extends Component {
             </View>
             <View style={{flex:1,paddingLeft:10}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>SIGN UP</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>POST A JOB</Text></TouchableOpacity>
                 </LinearGradient>
             </View>   
             </View>
@@ -531,11 +553,10 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
-    elevation: 1,
+    elevation: 3,
 },
 textStyle: {
-  fontFamily:"Montserrat-Bold",
-  fontWeight:'bold'
+  fontFamily:"Montserrat-SemiBold"
 }
 
       

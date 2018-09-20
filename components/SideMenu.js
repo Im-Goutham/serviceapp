@@ -110,7 +110,7 @@ class SideMenu extends Component {
       <ScrollView contentContainerStyle={styles.container}>
                     <ListItem avatar>
                     <Left>
-                        <Image style={{width:40,height:40,borderRadius:20}} source={require('../images/user_placeholder.png')} />
+                        <Image style={{width:70,height:70,borderRadius:25}} source={require('../images/svp1.png')} />
                     </Left>
                     <Body>
                     <Text style={styles.usernamestyle}>John Doe</Text>
@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
       justifyContent:"center",
       alignItems: 'center',
       borderRadius:10,
-      height: 20,
+      paddingVertical: 2,
       width:'100%',
       backgroundColor:'rgb(61, 133, 239)'
     },

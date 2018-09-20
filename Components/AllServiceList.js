@@ -159,7 +159,7 @@ var styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
-        elevation: 1,
+        elevation: 3,
     },
     overlay: {
         position: 'absolute',
@@ -188,13 +188,13 @@ var styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
-        elevation: 1,
+        elevation: 3,
     },
     imageShadow: {
         shadowOffset: { width: 0, height: 3 },
         shadowOpacity: 0.3,
         shadowRadius: 2,
-        elevation: 2,
+        elevation: 3,
     },
     img_placeholder: {
         width: 80,

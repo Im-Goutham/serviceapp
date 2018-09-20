@@ -115,7 +115,7 @@ class ServiceProvidersList extends Component {
                             this.state.images.map((image,key)=>{
                                 return  <TouchableWithoutFeedback  onPress={()=>{this.showImage(key)}} key={key}>
                                     <View style={styles.imgBox}>
-                                        <ImageBackground style={styles.imgStyle} source={image.image}>
+                                        <ImageBackground style={styles.imgStyle} source={image.image}  resizeMode="contain" resizeMethod="resize">
                                             {(key == 2)? (
                                                 <View style={styles.overlay}><Text style={{color:'white',fontSize:22,fontFamily:'Montserrat-Bold'}}>+5</Text></View>
                                             ):(null)
@@ -184,10 +184,7 @@ btnText: {
 imgBox: {
     flex:1,
     padding:1,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 2,
-    elevation: 1,
+
 },
 overlay: {
   position: 'absolute',
@@ -195,16 +192,18 @@ overlay: {
   right: 0,
   bottom: 0,
   left: 0,
-  borderRadius:5,
   backgroundColor: 'rgba(0,0,0,.6)',
   opacity: 2,
-  justifyContent:'center',
-  alignItems:'center'
+      justifyContent:'center',
+      alignItems:'center',
+     width:'100%',
+    height:100,
+    borderRadius:10,
 },
 imgStyle:{
-    width:100,
-    height:100,
-
+    width:'100%',
+    height:115,
+    borderRadius:10,
 },
   servicesBox: {
     flex: 1,
@@ -217,13 +216,13 @@ imgStyle:{
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
-    elevation: 1,
+    elevation: 3,
   },
   imageShadow: {
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.3,
     shadowRadius: 2,
-    elevation: 2,
+    elevation: 3,
   },
   img_placeholder: {
     width: 80,

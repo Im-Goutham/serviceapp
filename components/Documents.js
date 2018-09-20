@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { View, StyleSheet,Image, ScrollView,Text} from 'react-native';
+import { View, StyleSheet,Image, ScrollView,Text,Platform} from 'react-native';
 import { Icon} from 'native-base';
 
 
@@ -22,11 +22,11 @@ export default class Documents extends Component {
                  documents ? (
                     documents.map((document,key)=>{
                           return  <View style={styles.documentBox} key={key}>
-                                        <View >
+
                                         <Image source={document.image} style={styles.img_placeholder}/>
                                         <Image source={require('../images/close_img.png')} style={styles.close_img}/>
                                         <Text style={{paddingTop:5,paddingBottom:5}}>{document.name}</Text>
-                                        </View> 
+
                                 </View> 
                     })
                  ) : null
@@ -51,7 +51,8 @@ const styles = StyleSheet.create({
         borderRadius:5,
         position: 'relative',
 		top: 0,
-		left: 0
+		left: 0,
+
       },
       close_img: {
         width: 18,
@@ -64,10 +65,10 @@ const styles = StyleSheet.create({
       documentBox: {
         flexDirection:'column',
         width:100,
-        shadowOffset: { width: 0, height: 3 },
-        shadowOpacity: 0.3,
-        shadowRadius: 2,
-        elevation: 2,
+          shadowOffset: { width: 0, height: 2 },
+         shadowOpacity: 0.2,
+       shadowRadius: 2,
+        elevation: 3,
       }
 })
 

@@ -18,6 +18,7 @@ import HeaderScreen from './HeaderScreen';
 var {height, width} = Dimensions.get('window');
 
 let logo = require('../images/logo.png');
+let back_arrow = require('../assets/icons/back-arrow.png');
 let menu = require('../assets/icons/menu.png');
 let border_img = require('../images/border_img.png');
 
@@ -110,35 +111,34 @@ class SubscriptionScreen extends Component {
                    style={{
                        flex: 1
                    }}>
-                   <HeaderScreen
-                       header={
-                           <Header
+                     <Header
                                navigation={this.props.navigation}
                                left = {
-                                   <TouchableOpacity
-                                       onPress={() => this.props.navigation.openDrawer()}
-                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
-                                       <Image source={menu} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                                   </TouchableOpacity>
+                                     <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                                        <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={menu} style={{ width: '50%', height: 22}} resizeMode="contain" resizeMethod="resize"/>
+                                        </TouchableOpacity>
+                                     </View>
                                }
                                title={
                                 <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
                                    <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Subscriptions</Text>
                                </View>
                                }
-                               right={
-                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                       
-                                   </View>
-                               }
+
                            />
-                       }
-                       content={
-                           <View style={{backgroundColor :"transparent",paddingVertical:30}}>
+                   <ScrollView>
+                    <View style={{backgroundColor :"transparent",paddingVertical:30}}>
                              {this.contentrender()}
-                   </View>
-                       }
-                   />
+
+                      </View>
+  <View style={{width:'100%'}}>
+                              <Image source={border_img} style={{ width: '100%', height: Platform.OS==='ios'? 31 : 30}}/>
+                                 <View style={{height:20, backgroundColor:"#F9FCFF"}}/>
+                              </View>
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1,paddingHorizontal:20}}>
                         <View>
                             <Text style={[styles.textStyle,{textAlign:'center'}]}>0</Text>
@@ -155,7 +155,7 @@ class SubscriptionScreen extends Component {
                                </View> 
                            
                         </View>
-                      
+                   </ScrollView>
                </LinearGradient>
               
            </View>
@@ -201,7 +201,7 @@ servicesBox: {
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
-    elevation: 1,
+    elevation: 3,
   },
   mainBox: {
     flexDirection: 'row',

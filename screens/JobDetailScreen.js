@@ -23,6 +23,7 @@ let tabItems = ["List View", "Map View"];
 
 let logo = require('../images/logo.png');
 let menu = require('../assets/icons/menu.png');
+let back_arrow = require('../assets/icons/back-arrow.png');
 let border_img = require('../images/border_img.png');
 
 export default class JobDetailScreen extends Component {
@@ -47,74 +48,12 @@ export default class JobDetailScreen extends Component {
                 { name: 'Luis', image: require('../images/svp2.png') },
                 { name: 'Clayton', image: require('../images/svp3.png') },
             ],
-            screens: [
-                {
-                    title: "Find Jobs",
-                    iconname: require('../assets/icons/search.png'),
-                    routename: "findJobs"
-                },
-                {
-                    title: "Post Job",
-                    iconname: require('../assets/icons/post.png'),
-                    routename: "postJob"
-                },
-                {
-                    title: "Find Help",
-                    iconname: require('../assets/icons/help.png'),
-                    routename: "findHelp"
-                },
-                {
-                    title: "My Jobs",
-                    iconname: require('../assets/icons/list.png'),
-                    routename: "myJobs"
-                },
-                {
-                    title: "Favourites",
-                    iconname: require('../assets/icons/heart.png'),
-                    routename: "favourites"
-                },
-                {
-                    title: "Notifications",
-                    iconname: require('../assets/icons/bell.png'),
-                    routename: "notifications"
-                },
-                {
-                    title: "Chats",
-                    iconname: require('../assets/icons/chat.png'),
-                    routename: "chats"
-                },
-                {
-                    title: "My Requests",
-                    iconname: require('../assets/icons/navigation.png'),
-                    routename: "myRequests"
-                },
-                {
-                    title: "Track Now",
-                    iconname: require('../assets/icons/location.png'),
-                    routename: "trackNow"
-                },
-                {
-                    title: "My Account",
-                    iconname: require('../assets/icons/account.png'),
-                    routename: "account"
-                },
-                {
-                    title: "Subscription",
-                    iconname: require('../assets/icons/subscribe.png'),
-                    routename: "subscription"
-                },
-                {
-                    title: "Settings",
-                    iconname: require('../assets/icons/settings.png'),
-                    routename: "settings"
-                },
-            ]
         };
     }
     render() {
 
         console.log('params are .. ',this.props.navigation.state);
-        let { categories, serviceProviders, screens } = this.state;
+        let { categories, serviceProviders } = this.state;
         let i=1
         return (
             <View style={{ flex: 1 }}>
@@ -130,11 +69,14 @@ export default class JobDetailScreen extends Component {
                             <Header
                                 navigation={this.props.navigation}
                                 left={
-                                    <TouchableOpacity
-                                        onPress={() => this.props.navigation.openDrawer()}
-                                        style={{ width: 54, height: 54, justifyContent: 'center', alignItems: 'center' }}>
-                                        <Image source={menu} style={{ width: '100%', height: 20 }} resizeMode="contain" resizeMethod="resize" />
-                                    </TouchableOpacity>
+                                      <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                                        <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={menu} style={{ width: '50%', height: 22}} resizeMode="contain" resizeMethod="resize"/>
+                                        </TouchableOpacity>
+                                    </View>
                                 }
                                 title={
                                     <View style={{ justifyContent: 'center', alignItems: 'flex-start', width: "100%", height: 54 }}>
@@ -143,11 +85,11 @@ export default class JobDetailScreen extends Component {
                                 }
                                 right={
                                     <View style={{ backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection: "row" }}>
-                                        <TouchableOpacity style={{ width: "50%", height: 54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}>
-                                            <Icon name='md-search' style={{ color: '#fff', fontSize: 25, fontWeight: 'bold' }} />
+                                          <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                             <Image source={require('../assets/icons/heart_red.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
-                                        <TouchableOpacity  style={{ width: "50%", height: 54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}>
-                                            <Icon name='md-person' style={{ color: '#fff', fontSize: 25, fontWeight: 'bold' }} />
+                                        <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                            <Image source={require('../assets/icons/send_white.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     </View>
                                 }
@@ -159,11 +101,11 @@ export default class JobDetailScreen extends Component {
                             <PhotoGallery />
                             <View style={styles.desc}>
                                 <View style={styles.budget}>
-                                    <View style={{ flexDirection: "row", height: 40, width: "40%", justifyContent: 'center', alignItems: "center" }}>
+                                    <View style={{ flex:1,flexDirection: "row", height: 40, justifyContent: 'flex-start', alignItems: "center" }}>
                                         <Text style={styles.budgettext}>Budget:</Text>
                                         <Text style={styles.pricetext}>$240</Text>
                                     </View>
-                                    <View style={{ flexDirection: "row", height: 40, width: "40%", backgroundColor: "transparent", justifyContent: 'flex-end', alignItems: "center" }}>
+                                    <View style={{ flex:1,flexDirection: "row", height: 40,backgroundColor: "transparent", justifyContent: 'flex-end', alignItems: "center" }}>
                                         <Image source={require('../assets/icons/location_red.png')} style={styles.pinimage} resizeMode="contain" resizeMethod="resize" />
                                         <Text style={styles.distance}>3 mi</Text>
                                     </View>
@@ -355,20 +297,21 @@ export default class JobDetailScreen extends Component {
                                 :
                                 <View/>
                         }
-                        <LinearGradient
-                            colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
-                            start={{ x: 0, y: 0 }}
-                            end={{ x: 1, y: 0 }}
-                            style={{
-                                bottom: 30,
-                                right: 10,
-                                width: 60, height: 60, backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
-                                borderRadius: 40
-                            }}>
-                            <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
-                        </LinearGradient>
+
                     </ScrollView>
                 </LinearGradient>
+                  <LinearGradient
+                        colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                        start={{ x: 0, y: 0 }}
+                        end={{ x: 1, y: 0 }}
+                        style={{
+                            bottom: 30,
+                            right: 10,
+                            width: 60, height: 60, backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
+                            borderRadius: 40
+                        }}>
+                        <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
+                    </LinearGradient>
             </View>
         );
     }
@@ -388,7 +331,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
-        elevation: 1
+        elevation: 3
     },
     category: {
         marginVertical: 10,
@@ -398,7 +341,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
-        elevation: 1
+        elevation: 3
     },
     budget: {
         height: 54,
@@ -481,7 +424,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
-        elevation: 1,
+        elevation: 3,
         padding: 20
     },
     servicesBox: {
@@ -494,7 +437,7 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
-        elevation: 1
+        elevation: 3
     },
     textStyle: {
         fontFamily: "Montserrat-SemiBold",
@@ -507,7 +450,7 @@ const styles = StyleSheet.create({
     imageShadow: {
         shadowOffset: { width: 0, height: 3 },
         shadowOpacity: 0.3, shadowRadius: 2,
-        elevation: 2,
+        elevation: 3,
     },
     img_placeholder: {
         width: 80,
@@ -530,6 +473,6 @@ const styles = StyleSheet.create({
         // shadowOffset: { width: 0, height: 2 },
         // shadowOpacity: 0.2,
         // shadowRadius: 2,
-        // elevation: 1
+        // elevation: 3
     }
 })

@@ -57,7 +57,7 @@ export default createDrawerNavigator(
         },
     },
     {
-        initialRouteName: 'homePage',
+        initialRouteName: 'myJobs',
         contentComponent: SideMenu,
         drawerWidth: 300
     });

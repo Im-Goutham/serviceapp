@@ -1,181 +1,167 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, ActivityIndicator, TouchableOpacity, Dimensions,Image, Platform} from 'react-native';
-import { connect } from 'react-redux';
-import {  Item, Input, Toast, Icon,Label } from 'native-base';
-import * as actions from '../actions';
-import { Auth } from 'aws-amplify';
-import Header from '../components/goBackHeader';
+import {
+    View,
+    StyleSheet,
+    Image,
+    TouchableOpacity,
+    Text, ScrollView, ActivityIndicator, Dimensions, Platform,
+} from 'react-native';
+ import {Input, Item, Label} from 'native-base'
+import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
+import HeaderScreen from './HeaderScreen';
 
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
 
+let menu = require('../assets/icons/menu.png');
+let back_arrow = require('../assets/icons/back-arrow.png');
 
-class ForgotScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { username: '', password: '', error: null, loading: false };
-    this.focusNextField = this.focusNextField.bind(this);
-    this.inputs = {};
+class ForgetScreen extends Component {
+  constructor(props){
+      super(props);
+      this.state={
+        tabindex : 0
+      }
   }
-
-
-  componentDidMount(){
-     console.log('login screen is called ...');
-  }
-
-    focusNextField(id) {
-        this.inputs[id]._root.focus();
-    }
-
-
-
-     handleSubmit = async () => {
-     let {username } = this.state;
-
-
-     if(!username){
-           this.handleError("Username is required!")
-           return false;
-     }
- 
-     this.setState({ error: null, loading: true });
-     this.props.navigation.navigate('login');
-    //  console.log('username is '+username,'password is ',password);
-    //  Auth.signIn(username, password)
-    //    .then(data => {
-    //        console.log('data is ',data);
-    //        Auth.currentUserCredentials()
-    //        .then(credentials => {
-    //          console.log('Current user credentials are --- ',credentials);
-    //          this.props.navigation.navigate('home')
-    //          this.setState({ loading: false });
-    //        }).catch(err => {
-    //          console.log('error in signin --- ',err)
-    //          this.setState({ loading: false });
-    //        });
-    //    })
-    //    .catch(err => {
-    //      console.log('err is ',err );
-    //    });
-    //  try {
-    //      let data = {username:this.state.username,password:this.state.password};
-    //      this.props.signIn(data, () => {
-    //          this.props.navigation.navigate('main');
-    //      }).catch(error => {
-    //        return error;
-    //      });
-    //    this.props.navigation.navigate('home')
-    //    this.setState({ loading: false });
-    //  } catch (err) {
-    //    this.setState({ error: 'Something went wrong', loading: false });
-    //  }
-   }
-
-
-   handleError(error){
-     Toast.show({
-               text: error,
-               buttonText: "Okay",
-               type: "danger"
-         })
-   }
 
 
     render() {
-      return (  
-        <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
+       return (
+           <View style={{flex:1}}>
+               <LinearGradient
+                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   start={{x: 0, y: 0}}
+                   end={{x: 1, y: 0}}
+                   style={{
+                       flex: 1
+                   }}>
+                   <HeaderScreen
+                       header={
+                           <Header
+                               navigation={this.props.navigation}
+                               left = {
+                                   <TouchableOpacity
+                                       onPress={() => this.props.navigation.goBack()}
+                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'flex-start',marginLeft:-20}}>
+                                       <Image source={back_arrow} style={{ width: '100%', height: 20,}} resizeMode="contain" resizeMethod="resize"/>
+                                   </TouchableOpacity>
+                               }
+                               title={
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
 
-        <View style={styles.container}>   
-        <View style={{justifyContent:'flex-start',paddingHorizontal:10}}>
-           <Icon style={{color:'white'}} active name="ios-arrow-back"  onPress={() => this.props.navigation.goBack()}/>
-        </View>
-        <View style={{flex:1}}>
-        <View style={{flex:2,position:'relative'}}>
-           <View style={{paddingVertical:20,paddingLeft:10}}><Text style={styles.logoText}>Forget ID/password</Text></View>
-           <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
-        </View>  
-        <View style={{flex:10,backgroundColor:'#F9FCFF',paddingHorizontal:10, paddingVertical:30}}>
-        <Item floatingLabel>
-                  <Label style={styles.inputLabel}>EMAIL / USER ID</Label>
-              <Input
-                  value={this.state.username}
-                  autoCapitalize='none'
-                  onSubmitEditing={() => {
-                    this.handleSubmit();
-                  }}
-                  returnKeyType={ "done" }
-                  ref={ input => {
-                    this.inputs['username'] = input;
-                  }}
-                  onChangeText={username => this.setState({ username })}
-                  />
-            </Item>
-            <View style={{justifyContent: "center" }}>
-            
-                {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
-                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                     <TouchableOpacity onPress={() => {this.handleSubmit()}}><Text style={styles.btnText}>SUBMIT</Text></TouchableOpacity>
-                  </LinearGradient>
-                }
+                               </View>
+                               }
+                               right={
+                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+
+                                   </View>
+                               }
+                           />
+                       }
+                       content={
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between"}}>
+                                 <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 35,paddingLeft:20,paddingBottom:10}}>Forget ID/Password</Text>
+
+                      </View>
+                       }
+                   />
+                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
+                           <ScrollView style={styles.container}>
+                      <View style={styles.inputField}>
+                            <Item floatingLabel>
+                                <Label style={styles.inputLabel}>Email</Label>
+                                <Input
+                                    value={this.state.username}
+                                    autoCapitalize='none'
+                                    onSubmitEditing={() => {
+                                        this.handleSubmit();
+                                    }}
+                                    returnKeyType={ "next" }
+                                    ref={ input => {
+                                        this.inputs['username'] = input;
+                                    }}
+                                    onChangeText={username => this.setState({ username })}
+                                    style={{marginVertical: 5}}
+                                />
+                            </Item>
+                        </View>
+                        <View style={{justifyContent: "center" }}>
+                            {
+                                this.state.loading
+                                    ?
+                                    <ActivityIndicator color="#8E24AA" size="large" />
+                                    :
+                                    <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
+                                        <TouchableOpacity onPress={() => {this.handleSubmit()}}><Text style={styles.btnText}>SUBMIT</Text></TouchableOpacity>
+                                    </LinearGradient>
+                            }
+                            </View>
+
+
+                  </ScrollView>
+                       </View>
+               </LinearGradient>
+
            </View>
-        </View>
-        </View>
-         </View>
-         </LinearGradient>
-
-      );
-    }
+       )
+  }
 }
 
-
 const styles = StyleSheet.create({
-        container: {
-          flex: 1,
-          paddingTop: isAndroid ? 0 : 50,
- 
-      },
-      logoText: {
+  container: {
+        paddingHorizontal:20,
+        marginBottom:20,
+        backgroundColor:"rgb(249,252,255)",
+    },
+    logoText: {
         color:'white',
         textAlign:'left',
         fontSize:35,
         fontWeight:'bold'
     },
-      inputLabel: {
-         textAlign:'left',
-         fontSize: 12
-      },
-      inputField: {
-          height: 40,
-          borderRadius:20,
-          backgroundColor: '#F2F2F2',
-          paddingLeft : 15,
-          paddingRight : 15,
-          marginTop: 10,
-          marginBottom: 10
-      },
-      borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
-      text: {
+    inputLabel: {
+        color:'rgb(155,155,155)',
+        textAlign:'left',
+        fontSize: 18,
+        marginBottom: 20
+    },
+    inputField: {
+        marginTop: 10,
+        marginBottom: 10
+    },
+    borderImg: {
+        width:width,
+        height:40,
+        bottom:-10,
+        position:'absolute'
+    },
+    text: {
         marginBottom: 15,
         marginTop: 15,
         fontSize: 15,
         textAlign: 'center',
-      },
-      button:{
+    },
+    button:{
         backgroundColor:'#4A4A4A',
         width: '100%',
         borderRadius:30,
-        borderWidth: 1,
         borderColor: '#fff',
         marginTop:10,
         paddingTop:16,
         paddingBottom:16,
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 2,
+        elevation: 3,
+
     },
-    btnText: { 
+    btnText: {
         textAlign:'center',
         color:'white',
-        fontWeight:'bold'
-    }
+        fontSize:18,
+        fontFamily:'Montserrat-Bold'
+    },
 })
 
-export default connect(null, actions)(ForgotScreen);
+export default ForgetScreen;

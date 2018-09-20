@@ -7,10 +7,12 @@ import { Auth } from 'aws-amplify';
 import FacebookLogin from '../components/FacebookLogin';
 import GoogleSignIn from '../components/GoogleSignIn';
 import LinearGradient from 'react-native-linear-gradient';
+import Header from "../components/Header";
 
 
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
+let border_img = require('../images/border_img.png');
 
 class LoginScreen extends Component {
   constructor(props) {
@@ -86,21 +88,15 @@ class LoginScreen extends Component {
    }
 
 
-    render() {
+
+     contentrender(){
       let { checked } = this.state;
-      return (  
-        <View style={styles.container}>
-         <ScrollView contentContainerStyle={{
-      flex: 1,
-      justifyContent: 'space-between'
-  }}>
-          <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.section1}>
-   
-            <View style={{flex:7,justifyContent:'center',padding:10}}>
-            <View style={{paddingVertical:20}}><Text style={styles.logoText}>SpotJobs</Text></View>
+      return (
+         <View style={{paddingHorizontal:20}} >
+             <View style={{paddingVertical:20}}><Text style={styles.logoText}>SpotJobs</Text></View>
               <View style={styles.loginBlox}>
                  <Item floatingLabel>
-                 <Label style={styles.inputLabel}>EMAIL / USER ID</Label>
+                 <Label style={styles.inputLabel}>Email / User ID</Label>
                 <Input
                     value={this.state.username}
                     autoCapitalize='none'
@@ -111,11 +107,12 @@ class LoginScreen extends Component {
                     ref={ input => {
                       this.inputs['username'] = input;
                     }}
+                    style={{marginVertical: 5}}
                     onChangeText={username => this.setState({ username })}
                     />
               </Item>
               <Item floatingLabel>
-                 <Label style={styles.inputLabel}>PASSWORD</Label>
+                 <Label style={styles.inputLabel}>Password</Label>
                 <Input
                     value={this.state.password}
                     autoCapitalize='none'
@@ -127,13 +124,14 @@ class LoginScreen extends Component {
                     ref={ input => {
                       this.inputs['password'] = input;
                     }}
+                    style={{marginVertical: 5}}
                     onChangeText={password => this.setState({ password })}
                     />
               </Item>
-              <View style={{marginBottom: 10,marginTop: 10,flexDirection:'row'}}>
-                    <CheckBox checked={checked} color='#666666' onPress={()=>this.setState({checked: !checked})}/> 
-                    <Text style={{marginLeft:20}}>Remember Me</Text>
-              </View>  
+              <View style={{marginVertical: 10,flexDirection:'row',justifyContent:'flex-start',alignItems:"flex-start"}}>
+                    <CheckBox checked={checked} color='rgb(61,133,239)' style={{marginLeft:-10,marginTop:3,borderRadius:3}} onPress={()=>this.setState({checked: !checked})}/>
+                    <Text style={{marginLeft:20,fontSize:18,fontFamily: 'Montserrat-Regular',color:'rgb(74,74,74)'}}>Remember Me</Text>
+              </View>
               <View style={{justifyContent: "center" }}>
                   {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
@@ -141,24 +139,47 @@ class LoginScreen extends Component {
                     </LinearGradient>
                   }
             </View>
-             <Text style={styles.text} onPress={()=>{this.props.navigation.navigate('forgot')}}>Forgot ID/Password?</Text>  
+                    <Text style={styles.text} onPress={()=>{this.props.navigation.navigate('forgot')}}>Forgot ID/Password?</Text>
                  </View>
-            </View>
-            <View style={{flex:2,flexDirection:'row',alignItems:'center'}}>
-                 <View style={{flex:1,paddingHorizontal:10}}>
+                  <View style={{marginVertical:10,flexDirection:'row',alignItems:'center'}}>
+                 <View style={{flex:1,paddingRight:10}}>
                       <FacebookLogin />
                  </View>
-                 <View style={{flex:1,paddingHorizontal:10}}>
+                 <View style={{flex:1,paddingLeft:10}}>
                       <GoogleSignIn/>
                  </View>
             </View>
-            <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
-          </LinearGradient>
-          <View style={styles.signUpBlock}>
-              <Text style={{marginVertical:20,color:'#808080',fontSize:17,textAlign:'center'}}>Dont have an account  <Text style={{fontWeight: 'bold',color:'#3581fc'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign Up</Text></Text>
-            </View>
-        </ScrollView>
         </View>
+    )
+
+  }
+
+
+    render() {
+
+      return (
+               <LinearGradient
+                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   start={{x: 0, y: 0}}
+                   end={{x: 1, y: 0}}
+                   style={{
+                       flex: 1,
+
+                   }}>
+                   <ScrollView>
+                    <View style={{backgroundColor :"transparent",paddingVertical:30}}>
+                             {this.contentrender()}
+
+                      </View>
+  <View style={{width:'100%'}}>
+                              <Image source={border_img} style={{ width: '100%', height: Platform.OS==='ios'? 31 : 30}}/>
+                                 <View style={{height:20, backgroundColor:"#F9FCFF"}}/>
+                              </View>
+                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1,paddingHorizontal:20,paddingBottom:20,alignItems: 'center'}}>
+                                   <Text style={{marginVertical:20,color:'#808080',fontSize:17,textAlign:'center',fontFamily:'Montserrat-Regular'}}>Don't have an account  <Text style={{fontWeight: 'bold',color:'#3581fc',fontFamily:'Montserrat-Bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign Up</Text></Text>
+                        </View>
+                   </ScrollView>
+               </LinearGradient>
       );
     }
 }
@@ -177,10 +198,11 @@ const styles = StyleSheet.create({
         position:'relative'
     },
     borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
-    inputLabel: {
-      textAlign:'left',
-      fontSize: 12,
-      color:'#666666',
+    inputLabel: {color:'rgb(155,155,155)',
+        textAlign:'left',
+        fontSize: 18,
+        marginBottom: 20,
+        fontFamily:'Montserrat-Medium'
    },
     logoText: {
         color:'white',
@@ -190,9 +212,10 @@ const styles = StyleSheet.create({
     },
    text: {
      fontSize: 16,
-     color:'#666666',
+     color:'rgb(99,99,99)',
      textAlign:'center',
-     marginVertical:15
+     marginVertical:15,
+       fontFamily:'Montserrat-Medium'
    },
    signUpBlock: {
        flex:2,
@@ -204,21 +227,23 @@ const styles = StyleSheet.create({
        backgroundColor:'#4A4A4A',
        width: '100%',
        borderRadius:30,
-       borderWidth: 1,
        borderColor: '#fff',
        marginTop:10,
        paddingTop:16,
        paddingBottom:16,
+       shadowOffset: { width: 0, height: 2 },
+       shadowOpacity: 0.2,
+       shadowRadius: 2,
+       elevation: 3,
    },
    btnText: { 
        textAlign:'center',
        color:'white',
-       fontSize: 16,
-       fontWeight:'bold'
+       fontSize:18,
+       fontFamily:'Montserrat-Bold'
    },
    loginBlox: {
        flex:1,
-       elevation: 3,
        justifyContent:'space-between',
        borderRadius: 10,
        backgroundColor:'white',
@@ -226,7 +251,7 @@ const styles = StyleSheet.create({
        shadowOffset: { width: 0, height: 2 },
        shadowOpacity: 0.2,
        shadowRadius: 2,
-       elevation: 1,
+       elevation: 3,
    }
 })
 

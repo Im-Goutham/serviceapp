@@ -24,6 +24,7 @@ var {height, width} = Dimensions.get('window');
 
 
 let logo = require('../images/logo.png');
+let back_arrow = require('../assets/icons/back-arrow.png');
 let menu = require('../assets/icons/menu.png');
 let border_img = require('../images/border_img.png');
 
@@ -76,11 +77,14 @@ class SettingsScreen extends Component {
                            <Header
                                navigation={this.props.navigation}
                                left = {
-                                   <TouchableOpacity
-                                       onPress={() => this.props.navigation.openDrawer()}
-                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
-                                       <Image source={menu} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                                   </TouchableOpacity>
+                                     <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                                        <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={menu} style={{ width: '50%', height: 22}} resizeMode="contain" resizeMethod="resize"/>
+                                        </TouchableOpacity>
+                                    </View>
                                }
                                title={
                                 <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>

@@ -121,7 +121,7 @@ class JobsList extends Component {
                                 alignItems: 'center',
                                 backgroundColor: "transparent"
                             }}>
-                                <Text style={{fontSize: 16, fontWeight: 'bold', color: "#000"}}>{data.jobtitle}</Text>
+                                <Text style={{fontSize: 16, fontFamily: 'Montserrat-Medium', color: "#000"}}>{data.jobtitle}</Text>
                                 <Image style={{
                                     width: 20,
                                     height: 20,
@@ -133,11 +133,14 @@ class JobsList extends Component {
                                 width: "30%",
                                 height: 54,
                                 backgroundColor: "transparent",
-                                alignItems: 'center',
+                                alignItems: 'flex-end',
                                 justifyContent: 'center'
+
                             }}>
 
-                                        <TouchableHighlight style={styles.button} onPress={() => this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')}>
+                                 {
+                                     (screen == 'trackNow' || screen == 'findJobs')?(
+                                           <TouchableHighlight style={styles.button} onPress={() => this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')}>
                                             <LinearGradient
                                                 colors={['#3E85EF', '#3EBDEF']}
                                                 start={{x: 0, y: 0}}
@@ -147,56 +150,48 @@ class JobsList extends Component {
                                             </LinearGradient>
                                         </TouchableHighlight>
 
+                                     ):(
+                                       <TouchableHighlight  onPress={() => this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')}>
+                                                <Image style={{width: 15, height: 15}} source={require('../assets/icons/eclipse.png')} resizeMode="contain" resizeMethod="resize"/>
+                                        </TouchableHighlight>
 
-                                  {/*<TouchableHighlight style={{*/}
-                                            {/*alignItems:"flex-end",*/}
-                                            {/*justifyContent:'flex-end',*/}
-                                            {/*// alignItems:'center',*/}
-                                            {/*height: 40,*/}
-                                            {/*width:"100%",*/}
-                                            {/*// backgroundColor:"red",*/}
-                                            {/*// borderRadius:20,*/}
-                                        {/*}} onPress={() => console.warn("nejkhknz")}>*/}
-                                            {/*<Icon name='options-vertical' type ={"SimpleLineIcons"} style={{color: '#000', fontSize: 27, textAlign: 'center'}}/>*/}
-                                        {/*</TouchableHighlight>*/}
+                                     )
+                                 }
+
                             </View>
                         </View>
-                        <View style={{flex: 1, flexDirection: 'row', marginTop: 0,}}>
+                        <View style={{flex: 1, flexDirection: 'row'}}>
                             <View style={{
-                                flex: 2,
+                                flex: 4,
                                 backgroundColor: "transparent",
                                 justifyContent: 'center',
-                                alignItems: 'center'
+                                alignItems: 'center',
                             }}>
-                                <Image style={{width: "100%", height: 100, borderRadius: 10,}} source={data.image}
+                                <Image style={{width: "100%", height: 110, borderRadius: 10,}} source={data.image}
                                        resizeMode="contain" resizeMethod="resize"/>
                             </View>
                             <View style={{
-                                flex: 3,
+                                flex: 7,
                                 flexDirection: 'column',
-                                justifyContent: 'space-between',
-                                paddingHorizontal: 10
+                                paddingHorizontal: 10,
+                                justifyContent:'space-between'
                             }}>
-                                <View>
-                                    <Text style={{fontSize: 15, color: "#9B9B9B", fontFamily: "Montserrat-Medium"}}
-                                          numberOfLines={2}>{data.detail}</Text>
+                                <View><Text style={{fontSize: 15, color: "#9B9B9B", fontFamily: "Montserrat-Medium"}}
+                                          numberOfLines={3}>{data.detail}</Text></View>
+                                 <View style={{ flexDirection: 'row'}}>
+                                    <Image style={{width: 15, height: 15}} source={require('../assets/icons/calender.png')} resizeMode="contain" resizeMethod="resize"/>
+                                        <Text style={{
+                                            marginLeft: 10,
+                                            fontFamily: "Montserrat-Regular",
+                                            fontSize: 14,
+                                            color: 'rgb(101,101,101)'
+                                        }}>Before the 19 Sep 2018</Text>
                                 </View>
-                                <View style={{flexDirection: 'column'}}>
-                                    <View style={{flex: 1, flexDirection: 'row'}}>
-                                        <Image style={{width: 15, height: 15}} source={require('../assets/icons/calender.png')} resizeMode="contain" resizeMethod="resize"/>
-                                        <Text style={{fontSize: 12}}>
-                                            <Text style={{
-                                                paddingLeft: 5,
-                                                fontFamily: "Montserrat-Regular",
-                                                fontSize: 14,
-                                                color: 'rgb(101,101,101)'
-                                            }}>Before the 19 Sep 2018</Text></Text>
-                                    </View>
-                                    <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                                 <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                                         <View style={{flex: 1, flexDirection: 'row',}}>
                                             <Image style={{width: 15, height: 15}} source={require('../assets/icons/location_red.png')} resizeMode="contain" resizeMethod="resize"/>
                                             <Text style={{paddingLeft: 5, fontSize: 14, fontFamily: "Montserrat-Light"}}>
-                                                3 km
+                                                3 mi
                                             </Text>
                                         </View>
                                         <View style={{flex: 1, flexDirection: 'row'}}>
@@ -211,7 +206,6 @@ class JobsList extends Component {
                                         }}>$240</Text>
                                         </View>
                                     </View>
-                                </View>
                             </View>
                         </View>
                     </View>
@@ -257,16 +251,14 @@ class JobsList extends Component {
       li: {
         backgroundColor: 'white',
         borderRadius:10,
-        borderBottomColor: '#eee',
-        borderColor: '#9B9B9B',
         // borderWidth: 1,
         paddingHorizontal: 10,
         paddingVertical:20,
-        marginBottom:5,
+        marginBottom:20,
         shadowOffset: { width:  0, height:  2 },
         shadowOpacity: 0.2,
         shadowRadius:  2,
-        elevation:  1,
+        elevation:  3,
         // flex:1
       },
       liText: {
