@@ -1,7 +1,9 @@
 package com.spotjobs;
 
-import com.facebook.FacebookSdk;
+
 import com.facebook.CallbackManager;
+import com.facebook.FacebookSdk;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.facebook.appevents.AppEventsLogger;
 
 import android.app.Application;
@@ -19,7 +21,6 @@ import cl.json.RNSharePackage;
 import com.imagepicker.ImagePickerPackage;
 import com.amazonaws.RNAWSCognitoPackage;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
-import io.callstack.react.fbads.FBAdsPackage;
 import co.apptailor.googlesignin.RNGoogleSigninPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -50,7 +51,6 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new FBSDKPackage(),
             new MapsPackage(),
             new LinearGradientPackage(),
             new RNI18nPackage(),
@@ -62,9 +62,7 @@ public class MainApplication extends Application implements ReactApplication {
             new ImagePickerPackage(),
             new RNAWSCognitoPackage(),
             new ReactNativePushNotificationPackage(),
-            new FBAdsPackage(),
           new RNGoogleSigninPackage(),
-          new MapsPackage(),
           new FBSDKPackage(mCallbackManager)
 
       );
