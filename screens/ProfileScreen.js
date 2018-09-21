@@ -12,6 +12,7 @@ import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbna
 import ImagePicker  from 'react-native-image-picker';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
+import OptionsMenu from "react-native-options-menu";
 import HeaderScreen from './HeaderScreen';
 import Documents from '../components/Documents';
 const { width, height } = Dimensions.get('window');
@@ -399,7 +400,12 @@ class ProfileScreen extends Component {
                           <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .5 }, { scaleY: .5 }]}}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
-                         <Icon style={{color:'#3E85EF'}} active name="md-more" />
+                        <OptionsMenu
+                          button={ require('../assets/icons/eclipse.png')}
+                          buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                          destructiveIndex={1}
+                          options={["Edit", "Delete", "Cancel"]}
+                          actions={[()=>alert('Edit'),()=> alert('Delete'),()=>alert('Cancel')]}/>
                     </View>
                     </View>
                     <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
@@ -408,7 +414,12 @@ class ProfileScreen extends Component {
                         <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .5 }, { scaleY: .5 }]}}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
-                         <Icon style={{color:'#3E85EF'}} active name="md-more" />
+                        <OptionsMenu
+                              button={ require('../assets/icons/eclipse.png')}
+                              buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                              destructiveIndex={1}
+                              options={["Edit", "Delete", "Cancel"]}
+                              actions={[()=>alert('Edit'),()=> alert('Delete'),()=>alert('Cancel')]}/>
                     </View>
                     </View>
                     <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
@@ -417,7 +428,12 @@ class ProfileScreen extends Component {
                         <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .5 }, { scaleY: .5 }]}}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
-                         <Icon style={{color:'#3E85EF'}} active name="md-more" />
+                        <OptionsMenu
+                              button={ require('../assets/icons/eclipse.png')}
+                              buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                              destructiveIndex={1}
+                              options={["Edit", "Delete", "Cancel"]}
+                              actions={[()=>alert('Edit'),()=> alert('Delete'),()=>alert('Cancel')]}/>
                     </View>
                     </View>
                 </View>

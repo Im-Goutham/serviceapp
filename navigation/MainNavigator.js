@@ -6,6 +6,7 @@ import LoginScreen from '../screens/LoginScreen';
 import RegisterScreen from '../screens/RegisterScreen';
 import ForgotScreen from '../screens/ForgotScreen';
 import AppDrawerNavigator from './AppDrawerNavigator';
+import RegisterStackNavigator from './RegisterStackNavigator';
 import ProfileStackNavigator from './ProfileStackNavigator';
 
 
@@ -18,7 +19,7 @@ export default createStackNavigator(
       screen: LoginScreen,
     },
     register: {
-      screen: RegisterScreen,
+      screen: RegisterStackNavigator,
     },
     forgot: {
       screen: ForgotScreen,
@@ -31,7 +32,7 @@ export default createStackNavigator(
      },
       },{
         index: 0,
-        initialRouteName: 'home',
+        initialRouteName: 'appTutorial',
         headerMode: 'none',
         navigationOptions: {
         gesturesEnabled: false

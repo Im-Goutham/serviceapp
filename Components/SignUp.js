@@ -224,7 +224,7 @@ class SignUp extends Component {
                 </View>
             </View>
             <Text style={{textAlign:'right',color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}>Verify</Text>
-            <Text style={{fontSize:16,paddingVertical: 30}}>  I agree with the <Text style={{color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}>Terms & Conditions</Text></Text>
+            <TouchableOpacity onPress={() => {this.props.navigation.navigate('terms');}}><Text style={{fontSize:16,paddingVertical: 30}}>  I agree with the <Text style={{color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}>Terms & Conditions</Text></Text></TouchableOpacity>
             <View style={{justifyContent: "center",marginBottom:20 }}>
                 {
                     this.state.loading

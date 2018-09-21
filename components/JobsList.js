@@ -4,6 +4,8 @@ import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,Touchab
 import {Icon} from 'native-base';
 import Share, {ShareSheet, Button} from 'react-native-share';
 import LinearGradient from 'react-native-linear-gradient';
+import OptionsMenu from "react-native-options-menu";
+
 let joblist = {
     data : [
         {
@@ -151,13 +153,19 @@ class JobsList extends Component {
                                         </TouchableHighlight>
 
                                      ):(
-                                       <TouchableHighlight  onPress={() => this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')}>
-                                                <Image style={{width: 15, height: 15}} source={require('../assets/icons/eclipse.png')} resizeMode="contain" resizeMethod="resize"/>
-                                        </TouchableHighlight>
+                                        <OptionsMenu
+                                        button={ require('../assets/icons/eclipse.png')}
+                                        buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                                        destructiveIndex={1}
+                                        options={["Edit", "Delete", "Cancel"]}
+                                        actions={[()=>alert('Edit'),()=> alert('Delete'),()=>alert('Cancel')]}/>
+         
 
                                      )
                                  }
-
+                                      {/* <TouchableHighlight  onPress={() => this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')}>
+                                             <Image style={{width: 15, height: 15}} source={require('../assets/icons/eclipse.png')} resizeMode="contain" resizeMethod="resize"/>
+                                        </TouchableHighlight> */}
                             </View>
                         </View>
                         <View style={{flex: 1, flexDirection: 'row'}}>
