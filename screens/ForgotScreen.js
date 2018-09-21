@@ -61,7 +61,7 @@ class ForgetScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between"}}>
-                                 <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 35,paddingLeft:20,paddingBottom:10}}>Forget ID/Password</Text>
+                                 <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 31,paddingLeft:20,paddingBottom:20}}>Forgot ID/Password</Text>
 
                       </View>
                        }

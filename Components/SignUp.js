@@ -224,8 +224,8 @@ class SignUp extends Component {
                 </View>
             </View>
             <Text style={{textAlign:'right',color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}>Verify</Text>
-            <Text style={{fontSize:16,paddingVertical: 10}}>  I agree with the <Text style={{color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}>Terms & Conditions</Text></Text>
-            <View style={{justifyContent: "center" }}>
+            <Text style={{fontSize:16,paddingVertical: 30}}>  I agree with the <Text style={{color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}>Terms & Conditions</Text></Text>
+            <View style={{justifyContent: "center",marginBottom:20 }}>
                 {
                     this.state.loading
                         ?
@@ -236,7 +236,7 @@ class SignUp extends Component {
                         </LinearGradient>
                 }
                 </View>
-            <View style={styles.socialBox}>
+            <View style={[styles.socialBox,{marginBottom:30}]}>
                 <View style={{flex:1,paddingHorizontal:10}}>
                     <FacebookLogin />
                 </View>
@@ -271,8 +271,7 @@ var styles = StyleSheet.create({
         marginBottom: 20
     },
     inputField: {
-        marginTop: 10,
-        marginBottom: 10
+        marginVertical: 14
     },
     borderImg: {
         width:width,
@@ -303,7 +302,7 @@ var styles = StyleSheet.create({
     btnText: {
         textAlign:'center',
         color:'white',
-        fontSize:18,
+        fontSize:17,
         fontFamily:'Montserrat-Bold'
     },
     socialBox:{

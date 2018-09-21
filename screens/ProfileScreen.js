@@ -208,7 +208,7 @@ class ProfileScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between"}}>
-                                 <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 35,paddingLeft:30,paddingBottom:10}}>User Profile</Text>
+                                 <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 33,paddingLeft:30,paddingBottom:20}}>User Profile</Text>
 
                       </View>
                        }
@@ -216,7 +216,7 @@ class ProfileScreen extends Component {
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
                             <ScrollView >
               <View style={styles.container}>
-              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}>
+              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:20,justifyContent:'space-between'}}>
                 <View style={styles.logoContainer}>
                       <TouchableOpacity onPress={this.selectPhotoTapped.bind(this)}>
                         <View style={styles.imgsView}>
@@ -385,42 +385,42 @@ class ProfileScreen extends Component {
                   </View>
                 </View>
                 <View style={[styles.servicesBox,{flexDirection:'row'}]}>
-                  <View style={{flex: 1}}><Text style={{color:'#3E85EF',fontWeight:'bold',fontSize: 17}}>Do you want to be a Service Provider</Text></View>
-                  <View style={{flex: 1,flexDirection: 'row', justifyContent:'flex-end'}}><Text style={{paddingRight:10}}>Yes</Text><Switch value={true} style={styles.switch}/></View>
+                  <View style={{flex: 2}}><Text style={{color:'#3E85EF',fontFamily:'Montserrat-Medium',fontSize: 16,lineHeight:23}}>Do you want to be a service Provider?</Text></View>
+                  <View style={{flex: 1,flexDirection: 'row', justifyContent:'flex-end'}}><Switch value={true} style={styles.switch}/></View>
               </View>
 
 
             <View style={styles.servicesBox}>
-                 <Text style={styles.textStyle}>Select which services you want to provide</Text>
-                 <List style={{paddingTop:20,paddingBottom:20}}>
-                    <ListItem>
-                    <Body>
-                        <Text>Waiter</Text>
-                          <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>
-                    </Body>
-                    <Right>
+                 <Text style={styles.textStyle}>Select the services you will provide</Text>
+                 <View style={{paddingTop:20,paddingBottom:20}}>
+                    <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
+                    <View style={{flex:1}}>
+                        <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Waiter</Text>
+                          <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .5 }, { scaleY: .5 }]}}/></View>
+                    </View>
+                    <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                          <Icon style={{color:'#3E85EF'}} active name="md-more" />
-                    </Right>
-                    </ListItem>
-                    <ListItem>
-                    <Body>
-                        <Text>Painting</Text>
-                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>
-                    </Body>
-                    <Right>
+                    </View>
+                    </View>
+                    <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
+                    <View style={{flex:1}}>
+                    <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Painting</Text>
+                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .5 }, { scaleY: .5 }]}}/></View>
+                    </View>
+                    <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                          <Icon style={{color:'#3E85EF'}} active name="md-more" />
-                    </Right>
-                    </ListItem>
-                    <ListItem>
-                    <Body>
-                        <Text>Dog Walking</Text>
-                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>
-                    </Body>
-                    <Right>
+                    </View>
+                    </View>
+                    <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
+                    <View style={{flex:1}}>
+                    <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Dog Walking</Text>
+                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .5 }, { scaleY: .5 }]}}/></View>
+                    </View>
+                    <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                          <Icon style={{color:'#3E85EF'}} active name="md-more" />
-                    </Right>
-                    </ListItem>
-                </List>
+                    </View>
+                    </View>
+                </View>
                 <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceCatScreen')}}><Text style={styles.btnText}>ADD MORE SERVICES</Text></TouchableOpacity>
@@ -616,8 +616,8 @@ const styles = StyleSheet.create({
     elevation: 3,
 },
 textStyle: {
-  fontFamily:"Montserrat-Bold",
-  fontWeight:'bold'
+  fontFamily:"Montserrat-SemiBold",
+  fontSize: 16
 }
 })
 

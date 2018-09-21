@@ -12,6 +12,7 @@ import {
  import {  Icon } from 'native-base'
 import Advertisement from '../components/Advertisement';
 import ChatList from '../components/ChatList';
+import Carousel from '../components/Carousel';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -145,7 +146,7 @@ class HomeScreen extends Component {
                                right={
                                    <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                        <TouchableOpacity style={{width: "100%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                            <Image source={require('../images/svp1.png')} style={{ width: 35, height: 35,borderWidth:3,borderRadius:30,borderColor:'white',overflow: 'hidden'}} />
+                                            <Image source={require('../images/svp1.png')} style={{ width: 35, height: 35,borderWidth:3,borderRadius:18,borderColor:'white',overflow: 'hidden'}} />
                                        </TouchableOpacity>
                                    </View>
                                }
@@ -162,7 +163,9 @@ class HomeScreen extends Component {
                           justifyContent: 'space-between'
                       }}>
                             <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingBottom:30,justifyContent:'space-between'}}>
-
+                         <View >
+                             <Carousel/>
+                         </View>
                           <View style={styles.servicesBox}>
                             <View style={styles.categoryContainer}>
                             {
