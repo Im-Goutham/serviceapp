@@ -23,10 +23,10 @@ class Header extends Component {
         <View style={{width: "20%", backgroundColor: 'transparent', justifyContent:"center", alignItems: "center" }}>
           {left}
         </View>
-        <View style={{width: "60%", backgroundColor: 'transparent', justifyContent: "center", alignItems: 'flex-start'}}>
+        <View style={{width: right ? "60%" : '100%', backgroundColor: 'transparent', justifyContent: "center", alignItems: 'flex-start'}}>
           {title}
         </View>
-        <View style={{width: "20%", backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+        <View style={{width: right ? "20%" : '0%', backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
           {right}
         </View>
 

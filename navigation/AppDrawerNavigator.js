@@ -4,7 +4,7 @@ import HomeScreen from '../screens/HomeScreen';
 import FindJobsStackNavigator from './FindJobsStackNavigator';
 import MyJobsStackNavigator from './MyJobsStackNavigator';
 import PostJobScreen from '../screens/PostJobScreen';
-import FindHelpScreen from '../screens/FindHelpScreen';
+import FindHelpStackNavigator from './FindHelpStackNavigator';
 import FavouriteScreen from '../screens/FavouriteScreen';
 import NotificationsScreen from '../screens/NotificationsScreen';
 import ChatStackNavigator from './ChatStackNavigator';
@@ -26,7 +26,7 @@ export default createDrawerNavigator(
             screen: PostJobScreen
         },
         findHelp: {
-            screen: FindHelpScreen
+            screen: FindHelpStackNavigator
         },
         myJobs: {
             screen: MyJobsStackNavigator
@@ -57,7 +57,7 @@ export default createDrawerNavigator(
         },
     },
     {
-        initialRouteName: 'homePage',
+        initialRouteName: 'findJobs',
         contentComponent: SideMenu,
         drawerWidth: 300
     });

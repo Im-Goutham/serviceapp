@@ -405,7 +405,7 @@ class ProfileScreen extends Component {
                           buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
                           destructiveIndex={1}
                           options={["Edit", "Delete", "Cancel"]}
-                          actions={[()=>alert('Edit'),()=> alert('Delete'),()=>alert('Cancel')]}/>
+                          actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </View>
                     </View>
                     <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
@@ -419,7 +419,7 @@ class ProfileScreen extends Component {
                               buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
                               destructiveIndex={1}
                               options={["Edit", "Delete", "Cancel"]}
-                              actions={[()=>alert('Edit'),()=> alert('Delete'),()=>alert('Cancel')]}/>
+                              actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </View>
                     </View>
                     <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
@@ -433,7 +433,7 @@ class ProfileScreen extends Component {
                               buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
                               destructiveIndex={1}
                               options={["Edit", "Delete", "Cancel"]}
-                              actions={[()=>alert('Edit'),()=> alert('Delete'),()=>alert('Cancel')]}/>
+                              actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </View>
                     </View>
                 </View>

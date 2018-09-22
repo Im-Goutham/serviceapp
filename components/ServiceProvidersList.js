@@ -73,6 +73,9 @@ class ServiceProvidersList extends Component {
                 }}
                 onClose={() => console.log('===close') }
                 scroll={event => console.log('scroll event') }>
+                 <TouchableWithoutFeedback onPress={() => {
+                    this.props.navigation.navigate('jobDetail')
+                }}>
                 <View style={styles.servicesBox} >
                     <View style={{flex:1,flexDirection:'row'}}>
                         <View style={{flex:2}}>
@@ -137,6 +140,7 @@ class ServiceProvidersList extends Component {
                         </View>
                     </View>
                 </View>
+                </TouchableWithoutFeedback>
             </Swipeout>
         );
     }

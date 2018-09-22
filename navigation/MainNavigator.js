@@ -32,7 +32,7 @@ export default createStackNavigator(
      },
       },{
         index: 0,
-        initialRouteName: 'appTutorial',
+        initialRouteName: 'home',
         headerMode: 'none',
         navigationOptions: {
         gesturesEnabled: false

@@ -142,7 +142,7 @@ class TrackScreen extends Component {
                                }
                                title={
                                 <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Track Screen</Text>
+                                    <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Track Screen</Text>
                                </View>
                                }
                                right={

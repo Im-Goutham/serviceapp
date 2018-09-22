@@ -163,7 +163,7 @@ class HomeScreen extends Component {
                           justifyContent: 'space-between'
                       }}>
                             <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingBottom:30,justifyContent:'space-between'}}>
-                         <View >
+                         <View>
                              <Carousel/>
                          </View>
                           <View style={styles.servicesBox}>

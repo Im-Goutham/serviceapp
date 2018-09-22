@@ -1,22 +1,33 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
+  Image,
   Text,
   View,
   Dimensions
 } from 'react-native';
 
-// import MapView ,{ Marker } from 'react-native-maps';
+import MapView ,{ Marker } from 'react-native-maps';
 import Polyline from '@mapbox/polyline';
 
 export default class RnDirectionsApp extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      coords: [],
+      coords: [
+        { latitude: 17.704788, longitude: 83.297144 },
+        { latitude: 17.700209, longitude: 83.296457 },
+        { latitude: 17.695303, longitude: 83.292339 },
+        { latitude: 17.686144, longitude: 83.286505},
+        { latitude: 17.678948, longitude: 83.284446 },
+        { latitude: 17.670443, longitude: 83.275867 },
+        { latitude: 17.661283, longitude: 83.263170},
+        { latitude: 17.646234, longitude: 83.244981 },
+        { latitude: 17.632535, longitude: 83.227539 }
+      ],
       markers: [
-        {latitude: 23.022505, longitude: 72.571365},
-        {latitude: 23.032469, longitude: 72.491236}
+        { latitude: 17.704788, longitude: 83.297144 },
+        { latitude: 17.632535, longitude: 83.227539 }
       ],
         showDirection:false
     }
@@ -25,7 +36,7 @@ export default class RnDirectionsApp extends Component {
   componentDidMount() {
     // find your origin and destination point coordinates and pass it to our method.
     // I am using Bursa,TR -> Istanbul,TR for this example
-    this.getDirections("23.022505, 72.571365", "23.032469,72.491236")
+   // this.getDirections("23.022505, 72.571365", "23.032469,72.491236")
   }
 
   async getDirections(startLoc, destinationLoc) {
@@ -52,41 +63,34 @@ export default class RnDirectionsApp extends Component {
   render() {
       let {showDirection} = this.state;
     return (
-      <View>
-         
-          {(this.state.showMap)?(
+
               <MapView style={styles.map} initialRegion={{
-                  latitude:23.022505,
-                  longitude:72.571365,
+                  latitude: 17.678948, longitude: 83.284446,
                   latitudeDelta: 0.0922,
                   longitudeDelta: 0.0421
                 }}>
-                  {
-                      (showDirection)?(
+
                           <MapView.Polyline
                             coordinates={this.state.coords}
                             strokeWidth={4}
-                            strokeColor="#ff9933"/>
-                      ):(
-                           null
-                      )
-                  }
-
+                            strokeColor="rgb(62,132,235)"/>
                   <Marker
-                     coordinate={{latitude: 23.022505, longitude: 72.571365}}
-                     image={require('../assets/icons/map_location_red.png')}
-                   />
+                     coordinate={{latitude: 17.704788, longitude: 83.297144  }}
+                   >
+                     <Image source={require('../assets/icons/map_location_red.png')} style={{ width: 30, height: 30 }} resizeMode="contain" resizeMethod="resize"/>
+                   </Marker>
+                    <Marker
+                     coordinate={{latitude: 17.678948, longitude: 83.284446 }}
+                     >
+                     <Image source={require('../assets/icons/car.png')} style={{ width: 70, height: 70 }} resizeMode="contain" resizeMethod="resize"/>
+                   </Marker>
                    <Marker
-                     coordinate={{latitude: 23.022505, longitude: 72.571365}}
-                     image={require('../assets/icons/map_location_blue.png')}
-                    />
+                     coordinate={{latitude: 17.632535, longitude: 83.227539  }}
+                     >
+                     <Image source={require('../assets/icons/map_location_blue.png')} style={{ width: 30, height: 30 }} resizeMode="contain" resizeMethod="resize"/>
+                   </Marker>
 
               </MapView>
-          ):(
-               null
-          )}
-
-      </View>
     );
   }
 }

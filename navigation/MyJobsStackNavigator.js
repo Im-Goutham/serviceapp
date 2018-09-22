@@ -2,13 +2,13 @@ import { createStackNavigator } from 'react-navigation';
 
 import AllServiceprovider from '../screens/AllServiceprovider';
 import MyJobsScreen from '../screens/MyJobsScreen';
-import JobDetailScreen from '../screens/JobDetailScreen';
+import MyJobDetailScreen from '../screens/MyJobDetailScreen';
 // import FindJobsScreen from '../screens/FindJobsScreen';
  import ReviewRating from '../screens/ReviewRating';
 
 export default createStackNavigator({
     myJobs: { screen: MyJobsScreen },
-    jobDetail: { screen: JobDetailScreen },
+    jobDetail: { screen: MyJobDetailScreen },
     allServiceprovider: { screen: AllServiceprovider },
     reviewrating: { screen: ReviewRating }
    },{

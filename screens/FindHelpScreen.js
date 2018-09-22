@@ -218,7 +218,7 @@ class FindHelpScreen extends Component {
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
                        <Advertisement/>
-                       {this.state.tabindex === 0 ?<ServiceProvidersList/>:<Map pinPress={() => this.refs.modal1.open()}/>}
+                       {this.state.tabindex === 0 ?<ServiceProvidersList navigation={this.props.navigation}/>:<Map pinPress={() => this.refs.modal1.open()}/>}
                        </View>
                </LinearGradient>
                <Modal
@@ -230,7 +230,7 @@ class FindHelpScreen extends Component {
                    <View style={{ marginBottom: -10, width: 40, borderTopLeftRadius:10, borderTopRightRadius:10, paddingBottom:10, alignSelf:"flex-end", height: 45, backgroundColor: 'rgba(213,213,213,0.4)', justifyContent:'center', alignItems:'center', right:0}} >
                        <Icon name="close" style={{}} onPress={() => this.refs.modal1.close()}/>
                    </View>
-                   <ScrollView ScrollView contentContainerStyle={{}}>
+                   <ScrollView >
                        {this.rendermapdata()}
                        </ScrollView>
                </Modal>

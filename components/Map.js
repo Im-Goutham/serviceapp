@@ -93,6 +93,7 @@ export default class Map extends Component {
            coordinate={coordinate}
            image={require('../assets/icons/map_location_blue.png')}
            key={key}
+           style={{width:20,height:20}}
            onPress={()=>this.props.pinPress()}
          >
          </Marker>
@@ -100,6 +101,7 @@ export default class Map extends Component {
       }  
       <Marker
            coordinate={coordinate}
+           style={{width:20,height:20}}
            image={require('../assets/icons/map_location_red.png')}
          >
          </Marker> 

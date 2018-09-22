@@ -130,7 +130,7 @@ class SubscriptionScreen extends Component {
                                }
 
                            />
-                   <ScrollView>
+                   <View style={{flex:1}}>
                     <View style={{backgroundColor :"transparent",paddingVertical:30}}>
                              {this.contentrender()}
 
@@ -155,7 +155,7 @@ class SubscriptionScreen extends Component {
                                </View> 
                            
                         </View>
-                   </ScrollView>
+                </View>
                </LinearGradient>
               
            </View>

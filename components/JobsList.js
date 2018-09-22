@@ -6,6 +6,8 @@ import Share, {ShareSheet, Button} from 'react-native-share';
 import LinearGradient from 'react-native-linear-gradient';
 import OptionsMenu from "react-native-options-menu";
 
+import CancelModal from  '../components/CancelModal';
+
 let joblist = {
     data : [
         {
@@ -34,6 +36,7 @@ class JobsList extends Component {
         this.state = {
             loaded: false,
             refreshing: false,
+            visible:false,
             dataSource: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2}),
         }
     }
@@ -156,9 +159,9 @@ class JobsList extends Component {
                                         <OptionsMenu
                                         button={ require('../assets/icons/eclipse.png')}
                                         buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
-                                        destructiveIndex={1}
-                                        options={["Edit", "Delete", "Cancel"]}
-                                        actions={[()=>alert('Edit'),()=> alert('Delete'),()=>alert('Cancel')]}/>
+                                        destructiveIndex={2}
+                                        options={["Edit", "Cancel the Job", "Delete"]}
+                                        actions={[()=>console.log('Edit'),() => { this.setState({visible:true})},()=>console.log('Delete')]}/>
          
 
                                      )
@@ -241,12 +244,17 @@ class JobsList extends Component {
 
     render() {
         console.log('this propd',this.props.navigation.state.routeName);
+        let {visible} = this.state;
         return (
-            <ListView
-                scrollEnabled
-                dataSource={this.state.dataSource}
-                renderRow={this._renderRow.bind(this)}
-                style={styles.listview}/>
+            <View style={{flex:1}}>
+                <ListView
+                    scrollEnabled
+                    dataSource={this.state.dataSource}
+                    renderRow={this._renderRow.bind(this)}
+                    style={styles.listview}/>
+               <CancelModal visible={visible} closeModal={() => { this.setState({visible:false})}}/>
+            </View>
+           
         );
     }
 }
