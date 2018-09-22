@@ -85,7 +85,7 @@ export default class MyJobDetailPage extends Component {
                             }
                             title={
                                 <View style={{ justifyContent: 'center', alignItems: 'flex-start', width: "100%", height: 54 }}>
-                                    <Text style={{ fontFamily: 'Montserrat-Bold', color: "#fff", fontSize: 20 }}>Need Cook</Text>
+                                    <Text style={{ fontFamily: 'Montserrat-Bold', color: "#fff", fontSize: 18 }}>Need Cook</Text>
                                 </View>
                             }
                             right={
@@ -101,7 +101,7 @@ export default class MyJobDetailPage extends Component {
                         />
                     }
                 />
-                <ScrollView>
+                <ScrollView style={{backgroundColor:'rgb(249,252,255)'}}>
                     <View style={styles.container}>
                         <PhotoGallery />
                         <View style={styles.desc}>
@@ -188,7 +188,7 @@ export default class MyJobDetailPage extends Component {
                         <View style={styles.servicesBox}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                 <Text style={styles.textStyle}>See people who applied</Text>
-                                <TouchableOpacity onPress={() => {this.props.navigation.navigate('allServiceprovider')}}><Text style={{ fontSize: 11, color: '#3E85EF', fontFamily: 'Montserrat-Light' }}>VIEW ALL</Text></TouchableOpacity>
+                                <TouchableOpacity onPress={() => {this.props.navigation.navigate('allServiceProvider')}}><Text style={{ fontSize: 11, color: '#3E85EF', fontFamily: 'Montserrat-Light' }}>VIEW ALL</Text></TouchableOpacity>
                             </View>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20 }}>
                                 <ScrollView
@@ -212,8 +212,6 @@ export default class MyJobDetailPage extends Component {
                                 </ScrollView>
                             </View>
                         </View>
-                        {
-                            this.props.navigation.state.routeName != "jobDetail" ?
                                 <View style={styles.livetrackbox}>
                                     <TouchableOpacity style={{
                                         width: "50%",
@@ -223,16 +221,16 @@ export default class MyJobDetailPage extends Component {
                                         borderRightWidth: 2
                                     }}>
                                         <Image source={require('../assets/icons/calander_black.png')}/>
-                                        <TouchableOpacity style={{justifyContent: "center", alignItems: 'center'}}>
+                                        <TouchableOpacity style={{justifyContent: "center", alignItems: 'center',marginTop:10}}>
                                             <Text style={{
-                                                fontSize: 14,
+                                                fontSize: 12,
                                                 color: "rgb(61, 133, 239)",
-                                                fontFamily: "Montserrat-Bold"
+                                                fontFamily: "Montserrat-Regular"
                                             }}>{'Add to'}</Text>
                                             <Text style={{
-                                                fontSize: 14,
+                                                fontSize: 12,
                                                 color: "rgb(61, 133, 239)",
-                                                fontFamily: "Montserrat-Bold"
+                                                fontFamily: "Montserrat-Regular"
                                             }}>{'Google Calander'}</Text>
                                         </TouchableOpacity>
                                     </TouchableOpacity>
@@ -242,26 +240,26 @@ export default class MyJobDetailPage extends Component {
                                         justifyContent: "center",
                                         alignItems: "center"}}>
                                         <Image source={require('../assets/icons/location_pin_black.png')}/>
-                                        <TouchableOpacity style={{justifyContent: "center", alignItems: 'center'}}>
+                                        <TouchableOpacity 
+                                             style={{justifyContent: "center", alignItems: 'center',marginTop:10}}
+                                             onPress={()=>{this.props.navigation.navigate('jobTrack')}}
+                                             >
                                             <Text style={{
                                                 // paddingVertical:10,
-                                                fontSize: 14,
+                                                fontSize: 12,
                                                 color: "rgb(61, 133, 239)",
-                                                fontFamily: "Montserrat-Bold"}}>
+                                                fontFamily: "Montserrat-Regular"}}>
                                                 {'Live track'}</Text>
                                             <Text style={{
                                                 // paddingVertical:10,
-                                                fontSize: 14,
+                                                fontSize: 12,
                                                 color: "rgb(61, 133, 239)",
-                                                fontFamily: "Montserrat-Bold"}}>
+                                                fontFamily: "Montserrat-Regular"}}>
                                                 {'service provider'}</Text>
                                         </TouchableOpacity>
                                     </TouchableOpacity>
                                 </View>
-                                : <View/>
-                        }
-                        {
-                            this.props.navigation.state.routeName != "jobDetail" ?
+
                                 <LinearGradient
                                     colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
                                     start={{x: 0, y: 0}}
@@ -271,40 +269,22 @@ export default class MyJobDetailPage extends Component {
                                 }}>
                                     <TouchableOpacity
                                         style={{height: 54, alignItems: "center", justifyContent: "center",}}>
-                                        <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>MARK
+                                        <Text style={{fontFamily: "Montserrat-bold", fontSize: 16, color: "#fff"}}>MARK
                                             JOB AS COMPLETED</Text>
                                     </TouchableOpacity>
                                 </LinearGradient>
-                                : <View/>
-                        }
-                        {
-                            this.props.navigation.state.routeName != "jobDetail" ?
-                                <TouchableOpacity style={{ height:54,alignItems:"center", justifyContent:"center", borderRadius:27, backgroundColor:"#fff", marginBottom: 10 }}>
-                                    <Text style={{ fontFamily: "Montserrat-bold", fontSize: 20, color: "#666" }}>RATE & REVIEW</Text>
-                                </TouchableOpacity>
-                                :
-                                <View/>
-                        }
-                    </View>
-                    {
-                            this.props.navigation.state.routeName === "jobDetail" ?
-                            <View style={{
-                                height: Platform.OS === 'ios' ? 100 : 64,
-                                backgroundColor: "transparent",
-                                justifyContent: "flex-start"
-                            }}>
-                                <TouchableOpacity
-                                    style={{height: 64, justifyContent: "center", alignItems: "center"}}>
-                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>Apply
-                                        for this job</Text>
-                                </TouchableOpacity>
-                            </View>
-                            :
-                            <View/>
-                    }
 
+                        <TouchableOpacity 
+                           style={{ height:54,alignItems:"center", justifyContent:"center", borderRadius:27, backgroundColor:"#fff", marginBottom: 10 }}
+                           onPress={()=>{this.props.navigation.navigate('giveRating')}}
+                           >
+                            <Text style={{ fontFamily: "Montserrat-bold", fontSize: 16, color: "rgb(212,213,214)" }}>RATE & REVIEW</Text>
+                        </TouchableOpacity>
+
+                    </View>
                 </ScrollView>
             </LinearGradient>
+            <TouchableOpacity onPress={() => { this.props.navigation.navigate('message')}}>
               <LinearGradient
                     colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
                     start={{ x: 0, y: 0 }}
@@ -315,8 +295,9 @@ export default class MyJobDetailPage extends Component {
                         width: 60, height: 60, backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
                         borderRadius: 40
                     }}>
-                    <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
+                       <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
                 </LinearGradient>
+                </TouchableOpacity>
         </View>
          )
     }

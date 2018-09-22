@@ -193,7 +193,15 @@ class MyJobScreen extends Component {
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
                        <Advertisement/>
-                         <JobsList  navigation={this.props.navigation}/>
+                       {
+                           this.state.tabindex === 0 ? 
+                           <JobsList  navigation={this.props.navigation}/> :
+                           (this.state.tabindex === 1) ? ( <JobsList  navigation={this.props.navigation}/>) 
+                               :( 
+                                <JobsList  navigation={this.props.navigation}/>
+                               )
+                      }
+                         
                        </View>
                </LinearGradient>
                <Modal

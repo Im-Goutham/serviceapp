@@ -91,19 +91,17 @@ export default class Map extends Component {
        this.state.markers.map((coordinate,key)=>{
            return   <Marker
            coordinate={coordinate}
-           image={require('../assets/icons/map_location_blue.png')}
            key={key}
-           style={{width:20,height:20}}
            onPress={()=>this.props.pinPress()}
          >
+          <Image source={require('../assets/icons/map_location_blue.png')} style={{ width: 30, height: 30 }} resizeMode="contain" resizeMethod="resize"/>
          </Marker>
        })
       }  
       <Marker
            coordinate={coordinate}
-           style={{width:20,height:20}}
-           image={require('../assets/icons/map_location_red.png')}
          >
+            <Image source={require('../assets/icons/map_location_red.png')} style={{ width: 30, height: 30 }} resizeMode="contain" resizeMethod="resize"/>
          </Marker> 
       </MapView>
     );

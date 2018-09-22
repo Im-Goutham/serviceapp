@@ -210,16 +210,16 @@ class FindHelpScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
-                       <View style={{ paddingTop:30,flexDirection:'row', paddingHorizontal: width/6}}>
-                           {this.tabrender()}
+                                <View style={{ paddingTop:30,flexDirection:'row', paddingHorizontal: width/6}}>
+                                    {this.tabrender()}
+                                </View>
                            </View>
-                   </View>
                        }
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
                        <Advertisement/>
                        {this.state.tabindex === 0 ?<ServiceProvidersList navigation={this.props.navigation}/>:<Map pinPress={() => this.refs.modal1.open()}/>}
-                       </View>
+                  </View>
                </LinearGradient>
                <Modal
                    style={[styles.modal, { height: height/2+50, width: width-40, backgroundColor:"transparent" }]}

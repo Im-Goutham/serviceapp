@@ -20,7 +20,7 @@ import Modal from 'react-native-modalbox';
 import HeaderScreen from './HeaderScreen';
 import PhotoGallery from '../components/PhotoGallery';
 var { height, width } = Dimensions.get('window');
-
+import Documents from '../components/Documents';
 
 
 
@@ -51,6 +51,29 @@ export default class ServiceProviderDetailScreen extends Component {
                 { name: 'Luis', image: require('../images/svp2.png') },
                 { name: 'Clayton', image: require('../images/svp3.png') },
             ],
+            videos: [
+                {
+                  name: 'video1.jpg',
+                  image: require('../images/documents/video1.png')
+                },
+                {
+                  name: 'video2.jpg',
+                  image: require('../images/documents/video2.png')
+                }
+            ],
+            websites: [
+              {
+                name: 'video1.jpg',
+                image: require('../images/documents/website1.png')
+              },
+            ],
+            profiles: [
+                {
+                  name: 'profile1.jpg',
+                  image: require('../images/documents/profile1.png')
+                },
+              ],
+            tags: ['Plumber', 'Tree Service', 'Fencing', 'Mounting and Installing', 'Painting', 'Hair']
         };
     }
 
@@ -59,7 +82,7 @@ export default class ServiceProviderDetailScreen extends Component {
         console.log('params are .. ',this.props.navigation.state);
        
         let i=1
-        let { categories, serviceProviders } = this.state;
+        let { videos, websites, profiles,tags} = this.state;
          return (
             <View style={{ flex: 1 }}>
             <LinearGradient
@@ -85,7 +108,7 @@ export default class ServiceProviderDetailScreen extends Component {
                             }
                             title={
                                 <View style={{ justifyContent: 'center', alignItems: 'flex-start', width: "100%", height: 54 }}>
-                                    <Text style={{ fontFamily: 'Montserrat-Bold', color: "#fff", fontSize: 20 }}>Need Cook</Text>
+                                  <Text style={{ fontFamily: 'Montserrat-Bold', color: "#fff", fontSize: 18 }}>Need Cook</Text>
                                 </View>
                             }
                             right={
@@ -101,7 +124,7 @@ export default class ServiceProviderDetailScreen extends Component {
                         />
                     }
                 />
-                <ScrollView>
+                <ScrollView >
                     <View style={styles.container}>
                         <PhotoGallery />
                         <View style={styles.desc}>
@@ -127,167 +150,46 @@ export default class ServiceProviderDetailScreen extends Component {
                                 </Text>
                             </View>
                         </View>
-                        <View style={styles.category}>
-                            <View style={styles.categoryrow}>
-                                <View style={{ backgroundColor: "transparent", width: "50%", paddingHorizontal: 5 }}>
-                                    <Text style={styles.categorytitle}>Category</Text>
-                                    <Text style={styles.categorytext}>Event Planning</Text>
-                                </View>
-                                <View style={{ backgroundColor: "transparent", width: "50%", paddingHorizontal: 5 }}>
-                                    <Text style={styles.categorytitle}>Sub Category</Text>
-                                    <Text style={styles.categorytext}>Cook</Text>
-                                </View>
+                        <View style={styles.servicesBox}>
+                            <View style={{marginVertical:20}}>
+                                <Text style={styles.textStyle}>Area of Services</Text>
                             </View>
-                            <View style={styles.categoryrow}>
-                                <View style={{ backgroundColor: "transparent", width: "50%", paddingHorizontal: 5 }}>
-                                    <Text style={styles.categorytitle}>Job created on</Text>
-                                    <Text style={styles.categorytext}>2 jul 2018, 08:00 AM</Text>
-                                </View>
-                                <View style={{ backgroundColor: "transparent", width: "50%", paddingHorizontal: 5 }}>
-                                    <Text style={styles.categorytitle}>Job Id</Text>
-                                    <Text style={styles.categorytext}>JB5487</Text>
-                                </View>
-                            </View>
-                        </View>
-                        <View style={styles.customerinfo}>
-                            <Text style={styles.textStyle}>Customer's info</Text>
-                            <View style={{ flexDirection: "row", paddingVertical: 20 }}>
-                                <View style={{ width: "30%" }}>
-                                    <Image source={require('../images/svp2.png')} style={{ width: "100%", height: 70 }} resizeMode="contain" resizeMethod="resize" />
-                                </View>
-                                <View style={{ width: "70%", justifyContent: "space-between" }}>
-                                    <View style={{ flexDirection: "row", }} >
-                                        <Text style={{ fontFamily: "Montserrat-Medium", fontSize: 16 }}>Trevors S.</Text>
-                                        <Image source={require('../assets/icons/crown.png')} style={{ width: 20, height: 20, paddingHorizontal: 20 }} resizeMode="contain" resizeMethod="resize" />
-                                    </View>
-                                    <View style={{ flexDirection: "row", alignItems: "center", paddingVertical: 5 }}>
-                                        <View style={{ flexDirection: "row", borderRightWidth: 0.3, paddingRight: 10 }} >
-                                            <Image source={require('../assets/icons/star_gold.png')} style={{ width: 15, height: 15 }} resizeMode="contain" resizeMethod="resize" />
-                                            <Text style={{
-                                                fontSize: 14,
-                                                color: "#000",
-                                                fontFamily: "Montserrat-Bold",
-                                                // paddingRight: 10
-                                            }}> 4 </Text>
-                                        </View>
-                                        <Text style={{
-                                            fontSize: 14,
-                                            color: "rgb(61, 133, 239)",
-                                            fontFamily: "Montserrat-Regular",
-                                            paddingLeft: 10
-                                        }}> 2  Reviews</Text>
-                                    </View>
-                                    <Text style={{
-                                        fontSize: 14,
-                                        color: "rgb(61, 133, 239)",
-                                        fontFamily: "Montserrat-Bold"
-                                    }}>Other posted jobs</Text>
-                                </View>
+                            <View style={{flexDirection: 'row',flexWrap:'wrap'}}>
+                               {
+                                    tags.map((tag,key)=>{
+                                         return (
+                                             <Text style={styles.tagStyle} key={key}>{tag}</Text>
+                                         )
+                                    })
+                               }
+                                
                             </View>
                         </View>
                         <View style={styles.servicesBox}>
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <Text style={styles.textStyle}>See people who applied</Text>
-                                <TouchableOpacity onPress={() => {this.props.navigation.navigate('allServiceprovider')}}><Text style={{ fontSize: 11, color: '#3E85EF', fontFamily: 'Montserrat-Light' }}>VIEW ALL</Text></TouchableOpacity>
+                            <View style={{marginVertical:20}}>
+                                <Text style={styles.textStyle}>Video Link</Text>
                             </View>
-                            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20 }}>
-                                <ScrollView
-                                    horizontal={true}
-                                    showsHorizontalScrollIndicator={false}>
-                                    {
-                                        serviceProviders ? (
-                                            serviceProviders.map((provider, key) => {
-                                                return (
-                                                    <View style={styles.categoryBox} key={key}>
-                                                        <View style={styles.imageShadow}>
-                                                            <Image source={provider.image} style={[styles.img_placeholder, { borderRadius: 35, width: 70, height: 70 }]} />
-                                                            <Image source={require('../images/check.png')} style={styles.check} />
-                                                        </View>
-                                                        <Text style={{ paddingVertical: 10, color: '#4A4A4A' }}>{provider.name}</Text>
-                                                    </View>
-                                                )
-                                            })
-                                        ) : null
-                                    }
-                                </ScrollView>
+                            <View style={{flexDirection: 'row',alignItems:'center'}}>
+                            <Documents documents={videos}  placeholder={false}/>
                             </View>
                         </View>
-                        {
-                            this.props.navigation.state.routeName != "jobDetail" ?
-                                <View style={styles.livetrackbox}>
-                                    <TouchableOpacity style={{
-                                        width: "50%",
-                                        height: 120,
-                                        justifyContent: "center",
-                                        alignItems: "center",
-                                        borderRightWidth: 2
-                                    }}>
-                                        <Image source={require('../assets/icons/calander_black.png')}/>
-                                        <TouchableOpacity style={{justifyContent: "center", alignItems: 'center'}}>
-                                            <Text style={{
-                                                fontSize: 14,
-                                                color: "rgb(61, 133, 239)",
-                                                fontFamily: "Montserrat-Bold"
-                                            }}>{'Add to'}</Text>
-                                            <Text style={{
-                                                fontSize: 14,
-                                                color: "rgb(61, 133, 239)",
-                                                fontFamily: "Montserrat-Bold"
-                                            }}>{'Google Calander'}</Text>
-                                        </TouchableOpacity>
-                                    </TouchableOpacity>
-                                    <TouchableOpacity style={{
-                                        width: "50%",
-                                        height: 120,
-                                        justifyContent: "center",
-                                        alignItems: "center"}}>
-                                        <Image source={require('../assets/icons/location_pin_black.png')}/>
-                                        <TouchableOpacity style={{justifyContent: "center", alignItems: 'center'}}>
-                                            <Text style={{
-                                                // paddingVertical:10,
-                                                fontSize: 14,
-                                                color: "rgb(61, 133, 239)",
-                                                fontFamily: "Montserrat-Bold"}}>
-                                                {'Live track'}</Text>
-                                            <Text style={{
-                                                // paddingVertical:10,
-                                                fontSize: 14,
-                                                color: "rgb(61, 133, 239)",
-                                                fontFamily: "Montserrat-Bold"}}>
-                                                {'service provider'}</Text>
-                                        </TouchableOpacity>
-                                    </TouchableOpacity>
-                                </View>
-                                : <View/>
-                        }
-                        {
-                            this.props.navigation.state.routeName != "jobDetail" ?
-                                <LinearGradient
-                                    colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
-                                    start={{x: 0, y: 0}}
-                                    end={{x: 1, y: 0}} style={{
-                                    borderRadius: 27,
-                                    marginVertical: 10
-                                }}>
-                                    <TouchableOpacity
-                                        style={{height: 54, alignItems: "center", justifyContent: "center",}}>
-                                        <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>MARK
-                                            JOB AS COMPLETED</Text>
-                                    </TouchableOpacity>
-                                </LinearGradient>
-                                : <View/>
-                        }
-                        {
-                            this.props.navigation.state.routeName != "jobDetail" ?
-                                <TouchableOpacity style={{ height:54,alignItems:"center", justifyContent:"center", borderRadius:27, backgroundColor:"#fff", marginBottom: 10 }}>
-                                    <Text style={{ fontFamily: "Montserrat-bold", fontSize: 20, color: "#666" }}>RATE & REVIEW</Text>
-                                </TouchableOpacity>
-                                :
-                                <View/>
-                        }
+                        <View style={styles.servicesBox}>
+                            <View style={{marginVertical:20}}>
+                                <Text style={styles.textStyle}>Website Link</Text>
+                            </View>
+                            <View style={{flexDirection: 'row',alignItems:'center'}}>
+                            <Documents documents={profiles} placeholder={false}/>
+                            </View>
+                        </View>
+                        <View style={styles.servicesBox}>
+                            <View style={{marginVertical:20}}>
+                                <Text style={styles.textStyle}>Linkedin Profile Link</Text>
+                            </View>
+                            <View style={{flexDirection: 'row',alignItems:'center'}}>
+                            <Documents documents={profiles}  placeholder={false}/>
+                            </View>
+                        </View>
                     </View>
-                    {
-                            this.props.navigation.state.routeName === "jobDetail" ?
                             <View style={{
                                 height: Platform.OS === 'ios' ? 100 : 64,
                                 backgroundColor: "transparent",
@@ -295,16 +197,13 @@ export default class ServiceProviderDetailScreen extends Component {
                             }}>
                                 <TouchableOpacity
                                     style={{height: 64, justifyContent: "center", alignItems: "center"}}>
-                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>Apply
-                                        for this job</Text>
+                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>HIRE NOW</Text>
                                 </TouchableOpacity>
                             </View>
-                            :
-                            <View/>
-                    }
 
                 </ScrollView>
             </LinearGradient>
+            <TouchableOpacity onPress={() => { this.props.navigation.navigate('message')}}>
               <LinearGradient
                     colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
                     start={{ x: 0, y: 0 }}
@@ -315,8 +214,9 @@ export default class ServiceProviderDetailScreen extends Component {
                         width: 60, height: 60, backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
                         borderRadius: 40
                     }}>
-                    <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
+                       <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
                 </LinearGradient>
+                </TouchableOpacity>
         </View>
          )
     }
@@ -362,22 +262,24 @@ const styles = StyleSheet.create({
         shadowRadius: 2,
         elevation: 3
     },
-    category: {
-        marginVertical: 10,
-        paddingHorizontal: 20,
-        borderRadius: 10,
-        backgroundColor: "#fff",
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
-        shadowRadius: 2,
-        elevation: 3
-    },
+   
     budget: {
         height: 54,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
         // backgroundColor:"#666"
+    },
+    tagStyle:{
+        backgroundColor: 'rgb(239,186,47)',
+        borderRadius:10,
+        overflow:"hidden",
+        paddingVertical:2,
+        paddingHorizontal:10,
+        marginBottom:10,
+        color: 'white',
+        marginRight: 10,
+        fontFamily: 'Montserrat-Bold'
     },
     budgettext: {
         fontSize: 15,
@@ -423,17 +325,7 @@ const styles = StyleSheet.create({
         lineHeight: 25,
         color: "rgb(163,163,163)",
     },
-    categoryrow: {
-        flexDirection: "row",
-        justifyContent: "space-between",
-        // height:100,
-        alignItems: 'center',
-        paddingTop: 20,
-        paddingBottom: 10,
-
-        // marginVertical:2,
-        // backgroundColor:"red"
-    },
+   
     categorytitle: {
         fontFamily: "Montserrat-SemiBold",
         fontSize: 14,

@@ -19,6 +19,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Modal from 'react-native-modalbox';
 import HeaderScreen from './HeaderScreen';
 import PhotoGallery from '../components/PhotoGallery';
+import ApplyModal from '../components/ApplyModal';
 var { height, width } = Dimensions.get('window');
 
 
@@ -51,15 +52,15 @@ export default class JobDetailScreen extends Component {
                 { name: 'Luis', image: require('../images/svp2.png') },
                 { name: 'Clayton', image: require('../images/svp3.png') },
             ],
+            visible: false
         };
     }
 
 
     renderJobDetail(){
         console.log('params are .. ',this.props.navigation.state);
-       
-        let i=1
-        let { categories, serviceProviders } = this.state;
+
+        let { serviceProviders ,visible} = this.state;
          return (
             <View style={{ flex: 1 }}>
             <LinearGradient
@@ -85,7 +86,7 @@ export default class JobDetailScreen extends Component {
                             }
                             title={
                                 <View style={{ justifyContent: 'center', alignItems: 'flex-start', width: "100%", height: 54 }}>
-                                    <Text style={{ fontFamily: 'Montserrat-Bold', color: "#fff", fontSize: 20 }}>Need Cook</Text>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color: "#fff", fontSize: 18 }}>Need Cook</Text>
                                 </View>
                             }
                             right={
@@ -124,6 +125,7 @@ export default class JobDetailScreen extends Component {
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    <Image source={require('../assets/icons/plus.png')} style={[styles.pinimage,{height:20}]} resizeMode="contain" resizeMethod="resize" />
                                 </Text>
                             </View>
                         </View>
@@ -170,12 +172,14 @@ export default class JobDetailScreen extends Component {
                                                 // paddingRight: 10
                                             }}> 4 </Text>
                                         </View>
-                                        <Text style={{
-                                            fontSize: 14,
-                                            color: "rgb(61, 133, 239)",
-                                            fontFamily: "Montserrat-Regular",
-                                            paddingLeft: 10
-                                        }}> 2  Reviews</Text>
+                                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('rating')}}>
+                                            <Text style={{
+                                                fontSize: 14,
+                                                color: "rgb(61, 133, 239)",
+                                                fontFamily: "Montserrat-Regular",
+                                                paddingLeft: 10
+                                            }}> 2  Reviews</Text>
+                                        </TouchableOpacity> 
                                     </View>
                                     <Text style={{
                                         fontSize: 14,
@@ -188,7 +192,7 @@ export default class JobDetailScreen extends Component {
                         <View style={styles.servicesBox}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                 <Text style={styles.textStyle}>See people who applied</Text>
-                                <TouchableOpacity onPress={() => {this.props.navigation.navigate('allServiceprovider')}}><Text style={{ fontSize: 11, color: '#3E85EF', fontFamily: 'Montserrat-Light' }}>VIEW ALL</Text></TouchableOpacity>
+                                <TouchableOpacity onPress={() => {this.props.navigation.navigate('allServiceProvider')}}><Text style={{ fontSize: 11, color: '#3E85EF', fontFamily: 'Montserrat-Light' }}>VIEW ALL</Text></TouchableOpacity>
                             </View>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20 }}>
                                 <ScrollView
@@ -294,7 +298,9 @@ export default class JobDetailScreen extends Component {
                                 justifyContent: "flex-start"
                             }}>
                                 <TouchableOpacity
-                                    style={{height: 64, justifyContent: "center", alignItems: "center"}}>
+                                    style={{height: 64, justifyContent: "center", alignItems: "center"}}
+                                    onPress={() => {this.setState({visible:true})}}
+                                    >
                                     <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>Apply
                                         for this job</Text>
                                 </TouchableOpacity>
@@ -305,6 +311,7 @@ export default class JobDetailScreen extends Component {
 
                 </ScrollView>
             </LinearGradient>
+            <TouchableOpacity onPress={() => { this.props.navigation.navigate('message')}}>
               <LinearGradient
                     colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
                     start={{ x: 0, y: 0 }}
@@ -315,8 +322,10 @@ export default class JobDetailScreen extends Component {
                         width: 60, height: 60, backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
                         borderRadius: 40
                     }}>
-                    <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
+                       <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
                 </LinearGradient>
+                </TouchableOpacity>
+                <ApplyModal visible={visible} closeModal={() => { this.setState({visible:false})}}/>
         </View>
          )
     }

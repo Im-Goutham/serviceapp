@@ -1,6 +1,6 @@
 import Swipeout from 'react-native-swipeout';
 import React, {Component} from 'react';
-import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,TouchableHighlight} from 'react-native';
+import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,TouchableOpacity} from 'react-native';
 import {Icon} from 'native-base';
 import Share, {ShareSheet, Button} from 'react-native-share';
 import LinearGradient from 'react-native-linear-gradient';
@@ -54,53 +54,117 @@ class JobsList extends Component {
             url: "http://facebook.github.io/react-native/",
             subject: "Share Link" //  for email
         };
-        const btnsTypes = [
+
+        const leftBtn = [
             {
                 component:
                     <LinearGradient
-                        colors={['#3E85EF', '#3E85EF']}
-                        start={{x: 0, y: 0}}
+                        start={{x: 0, y: 0}} 
                         end={{x: 1, y: 0}}
+                        colors={['#F42922', '#A50600']} 
                         style={{
-                            flex: 1,
                             borderTopLeftRadius: 10,
                             borderBottomLeftRadius:10,
                             justifyContent: 'center',
                             alignItems: 'center',
+                            height:205,
+                            marginRight:10
                         }}>
-                        <Image source={require('../assets/icons/favourite.png')}
-                               onPress={() => console.warn(data.text)}/>
+                        <View>
+                            <View style={{alignItems:'center',paddingVertical:10}}>
+                            <Image
+                                source={require('../assets/icons/tick_white.png')}
+                                style={{width:20,height:20}}
+                                resizeMode="contain" resizeMethod="resize"
+                                />
+                            </View>
+                          <Text style={{fontFamily:'Montserrat-Bold',color:'white',fontSize:16}}>Reject</Text>
+                        </View>
                     </LinearGradient>,
                 backgroundColor: 'transparent',
-            },
-            {
-                component: <LinearGradient
-                    colors={['#3EBDEF', '#3EBDEF']}
-                    start={{x: 0, y: 0}}
-                    end={{x: 1, y: 0}}
-                    style={{
-                        flex: 1,
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                    <Icon name='md-share' style={{color: 'white', fontSize: 27, textAlign: 'center'}}/>
-                </LinearGradient>,
-                backgroundColor: 'transparent',
-                onPress: () => {
-                    Share.open(shareOptions)
-                }
-            },
+            }
         ];
-        let i = 1;
+        const  rightBtn = [
+            {
+                component:
+                    <LinearGradient
+                        start={{x: 0, y: 0}} 
+                        end={{x: 1, y: 0}}
+                        colors={['#01B151', '#00823B']} 
+                        style={{
+                            borderTopLeftRadius: 10,
+                            borderBottomLeftRadius:10,
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            height:205,
+                            marginLeft:10
+                        }}>
+                        <View>
+                            <View style={{alignItems:'center',paddingVertical:10}}>
+                            <Image
+                                source={require('../assets/icons/tick_white.png')}
+                                style={{width:20,height:20}}
+                                resizeMode="contain" resizeMethod="resize"
+                                />
+                            </View>
+                          <Text style={{fontFamily:'Montserrat-Bold',color:'white',fontSize:16}}>Accept</Text>
+                        </View>
+                    </LinearGradient>,
+                backgroundColor: 'transparent',
+            }
+        ];
+  
+
+        const btnsTypes = [
+            {
+                component:
+                    <LinearGradient
+                        start={{x: 0, y: 0}} 
+                        end={{x: 1, y: 0}}
+                        colors={['#3E85EF', '#3EBDEF']} 
+                        style={{
+                            flexDirection: 'row',
+                            borderTopLeftRadius: 10,
+                            borderBottomLeftRadius:10,
+                            justifyContent: 'space-around',
+                            alignItems: 'center',
+                            height:205,
+                            marginLeft:10
+                        }}>
+                         <LinearGradient
+                        start={{x: 0, y: 0}} 
+                        end={{x: 1, y: 0}}
+                        colors={['#3E85EF', '#3EBDEF']}  style={styles.iconButton}>
+                            <Image 
+                                source={require('../assets/icons/heart_red.png')}
+                                style={{width:20,height:20}}
+                                resizeMode="contain" resizeMethod="resize"
+                                />
+                        </LinearGradient>
+                        <LinearGradient
+                        start={{x: 0, y: 0}} 
+                        end={{x: 1, y: 0}}
+                        colors={['#3E85EF', '#3EBDEF']}  style={styles.iconButton}>
+                            <Image
+                            source={require('../assets/icons/send.png')}
+                            style={{width:20,height:20}}
+                            resizeMode="contain" resizeMethod="resize"
+                            />
+                        </LinearGradient>
+                    </LinearGradient>,
+                backgroundColor: 'transparent',
+            }
+        ];
         var screen = this.props.navigation.state.routeName;
         return (
             <Swipeout
                 close={!(this.state.sectionID === sectionID && this.state.rowID === rowID)}
-                left={null}
-                right={btnsTypes}
+                left={screen === 'myRequests' ? leftBtn : null}
+                right={screen === 'myRequests' ? rightBtn : btnsTypes}
                 rowID={rowID}
                 sectionID={sectionID}
                 autoClose={data.autoClose}
+                buttonWidth={140}
                 backgroundColor={"#fff"}
                 onOpen={(sectionID, rowID) => {
                     this.setState({
@@ -145,7 +209,7 @@ class JobsList extends Component {
 
                                  {
                                      (screen == 'trackNow' || screen == 'findJobs')?(
-                                           <TouchableHighlight style={styles.button} onPress={() => this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')}>
+                                           <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')}>
                                             <LinearGradient
                                                 colors={['#3E85EF', '#3EBDEF']}
                                                 start={{x: 0, y: 0}}
@@ -153,22 +217,37 @@ class JobsList extends Component {
                                                 style={styles.button}>
                                                 <Text style={styles.btnText}>{screen=='trackNow' ? 'TRACK NOW' : 'APPLY'}</Text>
                                             </LinearGradient>
-                                        </TouchableHighlight>
+                                        </TouchableOpacity>
 
                                      ):(
-                                        <OptionsMenu
-                                        button={ require('../assets/icons/eclipse.png')}
-                                        buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
-                                        destructiveIndex={2}
-                                        options={["Edit", "Cancel the Job", "Delete"]}
-                                        actions={[()=>console.log('Edit'),() => { this.setState({visible:true})},()=>console.log('Delete')]}/>
-         
+                                         (screen == 'myRequests') ? (
+                                            <View style={{flexDirection:'row',flex:1,justifyContent:'flex-end',alignItems:'center'}}>
+                                            <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
+                                                <TouchableOpacity>
+                                                    <Image source={require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
+                                                </TouchableOpacity>
+                                            </LinearGradient>
+                                            <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
+                                                <TouchableOpacity>
+                                                    <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
+                                                </TouchableOpacity>
+                                            </LinearGradient>
+                                          </View>
+                                         ) :(
+                                            <OptionsMenu
+                                            button={ require('../assets/icons/eclipse.png')}
+                                            buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                                            destructiveIndex={2}
+                                            options={["Edit", "Cancel the Job", "Delete"]}
+                                            actions={[()=>console.log('Edit'),() => { this.setState({visible:true})},()=>console.log('Delete')]}/>
+                                         )
+                                     
 
                                      )
                                  }
-                                      {/* <TouchableHighlight  onPress={() => this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')}>
+                                      {/* <TouchableOpacity  onPress={() => this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')}>
                                              <Image style={{width: 15, height: 15}} source={require('../assets/icons/eclipse.png')} resizeMode="contain" resizeMethod="resize"/>
-                                        </TouchableHighlight> */}
+                                        </TouchableOpacity> */}
                             </View>
                         </View>
                         <View style={{flex: 1, flexDirection: 'row'}}>
@@ -299,6 +378,14 @@ class JobsList extends Component {
         fontWeight:'bold',
         fontSize:12
     },
+    iconButton: {
+        marginHorizontal:5,
+        width: 45,
+        height:45,
+        borderRadius:30,
+        justifyContent:'center',
+        alignItems:'center'
+      }
       })
 
     export default JobsList;

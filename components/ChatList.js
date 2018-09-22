@@ -58,14 +58,14 @@ class ChatList extends Component {
             start={{x: 0, y: 0}}
             end={{x: 1, y: 0}}
             style={{
-              flex:2,
-              width:70,
+              width:'100%',
               marginVertical:5,
               justifyContent: 'center',
               alignItems: 'center',
               alignSelf: 'center',
               alignContent: 'center',
-              borderRadius:10
+              borderRadius:10,
+              height:120
             }}>
                 <Image style={{width:30,height:30}} source={require('../assets/icons/user_block.png')}   resizeMode="contain" resizeMethod="resize"/>
                 <Text style={{color:'white', fontFamily:'Montserrat-Bold',paddingVertical:5}}>Block</Text>
@@ -82,6 +82,7 @@ class ChatList extends Component {
         right={btnsTypes}
         rowID={rowID}
         sectionID={sectionID}
+        buttonWidth={140}
         autoClose={rowData.autoClose}
         backgroundColor={'rgb(249,252,255)'}
         onOpen={(sectionID, rowID) => {

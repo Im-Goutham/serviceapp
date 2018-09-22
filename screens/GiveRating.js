@@ -12,10 +12,7 @@ import {
     TextInput,
     TouchableHighlight
 } from 'react-native';
- import {  Icon } from 'native-base'
-import Advertisement from '../components/Advertisement';
-import JobsList from '../components/JobsList';
-import Map from '../components/Map';
+ import {  Icon ,Input} from 'native-base'
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import Modal from 'react-native-modalbox';
@@ -66,11 +63,11 @@ export default class ReviewRating extends Component{
                                }
                                title={
                                 <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Regular', color:"#fff", fontSize: 20}}>Review & Rating</Text>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Review & Rating</Text>
                                </View>
                                }
                                right={
-                                   <View/>
+                                 null
                                }
                            />
                        }
@@ -91,7 +88,7 @@ export default class ReviewRating extends Component{
                        <View style={styles.profileContent}>
                            <View style={styles.username}>
                                <View style={styles.nametextcontainer}>
-                                    <Text style={{ fontFamily: 'Montserrat-Regular', color:"#000", fontSize: 20}}>Shane Mendoza</Text>
+                                    <Text style={{ fontFamily: 'Montserrat-Medium', color:"#000", fontSize: 16}}>Shane Mendoza</Text>
                                </View>
                                <View style={styles.startrating}>
                                    <TouchableOpacity style={styles.rate}>
@@ -126,15 +123,10 @@ export default class ReviewRating extends Component{
                        </View>
                        <View style={styles.feedbackcontainer}>
                            <View style={styles.feedbacktext}>
-                               <Text style={{fontFamily:"Montserrat-Regular", color:"#000", fontSize:20}}>Give Your Feedback</Text>
+                               <Text style={{fontFamily:"Montserrat-SemiBold", color:"#000", fontSize:16}}>Give Your Feedback</Text>
                            </View>
                            <View style={styles.feedbacktext}>
-                           <TextInput
-                               style={{height: 40, borderColor: 'gray', fontSize:20 , borderBottomWidth: 1}}
-                               onChangeText={(text) => this.setState({text})}
-                               value={this.state.text}
-                               placeholder="Type here"
-                           />
+                             <Input style={styles.inputLabel} placeholder="Type here" />
                            </View>
 
                        </View>
@@ -150,7 +142,7 @@ export default class ReviewRating extends Component{
                                    alignItems:'center',
                                    marginTop:20
                                }}>
-                               <Text style={{color:"#fff", fontFamily:"Montserrat-Regular", fontSize:20}}>Submit</Text>
+                               <Text style={styles.btnText}>SUBMIT</Text>
                            </LinearGradient>
                        </TouchableOpacity>
                    </ScrollView>
@@ -204,6 +196,12 @@ const styles=StyleSheet.create({
         justifyContent:'center',
         alignItems:'center'
     },
+    btnText: {
+        textAlign:'center',
+        color:'white',
+        fontSize:17,
+        fontFamily:'Montserrat-Bold'
+    },
     startrating:{
         height:40,
         // backgroundColor:"#009933",
@@ -226,7 +224,7 @@ const styles=StyleSheet.create({
     },
     star:{
         width:"30%",
-        height:20
+        height:15
     },
     feedbackcontainer:{
         height:150,
@@ -241,11 +239,17 @@ const styles=StyleSheet.create({
     },
     ratetext:{
         fontFamily:"Montserrat-Bold",
-        fontSize:20
+        fontSize:14
     },
     feedbacktext:{
         height:"50%",
         justifyContent:"center",
         paddingHorizontal: 20
-    }
+    },
+    inputLabel: {
+        textAlign:'left',
+        fontSize: 16,
+        fontFamily:'Montserrat-Light',
+     },
+   
 })

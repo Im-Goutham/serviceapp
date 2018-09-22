@@ -31,30 +31,46 @@ class ServiceProvidersList extends Component {
     _renderRow(rowData, sectionID, rowID) {
         const btnsTypes = [
             {
-                component: <View style={{
-                    flex: 1,
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    alignSelf: 'center',
-                    alignContent: 'center'}}>
-                    <Icon name='md-heart-outline' style={{color: 'white', fontSize: 27}}/>
-                </View>,
-                backgroundColor: '#007FFA',
-                onPress:()=>{console.log(rowData.text)}},
-            {
-                component: <View style={{
-                    flex: 1,
-                    flexDirection: 'row',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    alignSelf: 'center',
-                    alignContent: 'center'}}>
-                    <Icon name='md-share' style={{color: 'white', fontSize: 27}}/>
-                </View>,
-                backgroundColor: '#007FFA',
-                onPress:()=>{console.log(rowData.text)}
-            },
+                component:
+                    <LinearGradient
+                        start={{x: 0, y: 0}} 
+                        end={{x: 1, y: 0}}
+                        colors={['#3E85EF', '#3EBDEF']} 
+                        style={{
+                            flexDirection: 'row',
+                            borderTopLeftRadius: 10,
+                            borderBottomLeftRadius:10,
+                            justifyContent: 'space-around',
+                            alignItems: 'center',
+                            height:360,
+                            marginTop: 8,
+                            marginLeft:10
+                        }}>
+                         <LinearGradient
+                        start={{x: 0, y: 0}} 
+                        end={{x: 1, y: 0}}
+                        colors={['#3E85EF', '#3EBDEF']}  style={styles.iconButton}>
+                            <Image 
+                                source={require('../assets/icons/heart_red.png')}
+                                style={{width:20,height:20}}
+                                onPress={() => console.warn(data.text)}
+                                resizeMode="contain" resizeMethod="resize"
+                                />
+                        </LinearGradient>
+                        <LinearGradient
+                        start={{x: 0, y: 0}} 
+                        end={{x: 1, y: 0}}
+                        colors={['#3E85EF', '#3EBDEF']}  style={styles.iconButton}>
+                            <Image
+                            source={require('../assets/icons/send.png')}
+                            onPress={() => console.warn(data.text)}
+                            style={{width:20,height:20}}
+                            resizeMode="contain" resizeMethod="resize"
+                            />
+                        </LinearGradient>
+                    </LinearGradient>,
+                backgroundColor: 'transparent',
+            }
         ];
         return (
             <Swipeout
@@ -63,6 +79,7 @@ class ServiceProvidersList extends Component {
                 right={btnsTypes}
                 rowID={rowID}
                 sectionID={sectionID}
+                buttonWidth={140}
                 autoClose={rowData.autoClose}
                 backgroundColor={'rgb(249,252,255)'}
                 onOpen={(sectionID, rowID) => {

@@ -5,14 +5,15 @@ import FindJobsStackNavigator from './FindJobsStackNavigator';
 import MyJobsStackNavigator from './MyJobsStackNavigator';
 import PostJobScreen from '../screens/PostJobScreen';
 import FindHelpStackNavigator from './FindHelpStackNavigator';
-import FavouriteScreen from '../screens/FavouriteScreen';
+
 import NotificationsScreen from '../screens/NotificationsScreen';
 import ChatStackNavigator from './ChatStackNavigator';
-import MyRequestsScreen from '../screens/MyRequestsScreen';
+import MyRequestStackNavigator from './MyRequestStackNavigator';
 import TrackStackNavigator from './TrackStackNavigator';
 import SubscriptionScreen from '../screens/SubscriptionScreen';
 import AcountStackNavigator from './AcountStackNavigator';
 import SettingsStackNavigator from './SettingsStackNavigator';
+import FavouriteStackNavigator from './FavouriteStackNavigator';
 
 export default createDrawerNavigator(
     {
@@ -32,7 +33,7 @@ export default createDrawerNavigator(
             screen: MyJobsStackNavigator
         },
         favourites: {
-            screen: FavouriteScreen
+            screen: FavouriteStackNavigator
         },
         notifications: {
             screen: NotificationsScreen
@@ -41,7 +42,7 @@ export default createDrawerNavigator(
             screen: ChatStackNavigator
         },
         myRequests: {
-            screen: MyRequestsScreen
+            screen: MyRequestStackNavigator
         },
         trackNow: {
             screen: TrackStackNavigator
@@ -57,7 +58,7 @@ export default createDrawerNavigator(
         },
     },
     {
-        initialRouteName: 'findJobs',
+        initialRouteName: 'myRequests',
         contentComponent: SideMenu,
         drawerWidth: 300
     });

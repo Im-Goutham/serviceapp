@@ -1,22 +1,24 @@
 import { createStackNavigator } from 'react-navigation';
 
-import JobDetailScreen from '../screens/JobDetailScreen';
-import FindJobsScreen from '../screens/FindJobsScreen';
+import AllServiceProvider from '../screens/AllServiceProvider';
+import MyRequestsScreen from '../screens/MyRequestsScreen';
+import MyJobDetailScreen from '../screens/MyJobDetailScreen';
 import GiveRating from '../screens/GiveRating';
 import RatingScreen from '../screens/RatingScreen';
-import AllServiceProvider from '../screens/AllServiceProvider';
 import MessageScreen from '../screens/MessageScreen';
+import JobTrackScreen from '../screens/JobTrackScreen';
 
 export default createStackNavigator({
-    findJobs: { screen: FindJobsScreen },
-    jobDetail: { screen: JobDetailScreen },
+    myRequests: { screen: MyRequestsScreen },
+    jobDetail: { screen: MyJobDetailScreen },
     allServiceProvider: { screen: AllServiceProvider },
     rating: { screen: RatingScreen },
     giveRating: { screen: GiveRating },
-    message: { screen: MessageScreen }
+    message: { screen: MessageScreen },
+    jobTrack: { screen: JobTrackScreen }
    },{
      index: 0,
-     initialRouteName: 'findJobs',
+     initialRouteName: 'myRequests',
      headerMode: 'none',
      navigationOptions: {
        gesturesEnabled: false

@@ -466,7 +466,7 @@ class ProfileScreen extends Component {
                     <Text style={styles.textStyle}>Upload Certificates</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={certificates}/>
+                   <Documents documents={certificates} placeholder={true}/>
                 </View>
              </View>
               {/* Upload Certificates ends here */ }
@@ -476,7 +476,7 @@ class ProfileScreen extends Component {
                     <Text style={styles.textStyle}>Upload Pics of Work</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents  documents={works}/>
+                   <Documents  documents={works} placeholder={true}/>
                 </View>
              </View>
               {/* Upload Pics ends here */}
@@ -487,7 +487,7 @@ class ProfileScreen extends Component {
                     <Text style={{fontSize:13,marginVertical:10,fontFamily:'Montserrat-Light'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={ids}/>
+                   <Documents documents={ids}  placeholder={true}/>
                 </View>
              </View>
               {/* Upload Id ends here */}
@@ -497,7 +497,7 @@ class ProfileScreen extends Component {
                     <Text style={styles.textStyle}>Add Video Link</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={videos}/>
+                   <Documents documents={videos} placeholder={true}/>
                 </View>
              </View>
               {/* Upload Video ends here */}
@@ -507,7 +507,7 @@ class ProfileScreen extends Component {
                     <Text style={styles.textStyle}>Add Video Link</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={websites}/>
+                   <Documents documents={websites} placeholder={true}/>
                 </View>
              </View>
               {/* Upload Website ends here */}
@@ -517,7 +517,7 @@ class ProfileScreen extends Component {
                     <Text style={styles.textStyle}>Add Linkedin Profile Link</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={profiles}/>
+                   <Documents documents={profiles} placeholder={true}/>
                 </View>
              </View>
             {/* Upload Website ends here */}

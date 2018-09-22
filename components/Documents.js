@@ -6,25 +6,35 @@ import { Icon} from 'native-base';
 export default class Documents extends Component {
 
   render() {
-    let {documents} = this.props;  
+    let {documents,placeholder} = this.props;  
     return (
         <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}
           >
-            <View style={{flexDirection:'column',width:100}}>
-                <View>
-                <Image source={require('../images/documents/doc_placeholder.png')} style={styles.img_placeholder}/>
-                <Image source={require('../images/close_img.png')} style={styles.close_img}/>
-                </View> 
-            </View>   
+          {
+              placeholder == true ? (
+                <View style={{flexDirection:'column',width:100}}>
+                    <View>
+                    <Image source={require('../images/documents/doc_placeholder.png')} style={styles.img_placeholder}/>
+                    <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                    </View> 
+               </View> 
+              ):(null)
+          }
+             
             {
                  documents ? (
                     documents.map((document,key)=>{
                           return  <View style={styles.documentBox} key={key}>
 
                                         <Image source={document.image} style={styles.img_placeholder}/>
-                                        <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                                        {
+                                            placeholder == true ? ( 
+                                              <Image source={require('../images/close_img.png')} style={styles.close_img}/>
+                                             ): (null)
+                                        }
+                                      
                                         <Text style={{paddingTop:5,paddingBottom:5}}>{document.name}</Text>
 
                                 </View> 

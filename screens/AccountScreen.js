@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Text, Icon, Textarea,Label } from 'native-base';
 import ImagePicker  from 'react-native-image-picker';
 import LinearGradient from 'react-native-linear-gradient';
+import OptionsMenu from "react-native-options-menu";
 import Documents from '../components/Documents';
 import Header from '../components/Header';
 
@@ -220,7 +221,19 @@ class UserProfileScreen extends Component {
                         </View>  
                       </TouchableOpacity>
                 </View>  
-                <View style={{flex:6,justifyContent:'space-between',marginVertical:30}}>
+                <View style={{backgroundColor:"transparent", justifyContent:"center", alignItems:'center', flexDirection:"row",paddingVertical:20}}>
+                                <View style={{flexDirection: "row", paddingRight: 10, borderRightWidth: 2}}>
+                                    <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
+                                    <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
+                                    <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
+                                    <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
+                                    <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
+                                </View>
+                                <TouchableOpacity onPress={() => {this.props.navigation.navigate('rating')}}>
+                                  <Text style={{ fontFamily:"Montserrat-Medium", fontSize:15, color:"rgb(62, 133,240)", paddingLeft: 10}}>3 Reviews</Text>
+                                </TouchableOpacity>     
+                </View>
+                <View style={{flex:6,justifyContent:'space-between',marginBottom:30}}>
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:10}}>
                   <Item floatingLabel>
@@ -382,7 +395,12 @@ class UserProfileScreen extends Component {
                           <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>   
                     </Body>
                     <Right>
-                         <Icon style={{color:'#3E85EF'}} active name="md-more" />
+                      <OptionsMenu
+                            button={ require('../assets/icons/eclipse.png')}
+                            buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                            destructiveIndex={1}
+                            options={["Edit", "Delete"]}
+                            actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </Right>
                     </ListItem>
                     <ListItem>
@@ -391,7 +409,12 @@ class UserProfileScreen extends Component {
                         <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>   
                     </Body>
                     <Right>
-                         <Icon style={{color:'#3E85EF'}} active name="md-more" />
+                      <OptionsMenu
+                            button={ require('../assets/icons/eclipse.png')}
+                            buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                            destructiveIndex={1}
+                            options={["Edit", "Delete"]}
+                            actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </Right>
                     </ListItem>
                     <ListItem>
@@ -400,7 +423,12 @@ class UserProfileScreen extends Component {
                         <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>   
                     </Body>
                     <Right>
-                         <Icon style={{color:'#3E85EF'}} active name="md-more" />
+                      <OptionsMenu
+                            button={ require('../assets/icons/eclipse.png')}
+                            buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                            destructiveIndex={1}
+                            options={["Edit", "Delete"]}
+                            actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </Right>
                     </ListItem>
                 </List>
@@ -433,7 +461,7 @@ class UserProfileScreen extends Component {
                     <Text style={styles.textStyle}>Upload Certificates</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={certificates}/>
+                   <Documents documents={certificates} placeholder={true}/>
                 </View> 
              </View>   
               {/* Upload Certificates ends here */ } 
@@ -443,7 +471,7 @@ class UserProfileScreen extends Component {
                     <Text style={styles.textStyle}>Upload Pics of Work</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents  documents={works}/>
+                   <Documents  documents={works} placeholder={true}/>
                 </View> 
              </View>   
               {/* Upload Pics ends here */}
@@ -454,7 +482,7 @@ class UserProfileScreen extends Component {
                     <Text style={{fontSize:13,marginVertical:10,fontFamily:'Montserrat-Light'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={ids}/>
+                   <Documents documents={ids} placeholder={true}/>
                 </View> 
              </View>   
               {/* Upload Id ends here */}
@@ -464,7 +492,7 @@ class UserProfileScreen extends Component {
                     <Text style={styles.textStyle}>Add Video Link</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={videos}/>
+                   <Documents documents={videos} placeholder={true}/>
                 </View> 
              </View>   
               {/* Upload Video ends here */}
@@ -474,7 +502,7 @@ class UserProfileScreen extends Component {
                     <Text style={styles.textStyle}>Add Video Link</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={websites}/>
+                   <Documents documents={websites} placeholder={true}/>
                 </View> 
              </View>   
               {/* Upload Website ends here */}
@@ -484,13 +512,13 @@ class UserProfileScreen extends Component {
                     <Text style={styles.textStyle}>Add Linkedin Profile Link</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={profiles}/>
+                   <Documents documents={profiles} placeholder={true}/>
                 </View> 
              </View>   
             {/* Upload Website ends here */}
             <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>UPDATE PROFILE</Text></TouchableOpacity>
+                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={[styles.btnText,{color:'white'}]}>UPDATE PROFILE</Text></TouchableOpacity>
                     </LinearGradient>
             </View>
                 </View>
@@ -597,7 +625,10 @@ const styles = StyleSheet.create({
 textStyle: {
   fontFamily:"Montserrat-Bold",
   fontWeight:'bold'
-}
+},
+star_style: {
+  width:15, height:15, marginHorizontal:5
+},
 
       
 })
