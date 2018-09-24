@@ -131,26 +131,20 @@ class JobsList extends Component {
                             height:205,
                             marginLeft:10
                         }}>
-                         <LinearGradient
-                        start={{x: 0, y: 0}} 
-                        end={{x: 1, y: 0}}
-                        colors={['#3E85EF', '#3EBDEF']}  style={styles.iconButton}>
+                         <View style={styles.iconButton}>
                             <Image 
                                 source={require('../assets/icons/heart_red.png')}
                                 style={{width:20,height:20}}
                                 resizeMode="contain" resizeMethod="resize"
                                 />
-                        </LinearGradient>
-                        <LinearGradient
-                        start={{x: 0, y: 0}} 
-                        end={{x: 1, y: 0}}
-                        colors={['#3E85EF', '#3EBDEF']}  style={styles.iconButton}>
+                        </View>
+                        <View style={styles.iconButton}>
                             <Image
                             source={require('../assets/icons/send.png')}
                             style={{width:20,height:20}}
                             resizeMode="contain" resizeMethod="resize"
                             />
-                        </LinearGradient>
+                        </View>
                     </LinearGradient>,
                 backgroundColor: 'transparent',
             }
@@ -384,7 +378,8 @@ class JobsList extends Component {
         height:45,
         borderRadius:30,
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        backgroundColor: 'rgba(255,255,255, 0.1)'
       }
       })
 

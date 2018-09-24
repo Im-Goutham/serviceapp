@@ -20,7 +20,7 @@ class Header extends Component {
           alignItems:'flex-end'
           // borderRadius: 5
         }}>
-        <View style={{width: "20%", backgroundColor: 'transparent', justifyContent:"center", alignItems: "center" }}>
+        <View style={{width: "20%", backgroundColor: 'transparent', justifyContent:"center", alignItems: "flex-start" }}>
           {left}
         </View>
         <View style={{width: right ? "60%" : '100%', backgroundColor: 'transparent', justifyContent: "center", alignItems: 'flex-start'}}>

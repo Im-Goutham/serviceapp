@@ -14,6 +14,7 @@ import {
 } from 'react-native';
  import {  Icon ,Input} from 'native-base'
 import Header from '../components/Header';
+import CostumSlider from '../components/CostumSlider';
 import LinearGradient from 'react-native-linear-gradient';
 import Modal from 'react-native-modalbox';
 // import Icon from 'react-native-vector-icons/EvilIcons';
@@ -33,11 +34,22 @@ export default class ReviewRating extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            text: ''
+            text: '',
+            value: 2,
         };
     }
 
+    change(value) {
+        console.log('value is ',value);
+        this.setState(() => {
+          return {
+            value: parseFloat(value),
+          };
+        });
+      }
+
     render(){
+        const {value} = this.state;
         return(
            <View style={{flex:1}}>
                <LinearGradient
@@ -92,31 +104,35 @@ export default class ReviewRating extends Component{
                                </View>
                                <View style={styles.startrating}>
                                    <TouchableOpacity style={styles.rate}>
-                                       <Image source={require('../assets/icons/star_gold.png')} style={styles.star} resizeMode="contain" resizeMethod="resize"/>
+                                       <Image source={value>0 ? require('../assets/icons/star_gold.png') :require('../assets/icons/star_grey.png')} style={styles.star} resizeMode="contain" resizeMethod="resize"/>
                                        <Text style={styles.ratetext}>1</Text>
                                    </TouchableOpacity>
                                    <TouchableOpacity style={styles.rate}>
-                                       <Image source={require('../assets/icons/star_gold.png')} style={styles.star} resizeMode="contain" resizeMethod="resize"/>
+                                       <Image source={value>1 ? require('../assets/icons/star_gold.png') :require('../assets/icons/star_grey.png')} style={styles.star} resizeMode="contain" resizeMethod="resize"/>
                                         <Text style={styles.ratetext}>2</Text>
                                    </TouchableOpacity>
                                    <TouchableOpacity style={styles.rate}>
-                                       <Image source={require('../assets/icons/star_gold.png')} style={styles.star} resizeMode="contain" resizeMethod="resize"/>
+                                       <Image source={value>2 ? require('../assets/icons/star_gold.png') :require('../assets/icons/star_grey.png')} style={styles.star} resizeMode="contain" resizeMethod="resize"/>
                                         <Text style={styles.ratetext}>3</Text>
                                    </TouchableOpacity>
                                    <TouchableOpacity style={styles.rate}>
-                                       <Image source={require('../assets/icons/star_gold.png')} style={styles.star} resizeMode="contain" resizeMethod="resize"/>
+                                       <Image source={value>3 ? require('../assets/icons/star_gold.png') :require('../assets/icons/star_grey.png')} style={styles.star} resizeMode="contain" resizeMethod="resize"/>
                                         <Text style={styles.ratetext}>4</Text>
                                    </TouchableOpacity>
                                    <TouchableOpacity style={styles.rate}>
-                                       <Image source={require('../assets/icons/star_gold.png')} style={styles.star} resizeMode="contain" resizeMethod="resize"/>
+                                       <Image source={value>4 ? require('../assets/icons/star_gold.png') :require('../assets/icons/star_grey.png')} style={styles.star} resizeMode="contain" resizeMethod="resize"/>
                                        <Text style={styles.ratetext}>5</Text>
                                    </TouchableOpacity>
                                </View>
                                <View style={styles.slidercontainer}>
+                               <CostumSlider/>
                                    <Slider
-                                       step={1}
-                                       maximumValue={100}
-                                       value={20}
+                                        step={1}
+                                        maximumValue={5}
+                                        onValueChange={this.change.bind(this)}
+                                        value={value}
+                                       trackImage={require('../assets/icons/track_bar.png')}
+                                       thumbImage={require('../assets/icons/track_button.png')}
                                    />
                                </View>
                            </View>
@@ -160,7 +176,7 @@ const styles=StyleSheet.create({
     },
     profileContent:{
         position:"relative",
-        height:177,
+        height:190,
         backgroundColor:"#fff",
         borderRadius:10,
         marginTop: 40,
@@ -210,6 +226,7 @@ const styles=StyleSheet.create({
         // alignItems:'center'
     },
     slidercontainer:{
+        padding:20,
         height:40,
         // backgroundColor:"#F9FCFF",
         justifyContent:'center',

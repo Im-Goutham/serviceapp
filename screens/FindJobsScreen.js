@@ -68,7 +68,7 @@ class FindJobScreen extends Component {
                         key={index} onPress={()=>this.setState({tabindex: index})}
                         style={{
                             height : 40,
-                            justifyContent: "space-between",
+                            justifyContent: "space-around",
                             alignItems:'center',
                         }}>
                         <Text
@@ -78,7 +78,7 @@ class FindJobScreen extends Component {
                                 fontFamily: 'Montserrat-Bold'
                             }}>{value}</Text>
                         <View style={{
-                            width: 70,
+                            width: 40,
                             height: this.state.tabindex === index ? 3 : 0,
                             backgroundColor: "#fff",
                             borderRadius : 3
@@ -239,7 +239,7 @@ class FindJobScreen extends Component {
                                     }
                                 title={
                                     <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                        <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Find a Job</Text>
+                                        <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Find Jobs</Text>
                                     </View>
                                 }
                                 right={
@@ -255,7 +255,7 @@ class FindJobScreen extends Component {
                         }
                         content={
                             <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
-                                <View style={{ paddingTop:30,flexDirection:'row',justifyContent:'space-around'}}>
+                                <View style={{ paddingVertical:10,flexDirection:'row',justifyContent:'space-around'}}>
                                     {this.tabrender()}
                                     </View>
                             </View>

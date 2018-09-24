@@ -13,6 +13,7 @@ import Header from "../components/Header";
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
 let border_img = require('../images/border_img.png');
+let logo = require('../images/logo.png');
 
 class LoginScreen extends Component {
   constructor(props) {
@@ -93,7 +94,9 @@ class LoginScreen extends Component {
       let { checked } = this.state;
       return (
          <View style={{flex:1,paddingHorizontal:15,justifyContent:'space-around'}} >
-             <View style={{flex:1.3,paddingVertical:20,justifyContent:'flex-end'}}><Text style={styles.logoText}>SpotJobs</Text></View>
+             <View style={{flex:1.3,paddingVertical:20,justifyContent:'flex-end',alignItems:'flex-start'}}>
+              <Image source={logo} style={{width:'100%',height: 40,marginLeft:-70}} resizeMode="contain" resizeMethod="resize"/>
+             </View>
               <View style={[styles.loginBlox,{flex:4.9}]}>
               <View style={{flex:1,justifyContent:'space-around'}}>
               <View>

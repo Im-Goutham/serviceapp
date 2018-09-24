@@ -58,7 +58,7 @@ export default createDrawerNavigator(
         },
     },
     {
-        initialRouteName: 'myRequests',
+        initialRouteName: 'homePage',
         contentComponent: SideMenu,
         drawerWidth: 300
     });

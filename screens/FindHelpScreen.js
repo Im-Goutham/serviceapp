@@ -76,7 +76,7 @@ class FindHelpScreen extends Component {
           // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
           height : 40,
           width: "50%",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           alignItems:'center',
         }}>
         <Text
@@ -86,7 +86,7 @@ class FindHelpScreen extends Component {
             fontFamily: 'Montserrat-Bold'
           }}>{value}</Text>
         <View style={{
-            width: 70,
+            width: 40,
             height: this.state.tabindex === index ? 3 : 0,
             backgroundColor: "#fff",
             borderRadius : 3
@@ -210,7 +210,7 @@ class FindHelpScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
-                                <View style={{ paddingTop:30,flexDirection:'row', paddingHorizontal: width/6}}>
+                                 <View style={{ paddingVertical:10,flexDirection:'row', paddingHorizontal: width/6}}>
                                     {this.tabrender()}
                                 </View>
                            </View>

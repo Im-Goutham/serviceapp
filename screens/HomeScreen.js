@@ -23,6 +23,7 @@ import SearchBar from '../components/SearchBar';
 
 
 let menu = require('../assets/icons/menu.png');
+let logo = require('../images/logo.png');
 
 
 
@@ -139,8 +140,8 @@ class HomeScreen extends Component {
                                    </TouchableOpacity>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>SpotJobs</Text>
+                                <View style={{ justifyContent : 'center',width:'100%', alignItems: 'flex-start', height:54}}>
+                                    <Image source={logo} style={{  width:140,height: 24}} resizeMode="contain" resizeMethod="resize"/>
                                </View>
                                }
                                right={
@@ -171,12 +172,14 @@ class HomeScreen extends Component {
                             {
                                       screens ? (
                                           screens.map((screen,key)=>{
-                                                return    <View style={styles.mainBox} key={key}>
+                                                return  <TouchableOpacity onPress={()=> this.props.navigation.navigate(screen.routename)}>
+                                                 <View style={styles.mainBox} key={key}>
                                                 <View style={styles.mainCategoryBox}>
                                                       <Image source={screen.iconname} style={{ width: 35, height: 35}} resizeMode='contain' resizeMethod='resize' />
                                                 </View>
                                                 <Text style={styles.categoryStyle}>{screen.title}</Text>
                                               </View>
+                                              </TouchableOpacity>
                                           })
                                       ) : null
                                   }

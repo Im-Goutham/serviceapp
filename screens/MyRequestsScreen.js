@@ -71,7 +71,7 @@ class MyRequestScreen extends Component {
           style={{
           // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
           height : 40,
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           alignItems:'center',
         }}>
         <Text
@@ -81,7 +81,7 @@ class MyRequestScreen extends Component {
             fontFamily: 'Montserrat-Bold'
           }}>{value}</Text>
         <View style={{
-            width: 70,
+            width: 40,
             height: this.state.tabindex === index ? 3 : 0,
             backgroundColor: "#fff",
             borderRadius : 3
@@ -186,7 +186,7 @@ class MyRequestScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
-                       <View style={{ paddingTop:30,flexDirection:'row',justifyContent:'space-around'}}>
+                          <View style={{ paddingVertical:10,flexDirection:'row',justifyContent:'space-around'}}>
                            {this.tabrender()}
                            </View>
                    </View>
