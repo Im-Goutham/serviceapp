@@ -63,7 +63,7 @@ class AddServiceSubCatScreen extends Component {
                                }
                                title={
                                 <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Add Services</Text>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Add Services</Text>
                                </View>
                                }
                                right={

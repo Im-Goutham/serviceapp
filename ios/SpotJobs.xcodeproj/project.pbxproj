@@ -18,7 +18,6 @@
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
-		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
@@ -54,6 +53,7 @@
 		A1494930828443D4BC94C643 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F699BB1A17364904BEAAA1DE /* FontAwesome5_Solid.ttf */; };
 		A29B78B5E7C24BA6AAC53F6F /* libRNSound.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 702889D5CCE44544B0C9C0E3 /* libRNSound.a */; };
 		A347B5144D4A4224A4C34723 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A93CF916B0B74B069BAE5BEF /* Entypo.ttf */; };
+		A93D9FF6215A6ADB001E4444 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A93D9FF5215A6ADB001E4444 /* LaunchScreen.xib */; };
 		A97E58C421526F03005C528F /* libRCTPushNotification.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E456CD215245F000964295 /* libRCTPushNotification.a */; };
 		A99B9965215221B700792601 /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99B9964215221B700792601 /* GoogleSymbolUtilities.framework */; };
 		A99B9967215221F300792601 /* GoogleAuthUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A99B9966215221F300792601 /* GoogleAuthUtilities.framework */; };
@@ -471,7 +471,6 @@
 		13B07F961A680F5B00A75B9A /* SpotJobs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotJobs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SpotJobs/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = SpotJobs/AppDelegate.m; sourceTree = "<group>"; };
-		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = "Images.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = SpotJobs/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SpotJobs/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SpotJobs/main.m; sourceTree = "<group>"; };
@@ -523,6 +522,7 @@
 		A5835492FFC64A6FA9D91BE7 /* libRNImagePicker.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNImagePicker.a; sourceTree = "<group>"; };
 		A643021D18B04F92A7943732 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		A93CF916B0B74B069BAE5BEF /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		A93D9FF5215A6ADB001E4444 /* LaunchScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		A99B9964215221B700792601 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = "../node_modules/react-native-google-signin/ios/GoogleSdk/GoogleSymbolUtilities.framework"; sourceTree = "<group>"; };
 		A99B9966215221F300792601 /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAuthUtilities.framework; path = "../node_modules/react-native-google-signin/ios/GoogleSdk/GoogleAuthUtilities.framework"; sourceTree = "<group>"; };
 		A99B99682152228A00792601 /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = "../node_modules/react-native-google-signin/ios/GoogleSdk/GoogleNetworkingUtilities.framework"; sourceTree = "<group>"; };
@@ -679,7 +679,7 @@
 		13B07FAE1A68108700A75B9A /* SpotJobs */ = {
 			isa = PBXGroup;
 			children = (
-				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
+				A93D9FF5215A6ADB001E4444 /* LaunchScreen.xib */,
 				A9E4571A21524B6900964295 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -1509,7 +1509,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				A9E4571B21524B6A00964295 /* GoogleService-Info.plist in Resources */,
 				7380A7DAF809487781FCC691 /* Montserrat-Bold.ttf in Resources */,
 				A99B9971215226B900792601 /* RNGoogleSignin in Resources */,
@@ -1540,6 +1539,7 @@
 				A1494930828443D4BC94C643 /* FontAwesome5_Solid.ttf in Resources */,
 				1DC6573D5ABF4DA689774C6D /* Foundation.ttf in Resources */,
 				A9D758F2A59B468DAFDA793A /* Ionicons.ttf in Resources */,
+				A93D9FF6215A6ADB001E4444 /* LaunchScreen.xib in Resources */,
 				05991CDD4E974EBBA4FE250D /* MaterialCommunityIcons.ttf in Resources */,
 				532AA063FACA40CF9F35EE03 /* MaterialIcons.ttf in Resources */,
 				D7651AAB7F2D474CB2DAAC9B /* Octicons.ttf in Resources */,
@@ -1578,18 +1578,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		13B07FB11A68108700A75B9A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13B07FB21A68108700A75B9A /* Base */,
-			);
-			name = LaunchScreen.xib;
-			path = SpotJobs;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {

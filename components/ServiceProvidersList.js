@@ -46,28 +46,20 @@ class ServiceProvidersList extends Component {
                             marginTop: 8,
                             marginLeft:10
                         }}>
-                         <LinearGradient
-                        start={{x: 0, y: 0}} 
-                        end={{x: 1, y: 0}}
-                        colors={['#3E85EF', '#3EBDEF']}  style={styles.iconButton}>
+                          <View style={styles.iconButton}>
                             <Image 
                                 source={require('../assets/icons/heart_red.png')}
                                 style={{width:20,height:20}}
-                                onPress={() => console.warn(data.text)}
                                 resizeMode="contain" resizeMethod="resize"
                                 />
-                        </LinearGradient>
-                        <LinearGradient
-                        start={{x: 0, y: 0}} 
-                        end={{x: 1, y: 0}}
-                        colors={['#3E85EF', '#3EBDEF']}  style={styles.iconButton}>
+                        </View>
+                        <View style={styles.iconButton}>
                             <Image
                             source={require('../assets/icons/send.png')}
-                            onPress={() => console.warn(data.text)}
                             style={{width:20,height:20}}
                             resizeMode="contain" resizeMethod="resize"
                             />
-                        </LinearGradient>
+                        </View>
                     </LinearGradient>,
                 backgroundColor: 'transparent',
             }
@@ -209,7 +201,7 @@ imgBox: {
 },
 overlay: {
   position: 'absolute',
-  top: 0,
+  top: 6,
   right: 0,
   bottom: 0,
   left: 0,
@@ -218,7 +210,7 @@ overlay: {
       justifyContent:'center',
       alignItems:'center',
      width:'100%',
-    height:100,
+    height:103,
     borderRadius:10,
 },
 imgStyle:{
@@ -282,6 +274,15 @@ imgStyle:{
     borderRadius:30,
     justifyContent:'center',
     alignItems:'center'
+  },
+  iconButton: {
+    marginHorizontal:5,
+    width: 45,
+    height:45,
+    borderRadius:30,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor: 'rgba(255,255,255, 0.1)'
   }
   })
 export default connect(null, actions)(ServiceProvidersList);

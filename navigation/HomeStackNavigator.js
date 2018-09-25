@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation';
 import HomeScreen from '../screens/HomeScreen';
 import FindJobsStackNavigator from './FindJobsStackNavigator';
 import MyJobsStackNavigator from './MyJobsStackNavigator';
-import PostJobScreen from '../screens/PostJobScreen';
+import PostJobStackNavigator from './PostJobStackNavigator';
 import FindHelpStackNavigator from './FindHelpStackNavigator';
 import FavouriteStackNavigator from './FavouriteStackNavigator';
 import NotificationsScreen from '../screens/NotificationsScreen';
@@ -24,7 +24,7 @@ export default createStackNavigator({
         screen: FindJobsStackNavigator
     },
     postJob: {
-        screen: PostJobScreen
+        screen: PostJobStackNavigator
     },
     findHelp: {
         screen: FindHelpStackNavigator

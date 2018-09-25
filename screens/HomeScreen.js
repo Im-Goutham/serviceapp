@@ -7,7 +7,8 @@ import {
     TouchableOpacity,
     Dimensions,
     Platform,
-    Text, TouchableHighlight
+    Text, TouchableHighlight,
+    AsyncStorage
 } from 'react-native';
  import {  Icon } from 'native-base'
 import Advertisement from '../components/Advertisement';
@@ -164,7 +165,7 @@ class HomeScreen extends Component {
                           justifyContent: 'space-between'
                       }}>
                             <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingBottom:30,justifyContent:'space-between'}}>
-                         <View>
+                         <View style={{flex:1}}>
                              <Carousel/>
                          </View>
                           <View style={styles.servicesBox}>
@@ -172,10 +173,12 @@ class HomeScreen extends Component {
                             {
                                       screens ? (
                                           screens.map((screen,key)=>{
-                                                return  <TouchableOpacity onPress={()=> this.props.navigation.navigate(screen.routename)}>
+                                                return  <TouchableOpacity key={key} onPress={()=> {
+                                                    
+                                                   this.props.navigation.navigate(screen.routename, { user: 'Lucy' })}}>
                                                  <View style={styles.mainBox} key={key}>
                                                 <View style={styles.mainCategoryBox}>
-                                                      <Image source={screen.iconname} style={{ width: 35, height: 35}} resizeMode='contain' resizeMethod='resize' />
+                                                      <Image source={screen.iconname} style={{ width: 40, height: 40}} resizeMode='contain' resizeMethod='resize' />
                                                 </View>
                                                 <Text style={styles.categoryStyle}>{screen.title}</Text>
                                               </View>
@@ -204,7 +207,7 @@ class HomeScreen extends Component {
                                                           <View style={styles.imageShadow}>
                                                           <Image source={category.image} style={styles.img_placeholder}/>
                                                           </View>
-                                                          <Text style={{paddingVertical:10,color:'#4A4A4A'}}>{category.name}</Text>
+                                                          <Text style={{paddingVertical:10,color:'#4A4A4A',fontSize:14}}>{category.name}</Text>
                                                     </View>
                                         })
                                      ) : null
@@ -232,7 +235,7 @@ class HomeScreen extends Component {
                                                           <Image source={provider.image} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
                                                           <Image source={require('../images/check.png')} style={styles.check}/>
                                                           </View>
-                                                          <Text style={{paddingVertical:10,color:'#4A4A4A'}}>{provider.name}</Text>
+                                                          <Text style={{paddingVertical:10,color:'#4A4A4A',fontSize:14}}>{provider.name}</Text>
                                                     </View>
                                         })
                                      ) : null
@@ -259,7 +262,7 @@ class HomeScreen extends Component {
                                                           <View style={styles.imageShadow}>
                                                           <Image source={category.image} style={styles.img_placeholder}/>
                                                           </View>
-                                                          <Text style={{paddingVertical:10,color:'#4A4A4A'}}>{category.name}</Text>
+                                                          <Text style={{paddingVertical:10,color:'#4A4A4A',fontSize:14}}>{category.name}</Text>
                                                     </View>
                                         })
                                      ) : null
@@ -303,7 +306,7 @@ const styles = StyleSheet.create({
     },
     textStyle: {
       fontFamily:"Montserrat-SemiBold",
-      fontSize:17
+      fontSize:18
     },
       categoryContainer: {
         flex: 1,
@@ -346,7 +349,7 @@ const styles = StyleSheet.create({
       mainBox: {width:90,height:110,marginHorizontal:5,marginVertical:20},
       categoryStyle: {
         color:'rgb(82,82,82)',
-        fontSize: 13,
+        fontSize: 14,
         textAlign:'center'
     },
     mainCategoryBox: {

@@ -17,7 +17,6 @@ export default class Documents extends Component {
                 <View style={{flexDirection:'column',width:100}}>
                     <View>
                     <Image source={require('../images/documents/doc_placeholder.png')} style={styles.img_placeholder}/>
-                    <Image source={require('../images/close_img.png')} style={styles.close_img}/>
                     </View> 
                </View> 
               ):(null)

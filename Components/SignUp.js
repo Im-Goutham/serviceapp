@@ -7,6 +7,8 @@ import { Auth } from 'aws-amplify';
 import FacebookLogin from '../components/FacebookLogin';
 import GoogleSignIn from '../components/GoogleSignIn';
 // import ActionSheet from 'react-native-actionsheet';
+import FloatingLabelInput from '../components/FloatingLabelInput';
+
 
 import Header from '../components/goBackHeader';
 import LinearGradient from 'react-native-linear-gradient';
@@ -104,77 +106,73 @@ class SignUp extends Component {
     return (
       <ScrollView style={styles.container}>
           <View style={styles.inputField}>
-                <Item floatingLabel>
-                    <Label style={styles.inputLabel}>Email</Label>
-                    <Input
-                        value={this.state.username}
-                        autoCapitalize='none'
-                        onSubmitEditing={() => {
-                            this.handleSubmit();
-                        }}
-                        returnKeyType={ "next" }
-                        ref={ input => {
-                            this.inputs['username'] = input;
-                        }}
-                        onChangeText={username => this.setState({ username })}
-                        style={{marginVertical: 5}}
-                    />
-                </Item>
+          <FloatingLabelInput
+                            label="Email"
+                            value={this.state.email}
+                            autoCapitalize='none'
+                            secureTextEntry={true}
+                            onSubmitEditing={() => {
+                                this.handleSubmit()
+                            }}
+                            returnKeyType={ "done" }
+                            ref={ input => {
+                              this.inputs['password'] = input;
+                            }}
+                            style={{marginVertical: 5}}
+                            onChangeText={email => this.setState({ email })}
+                            />
+                            
+             
             </View>
              <View style={styles.inputField}>
-                <Item floatingLabel>
-                    <Label style={styles.inputLabel}>User ID</Label>
-                    <Input
-                        value={this.state.username}
-                        autoCapitalize='none'
-                        onSubmitEditing={() => {
-                            this.handleSubmit();
-                        }}
-                        returnKeyType={ "next" }
-                        ref={ input => {
-                            this.inputs['username'] = input;
-                        }}
-                        onChangeText={username => this.setState({ username })}
-                        style={{marginVertical: 5}}
-                    />
-
-                </Item>
+             <FloatingLabelInput
+                            label="User ID"
+                            value={this.state.username}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                                this.handleSubmit();
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                                this.inputs['username'] = input;
+                            }}
+                            onChangeText={username => this.setState({ username })}
+                            style={{marginVertical: 5}}
+                            />
             </View>
              <View style={styles.inputField}>
-                <Item floatingLabel>
-                    <Label style={styles.inputLabel}>Password</Label>
-                    <Input
-                        value={this.state.username}
-                        autoCapitalize='none'
-                        onSubmitEditing={() => {
-                            this.handleSubmit();
-                        }}
-                        returnKeyType={ "next" }
-                        ref={ input => {
-                            this.inputs['username'] = input;
-                        }}
-                        onChangeText={username => this.setState({ username })}
-                        style={{marginVertical: 5}}
-                    />
-                </Item>
+                  <FloatingLabelInput
+                            label="Password"
+                            value={this.state.username}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                                this.handleSubmit();
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                                this.inputs['username'] = input;
+                            }}
+                            onChangeText={username => this.setState({ username })}
+                            style={{marginVertical: 5}}
+                            secureTextEntry={true}
+                            />
             </View>
             <View style={styles.inputField}>
-                <Item floatingLabel>
-                    <Label style={styles.inputLabel}>Confirm Password</Label>
-                    <Input
-                        value={this.state.username}
-                        autoCapitalize='none'
-                        onSubmitEditing={() => {
-                            this.handleSubmit();
-                        }}
-                        returnKeyType={ "done" }
-                        ref={ input => {
-                            this.inputs['username'] = input;
-                        }}
-                        onChangeText={username => this.setState({ username })}
-                        style={{marginVertical: 5}}
-                    />
-                </Item>
+            <FloatingLabelInput
+                            label="Confirm Password"
+                            value={this.state.cfrmPassword}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                                this.handleSubmit();
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                                this.inputs['cfrmPassword'] = input;
+                            }}
+                            onChangeText={cfrmPassword => this.setState({ cfrmPassword })}
+                            style={{marginVertical: 5}}
+                            secureTextEntry={true}
+                            />
             </View>
             <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                 <TouchableOpacity
@@ -205,22 +203,20 @@ class SignUp extends Component {
                     <Image source={require('../assets/icons/arrow_down.png')} style={{ width: 10, height: 10}} resizeMode="contain" resizeMethod="resize"/>
                 </TouchableOpacity>
                 <View style={{width:'70%',paddingLeft:10}}>
-                    <Item floatingLabel>
-                        <Label style={styles.inputLabel}>Mobile Number</Label>
-                        <Input
-                            value={this.state.username}
+                <FloatingLabelInput
+                            label="Mobile Number"
+                            value={this.state.mobile}
                             autoCapitalize='none'
                             onSubmitEditing={() => {
                                 this.handleSubmit();
                             }}
-                            returnKeyType={ "done" }
+                            returnKeyType={ "next" }
                             ref={ input => {
-                                this.inputs['mobilenumber'] = input;
+                                this.inputs['mobile'] = input;
                             }}
-                            onChangeText={mobilenumber => this.setState({ mobilenumber })}
-                        style={{marginVertical: 5}}
-                    />
-                    </Item>
+                            onChangeText={mobile => this.setState({ mobile })}
+                            style={{marginVertical: 5}}
+                            />
                 </View>
             </View>
             <Text style={{textAlign:'right',color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}>Verify</Text>

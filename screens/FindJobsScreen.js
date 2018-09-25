@@ -7,6 +7,7 @@ import {
     TouchableOpacity,
     Dimensions,
     Platform,
+    AsyncStorage,
     Text, TouchableHighlight, TouchableWithoutFeedback, ImageBackground
 } from 'react-native';
 import {  Icon } from 'native-base'
@@ -214,6 +215,8 @@ class FindJobScreen extends Component {
         })
     }
     render() {
+        const {params} = this.props.navigation.state;
+        console.log('params aaere',params);
         return (
             <View style={{flex:1}}>
                 <LinearGradient
@@ -233,13 +236,13 @@ class FindJobScreen extends Component {
                                         <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                         <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={menu} style={{ width: '50%', height: 22}} resizeMode="contain" resizeMethod="resize"/>
+                                        <Image source={menu} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     </View>
                                     }
                                 title={
                                     <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                        <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Find Jobs</Text>
+                                        <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20,paddingLeft:10}}>Find Jobs</Text>
                                     </View>
                                 }
                                 right={
@@ -247,7 +250,11 @@ class FindJobScreen extends Component {
                                        <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
                                              <Image source={require('../assets/icons/search_white.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
-                                        <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <TouchableOpacity 
+                                           onPress={() => this.props.navigation.navigate('filter')}
+                                           style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
+                                           onPress={() => this.props.navigation.navigate('filter')}
+                                           >
                                             <Image source={require('../assets/icons/filter.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     </View>

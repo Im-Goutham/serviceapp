@@ -3,11 +3,12 @@ import SideMenu from '../components/SideMenu';
 import HomeScreen from '../screens/HomeScreen';
 import FindJobsStackNavigator from './FindJobsStackNavigator';
 import MyJobsStackNavigator from './MyJobsStackNavigator';
-import PostJobScreen from '../screens/PostJobScreen';
+
 import FindHelpStackNavigator from './FindHelpStackNavigator';
 
 import NotificationsScreen from '../screens/NotificationsScreen';
 import ChatStackNavigator from './ChatStackNavigator';
+import PostJobStackNavigator from './PostJobStackNavigator';
 import MyRequestStackNavigator from './MyRequestStackNavigator';
 import TrackStackNavigator from './TrackStackNavigator';
 import SubscriptionScreen from '../screens/SubscriptionScreen';
@@ -24,7 +25,7 @@ export default createDrawerNavigator(
             screen: FindJobsStackNavigator
         },
         postJob: {
-            screen: PostJobScreen
+            screen: PostJobStackNavigator
         },
         findHelp: {
             screen: FindHelpStackNavigator

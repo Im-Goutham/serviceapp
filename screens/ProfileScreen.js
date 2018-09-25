@@ -15,6 +15,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import OptionsMenu from "react-native-options-menu";
 import HeaderScreen from './HeaderScreen';
 import Documents from '../components/Documents';
+import FloatingLabelInput from '../components/FloatingLabelInput';
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
 
@@ -190,7 +191,7 @@ class ProfileScreen extends Component {
                                navigation={this.props.navigation}
                                left = {
                                    <TouchableOpacity
-                                       onPress={() => this.props.navigation.goBack()}
+                                       onPress={() => this.props.navigation.navigate('register')}
                                        style={{width : 54, height:54, justifyContent:'center', alignItems: 'flex-start'}}>
                                        <Image source={back_arrow} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                    </TouchableOpacity>
@@ -241,148 +242,133 @@ class ProfileScreen extends Component {
                 <View style={{flex:6,justifyContent:'space-between',marginVertical:30}}>
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:10}}>
-                  <Item floatingLabel>
-                    <Label style={styles.inputLabel}>First Name</Label>
-                    <Input
-                        value={this.state.username}
-                        autoCapitalize='none'
-                        onSubmitEditing={() => {
-                          this.focusNextField('password');
-                        }}
-                        returnKeyType={ "next" }
-                        ref={ input => {
-                          this.inputs['username'] = input;
-                        }}
-                        onChangeText={username => this.setState({ username })}
-                        />
-                  </Item>
+                  <FloatingLabelInput
+                            label="First Name"
+                            value={this.state.firstname}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                              this.focusNextField('password');
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                              this.inputs['firstname'] = input;
+                            }}
+                            onChangeText={firstname => this.setState({ firstname })}
+                            />
                   </View>
                   <View style={{width:'50%',paddingLeft:10}}>
-                  <Item floatingLabel>
-                  <Label style={styles.inputLabel}>Last Name</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
+                  <FloatingLabelInput
+                            label="Last Name"
+                            value={this.state.lastname}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                              this.focusNextField('password');
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                              this.inputs['lastname'] = input;
+                            }}
+                            onChangeText={lastname => this.setState({ lastname })}
+                            />
                   </View>
                 </View>
 
                 <View style={styles.inputField}>
-                <Item floatingLabel>
-                  <Label style={styles.inputLabel}>Date of Birth</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
+                <FloatingLabelInput
+                            label="Date of Birth"
+                            value={this.state.dob}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                              this.focusNextField('password');
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                              this.inputs['dob'] = input;
+                            }}
+                            onChangeText={dob => this.setState({ dob })}
+                            />
                 </View>
                 <View style={styles.inputField}>
-                <Item floatingLabel>
-                  <Label style={styles.inputLabel}>Street Address</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
+                <FloatingLabelInput
+                            label="Street Address"
+                            value={this.state.address}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                              this.focusNextField('password');
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                              this.inputs['address'] = input;
+                            }}
+                            onChangeText={address => this.setState({ address })}
+                            />
                 </View>
 
 
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:10}}>
-                  <Item floatingLabel>
-                    <Label style={styles.inputLabel}>City</Label>
-                    <Input
-                        value={this.state.username}
-                        autoCapitalize='none'
-                        onSubmitEditing={() => {
-                          this.focusNextField('password');
-                        }}
-                        returnKeyType={ "next" }
-                        ref={ input => {
-                          this.inputs['username'] = input;
-                        }}
-                        onChangeText={username => this.setState({ username })}
-                        />
-                  </Item>
+                  <FloatingLabelInput
+                            label="City"
+                            value={this.state.city}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                              this.focusNextField('password');
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                              this.inputs['city'] = input;
+                            }}
+                            onChangeText={city => this.setState({ city })}
+                            />
+                
                   </View>
                   <View style={{width:'50%',paddingLeft:10}}>
-                  <Item floatingLabel>
-                  <Label style={styles.inputLabel}>State (Optional)</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
+                  <FloatingLabelInput
+                            label="State (Optional)"
+                            value={this.state.state}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                              this.focusNextField('password');
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                              this.inputs['state'] = input;
+                            }}
+                            onChangeText={state => this.setState({ state })}
+                            />
                   </View>
                 </View>
 
                  <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:10}}>
-                  <Item floatingLabel>
-                    <Label style={styles.inputLabel}>Zip</Label>
-                    <Input
-                        value={this.state.username}
-                        autoCapitalize='none'
-                        onSubmitEditing={() => {
-                          this.focusNextField('password');
-                        }}
-                        returnKeyType={ "next" }
-                        ref={ input => {
-                          this.inputs['username'] = input;
-                        }}
-                        onChangeText={username => this.setState({ username })}
-                        />
-                  </Item>
+                  <FloatingLabelInput
+                            label="Zip"
+                            value={this.state.zip}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                              this.focusNextField('password');
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                              this.inputs['zip'] = input;
+                            }}
+                            onChangeText={zip => this.setState({ zip })}
+                            />
                   </View>
                   <View style={{width:'50%',paddingLeft:10}}>
-                  <Item floatingLabel>
-                  <Label style={styles.inputLabel}>Country</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
+                   <FloatingLabelInput
+                            label="Country"
+                            value={this.state.country}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                              this.focusNextField('password');
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                              this.inputs['country'] = input;
+                            }}
+                            onChangeText={country => this.setState({ country })}
+                            />
                   </View>
                 </View>
                 <View style={[styles.servicesBox,{flexDirection:'row'}]}>
@@ -446,21 +432,19 @@ class ProfileScreen extends Component {
               {/* Upload Certificates starts here */ }
               <View style={styles.servicesBox}>
               <View style={{marginVertical:20}}>
-                  <Item floatingLabel>
-                  <Label style={styles.inputLabel}>Write about your self</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
+              <FloatingLabelInput
+                            label="Write about your self"
+                            value={this.state.about}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                              this.focusNextField('password');
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                              this.inputs['about'] = input;
+                            }}
+                            onChangeText={about => this.setState({ about })}
+                            />
                   </View>
                 <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
                     <Text style={styles.textStyle}>Upload Certificates</Text>

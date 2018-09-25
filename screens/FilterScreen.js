@@ -10,6 +10,8 @@ import {
     Text, TouchableHighlight
 } from 'react-native';
 
+import {Item,Input,Label} from 'native-base';
+
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 
@@ -18,12 +20,13 @@ import LinearGradient from 'react-native-linear-gradient';
 import HeaderScreen from './HeaderScreen';
 import SearchBar from '../components/SearchBar';
 import CategoryContainer from '../components/CategoryContainer';
+import FloatingLabelInput from '../components/FloatingLabelInput';
 
 
 let back_arrow = require('../assets/icons/back-arrow.png');
+let menu = require('../assets/icons/menu.png');
 
-
-class AddServiceCatScreen extends Component {
+class FilterScreen extends Component {
   constructor(props){
       super(props);
       this.state={
@@ -72,9 +75,13 @@ class AddServiceCatScreen extends Component {
             {name:'Concierge',image: require('../assets/icons/concierge.png')},
             {name:'Event Planning',image: require('../assets/icons/event.png')},
             {name:'Other',image: require('../assets/icons/other.png')},
-       ]
+       ],
+       value:''
       }
+      this.inputs = {};
   }
+
+  handleTextChange = (newText) => this.setState({ value: newText });
 
 
     render() {
@@ -93,27 +100,30 @@ class AddServiceCatScreen extends Component {
                            <Header
                                navigation={this.props.navigation}
                                left = {
-                                   <TouchableOpacity
-                                       onPress={() => this.props.navigation.openDrawer()}
-                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
-                                       <Image source={back_arrow} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                                   </TouchableOpacity>
+                                <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                                    <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                      <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                      <Image source={menu} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    </TouchableOpacity>
+                                </View>
                                }
                                title={
                                 <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Add Services</Text>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Filter</Text>
                                </View>
                                }
                                right={
                                    <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', height:54 ,flexDirection:"row"}}>
-                                       <Text style={{ fontFamily: 'Montserrat-Regular', color:"#fff", fontSize: 14}}>Step 1/2</Text>
+                                       <Text style={{ fontFamily: 'Montserrat-Regular', color:"#fff", fontSize: 14}}>Clear All</Text>
                                    </View>
                                }
                            />
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10,marginHorizontal:10}}>
-                                <SearchBar/>
+                          
                    </View>
                        }
                    />
@@ -124,7 +134,84 @@ class AddServiceCatScreen extends Component {
         <View style={styles.container}>
         <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}>
 
+        <View>
 
+        <View style={styles.inputField}>
+           <FloatingLabelInput
+                label="Current Location"
+                value={this.state.username}
+                autoCapitalize='none'
+                onSubmitEditing={() => {
+                  this.focusNextField('password');
+                }}
+                returnKeyType={ "next" }
+                ref={ input => {
+                  this.inputs['location'] = input;
+                }}
+                onChangeText={username => this.setState({ username })}
+                />
+         </View>
+
+                     <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
+                  <View style={{width:'50%',paddingRight:10}}>
+                  <FloatingLabelInput
+                    label="City"
+                    value={this.state.city}
+                    autoCapitalize='none'
+                    onSubmitEditing={() => {
+                    this.focusNextField('password');
+                    }}
+                    returnKeyType={ "next" }
+                    ref={ input => {
+                    this.inputs['city'] = input;
+                    }}/>
+                  </View>
+                  <View style={{width:'50%',paddingLeft:10}}>
+                  <FloatingLabelInput
+                    label="State (Optional)"
+                    value={this.state.state}
+                    autoCapitalize='none'
+                    onSubmitEditing={() => {
+                    this.focusNextField('password');
+                    }}
+                    returnKeyType={ "next" }
+                    ref={ input => {
+                    this.inputs['state'] = input;
+                    }}/>
+                  
+                  </View>
+                </View>
+
+                <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
+                  <View style={{width:'50%',paddingRight:10}}>
+                  <FloatingLabelInput
+                    label="Zip"
+                    value={this.state.zip}
+                    autoCapitalize='none'
+                    onSubmitEditing={() => {
+                    this.focusNextField('password');
+                    }}
+                    returnKeyType={ "next" }
+                    ref={ input => {
+                    this.inputs['zip'] = input;
+                    }}/>
+                  </View>
+                  <View style={{width:'50%',paddingLeft:10}}>
+                  <FloatingLabelInput
+                    label="Country"
+                    value={this.state.country}
+                    autoCapitalize='none'
+                    onSubmitEditing={() => {
+                    this.focusNextField('password');
+                    }}
+                    returnKeyType={ "next" }
+                    ref={ input => {
+                    this.inputs['country'] = input;
+                    }}/>
+                  </View>
+                </View>
+
+        </View>
         <View style={styles.servicesBox}>
           <View style={{marginVertical:20}}>
               <Text style={styles.textStyle}>Popular Categories</Text>
@@ -141,7 +228,7 @@ class AddServiceCatScreen extends Component {
                          ) : null
                     }
                   </ScrollView>
-                </View>
+         </View>
 
 
               <View style={styles.servicesBox}>
@@ -170,7 +257,7 @@ class AddServiceCatScreen extends Component {
                    style={{
                       paddingVertical: 30
                    }}>
-                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceSubCatScreen')}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
+                 <TouchableOpacity onPress={() => {this.props.navigation.goBack()}}><Text style={styles.btnText}>APPLY FILTER</Text></TouchableOpacity>
                </LinearGradient>
 
                  </View>
@@ -223,7 +310,15 @@ const styles = StyleSheet.create({
         color:'white',
         fontSize: 18,
         fontFamily:'Montserrat-Bold'
-    }
+    },
+    inputField: {
+        marginVertical: 10
+    },
+    inputLabel: {
+        textAlign:'left',
+        fontSize: 16,
+        fontFamily:'Montserrat-Light'
+     },
 })
 
-export default AddServiceCatScreen;
+export default FilterScreen;

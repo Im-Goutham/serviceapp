@@ -5,6 +5,10 @@ import Modal from "react-native-modal";
 import LinearGradient from 'react-native-linear-gradient';
 import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Icon, Textarea,Label } from 'native-base';
 const { width, height } = Dimensions.get('window')
+import FloatingLabelInput from '../components/FloatingLabelInput';
+
+
+
 
 export default class ChangePassword extends Component {
 
@@ -30,21 +34,21 @@ export default class ChangePassword extends Component {
             <Text style={{textAlign:'center', color:'#9B9B9B'}}>For security reasons, please verify your password.</Text>
         </View>
         <View style={{marginVertical:20}}>
-                  <Item floatingLabel>
-                  <Label style={styles.inputLabel}>Password</Label>
-                  <Input
-                      value={this.state.username}
-                      autoCapitalize='none'
-                      onSubmitEditing={() => {
-                       
-                      }}
-                      returnKeyType={ "next" }
-                      ref={ input => {
-                        this.inputs['username'] = input;
-                      }}
-                      onChangeText={username => this.setState({ username })}
-                      />
-                 </Item>
+        <FloatingLabelInput
+                label="Password"
+                value={this.state.password}
+                autoCapitalize='none'
+                onSubmitEditing={() => {
+                    
+                }}
+                returnKeyType={ "next" }
+                ref={ input => {
+                    this.inputs['password'] = input;
+                }}
+                onChangeText={password => this.setState({ password })}
+                style={{marginVertical: 5}}
+                secureTextEntry={true}
+                />
          </View>
          <View style={{paddingVertical:10}}>
             <Text style={{textAlign:'right', color:'rgb(87,152,238)',fontFamily:'Montserrat-Medium'}}>Forgot password?</Text>

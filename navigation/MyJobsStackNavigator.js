@@ -7,6 +7,7 @@ import GiveRating from '../screens/GiveRating';
 import RatingScreen from '../screens/RatingScreen';
 import MessageScreen from '../screens/MessageScreen';
 import JobTrackScreen from '../screens/JobTrackScreen';
+import FilterScreen from '../screens/FilterScreen';
 
 export default createStackNavigator({
     myJobs: { screen: MyJobsScreen },
@@ -15,7 +16,8 @@ export default createStackNavigator({
     rating: { screen: RatingScreen },
     giveRating: { screen: GiveRating },
     message: { screen: MessageScreen },
-    jobTrack: { screen: JobTrackScreen }
+    jobTrack: { screen: JobTrackScreen },
+    filter:  { screen: FilterScreen }
    },{
      index: 0,
      initialRouteName: 'myJobs',

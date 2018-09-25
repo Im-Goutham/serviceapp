@@ -16,7 +16,8 @@ import Map from '../components/Map';
 import Header from '../components/Header';
 import Modal from 'react-native-modalbox';
 import LinearGradient from 'react-native-linear-gradient';
-// import Icon from 'react-native-vector-icons/EvilIcons';
+import RadioButton from 'radio-button-react-native';
+
 
 import HeaderScreen from './HeaderScreen';
 
@@ -43,7 +44,7 @@ let maplocations = {
       detail: "Lorem Ipsum has been the industrys standard dummy text ever",
     },
     {
-      jobtitle: 'Need Cook',
+      jobtitle:'Need Cook',
       icon: require('../assets/icons/crown.png'),
       image: require('../images/tutorial.png'),
       detail: "Lorem Ipsum has been the industrys standard dummy text ever",
@@ -60,14 +61,15 @@ class DeleteAccountScreen extends Component {
         tabindex : 0,
         selectedkey:0,
         options:[
-           "I'm getting too many email notifications(Did you know you can change your Notification settings)",
-           "My account was hacked",
-           "I can't find interesting jobs",
-           "I accidentally made another account",
-           "I don't use or like the app or website",
-           "I have a privacy concern",
-           "Other"
-        ]
+          { label: "I'm getting too many email notifications(Did you know you can change your Notification settings)", value: 0},
+          { label: "My account was hacked", value: 1},
+          { label:  "I can't find interesting jobs", value: 2},
+          { label:  "I accidentally made another account", value: 3},
+          { label:  "I don't use or like the app or website", value: 4},
+          { label: "I have a privacy concern", value: 5},
+          { label: "Other", value: 6},
+        ],
+        value: 0
       }
   }
   tabrender(){
@@ -101,61 +103,10 @@ class DeleteAccountScreen extends Component {
     })
   }
 
-  rendermapdata(){
-      return maplocations.data.map((data, index)=>{
-          return(
-              <View style={{height:300,marginBottom: 10, width: "100%", backgroundColor:"#fff", borderRadius:10}} key={index}>
-                  <View style={{ flexDirection:"row", justifyContent:"space-between", height:50, alignItems:"center", paddingHorizontal:20}} >
-                      <View style={{ flexDirection:"row"}} >
-                          <Text style={{color:"#000", fontFamily:"Montserrat-regular"}}>{data.jobtitle}</Text>
-                          <Image style={{width:20,height:20, paddingHorizontal:15, backgroundColor:"transparent"}} source={data.icon}
-                                 resizeMode="contain" resizeMethod="resize"/>
-                      </View>
-                      <TouchableHighlight style={styles.button} onPress={()=>console.warn("nejkhknz")} >
-                          <LinearGradient
-                              colors={['#3E85EF', '#3EBDEF']}
-                              start={{x: 0, y: 0}}
-                              end={{x: 1, y: 0}}
-                              style={styles.button}>
-                              <Text style={styles.btnText}>APPLY</Text>
-                          </LinearGradient>
-                      </TouchableHighlight>
-                  </View>
-                  <View style={{ width:"100%", padding:20}} >
-                      <Text style={{fontFamily:"Montserrat",}}>{data.detail}</Text>
-                  </View>
-                  <View style={{flexDirection:"row", backgroundColor:"#fff"}}>
-                      <View style={{ width : "30%",marginHorizontal: 5}} >
-                      <Image style={{width:"100%", height:100, borderRadius:10}} source={data.image}
-                             resizeMode="contain" resizeMethod="resize"/>
-                      </View>
-                      <View style={{ width : "30%",marginHorizontal: 5}} >
-                      <Image style={{width:"100%", height:100, borderRadius:10}} source={data.image}
-                             resizeMode="contain" resizeMethod="resize"/>
-                      </View>
-                      <View style={{ width : "30%",marginHorizontal: 5}} >
-                      <Image style={{width:"100%", height:100, borderRadius:10}} source={data.image}
-                             resizeMode="contain" resizeMethod="resize"/>
-                      </View>
-                  </View>
-                  <View style={{flexDirection:'row', backgroundColor:"#fff", paddingHorizontal:20}}>
-                      <View style={{flexDirection:'column', backgroundColor:"transparent", width:"70%"}}>
-                          <Text style={{fontSize:12}}><Icon style={{color:'#007FFA',fontSize:20}} active name="ios-calendar-outline" /> <Text style={{paddingLeft:5, fontFamily:"Montserrat-Regular",fontSize:15}}>Before the 19 Sep 2018</Text></Text>
-                          <Text style={{fontSize:15,}}><Icon style={{color:'#c33c4c',fontSize:20}} active name="md-pin" />  <Text style={{paddingLeft:5, fontFamily:"Montserrat-Light"}}>3km </Text></Text>
-                      </View>
-                      <View style={{flexDirection:'column', backgroundColor:"transparent", width:"30%", flexDirection:"row", justifyContent:"space-between"}}>
-                          <Image source={require("../assets/icons/heart.png")}
-                                 style={{width:"100%", height:30}} resizeMode="contain" resizeMethod="resize"/>
-                          <Image source={require("../assets/icons/navigation.png")}
-                                 style={{width:"100%", height:30}} resizeMode="contain" resizeMethod="resize"/>
+  handleOnPress(value){
+    this.setState({value:value})
+}
 
-                      </View>
-
-                 </View>
-              </View>
-          )
-      })
-  }
     render() {
        return (
            <View style={{flex:1}}>
@@ -176,13 +127,13 @@ class DeleteAccountScreen extends Component {
                                       <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                     <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                       <Image source={menu} style={{ width: '50%', height: 22}} resizeMode="contain" resizeMethod="resize"/>
+                                       <Image source={menu} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                 </View>
                                }
                                title={
                                 <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 18}}>Delete My Account</Text>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Delete My Account</Text>
                                </View>
                                }
                                right={
@@ -202,19 +153,27 @@ class DeleteAccountScreen extends Component {
                    <View style={{flex:8.5,backgroundColor :"rgb(249,252, 255)",paddingHorizontal:20}}>
                    <Text style={{color:'#22262C', fontSize:16,marginVertical:5,lineHeight:25,fontFamily:'Montserrat-Bold'}}>Are you sure you want to delete your account?</Text>
                          <Text style={{color:'#9B9B9B', fontSize:14,marginVertical:5,lineHeight:25,fontFamily:'Montserrat-Bold'}}>Please let us know why you are leaving</Text>
-                         <View>
-                             {
+                         <View style={{}}> 
+                         {
                                  this.state.options.map((option,index)=>{
-                                    return <TouchableOpacity  onPress={()=>this.setState({selectedkey : index})}>
-                                       <View style={[styles.selectBox,{paddingHorizontal:index === this.state.selectedkey ? 0 : 10}]}>
-                                            <Radio selected={index === this.state.selectedkey ? true : false} />
-                                            <Text style={styles.selectText}>
-                                                {option}
+                                    return  <View style={{paddingVertical:10}}>
+                                                <RadioButton
+                                                   currentValue={this.state.value}
+                                                   value={option.value} 
+                                                   onPress={()=>this.setState({value : option.value})}
+                                                   outerCircleColor='rgb(211,217,226)'
+                                                   outerCircleSize={24}
+                                                   outerCircleWidth={2}
+                                                   innerCircleColor='#3E85EF'
+                                                   innerCircleSize={12}
+                                                   >
+                                                <Text style={styles.selectText}>
+                                                                {option.label}
                                             </Text>
-                                        </View>
-                                    </TouchableOpacity>
+                                            </RadioButton>
+                                         </View>
                                  })
-                             }
+                         }
                          </View>
                          <View style={{marginVertical:20,fontFamily:'Montserrat-Medium',color:'#9B9B9B'}}>
                                <Text>Write the reason</Text>

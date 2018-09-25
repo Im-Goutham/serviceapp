@@ -8,7 +8,7 @@ import FacebookLogin from '../components/FacebookLogin';
 import GoogleSignIn from '../components/GoogleSignIn';
 import LinearGradient from 'react-native-linear-gradient';
 import Header from "../components/Header";
-
+import FloatingLabelInput from '../components/FloatingLabelInput';
 
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
@@ -100,41 +100,37 @@ class LoginScreen extends Component {
               <View style={[styles.loginBlox,{flex:4.9}]}>
               <View style={{flex:1,justifyContent:'space-around'}}>
               <View>
-                 <Item floatingLabel>
-                 <Label style={styles.inputLabel}>Email / User ID</Label>
-                <Input
-                    value={this.state.username}
-                    autoCapitalize='none'
-                    onSubmitEditing={() => {
-                      this.focusNextField('password');
-                    }}
-                    returnKeyType={ "next" }
-                    ref={ input => {
-                      this.inputs['username'] = input;
-                    }}
-                    style={{marginVertical: 5}}
-                    onChangeText={username => this.setState({ username })}
-                    />
-              </Item>
+              <FloatingLabelInput
+                            label="Email / User ID"
+                            value={this.state.email}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                              this.focusNextField('password');
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                              this.inputs['email'] = input;
+                            }}
+                            onChangeText={email => this.setState({ email })}
+                            />
+                 
               </View>
               <View >
-              <Item floatingLabel>
-                 <Label style={styles.inputLabel}>Password</Label>
-                <Input
-                    value={this.state.password}
-                    autoCapitalize='none'
-                    secureTextEntry={true}
-                    onSubmitEditing={() => {
-                        this.handleSubmit()
-                    }}
-                    returnKeyType={ "done" }
-                    ref={ input => {
-                      this.inputs['password'] = input;
-                    }}
-                    style={{marginVertical: 5}}
-                    onChangeText={password => this.setState({ password })}
-                    />
-              </Item>
+              <FloatingLabelInput
+                            label="Password"
+                            value={this.state.password}
+                            autoCapitalize='none'
+                            secureTextEntry={true}
+                            onSubmitEditing={() => {
+                                this.handleSubmit()
+                            }}
+                            returnKeyType={ "done" }
+                            ref={ input => {
+                              this.inputs['password'] = input;
+                            }}
+                            style={{marginVertical: 5}}
+                            onChangeText={password => this.setState({ password })}
+                            />
               </View>
               </View>
               <View style={{flex:1,justifyContent:'space-between'}}>
@@ -190,7 +186,7 @@ class LoginScreen extends Component {
                               <Image source={border_img} style={{ width: '100%', height: Platform.OS==='ios'? 31 : 30}}/>
                                  <View style={{height:20, backgroundColor:"#F9FCFF"}}/>
                               </View>
-                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1,paddingHorizontal:20,paddingBottom:20,alignItems: 'center'}}>
+                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1,alignItems: 'center'}}>
                                    <Text style={{marginVertical:20,color:'#808080',fontSize:17,textAlign:'center',fontFamily:'Montserrat-Regular'}}>Don't have an account  <Text style={{fontWeight: 'bold',color:'#3581fc',fontFamily:'Montserrat-Bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign Up</Text></Text>
                         </View>
                   </View>  

@@ -73,7 +73,7 @@ let buttons = {
     },
     {
       title : "Logout",
-      iconname : undefined,
+      iconname : "appTutorial",
       routename : "Logout"
     },
 
@@ -89,13 +89,18 @@ class SideMenu extends Component {
     const navigateAction = NavigationActions.navigate({
       routeName: route
     });
-    this.props.navigation.dispatch(navigateAction);
+    if(route == 'appTutorial'){
+      this.props.navigation.navigate(route);
+    }
+    else {
+      this.props.navigation.dispatch(navigateAction);
+    }
   }
   listItems(){
     return buttons.data.map((value, index)=>{
       return <TouchableOpacity style={styles.navItemStyle} key={index} onPress={()=>this.setState({selectedkey : index}, this.navigateToScreen(value.routename))}>
         <View style={{flex:1, alignItems:'center',justifyContent:"center" }}>
-          <Image source={value.iconname} style={{marginTop:2,width:25,height:25}} resizeMode="contain" resizeMethod="resize"/>
+          <Image source={value.iconname} style={{marginTop:2,width:20,height:20}} resizeMode="contain" resizeMethod="resize"/>
         </View>
         <View style={{flex:3,alignItems:'flex-start', justifyContent: 'center'}}>
           <Text style={[styles.textStyle,{ color: index === this.state.selectedkey ? "rgb(61, 133, 239)" : "#000" }]} >
@@ -108,11 +113,11 @@ class SideMenu extends Component {
   render () {
     return (
       <ScrollView contentContainerStyle={styles.container}>
-                    <ListItem avatar>
+                    <ListItem avatar style={{paddingTop:40,paddingBottom:10}}>
                     <Left>
                         <Image style={{width:70,height:70,borderRadius:25}} source={require('../images/svp1.png')} />
                     </Left>
-                    <Body>
+                    <Body style={{borderBottomColor:'white'}}>
                     <Text style={styles.usernamestyle}>John Doe</Text>
                     <Text style={styles.emailtext}>johndoe@gmail.com</Text>
                     <TouchableOpacity style={styles.premiumButton}>
@@ -131,7 +136,7 @@ class SideMenu extends Component {
 const styles = StyleSheet.create({
     container: {
       // flex:1,
-      paddingTop: Platform.OS === 'ios' ? 20 : 0,
+      // paddingTop: Platform.OS === 'ios' ? 35 : 0,
       backgroundColor:'rgb(249, 252, 255)'
     },
     usernamestyle:{
@@ -141,15 +146,18 @@ const styles = StyleSheet.create({
     },
     premiumButton:{
       justifyContent:"center",
-      alignItems: 'center',
-      borderRadius:10,
+      alignItems: 'flex-start',
+      borderRadius:20,
       paddingVertical: 2,
-      width:'100%',
-      backgroundColor:'rgb(61, 133, 239)'
+      width: '100%',
     },
     premiumtext:{
       color:"#fff",
-      fontFamily:"Montserrat-Bold"
+      fontFamily:"Montserrat-Bold",
+      paddingHorizontal:10,
+      borderRadius:20,
+      paddingVertical: 2,
+      backgroundColor:'rgb(61, 133, 239)'
     },
     emailtext:{
       fontFamily:"Montserrat-Light",
@@ -172,9 +180,10 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         textAlign: 'left',
-        // color:'#000',
+        color:'#22262C',
         // fontWeight:'bold',
-        fontFamily:"Montserrat-Light"
+        fontSize:14,
+        fontFamily:"Montserrat-Regular"
     }
 });
 

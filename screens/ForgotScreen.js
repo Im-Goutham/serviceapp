@@ -10,6 +10,7 @@ import {
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import HeaderScreen from './HeaderScreen';
+import FloatingLabelInput from '../components/FloatingLabelInput';
 
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
@@ -69,22 +70,20 @@ class ForgetScreen extends Component {
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
                            <ScrollView style={styles.container}>
                       <View style={styles.inputField}>
-                            <Item floatingLabel>
-                                <Label style={styles.inputLabel}>Email</Label>
-                                <Input
-                                    value={this.state.username}
-                                    autoCapitalize='none'
-                                    onSubmitEditing={() => {
-                                        this.handleSubmit();
-                                    }}
-                                    returnKeyType={ "next" }
-                                    ref={ input => {
-                                        this.inputs['username'] = input;
-                                    }}
-                                    onChangeText={username => this.setState({ username })}
-                                    style={{marginVertical: 5}}
-                                />
-                            </Item>
+                      <FloatingLabelInput
+                            label="Email"
+                            value={this.state.email}
+                            autoCapitalize='none'
+                            onSubmitEditing={() => {
+                                
+                            }}
+                            returnKeyType={ "next" }
+                            ref={ input => {
+                                this.inputs['email'] = input;
+                            }}
+                            onChangeText={email => this.setState({ email })}
+                            style={{marginVertical: 5}}
+                        />
                         </View>
                         <View style={{justifyContent: "center" }}>
                             {
