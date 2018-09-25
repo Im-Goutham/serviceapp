@@ -1,8 +1,9 @@
 
 import React, { Component } from 'react';
-import {StyleSheet,View, Text, TouchableOpacity,Dimensions, DatePickerIOS} from 'react-native';
+import {StyleSheet,View, Text, TouchableOpacity,Dimensions, Platform, DatePickerIOS} from 'react-native';
 import Modal from "react-native-modal";
 import LinearGradient from 'react-native-linear-gradient';
+import DatePicker from 'react-native-datepicker'
 import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Icon, Textarea,Label } from 'native-base';
 const { width, height } = Dimensions.get('window')
 
@@ -37,34 +38,40 @@ export default class ApplyModal extends Component {
             <Text style={{textAlign:'center', color:'#9B9B9B'}}>Suggest which day and time would work best for you.</Text>
         </View>
         <View >
-            {/* <DatePickerIOS
-            date={this.state.chosenDate}
-            onDateChange={this.setDate}
-            /> */}
-             <DatePicker
-                style={{width: 200}}
-                date={this.state.date}
-                mode="date"
-                placeholder="select date"
-                format="YYYY-MM-DD"
-                minDate="2016-05-01"
-                maxDate="2016-06-01"
-                confirmBtnText="Confirm"
-                cancelBtnText="Cancel"
-                customStyles={{
-                dateIcon: {
-                    position: 'absolute',
-                    left: 0,
-                    top: 4,
-                    marginLeft: 0
-                },
-                dateInput: {
-                    marginLeft: 36
-                }
-                // ... You can check the source to find the other keys.
-                }}
-                onDateChange={(date) => {this.setState({date: date})}}
-            />
+          {
+               Platform.OS === 'ios' ?(
+                   <DatePickerIOS
+                    date={this.state.chosenDate}
+                    onDateChange={this.setDate}
+                    />
+               ):(
+                        <DatePicker
+                        style={{width: 200}}
+                        date={this.state.date}
+                        mode="date"
+                        placeholder="select date"
+                        format="YYYY-MM-DD"
+                        minDate="2016-05-01"
+                        maxDate="2016-06-01"
+                        confirmBtnText="Confirm"
+                        cancelBtnText="Cancel"
+                        customStyles={{
+                        dateIcon: {
+                            position: 'absolute',
+                            left: 0,
+                            top: 4,
+                            marginLeft: 0
+                        },
+                        dateInput: {
+                            marginLeft: 36
+                        }
+                        // ... You can check the source to find the other keys.
+                        }}
+                        onDateChange={(date) => {this.setState({date: date})}}
+                    />
+               )
+          }
+           
          </View>
      </View>
      <View style={{height:50,flexDirection:'row'}}>
