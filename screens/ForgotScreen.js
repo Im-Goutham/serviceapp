@@ -44,11 +44,17 @@ class ForgetScreen extends Component {
                            <Header
                                navigation={this.props.navigation}
                                left = {
-                                   <TouchableOpacity
-                                       onPress={() => this.props.navigation.goBack()}
-                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'flex-start',marginLeft:-20}}>
-                                       <Image source={back_arrow} style={{ width: '100%', height: 20,}} resizeMode="contain" resizeMethod="resize"/>
-                                   </TouchableOpacity>
+                                <TouchableOpacity
+                                        onPress={() => this.props.navigation.navigate('login')}
+                                        style={{
+                                            width: 54,
+                                            height: 54,
+                                            justifyContent: 'center',
+                                            alignItems: 'flex-start'
+                                        }}>
+                                        <Image source={back_arrow} style={{width: '100%', height: 20,}}
+                                            resizeMode="contain" resizeMethod="resize"/>
+                                    </TouchableOpacity>
                                }
                                title={
                                 <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>

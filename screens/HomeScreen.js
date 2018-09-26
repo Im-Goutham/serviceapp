@@ -168,7 +168,7 @@ class HomeScreen extends Component {
                                    <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                        <TouchableOpacity 
                                           style={{width: "100%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
-                                          onPress={()=> {this.props.navigation.navigate('account')}}
+                                          onPress={this.navigateToScreen('account')}
                                           >
                                             <Image source={require('../images/svp1.png')} style={{ width: 35, height: 35,borderWidth:3,borderRadius:18,borderColor:'white',overflow: 'hidden'}} />
                                        </TouchableOpacity>

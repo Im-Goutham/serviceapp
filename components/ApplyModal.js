@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
       modalContent: {
-        height:380,
+        height:390,
         backgroundColor: "white",
         justifyContent: "center",
         borderRadius: 10,

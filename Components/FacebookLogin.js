@@ -1,7 +1,7 @@
 
 
 import React, {Component} from 'react';
-import { View, TouchableHighlight, StyleSheet,Text, Image } from 'react-native'
+import { View, TouchableOpacity, StyleSheet,Text, Image } from 'react-native'
 import { Button ,Icon} from 'native-base'
 import { LoginManager, AccessToken, GraphRequest, GraphRequestManager } from 'react-native-fbsdk'
 import { Auth } from 'aws-amplify';
@@ -81,7 +81,17 @@ export default class FacebookLogin extends Component {
   }
   render() {
     return (
-            <TouchableHighlight style={styles.button} onPress={() => this.handleFacebookLogin()}><Text style={styles.btnText}> <Image source={require('../assets/icons/fb_transparent.png')} style={{ width: 20, height: 20}} resizeMode="contain" resizeMethod="resize"/> Facebook</Text></TouchableHighlight>
+            <TouchableOpacity style={styles.button} 
+              onPress={() => this.handleFacebookLogin()}>
+              <View style={{flexDirection:'row',paddingVertical:1}}>
+                <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+                  <Image source={require('../assets/icons/fb_transparent.png')} style={{ width: 20, height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                  </View>
+                  <View style={{flex:2,justifyContent:'center',alignItems:'flex-start'}}>
+                    <Text style={styles.btnText}>Facebook</Text>
+                  </View>
+                </View>
+            </TouchableOpacity>
     );
   }
 }

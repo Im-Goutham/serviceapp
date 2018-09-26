@@ -31,13 +31,13 @@ export default class SelectLocation extends Component {
             mode={'dialog'}
             selectedValue={this.state.language}
             style={{height:'100%'}}
-            itemStyle={{color:'#3581fc',height:200}}
+            itemStyle={{color:'#3581fc',height:200,paddingVertical:5}}
             onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
             <Picker.Item label="Chinese" value="chinese" />
             <Picker.Item label="French" value="french" />
-            <Picker.Item label="English" value="english" />
-            <Picker.Item label="Italian" value="italian" />
-            <Picker.Item label="Spanish" value="spanish" />
+            <Picker.Item label="English" value="english"  />
+            <Picker.Item label="Italian" value="italian"  />
+            <Picker.Item label="Spanish" value="spanish"  />
             </Picker>
      </View>
      <View style={{flex:1}}>
@@ -68,9 +68,9 @@ const styles = StyleSheet.create({
         borderColor: "#e6e6e6"
     },
     headingText: {
-         fontWeight:'bold',
-         color: '#595959',
-         fontSize: 20,
+         fontFamily:'Montserrat-Medium',
+         color: '#22262C',
+         fontSize: 18,
          textAlign: 'center',
          paddingVertical: 10
     },
@@ -80,18 +80,21 @@ const styles = StyleSheet.create({
         height: '100%',
         alignItems:'center',
         justifyContent:'center',
+        borderBottomLeftRadius:10,
+        borderBottomRightRadius:10
       },
       btnText: { 
         textAlign:'center',
         color:'white',
-        fontSize: 16,
-        fontWeight:'bold'
+        fontSize:17,
+        fontFamily:'Montserrat-Bold'
     },
       modalContent: {
-        height:300,
+        height:320,
         backgroundColor: "white",
         justifyContent: "center",
         borderRadius: 4,
+        borderRadius:10,
         borderColor: "rgba(0, 0, 0, 0.1)"
       },
 });

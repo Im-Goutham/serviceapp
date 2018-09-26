@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {  StyleSheet, Text, View, TouchableHighlight, Platform, Image } from 'react-native';
+import {  StyleSheet, Text, View, TouchableOpacity, Platform, Image } from 'react-native';
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import { Icon} from 'native-base'
 import { Auth } from 'aws-amplify';
@@ -73,8 +73,16 @@ export default class GoogleSigninSampleApp extends Component {
 
   render() {
       return (
-        <TouchableHighlight style={styles.button} onPress={() => this._signIn()}><Text style={styles.btnText}> <Image source={require('../assets/icons/gmail_transparent.png')} style={{ width: 30, height: 30,borderWidth:1}} resizeMode="contain" resizeMethod="resize"/>
-          <Text style={{fontSize:18,marginTop:-20}}>Gmail</Text></Text></TouchableHighlight>
+        <TouchableOpacity style={styles.button} onPress={() => this._signIn()}> 
+         <View style={{flexDirection:'row'}}>
+            <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+            <Image source={require('../assets/icons/gmail_transparent.png')} style={{ width: 25, height: 25}} resizeMode="contain" resizeMethod="resize"/>
+            </View>
+            <View style={{flex:1,justifyContent:'center',alignItems:'flex-start'}}>
+               <Text style={styles.btnText}>Gmail</Text>
+            </View>
+         </View>
+         </TouchableOpacity>
       );
   }
 
@@ -124,7 +132,7 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   btnText: { 
-    fontSize: 25,
+    fontSize: 18,
     textAlign :'center',
     color:'white',
     fontWeight:'bold'

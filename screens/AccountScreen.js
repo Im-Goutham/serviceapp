@@ -16,7 +16,7 @@ let back_arrow = require('../assets/icons/back-arrow.png');
 
 import * as actions from '../actions';
 
-class UserProfileScreen extends Component {
+class AccountScreen extends Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -169,12 +169,9 @@ class UserProfileScreen extends Component {
 
 
     render() {
-      let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;
-      let isDrawer = false;
+      let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;  
       const {params} = this.props.navigation.state;
-      if(params.isDrawer){
-        isDrawer = params.isDrawer;
-      }
+      let { isDrawer } = params;
       return ( 
         <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
               <Header
@@ -623,5 +620,5 @@ star_style: {
       
 })
 
-export default connect(null, actions)(UserProfileScreen);
+export default connect(null, actions)(AccountScreen);
 // export ANDROID_HOME=/Users/indianic/Library/Android/sdk
