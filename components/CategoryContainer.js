@@ -9,7 +9,7 @@ class CategoryContainer extends Component {
     return (
       <View style={styles.mainBox}>
         <View style={styles.categoryBox}>
-              <Image source={category.image} style={{ width: 25, height: 25}} />
+              <Image source={category.image} style={{ width: 40, height: 40}} resizeMode="contain" resizeMethod="resize"/>
         </View>
         <Text style={styles.categoryStyle}>{category.name}</Text>
       </View>     
@@ -32,7 +32,9 @@ const styles = StyleSheet.create({
       borderColor:'rgb(237,237,237)',
     },
     categoryStyle: {
-      color:'rgb(82,82,82)',
+      color:'#4A4A4A',
+      fontFamily:'Montserrat-Medium',
+      paddingVertical:10,
       fontSize: 13,
       textAlign:'center'
   },

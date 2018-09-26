@@ -98,7 +98,7 @@ class AllServiceList extends Component {
                             </TouchableOpacity>
                             <TouchableOpacity style={{ width : "70%"}}>
                                 <LinearGradient
-                                    colors={['#3EBDEF', '#3E85EF']}
+                                    colors={['#3E85EF', '#3EBDEF']}
                                     start={{x: 0, y: 0}}
                                     end={{x: 1, y: 0}}
                                     style={{height : 40, backgroundColor:"transparent", width : "100%", borderBottomRightRadius:10,  justifyContent:"center", alignItems:"center"}}>

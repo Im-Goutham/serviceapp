@@ -126,7 +126,7 @@ export default class AllServiceProvider extends Component {
                             </TouchableOpacity>
                             <TouchableOpacity style={{ width : "70%"}}>
                                 <LinearGradient
-                                    colors={['#3EBDEF', '#3E85EF']}
+                                    colors={['#3E85EF', '#3EBDEF']}
                                     start={{x: 0, y: 0}}
                                     end={{x: 1, y: 0}}
                                     style={{height : 40, backgroundColor:"transparent", width : "100%", borderBottomRightRadius:10,  justifyContent:"center", alignItems:"center"}}>
@@ -143,7 +143,7 @@ export default class AllServiceProvider extends Component {
        return (
            <View style={{flex:1}}>
                <LinearGradient
-                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   colors={['#3E85EF', '#3EBDEF']}
                    start={{x: 0, y: 0}}
                    end={{x: 1, y: 0}}
                    style={{

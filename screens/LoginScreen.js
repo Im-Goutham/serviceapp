@@ -95,7 +95,7 @@ class LoginScreen extends Component {
       return (
          <View style={{flex:1,paddingHorizontal:15,justifyContent:'space-around'}} >
              <View style={{flex:1.3,paddingVertical:20,justifyContent:'flex-end',alignItems:'flex-start'}}>
-              <Image source={logo} style={{width:'100%',height: 40,marginLeft:-70}} resizeMode="contain" resizeMethod="resize"/>
+              <Image source={logo} style={{width:'100%',height: 40,marginLeft:-60}} resizeMode="contain" resizeMethod="resize"/>
              </View>
               <View style={[styles.loginBlox,{flex:4.9}]}>
               <View style={{flex:1,justifyContent:'space-around'}}>
@@ -170,8 +170,9 @@ class LoginScreen extends Component {
     render() {
 
       return (
+           <ScrollView contentContainerStyle={{flexGrow:1}}>
                <LinearGradient
-                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   colors={['#3E85EF', '#3EBDEF']}
                    start={{x: 0, y: 0}}
                    end={{x: 1, y: 0}}
                    style={{
@@ -191,6 +192,7 @@ class LoginScreen extends Component {
                         </View>
                   </View>  
                </LinearGradient>
+               </ScrollView>
       );
     }
 }

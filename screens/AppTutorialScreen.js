@@ -93,12 +93,12 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     text: {
-      fontSize: 18,
+      fontSize: 16,
       color:'white',
-        fontFamily:'Montserrat-Regular',
-        lineHeight:25,
+      fontFamily:'Montserrat-Medium',
+      lineHeight:22,
       textAlign:'center',
-      marginVertical:15
+      marginVertical:10
     },
     signUpBlock: {
         flex:2,
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
         fontFamily:'Montserrat-Bold'
     },
     imgBox:{flex:4,justifyContent:'center',alignItems:'center'},
-    imgStyle: {height:250}
+    imgStyle: {}
 })
 
 export default AppTutorialScreen;

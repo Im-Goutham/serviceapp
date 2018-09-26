@@ -22,7 +22,8 @@ class ForgetScreen extends Component {
   constructor(props){
       super(props);
       this.state={
-        tabindex : 0
+        tabindex : 0,
+        email:''
       }
   }
 
@@ -31,7 +32,7 @@ class ForgetScreen extends Component {
        return (
            <View style={{flex:1}}>
                <LinearGradient
-                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   colors={['#3E85EF', '#3EBDEF']}
                    start={{x: 0, y: 0}}
                    end={{x: 1, y: 0}}
                    style={{
@@ -75,7 +76,7 @@ class ForgetScreen extends Component {
                             value={this.state.email}
                             autoCapitalize='none'
                             onSubmitEditing={() => {
-                                
+                                console.log('')
                             }}
                             returnKeyType={ "next" }
                             ref={ input => {

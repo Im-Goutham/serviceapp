@@ -39,7 +39,7 @@ class FilterScreen extends Component {
             {name:'Pluming',image: require('../assets/icons/plumbing.png')},
           ],
           allCategories: [
-            {name:'Home Interior',image: require('../assets/icons/home_interior.png')},
+            {name:'All',image: require('../assets/icons/all.png')},
             {name:'Home Exterior',image: require('../assets/icons/home_exterior.png')},
             {name:'Landscaping',image: require('../assets/icons/landscaping.png')},
             {name:'Handyman',image: require('../assets/icons/handyman.png')},
@@ -89,7 +89,7 @@ class FilterScreen extends Component {
        return (
            <View style={{flex:1}}>
                <LinearGradient
-                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   colors={['#3E85EF', '#3EBDEF']}
                    start={{x: 0, y: 0}}
                    end={{x: 1, y: 0}}
                    style={{
@@ -251,7 +251,7 @@ class FilterScreen extends Component {
 
                 </View>
                <LinearGradient
-                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   colors={['#3E85EF', '#3EBDEF']}
                    start={{x: 0, y: 0}}
                    end={{x: 1, y: 0}}
                    style={{

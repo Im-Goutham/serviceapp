@@ -63,33 +63,35 @@ class FindJobScreen extends Component {
     }
     tabrender(){
         return tabItems.map((value, index)=>{
-            return (
-                <View key={index}>
-                    <TouchableOpacity
-                        key={index} onPress={()=>this.setState({tabindex: index})}
-                        style={{
-                            height : 40,
-                            justifyContent: "space-around",
-                            alignItems:'center',
-                        }}>
-                        <Text
-                            style={{
-                                color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
-                                fontSize: 16,
-                                fontFamily: 'Montserrat-Bold'
-                            }}>{value}</Text>
-                        <View style={{
-                            width: 40,
-                            height: this.state.tabindex === index ? 3 : 0,
-                            backgroundColor: "#fff",
-                            borderRadius : 3
-                            // borderColor: this.state.tabindex === index ? "#fff": "transparent"
-                                }}/>
-                    </TouchableOpacity>
-                </View>
-            )
+          return (
+            <TouchableOpacity key={index} onPress={()=>this.setState({
+                tabindex: index
+              })}
+              style={{
+              // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
+              height : 40,
+              width: "50%",
+              justifyContent: "space-around",
+              alignItems:'center',
+            }}>
+            <Text
+              style={{
+                color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
+                fontSize: 16,
+                fontFamily: 'Montserrat-Bold'
+              }}>{value}</Text>
+            <View style={{
+                width: 40,
+                height: this.state.tabindex === index ? 3 : 0,
+                backgroundColor: "#fff",
+                borderRadius : 3
+                // borderColor: this.state.tabindex === index ? "#fff": "transparent"
+              }}/>
+          </TouchableOpacity>
+        )
         })
-    }
+      }
+    
     rendermapdata(){
         var screen = this.props.navigation.state.routeName;
         return maplocations.data.map((data, index)=>{
@@ -215,12 +217,13 @@ class FindJobScreen extends Component {
         })
     }
     render() {
+        
         const {params} = this.props.navigation.state;
-        console.log('params aaere',params);
+        let { isDrawer } = params;
         return (
             <View style={{flex:1}}>
                 <LinearGradient
-                    colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                    colors={['#3E85EF', '#3EBDEF']}
                     start={{x: 0, y: 0}}
                     end={{x: 1, y: 0}}
                     style={{
@@ -231,14 +234,18 @@ class FindJobScreen extends Component {
                             <Header
                                 navigation={this.props.navigation}
                                 left = {
-                                     <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                        <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                                        </TouchableOpacity>
-                                        <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={menu} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                                        </TouchableOpacity>
-                                    </View>
+                                    <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                                    {
+                                        (!isDrawer)?(
+                                            <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                            <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                            </TouchableOpacity>
+                                        ):(null)
+                                    }
+                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: isDrawer ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                    <Image source={menu} style={{ width: isDrawer? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    </TouchableOpacity>
+                                 </View>
                                     }
                                 title={
                                     <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
@@ -262,10 +269,10 @@ class FindJobScreen extends Component {
                         }
                         content={
                             <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
-                                <View style={{ paddingVertical:10,flexDirection:'row',justifyContent:'space-around'}}>
-                                    {this.tabrender()}
-                                    </View>
+                                <View style={{ paddingVertical:10,flexDirection:'row', paddingHorizontal: width/6}}>
+                                {this.tabrender()}
                             </View>
+                           </View>
                         }/>
                     <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
                         <Advertisement/>

@@ -15,6 +15,10 @@ import SubscriptionScreen from '../screens/SubscriptionScreen';
 import AcountStackNavigator from './AcountStackNavigator';
 import SettingsStackNavigator from './SettingsStackNavigator';
 import FavouriteStackNavigator from './FavouriteStackNavigator';
+import HomeStackNavigator from './HomeStackNavigator';
+import NotificationStackNavigator from './NotificationStackNavigator';
+import SubscriptionStackNavigator from './SubscriptionStackNavigator';
+
 
 export default createDrawerNavigator(
     {
@@ -37,7 +41,7 @@ export default createDrawerNavigator(
             screen: FavouriteStackNavigator
         },
         notifications: {
-            screen: NotificationsScreen
+            screen: NotificationStackNavigator
         },
         chats: {
             screen: ChatStackNavigator
@@ -52,7 +56,7 @@ export default createDrawerNavigator(
             screen: AcountStackNavigator
         },
         subscription: {
-            screen: SubscriptionScreen
+            screen: SubscriptionStackNavigator
         },
         settings: {
             screen: SettingsStackNavigator

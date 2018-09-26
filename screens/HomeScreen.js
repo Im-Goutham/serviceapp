@@ -10,6 +10,7 @@ import {
     Text, TouchableHighlight,
     AsyncStorage
 } from 'react-native';
+import {NavigationActions} from 'react-navigation';
  import {  Icon } from 'native-base'
 import Advertisement from '../components/Advertisement';
 import ChatList from '../components/ChatList';
@@ -117,13 +118,31 @@ class HomeScreen extends Component {
       }
   }
 
+  navigateToScreen = (route) => () => {
+    // const navigateAction = NavigationActions.navigate({
+    //   routeName: route
+    // });
+    // console.log('route is ',route);
+    const navigateAction = NavigationActions.navigate({
+      routeName: route,
+      params: {isDrawer: false},
+      action: NavigationActions.navigate({ routeName: route, params: {isDrawer: false}})
+    })
+    // this.props.navigation.navigate(route,{isDrawer: true});
+
+
+      this.props.navigation.dispatch(navigateAction);
+      // this.props.navigation.navigate(route,{name:'Goutham1222'});
+
+  }
+
 
     render() {
         let {categories, serviceProviders, screens} = this.state;
        return (
            <View style={{flex:1}}>
                <LinearGradient
-                   colors={['rgb(60, 139, 239)', 'rgb(60,187, 239)']}
+                   colors={['#3E85EF', '#3EBDEF']}
                    start={{x: 0, y: 0}}
                    end={{x: 1, y: 0}}
                    style={{
@@ -173,9 +192,8 @@ class HomeScreen extends Component {
                             {
                                       screens ? (
                                           screens.map((screen,key)=>{
-                                                return  <TouchableOpacity key={key} onPress={()=> {
-                                                    
-                                                   this.props.navigation.navigate(screen.routename, { user: 'Lucy' })}}>
+                                                return  <TouchableOpacity key={key} onPress={this.navigateToScreen(screen.routename)}
+                                                  >
                                                  <View style={styles.mainBox} key={key}>
                                                 <View style={styles.mainCategoryBox}>
                                                       <Image source={screen.iconname} style={{ width: 40, height: 40}} resizeMode='contain' resizeMethod='resize' />
@@ -306,7 +324,7 @@ const styles = StyleSheet.create({
     },
     textStyle: {
       fontFamily:"Montserrat-SemiBold",
-      fontSize:18
+      fontSize:17
     },
       categoryContainer: {
         flex: 1,

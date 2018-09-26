@@ -82,7 +82,7 @@ export default class RnDirectionsApp extends Component {
                     <Marker
                      coordinate={{latitude: 17.678948, longitude: 83.284446 }}
                      >
-                     <Image source={require('../assets/icons/car.png')} style={{ width: 70, height: 70 }} resizeMode="contain" resizeMethod="resize"/>
+                     <Image source={require('../assets/icons/car.png')} style={{ width: 50, height: 50 }} resizeMode="contain" resizeMethod="resize"/>
                    </Marker>
                    <Marker
                      coordinate={{latitude: 17.632535, longitude: 83.227539  }}

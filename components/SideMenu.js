@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import {NavigationActions} from 'react-navigation';
 import { View, StyleSheet,Image, Platform, TouchableOpacity, ScrollView} from 'react-native';
 import { List, ListItem, Left, Body, Right, Text , Icon} from 'native-base';
+import LinearGradient from 'react-native-linear-gradient';
+
 
 let buttons = {
   data :[
@@ -73,8 +75,8 @@ let buttons = {
     },
     {
       title : "Logout",
-      iconname : "appTutorial",
-      routename : "Logout"
+      iconname : undefined,
+      routename : "appTutorial"
     },
 
 ]}
@@ -86,19 +88,33 @@ class SideMenu extends Component {
     }
   }
   navigateToScreen = (route) => () => {
+    // const navigateAction = NavigationActions.navigate({
+    //   routeName: route
+    // });
+
     const navigateAction = NavigationActions.navigate({
-      routeName: route
-    });
+      routeName: route,
+      params: {isDrawer: true},
+      action: NavigationActions.navigate({ routeName: route, params: {isDrawer: true}})
+    })
     if(route == 'appTutorial'){
-      this.props.navigation.navigate(route);
+      this.props.navigation.navigate(route,{isDrawer: true});
     }
     else {
       this.props.navigation.dispatch(navigateAction);
+      // this.props.navigation.navigate(route,{name:'Goutham1222'});
     }
   }
   listItems(){
     return buttons.data.map((value, index)=>{
-      return <TouchableOpacity style={styles.navItemStyle} key={index} onPress={()=>this.setState({selectedkey : index}, this.navigateToScreen(value.routename))}>
+      return   <LinearGradient
+      colors={[index === this.state.selectedkey ? '#EEF5FF' :'#FFFFFF', '#FFFFFF']}
+      start={{x: 0, y: 0}}
+      end={{x: 1, y: 0}}
+      style={{
+          flex: 1
+      }}>
+      <TouchableOpacity style={styles.navItemStyle} key={index} onPress={()=>this.setState({selectedkey : index}, this.navigateToScreen(value.routename))}>
         <View style={{flex:1, alignItems:'center',justifyContent:"center" }}>
           <Image source={value.iconname} style={{marginTop:2,width:20,height:20}} resizeMode="contain" resizeMethod="resize"/>
         </View>
@@ -108,6 +124,7 @@ class SideMenu extends Component {
           </Text>
         </View>
       </TouchableOpacity>
+      </LinearGradient>
     })
   }
   render () {
@@ -120,9 +137,9 @@ class SideMenu extends Component {
                     <Body style={{borderBottomColor:'white'}}>
                     <Text style={styles.usernamestyle}>John Doe</Text>
                     <Text style={styles.emailtext}>johndoe@gmail.com</Text>
-                    <TouchableOpacity style={styles.premiumButton}>
-                    <Text style={styles.premiumtext}>Become Premium</Text>
-                    </TouchableOpacity>
+                   
+                    <Text style={styles.tagStyle}>Become Premium</Text>
+             
 
                     </Body>
                     <Right/>
@@ -184,7 +201,16 @@ const styles = StyleSheet.create({
         // fontWeight:'bold',
         fontSize:14,
         fontFamily:"Montserrat-Regular"
-    }
+    },
+    tagStyle:{
+      backgroundColor: '#3E85EF',
+      borderRadius:10,
+      overflow:"hidden",
+      paddingVertical:1,
+      paddingLeft:10,
+      color: 'white',
+      fontFamily: 'Montserrat-Bold'
+  },
 });
 
 SideMenu.propTypes = {
