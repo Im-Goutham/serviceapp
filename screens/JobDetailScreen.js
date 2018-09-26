@@ -61,6 +61,7 @@ export default class JobDetailScreen extends Component {
         console.log('params are .. ',this.props.navigation.state);
 
         let { serviceProviders } = this.state;
+        console.log('pops rar',this.props.navigation)
          return (
         
                 <ScrollView>

@@ -169,7 +169,7 @@ class JobsList extends Component {
                 onClose={() => console.log('===close')}
                 scroll={event => console.log('scroll event')}>
                 <TouchableWithoutFeedback onPress={() => {
-                    this.props.navigation.navigate('jobDetail')
+                    this.props.navigation.navigate('jobDetail',{name:'Goutham'})
                 }}>
                     <View style={styles.li}>
                         <View style={{

@@ -113,7 +113,7 @@ class SideMenu extends Component {
   render () {
     return (
       <ScrollView contentContainerStyle={styles.container}>
-                    <ListItem avatar style={{paddingTop:40,paddingBottom:10}}>
+                    <ListItem avatar style={{paddingTop: Platform.OS == 'ios' ? 40: 0,paddingBottom:10}}>
                     <Left>
                         <Image style={{width:70,height:70,borderRadius:25}} source={require('../images/svp1.png')} />
                     </Left>
