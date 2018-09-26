@@ -24,6 +24,10 @@ export default class App extends React.Component {
         <Provider store={store}>
          <Root>
         <View style={styles.container}>
+        <StatusBar
+            backgroundColor={Platform.OS=='ios' ? 'transparent' : '#3E85EF'}
+            barStyle="light-content"
+        />
           <MainNavigator />
         </View>
          </Root>

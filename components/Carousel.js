@@ -28,7 +28,6 @@ class CarouselComponent extends Component {
             <Pagination
               dotsLength={entries.length}
               activeDotIndex={activeSlide}
-              firstItem={1}
               containerStyle={{ backgroundColor: 'transparent',paddingVertical:0}}
               dotStyle={{
                  backgroundColor:'rgb(0,122,227)', width: 28, height: 2,borderRadius: 0,marginHorizontal:-7

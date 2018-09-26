@@ -190,7 +190,7 @@ class HomeScreen extends Component {
                          <View style={{flex:1}}>
                              <Carousel/>
                          </View>
-                          <View style={styles.servicesBox}>
+                          <View style={[styles.servicesBox,{ paddingVertical:0}]}>
                             <View style={styles.categoryContainer}>
                             {
                                       screens ? (
