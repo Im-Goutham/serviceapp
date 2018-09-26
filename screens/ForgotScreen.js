@@ -25,6 +25,7 @@ class ForgetScreen extends Component {
         tabindex : 0,
         email:''
       }
+      this.inputs = {};
   }
 
 

@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { View, StyleSheet, TouchableOpacity,Text, Image, Dimensions } from 'react-native';
+import { View, StyleSheet, TouchableOpacity,Text, Image, Dimensions, Platform } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import Swiper from 'react-native-swiper';
 import SelectLanguage from '../components/SelectLanguage';
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
          flex:5, 
          backgroundColor:'white',
          paddingHorizontal:10,
-         paddingVertical:30,
+         paddingVertical: Platform.OS == 'ios' ? 30: 10,
          position:'relative'
      },
      tutorialText: {
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
         fontFamily:'Montserrat-Bold'
     },
     imgBox:{flex:4,justifyContent:'center',alignItems:'center'},
-    imgStyle: {}
+    imgStyle: {height:250}
 })
 
 export default AppTutorialScreen;

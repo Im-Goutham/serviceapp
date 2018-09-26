@@ -48,10 +48,9 @@ class FilterScreen extends Component {
             {name:'Painting',image: require('../assets/icons/painting.png')},
             {name:'Appliance repair',image: require('../assets/icons/appliance.png')},
             {name:'Mounting & installing',image: require('../assets/icons/mounting.png')},
-            {name:'Future Assembly',image: require('../assets/icons/furniture.png')},
+            {name:'Furniture Assembly',image: require('../assets/icons/furniture.png')},
             {name:'Cars & Vehicles',image: require('../assets/icons/cars.png')},
             {name:'Cleaning & Housework',image: require('../assets/icons/cleaning.png')},
-            {name:'Moving / Delivery',image: require('../assets/icons/delivery.png')},
             {name:'Moving / Delivery',image: require('../assets/icons/delivery.png')},
             {name:'Beauty',image: require('../assets/icons/beauty.png')},
             {name:'Relaxation',image: require('../assets/icons/relaxation.png')},
@@ -74,6 +73,7 @@ class FilterScreen extends Component {
             {name:'Private Chef',image: require('../assets/icons/chef.png')},
             {name:'Concierge',image: require('../assets/icons/concierge.png')},
             {name:'Event Planning',image: require('../assets/icons/event.png')},
+            {name:'Home Interior',image: require('../assets/icons/home_interior.png')},
             {name:'Other',image: require('../assets/icons/other.png')},
        ],
        value:''
@@ -213,7 +213,7 @@ class FilterScreen extends Component {
 
         </View>
         <View style={styles.servicesBox}>
-          <View style={{marginVertical:20}}>
+          <View style={{}}>
               <Text style={styles.textStyle}>Popular Categories</Text>
           </View>
                   <ScrollView
@@ -232,7 +232,7 @@ class FilterScreen extends Component {
 
 
               <View style={styles.servicesBox}>
-              <View style={{marginVertical:20}}>
+              <View style={{}}>
                   <Text style={styles.textStyle}>All Categories</Text>
               </View>
               <View style={styles.categoryContainer}>
@@ -287,6 +287,7 @@ const styles = StyleSheet.create({
         flex: 1,
         marginVertical: 20,
         paddingHorizontal:20,
+        paddingVertical:20,
         borderRadius:10,
         backgroundColor:'white',
         shadowOffset: { width: 0, height: 2 },
