@@ -36,6 +36,7 @@ export default class FloatingLabelInput extends Component {
     const { label, ...props } = this.props;
     console.log('props are ',props)
     const labelStyle = {
+      fontFamily:'Montserrat-Medium',
       position: 'absolute',
       left: 0,
       top: this._animatedIsFocused.interpolate({
@@ -44,7 +45,7 @@ export default class FloatingLabelInput extends Component {
       }),
       fontSize: this._animatedIsFocused.interpolate({
         inputRange: [0, 1],
-        outputRange: [18, 14],
+        outputRange: [16, 14],
       }),
       color: this._animatedIsFocused.interpolate({
         inputRange: [0, 1],

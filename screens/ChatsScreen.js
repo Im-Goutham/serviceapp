@@ -191,7 +191,7 @@ class ChatScreen extends Component {
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10,marginHorizontal:10}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between",paddingTop: 10,paddingBottom:20,marginHorizontal:10}}>
                                 <SearchBar/>
                    </View>
                        }

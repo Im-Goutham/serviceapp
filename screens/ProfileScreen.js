@@ -5,7 +5,8 @@ import {
     Image,
     TouchableOpacity,
     Text, Dimensions, Platform,
-    ScrollView
+    ScrollView,
+    Animated
 } from 'react-native';
 
 import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Icon, Textarea,Label } from 'native-base';
@@ -79,20 +80,29 @@ class ProfileScreen extends Component {
               image: require('../images/documents/profile1.png')
             },
           ],
+          scrollOffset: new Animated.Value(0),
       };
     this.focusNextField = this.focusNextField.bind(this);
     this.inputs = {};
+    this.offset = 0;
   }
 
-    componentDidMount(){
-     console.log('login screen is called ...');
+  componentDidMount() {
+    this.state.scrollOffset.addListener(({ value }) => (this.offset = value));
   }
+
+  onScroll = e => {
+    const scrollSensitivity = 4 / 3;
+    const offset = e.nativeEvent.contentOffset.y / scrollSensitivity;
+    this.state.scrollOffset.setValue(offset);
+  };
 
     focusNextField(id) {
         this.inputs[id]._root.focus();
     }
 
 
+    
 
      handleSubmit = async () => {
         this.props.navigation.navigate('home');
@@ -176,6 +186,9 @@ class ProfileScreen extends Component {
 
     render() {
        let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;
+       const { scrollOffset } = this.state;
+       const screenWidth = Dimensions.get('window').width;
+   
        return (
            <View style={{flex:1}}>
                <LinearGradient
@@ -210,13 +223,70 @@ class ProfileScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between"}}>
-                                 <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 33,paddingLeft:30,paddingBottom:20}}>User Profile</Text>
-
+                              <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 33,paddingLeft:30,paddingBottom:20}}>User Profile</Text> 
+                                 {/* <Animated.View
+                                  style={
+                                    {
+                                      paddingHorizontal: screenWidth * 0.05,
+                                      width: screenWidth,
+                                      height: scrollOffset.interpolate({
+                                        inputRange: [0, 20],
+                                        outputRange: [60, 0],
+                                        extrapolate: 'clamp',
+                                      }),
+                                    }
+                                }>
+                                  <Animated.Text
+                                    onLayout={e => {
+                                      if (this.offset === 0 && this.state.titleWidth === 0) {
+                                        const titleWidth = e.nativeEvent.layout.width;
+                                        this.setState({ titleWidth });
+                                      }
+                                    }}
+                                    style={{
+                                      fontFamily: 'Montserrat-Bold', 
+                                      color:"#fff", 
+                                      fontSize: 33,
+                                      paddingLeft:  scrollOffset.interpolate({
+                                        inputRange: [0, 20],
+                                        outputRange: [0, 50],
+                                        extrapolate: 'clamp',
+                                      }),
+                                      paddingBottom: scrollOffset.interpolate({
+                                        inputRange: [0, 20],
+                                        outputRange: [20, 0],
+                                        extrapolate: 'clamp',
+                                      }),
+                                      fontSize: scrollOffset.interpolate({
+                                        inputRange: [0, 20],
+                                        outputRange: [33, 20],
+                                        extrapolate: 'clamp',
+                                      }),
+                                      marginTop: scrollOffset.interpolate({
+                                        inputRange: [0, 20],
+                                        outputRange: [0, -40],
+                                        extrapolate: 'clamp',
+                                      }),
+                                    }}>
+                                    <Text style={{ }}>User Profile</Text> 
+                                  </Animated.Text>
+                                  <Animated.View
+                                    style={{
+                                      width: scrollOffset.interpolate({
+                                        inputRange: [0, 100],
+                                        outputRange: [screenWidth * 0.9 - this.state.titleWidth, 0],
+                                        extrapolate: 'clamp',
+                                      }),
+                                    }}
+                                  />
+                                </Animated.View> */}
                       </View>
                        }
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
-                            <ScrollView >
+                            <ScrollView
+                             //  onScroll={this.onScroll}
+                             >
               <View style={styles.container}>
               <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:20,justifyContent:'space-between'}}>
                 <View style={styles.logoContainer}>
@@ -288,6 +358,7 @@ class ProfileScreen extends Component {
                             onChangeText={dob => this.setState({ dob })}
                             />
                 </View>
+                <Text style={{fontFamily:'Montserrat-Medium',color:'rgb(219,220,221)',fontSize:13}} >This information is not shared with other users.</Text>
                 <View style={styles.inputField}>
                 <FloatingLabelInput
                             label="Street Address"
@@ -324,7 +395,7 @@ class ProfileScreen extends Component {
                   </View>
                   <View style={{width:'50%',paddingLeft:10}}>
                   <FloatingLabelInput
-                            label="State (Optional)"
+                            label="State"
                             value={this.state.state}
                             autoCapitalize='none'
                             onSubmitEditing={() => {

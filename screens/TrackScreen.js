@@ -16,7 +16,7 @@ import Map from '../components/Map';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import Modal from 'react-native-modalbox';
-// import Icon from 'react-native-vector-icons/EvilIcons';
+import {NavigationActions} from 'react-navigation';
 
 import HeaderScreen from './HeaderScreen';
 
@@ -59,6 +59,25 @@ class TrackScreen extends Component {
       this.state={
         tabindex : 0
       }
+  }
+
+
+  navigateToScreen = (route) => () => {
+    // const navigateAction = NavigationActions.navigate({
+    //   routeName: route
+    // });
+    // console.log('route is ',route);
+    const navigateAction = NavigationActions.navigate({
+      routeName: route,
+      params: {isDrawer: false},
+      action: NavigationActions.navigate({ routeName: route, params: {isDrawer: false}})
+    })
+    // this.props.navigation.navigate(route,{isDrawer: true});
+
+
+      this.props.navigation.dispatch(navigateAction);
+      // this.props.navigation.navigate(route,{name:'Goutham1222'});
+
   }
 
   rendermapdata(){
@@ -156,7 +175,7 @@ class TrackScreen extends Component {
                                        <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
                                            <Icon  name='md-search' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
                                        </TouchableOpacity>
-                                       <TouchableOpacity onPress={() => this.props.navigation.navigate('account')} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                       <TouchableOpacity  onPress={this.navigateToScreen('account')} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
                                            <Icon  name='md-person' style={{color:'#fff',fontSize:25,fontWeight:'bold'}}/>
                                        </TouchableOpacity>
                                    </View>

@@ -74,7 +74,7 @@ let buttons = {
       routename : "settings"
     },
     {
-      title : "Logout",
+      title : "Log Out",
       iconname : undefined,
       routename : "appTutorial"
     },
@@ -115,11 +115,18 @@ class SideMenu extends Component {
           flex: 1
       }}>
       <TouchableOpacity style={styles.navItemStyle} key={index} onPress={()=>this.setState({selectedkey : index}, this.navigateToScreen(value.routename))}>
-        <View style={{flex:1, alignItems:'center',justifyContent:"center" }}>
-          <Image source={value.iconname} style={{marginTop:2,width:20,height:20}} resizeMode="contain" resizeMethod="resize"/>
-        </View>
+       {
+         (value.iconname)?(
+            <View style={{flex:1, alignItems:'center',justifyContent:"center" }}>
+            <Image source={value.iconname} style={{marginTop:2,width:20,height:20}} resizeMode="contain" resizeMethod="resize"/>
+          </View>
+         ):(
+           null
+         )
+       }
+      
         <View style={{flex:3,alignItems:'flex-start', justifyContent: 'center'}}>
-          <Text style={[styles.textStyle,{ color: index === this.state.selectedkey ? "rgb(61, 133, 239)" : "#000" }]} >
+          <Text style={[value.title=='Log Out' ? styles.logoutStyle : styles.textStyle,{ color: index === this.state.selectedkey ? "rgb(61, 133, 239)" : value.title=='Log Out' ? "rgb(189,190,192)" :  "#000" }]} >
             {value.title}
           </Text>
         </View>
@@ -129,7 +136,7 @@ class SideMenu extends Component {
   }
   render () {
     return (
-      <ScrollView contentContainerStyle={styles.container}>
+      <ScrollView contentContainerStyle={[styles.container,{paddingBottom: Platform.OS == 'ios' ? 20: 0}]}>
                     <ListItem avatar style={{paddingTop: Platform.OS == 'ios' ? 40: 0,paddingBottom:10}}>
                     <Left>
                         <Image style={{width:70,height:70,borderRadius:25}} source={require('../images/svp1.png')} />
@@ -198,9 +205,15 @@ const styles = StyleSheet.create({
     textStyle: {
         textAlign: 'left',
         color:'#22262C',
-        // fontWeight:'bold',
         fontSize:14,
         fontFamily:"Montserrat-Regular"
+    },
+    logoutStyle: {
+      textAlign: 'left',
+      fontSize:14,
+      fontFamily:"Montserrat-Medium",
+      color:'rgb(189,190,192)',
+      paddingLeft:30
     },
     tagStyle:{
       backgroundColor: '#3E85EF',
