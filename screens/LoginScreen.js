@@ -95,7 +95,7 @@ class LoginScreen extends Component {
       return (
          <View style={{flex:1,paddingHorizontal:15,justifyContent:'space-around'}} >
              <View style={{flex:1.3,paddingVertical:20,justifyContent:'flex-end',alignItems:'flex-start'}}>
-              <Image source={logo} style={{width:'100%',height: 40,marginLeft:-60}} resizeMode="contain" resizeMethod="resize"/>
+              <Image source={logo} style={{width:220,height: 40}} resizeMode="contain" resizeMethod="resize"/>
              </View>
               <View style={[styles.loginBlox,{flex:4.9}]}>
               <View style={{flex:1,justifyContent:'space-around'}}>

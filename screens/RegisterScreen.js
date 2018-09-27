@@ -237,7 +237,7 @@ class RegisterScreen extends Component {
                                     options: BUTTONS,
                                     cancelButtonIndex: CANCEL_INDEX,
                                     destructiveButtonIndex: DESTRUCTIVE_INDEX,
-                                    title: "Select Code"
+                                    title: ""
                                 },
                                 buttonIndex => {
                                 this.setState({ clicked: BUTTONS[buttonIndex] });
