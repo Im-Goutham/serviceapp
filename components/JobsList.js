@@ -63,12 +63,13 @@ class JobsList extends Component {
                         end={{x: 1, y: 0}}
                         colors={['#F42922', '#A50600']} 
                         style={{
-                            borderTopLeftRadius: 10,
-                            borderBottomLeftRadius:10,
+                            borderTopRightRadius: 10,
+                            borderBottomRightRadius:10,
                             justifyContent: 'center',
                             alignItems: 'center',
                             height:205,
-                            marginRight:10
+                            marginRight:10,
+                            marginLeft:-20
                         }}>
                         <View>
                             <View style={{alignItems:'center',paddingVertical:10}}>

@@ -84,46 +84,7 @@ export default class ServiceProviderDetailScreen extends Component {
         let i=1
         let { videos, websites, profiles,tags} = this.state;
          return (
-            <View style={{ flex: 1 }}>
-            <LinearGradient
-                colors={['#3E85EF', '#3EBDEF']}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 0 }}
-                style={{
-                    flex: 1
-                }}>
-                <HeaderScreen
-                    header={
-                        <Header
-                            navigation={this.props.navigation}
-                            left={
-                                  <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                    <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                    <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                                    </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                    <Image source={menu} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                                    </TouchableOpacity>
-                                </View>
-                            }
-                            title={
-                                <View style={{ justifyContent: 'center', alignItems: 'flex-start', width: "100%", height: 54 }}>
-                                  <Text style={{ fontFamily: 'Montserrat-Bold', color: "#fff", fontSize: 20 }}>Need Cook</Text>
-                                </View>
-                            }
-                            right={
-                                <View style={{ backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection: "row" }}>
-                                      <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                         <Image source={require('../assets/icons/heart_red.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                                    </TouchableOpacity>
-                                    <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={require('../assets/icons/send_white.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                                    </TouchableOpacity>
-                                </View>
-                            }
-                        />
-                    }
-                />
+           
                 <ScrollView >
                     <View style={styles.container}>
                         <PhotoGallery />
@@ -202,28 +163,53 @@ export default class ServiceProviderDetailScreen extends Component {
                             </View>
 
                 </ScrollView>
-            </LinearGradient>
-            <TouchableOpacity onPress={() => { this.props.navigation.navigate('message')}}>
-              <LinearGradient
-                    colors={['#3E85EF', '#3EBDEF']}
-                    start={{ x: 0, y: 0 }}
-                    end={{ x: 1, y: 0 }}
-                    style={{
-                        bottom: 30,
-                        right: 10,
-                        width: 60, height: 60, backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
-                        borderRadius: 40
-                    }}>
-                       <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
-                </LinearGradient>
-                </TouchableOpacity>
-        </View>
+
          )
     }
     render() {
 
       
         return (
+            <View style={{ flex: 1 }}>
+            <LinearGradient
+                colors={['#3E85EF', '#3EBDEF']}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 1, y: 0 }}
+                style={{
+                    flex: 1
+                }}>
+                <HeaderScreen
+                    header={
+                        <Header
+                            navigation={this.props.navigation}
+                            left={
+                                  <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                                    <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                    <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                    <Image source={menu} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    </TouchableOpacity>
+                                </View>
+                            }
+                            title={
+                                <View style={{ justifyContent: 'center', alignItems: 'flex-start', width: "100%", height: 54 }}>
+                                  <Text style={{ fontFamily: 'Montserrat-Bold', color: "#fff", fontSize: 20 }}>Need Cook</Text>
+                                </View>
+                            }
+                            right={
+                                <View style={{ backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection: "row" }}>
+                                      <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                         <Image source={require('../assets/icons/heart_red.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={require('../assets/icons/send_white.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    </TouchableOpacity>
+                                </View>
+                            }
+                        />
+                    }
+                />
             <Swiper 
              showsButtons={false}
              dot={<View/>}
@@ -241,7 +227,23 @@ export default class ServiceProviderDetailScreen extends Component {
                 <View style={{flex:1}}>
                   {this.renderJobDetail()}
                 </View>
-            </Swiper>  
+            </Swiper> 
+            </LinearGradient>
+            <TouchableOpacity onPress={() => { this.props.navigation.navigate('message')}}>
+              <LinearGradient
+                    colors={['#3E85EF', '#3EBDEF']}
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 1, y: 0 }}
+                    style={{
+                        bottom: 30,
+                        right: 10,
+                        width: 60, height: 60, backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
+                        borderRadius: 40
+                    }}>
+                       <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
+                </LinearGradient>
+                </TouchableOpacity>
+        </View> 
         );
     }
 }

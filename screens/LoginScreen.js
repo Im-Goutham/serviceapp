@@ -51,11 +51,11 @@ class LoginScreen extends Component {
      console.log('username is '+username,'password is ',password);
      Auth.signIn(username, password)
        .then(data => {
-           console.log('data is ',data);
+           console.log('data after login is ',data);
            Auth.currentUserCredentials()
            .then(credentials => {
              console.log('Current user credentials are --- ',credentials);
-             this.props.navigation.navigate('home')
+             this.props.navigation.navigate('home');
              this.setState({ loading: false });
            }).catch(err => {
              console.log('error in signin --- ',err)
@@ -141,17 +141,12 @@ class LoginScreen extends Component {
               <View style={{justifyContent: "center" }}>
                   {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>SIGN IN</Text></TouchableOpacity>
+                       <TouchableOpacity onPress={() => {this.handleSubmit()}}><Text style={styles.btnText}>SIGN IN</Text></TouchableOpacity>
                     </LinearGradient>
                   }
             </View>
             <Text style={styles.text} onPress={()=>{this.props.navigation.navigate('forgot')}}>Forgot ID/Password?</Text>
-              </View>
-               
-            
-              
-      
-                    
+              </View> 
                  </View>
                   <View style={{flex:1.8,marginVertical:10,flexDirection:'row',alignItems:'center',justifyContent:'flex-start'}}>
                  <View style={{flex:1,paddingRight:10}}>
@@ -188,7 +183,7 @@ class LoginScreen extends Component {
                                  <View style={{height:20, backgroundColor:"#F9FCFF"}}/>
                               </View>
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1,alignItems: 'center'}}>
-                                   <Text style={{marginVertical:20,color:'#808080',fontSize:17,textAlign:'center',fontFamily:'Montserrat-Regular'}}>Don't have an account  <Text style={{fontWeight: 'bold',color:'#3581fc',fontFamily:'Montserrat-Bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign Up</Text></Text>
+                                   <Text style={{marginVertical:20,color:'#808080',fontSize:17,textAlign:'center',fontFamily:'Montserrat-Regular'}}>Don't have an account  <Text style={{color:'#3581fc',fontFamily:'Montserrat-Bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign Up</Text></Text>
                         </View>
                   </View>  
                </LinearGradient>

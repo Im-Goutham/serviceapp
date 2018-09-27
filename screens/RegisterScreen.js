@@ -13,7 +13,7 @@ import * as actions from '../actions';
 import { Auth } from 'aws-amplify';
 import FacebookLogin from '../components/FacebookLogin';
 import GoogleSignIn from '../components/GoogleSignIn';
-// import ActionSheet from 'react-native-actionsheet';
+import OptionsMenu from "react-native-options-menu";
 import FloatingLabelInput from '../components/FloatingLabelInput';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
@@ -228,34 +228,32 @@ class RegisterScreen extends Component {
                                         />
                         </View>
                         <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
-                            <TouchableOpacity
-                                style={{
-                                    width:'30%',
-                                    paddingRight:10,
-                                    borderBottomWidth: 1,
-                                    // backgroundColor:"#009933",
-                                    borderColor:"rgb(235,236,241)",
-                                    flexDirection:"row",
-                                    justifyContent:"space-around",
-                                    alignItems: 'center',
-                                    height:54,
-                                    marginTop:8
-                                }}
-                                onPress={() =>
-                                    ActionSheet.show({
-                                            options: BUTTONS,
-                                            cancelButtonIndex: CANCEL_INDEX,
-                                            destructiveButtonIndex: DESTRUCTIVE_INDEX,
-                                            title: "Testing ActionSheet"
-                                        },
-                                        buttonIndex => {
-                                        this.setState({ clicked: BUTTONS[buttonIndex] });
-                                    }
-                                    )}>
-                                <Text style={{fontSize:15}}>+91</Text>
+                        
+                        <View style={{flex:4,borderBottomWidth: 1,borderColor:"rgb(217,213,220)",}}>
+                        <TouchableOpacity 
+                           style={{flex:1,flexDirection:'row',justifyContent:'center',alignItems:'center'}}
+                           onPress={() =>
+                            ActionSheet.show({
+                                    options: BUTTONS,
+                                    cancelButtonIndex: CANCEL_INDEX,
+                                    destructiveButtonIndex: DESTRUCTIVE_INDEX,
+                                    title: "Select Code"
+                                },
+                                buttonIndex => {
+                                this.setState({ clicked: BUTTONS[buttonIndex] });
+                            }
+                            )}
+                           >
+                            <View style={{flex:3,flexDirection:'row'}}>
+                                <Image source={require('../assets/countries/India.png')} style={{ width: 30, height: 30}} resizeMode="contain" resizeMethod="resize"/>
+                                <Text style={{color:'rgb(74,74,74)',fontSize:15,fontFamily:'Montserrat-Medium',paddingLeft:10,paddingTop:5}}>+ 91</Text>
+                            </View>
+                            <View style={{flex:1,}}>
                                 <Image source={require('../assets/icons/arrow_down.png')} style={{ width: 10, height: 10}} resizeMode="contain" resizeMethod="resize"/>
+                            </View>
                             </TouchableOpacity>
-                            <View style={{width:'70%',paddingLeft:10}}>
+                        </View>
+                            <View style={{flex:6,paddingLeft:10}}>
                             <FloatingLabelInput
                                         label="Mobile Number"
                                         value={this.state.mobile}
@@ -273,7 +271,14 @@ class RegisterScreen extends Component {
                             </View>
                         </View>
                         <Text style={{textAlign:'right',color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}>Verify</Text>
-                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('terms');}}><Text style={{fontSize:16,paddingVertical: 30}}>  I agree with the <Text style={{color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}>Terms & Conditions</Text></Text></TouchableOpacity>
+                        <View style={{flex:1,flexDirection:'row',flexWrap:'wrap',borderColor:'red',paddingVertical:30}}>
+                            <CheckBox checked={true} color='rgb(61,133,239)' style={{marginLeft:-10,marginTop:3,borderRadius:3,borderWidth:3}} onPress={()=>this.setState({checked: !checked})}/>
+                            <Text style={{fontSize:16,paddingLeft:10}}>  I agree with the <Text 
+                                style={{color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}
+                                onPress={()=>{this.props.navigation.navigate('terms')}}
+                                >Terms & Conditions</Text></Text>
+                       </View>
+
                         <View style={{justifyContent: "center",marginBottom:20 }}>
                             {
                                 this.state.loading
