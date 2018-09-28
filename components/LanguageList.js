@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,TouchableOpacity,ImageBackground} from 'react-native';
+import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,TouchableOpacity,ImageBackground, Platform} from 'react-native';
 import {Switch} from 'native-base';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
@@ -61,7 +61,7 @@ var styles = StyleSheet.create({
              borderBottomColor:'rgb(237,237,237)'
        },
        switch: {
-            transform: [{ scaleX: .5 }, { scaleY: .5 }]
+          transform: Platform.OS === 'ios' ? [{ scaleX: .5 }, { scaleY: .5 }] : [{ scaleX: .8 }, { scaleY: .8 }]
        },
        textStyle:{
             fontSize:17,

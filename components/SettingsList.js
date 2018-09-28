@@ -5,6 +5,7 @@ import {Switch, Icon} from 'native-base';
 import { connect } from 'react-redux';
 import ChangePasswordModal from './ChangePasswordModal';
 import * as actions from '../actions';
+import { Platform } from '@aws-amplify/core';
 var {height, width} = Dimensions.get('window');
 
 class SettingsList extends Component {
@@ -78,7 +79,7 @@ var styles = StyleSheet.create({
              borderBottomColor:'rgb(237,237,237)'
        },
        switch: {
-            transform: [{ scaleX: .5 }, { scaleY: .5 }]
+            transform: Platform.OS === 'ios' ? [{ scaleX: .5 }, { scaleY: .5 }] : [{ scaleX: .8 }, { scaleY: .8 }]
        },
        textStyle:{
             fontSize:17,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Platform, StatusBar, StyleSheet, View } from 'react-native';
+import {  StatusBar, StyleSheet, View ,Platform} from 'react-native';
 import MainNavigator from './navigation/MainNavigator';
 import { Provider } from 'react-redux';
 import SplashScreen from 'react-native-splash-screen'
@@ -25,8 +25,8 @@ export default class App extends React.Component {
          <Root>
         <View style={styles.container}>
         <StatusBar
-            backgroundColor={Platform.OS=='ios' ? 'transparent' : '#3E85EF'}
-            barStyle="light-content"
+            backgroundColor={Platform.OS=='ios' ? 'transparent' : 'rgb(62, 133, 239)'}
+            barStyle="light-content" 
         />
           <MainNavigator />
         </View>

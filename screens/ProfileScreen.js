@@ -454,7 +454,7 @@ class ProfileScreen extends Component {
                     <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
                     <View style={{flex:1}}>
                         <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Waiter</Text>
-                          <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .5 }, { scaleY: .5 }]}}/></View>
+                          <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
@@ -468,7 +468,7 @@ class ProfileScreen extends Component {
                     <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
                     <View style={{flex:1}}>
                     <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Painting</Text>
-                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .5 }, { scaleY: .5 }]}}/></View>
+                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
@@ -482,7 +482,7 @@ class ProfileScreen extends Component {
                     <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
                     <View style={{flex:1}}>
                     <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Dog Walking</Text>
-                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .5 }, { scaleY: .5 }]}}/></View>
+                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
@@ -689,7 +689,13 @@ const styles = StyleSheet.create({
 textStyle: {
   fontFamily:"Montserrat-SemiBold",
   fontSize: 16
-}
+},
+miniSwitch: {
+  transform: Platform.OS === 'ios' ? [{ scaleX: .4 }, { scaleY: .4 }] : [{ scaleX: .6}, { scaleY: .6 }]
+},
+switch: {
+  transform: Platform.OS === 'ios' ? [{ scaleX: .5 }, { scaleY: .5 }] : [{ scaleX: .8 }, { scaleY: .8 }]
+},
 })
 
 export default ProfileScreen;

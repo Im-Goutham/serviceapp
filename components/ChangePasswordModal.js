@@ -17,6 +17,7 @@ export default class ChangePassword extends Component {
      this.state = {
         visible: props.visible
      }
+     this.inputs = {};
   }
 
   componentWillReceiveProps(newProps){

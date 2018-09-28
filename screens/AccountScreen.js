@@ -321,7 +321,7 @@ class AccountScreen extends Component {
                   </View>
                   <View style={{width:'50%',paddingLeft:10}}>
                   <FloatingLabelInput
-                      label="State (Optional)"
+                      label="State"
                       value={this.state.state}
                       autoCapitalize='none'
                       onSubmitEditing={() => {
@@ -380,7 +380,7 @@ class AccountScreen extends Component {
                     <ListItem>
                     <Body>
                         <Text>Waiter</Text>
-                          <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>   
+                          <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>   
                     </Body>
                     <Right>
                       <OptionsMenu
@@ -394,7 +394,7 @@ class AccountScreen extends Component {
                     <ListItem>
                     <Body>
                         <Text>Painting</Text>
-                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>   
+                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>   
                     </Body>
                     <Right>
                       <OptionsMenu
@@ -408,7 +408,7 @@ class AccountScreen extends Component {
                     <ListItem>
                     <Body>
                         <Text>Dog Walking</Text>
-                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={{ transform: [{ scaleX: .4 }, { scaleY: .4 }]}}/></View>   
+                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>   
                     </Body>
                     <Right>
                       <OptionsMenu
@@ -616,7 +616,12 @@ textStyle: {
 star_style: {
   width:15, height:15, marginHorizontal:5
 },
-
+switch: {
+  transform: Platform.OS === 'ios' ? [{ scaleX: .5 }, { scaleY: .5 }] : [{ scaleX: .8 }, { scaleY: .8 }]
+},
+miniSwitch: {
+  transform: Platform.OS === 'ios' ? [{ scaleX: .4 }, { scaleY: .4 }] : [{ scaleX: .6}, { scaleY: .6 }]
+}
       
 })
 

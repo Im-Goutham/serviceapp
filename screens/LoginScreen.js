@@ -122,7 +122,7 @@ class LoginScreen extends Component {
                             autoCapitalize='none'
                             secureTextEntry={true}
                             onSubmitEditing={() => {
-                                this.handleSubmit()
+                                this.props.navigation.navigate('home')
                             }}
                             returnKeyType={ "done" }
                             ref={ input => {
@@ -141,7 +141,7 @@ class LoginScreen extends Component {
               <View style={{justifyContent: "center" }}>
                   {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                       <TouchableOpacity onPress={() => {this.handleSubmit()}}><Text style={styles.btnText}>SIGN IN</Text></TouchableOpacity>
+                       <TouchableOpacity onPress={() => { this.props.navigation.navigate('home')}}><Text style={styles.btnText}>SIGN IN</Text></TouchableOpacity>
                     </LinearGradient>
                   }
             </View>
@@ -165,15 +165,16 @@ class LoginScreen extends Component {
     render() {
 
       return (
-           <ScrollView contentContainerStyle={{flexGrow:1}}>
-               <LinearGradient
-                   colors={['#3E85EF', '#3EBDEF']}
-                   start={{x: 0, y: 0}}
-                   end={{x: 1, y: 0}}
-                   style={{
-                       flex: 1,
+        <LinearGradient
+        colors={['#3E85EF', '#3EBDEF']}
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 0}}
+        style={{
+            flex: 1,
 
-                   }}>
+        }}>
+           <ScrollView contentContainerStyle={{flexGrow:1}}>
+         
                   <View style={{flex:9}}>
                        {this.contentrender()}
                   </View>    
@@ -186,8 +187,8 @@ class LoginScreen extends Component {
                                    <Text style={{marginVertical:20,color:'#808080',fontSize:17,textAlign:'center',fontFamily:'Montserrat-Regular'}}>Don't have an account  <Text style={{color:'#3581fc',fontFamily:'Montserrat-Bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign Up</Text></Text>
                         </View>
                   </View>  
-               </LinearGradient>
                </ScrollView>
+         </LinearGradient>
       );
     }
 }

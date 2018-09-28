@@ -61,6 +61,7 @@ export default class FloatingLabelInput extends Component {
           {...props}
           style={{ fontFamily:'Montserrat-Medium',height: 45, fontSize: 20, color: '#000', borderBottomWidth: 1, borderBottomColor: 'rgb(217,213,220)' }}
           onFocus={this.handleFocus}
+          autoCorrect={false}
           onBlur={this.handleBlur}
           blurOnSubmit
         />
