@@ -2,54 +2,23 @@ import React, { Component } from 'react';
 import {
     View,
     StyleSheet,
-    ScrollView,
     Image,
     TouchableOpacity,
-    Dimensions,
-    Platform,
-    Text, TouchableHighlight
+    Text, 
 } from 'react-native';
-import {  Icon, CheckBox } from 'native-base'
-import Advertisement from '../components/Advertisement';
+
 import SettingsList from '../components/SettingsList';
-import Map from '../components/Map';
 import Header from '../components/Header';
-import Modal from 'react-native-modalbox';
 import LinearGradient from 'react-native-linear-gradient';
 // import Icon from 'react-native-vector-icons/EvilIcons';
 
 import HeaderScreen from './HeaderScreen';
 
-var {height, width} = Dimensions.get('window');
 
 
-let logo = require('../images/logo.png');
+
 let back_arrow = require('../assets/icons/back-arrow.png');
 let menu = require('../assets/icons/menu.png');
-let border_img = require('../images/border_img.png');
-
-let maplocations = {
-    data : [
-         {
-      jobtitle: 'Need Cook',
-      icon: require('../assets/icons/crown.png'),
-      image: require('../images/cook.png'),
-      detail: "Lorem Ipsum has been the industrys standard dummy text ever",
-    },
-    {
-      jobtitle: 'Need Carpenter',
-      icon: require('../assets/icons/crown.png'),
-      image: require('../images/tutorial.png'),
-      detail: "Lorem Ipsum has been the industrys standard dummy text ever",
-    },
-    {
-      jobtitle: 'Need Cook',
-      icon: require('../assets/icons/crown.png'),
-      image: require('../images/tutorial.png'),
-      detail: "Lorem Ipsum has been the industrys standard dummy text ever",
-    }
-        ]
-}
 
 
 

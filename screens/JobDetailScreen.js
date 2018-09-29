@@ -322,6 +322,7 @@ export default class JobDetailScreen extends Component {
              showsButtons={false}
              dot={<View/>}
              activeDot={<View/>}
+             style={{backgroundColor :"rgb(249,252, 255)"}}
             >
                 <View style={{flex:1}}>
                    {this.renderJobDetail()}

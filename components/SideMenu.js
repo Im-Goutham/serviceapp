@@ -113,8 +113,10 @@ class SideMenu extends Component {
       end={{x: 1, y: 0}}
       style={{
           flex: 1
-      }}>
-      <TouchableOpacity style={styles.navItemStyle} key={index} onPress={()=>this.setState({selectedkey : index}, this.navigateToScreen(value.routename))}>
+      }}
+      key={index}
+      >
+      <TouchableOpacity style={styles.navItemStyle}  onPress={()=>this.setState({selectedkey : index}, this.navigateToScreen(value.routename))}>
        {
          (value.iconname)?(
             <View style={{flex:1, alignItems:'center',justifyContent:"center" }}>

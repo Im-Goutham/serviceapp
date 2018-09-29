@@ -5,8 +5,7 @@ import {
     Image,
     TouchableOpacity,
     Text, Dimensions, Platform,
-    ScrollView,
-    Animated
+    ScrollView
 } from 'react-native';
 
 import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Icon, Textarea,Label } from 'native-base';
@@ -79,23 +78,14 @@ class ProfileScreen extends Component {
               name: 'profile1.jpg',
               image: require('../images/documents/profile1.png')
             },
-          ],
-          scrollOffset: new Animated.Value(0),
+          ]
       };
     this.focusNextField = this.focusNextField.bind(this);
     this.inputs = {};
     this.offset = 0;
   }
 
-  componentDidMount() {
-    this.state.scrollOffset.addListener(({ value }) => (this.offset = value));
-  }
-
-  onScroll = e => {
-    const scrollSensitivity = 4 / 3;
-    const offset = e.nativeEvent.contentOffset.y / scrollSensitivity;
-    this.state.scrollOffset.setValue(offset);
-  };
+ 
 
     focusNextField(id) {
         this.inputs[id]._root.focus();
@@ -186,8 +176,6 @@ class ProfileScreen extends Component {
 
     render() {
        let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;
-       const { scrollOffset } = this.state;
-       const screenWidth = Dimensions.get('window').width;
    
        return (
            <View style={{flex:1}}>
@@ -223,7 +211,7 @@ class ProfileScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between"}}>
-                              <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 33,paddingLeft:30,paddingBottom:20}}>User Profile</Text> 
+                              <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 33,paddingLeft:20,paddingBottom:20}}>User Profile</Text> 
                                  {/* <Animated.View
                                   style={
                                     {
@@ -285,7 +273,6 @@ class ProfileScreen extends Component {
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
                             <ScrollView
-                             //  onScroll={this.onScroll}
                              >
               <View style={styles.container}>
               <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:20,justifyContent:'space-between'}}>
@@ -295,11 +282,11 @@ class ProfileScreen extends Component {
                         {
                             (avatarSource)?(
                                <View style={[styles.user_placeholder,{backgroundColor:'rgb(249, 252, 255)'}]}>
-                                <Image source={avatarSource} style={{width:'100%',height:'100%'}}   resizeMode="contain" resizeMethod="resize"/>
+                                <Image source={avatarSource} style={{width:'100%',height:'100%',borderRadius:70}}/>
                                </View>
                             ):(
                               <View  style={[styles.user_placeholder,{backgroundColor:'rgb(229, 239, 252)'}]}>
-                              <Image source={require('../images/user_placeholder.png')}  style={{width:'100%',height:'100%'}}   resizeMode="contain" resizeMethod="resize"/>
+                              <Image source={require('../images/user_placeholder.png')}  style={{width:'100%',height:'100%',borderRadius:70}}/>
                              </View>
                             )
                         }

@@ -168,7 +168,9 @@ class JobsList extends Component {
                     })
                 }}
                 onClose={() => console.log('===close')}
-                scroll={event => console.log('scroll event')}>
+                scroll={event => console.log('scroll event')}
+                sensitivity={20}
+                >
                 <TouchableWithoutFeedback onPress={() => {
                     this.props.navigation.navigate('jobDetail',{name:'Goutham'})
                 }}>

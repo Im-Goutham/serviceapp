@@ -28,10 +28,6 @@ export default class FloatingLabelInput extends Component {
 
   }
 
-  componentWillReceiveProps(props){
-    
-  }
-
   render() {
     const { label, ...props } = this.props;
     console.log('props are ',props)
