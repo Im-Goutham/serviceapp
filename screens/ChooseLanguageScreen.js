@@ -128,14 +128,12 @@ class ChooseLanguageScreen extends Component {
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
-                       
-                   </View>
+                         null
                        }
                    />
-                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
+                   <ScrollView style={{backgroundColor :"rgb(249,252, 255)"}}>
                           <LanguageList/>
-                       </View>
+                       </ScrollView>
                </LinearGradient>
               
            </View>

@@ -1,7 +1,5 @@
-import Swipeout from 'react-native-swipeout';
 import React, {Component} from 'react';
-import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,TouchableOpacity,ImageBackground} from 'react-native';
-import {Icon} from 'native-base';
+import {StyleSheet, ListView, Text, View,Image,TouchableOpacity} from 'react-native';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import LinearGradient from 'react-native-linear-gradient';
@@ -32,40 +30,8 @@ class AllServiceList extends Component {
 
     
     _renderRow(rowData, sectionID, rowID) {
-        const btnsTypes = [{
-            component:   <LinearGradient
-                            colors={['#F42922', '#A50600']}
-                            start={{x: 0, y: 0}}
-                            end={{x: 1, y: 0}}
-                            style={{  flex: 1,
-                                flexDirection: 'row',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                                alignSelf: 'center',
-                                alignContent: 'center'}}>
-                               <Icon name='md-heart-outline' style={{color: 'white', fontSize: 27}}/>
-                       </LinearGradient>
-               ,
-            backgroundColor: '#007FFA',
-            onPress:()=>{console.log(rowData.text)}
-        }];
+    
         return (
-            <Swipeout
-                close={!(this.state.sectionID === sectionID && this.state.rowID === rowID)}
-                left={null}
-                right={btnsTypes}
-                rowID={rowID}
-                sectionID={sectionID}
-                autoClose={rowData.autoClose}
-                backgroundColor={'rgb(249,252,255)'}
-                onOpen={(sectionID, rowID) => {
-                    this.setState({
-                        sectionID,
-                        rowID,
-                    })
-                }}
-                onClose={() => console.log('===close') }
-                scroll={event => console.log('scroll event') }>
                 <View style={styles.servicesBox} >
                     <View style={{backgroundColor:"transparent", paddingTop: 25,  }}>
                         <View style={{flex:1,flexDirection:'row', paddingHorizontal:10}}>
@@ -108,7 +74,6 @@ class AllServiceList extends Component {
                         </View>
                     </View>
                 </View>
-            </Swipeout>
         );
     }
     showImage(index){
@@ -232,7 +197,8 @@ var styles = StyleSheet.create({
         height:45,
         borderRadius:30,
         justifyContent:'center',
-        alignItems:'center'
-    }
+        alignItems:'center',
+        backgroundColor: 'rgba(255,255,255, 0.1)'
+      }
 });
 export default connect(null, actions)(AllServiceList);

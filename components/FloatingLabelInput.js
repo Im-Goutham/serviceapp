@@ -30,7 +30,6 @@ export default class FloatingLabelInput extends Component {
 
   render() {
     const { label, ...props } = this.props;
-    console.log('props are ',props)
     const labelStyle = {
       fontFamily:'Montserrat-Medium',
       position: 'absolute',

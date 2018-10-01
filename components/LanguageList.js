@@ -12,9 +12,7 @@ class LanguageList extends Component {
     super();
 
     this.state = {
-          languages :[
-              'Arabic','Spanish','Chinese','Hindi','English','Portuguese','Bengali','French','Italian'
-          ],
+          languages: ['English', 'french', 'Spanish', 'Italian', 'Portuguese', 'German','Hindi', 'Bengali', 'Telugu', 'Marathi', 'Tamil', 'Gujarati', 'Kannada',  'Malayalam'],
           selectedkey: 0
     };
   }

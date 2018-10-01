@@ -4,7 +4,7 @@ import {API_URL} from '../config'
 
 
 import {
-  SAVE_USER,
+  SAVE_USER,SHOW_BACKBUTTON
 } from './types';
 
 
@@ -16,6 +16,15 @@ export const signIn = (user, callback) => async dispatch => {
   //  await AsyncStorage.setItem('user_data',JSON.stringify(user));
    console.log('API_URL is '+API_URL);
     dispatch({ type: SAVE_USER, payload: user });
+    callback();
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const showBackButton = (data, callback) => async dispatch => {
+  try {
+    dispatch({ type: SHOW_BACKBUTTON, payload: data });
     callback();
   } catch (error) {
     throw error;

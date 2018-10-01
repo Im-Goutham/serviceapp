@@ -11,7 +11,8 @@ export default class SelectLocation extends Component {
     super();
      this.state = {
         visibleModal: true,
-        language: 'english'
+        language: 'english',
+        languages: ['English', 'french', 'Spanish', 'Italian', 'Portuguese', 'German','Hindi', 'Bengali', 'Telugu', 'Marathi', 'Tamil', 'Gujarati', 'Kannada',  'Malayalam']
      }
   }
 
@@ -33,11 +34,11 @@ export default class SelectLocation extends Component {
             style={{height:'100%'}}
             itemStyle={{color:'#3581fc',height:200,paddingVertical:5}}
             onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
-            <Picker.Item label="Chinese" value="chinese" />
-            <Picker.Item label="French" value="french" />
-            <Picker.Item label="English" value="english"  />
-            <Picker.Item label="Italian" value="italian"  />
-            <Picker.Item label="Spanish" value="spanish"  />
+            {
+               languages.map((language,key)=> {
+                    return  <Picker.Item label={language} value={language} />
+               })
+            }
             </Picker>
      </View>
      <View style={{flex:1}}>

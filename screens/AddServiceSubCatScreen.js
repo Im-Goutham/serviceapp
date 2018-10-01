@@ -41,6 +41,10 @@ class AddServiceSubCatScreen extends Component {
 
     render() {
       let {subCategories} = this.state;
+
+      var {params} = this.props.navigation.state;
+      let {mainScreen} = params;
+      console.log('props are in subcategory page .. ',mainScreen);
        return (
            <View style={{flex:1}}>
                <LinearGradient

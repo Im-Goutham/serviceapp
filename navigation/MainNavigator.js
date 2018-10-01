@@ -32,7 +32,7 @@ export default createStackNavigator(
      },
       },{
         index: 0,
-        initialRouteName: 'profile',
+        initialRouteName: 'login',
         headerMode: 'none',
         navigationOptions: {
         gesturesEnabled: false

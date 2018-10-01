@@ -13,10 +13,11 @@ import {
 import {NavigationActions} from 'react-navigation';
  import {  Icon } from 'native-base'
 import Advertisement from '../components/Advertisement';
-import ChatList from '../components/ChatList';
+import { connect } from 'react-redux';
 import Carousel from '../components/Carousel';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
+import * as actions from '../actions';
 
 
 
@@ -123,16 +124,23 @@ class HomeScreen extends Component {
     //   routeName: route
     // });
     // console.log('route is ',route);
-    const navigateAction = NavigationActions.navigate({
-      routeName: route,
-      params: {isDrawer: false},
-      action: NavigationActions.navigate({ routeName: route, params: {isDrawer: false}})
-    })
-    // this.props.navigation.navigate(route,{isDrawer: true});
+    this.props.showBackButton(true);
+    this.props.navigation.navigate(route);
+    // this.props.navigation.navigate({
+    //     screen: route,
+    //     params: {},
+    //     transitionConfig: {}
+    //   })
+    // const navigateAction = NavigationActions.navigate({
+    //   routeName: route,
+    //   params: {backButton: false},
+    //   action: NavigationActions.navigate({ routeName: route, params: {backButton: false}})
+    // })
+    // // this.props.navigation.navigate(route,{backButton: true});
 
 
-      this.props.navigation.dispatch(navigateAction);
-      // this.props.navigation.navigate(route,{name:'Goutham1222'});
+    //   this.props.navigation.dispatch(navigateAction);
+    //   // this.props.navigation.navigate(route,{name:'Goutham1222'});
 
   }
 
@@ -383,4 +391,5 @@ const styles = StyleSheet.create({
     },
 })
 
-export default HomeScreen;
+
+export default connect(null, actions)(HomeScreen);

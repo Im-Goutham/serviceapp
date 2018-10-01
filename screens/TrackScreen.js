@@ -17,6 +17,8 @@ import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import Modal from 'react-native-modalbox';
 import {NavigationActions} from 'react-navigation';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 
 import HeaderScreen from './HeaderScreen';
 
@@ -67,77 +69,23 @@ class TrackScreen extends Component {
     //   routeName: route
     // });
     // console.log('route is ',route);
-    const navigateAction = NavigationActions.navigate({
-      routeName: route,
-      params: {isDrawer: false},
-      action: NavigationActions.navigate({ routeName: route, params: {isDrawer: false}})
-    })
-    // this.props.navigation.navigate(route,{isDrawer: true});
+    // const navigateAction = NavigationActions.navigate({
+    //   routeName: route,
+    //   params: {backButton: false},
+    //   action: NavigationActions.navigate({ routeName: route, params: {backButton: false}})
+    // })
+    // // this.props.navigation.navigate(route,{backButton: true});
 
 
-      this.props.navigation.dispatch(navigateAction);
-      // this.props.navigation.navigate(route,{name:'Goutham1222'});
+     // this.props.navigation.dispatch(navigateAction);
+     if(route == 'account'){
+        this.props.showBackButton(true);
+     }
+       this.props.navigation.navigate(route);
 
-  }
-
-  rendermapdata(){
-      return maplocations.data.map((data, index)=>{
-          return(
-              <View style={{height:300,marginBottom: 10, width: "100%", backgroundColor:"#fff", borderRadius:10}} key={index}>
-                  <View style={{ flexDirection:"row", justifyContent:"space-between", height:50, alignItems:"center", paddingHorizontal:20}} >
-                      <View style={{ flexDirection:"row"}} >
-                          <Text style={{color:"#000", fontFamily:"Montserrat-regular"}}>{data.jobtitle}</Text>
-                          <Image style={{width:20,height:20, paddingHorizontal:15, backgroundColor:"transparent"}} source={data.icon}
-                                 resizeMode="contain" resizeMethod="resize"/>
-                      </View>
-                      <TouchableHighlight style={styles.button} onPress={()=>console.warn("nejkhknz")} >
-                          <LinearGradient
-                              colors={['#3E85EF', '#3EBDEF']}
-                              start={{x: 0, y: 0}}
-                              end={{x: 1, y: 0}}
-                              style={styles.button}>
-                              <Text style={styles.btnText}>APPLY</Text>
-                          </LinearGradient>
-                      </TouchableHighlight>
-                  </View>
-                  <View style={{ width:"100%", padding:20}} >
-                      <Text style={{fontFamily:"Montserrat",}}>{data.detail}</Text>
-                  </View>
-                  <View style={{flexDirection:"row", backgroundColor:"#fff"}}>
-                      <View style={{ width : "30%",marginHorizontal: 5}} >
-                      <Image style={{width:"100%", height:100, borderRadius:10}} source={data.image}
-                             resizeMode="contain" resizeMethod="resize"/>
-                      </View>
-                      <View style={{ width : "30%",marginHorizontal: 5}} >
-                      <Image style={{width:"100%", height:100, borderRadius:10}} source={data.image}
-                             resizeMode="contain" resizeMethod="resize"/>
-                      </View>
-                      <View style={{ width : "30%",marginHorizontal: 5}} >
-                      <Image style={{width:"100%", height:100, borderRadius:10}} source={data.image}
-                             resizeMode="contain" resizeMethod="resize"/>
-                      </View>
-                  </View>
-                  <View style={{flexDirection:'row', backgroundColor:"#fff", paddingHorizontal:20}}>
-                      <View style={{flexDirection:'column', backgroundColor:"transparent", width:"70%"}}>
-                          <Text style={{fontSize:12}}><Icon style={{color:'#007FFA',fontSize:20}} active name="ios-calendar-outline" /> <Text style={{paddingLeft:5, fontFamily:"Montserrat-Regular",fontSize:15}}>Before the 19 Sep 2018</Text></Text>
-                          <Text style={{fontSize:15,}}><Icon style={{color:'#c33c4c',fontSize:20}} active name="md-pin" />  <Text style={{paddingLeft:5, fontFamily:"Montserrat-Light"}}>3km </Text></Text>
-                      </View>
-                      <View style={{flexDirection:'column', backgroundColor:"transparent", width:"30%", flexDirection:"row", justifyContent:"space-between"}}>
-                          <Image source={require("../assets/icons/heart.png")}
-                                 style={{width:"100%", height:30}} resizeMode="contain" resizeMethod="resize"/>
-                          <Image source={require("../assets/icons/navigation.png")}
-                                 style={{width:"100%", height:30}} resizeMode="contain" resizeMethod="resize"/>
-
-                      </View>
-
-                 </View>
-              </View>
-          )
-      })
   }
     render() {
-        const {params} = this.props.navigation.state;
-        let { isDrawer } = params;
+        let { backButton } = this.props;
        return (
            <View style={{flex:1}}>
                <LinearGradient
@@ -154,14 +102,14 @@ class TrackScreen extends Component {
                                left = {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                 {
-                                    (!isDrawer)?(
+                                    (backButton)?(
                                         <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
                                         <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     ):(null)
                                 }
-                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: isDrawer ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                <Image source={menu} style={{ width: isDrawer? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                 </TouchableOpacity>
                              </View>
                                }
@@ -193,19 +141,6 @@ class TrackScreen extends Component {
                            <JobsList  navigation={this.props.navigation}/>
                        </View>
                </LinearGradient>
-               <Modal
-                   style={[styles.modal, { height: height/2+50, width: width-40, backgroundColor:"transparent" }]}
-                   position={"bottom"}
-                   ref={"modal1"}
-                   swipeToClose={false}
-                   backdropPressToClose={false}>
-                   <View style={{ marginBottom: -10, width: 40, borderTopLeftRadius:10, borderTopRightRadius:10, paddingBottom:10, alignSelf:"flex-end", height: 45, backgroundColor: 'rgba(213,213,213,0.4)', justifyContent:'center', alignItems:'center', right:0}} >
-                       <Icon name="close" style={{}} onPress={() => this.refs.modal1.close()}/>
-                   </View>
-                   <ScrollView ScrollView contentContainerStyle={{}}>
-                       {this.rendermapdata()}
-                       </ScrollView>
-               </Modal>
            </View>
        )
   }
@@ -242,4 +177,10 @@ const styles = StyleSheet.create({
 },
 })
 
-export default TrackScreen;
+
+
+const mapStateToProps = state=> ({ 
+    backButton:state.user.backButton,
+  })
+  
+ export default connect(mapStateToProps, actions)(TrackScreen);

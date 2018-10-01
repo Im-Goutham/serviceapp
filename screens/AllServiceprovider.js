@@ -169,9 +169,7 @@ export default class AllServiceProvider extends Component {
                                </View>
                                }
                                right={
-                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                     
-                                   </View>
+                                  null
                                }
                            />
                        }
@@ -188,7 +186,7 @@ export default class AllServiceProvider extends Component {
                          {this.state.tabindex === 0 ?<AllServiceList navigation={this.props.navigation}/>:<Map pinPress={() => this.refs.modal1.open()}/>}
                        </View>
                        <Modal
-                   style={[styles.modal, { height: height/2+50, width: width-40, backgroundColor:"transparent" }]}
+                   style={[styles.modal, { height: height/2+50, width: width-30, backgroundColor:"transparent" }]}
                    position={"bottom"}
                    ref={"modal1"}
                    swipeToClose={false}

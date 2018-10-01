@@ -49,6 +49,7 @@ class NotificationsList extends Component {
 
   _renderRow(rowData, sectionID, rowID) {
     return (
+       <TouchableOpacity onPress={()=>this.props.navigation.navigate('message')}>
           <View style={styles.servicesBox} >
             <View style={{flex:1,flexDirection:'row'}}>
                 <View style={{flex:2}}>
@@ -67,6 +68,7 @@ class NotificationsList extends Component {
                  </View> 
             </View>    
           </View>
+         </TouchableOpacity> 
     );
   }
 
@@ -82,15 +84,14 @@ class NotificationsList extends Component {
 
   render() {
     let {images,imgIndex,photoShow} = this.state;
+    console.log('came here too notifications')
     return ( 
-      <View style={{flex:1,backgroundColor:"rgb(249,252,255)"}}>
         <ListView
           scrollEnabled
           dataSource={this.state.dataSource}
           renderRow={this._renderRow.bind(this)}
           style={styles.listview}
-        />
-      </View>   
+        />  
     );
   }
 
@@ -201,4 +202,4 @@ imgStyle:{
   }
   })
 
-export default connect(null, actions)(NotificationsList);
+export default NotificationsList;

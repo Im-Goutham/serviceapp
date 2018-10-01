@@ -10,7 +10,8 @@ class CarouselComponent extends Component {
         super();
        
         this.state = {
-             entries: [1,2,3,4]
+             entries: [1,2,3,4],
+             activeSlide:0
         };
     }
 

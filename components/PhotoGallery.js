@@ -1,14 +1,44 @@
 import React, { Component } from 'react';
 import { View, TouchableWithoutFeedback,ImageBackground, StyleSheet, Dimensions, Text} from 'react-native';
 const { width, height } = Dimensions.get('window')
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+import PhotoView from './PhotoView';
 
-class Header extends Component {
+
+class PhotoGalley extends Component {
+
+ constructor(){
+     super()
+     this.state = {
+        images:[
+            { url:'', props : { source: require('../images/service1.png')} },
+            { url:'', props : { source: require('../images/service2.png')} },
+            { url:'', props : { source: require('../images/service3.png')} },
+            { url:'', props : { source: require('../images/service4.png')} },
+            { url:'', props : { source: require('../images/service5.png')} }
+        ],
+        imgIndex: 0,
+        photoShow:false
+     }
+ }
+
+    showImage(index){
+        console.log('imgIndex',index);
+        let {images} = this.state;
+        let imagesArray = images.map((image)=>{
+            return {url:image}
+        })
+        this.props.showPhotoView({index,images:images,photoShow:true})
+    }
+
+
   render() {
     console.log('width of box is ',width)
     return (
       <View style={{flex:1,flexDirection:'row'}}>
          <View style={{flex:1}}>
-             <TouchableWithoutFeedback >
+             <TouchableWithoutFeedback  onPress={()=>{this.showImage(0)}} >
                         <View style={styles.imgBox}>
                             <ImageBackground style={styles.imgStyle} source={require('../images/service1.png')}>
                             {/* {
@@ -23,7 +53,7 @@ class Header extends Component {
          </View>
          <View style={{flex:1,flexDirection:'row',flexWrap:'wrap'}}>
                <View>
-                    <TouchableWithoutFeedback >
+                    <TouchableWithoutFeedback  onPress={()=>{this.showImage(1)}} >
                                 <View style={styles.imgBox}>
                                     <ImageBackground style={styles.smallImgStyle} source={require('../images/service2.png')}>
                                     {/*
@@ -37,7 +67,7 @@ class Header extends Component {
                 </TouchableWithoutFeedback>
                </View>
                <View >
-                    <TouchableWithoutFeedback >
+                    <TouchableWithoutFeedback  onPress={()=>{this.showImage(2)}} >
                                 <View style={styles.imgBox}>
                                     <ImageBackground style={styles.smallImgStyle} source={require('../images/service3.png')}>
                                     {/*
@@ -51,9 +81,9 @@ class Header extends Component {
                 </TouchableWithoutFeedback>
                </View>
                <View >
-                    <TouchableWithoutFeedback >
+                    <TouchableWithoutFeedback  onPress={()=>{this.showImage(3)}} >
                                 <View style={styles.imgBox}>
-                                    <ImageBackground style={styles.smallImgStyle} source={require('../images/service1.png')}>
+                                    <ImageBackground style={styles.smallImgStyle} source={require('../images/service4.png')}>
                                     {/*
                                         (key == 2)? (
                                         <View style={styles.overlay}><Text style={{color:'white',fontSize:22,fontFamily:'Montserrat-Bold'}}>+5</Text></View>
@@ -65,9 +95,9 @@ class Header extends Component {
                 </TouchableWithoutFeedback>
                </View>
                <View >
-                    <TouchableWithoutFeedback >
+                    <TouchableWithoutFeedback  onPress={()=>{this.showImage(4)}} >
                                 <View style={styles.imgBox}>
-                                    <ImageBackground style={styles.smallImgStyle} source={require('../images/service2.png')}>
+                                    <ImageBackground style={styles.smallImgStyle} source={require('../images/service5.png')}>
                                    
                                         <View style={styles.overlay}><Text style={{color:'white',fontSize:22,fontFamily:'Montserrat-Bold'}}>+5</Text></View>
                                        
@@ -77,7 +107,7 @@ class Header extends Component {
                 </TouchableWithoutFeedback>
                </View>
          </View>
- 
+        <PhotoView/>
       </View>
     )
   }
@@ -120,4 +150,5 @@ var styles = StyleSheet.create({
       },
 })
 
-export default Header;
+
+export default connect(null, actions)(PhotoGalley);

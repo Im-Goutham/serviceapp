@@ -79,6 +79,10 @@ class AddServiceCatScreen extends Component {
 
     render() {
       let {popularCategories, allCategories} = this.state;
+   
+      var {params} = this.props.navigation.state;
+      var {mainScreen} = params;
+      console.log('props are in category page .. ',mainScreen);
        return (
            <View style={{flex:1}}>
                <LinearGradient
@@ -170,7 +174,7 @@ class AddServiceCatScreen extends Component {
                    style={{
                       paddingVertical: 20
                    }}>
-                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceSubCatScreen')}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
+                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceSubCatScreen',{mainScreen:mainScreen})}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
                </LinearGradient>
 
                  </View>

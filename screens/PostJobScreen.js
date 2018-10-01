@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { View, StyleSheet, ActivityIndicator, TouchableOpacity,TouchableHighlight, Image, ScrollView,Platform,Dimensions} from 'react-native';
-import { connect } from 'react-redux';
 import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Text, Icon, Textarea,Label } from 'native-base';
 import ImagePicker  from 'react-native-image-picker';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 import LinearGradient from 'react-native-linear-gradient';
 import Documents from '../components/Documents';
 import Header from '../components/Header';
@@ -14,7 +15,6 @@ const isAndroid = Platform.OS === 'android';
 let back_arrow = require('../assets/icons/back-arrow.png');
 let menu = require('../assets/icons/menu.png');
 
-import * as actions from '../actions';
 
 class PostJobScreen extends Component {
   constructor(props) {
@@ -171,7 +171,7 @@ class PostJobScreen extends Component {
     render() {
       let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;  
       const {params} = this.props.navigation.state;
-      let { isDrawer } = params;
+      let { backButton } = this.props;
       return ( 
         <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
               <Header
@@ -179,14 +179,14 @@ class PostJobScreen extends Component {
               left = {
                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                 {
-                    (!isDrawer)?(
+                    (backButton)?(
                         <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
                         <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                         </TouchableOpacity>
                     ):(null)
                 }
-                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: isDrawer ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                <Image source={menu} style={{ width: isDrawer? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                 </TouchableOpacity>
              </View>
               }
@@ -422,12 +422,12 @@ class PostJobScreen extends Component {
             <View style={{justifyContent: "center" ,flexDirection:'row',marginBottom:20,marginTop:10}}>
             <View style={{flex:1,paddingRight:10}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#CCCCCC', '#F2F2F2']} style={styles.button}>
-                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>CANCEL</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('homePage')}}><Text style={styles.btnText}>CANCEL</Text></TouchableOpacity>
                 </LinearGradient>
             </View>
             <View style={{flex:1,paddingLeft:10}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>POST A JOB</Text></TouchableOpacity>
+                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('homePage')}}><Text style={styles.btnText}>POST A JOB</Text></TouchableOpacity>
                 </LinearGradient>
             </View>   
             </View>
@@ -539,4 +539,12 @@ textStyle: {
       
 })
 
-export default connect(null, actions)(PostJobScreen);
+
+
+
+const mapStateToProps = state=> ({ 
+  backButton:state.user.backButton,
+})
+
+export default connect(mapStateToProps, actions)(PostJobScreen);
+

@@ -16,7 +16,7 @@ import JobsList from '../components/JobsList';
 import Map from '../components/Map';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
-import Modal from 'react-native-modalbox';
+import Share, {ShareSheet, Button} from 'react-native-share';
 import HeaderScreen from './HeaderScreen';
 import PhotoGallery from '../components/PhotoGallery';
 var { height, width } = Dimensions.get('window');
@@ -73,7 +73,8 @@ export default class ServiceProviderDetailScreen extends Component {
                   image: require('../images/documents/profile1.png')
                 },
               ],
-            tags: ['Plumber', 'Tree Service', 'Fencing', 'Mounting and Installing', 'Painting', 'Hair']
+            tags: ['Plumber', 'Tree Service', 'Fencing', 'Mounting and Installing', 'Painting', 'Hair'],
+            liked: true
         };
     }
 
@@ -81,7 +82,6 @@ export default class ServiceProviderDetailScreen extends Component {
     renderJobDetail(){
         console.log('params are .. ',this.props.navigation.state);
        
-        let i=1
         let { videos, websites, profiles,tags} = this.state;
          return (
            
@@ -166,6 +166,18 @@ export default class ServiceProviderDetailScreen extends Component {
 
          )
     }
+
+    shareJob() {
+        console.log('share icon clicked')
+        let shareOptions = {
+            title: "Need Cook",
+            message: "Eleifend suspendisse curae ur natoque leifend leifend suspendiss natoque ur n...",
+            url: "http://facebook.github.io/react-native/",
+            subject: "SpotJobs"
+        };
+        Share.open(shareOptions);
+    }
+    
     render() {
 
       
@@ -199,10 +211,16 @@ export default class ServiceProviderDetailScreen extends Component {
                             }
                             right={
                                 <View style={{ backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection: "row" }}>
-                                      <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                         <Image source={require('../assets/icons/heart_red.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                      <TouchableOpacity 
+                                        style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
+                                        onPress={()=> this.setState({liked: !this.state.liked})}
+                                        >
+                                         <Image source={this.state.liked ? require('../assets/icons/heart_red.png') :  require('../assets/icons/heart_white.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
-                                    <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                    <TouchableOpacity 
+                                         style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
+                                         onPress={()=> {this.shareJob()}}
+                                         >
                                         <Image source={require('../assets/icons/send_white.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                 </View>

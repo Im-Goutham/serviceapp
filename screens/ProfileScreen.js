@@ -212,62 +212,6 @@ class ProfileScreen extends Component {
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between"}}>
                               <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 33,paddingLeft:20,paddingBottom:20}}>User Profile</Text> 
-                                 {/* <Animated.View
-                                  style={
-                                    {
-                                      paddingHorizontal: screenWidth * 0.05,
-                                      width: screenWidth,
-                                      height: scrollOffset.interpolate({
-                                        inputRange: [0, 20],
-                                        outputRange: [60, 0],
-                                        extrapolate: 'clamp',
-                                      }),
-                                    }
-                                }>
-                                  <Animated.Text
-                                    onLayout={e => {
-                                      if (this.offset === 0 && this.state.titleWidth === 0) {
-                                        const titleWidth = e.nativeEvent.layout.width;
-                                        this.setState({ titleWidth });
-                                      }
-                                    }}
-                                    style={{
-                                      fontFamily: 'Montserrat-Bold', 
-                                      color:"#fff", 
-                                      fontSize: 33,
-                                      paddingLeft:  scrollOffset.interpolate({
-                                        inputRange: [0, 20],
-                                        outputRange: [0, 50],
-                                        extrapolate: 'clamp',
-                                      }),
-                                      paddingBottom: scrollOffset.interpolate({
-                                        inputRange: [0, 20],
-                                        outputRange: [20, 0],
-                                        extrapolate: 'clamp',
-                                      }),
-                                      fontSize: scrollOffset.interpolate({
-                                        inputRange: [0, 20],
-                                        outputRange: [33, 20],
-                                        extrapolate: 'clamp',
-                                      }),
-                                      marginTop: scrollOffset.interpolate({
-                                        inputRange: [0, 20],
-                                        outputRange: [0, -40],
-                                        extrapolate: 'clamp',
-                                      }),
-                                    }}>
-                                    <Text style={{ }}>User Profile</Text> 
-                                  </Animated.Text>
-                                  <Animated.View
-                                    style={{
-                                      width: scrollOffset.interpolate({
-                                        inputRange: [0, 100],
-                                        outputRange: [screenWidth * 0.9 - this.state.titleWidth, 0],
-                                        extrapolate: 'clamp',
-                                      }),
-                                    }}
-                                  />
-                                </Animated.View> */}
                       </View>
                        }
                    />
@@ -483,7 +427,7 @@ class ProfileScreen extends Component {
                 </View>
                 <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceCatScreen')}}><Text style={styles.btnText}>ADD MORE SERVICES</Text></TouchableOpacity>
+                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceCatScreen',{mainScreen:'profile'})}}><Text style={styles.btnText}>ADD MORE SERVICES</Text></TouchableOpacity>
                     </LinearGradient>
                 </View>
             </View>

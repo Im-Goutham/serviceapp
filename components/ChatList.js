@@ -77,6 +77,7 @@ class ChatList extends Component {
 
     return (
       <Swipeout
+        sensitivity={1}
         close={!(this.state.sectionID === sectionID && this.state.rowID === rowID)}
         left={null}
         right={btnsTypes}
@@ -94,7 +95,7 @@ class ChatList extends Component {
         onClose={() => console.log('===close') }
         scroll={event => console.log('scroll event') }
       >
-       <TouchableOpacity   onPress={() => {this.props.navigation.navigate('message')}}>
+       <TouchableWithoutFeedback   onPress={() => {this.props.navigation.navigate('message')}}>
           <View style={styles.servicesBox} >
             <View style={{flex:1,flexDirection:'row'}}>
                 <View style={{flex:2}}>
@@ -102,17 +103,23 @@ class ChatList extends Component {
                                       <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
                      </View>
                  </View>   
-                 <View style={{flex:7,paddingHorizontal:20}}>
-                    <View style={{flex:1}}>
-                         <Text style={{fontSize:17,color:'rgb(62,136,235)'}}>Micheal Y.∂∂</Text>
-                         <Text style={{fontSize:14,color:'rgb(155,155,155)',marginVertical:10}}>Lets Meet</Text>
-                    </View>
-                   
-                
+                 <View style={{flex:7,paddingHorizontal:20,justifyContent:'space-around'}}>
+                  
+                         <View style={{flexDirection:'row'}}>
+                           <View style={{flex:2}}>
+                             <Text style={{fontSize:17,color:'rgb(62,136,235)',textAlign:'left'}}>Micheal Y.∂∂</Text>
+                           </View>
+                           <View style={{flex:1,alignItems:'flex-end'}}>
+                              <Text style={{textAlign:'right',fontSize:12,color:'rgb(155,155,155)'}}>Yesterday</Text>
+                           </View>
+                          </View>
+                         <View><Text style={{fontSize:14,color:'rgb(155,155,155)',marginVertical:10}}>A eget vestibulum magnis non..</Text></View>
+                         
+
                  </View> 
             </View>    
           </View>
-          </TouchableOpacity>
+          </TouchableWithoutFeedback>
       </Swipeout>
     );
   }

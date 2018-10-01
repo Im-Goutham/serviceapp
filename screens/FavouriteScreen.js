@@ -10,6 +10,8 @@ import {
     Text, TouchableHighlight
 } from 'react-native';
  import {  Icon } from 'native-base'
+ import { connect } from 'react-redux';
+import * as actions from '../actions';
 import Advertisement from '../components/Advertisement';
 import JobsList from '../components/JobsList';
 import ServiceProvidersList from '../components/ServiceProvidersList';
@@ -64,14 +66,14 @@ class FavoritesScreen extends Component {
   tabrender(){
     return tabItems.map((value, index)=>{
       return (
-          <View>
         <TouchableOpacity key={index} onPress={()=>this.setState({
             tabindex: index
           })}
           style={{
           // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
           height : 40,
-          justifyContent: "space-between",
+          width: "50%",
+          justifyContent: "space-around",
           alignItems:'center',
         }}>
         <Text
@@ -81,14 +83,13 @@ class FavoritesScreen extends Component {
             fontFamily: 'Montserrat-Bold'
           }}>{value}</Text>
         <View style={{
-            width: 70,
+            width: 40,
             height: this.state.tabindex === index ? 3 : 0,
             backgroundColor: "#fff",
             borderRadius : 3
             // borderColor: this.state.tabindex === index ? "#fff": "transparent"
           }}/>
       </TouchableOpacity>
-      </View>
     )
     })
   }
@@ -150,7 +151,7 @@ class FavoritesScreen extends Component {
   }
     render() {
         const {params} = this.props.navigation.state;
-        let { isDrawer } = params;
+        let { backButton } = this.props;
        return (
            <View style={{flex:1}}>
                <LinearGradient
@@ -167,14 +168,14 @@ class FavoritesScreen extends Component {
                                left = {
                                     <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                     {
-                                        (!isDrawer)?(
+                                        (backButton)?(
                                             <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
                                             <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                             </TouchableOpacity>
                                         ):(null)
                                     }
-                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: isDrawer ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                    <Image source={menu} style={{ width: isDrawer? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                    <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                 </View>
                                }
@@ -191,8 +192,8 @@ class FavoritesScreen extends Component {
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
-                       <View style={{ paddingTop:30,flexDirection:'row',justifyContent:'space-around'}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 20}}>
+                       <View style={{ flexDirection:'row',justifyContent:'space-around'}}>
                            {this.tabrender()}
                            </View>
                    </View>
@@ -204,7 +205,7 @@ class FavoritesScreen extends Component {
                        </View>
                </LinearGradient>
                <Modal
-                   style={[styles.modal, { height: height/2+50, width: width-40, backgroundColor:"transparent" }]}
+                   style={[styles.modal, { height: height/2+50, width: width-30, backgroundColor:"transparent" }]}
                    position={"bottom"}
                    ref={"modal1"}
                    swipeToClose={false}
@@ -252,4 +253,11 @@ const styles = StyleSheet.create({
 },
 })
 
-export default FavoritesScreen;
+
+
+const mapStateToProps = state=> ({ 
+    backButton:state.user.backButton,
+  })
+  
+export default connect(mapStateToProps, actions)(FavoritesScreen);
+

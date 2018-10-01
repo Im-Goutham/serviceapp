@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {NavigationActions} from 'react-navigation';
+import { connect } from 'react-redux';
 import { View, StyleSheet,Image, Platform, TouchableOpacity, ScrollView} from 'react-native';
 import { List, ListItem, Left, Body, Right, Text , Icon} from 'native-base';
 import LinearGradient from 'react-native-linear-gradient';
+import * as actions from '../actions';
 
 
 let buttons = {
@@ -91,19 +93,20 @@ class SideMenu extends Component {
     // const navigateAction = NavigationActions.navigate({
     //   routeName: route
     // });
-
-    const navigateAction = NavigationActions.navigate({
-      routeName: route,
-      params: {isDrawer: true},
-      action: NavigationActions.navigate({ routeName: route, params: {isDrawer: true}})
-    })
-    if(route == 'appTutorial'){
-      this.props.navigation.navigate(route,{isDrawer: true});
-    }
-    else {
-      this.props.navigation.dispatch(navigateAction);
-      // this.props.navigation.navigate(route,{name:'Goutham1222'});
-    }
+    this.props.showBackButton(false);
+    this.props.navigation.navigate(route);
+    // const navigateAction = NavigationActions.navigate({
+    //   routeName: route,
+    //   params: {backButton: true},
+    //   action: NavigationActions.navigate({ routeName: route, params: {backButton: true}})
+    // })
+    // if(route == 'appTutorial'){
+    //   this.props.navigation.navigate(route,{backButton: true});
+    // }
+    // else {
+    //   this.props.navigation.dispatch(navigateAction);
+    //   // this.props.navigation.navigate(route,{name:'Goutham1222'});
+    // }
   }
   listItems(){
     return buttons.data.map((value, index)=>{
@@ -232,4 +235,4 @@ SideMenu.propTypes = {
   navigation: PropTypes.object
 };
 
-export default SideMenu;
+export default connect(null, actions)(SideMenu);

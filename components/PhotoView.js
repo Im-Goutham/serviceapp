@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Modal, TouchableNativeFeedback, Text } from 'react-native';
+import { View, Modal, TouchableOpacity, Platform } from 'react-native';
 import ImageViewer from 'react-native-image-zoom-viewer';
+import { Icon } from 'native-base';  
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
@@ -38,15 +39,10 @@ import * as actions from '../actions';
 
   render() {
     let {index,images,photoView} = this.state;
-    console.log("index,images,photoView",index,images,photoView)
+    console.log("index",index)
+    console.log("photoView",photoView)
+    console.log("images",images)
     return (
-      <View
-        style={{
-          padding: 10
-        }}
-      >
-      {
-          (photoView)?(
             <Modal
             visible={photoView}
             transparent={true}
@@ -59,12 +55,9 @@ import * as actions from '../actions';
                   this.props.hidePhotoView()
               }}
               enableSwipeDown={true}
+             
             />
           </Modal>
-          ):(null)
-      }
-     
-      </View>
     );
   }
 }

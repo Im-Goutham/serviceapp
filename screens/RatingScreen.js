@@ -131,9 +131,7 @@ class RatingScreen extends Component {
                                </View>
                                }
                                right={
-                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-
-                                   </View>
+                                 null
                                }
                            />
                        }

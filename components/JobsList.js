@@ -14,19 +14,19 @@ let joblist = {
             jobtitle: 'Need Cook',
             icon: require('../assets/icons/crown.png'),
             image: require('../images/service1.png'),
-            detail: "Lorem Ipsum has been the industrys standard dummy text ever",
+            detail: "Eleifend suspendisse curae ur natoque leifend leifend suspendiss natoque ur n...",
         },
         {
             jobtitle: 'Need Carpenter',
             icon: require('../assets/icons/crown.png'),
             image: require('../images/service2.png'),
-            detail: "Lorem Ipsum has been the industrys standard dummy text ever",
+            detail: "Eleifend suspendisse curae ur natoque leifend leifend suspendiss natoque ur n...",
         },
         {
             jobtitle: 'Need Cook',
             icon: require('../assets/icons/crown.png'),
             image: require('../images/service3.png'),
-            detail: "Lorem Ipsum has been the industrys standard dummy text ever",
+            detail: "Eleifend suspendisse curae ur natoque leifend leifend suspendiss natoque ur n...",
         },
     ]
 }
@@ -37,6 +37,7 @@ class JobsList extends Component {
             loaded: false,
             refreshing: false,
             visible:false,
+            liked:true,
             dataSource: new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2}),
         }
     }
@@ -67,7 +68,7 @@ class JobsList extends Component {
                             borderBottomRightRadius:10,
                             justifyContent: 'center',
                             alignItems: 'center',
-                            height:205,
+                            height:185,
                             marginRight:10,
                             marginLeft:-20
                         }}>
@@ -97,7 +98,7 @@ class JobsList extends Component {
                             borderBottomLeftRadius:10,
                             justifyContent: 'center',
                             alignItems: 'center',
-                            height:205,
+                            height:185,
                             marginLeft:10
                         }}>
                         <View>
@@ -129,23 +130,23 @@ class JobsList extends Component {
                             borderBottomLeftRadius:10,
                             justifyContent: 'space-around',
                             alignItems: 'center',
-                            height:205,
+                            height:185,
                             marginLeft:10
                         }}>
-                         <View style={styles.iconButton}>
+                         <TouchableOpacity style={styles.iconButton} onPress={()=> this.setState({liked: !this.state.liked})}>
                             <Image 
-                                source={require('../assets/icons/heart_red.png')}
+                                source={this.state.liked ? require('../assets/icons/heart_red.png'): require('../assets/icons/heart_white.png')}
                                 style={{width:20,height:20}}
                                 resizeMode="contain" resizeMethod="resize"
                                 />
-                        </View>
-                        <View style={styles.iconButton}>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.iconButton} onPress={()=> this.shareJob()}>
                             <Image
                             source={require('../assets/icons/send.png')}
                             style={{width:20,height:20}}
                             resizeMode="contain" resizeMethod="resize"
                             />
-                        </View>
+                        </TouchableOpacity>
                     </LinearGradient>,
                 backgroundColor: 'transparent',
             }
@@ -153,9 +154,10 @@ class JobsList extends Component {
         var screen = this.props.navigation.state.routeName;
         return (
             <Swipeout
+                sensitivity={1}
                 close={!(this.state.sectionID === sectionID && this.state.rowID === rowID)}
-                left={screen === 'myRequests' ? leftBtn : null}
-                right={screen === 'myRequests' ? rightBtn : btnsTypes}
+                left={screen === 'myRequests'  ? screen == 'trackNow' ? null : leftBtn : null}
+                right={screen === 'myRequests' ? rightBtn :  screen == 'trackNow' ? null :  btnsTypes}
                 rowID={rowID}
                 sectionID={sectionID}
                 autoClose={data.autoClose}
@@ -169,10 +171,9 @@ class JobsList extends Component {
                 }}
                 onClose={() => console.log('===close')}
                 scroll={event => console.log('scroll event')}
-                sensitivity={20}
                 >
                 <TouchableWithoutFeedback onPress={() => {
-                    this.props.navigation.navigate('jobDetail',{name:'Goutham'})
+                    this.props.navigation.navigate('jobDetail')
                 }}>
                     <View style={styles.li}>
                         <View style={{
@@ -182,7 +183,7 @@ class JobsList extends Component {
                             justifyContent: 'space-between'
                         }}>
                             <View style={{
-                                width: "50%",
+                                width: "60%",
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 backgroundColor: "transparent"
@@ -196,7 +197,7 @@ class JobsList extends Component {
                                 }} source={data.icon} resizeMode="contain" resizeMethod="resize"/>
                             </View>
                             <View style={{
-                                width: "30%",
+                                width: "40%",
                                 height: 54,
                                 backgroundColor: "transparent",
                                 alignItems: 'flex-end',
@@ -219,16 +220,18 @@ class JobsList extends Component {
                                      ):(
                                          (screen == 'myRequests') ? (
                                             <View style={{flexDirection:'row',flex:1,justifyContent:'flex-end',alignItems:'center'}}>
+                                            <TouchableOpacity onPress={() => this.setState({liked: !this.state.liked})}>
                                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                                <TouchableOpacity>
-                                                    <Image source={require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
-                                                </TouchableOpacity>
+                                                    <Image 
+                                                     source={this.state.liked ? require('../assets/icons/heart_red.png'): require('../assets/icons/heart_white.png')}
+                                                     style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
                                             </LinearGradient>
+                                            </TouchableOpacity>
+                                            <TouchableOpacity>
                                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                                <TouchableOpacity>
                                                     <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
-                                                </TouchableOpacity>
                                             </LinearGradient>
+                                            </TouchableOpacity>
                                           </View>
                                          ) :(
                                             <OptionsMenu
@@ -304,10 +307,10 @@ class JobsList extends Component {
     shareJob() {
         console.log('share icon clicked')
         let shareOptions = {
-            title: "React Native",
-            message: "Hola mundo",
+            title: "Need Cook",
+            message: "Eleifend suspendisse curae ur natoque leifend leifend suspendiss natoque ur n...",
             url: "http://facebook.github.io/react-native/",
-            subject: "Share Link"
+            subject: "SpotJobs"
         };
         Share.open(shareOptions);
     }
@@ -344,8 +347,8 @@ class JobsList extends Component {
         backgroundColor: 'white',
         borderRadius:10,
         // borderWidth: 1,
-        paddingHorizontal: 10,
-        paddingVertical:20,
+        paddingHorizontal: 15,
+        paddingVertical:10,
         marginBottom:20,
         shadowOffset: { width:  0, height:  2 },
         shadowOpacity: 0.2,
@@ -360,7 +363,6 @@ class JobsList extends Component {
       button:{
         justifyContent:'center',
         alignItems:'center',
-        width: '100%',
         height: 40,
         borderRadius:20,
         // borderWidth: 1,
@@ -372,8 +374,8 @@ class JobsList extends Component {
       fontFamily:"Montserrat-Bold",
         textAlign:'center',
         color:'white',
-        fontWeight:'bold',
-        fontSize:12
+        paddingHorizontal:20,
+        fontSize:14
     },
     iconButton: {
         marginHorizontal:5,

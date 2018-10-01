@@ -13,6 +13,8 @@ import {
 import Advertisement from '../components/Advertisement';
 import JobsList from '../components/JobsList';
 import Map from '../components/Map';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import Modal from 'react-native-modalbox';
@@ -149,7 +151,7 @@ class MyJobScreen extends Component {
   }
     render() {
         const {params} = this.props.navigation.state;
-        let { isDrawer } = params;
+        let { backButton } = this.props;
        return (
            <View style={{flex:1}}>
                <LinearGradient
@@ -166,14 +168,14 @@ class MyJobScreen extends Component {
                                left = {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                 {
-                                    (!isDrawer)?(
+                                    (backButton)?(
                                         <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
                                         <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     ):(null)
                                 }
-                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: isDrawer ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                <Image source={menu} style={{ width: isDrawer? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                 </TouchableOpacity>
                              </View>
                                }
@@ -211,7 +213,7 @@ class MyJobScreen extends Component {
                        </View>
                </LinearGradient>
                <Modal
-                   style={[styles.modal, { height: height/2+50, width: width-40, backgroundColor:"transparent" }]}
+                   style={[styles.modal, { height: height/2+50, width: width-30, backgroundColor:"transparent" }]}
                    position={"bottom"}
                    ref={"modal1"}
                    swipeToClose={false}
@@ -259,4 +261,10 @@ const styles = StyleSheet.create({
 },
 })
 
-export default MyJobScreen;
+
+const mapStateToProps = state=> ({ 
+    backButton:state.user.backButton,
+  })
+  
+export default connect(mapStateToProps, actions)(MyJobScreen);
+

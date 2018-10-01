@@ -10,14 +10,16 @@ import {
     AsyncStorage,
     Text, TouchableHighlight, TouchableWithoutFeedback, ImageBackground
 } from 'react-native';
-import {  Icon } from 'native-base'
+import {  Icon } from 'native-base';
+import Share, {ShareSheet, Button} from 'react-native-share';
 import Advertisement from '../components/Advertisement';
 import JobsList from '../components/JobsList';
 import Map from '../components/Map';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import Modal from 'react-native-modalbox';
-// import Icon from 'react-native-vector-icons/EvilIcons';
+import { connect } from 'react-redux';
+import * as actions from '../actions';
 import HeaderScreen from './HeaderScreen';
 
 var {height, width} = Dimensions.get('window');
@@ -61,6 +63,7 @@ class FindJobScreen extends Component {
             ],
         }
     }
+    
     tabrender(){
         return tabItems.map((value, index)=>{
           return (
@@ -168,9 +171,9 @@ class FindJobScreen extends Component {
                             })
                         }
                         </View>
-                    <View style={{flexDirection:'row', backgroundColor:"#fff",paddingTop:10}}>
-                        <View style={{flex:2}}>
-                          <View style={{ flexDirection: 'row'}}>
+                    <View style={{flexDirection:'row', backgroundColor:"#fff",paddingTop:10,alignItems:'space-between'}}>
+                        <View style={{flex:1.3}}>
+                          <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
                                 <Image style={{width: 15, height: 15}} source={require('../assets/icons/calender.png')} resizeMode="contain" resizeMethod="resize"/>
                                     <Text style={{
                                         marginLeft: 10,
@@ -180,7 +183,7 @@ class FindJobScreen extends Component {
                                     }}>Before the 19 Sep 2018</Text>
                             </View>
                              <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                                    <View style={{flex: 1, flexDirection: 'row',}}>
+                                    <View style={{flex: 1, flexDirection: 'row'}}>
                                         <Image style={{width: 15, height: 15}} source={require('../assets/icons/location_red.png')} resizeMode="contain" resizeMethod="resize"/>
                                         <Text style={{paddingLeft: 5, fontSize: 14, fontFamily: "Montserrat-Light"}}>
                                             3 mi
@@ -200,26 +203,47 @@ class FindJobScreen extends Component {
                                 </View>
                         </View>
                          <View style={{flexDirection:'row',flex:1,justifyContent:'flex-end',alignItems:'center'}}>
-                            <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                <TouchableOpacity>
-                                    <Image source={require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
-                                </TouchableOpacity>
-                            </LinearGradient>
-                            <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                <TouchableOpacity>
-                                    <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
-                                </TouchableOpacity>
-                            </LinearGradient>
+                          <TouchableOpacity onPress={()=> this.setState({liked: !this.state.liked})}>
+                                <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
+                                        <Image source={this.state.liked ? require('../assets/icons/heart_red.png') : require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
+                                </LinearGradient>
+                            </TouchableOpacity>
+                            <TouchableOpacity  onPress={()=> this.shareJob()}>
+                                <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
+                                        <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
+                                </LinearGradient>
+                            </TouchableOpacity>
                         </View>
                     </View>
                 </View>
             )
         })
     }
+
+    shareJob() {
+        console.log('share icon clicked')
+        let shareOptions = {
+            title: "Need Cook",
+            message: "Eleifend suspendisse curae ur natoque leifend leifend suspendiss natoque ur n...",
+            url: "http://facebook.github.io/react-native/",
+            subject: "SpotJobs"
+        };
+        Share.open(shareOptions);
+    }
+
+    showImage(index){
+        console.log('imgIndex',index);
+        let {images} = this.state;
+        let imagesArray = images.map((image)=>{
+            return {url:image}
+        })
+        this.props.showPhotoView({index,images:imagesArray,photoShow:true})
+    }
+
     render() {
         
-        const {params} = this.props.navigation.state;
-        let { isDrawer } = params;
+        // const {params} = this.props.navigation.state;
+        let { backButton } = this.props;
         return (
             <View style={{flex:1}}>
                 <LinearGradient
@@ -236,14 +260,14 @@ class FindJobScreen extends Component {
                                 left = {
                                     <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                     {
-                                        (!isDrawer)?(
+                                        (backButton)?(
                                             <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
                                             <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                             </TouchableOpacity>
                                         ):(null)
                                     }
-                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: isDrawer ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                    <Image source={menu} style={{ width: isDrawer? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                    <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                  </View>
                                     }
@@ -286,7 +310,7 @@ class FindJobScreen extends Component {
                         </View>
                 </LinearGradient>
                 <Modal
-                    style={[styles.modal, { height: height/2+50, width: width-40, backgroundColor:"transparent" }]}
+                    style={[styles.modal, { height: height/2+50, width: width-30, backgroundColor:"transparent" }]}
                     position={"bottom"}
                     ref={"modal1"}
                     swipeToClose={false}
@@ -332,19 +356,19 @@ const styles = StyleSheet.create({
     padding:1,
 
 },
-    overlay: {
-  position: 'absolute',
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
-  backgroundColor: 'rgba(0,0,0,.6)',
-  opacity: 2,
-      justifyContent:'center',
-      alignItems:'center',
-     width:'100%',
-    height:110,
-    borderRadius:10,
+overlay: {
+    position: 'absolute',
+    top: 8,
+    right: 0,
+    bottom: 0,
+    left: 0,
+    backgroundColor: 'rgba(0,0,0,.6)',
+    opacity: 2,
+        justifyContent:'center',
+        alignItems:'center',
+       width:'100%',
+      height:97,
+      borderRadius:10,
 },
       iconStyle: {
      width:15,
@@ -371,4 +395,11 @@ imgStyle:{
         fontSize:12
     },
 })
-export default FindJobScreen;
+
+
+const mapStateToProps = state=> ({ 
+    backButton:state.user.backButton,
+})
+
+export default connect(mapStateToProps, actions)(FindJobScreen);
+

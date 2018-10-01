@@ -5,6 +5,7 @@ import {Icon} from 'native-base';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import LinearGradient from 'react-native-linear-gradient';
+import Share, {ShareSheet, Button} from 'react-native-share';
 
 class ServiceProvidersList extends Component {
     constructor() {
@@ -25,63 +26,14 @@ class ServiceProvidersList extends Component {
                 {image: require('../images/service3.png')},
             ],
             imgIndex: 0,
+            liked: true,
             photoShow:false
         };
     }
     _renderRow(rowData, sectionID, rowID) {
-        const btnsTypes = [
-            {
-                component:
-                    <LinearGradient
-                        start={{x: 0, y: 0}} 
-                        end={{x: 1, y: 0}}
-                        colors={['#3E85EF', '#3EBDEF']} 
-                        style={{
-                            flexDirection: 'row',
-                            borderTopLeftRadius: 10,
-                            borderBottomLeftRadius:10,
-                            justifyContent: 'space-around',
-                            alignItems: 'center',
-                            height:360,
-                            marginTop: 8,
-                            marginLeft:10
-                        }}>
-                          <View style={styles.iconButton}>
-                            <Image 
-                                source={require('../assets/icons/heart_red.png')}
-                                style={{width:20,height:20}}
-                                resizeMode="contain" resizeMethod="resize"
-                                />
-                        </View>
-                        <View style={styles.iconButton}>
-                            <Image
-                            source={require('../assets/icons/send.png')}
-                            style={{width:20,height:20}}
-                            resizeMode="contain" resizeMethod="resize"
-                            />
-                        </View>
-                    </LinearGradient>,
-                backgroundColor: 'transparent',
-            }
-        ];
+       
         return (
-            <Swipeout
-                close={!(this.state.sectionID === sectionID && this.state.rowID === rowID)}
-                left={null}
-                right={btnsTypes}
-                rowID={rowID}
-                sectionID={sectionID}
-                buttonWidth={140}
-                autoClose={rowData.autoClose}
-                backgroundColor={'rgb(249,252,255)'}
-                onOpen={(sectionID, rowID) => {
-                    this.setState({
-                        sectionID,
-                        rowID,
-                    })
-                }}
-                onClose={() => console.log('===close') }
-                scroll={event => console.log('scroll event') }>
+    
                  <TouchableWithoutFeedback onPress={() => {
                     this.props.navigation.navigate('jobDetail')
                 }}>
@@ -110,22 +62,22 @@ class ServiceProvidersList extends Component {
                     <View style={{flex:1,flexDirection:'row',marginTop:10}}>
                         <View style={{justifyContent:'center'}}><Text style={styles.tagStyle}>Plumber and 5 More</Text></View>
                         <View style={{flexDirection:'row',flex:1,justifyContent:'flex-end',alignItems:'center'}}>
+                        <TouchableOpacity onPress={()=>{this.setState({liked: !this.state.liked})}}> 
                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                <TouchableOpacity>
-                                    <Image source={require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
-                                </TouchableOpacity>
+                                    <Image source={this.state.liked ? require('../assets/icons/heart_red.png'): require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
                             </LinearGradient>
+                         </TouchableOpacity>
+                         <TouchableOpacity onPress={()=> this.shareJob()}>
                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                <TouchableOpacity>
                                     <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
-                                </TouchableOpacity>
                             </LinearGradient>
+                        </TouchableOpacity>
                         </View>
                     </View>
                     <View style={{flex:1,flexDirection:'row',marginTop:10}}>
                         {
                             this.state.images.map((image,key)=>{
-                                return  <TouchableWithoutFeedback  onPress={()=>{this.showImage(key)}} key={key}>
+                                return  <TouchableWithoutFeedback key={key}>
                                     <View style={styles.imgBox}>
                                         <ImageBackground style={styles.imgStyle} source={image.image}  resizeMode="contain" resizeMethod="resize">
                                             {(key == 2)? (
@@ -150,17 +102,21 @@ class ServiceProvidersList extends Component {
                     </View>
                 </View>
                 </TouchableWithoutFeedback>
-            </Swipeout>
         );
     }
-    showImage(index){
-        console.log('imgIndex',index);
-        let {images} = this.state;
-        let imagesArray = images.map((image)=>{
-            return {url:image}
-        })
-        this.props.showPhotoView({index,images:imagesArray,photoShow:true})
+
+    shareJob() {
+        console.log('share icon clicked')
+        let shareOptions = {
+            title: "Need Cook",
+            message: "Eleifend suspendisse curae ur natoque leifend leifend suspendiss natoque ur n...",
+            url: "http://facebook.github.io/react-native/",
+            subject: "SpotJobs"
+        };
+        Share.open(shareOptions);
     }
+
+
     render() {
         let {images,imgIndex,photoShow} = this.state;
         return (
@@ -258,23 +214,16 @@ imgStyle:{
      height:15
   },
   tagStyle:{
-     backgroundColor: 'rgb(239,186,47)',
-     borderRadius:10,
-     overflow:"hidden",
-     paddingVertical:2,
-     paddingLeft:10,
-     paddingRight:30,
-     color: 'white',
-     fontFamily: 'Montserrat-Bold'
-  },
-  iconButton: {
-    marginHorizontal:5,
-    width: 45,
-    height:45,
-    borderRadius:30,
-    justifyContent:'center',
-    alignItems:'center'
-  },
+    backgroundColor: 'rgb(239,186,47)',
+    borderRadius:10,
+    overflow:"hidden",
+    paddingVertical:2,
+    paddingHorizontal:10,
+    marginBottom:10,
+    color: 'white',
+    marginRight: 10,
+    fontFamily: 'Montserrat-Bold'
+},
   iconButton: {
     marginHorizontal:5,
     width: 45,

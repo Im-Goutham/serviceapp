@@ -69,6 +69,7 @@ class TracksList extends Component {
       ];
     return (
       <Swipeout
+        sensitivity={1}
         close={!(this.state.sectionID === sectionID && this.state.rowID === rowID)}
         left={null}
         right={btnsTypes}

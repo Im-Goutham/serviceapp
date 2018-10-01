@@ -7,11 +7,12 @@ import MyJobsStackNavigator from './MyJobsStackNavigator';
 import PostJobStackNavigator from './PostJobStackNavigator';
 import FindHelpStackNavigator from './FindHelpStackNavigator';
 import FavouriteStackNavigator from './FavouriteStackNavigator';
+import NotificationStackNavigator from './NotificationStackNavigator';
 import NotificationsScreen from '../screens/NotificationsScreen';
 import ChatStackNavigator from './ChatStackNavigator';
 import MyRequestStackNavigator from './MyRequestStackNavigator';
 import TrackStackNavigator from './TrackStackNavigator';
-import SubscriptionScreen from '../screens/SubscriptionScreen';
+import SubscriptionStackNavigator from './SubscriptionStackNavigator';
 import AcountStackNavigator from './AcountStackNavigator';
 import SettingsStackNavigator from './SettingsStackNavigator';
 
@@ -20,7 +21,7 @@ export default createStackNavigator({
     homePage: {
          screen: HomeScreen
      },
-    findJobs: {
+     findJobs: {
         screen: FindJobsStackNavigator
     },
     postJob: {
@@ -36,7 +37,7 @@ export default createStackNavigator({
         screen: FavouriteStackNavigator
     },
     notifications: {
-        screen: NotificationsScreen
+        screen: NotificationStackNavigator
     },
     chats: {
         screen: ChatStackNavigator
@@ -51,7 +52,7 @@ export default createStackNavigator({
         screen: AcountStackNavigator
     },
     subscription: {
-        screen: SubscriptionScreen
+        screen: SubscriptionStackNavigator
     },
     settings: {
         screen: SettingsStackNavigator
