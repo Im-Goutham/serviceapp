@@ -4,8 +4,11 @@ import {
     StyleSheet,
     Image,
     TouchableOpacity,
-    Text, Dimensions, Platform,
-    ScrollView
+    Text, Dimensions, 
+    Platform,
+    ScrollView,
+    DatePickerIOS,
+    DatePickerAndroid
 } from 'react-native';
 
 import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Icon, Textarea,Label } from 'native-base';
@@ -13,6 +16,7 @@ import ImagePicker  from 'react-native-image-picker';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import OptionsMenu from "react-native-options-menu";
+import DateTimePicker from 'react-native-modal-datetime-picker';
 import HeaderScreen from './HeaderScreen';
 import Documents from '../components/Documents';
 import FloatingLabelInput from '../components/FloatingLabelInput';
@@ -78,7 +82,8 @@ class ProfileScreen extends Component {
               name: 'profile1.jpg',
               image: require('../images/documents/profile1.png')
             },
-          ]
+          ],
+          isDateTimePickerVisible: false
       };
     this.focusNextField = this.focusNextField.bind(this);
     this.inputs = {};
@@ -172,6 +177,38 @@ class ProfileScreen extends Component {
   }
 
 
+
+  async openAndroidDatePicker() {
+    try {
+      const {action, year, month, day} = await DatePickerAndroid.open({
+        date: new Date()
+      });
+    } catch ({code, message}) {
+      console.warn('Cannot open date picker', message);
+    }
+  }
+  
+
+
+
+  async openIosDatePicker() {
+    try {
+      const {action, year, month, day} = await DatePickerIOS.open({
+        date: new Date()
+      });
+    } catch ({code, message}) {
+      console.warn('Cannot open date picker', message);
+    }
+  }
+
+  _showDateTimePicker = () => this.setState({ isDateTimePickerVisible: true });
+
+  _hideDateTimePicker = () => this.setState({ isDateTimePickerVisible: false });
+
+  _handleDatePicked = (date) => {
+    console.log('A date has been picked: ', date);
+    this._hideDateTimePicker();
+  };
 
 
     render() {
@@ -274,10 +311,15 @@ class ProfileScreen extends Component {
                   </View>
                 </View>
 
-                <View style={styles.inputField}>
+                <TouchableOpacity
+                   style={styles.inputField}
+                 //  onPress={()=> Platform.OS == 'ios' ? this.openIosDatePicker() :  this.openAndroidDatePicker()}
+                   onPress={this._showDateTimePicker}
+                 >
                 <FloatingLabelInput
                             label="Date of Birth"
                             value={this.state.dob}
+                            onFocus={ this._showDateTimePicker }
                             autoCapitalize='none'
                             onSubmitEditing={() => {
                               this.focusNextField('password');
@@ -288,7 +330,7 @@ class ProfileScreen extends Component {
                             }}
                             onChangeText={dob => this.setState({ dob })}
                             />
-                </View>
+                </TouchableOpacity>
                 <Text style={{fontFamily:'Montserrat-Medium',color:'rgb(219,220,221)',fontSize:13}} >This information is not shared with other users.</Text>
                 <View style={styles.inputField}>
                 <FloatingLabelInput
@@ -344,7 +386,7 @@ class ProfileScreen extends Component {
                  <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:10}}>
                   <FloatingLabelInput
-                            label="Zip"
+                            label="Zip Code"
                             value={this.state.zip}
                             autoCapitalize='none'
                             onSubmitEditing={() => {
@@ -375,21 +417,21 @@ class ProfileScreen extends Component {
                 </View>
                 <View style={[styles.servicesBox,{flexDirection:'row'}]}>
                   <View style={{flex: 2}}><Text style={{color:'#3E85EF',fontFamily:'Montserrat-Medium',fontSize: 16,lineHeight:23}}>Do you want to be a service Provider?</Text></View>
-                  <View style={{flex: 1,flexDirection: 'row', justifyContent:'flex-end'}}><Switch value={true} style={styles.switch}/></View>
+                  <View style={{flex: 1,flexDirection: 'row', justifyContent:'flex-end',alignItems:'center'}}><Switch value={true} style={styles.switch}/></View>
               </View>
 
 
             <View style={styles.servicesBox}>
                  <Text style={styles.textStyle}>Select the services you will provide</Text>
-                 <View style={{paddingTop:20,paddingBottom:20}}>
+                 <View style={{paddingBottom:20}}>
                     <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
-                    <View style={{flex:1}}>
+                    <View style={{flex:1.5}}>
                         <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Waiter</Text>
-                          <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                          <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
-                          button={ require('../assets/icons/eclipse.png')}
+                          button={ require('../assets/icons/eclipse_blue.png')}
                           buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
                           destructiveIndex={1}
                           options={["Edit", "Delete", "Cancel"]}
@@ -397,13 +439,13 @@ class ProfileScreen extends Component {
                     </View>
                     </View>
                     <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
-                    <View style={{flex:1}}>
+                    <View style={{flex:1.5}}>
                     <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Painting</Text>
-                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
-                              button={ require('../assets/icons/eclipse.png')}
+                              button={ require('../assets/icons/eclipse_blue.png')}
                               buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
                               destructiveIndex={1}
                               options={["Edit", "Delete", "Cancel"]}
@@ -411,13 +453,13 @@ class ProfileScreen extends Component {
                     </View>
                     </View>
                     <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
-                    <View style={{flex:1}}>
+                    <View style={{flex:1.5}}>
                     <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Dog Walking</Text>
-                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'rgb(169,169,169)',fontSize:14}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
-                              button={ require('../assets/icons/eclipse.png')}
+                              button={ require('../assets/icons/eclipse_blue.png')}
                               buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
                               destructiveIndex={1}
                               options={["Edit", "Delete", "Cancel"]}
@@ -426,8 +468,8 @@ class ProfileScreen extends Component {
                     </View>
                 </View>
                 <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
-                <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceCatScreen',{mainScreen:'profile'})}}><Text style={styles.btnText}>ADD MORE SERVICES</Text></TouchableOpacity>
+                <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#F2F2F2', '#CCCCCC']} style={styles.button}>
+                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceCatScreen',{mainScreen: 'account'})}}><Text style={[styles.btnText,{fontFamily:'Montserrat-Regular',color:'black'}]}>ADD SERVICES</Text></TouchableOpacity>
                     </LinearGradient>
                 </View>
             </View>
@@ -435,7 +477,7 @@ class ProfileScreen extends Component {
               <View style={styles.servicesBox}>
               <View style={{marginVertical:20}}>
               <FloatingLabelInput
-                            label="Write about your self"
+                            label="Write about yourself"
                             value={this.state.about}
                             autoCapitalize='none'
                             onSubmitEditing={() => {
@@ -458,7 +500,7 @@ class ProfileScreen extends Component {
               {/* Upload Certificates ends here */ }
               {/* Upload Pics starts here */ }
              <View style={styles.servicesBox}>
-                <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
+                <View style={{flexDirection: 'row',alignItems:'center'}}>
                     <Text style={styles.textStyle}>Upload Pics of Work</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
@@ -468,7 +510,7 @@ class ProfileScreen extends Component {
               {/* Upload Pics ends here */}
              {/* Upload Id starts here */ }
           <View style={styles.servicesBox}>
-                <View style={{marginVertical:20}}>
+                <View >
                     <Text style={styles.textStyle}>Upload ID</Text>
                     <Text style={{fontSize:13,marginVertical:10,fontFamily:'Montserrat-Light'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
                 </View>
@@ -479,7 +521,7 @@ class ProfileScreen extends Component {
               {/* Upload Id ends here */}
            {/* Upload Video starts here */ }
            <View style={styles.servicesBox}>
-                <View style={{marginVertical:20}}>
+                <View>
                     <Text style={styles.textStyle}>Add Video Link</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
@@ -489,8 +531,8 @@ class ProfileScreen extends Component {
               {/* Upload Video ends here */}
              {/* Upload Website starts here */ }
            <View style={styles.servicesBox}>
-                <View style={{marginVertical:20}}>
-                    <Text style={styles.textStyle}>Add Video Link</Text>
+                <View >
+                    <Text style={styles.textStyle}>Add Website Link</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={websites} placeholder={true}/>
@@ -499,7 +541,7 @@ class ProfileScreen extends Component {
               {/* Upload Website ends here */}
           {/* Upload Linkedin starts here */ }
            <View style={styles.servicesBox}>
-                <View style={{marginVertical:20}}>
+                <View>
                     <Text style={styles.textStyle}>Add Linkedin Profile Link</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
@@ -519,7 +561,11 @@ class ProfileScreen extends Component {
 
                        </View>
                </LinearGradient>
-
+               <DateTimePicker
+              isVisible={this.state.isDateTimePickerVisible}
+              onConfirm={this._handleDatePicked}
+              onCancel={this._hideDateTimePicker}
+            />
            </View>
        )
   }
@@ -619,13 +665,14 @@ const styles = StyleSheet.create({
 },
 textStyle: {
   fontFamily:"Montserrat-SemiBold",
-  fontSize: 16
+  fontSize: 16,
+  paddingBottom:20
 },
 miniSwitch: {
-  transform: Platform.OS === 'ios' ? [{ scaleX: .4 }, { scaleY: .4 }] : [{ scaleX: .6}, { scaleY: .6 }]
+  transform: Platform.OS === 'ios' ? [{ scaleX: .6 }, { scaleY: .6 }] : [{ scaleX: .6}, { scaleY: .6 }]
 },
 switch: {
-  transform: Platform.OS === 'ios' ? [{ scaleX: .5 }, { scaleY: .5 }] : [{ scaleX: .8 }, { scaleY: .8 }]
+  transform: Platform.OS === 'ios' ? [{ scaleX: .9 }, { scaleY: .9 }] : [{ scaleX: .8 }, { scaleY: .8 }]
 },
 })
 

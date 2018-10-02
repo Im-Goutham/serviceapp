@@ -214,8 +214,8 @@ class PostJobScreen extends Component {
                   <View style={styles.servicesBox}>
                       <View style={{flex:1,flexDirection:'row'}}>
                             <View style={{flex:1,flexDirection:'column',alignItems:'flex-start'}}>
-                                <Text style={styles.textStyle}>Select a Category</Text>
-                                <Text style={[styles.inputLabel,{fontSize:13,marginVertical:5,color:'#D8D8D8',fontFamily:'Montserrat-Medium'}]}>Home Exterior</Text>
+                                <Text style={[styles.textStyle,{paddingBottom:0}]}>Select a Category</Text>
+                                <Text style={[styles.inputLabel,{fontSize:13,marginVertical:5,color:'#9B9B9B',fontFamily:'Montserrat-Medium'}]}>Home Exterior</Text>
                             </View>
                            <View style={{flex:1,alignItems:'flex-end',justifyContent:'center'}}>
                                 <Image source={require('../assets/icons/arrow_right.png')} style={{width:15,height: 15}} resizeMode="contain" resizeMethod="resize"/>
@@ -225,8 +225,8 @@ class PostJobScreen extends Component {
                 </TouchableOpacity>
                  <View style={styles.servicesBox}>
                       <View style={{flex:1}}>
-                           <Text style={styles.textStyle}>Enter Job Address</Text>
-                            <Text style={[styles.inputLabel,{fontSize:13,color:'#D8D8D8',marginVertical:5,fontFamily:'Montserrat-Medium'}]}>It will show only the job is Booked or Scheduled</Text>
+                           <Text style={[styles.textStyle,{paddingBottom:0}]}>Enter Job Address</Text>
+                            <Text style={[styles.inputLabel,{fontSize:14,color:'#CCCCCC',marginVertical:5,fontFamily:'Montserrat-Medium'}]}>(It will show only the job is Booked or Scheduled)</Text>
                       </View>
                      <View style={styles.inputField}>
                      <FloatingLabelInput
@@ -399,7 +399,7 @@ class PostJobScreen extends Component {
 
               {/* Upload Pics starts here */ }
              <View style={styles.servicesBox}>
-                <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
+                <View style={{flexDirection: 'row',alignItems:'center'}}>
                     <Text style={styles.textStyle}>Upload Pics</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
@@ -410,7 +410,7 @@ class PostJobScreen extends Component {
 
            {/* Upload Video starts here */ }
            <View style={styles.servicesBox}>
-                <View style={{marginVertical:20}}>
+                <View style={{}}>
                     <Text style={styles.textStyle}>Add Video Link</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
@@ -421,8 +421,8 @@ class PostJobScreen extends Component {
 
             <View style={{justifyContent: "center" ,flexDirection:'row',marginBottom:20,marginTop:10}}>
             <View style={{flex:1,paddingRight:10}}>
-                <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#CCCCCC', '#F2F2F2']} style={styles.button}>
-                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('homePage')}}><Text style={styles.btnText}>CANCEL</Text></TouchableOpacity>
+                <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={[ '#F2F2F2','#CCCCCC']} style={styles.button}>
+                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('homePage')}}><Text style={[styles.btnText,{color:'black',fontFamily:'MontSerrat-Regular'}]}>CANCEL</Text></TouchableOpacity>
                 </LinearGradient>
             </View>
             <View style={{flex:1,paddingLeft:10}}>
@@ -482,7 +482,7 @@ const styles = StyleSheet.create({
       textAlign:'center',
       color:'white',
       fontSize: 16,
-      fontWeight:'bold'
+      fontFamily:'Montserrat-Bold'
   },
     socialBox:{
       flexDirection:'row',
@@ -533,9 +533,11 @@ const styles = StyleSheet.create({
     elevation: 3,
 },
 textStyle: {
-  fontFamily:"Montserrat-SemiBold"
-}
-
+  fontFamily:"Montserrat-SemiBold",
+  color:'#22262C',
+  fontSize: 16,
+  paddingBottom:20
+},
       
 })
 

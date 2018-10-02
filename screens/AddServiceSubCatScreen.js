@@ -28,15 +28,23 @@ class AddServiceSubCatScreen extends Component {
       super(props);
       this.state={
           subCategories: [
-            {name:'Home Interior',image: require('../assets/icons/home_interior.png')},
-            {name:'Home Exterior',image: require('../assets/icons/home_exterior.png')},
-            {name:'Landscaping',image: require('../assets/icons/landscaping.png')},
-            {name:'Handyman',image: require('../assets/icons/handyman.png')},
-            {name:'Electrician',image: require('../assets/icons/electrician.png')},
-            {name:'Pluming',image: require('../assets/icons/plumbing.png')},
+            {name:'Hair',image: require('../assets/icons/hair.png')},
+            {name:'Manicure/Pedicure',image: require('../assets/icons/manicure_pedicure.png')},
+            {name:'Makeup',image: require('../assets/icons/makeup.png')},
+            {name:'Wax',image: require('../assets/icons/wax.png')},
+            {name:'Other',image: require('../assets/icons/other.png')},
           ]
       }
   }
+
+
+    selectSubCategory(index){
+            let {subCategories} = this.state;
+            subCategories[index].selected = !subCategories[index].selected;
+            this.setState({subCategories});
+            console.log(subCategories);
+    }  
+
 
 
     render() {
@@ -60,7 +68,7 @@ class AddServiceSubCatScreen extends Component {
                                navigation={this.props.navigation}
                                left = {
                                    <TouchableOpacity
-                                       onPress={() => this.props.navigation.openDrawer()}
+                                       onPress={() => this.props.navigation.goBack()}
                                        style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
                                        <Image source={back_arrow} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                    </TouchableOpacity>
@@ -79,25 +87,23 @@ class AddServiceSubCatScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10,marginHorizontal:10}}>
-                                <SearchBar/>
+                              
                    </View>
                        }
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
-               <ScrollView contentContainerStyle={{
-              justifyContent: 'space-between'
-          }}>
+               <ScrollView contentContainerStyle={{flexGrow:1}}>
                 <View style={styles.container}>
-                <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between',height:height-200}}>
+                <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10,justifyContent:'space-between'}}>
               <View style={styles.servicesBox}>
-              <View style={{marginVertical:20}}>
+              <View style={{marginTop:20}}>
                   <Text style={styles.textStyle}>Select Sub Category</Text>
               </View>
               <View style={styles.categoryContainer}>
               {
                          subCategories ? (
                             subCategories.map((category,key)=>{
-                                  return  <CategoryContainer category={category}/>
+                                  return  <CategoryContainer key={key} index={key} category={category} selectCategory={(index)=> {this.selectSubCategory(index)}}/>
                             })
                          ) : null
                     }
@@ -109,7 +115,7 @@ class AddServiceSubCatScreen extends Component {
                    start={{x: 0, y: 0}}
                    end={{x: 1, y: 0}}
                    style={{
-                     paddingVertical: 20
+                     paddingVertical: 25
                    }}>
                  <TouchableOpacity onPress={() => {this.props.navigation.navigate('profile')}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
                </LinearGradient>
@@ -149,12 +155,12 @@ const styles = StyleSheet.create({
         elevation: 1,
     },
     textStyle: {
-      fontFamily:"Montserrat-Bold",
-      fontWeight:'bold',
+      fontFamily:"Montserrat-SemiBold",
       fontSize:17
     },
       categoryContainer: {
         flex: 1,
+        paddingVertical:10,
         flexDirection: 'row',
         flexWrap:'wrap',
         justifyContent:'space-around',

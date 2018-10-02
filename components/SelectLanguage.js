@@ -35,8 +35,8 @@ export default class SelectLocation extends Component {
             itemStyle={{color:'#3581fc',height:200,paddingVertical:5}}
             onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
             {
-               languages.map((language,key)=> {
-                    return  <Picker.Item label={language} value={language} />
+               this.state.languages.map((language,key)=> {
+                    return  <Picker.Item key={key} label={language} value={language} />
                })
             }
             </Picker>

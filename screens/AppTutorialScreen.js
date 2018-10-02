@@ -25,7 +25,7 @@ class AppTutorialScreen extends Component {
                     </View>    
                     <View style={styles.tutorialText}>
                         <Text style={[styles.text,{fontSize:20,  fontFamily:'Montserrat-Bold'}]}>Find Odd Jobs Near You.</Text>
-                        <Text style={styles.text}>Use paid services between individuals to earn extra cash. Get paid directly, no commision or transaction fees.</Text>
+                        <Text style={styles.text}>Use paid services between individuals to earn extra cash. Get paid directly, no commission or transaction fees.</Text>
                     </View> 
                 </View>
                 <View style={styles.slide}>
@@ -33,7 +33,7 @@ class AppTutorialScreen extends Component {
                          <Image source={require('../images/tutorial/img2.png')} style={styles.imgStyle}  resizeMode="contain" resizeMethod="resize" />
                     </View>    
                     <View style={styles.tutorialText}>
-                        <Text style={[styles.text,{fontSize:20,  fontFamily:'Montserrat-Bold'}]}>Find Hlp For Your Project</Text>
+                        <Text style={[styles.text,{fontSize:20,  fontFamily:'Montserrat-Bold'}]}>Find Help For Your Project</Text>
                         <Text style={styles.text}>Post a job and get help on budget. Chatting available for your convenience.</Text>
                     </View> 
                 </View>
@@ -62,7 +62,7 @@ class AppTutorialScreen extends Component {
             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('register')}}><Text style={styles.btnText}> SIGN UP</Text></TouchableOpacity>
             </LinearGradient>
-              <Text style={{marginVertical:20,color:'#808080',fontSize:17,textAlign:'center'}}>Already have an account  <Text style={{fontWeight: 'bold',color:'#3581fc'}} onPress={()=>{this.props.navigation.navigate('login')}}>Sign in</Text></Text>
+              <Text style={{marginVertical:20,fontFamily:'Montserrat-Regular',color:'#4A4A4A',fontSize:17,textAlign:'center'}}>Already have an account? <Text style={{fontFamily:'Montserrat-Bold',color:'#3E85EF'}} onPress={()=>{this.props.navigation.navigate('login')}}>Sign in</Text></Text>
             </View>
             <SelectLanguage />  
         </View>
@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
       alignItems: 'center',
     },
     text: {
-      fontSize: 16,
-      color:'white',
+      fontSize: 17,
+      color:'#FFFFFF',
       fontFamily:'Montserrat-Medium',
       lineHeight:22,
       textAlign:'center',
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
         fontFamily:'Montserrat-Bold'
     },
     imgBox:{flex:4,justifyContent:'center',alignItems:'center'},
-    imgStyle: {height:250}
+    imgStyle: {height:260}
 })
 
 export default AppTutorialScreen;

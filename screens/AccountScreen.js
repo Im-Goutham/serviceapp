@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { View, StyleSheet, ActivityIndicator, TouchableOpacity,TouchableHighlight, Image, ScrollView,Platform,Dimensions} from 'react-native';
 import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Text, Icon, Textarea,Label } from 'native-base';
@@ -9,6 +10,7 @@ import * as actions from '../actions';
 import Documents from '../components/Documents';
 import Header from '../components/Header';
 import FloatingLabelInput from '../components/FloatingLabelInput';
+import HeaderScreen from './HeaderScreen';
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
 
@@ -166,42 +168,57 @@ class AccountScreen extends Component {
       }
     });
   }
-
-
     render() {
       let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;  
       let { backButton } = this.props;
-      return ( 
-        <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
-              <Header
-              navigation={this.props.navigation}
-              left = {
-                <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                {
-                    (backButton)?(
-                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                        </TouchableOpacity>
-                    ):(null)
-                }
-                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                </TouchableOpacity>
-             </View>
-              }
-              title={
-                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                    <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>User Profile</Text>
-                </View>
-              }
-              right={
-                <View></View>
-              }
-              />
-              <ScrollView style={{backgroundColor:'rgb(249, 252, 255)'}}>
-              <View style={[styles.container,{marginTop:isAndroid? 0: 50}]}>   
-      
+       return (
+           <View style={{flex:1}}>
+               <LinearGradient
+                   colors={['#3E85EF', '#3EBDEF']}
+                   start={{x: 0, y: 0}}
+                   end={{x: 1, y: 0}}
+                   style={{
+                       flex: 1
+                   }}>
+                   <HeaderScreen
+                       header={
+                           <Header
+                               navigation={this.props.navigation}
+                               left = {
+                                <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                                {
+                                    (backButton)?(
+                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        </TouchableOpacity>
+                                    ):(null)
+                                }
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                </TouchableOpacity>
+                             </View>
+                               }
+                               title={
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>User Profile</Text>
+                               </View>
+                               }
+                               right={
+                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
 
+                                   </View>
+                               }
+                           />
+                       }
+                       content={
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
+                       
+                   </View>
+                       }
+                   />
+                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
+                       
+                   <ScrollView style={{backgroundColor:'rgb(249, 252, 255)'}}>
               <View >
                  <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
               </View>  
@@ -509,125 +526,128 @@ class AccountScreen extends Component {
             </View>
                 </View>
               </View>
-               </View>
                </ScrollView>
-               </LinearGradient>
-      );
-    }
-}
 
+
+
+                       </View>
+               </LinearGradient>
+              
+           </View>
+       )
+  }
+}
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'space-between'
-    
-    },
-    logoText: {
-      color:'white',
-      textAlign:'left',
-      fontSize:35,
-      fontWeight:'bold'
-    },
-    inputLabel: {
-       textAlign:'left',
-       fontSize: 16,
-       fontFamily:'Montserrat-Light'
-    },
-    inputField: {
-        marginVertical: 10
-    },
-    borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
-    text: {
-      marginBottom: 15,
-      marginTop: 15,
-      fontSize: 15,
-      textAlign: 'center',
-    },
-    button:{
-      backgroundColor:'#4A4A4A',
-      width: '100%',
-      borderRadius:30,
-      borderWidth: 1,
-      borderColor: '#fff',
-      marginTop:10,
-      paddingTop:16,
-      paddingBottom:16,
-  },
-  btnText: { 
-      textAlign:'center',
-      color:'black',
-      fontSize: 16,
-      fontFamily:'Montserrat-Bold'
-  },
-    socialBox:{
-      flexDirection:'row',
-      backgroundColor:'white',
-      borderRadius:20,
-      elevation: 3,
-    },
-    logoContainer: {
-      flex:1,
-      justifyContent: 'center',
-      alignItems: 'center'
-    },
-    imgsView: {
-      flex: 1,
-      padding:10,
-      position: 'relative',
-      top: 0,
-      left: 0
-    },
-    user_placeholder: {
-
-      width: 140,
-      height: 140,
-      borderRadius:70,
-      justifyContent:'center',
-      alignItems:'center',
-    },
-    camera_icon: {
-      width: 40,
-      height: 40,
-      borderRadius:20,
-      position: 'absolute',
-      bottom: 10,
-      right: 10,
-      justifyContent:'center',
-      alignItems:'center',
-    },
- servicesBox: {
+  container: {
     flex: 1,
-    marginVertical: 20,
-    paddingVertical: 25,
-    paddingHorizontal:20,
-    borderRadius:10,
-    backgroundColor:'white',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 2,
-    elevation: 3,
+    justifyContent: 'space-between'
+
 },
-textStyle: {
-  fontFamily:"Montserrat-Bold",
+logoText: {
+  color:'white',
+  textAlign:'left',
+  fontSize:35,
   fontWeight:'bold'
 },
-star_style: {
-  width:15, height:15, marginHorizontal:5
+inputLabel: {
+   textAlign:'left',
+   fontSize: 16,
+   fontFamily:'Montserrat-Light'
 },
-switch: {
-  transform: Platform.OS === 'ios' ? [{ scaleX: .5 }, { scaleY: .5 }] : [{ scaleX: .8 }, { scaleY: .8 }]
+inputField: {
+    marginVertical: 10
+},
+borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
+text: {
+  marginBottom: 15,
+  marginTop: 15,
+  fontSize: 15,
+  textAlign: 'center',
+},
+button:{
+  backgroundColor:'#4A4A4A',
+  width: '100%',
+  borderRadius:30,
+  borderWidth: 1,
+  borderColor: '#fff',
+  marginTop:10,
+  paddingTop:16,
+  paddingBottom:16,
+},
+btnText: { 
+  textAlign:'center',
+  color:'black',
+  fontSize: 16,
+  fontFamily:'Montserrat-Bold'
+},
+socialBox:{
+  flexDirection:'row',
+  backgroundColor:'white',
+  borderRadius:20,
+  elevation: 3,
+},
+logoContainer: {
+  flex:1,
+  justifyContent: 'center',
+  alignItems: 'center'
+},
+imgsView: {
+  flex: 1,
+  padding:10,
+  position: 'relative',
+  top: 0,
+  left: 0
+},
+user_placeholder: {
+
+  width: 140,
+  height: 140,
+  borderRadius:70,
+  justifyContent:'center',
+  alignItems:'center',
+},
+camera_icon: {
+  width: 40,
+  height: 40,
+  borderRadius:20,
+  position: 'absolute',
+  bottom: 10,
+  right: 10,
+  justifyContent:'center',
+  alignItems:'center',
+},
+servicesBox: {
+flex: 1,
+marginVertical: 20,
+paddingVertical: 25,
+paddingHorizontal:20,
+borderRadius:10,
+backgroundColor:'white',
+shadowOffset: { width: 0, height: 2 },
+shadowOpacity: 0.2,
+shadowRadius: 2,
+elevation: 3,
+},
+textStyle: {
+fontFamily:"Montserrat-Bold",
+fontWeight:'bold'
+},
+star_style: {
+width:15, height:15, marginHorizontal:5
 },
 miniSwitch: {
-  transform: Platform.OS === 'ios' ? [{ scaleX: .4 }, { scaleY: .4 }] : [{ scaleX: .6}, { scaleY: .6 }]
-}
-      
+  transform: Platform.OS === 'ios' ? [{ scaleX: .6 }, { scaleY: .6 }] : [{ scaleX: .6}, { scaleY: .6 }]
+},
+switch: {
+  transform: Platform.OS === 'ios' ? [{ scaleX: .9 }, { scaleY: .9 }] : [{ scaleX: .8 }, { scaleY: .8 }]
+},
 })
 
 
 const mapStateToProps = state=> ({ 
-  backButton:state.user.backButton,
-})
-
+    backButton:state.user.backButton,
+  })
+  
 export default connect(mapStateToProps, actions)(AccountScreen);
 

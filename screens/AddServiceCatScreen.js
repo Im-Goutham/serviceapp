@@ -28,53 +28,82 @@ class AddServiceCatScreen extends Component {
       super(props);
       this.state={
          popularCategories: [
-            {name:'Home Interior',image: require('../assets/icons/home_interior.png')},
-            {name:'Home Exterior',image: require('../assets/icons/home_exterior.png')},
-            {name:'Landscaping',image: require('../assets/icons/landscaping.png')},
-            {name:'Handyman',image: require('../assets/icons/handyman.png')},
-            {name:'Electrician',image: require('../assets/icons/electrician.png')},
-            {name:'Pluming',image: require('../assets/icons/plumbing.png')},
+            {name:'Home Interior',image: require('../assets/icons/home_interior.png'),selected:false},
+            {name:'Home Exterior',image: require('../assets/icons/home_exterior.png'),selected:false},
+            {name:'Landscaping',image: require('../assets/icons/landscaping.png'),selected:false},
+            {name:'Handyman',image: require('../assets/icons/handyman.png'),selected:false},
+            {name:'Electrician',image: require('../assets/icons/electrician.png'),selected:false},
+            {name:'Plumbing',image: require('../assets/icons/plumbing.png'),selected:false},
           ],
           allCategories: [
-            {name:'All',image: require('../assets/icons/all.png')},
-            {name:'Home Exterior',image: require('../assets/icons/home_exterior.png')},
-            {name:'Landscaping',image: require('../assets/icons/landscaping.png')},
-            {name:'Handyman',image: require('../assets/icons/handyman.png')},
-            {name:'Electrician',image: require('../assets/icons/electrician.png')},
-            {name:'Pluming',image: require('../assets/icons/plumbing.png')},
-            {name:'Painting',image: require('../assets/icons/painting.png')},
-            {name:'Appliance repair',image: require('../assets/icons/appliance.png')},
-            {name:'Mounting & installing',image: require('../assets/icons/mounting.png')},
-            {name:'Furniture Assembly',image: require('../assets/icons/furniture.png')},
-            {name:'Cars & Vehicles',image: require('../assets/icons/cars.png')},
-            {name:'Cleaning & Housework',image: require('../assets/icons/cleaning.png')},
-            {name:'Moving / Delivery',image: require('../assets/icons/delivery.png')},
-            {name:'Beauty',image: require('../assets/icons/beauty.png')},
-            {name:'Relaxation',image: require('../assets/icons/relaxation.png')},
-            {name:'Babysitting',image: require('../assets/icons/babysitting.png')},
-            {name:'Pest Control',image: require('../assets/icons/pestcontrol.png')},
-            {name:'Adult Care',image: require('../assets/icons/adultcare.png')},
-            {name:'Pet Care',image: require('../assets/icons/petcare.png')},
-            {name:'Carpool',image: require('../assets/icons/carpool.png')},
-            {name:'Tutoring',image: require('../assets/icons/tutoring.png')},
-            {name:'Tech & Computers',image: require('../assets/icons/tech.png')},
-            {name:'Document Services',image: require('../assets/icons/document.png')},
-            {name:'Running Errands',image: require('../assets/icons/running.png')},
-            {name:'Shopping',image: require('../assets/icons/shopping.png')},
-            {name:'Decor',image: require('../assets/icons/decor.png')},
-            {name:'Fitness',image: require('../assets/icons/fitness.png')},
-            {name:'Music & Dance',image: require('../assets/icons/music.png')},
-            {name:'photo & Video',image: require('../assets/icons/photo.png')},
-            {name:'Food',image: require('../assets/icons/food.png')},
-            {name:'Wine & Gastronomy',image: require('../assets/icons/wine.png')},
-            {name:'Private Chef',image: require('../assets/icons/chef.png')},
-            {name:'Concierge',image: require('../assets/icons/concierge.png')},
-            {name:'Event Planning',image: require('../assets/icons/event.png')},
-            {name:'Home Interior',image: require('../assets/icons/home_interior.png')},
-            {name:'Other',image: require('../assets/icons/other.png')},
+            {name:'All',image: require('../assets/icons/all.png'),selected:false},
+            {name:'Home Exterior',image: require('../assets/icons/home_exterior.png'),selected:false},
+            {name:'Landscaping',image: require('../assets/icons/landscaping.png'),selected:false},
+            {name:'Handyman',image: require('../assets/icons/handyman.png'),selected:false},
+            {name:'Electrician',image: require('../assets/icons/electrician.png'),selected:false},
+            {name:'Plumbing',image: require('../assets/icons/plumbing.png'),selected:false},
+            {name:'Painting',image: require('../assets/icons/painting.png'),selected:false},
+            {name:'Appliance repair',image: require('../assets/icons/appliance.png'),selected:false},
+            {name:'Mounting & installing',image: require('../assets/icons/mounting.png'),selected:false},
+            {name:'Furniture Assembly',image: require('../assets/icons/furniture.png'),selected:false},
+            {name:'Cars & Vehicles',image: require('../assets/icons/cars.png'),selected:false},
+            {name:'Cleaning & Housework',image: require('../assets/icons/cleaning.png'),selected:false},
+            {name:'Moving / Delivery',image: require('../assets/icons/delivery.png'),selected:false},
+            {name:'Beauty',image: require('../assets/icons/beauty.png'),selected:false},
+            {name:'Relaxation',image: require('../assets/icons/relaxation.png'),selected:false},
+            {name:'Babysitting',image: require('../assets/icons/babysitting.png'),selected:false},
+            {name:'Pest Control',image: require('../assets/icons/pestcontrol.png'),selected:false},
+            {name:'Adult Care',image: require('../assets/icons/adultcare.png'),selected:false},
+            {name:'Pet Care',image: require('../assets/icons/petcare.png'),selected:false},
+            {name:'Carpool',image: require('../assets/icons/carpool.png'),selected:false},
+            {name:'Tutoring',image: require('../assets/icons/tutoring.png'),selected:false},
+            {name:'Tech & Computers',image: require('../assets/icons/tech.png'),selected:false},
+            {name:'Document Services',image: require('../assets/icons/document.png'),selected:false},
+            {name:'Running Errands',image: require('../assets/icons/running.png'),selected:false},
+            {name:'Shopping',image: require('../assets/icons/shopping.png'),selected:false},
+            {name:'Decor',image: require('../assets/icons/decor.png'),selected:false},
+            {name:'Fitness',image: require('../assets/icons/fitness.png'),selected:false},
+            {name:'Music & Dance',image: require('../assets/icons/music.png'),selected:false},
+            {name:'Photo & Video',image: require('../assets/icons/photo.png'),selected:false},
+            {name:'Food',image: require('../assets/icons/food.png'),selected:false},
+            {name:'Wine & Gastronomy',image: require('../assets/icons/wine.png'),selected:false},
+            {name:'Private Chef',image: require('../assets/icons/chef.png'),selected:false},
+            {name:'Concierge',image: require('../assets/icons/concierge.png'),selected:false},
+            {name:'Event Planning',image: require('../assets/icons/event.png'),selected:false},
+            {name:'Home Interior',image: require('../assets/icons/home_interior.png'),selected:false},
+            {name:'Other',image: require('../assets/icons/other.png'),selected:false},
        ]
       }
   }
+
+  selectPopularCategory(index){
+       let {popularCategories} = this.state;
+       popularCategories[index].selected = !popularCategories[index].selected;
+       this.setState({popularCategories});
+       console.log(popularCategories);
+  }
+
+  selectAllCategory(index){
+    let {allCategories} = this.state;
+  
+    if(index == 0){
+        allCategories[0].selected = !allCategories[0].selected;
+        var data = allCategories.map((category,key)=> {
+                var categoryData = category;
+                categoryData.selected = allCategories[0].selected;
+                return categoryData;
+        })
+        this.setState({allCategories:data});
+        console.log(allCategories);
+    }
+    else {
+        allCategories[index].selected = !allCategories[index].selected;
+        if(!allCategories[index].selected){
+            allCategories[0].selected = false;
+        }
+        this.setState({allCategories});
+    }
+}
 
 
     render() {
@@ -98,7 +127,7 @@ class AddServiceCatScreen extends Component {
                                navigation={this.props.navigation}
                                left = {
                                    <TouchableOpacity
-                                       onPress={() => this.props.navigation.openDrawer()}
+                                       onPress={() => this.props.navigation.goBack()}
                                        style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
                                        <Image source={back_arrow} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                    </TouchableOpacity>
@@ -126,7 +155,7 @@ class AddServiceCatScreen extends Component {
       justifyContent: 'space-between'
   }}>
         <View style={styles.container}>
-        <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}>
+        <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10,justifyContent:'space-between'}}>
 
 
         <View style={styles.servicesBox}>
@@ -140,7 +169,7 @@ class AddServiceCatScreen extends Component {
                     {
                          popularCategories ? (
                             popularCategories.map((category,key)=>{
-                                  return  <CategoryContainer category={category}/>
+                                  return  <CategoryContainer key={key} index={key} category={category} selectCategory={(index)=> {this.selectPopularCategory(index)}}/>
                             })
                          ) : null
                     }
@@ -156,7 +185,7 @@ class AddServiceCatScreen extends Component {
               {
                          allCategories ? (
                             allCategories.map((category,key)=>{
-                                  return  <CategoryContainer category={category}/>
+                                  return  <CategoryContainer key={key} index={key} category={category} selectCategory={(index)=> {this.selectAllCategory(index)}}/>
                             })
                          ) : null
                     }
@@ -172,7 +201,7 @@ class AddServiceCatScreen extends Component {
                    start={{x: 0, y: 0}}
                    end={{x: 1, y: 0}}
                    style={{
-                      paddingVertical: 20
+                      paddingVertical: 25
                    }}>
                  <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceSubCatScreen',{mainScreen:mainScreen})}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
                </LinearGradient>
@@ -213,12 +242,12 @@ const styles = StyleSheet.create({
         elevation: 1,
     },
     textStyle: {
-      fontFamily:"Montserrat-Bold",
-      fontWeight:'bold',
+      fontFamily:"Montserrat-SemiBold",
       fontSize:17
     },
       categoryContainer: {
         flex: 1,
+        paddingVertical:10,
         flexDirection: 'row',
         flexWrap:'wrap',
         justifyContent:'space-around',

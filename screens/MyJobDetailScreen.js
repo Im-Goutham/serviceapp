@@ -41,7 +41,7 @@ export default class MyJobDetailPage extends Component {
                 { name: 'Flooring', image: require('../images/cat4.png') },
                 { name: 'Watering', image: require('../images/cat1.png') },
                 { name: 'Electrician', image: require('../images/cat2.png') },
-                { name: 'Pluming', image: require('../images/cat3.png') },
+                { name: 'Plumbing', image: require('../images/cat3.png') },
             ],
             serviceProviders: [
                 { name: 'Clayton', image: require('../images/svp1.png') },

@@ -36,7 +36,7 @@ class FilterScreen extends Component {
             {name:'Landscaping',image: require('../assets/icons/landscaping.png')},
             {name:'Handyman',image: require('../assets/icons/handyman.png')},
             {name:'Electrician',image: require('../assets/icons/electrician.png')},
-            {name:'Pluming',image: require('../assets/icons/plumbing.png')},
+            {name:'Plumbing',image: require('../assets/icons/plumbing.png')},
           ],
           allCategories: [
             {name:'All',image: require('../assets/icons/all.png')},
@@ -44,7 +44,7 @@ class FilterScreen extends Component {
             {name:'Landscaping',image: require('../assets/icons/landscaping.png')},
             {name:'Handyman',image: require('../assets/icons/handyman.png')},
             {name:'Electrician',image: require('../assets/icons/electrician.png')},
-            {name:'Pluming',image: require('../assets/icons/plumbing.png')},
+            {name:'Plumbing',image: require('../assets/icons/plumbing.png')},
             {name:'Painting',image: require('../assets/icons/painting.png')},
             {name:'Appliance repair',image: require('../assets/icons/appliance.png')},
             {name:'Mounting & installing',image: require('../assets/icons/mounting.png')},
@@ -67,7 +67,7 @@ class FilterScreen extends Component {
             {name:'Decor',image: require('../assets/icons/decor.png')},
             {name:'Fitness',image: require('../assets/icons/fitness.png')},
             {name:'Music & Dance',image: require('../assets/icons/music.png')},
-            {name:'photo & Video',image: require('../assets/icons/photo.png')},
+            {name:'Photo & Video',image: require('../assets/icons/photo.png')},
             {name:'Food',image: require('../assets/icons/food.png')},
             {name:'Wine & Gastronomy',image: require('../assets/icons/wine.png')},
             {name:'Private Chef',image: require('../assets/icons/chef.png')},
@@ -83,6 +83,35 @@ class FilterScreen extends Component {
 
   handleTextChange = (newText) => this.setState({ value: newText });
 
+
+    selectPopularCategory(index){
+        let {popularCategories} = this.state;
+        popularCategories[index].selected = !popularCategories[index].selected;
+        this.setState({popularCategories});
+        console.log(popularCategories);
+    }
+
+    selectAllCategory(index){
+         let {allCategories} = this.state;
+
+            if(index == 0){
+                allCategories[0].selected = !allCategories[0].selected;
+                var data = allCategories.map((category,key)=> {
+                        var categoryData = category;
+                        categoryData.selected = allCategories[0].selected;
+                        return categoryData;
+                })
+                this.setState({allCategories:data});
+                console.log(allCategories);
+            }
+            else {
+                allCategories[index].selected = !allCategories[index].selected;
+                if(!allCategories[index].selected){
+                    allCategories[0].selected = false;
+                }
+                this.setState({allCategories});
+           }
+    }
 
     render() {
       let {popularCategories, allCategories} = this.state;
@@ -223,7 +252,7 @@ class FilterScreen extends Component {
                     {
                          popularCategories ? (
                             popularCategories.map((category,key)=>{
-                                  return  <CategoryContainer category={category}/>
+                                  return  <CategoryContainer key={key} index={key} category={category} selectCategory={(index)=> {this.selectPopularCategory(index)}}/>
                             })
                          ) : null
                     }
@@ -239,7 +268,7 @@ class FilterScreen extends Component {
               {
                          allCategories ? (
                             allCategories.map((category,key)=>{
-                                  return  <CategoryContainer category={category}/>
+                                  return  <CategoryContainer key={key} index={key} category={category} selectCategory={(index)=> {this.selectAllCategory(index)}}/>
                             })
                          ) : null
                     }

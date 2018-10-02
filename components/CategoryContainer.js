@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import { View, Text,Image, StyleSheet} from 'react-native';
+import { View, Text,Image, StyleSheet, TouchableOpacity} from 'react-native';
 
 
 
 class CategoryContainer extends Component {
   render() {
-    let {category } = this.props;
+    let {category,index } = this.props;
     return (
-      <View style={styles.mainBox}>
-        <View style={styles.categoryBox}>
+      <TouchableOpacity
+        style={styles.mainBox}
+        onPress={()=>{this.props.selectCategory(index)}}
+        >
+        <View style={[styles.categoryBox,{borderColor: category.selected ? '#3E85EF' : 'rgb(237,237,237)'}]}>
               <Image source={category.image} style={{ width: 40, height: 40}} resizeMode="contain" resizeMethod="resize"/>
         </View>
-        <Text style={styles.categoryStyle}>{category.name}</Text>
-      </View>     
+        <Text style={[styles.categoryStyle,{color: category.selected ? '#3E85EF' : '#4A4A4A'}]}>{category.name}</Text>
+      </TouchableOpacity>     
     )
   }
 }

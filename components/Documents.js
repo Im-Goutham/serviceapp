@@ -26,15 +26,15 @@ export default class Documents extends Component {
                  documents ? (
                     documents.map((document,key)=>{
                           return  <View style={styles.documentBox} key={key}>
-
+                                        <View style={styles.imageShadow}>
                                         <Image source={document.image} style={styles.img_placeholder}/>
                                         {
                                             placeholder == true ? ( 
                                               <Image source={require('../images/close_img.png')} style={styles.close_img}/>
                                              ): (null)
                                         }
-                                      
-                                        <Text style={{paddingTop:5,paddingBottom:5}}>{document.name}</Text>
+                                      </View>
+                                        <Text style={styles.textStyle}>{document.name}</Text>
 
                                 </View> 
                     })
@@ -63,6 +63,12 @@ const styles = StyleSheet.create({
 		left: 0,
 
       },
+      imageShadow: {
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.2,
+        shadowRadius: 2,
+        elevation: 3,
+      },
       close_img: {
         width: 18,
         height: 18,
@@ -74,10 +80,14 @@ const styles = StyleSheet.create({
       documentBox: {
         flexDirection:'column',
         width:100,
-          shadowOffset: { width: 0, height: 2 },
-         shadowOpacity: 0.2,
-       shadowRadius: 2,
-        elevation: 3,
+
+      },
+      textStyle: {
+        paddingTop:5,
+        paddingBottom:5,
+        fontFamily: 'Montserrat-Regular',
+        fontSize:14,
+        color:'#4A4A4A'
       }
 })
 
