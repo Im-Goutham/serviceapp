@@ -43,12 +43,12 @@ class AllServiceList extends Component {
                             </View>
                             <View style={{flex:7,paddingHorizontal:20,paddingVertical:10,justifyContent:'space-between'}}>
                                 <View style={{flex:1}}>
-                                    <Text style={{fontSize:17,color:'rgb(85,85,85)'}}>Clayton L.</Text>
+                                    <Text style={{fontSize:17,color:'#4A4A4A'}}>Clayton L.</Text>
                                      <View style={{flexDirection:'row',paddingVertical:5}}>
                                        <Image source={require('../assets/icons/star_gold.png')} style={{widh:15,height:15}} resizeMode="contain" resizeMethod="resize" />
-                                       <Text style={{fontFamily: 'Montserrat-Bold'}}>5</Text>
+                                       <Text style={{color:'#4A4A4A',fontFamily: 'Montserrat-Bold'}}>5</Text>
                                      </View>
-                                    <Text style={{fontSize:14,color:'rgb(155,155,155)'}}>Plumber & 5 More</Text>
+                                    <Text style={{fontSize:14,color:'#9B9B9B'}}>Plumber & 5 More</Text>
                                 </View>
                             </View>
                         </View>
@@ -180,25 +180,6 @@ var styles = StyleSheet.create({
     iconStyle: {
         width:15,
         height:15
-    },
-    tagStyle:{
-        backgroundColor: 'rgb(239,186,47)',
-        borderRadius:10,
-        overflow:"hidden",
-        paddingVertical:2,
-        paddingLeft:10,
-        paddingRight:30,
-        color: 'white',
-        fontFamily: 'Montserrat-Bold'
-    },
-    iconButton: {
-        marginHorizontal:5,
-        width: 45,
-        height:45,
-        borderRadius:30,
-        justifyContent:'center',
-        alignItems:'center',
-        backgroundColor: 'rgba(255,255,255, 0.1)'
-      }
+    }
 });
 export default connect(null, actions)(AllServiceList);

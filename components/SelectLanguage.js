@@ -12,7 +12,7 @@ export default class SelectLocation extends Component {
      this.state = {
         visibleModal: true,
         language: 'english',
-        languages: ['English', 'french', 'Spanish', 'Italian', 'Portuguese', 'German','Hindi', 'Bengali', 'Telugu', 'Marathi', 'Tamil', 'Gujarati', 'Kannada',  'Malayalam']
+        languages: ['English', 'French', 'Spanish', 'Italian', 'Portuguese', 'German','Hindi', 'Bengali', 'Telugu', 'Marathi', 'Tamil', 'Gujarati', 'Kannada',  'Malayalam']
      }
   }
 

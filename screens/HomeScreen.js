@@ -186,7 +186,7 @@ class HomeScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingTop: 10,paddingBottom:20,marginHorizontal:10}}>
-                                <SearchBar/>
+                                <SearchBar placeholder={'Search here...' }/>
                    </View>
                        }
                    />
@@ -221,7 +221,9 @@ class HomeScreen extends Component {
                             <View style={styles.servicesBox}>
                             <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
                                     <Text style={styles.textStyle}>Home Interior</Text>
+                                    <TouchableOpacity onPress={this.navigateToScreen('findJobs')}>
                                     <Text style={styles.view}>VIEW ALL</Text>
+                                    </TouchableOpacity>
                                 </View>
                                 <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
                                 <ScrollView
@@ -248,7 +250,9 @@ class HomeScreen extends Component {
                             <View style={styles.servicesBox}>
                             <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
                                     <Text style={styles.textStyle}>See other Service Providers</Text>
+                                    <TouchableOpacity onPress={this.navigateToScreen('findHelp')}>
                                     <Text style={styles.view}>VIEW ALL</Text>
+                                    </TouchableOpacity>
                                 </View>
                                 <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
                                 <ScrollView
@@ -284,7 +288,9 @@ class HomeScreen extends Component {
                             <View style={styles.servicesBox}>
                                 <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
                                     <Text style={styles.textStyle}>Cars and Vehicles</Text>
-                                    <Text style={styles.view}>VIEW ALL</Text>
+                                    <TouchableOpacity onPress={this.navigateToScreen('findJobs')}>
+                                      <Text style={styles.view}>VIEW ALL</Text>
+                                    </TouchableOpacity>
                                 </View>
                                 <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
                                 <ScrollView

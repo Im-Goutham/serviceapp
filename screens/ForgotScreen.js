@@ -97,7 +97,7 @@ class ForgetScreen extends Component {
                                     <ActivityIndicator color="#8E24AA" size="large" />
                                     :
                                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                                        <TouchableOpacity onPress={() => {this.handleSubmit()}}><Text style={styles.btnText}>SUBMIT</Text></TouchableOpacity>
+                                        <TouchableOpacity onPress={() => {this.props.navigation.goBack()}}><Text style={styles.btnText}>SUBMIT</Text></TouchableOpacity>
                                     </LinearGradient>
                             }
                             </View>

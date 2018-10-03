@@ -10,7 +10,7 @@ import {
     Text, TouchableHighlight,
     KeyboardAvoidingView
 } from 'react-native';
-import {  Icon, CheckBox, Input } from 'native-base'
+import {  Icon, CheckBox,Item, Input } from 'native-base'
 import {GiftedChat, Actions, Bubble, SystemMessage} from 'react-native-gifted-chat';
 import SocketIOClient from 'socket.io-client';
 import LinearGradient from 'react-native-linear-gradient';
@@ -230,25 +230,27 @@ class MessageScreen extends Component {
 
   renderInputToolbar(props) {
    
-      return (
-        <View style={{flex:1,flexDirection:'row'}}>
-          <View style={{flex:9,marginBottom: isAndroid ? 0 : 15,paddingLeft:20}}>
-               <Input 
-                   placeholder='Type here...'
-                   value={this.state.message}
-                   onChangeText={message => this.setState({ message })}
-                   onSubmitEditing={this.onSend}
-                   />
-          </View>
-          <View style={{flex:1,marginTop:isAndroid ? 5 : 0,paddingRight:20}}>
-             <Image source={require('../assets/icons/mic.png')} style={{ width: '100%', height: 22}} resizeMode="contain" resizeMethod="resize"/>
-           </View>
-          
-          </View>
-      );
+    return (
+      <View style={{flexDirection:'row'}}>
+        <View style={{flex:9,paddingLeft:20}}>
+             <Input 
+                
+                 placeholder='Type here...'
+                 value={this.state.message}
+                 onChangeText={message => this.setState({ message })}
+                 onSubmitEditing={this.onSend}
+                 />
+        </View>
+        <View style={{flex:1,paddingRight:20}}>
+           <Image source={require('../assets/icons/mic.png')} style={{ width: '100%', height: 22}} resizeMode="contain" resizeMethod="resize"/>
+         </View>
+        
+        </View>
+    );
 
-    
-  }
+  
+}
+
 
 
   renderMessage(props) {
@@ -390,6 +392,16 @@ const styles = StyleSheet.create({
     paddingTop:5,
     paddingBottom:5,
 },
+inputBox: {
+  flex:1,
+  backgroundColor:'white',
+  borderRadius:10,
+  paddingHorizontal:15,
+},
+inputField: {
+fontFamily: 'Montserrat-Medium',
+marginHorizontal:10,
+}
 })
 
 export default MessageScreen;

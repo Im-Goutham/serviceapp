@@ -106,7 +106,7 @@ class SubscriptionScreen extends Component {
     render() {
         let { backButton } = this.props;
        return (
-           <ScrollView contentContainerStyle={{flexGrow:1}}>
+           <View style={{flex:1}}>
                <LinearGradient
                    colors={['#3E85EF', '#3EBDEF']}
                    start={{x: 0, y: 0}}
@@ -137,7 +137,7 @@ class SubscriptionScreen extends Component {
                                }
 
                            />
-                   <View style={{flex:1}}>
+                  <ScrollView contentContainerStyle={{flexGrow:1}}>
                     <View style={{backgroundColor :"transparent",paddingVertical:30}}>
                              {this.contentrender()}
 
@@ -162,10 +162,10 @@ class SubscriptionScreen extends Component {
                                </View> 
                            
                         </View>
-                </View>
+                </ScrollView>
                </LinearGradient>
               
-           </ScrollView>
+           </View>
        )
   }
 }

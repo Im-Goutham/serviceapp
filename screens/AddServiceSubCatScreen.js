@@ -117,7 +117,7 @@ class AddServiceSubCatScreen extends Component {
                    style={{
                      paddingVertical: 25
                    }}>
-                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('profile')}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
+                 <TouchableOpacity onPress={() => {this.props.navigation.navigate(mainScreen)}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
                </LinearGradient>
 
                  </View>

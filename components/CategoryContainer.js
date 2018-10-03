@@ -11,7 +11,7 @@ class CategoryContainer extends Component {
         style={styles.mainBox}
         onPress={()=>{this.props.selectCategory(index)}}
         >
-        <View style={[styles.categoryBox,{borderColor: category.selected ? '#3E85EF' : 'rgb(237,237,237)'}]}>
+        <View style={[styles.categoryBox,{borderColor: category.selected ? '#3E85EF' : '#EDEDED'}]}>
               <Image source={category.image} style={{ width: 40, height: 40}} resizeMode="contain" resizeMethod="resize"/>
         </View>
         <Text style={[styles.categoryStyle,{color: category.selected ? '#3E85EF' : '#4A4A4A'}]}>{category.name}</Text>
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
       justifyContent:'center',
       alignItems:'center',
       borderWidth:1,
-      borderColor:'rgb(237,237,237)',
+      borderColor:'#EDEDED',
     },
     categoryStyle: {
       color:'#4A4A4A',

@@ -30,13 +30,21 @@ class FilterScreen extends Component {
   constructor(props){
       super(props);
       this.state={
-         popularCategories: [
-            {name:'Home Interior',image: require('../assets/icons/home_interior.png')},
-            {name:'Home Exterior',image: require('../assets/icons/home_exterior.png')},
-            {name:'Landscaping',image: require('../assets/icons/landscaping.png')},
-            {name:'Handyman',image: require('../assets/icons/handyman.png')},
-            {name:'Electrician',image: require('../assets/icons/electrician.png')},
-            {name:'Plumbing',image: require('../assets/icons/plumbing.png')},
+        popularCategories: [
+            {name:'Home Interior',image: require('../assets/icons/home_interior.png'),selected:false},
+            {name:'Home Exterior',image: require('../assets/icons/home_exterior.png'),selected:false},
+            {name:'Landscaping',image: require('../assets/icons/landscaping.png'),selected:false},
+            {name:'Handyman',image: require('../assets/icons/handyman.png'),selected:false},
+            {name:'Electrician',image: require('../assets/icons/electrician.png'),selected:false},
+            {name:'Plumbing',image: require('../assets/icons/plumbing.png'),selected:false},
+            {name:'Painting',image: require('../assets/icons/painting.png'),selected:false},
+            {name:'Appliance repair',image: require('../assets/icons/appliance.png'),selected:false},
+            {name:'Mounting & installing',image: require('../assets/icons/mounting.png'),selected:false},
+            {name:'Furniture Assembly',image: require('../assets/icons/furniture.png'),selected:false},
+            {name:'Cars & Vehicles',image: require('../assets/icons/cars.png'),selected:false},
+            {name:'Cleaning & Housework',image: require('../assets/icons/cleaning.png'),selected:false},
+            {name:'Moving / Delivery',image: require('../assets/icons/delivery.png'),selected:false},
+            {name:'Beauty',image: require('../assets/icons/beauty.png'),selected:false},
           ],
           allCategories: [
             {name:'All',image: require('../assets/icons/all.png')},

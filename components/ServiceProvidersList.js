@@ -95,9 +95,11 @@ class ServiceProvidersList extends Component {
                             <Text style={{color:'#9B9B9B',fontFamily:'Montserrat-Medium',fontSize:13}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
                         </View>
                         <View style={{flex:3}}>
+                        <TouchableOpacity onPress={()=> {this.props.navigation.navigate('select')}}>
                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                                <TouchableOpacity><Text style={styles.btnText}>HIRE NOW</Text></TouchableOpacity>
+                                <Text style={styles.btnText}>HIRE NOW</Text>
                             </LinearGradient>
+                     </TouchableOpacity>
                         </View>
                     </View>
                 </View>

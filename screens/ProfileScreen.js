@@ -148,6 +148,40 @@ class ProfileScreen extends Component {
     });
   }
 
+
+  selectDocumentTapped() {
+    const options = {
+      quality: 1.0,
+      maxWidth: 500,
+      maxHeight: 500,
+      storageOptions: {
+        skipBackup: true
+      }
+    };
+
+    ImagePicker.showImagePicker(options, (response) => {
+      console.log('Response = ', response);
+
+      if (response.didCancel) {
+        console.log('User cancelled photo picker');
+      }
+      else if (response.error) {
+        console.log('ImagePicker Error: ', response.error);
+      }
+      else if (response.customButton) {
+        console.log('User tapped custom button: ', response.customButton);
+      }
+      else {
+        let source = { uri: response.uri };
+
+        // You can also display the image using data:
+        // let source = { uri: 'data:image/jpeg;base64,' + response.data };
+
+      
+      }
+    });
+  }
+
   selectVideoTapped() {
     const options = {
       title: 'Video Picker',
@@ -392,7 +426,7 @@ class ProfileScreen extends Component {
                   </View>
                 </View>
                 <View style={[styles.servicesBox,{flexDirection:'row'}]}>
-                  <View style={{flex: 2}}><Text style={{color:'#3E85EF',fontFamily:'Montserrat-Medium',fontSize: 16,lineHeight:23}}>Do you want to be a service Provider?</Text></View>
+                  <View style={{flex: 2}}><Text style={{color:'#3E85EF',fontFamily:'Montserrat-Medium',fontSize: 16,lineHeight:23}}>Do you want to be a service provider?</Text></View>
                   <View style={{flex: 1,flexDirection: 'row', justifyContent:'flex-end',alignItems:'center'}}><Switch value={true} style={styles.switch}/></View>
               </View>
 
@@ -444,9 +478,11 @@ class ProfileScreen extends Component {
                     </View>
                 </View>
                 <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
+                <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceCatScreen',{mainScreen: 'profile'})}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#F2F2F2', '#CCCCCC']} style={styles.button}>
-                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceCatScreen',{mainScreen: 'account'})}}><Text style={[styles.btnText,{fontFamily:'Montserrat-Regular',color:'black'}]}>ADD SERVICES</Text></TouchableOpacity>
+                       <Text style={[styles.btnText,{fontFamily:'Montserrat-Regular',color:'black'}]}>ADD SERVICES</Text>
                     </LinearGradient>
+               </TouchableOpacity>
                 </View>
             </View>
               {/* Upload Certificates starts here */ }
@@ -469,7 +505,7 @@ class ProfileScreen extends Component {
                     <Text style={styles.textStyle}>Upload Certificates</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={certificates} placeholder={true}/>
+                   <Documents documents={certificates} placeholder={true} addDocument={this.selectDocumentTapped.bind(this)}/>
                 </View>
              </View>
               {/* Upload Certificates ends here */ }
@@ -479,7 +515,7 @@ class ProfileScreen extends Component {
                     <Text style={styles.textStyle}>Upload Pics of Work</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents  documents={works} placeholder={true}/>
+                   <Documents  documents={works} placeholder={true} addDocument={this.selectDocumentTapped.bind(this)}/>
                 </View>
              </View>
               {/* Upload Pics ends here */}
@@ -490,7 +526,7 @@ class ProfileScreen extends Component {
                     <Text style={{fontSize:13,color:'#CCCCCC',marginVertical:10,fontFamily:'Montserrat-Medium'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={ids}  placeholder={true}/>
+                   <Documents documents={ids}  placeholder={true}  addDocument={this.selectDocumentTapped.bind(this)}/>
                 </View>
              </View>
               {/* Upload Id ends here */}
@@ -500,7 +536,7 @@ class ProfileScreen extends Component {
                     <Text style={styles.textStyle}>Add Video Link</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={videos} placeholder={true}/>
+                   <Documents documents={videos} placeholder={true} addDocument={this.selectDocumentTapped.bind(this)}/>
                 </View>
              </View>
               {/* Upload Video ends here */}
@@ -510,7 +546,7 @@ class ProfileScreen extends Component {
                     <Text style={styles.textStyle}>Add Website Link</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={websites} placeholder={true}/>
+                   <Documents documents={websites} placeholder={true} addDocument={this.selectDocumentTapped.bind(this)}/>
                 </View>
              </View>
               {/* Upload Website ends here */}
@@ -520,7 +556,7 @@ class ProfileScreen extends Component {
                     <Text style={styles.textStyle}>Add Linkedin Profile Link</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={profiles} placeholder={true}/>
+                   <Documents documents={profiles} placeholder={true} addDocument={this.selectDocumentTapped.bind(this)}/>
                 </View>
              </View>
             {/* Upload Website ends here */}

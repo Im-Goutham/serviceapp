@@ -158,7 +158,9 @@ export default class ServiceProviderDetailScreen extends Component {
                       paddingVertical: 10
                    }}>
                                 <TouchableOpacity
-                                    style={{height: 64, justifyContent: "center", alignItems: "center"}}>
+                                    style={{height: 64, justifyContent: "center", alignItems: "center"}}
+                                    onPress={()=>{this.props.navigation.navigate('select')}}
+                                    >
                                     <Text style={{fontFamily: "Montserrat-bold", fontSize: 18, color: "#fff"}}>HIRE NOW</Text>
                                 </TouchableOpacity>
                  </LinearGradient>

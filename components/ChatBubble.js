@@ -179,7 +179,7 @@ export default class Bubble extends React.Component {
               end={{x: 1, y: 0}}
               style={[styles.gradiantStyle,{borderBottomRightRadius:0}]}>
               <Text style={[styles.textStyle,{color:'black'}]}>{text}</Text>
-              <Text style={[styles.dateTextStyle,{color:'rgb(155,155,155)'}]}>2.23 PM</Text>
+              <Text style={[styles.dateTextStyle,{color:'#rgb(155,155,155)'}]}>2.23 PM</Text>
           </LinearGradient>
           </View>
           <View style={styles.imgBox}>
@@ -220,10 +220,11 @@ gradiantStyle: {
 textStyle:{
   textAlign:'left',
   fontSize:16,
-  fontFamily:'Montserrat-Medium',
+  fontFamily:'Montserrat-Regular',
   color:'white'
 },
 dateTextStyle:{
+  fontFamily:'Montserrat-Bold',
   textAlign:'right',
   color:'white',
   paddingTop:8

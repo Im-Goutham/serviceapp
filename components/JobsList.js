@@ -165,8 +165,8 @@ class JobsList extends Component {
             <Swipeout
                 sensitivity={1}
                 close={!(this.state.sectionID === sectionID && this.state.rowID === rowID)}
-                left={screen === 'myRequests' || 'findJobs' ? leftBtn : screen == 'trackNow' || 'myJobs' ? null : leftBtn }
-                right={screen === 'myRequests' ? rightBtn :  screen == 'trackNow' ? null :  btnsTypes}
+                left={screen === 'myRequests' || screen ===  'findJobs' ? leftBtn : screen == 'trackNow' || screen == 'myJobs' || screen =='select' ? null : leftBtn }
+                right={screen === 'myRequests' ? rightBtn :  screen == 'trackNow' || screen == 'select' ? null :  btnsTypes}
                 rowID={rowID}
                 sectionID={sectionID}
                 autoClose={data.autoClose}
@@ -215,14 +215,17 @@ class JobsList extends Component {
                             }}>
 
                                  {
-                                     (screen == 'trackNow' || screen == 'findJobs')?(
-                                           <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')}>
+                                     (screen == 'trackNow' ||  'findJobs' || 'select')?(
+                                           <TouchableOpacity style={styles.button} onPress={() =>
+                                            screen == 'select' ? this.props.navigation.goBack()
+                                            : this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')
+                                            }>
                                             <LinearGradient
                                                 colors={['#3E85EF', '#3EBDEF']}
                                                 start={{x: 0, y: 0}}
                                                 end={{x: 1, y: 0}}
                                                 style={styles.button}>
-                                                <Text style={styles.btnText}>{screen=='trackNow' ? 'TRACK NOW' : 'APPLY'}</Text>
+                                                <Text style={styles.btnText}>{screen=='trackNow' ? 'TRACK NOW' : screen == 'select' ? 'SELECT' : 'APPLY'}</Text>
                                             </LinearGradient>
                                         </TouchableOpacity>
 

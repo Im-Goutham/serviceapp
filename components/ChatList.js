@@ -103,17 +103,17 @@ class ChatList extends Component {
                                       <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
                      </View>
                  </View>   
-                 <View style={{flex:7,paddingHorizontal:20,justifyContent:'space-around'}}>
+                 <View style={{flex:7,paddingHorizontal:10,justifyContent:'space-around'}}>
                   
                          <View style={{flexDirection:'row'}}>
                            <View style={{flex:2}}>
-                             <Text style={{fontSize:17,color:'rgb(62,136,235)',textAlign:'left'}}>Micheal Y.∂∂</Text>
+                             <Text style={{fontSize:17,fontFamily:'Montserrat-Regular',color:'#3E85EF',textAlign:'left'}}>Micheal Y.∂∂</Text>
                            </View>
                            <View style={{flex:1,alignItems:'flex-end'}}>
-                              <Text style={{textAlign:'right',fontSize:12,color:'rgb(155,155,155)'}}>Yesterday</Text>
+                              <Text style={{textAlign:'right',fontFamily:'Montserrat-Regular',fontSize:13,color:'#3E85EF'}}>Yesterday</Text>
                            </View>
                           </View>
-                         <View><Text style={{fontSize:14,color:'rgb(155,155,155)',marginVertical:10}}>A eget vestibulum magnis non..</Text></View>
+                         <View><Text style={{fontSize:14,fontFamily:'Montserrat-Regular',color:'#9B9B9B',marginVertical:10}}>A eget vestibulum magnis non..</Text></View>
                          
 
                  </View> 

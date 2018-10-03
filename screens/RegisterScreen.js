@@ -257,7 +257,7 @@ class RegisterScreen extends Component {
                         <Text style={{textAlign:'right',color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}>Verify</Text>
                         <View style={{flex:1,flexDirection:'row',flexWrap:'wrap',borderColor:'red',paddingVertical:30}}>
                             <CheckBox checked={true} color='rgb(61,133,239)' style={{marginLeft:-10,marginTop:3,borderRadius:3,borderWidth:3}} onPress={()=>this.setState({checked: !checked})}/>
-                            <Text style={{fontSize:16,paddingLeft:10}}>  I agree with the <Text 
+                            <Text style={{fontSize:16,paddingLeft:10}}>  I agree to the <Text 
                                 style={{color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}
                                 onPress={()=>{this.props.navigation.navigate('terms')}}
                                 >Terms & Conditions</Text></Text>

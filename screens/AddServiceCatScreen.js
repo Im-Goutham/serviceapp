@@ -34,6 +34,14 @@ class AddServiceCatScreen extends Component {
             {name:'Handyman',image: require('../assets/icons/handyman.png'),selected:false},
             {name:'Electrician',image: require('../assets/icons/electrician.png'),selected:false},
             {name:'Plumbing',image: require('../assets/icons/plumbing.png'),selected:false},
+            {name:'Painting',image: require('../assets/icons/painting.png'),selected:false},
+            {name:'Appliance repair',image: require('../assets/icons/appliance.png'),selected:false},
+            {name:'Mounting & installing',image: require('../assets/icons/mounting.png'),selected:false},
+            {name:'Furniture Assembly',image: require('../assets/icons/furniture.png'),selected:false},
+            {name:'Cars & Vehicles',image: require('../assets/icons/cars.png'),selected:false},
+            {name:'Cleaning & Housework',image: require('../assets/icons/cleaning.png'),selected:false},
+            {name:'Moving / Delivery',image: require('../assets/icons/delivery.png'),selected:false},
+            {name:'Beauty',image: require('../assets/icons/beauty.png'),selected:false},
           ],
           allCategories: [
             {name:'All',image: require('../assets/icons/all.png'),selected:false},
@@ -146,7 +154,7 @@ class AddServiceCatScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingTop: 10,paddingBottom:20,marginHorizontal:10}}>
-                                <SearchBar/>
+                                <SearchBar placeholder={'Search here...' }/>
                    </View>
                        }
                    />

@@ -193,7 +193,7 @@ class ChatScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between",paddingTop: 10,paddingBottom:20,marginHorizontal:10}}>
-                                <SearchBar/>
+                               <SearchBar placeholder={'Search here...' }/>
                    </View>
                        }
                    />

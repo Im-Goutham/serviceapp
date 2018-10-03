@@ -79,7 +79,7 @@ class SearchScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingTop: 10,paddingBottom:20,marginHorizontal:10}}>
-                                 <SearchBar showKeyBoard={true}/>
+                                 <SearchBar placeholder={'Search here...' } showKeyBoard={true}/>
                         </View>
                        }
                    />

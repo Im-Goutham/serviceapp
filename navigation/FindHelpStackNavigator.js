@@ -8,6 +8,9 @@ import RatingScreen from '../screens/RatingScreen';
 import MessageScreen from '../screens/MessageScreen';
 import FilterScreen from '../screens/FilterScreen';
 import SearchScreen from '../screens/SearchScreen';
+import SelectScreen from '../screens/SelectScreen';
+
+
 
 export default createStackNavigator({
     findHelp: { screen: FindHelpScreen },
@@ -18,6 +21,7 @@ export default createStackNavigator({
     message: { screen: MessageScreen },
     filter:  { screen: FilterScreen },
     search:  { screen: SearchScreen },
+    select: { screen: SelectScreen }
    },{
      index: 0,
      initialRouteName: 'findHelp',

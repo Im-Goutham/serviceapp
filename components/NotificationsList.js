@@ -60,8 +60,8 @@ class NotificationsList extends Component {
                  </View>   
                  <View style={{flex:7,paddingHorizontal:20}}>
                     <View style={{flex:1}}>
-                         <Text style={{fontSize:17,color:'rgb(62,136,235)'}}>You have a new message from <Text style={{fontWeight:'bold'}}>Warren Pratt</Text></Text>
-                         <Text style={{fontSize:12,color:'rgb(155,155,155)',marginVertical:10}}>On <Text style={{fontWeight:'bold'}}>06/18/2018</Text> at <Text style={{fontWeight:'bold'}}>08:00 PM</Text></Text>
+                         <Text style={{fontSize:16,color:'#3E85EF',fontFamily:'Montserrat-Medium'}}>You have a new message from <Text style={{fontFamily:'Montserrat-Bold'}}>Warren Pratt</Text></Text>
+                         <Text style={{fontSize:12,color:'#9B9B9B',marginVertical:10}}>On <Text style={{fontWeight:'bold'}}>06/18/2018</Text> at <Text style={{fontWeight:'bold'}}>08:00 PM</Text></Text>
                     </View>
                    
                 

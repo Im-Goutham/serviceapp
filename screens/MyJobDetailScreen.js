@@ -204,7 +204,7 @@ export default class MyJobDetailPage extends Component {
                                                 fontSize: 13,
                                                 color: "#3E85EF",
                                                 fontFamily: "Montserrat-Medium"
-                                            }}>{'Google Calander'}</Text>
+                                            }}>{'Google Calender'}</Text>
                                         </TouchableOpacity>
                                     </TouchableOpacity>
                                     <TouchableOpacity style={{

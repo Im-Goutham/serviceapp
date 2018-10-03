@@ -206,7 +206,7 @@ export default class JobDetailScreen extends Component {
                                                 fontSize: 14,
                                                 color: "rgb(61, 133, 239)",
                                                 fontFamily: "Montserrat-Bold"
-                                            }}>{'Google Calander'}</Text>
+                                            }}>{'Google Calender'}</Text>
                                         </TouchableOpacity>
                                     </TouchableOpacity>
                                     <TouchableOpacity style={{
@@ -272,8 +272,7 @@ export default class JobDetailScreen extends Component {
                                     style={{height: 64, justifyContent: "center", alignItems: "center"}}
                                     onPress={() => {this.setState({visible:true})}}
                                     >
-                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>Apply
-                                        for this job</Text>
+                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>APPLY FOR THIS JOB</Text>
                                 </TouchableOpacity>
                             </LinearGradient>
                             :

@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     },
     headingText: {
          fontFamily:'Montserrat-Medium',
-         color: 'rgb(34,38,44)',
+         color: '#22262C',
          fontSize: 18,
          textAlign: 'center',
  

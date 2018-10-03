@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { View, StyleSheet,Image, ScrollView,Text,Platform} from 'react-native';
+import { View, StyleSheet,Image, ScrollView,Text,TouchableOpacity} from 'react-native';
 import { Icon} from 'native-base';
 
 
@@ -14,11 +14,14 @@ export default class Documents extends Component {
           >
           {
               placeholder == true ? (
-                <View style={{flexDirection:'column',width:100}}>
+                <TouchableOpacity
+                 style={{flexDirection:'column',width:100}}
+                 onPress={()=> {this.props.addDocument()}}
+                 >
                     <View>
                     <Image source={require('../images/documents/doc_placeholder.png')} style={styles.img_placeholder}/>
                     </View> 
-               </View> 
+               </TouchableOpacity> 
               ):(null)
           }
              

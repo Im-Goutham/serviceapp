@@ -141,6 +141,41 @@ class PostJobScreen extends Component {
     });
   }
 
+
+
+  selectDocumentTapped() {
+    const options = {
+      quality: 1.0,
+      maxWidth: 500,
+      maxHeight: 500,
+      storageOptions: {
+        skipBackup: true
+      }
+    };
+
+    ImagePicker.showImagePicker(options, (response) => {
+      console.log('Response = ', response);
+
+      if (response.didCancel) {
+        console.log('User cancelled photo picker');
+      }
+      else if (response.error) {
+        console.log('ImagePicker Error: ', response.error);
+      }
+      else if (response.customButton) {
+        console.log('User tapped custom button: ', response.customButton);
+      }
+      else {
+        let source = { uri: response.uri };
+
+        // You can also display the image using data:
+        // let source = { uri: 'data:image/jpeg;base64,' + response.data };
+
+      
+      }
+    });
+  }
+
   selectVideoTapped() {
     const options = {
       title: 'Video Picker',
@@ -226,7 +261,7 @@ class PostJobScreen extends Component {
               <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingBottom:30,justifyContent:'space-between'}}> 
                 <View style={{justifyContent:'space-between'}}>
                   <TouchableOpacity 
-                      onPress={()=>{this.props.navigation.navigate('addServiceCatScreen')}}
+                      onPress={()=>{this.props.navigation.navigate('addServiceCatScreen',{mainScreen:'postJob'})}}
                     >
                   <View style={styles.servicesBox}>
                       <View style={{flex:1,flexDirection:'row'}}>
@@ -243,16 +278,13 @@ class PostJobScreen extends Component {
                  <View style={styles.servicesBox}>
                       <View style={{flex:1}}>
                            <Text style={[styles.textStyle,{paddingBottom:0}]}>Enter Job Address</Text>
-                            <Text style={[styles.inputLabel,{fontSize:14,color:'#CCCCCC',marginVertical:5,fontFamily:'Montserrat-Medium'}]}>(It will show only the job is Booked or Scheduled)</Text>
+                            <Text style={[styles.inputLabel,{fontSize:14,color:'#CCCCCC',marginVertical:5,fontFamily:'Montserrat-Medium'}]}>(It will show only when the job is Booked or Scheduled)</Text>
                       </View>
                      <View style={styles.inputField}>
                      <FloatingLabelInput
                             label="Street Address"
                             value={this.state.address}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['address'] = input;
@@ -266,9 +298,6 @@ class PostJobScreen extends Component {
                             label="City"
                             value={this.state.city}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['city'] = input;
@@ -281,9 +310,6 @@ class PostJobScreen extends Component {
                             label="State"
                             value={this.state.state}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['state'] = input;
@@ -298,9 +324,6 @@ class PostJobScreen extends Component {
                             label="Zip Code"
                             value={this.state.zip}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['zip'] = input;
@@ -313,9 +336,6 @@ class PostJobScreen extends Component {
                             label="Country"
                             value={this.state.country}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['country'] = input;
@@ -336,9 +356,6 @@ class PostJobScreen extends Component {
                             label="Job Title"
                             value={this.state.title}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['title'] = input;
@@ -351,9 +368,6 @@ class PostJobScreen extends Component {
                             label="Job Description"
                             value={this.state.description}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['description'] = input;
@@ -366,9 +380,6 @@ class PostJobScreen extends Component {
                             label="Budget"
                             value={this.state.budget}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['budget'] = input;
@@ -387,9 +398,6 @@ class PostJobScreen extends Component {
                             label="Need to be done before"
                             value={this.state.before}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['before'] = input;
@@ -399,12 +407,9 @@ class PostJobScreen extends Component {
                         </View>
                         <View style={styles.inputField}>
                         <FloatingLabelInput
-                            label="Expiry Date & Time"
+                            label="Expiration Date & Time"
                             value={this.state.expiry}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['expiry'] = input;
@@ -420,7 +425,7 @@ class PostJobScreen extends Component {
                     <Text style={styles.textStyle}>Upload Pics</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents  documents={works} placeholder={true}/>
+                   <Documents  documents={works} placeholder={true}   addDocument={this.selectDocumentTapped.bind(this)}/>
                 </View> 
              </View>   
               {/* Upload Pics ends here */}
@@ -431,7 +436,7 @@ class PostJobScreen extends Component {
                     <Text style={styles.textStyle}>Add Video Link</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
-                   <Documents documents={videos} placeholder={true}/>
+                   <Documents documents={videos} placeholder={true}   addDocument={this.selectDocumentTapped.bind(this)}/>
                 </View> 
              </View>   
               {/* Upload Video ends here */}

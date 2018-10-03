@@ -49,14 +49,14 @@ export default class ChangePassword extends Component {
                 />
          </View>
          <View style={{paddingVertical:10}}>
-            <Text style={{textAlign:'right', color:'rgb(87,152,238)',fontFamily:'Montserrat-Medium'}}>Forgot password?</Text>
+            <Text style={{textAlign:'right', color:'#3E85EF',fontFamily:'Montserrat-Medium'}}>Forgot password?</Text>
         </View>
      </View>
      <View style={{height:50,flexDirection:'row'}}>
         <View style={{flex:1}}>
         <TouchableOpacity onPress={() => this.props.closeModal()}>
             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#F2F2F2', '#CCCCCC']} style={[styles.button,{borderBottomLeftRadius:10}]}>
-                <Text style={[styles.btnText,{color:'black'}]}>CANCEL</Text>
+                <Text style={[styles.btnText,{color:'black',fontFamily:'Montserrat-Regular'}]}>CANCEL</Text>
             </LinearGradient>
          </TouchableOpacity>
         </View>
@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
     },
     headingText: {
          fontFamily:'Montserrat-Medium',
-         color: 'rgb(34,38,44)',
+         color: '#22262C',
          fontSize: 18,
          textAlign: 'center',
  
@@ -109,6 +109,7 @@ const styles = StyleSheet.create({
         justifyContent:'center',
       },
       btnText: { 
+        fontFamily:'Montserrat-Bold',  
         textAlign:'center',
         color:'white',
         fontSize: 16,

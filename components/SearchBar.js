@@ -12,13 +12,13 @@ class SearchBar extends Component {
     }
   }
   render() {
-    let {title, left, right, showKeyBoard} = this.props;
+    let {title, left, right, showKeyBoard,placeholder} = this.props;
     console.log('showKeyBoard is ',showKeyBoard)
     return (
       <View>
          <Item style={styles.inputBox}>
             <Image source={require('../assets/icons/search_black.png')} style={{ width: 18, height: 18}} resizeMode="contain" resizeMethod="resize"/>
-            <Input placeholder='Search here...' 
+            <Input placeholder={placeholder}
             ref='searchField' 
             style={styles.inputField}   
             placeholderTextColor='rgba(0,0,0,0.3)'
