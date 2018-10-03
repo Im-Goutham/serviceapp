@@ -11,17 +11,16 @@ export default class Map extends Component {
     super();
      this.state = {
        markers: [
-          {latitude: 23.0234539, longitude: 72.5766408},
-          {latitude: 23.01997813, longitude: 72.58144732},
-          {latitude: 23.016917, longitude: 72.57292862},
+          {latitude: 17.696503, longitude: 83.195415},
+          {latitude: 17.698105, longitude: 83.247698},
         ],
         region: {
-          latitude: 23.01713425,
-          longitude: 72.57917281,
+          latitude: 17.722621,
+          longitude: 83.226069,
           latitudeDelta: 0.0922,
           longitudeDelta: 0.0421,
         },
-        coordinate: {latitude: 23.01713425, longitude: 72.57917281},
+        coordinate: {latitude: 17.722621, longitude: 83.226069},
         poi: null
      }
      this.onPoiClick = this.onPoiClick.bind(this);
@@ -102,6 +101,11 @@ export default class Map extends Component {
            coordinate={coordinate}
          >
             <Image source={require('../assets/icons/map_location_red.png')} style={{ width: 30, height: 30 }} resizeMode="contain" resizeMethod="resize"/>
+            <MapView.Callout tooltip >
+               <View style={{justifyContent:'center'}}>
+                        <Text style={styles.tooltipStyle}>YOU ARE HERE</Text>
+              </View>
+           </MapView.Callout>
          </Marker> 
       </MapView>
     );
@@ -147,5 +151,17 @@ const styles = StyleSheet.create({
       fontWeight:'bold',
       fontSize:12
   },
+  tooltipStyle:{
+    width: 125,
+    backgroundColor: 'red',
+    borderRadius:5,
+    overflow:"hidden",
+    paddingVertical:2,
+    paddingLeft:10,
+    paddingRight:10,
+    color: 'white',
+    fontSize: 13,
+    fontFamily: 'Montserrat-Bold'
+},
   imgStyle: {width:'100%',height:80}
 });

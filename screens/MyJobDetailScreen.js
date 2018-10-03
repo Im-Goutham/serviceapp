@@ -44,14 +44,14 @@ export default class MyJobDetailPage extends Component {
                 { name: 'Plumbing', image: require('../images/cat3.png') },
             ],
             serviceProviders: [
-                { name: 'Clayton', image: require('../images/svp1.png') },
-                { name: 'Luis', image: require('../images/svp2.png') },
-                { name: 'George', image: require('../images/svp3.png') },
-                { name: 'Billy', image: require('../images/svp1.png') },
-                { name: 'George', image: require('../images/svp1.png') },
-                { name: 'Luis', image: require('../images/svp2.png') },
-                { name: 'Clayton', image: require('../images/svp3.png') },
-            ],
+                {name:'Clayton',image: require('../images/svp1.png')},
+                {name:'Luis',image: require('../images/svp2.png')},
+                {name:'George',image: null},
+                {name:'Billy',image: require('../images/svp1.png')},
+                {name:'George',image: require('../images/svp1.png')},
+                {name:'Luis',image: require('../images/svp2.png')},
+                {name:'Clayton',image: null},
+              ],
             liked: true
         };
     }
@@ -87,6 +87,7 @@ export default class MyJobDetailPage extends Component {
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    <Image source={require('../assets/icons/plus.png')} style={[styles.pinimage,{height:20}]} resizeMode="contain" resizeMethod="resize" />
                                 </Text>
                             </View>
                         </View>
@@ -133,12 +134,14 @@ export default class MyJobDetailPage extends Component {
                                                 // paddingRight: 10
                                             }}> 4 </Text>
                                         </View>
+                                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('rating')}}>
                                         <Text style={{
                                             fontSize: 14,
                                             color: "rgb(61, 133, 239)",
                                             fontFamily: "Montserrat-Regular",
                                             paddingLeft: 10
                                         }}> 2  Reviews</Text>
+                                        </TouchableOpacity>
                                     </View>
                                     <Text style={{
                                         fontSize: 14,
@@ -151,26 +154,32 @@ export default class MyJobDetailPage extends Component {
                         <View style={styles.servicesBox}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                 <Text style={styles.textStyle}>See people who applied</Text>
-                                <TouchableOpacity onPress={() => {this.props.navigation.navigate('allServiceProvider')}}><Text style={{ fontSize: 11, color: '#3E85EF', fontFamily: 'Montserrat-Light' }}>VIEW ALL</Text></TouchableOpacity>
+                                <TouchableOpacity onPress={() => {this.props.navigation.navigate('allServiceProvider')}}><Text style={{ fontSize: 11, color: '#3E85EF', fontFamily: 'Montserrat-Medium' }}>VIEW ALL</Text></TouchableOpacity>
                             </View>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20 }}>
                                 <ScrollView
                                     horizontal={true}
                                     showsHorizontalScrollIndicator={false}>
-                                    {
-                                        serviceProviders ? (
-                                            serviceProviders.map((provider, key) => {
-                                                return (
-                                                    <View style={styles.categoryBox} key={key}>
-                                                        <View style={styles.imageShadow}>
-                                                            <Image source={provider.image} style={[styles.img_placeholder, { borderRadius: 35, width: 70, height: 70 }]} />
-                                                            <Image source={require('../images/check.png')} style={styles.check} />
-                                                        </View>
-                                                        <Text style={{ paddingVertical: 10, color: '#4A4A4A' }}>{provider.name}</Text>
+                                  {
+                                     serviceProviders ? (
+                                      serviceProviders.map((provider,key)=>{
+                                              return  <View style={styles.categoryBox} key={key}>
+                                                          <View style={styles.imageShadow}>
+                                                          <Image source={provider.image ? provider.image : require('../images/name_placeholder.png')} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
+                                                          <Image source={require('../images/check.png')} style={styles.check}/>
+                                                          {
+                                                              (!provider.image)?(
+                                                                <Text style={styles.letter} >
+                                                                    {provider.name[0]}
+                                                                </Text>
+                                                              ):(null)
+                                                          }
+                                                         
+                                                          </View>
+                                                          <Text style={styles.categoryStyle}>{provider.name}</Text>
                                                     </View>
-                                                )
-                                            })
-                                        ) : null
+                                        })
+                                     ) : null
                                     }
                                 </ScrollView>
                             </View>
@@ -181,19 +190,20 @@ export default class MyJobDetailPage extends Component {
                                         height: 120,
                                         justifyContent: "center",
                                         alignItems: "center",
-                                        borderRightWidth: 2
+                                        borderRightWidth: 1,
+                                        borderRightColor: '#CCCCCC'
                                     }}>
                                         <Image source={require('../assets/icons/calander_black.png')}/>
                                         <TouchableOpacity style={{justifyContent: "center", alignItems: 'center',marginTop:10}}>
                                             <Text style={{
-                                                fontSize: 12,
-                                                color: "rgb(61, 133, 239)",
-                                                fontFamily: "Montserrat-Regular"
+                                                fontSize: 13,
+                                                color: "#3E85EF",
+                                                fontFamily: "Montserrat-Medium"
                                             }}>{'Add to'}</Text>
                                             <Text style={{
-                                                fontSize: 12,
-                                                color: "rgb(61, 133, 239)",
-                                                fontFamily: "Montserrat-Regular"
+                                                fontSize: 13,
+                                                color: "#3E85EF",
+                                                fontFamily: "Montserrat-Medium"
                                             }}>{'Google Calander'}</Text>
                                         </TouchableOpacity>
                                     </TouchableOpacity>
@@ -209,15 +219,15 @@ export default class MyJobDetailPage extends Component {
                                              >
                                             <Text style={{
                                                 // paddingVertical:10,
-                                                fontSize: 12,
-                                                color: "rgb(61, 133, 239)",
-                                                fontFamily: "Montserrat-Regular"}}>
+                                                fontSize: 13,
+                                                color: "#3E85EF",
+                                                fontFamily: "Montserrat-Medium"}}>
                                                 {'Live track'}</Text>
                                             <Text style={{
                                                 // paddingVertical:10,
-                                                fontSize: 12,
-                                                color: "rgb(61, 133, 239)",
-                                                fontFamily: "Montserrat-Regular"}}>
+                                                fontSize: 13,
+                                                color: "#3E85EF",
+                                                fontFamily: "Montserrat-Medium"}}>
                                                 {'service provider'}</Text>
                                         </TouchableOpacity>
                                     </TouchableOpacity>
@@ -243,7 +253,9 @@ export default class MyJobDetailPage extends Component {
                            >
                             <Text style={{ fontFamily: "Montserrat-bold", fontSize: 16, color: "rgb(212,213,214)" }}>RATE & REVIEW</Text>
                         </TouchableOpacity>
-
+                       <View style={{flex:1,flexDirection:'row',paddingHorizontal:10,paddingBottom:30}}>
+                       <Image source={require('../assets/icons/report_flag.png')} style={[styles.pinimage,{height:20}]} resizeMode="contain" resizeMethod="resize" /><Text style={{marginLeft:10,color:'#4A4A4A',fontFamily:'Montserrat-Medium'}}>Report Tewar. S</Text>
+                       </View>
                     </View>
                 </ScrollView>
          )
@@ -473,6 +485,7 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         fontFamily: "Montserrat-SemiBold",
+        color:'#22262C',
         fontSize: 16
     },
     categoryBox: {
@@ -506,5 +519,14 @@ const styles = StyleSheet.create({
         // shadowOpacity: 0.2,
         // shadowRadius: 2,
         // elevation: 3
-    }
+    },
+    letter: {
+        position: 'absolute',
+        top:22,
+        left:25,
+        fontFamily:'Montserrat-Regular',
+        color:'#4A4A4A',
+        fontSize:22
+      },
+      categoryStyle: {fontFamily:'Montserrat-Regular',paddingVertical:10,color:'#4A4A4A',fontSize:14}
 })

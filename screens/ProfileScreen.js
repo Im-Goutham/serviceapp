@@ -284,9 +284,6 @@ class ProfileScreen extends Component {
                             label="First Name"
                             value={this.state.firstname}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['firstname'] = input;
@@ -299,9 +296,6 @@ class ProfileScreen extends Component {
                             label="Last Name"
                             value={this.state.lastname}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['lastname'] = input;
@@ -321,9 +315,6 @@ class ProfileScreen extends Component {
                             value={this.state.dob}
                             onFocus={ this._showDateTimePicker }
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['dob'] = input;
@@ -337,9 +328,6 @@ class ProfileScreen extends Component {
                             label="Street Address"
                             value={this.state.address}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['address'] = input;
@@ -355,9 +343,6 @@ class ProfileScreen extends Component {
                             label="City"
                             value={this.state.city}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['city'] = input;
@@ -371,9 +356,6 @@ class ProfileScreen extends Component {
                             label="State"
                             value={this.state.state}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['state'] = input;
@@ -389,9 +371,6 @@ class ProfileScreen extends Component {
                             label="Zip Code"
                             value={this.state.zip}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['zip'] = input;
@@ -404,9 +383,6 @@ class ProfileScreen extends Component {
                             label="Country"
                             value={this.state.country}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['country'] = input;
@@ -434,7 +410,7 @@ class ProfileScreen extends Component {
                           button={ require('../assets/icons/eclipse_blue.png')}
                           buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
                           destructiveIndex={1}
-                          options={["Edit", "Delete", "Cancel"]}
+                          options={["Edit", "Delete"]}
                           actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </View>
                     </View>
@@ -448,7 +424,7 @@ class ProfileScreen extends Component {
                               button={ require('../assets/icons/eclipse_blue.png')}
                               buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
                               destructiveIndex={1}
-                              options={["Edit", "Delete", "Cancel"]}
+                              options={["Edit", "Delete"]}
                               actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </View>
                     </View>
@@ -462,7 +438,7 @@ class ProfileScreen extends Component {
                               button={ require('../assets/icons/eclipse_blue.png')}
                               buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
                               destructiveIndex={1}
-                              options={["Edit", "Delete", "Cancel"]}
+                              options={["Edit", "Delete"]}
                               actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </View>
                     </View>
@@ -479,10 +455,9 @@ class ProfileScreen extends Component {
               <FloatingLabelInput
                             label="Write about yourself"
                             value={this.state.about}
+                            multiline={true}
+                            numberOfLines={8}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['about'] = input;
@@ -511,8 +486,8 @@ class ProfileScreen extends Component {
              {/* Upload Id starts here */ }
           <View style={styles.servicesBox}>
                 <View >
-                    <Text style={styles.textStyle}>Upload ID</Text>
-                    <Text style={{fontSize:13,marginVertical:10,fontFamily:'Montserrat-Light'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
+                    <Text style={[styles.textStyle,{paddingBottom:0}]}>Upload ID</Text>
+                    <Text style={{fontSize:13,color:'#CCCCCC',marginVertical:10,fontFamily:'Montserrat-Medium'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={ids}  placeholder={true}/>
@@ -605,10 +580,10 @@ const styles = StyleSheet.create({
       marginTop:10,
       paddingTop:16,
       paddingBottom:16,
-        shadowOffset: { width: 0, height: 2 },
-       shadowOpacity: 0.2,
-       shadowRadius: 2,
-       elevation: 3,
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.2,
+      shadowRadius: 2,
+      elevation: 3,
   },
   btnText: {
       textAlign:'center',
@@ -653,7 +628,7 @@ const styles = StyleSheet.create({
     },
  servicesBox: {
     flex: 1,
-    marginVertical: 20,
+    marginTop: 20,
     paddingVertical: 25,
     paddingHorizontal:20,
     borderRadius:10,

@@ -79,12 +79,9 @@ class ForgetScreen extends Component {
                            <ScrollView style={styles.container}>
                       <View style={styles.inputField}>
                       <FloatingLabelInput
-                            label="Email"
+                            label="Email/ID"
                             value={this.state.email}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                                console.log('')
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                                 this.inputs['email'] = input;

@@ -45,11 +45,9 @@ export default class ServiceProviderDetailScreen extends Component {
             serviceProviders: [
                 { name: 'Clayton', image: require('../images/svp1.png') },
                 { name: 'Luis', image: require('../images/svp2.png') },
-                { name: 'George', image: require('../images/svp3.png') },
                 { name: 'Billy', image: require('../images/svp1.png') },
                 { name: 'George', image: require('../images/svp1.png') },
                 { name: 'Luis', image: require('../images/svp2.png') },
-                { name: 'Clayton', image: require('../images/svp3.png') },
             ],
             videos: [
                 {
@@ -108,12 +106,13 @@ export default class ServiceProviderDetailScreen extends Component {
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit,
                                     sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    <Image source={require('../assets/icons/plus.png')} style={[styles.pinimage,{height:20}]} resizeMode="contain" resizeMethod="resize" />
                                 </Text>
                             </View>
                         </View>
                         <View style={styles.servicesBox}>
-                            <View style={{marginVertical:20}}>
-                                <Text style={styles.textStyle}>Area of Services</Text>
+                            <View >
+                                <Text style={[styles.textStyle,{paddingBottom:20}]}>Area of Services</Text>
                             </View>
                             <View style={{flexDirection: 'row',flexWrap:'wrap'}}>
                                {
@@ -127,40 +126,42 @@ export default class ServiceProviderDetailScreen extends Component {
                             </View>
                         </View>
                         <View style={styles.servicesBox}>
-                            <View style={{marginVertical:20}}>
-                                <Text style={styles.textStyle}>Video Link</Text>
+                            <View >
+                                <Text style={[styles.textStyle,{paddingBottom:20}]}>Video Link</Text>
                             </View>
                             <View style={{flexDirection: 'row',alignItems:'center'}}>
                             <Documents documents={videos}  placeholder={false}/>
                             </View>
                         </View>
                         <View style={styles.servicesBox}>
-                            <View style={{marginVertical:20}}>
-                                <Text style={styles.textStyle}>Website Link</Text>
+                            <View>
+                                <Text style={[styles.textStyle,{paddingBottom:20}]}>Website Link</Text>
                             </View>
                             <View style={{flexDirection: 'row',alignItems:'center'}}>
                             <Documents documents={profiles} placeholder={false}/>
                             </View>
                         </View>
                         <View style={styles.servicesBox}>
-                            <View style={{marginVertical:20}}>
-                                <Text style={styles.textStyle}>Linkedin Profile Link</Text>
+                            <View>
+                                <Text style={[styles.textStyle,{paddingBottom:20}]}>Linkedin Profile Link</Text>
                             </View>
                             <View style={{flexDirection: 'row',alignItems:'center'}}>
                             <Documents documents={profiles}  placeholder={false}/>
                             </View>
                         </View>
                     </View>
-                            <View style={{
-                                height: Platform.OS === 'ios' ? 100 : 64,
-                                backgroundColor: "transparent",
-                                justifyContent: "flex-start"
-                            }}>
+                    <LinearGradient
+                   colors={['#3E85EF', '#3EBDEF']}
+                   start={{x: 0, y: 0}}
+                   end={{x: 1, y: 0}}
+                   style={{
+                      paddingVertical: 10
+                   }}>
                                 <TouchableOpacity
                                     style={{height: 64, justifyContent: "center", alignItems: "center"}}>
-                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>HIRE NOW</Text>
+                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: 18, color: "#fff"}}>HIRE NOW</Text>
                                 </TouchableOpacity>
-                            </View>
+                 </LinearGradient>
 
                 </ScrollView>
 
@@ -371,7 +372,7 @@ const styles = StyleSheet.create({
     },
     servicesBox: {
         flex: 1,
-        marginVertical: 20,
+        marginTop: 20,
         paddingHorizontal: 20,
         paddingVertical: 20,
         borderRadius: 10,
@@ -383,6 +384,7 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         fontFamily: "Montserrat-SemiBold",
+        color:'#22262C',
         fontSize: 16
     },
     categoryBox: {

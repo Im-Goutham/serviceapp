@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {
   View,
-  StatusBar,
   TextInput,
   Animated,
+  Image
 } from 'react-native';
 
 export default class FloatingLabelInput extends Component {
@@ -13,12 +13,26 @@ export default class FloatingLabelInput extends Component {
 
   componentWillMount() {
     this._animatedIsFocused = new Animated.Value(0);
+    console.log('value is ',this.props.value);
+   
+  }
+
+  componentDidMount(){
+      if(this.props.value){
+        this.setState({isFocused: true},()=>{
+            Animated.timing(this._animatedIsFocused, {
+              toValue: this.state.isFocused ? 1 : 0,
+              duration: 200,
+            }).start();
+        });
+    }
   }
 
   handleFocus = () => this.setState({ isFocused: true });
   handleBlur = () => this.setState({ isFocused: false });
 
   componentDidUpdate() {
+
    if(!this.props.value){
     Animated.timing(this._animatedIsFocused, {
         toValue: this.state.isFocused ? 1 : 0,
@@ -44,22 +58,31 @@ export default class FloatingLabelInput extends Component {
       }),
       color: this._animatedIsFocused.interpolate({
         inputRange: [0, 1],
-        outputRange: ['#aaa', '#aaa',],
+        outputRange: ['#aaa', '#aaa'],
       }),
     };
     return (
-      <View style={{ paddingTop: 18 }}>
+      <View style={{ paddingTop: 18, flexDirection: 'row', borderBottomWidth: 1, borderBottomColor: 'rgb(217,213,220)' 
+      }}>
         <Animated.Text style={labelStyle}>
           {label}
         </Animated.Text>
         <TextInput
           {...props}
-          style={{ fontFamily:'Montserrat-Medium',height: 45, fontSize: 20, color: '#000', borderBottomWidth: 1, borderBottomColor: 'rgb(217,213,220)' }}
+          style={{ flex:1,fontFamily:'Montserrat-Medium',height: this.props.multiline && this.props.value  ? 180 : 45 , fontSize: 16, color: '#4A4A4A'}}
           onFocus={this.handleFocus}
           autoCorrect={false}
           onBlur={this.handleBlur}
           blurOnSubmit
         />
+        {
+           (this.props.secureTextEntry)?(
+                <Image source={require('../assets/icons/eye.png')} style={{justifyContent:'flex-end', width: 18, height: 18}} resizeMode="contain" resizeMethod="resize"/>   
+           ):(
+                null
+           )
+        }
+            
       </View>
     );
   }

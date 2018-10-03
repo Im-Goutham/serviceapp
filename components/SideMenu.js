@@ -21,7 +21,7 @@ let buttons = {
       routename : "findJobs"
     },
     {
-      title : "Post Job",
+      title : "Post a Job",
       iconname : require('../assets/icons/post.png'),
       routename : "postJob"
     },
@@ -220,15 +220,16 @@ const styles = StyleSheet.create({
       color:'rgb(189,190,192)',
       paddingLeft:30
     },
-    tagStyle:{
-      backgroundColor: '#3E85EF',
-      borderRadius:10,
-      overflow:"hidden",
-      paddingVertical:1,
-      paddingLeft:10,
-      color: 'white',
-      fontFamily: 'Montserrat-Bold'
-  },
+  tagStyle:{
+    backgroundColor: '#3E85EF',
+    borderRadius:10,
+    overflow:"hidden",
+    paddingVertical:2,
+    marginBottom:10,
+    color: 'white',
+    textAlign:'center',
+    fontFamily: 'Montserrat-Bold'
+},
 });
 
 SideMenu.propTypes = {

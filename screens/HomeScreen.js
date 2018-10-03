@@ -47,11 +47,11 @@ class HomeScreen extends Component {
           serviceProviders: [
             {name:'Clayton',image: require('../images/svp1.png')},
             {name:'Luis',image: require('../images/svp2.png')},
-            {name:'George',image: require('../images/svp3.png')},
+            {name:'George',image: null},
             {name:'Billy',image: require('../images/svp1.png')},
             {name:'George',image: require('../images/svp1.png')},
             {name:'Luis',image: require('../images/svp2.png')},
-            {name:'Clayton',image: require('../images/svp3.png')},
+            {name:'Clayton',image: null},
           ],
 
           screens: [
@@ -61,7 +61,7 @@ class HomeScreen extends Component {
               routename : "findJobs"
             },
             {
-              title : "Post Job",
+              title : "Post a Job",
               iconname : require('../assets/icons/post.png'),
               routename : "postJob"
             },
@@ -194,22 +194,21 @@ class HomeScreen extends Component {
                                <ScrollView contentContainerStyle={{
                           justifyContent: 'space-between'
                       }}>
-                            <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingBottom:30,justifyContent:'space-between'}}>
+                            <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:15, paddingBottom:30,justifyContent:'space-between'}}>
                          <View style={{flex:1}}>
                              <Carousel/>
                          </View>
-                          <View style={[styles.servicesBox,{ paddingVertical:0}]}>
+                          <View style={[styles.servicesBox,{paddingVertical:0}]}>
                             <View style={styles.categoryContainer}>
                             {
                                       screens ? (
                                           screens.map((screen,key)=>{
-                                                return  <TouchableOpacity key={key} onPress={this.navigateToScreen(screen.routename)}
-                                                  >
+                                                return  <TouchableOpacity key={key} onPress={this.navigateToScreen(screen.routename)}>
                                                  <View style={styles.mainBox} key={key}>
                                                 <View style={styles.mainCategoryBox}>
                                                       <Image source={screen.iconname} style={{ width: 40, height: 40}} resizeMode='contain' resizeMethod='resize' />
                                                 </View>
-                                                <Text style={styles.categoryStyle}>{screen.title}</Text>
+                                                <Text style={styles.screenNameStyle}>{screen.title}</Text>
                                               </View>
                                               </TouchableOpacity>
                                           })
@@ -220,9 +219,9 @@ class HomeScreen extends Component {
 
 
                             <View style={styles.servicesBox}>
-                                <View style={{flexDirection:'row',justifyContent:'space-between'}}>
-                                    <Text style={styles.textStyle}>Home Interiors</Text>
-                                    <Text style={{fontSize:11,color:'#3E85EF',fontFamily:'Montserrat-Light'}}>VIEW ALL</Text>
+                            <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
+                                    <Text style={styles.textStyle}>Home Interior</Text>
+                                    <Text style={styles.view}>VIEW ALL</Text>
                                 </View>
                                 <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
                                 <ScrollView
@@ -236,7 +235,7 @@ class HomeScreen extends Component {
                                                           <View style={styles.imageShadow}>
                                                           <Image source={category.image} style={styles.img_placeholder}/>
                                                           </View>
-                                                          <Text style={{paddingVertical:10,color:'#4A4A4A',fontSize:14}}>{category.name}</Text>
+                                                          <Text style={styles.categoryStyle}>{category.name}</Text>
                                                     </View>
                                         })
                                      ) : null
@@ -247,9 +246,9 @@ class HomeScreen extends Component {
 
 
                             <View style={styles.servicesBox}>
-                                <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                            <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
                                     <Text style={styles.textStyle}>See other Service Providers</Text>
-                                    <Text style={{fontSize:11,color:'#3E85EF',fontFamily:'Montserrat-Light'}}>VIEW ALL</Text>
+                                    <Text style={styles.view}>VIEW ALL</Text>
                                 </View>
                                 <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
                                 <ScrollView
@@ -261,10 +260,18 @@ class HomeScreen extends Component {
                                       serviceProviders.map((provider,key)=>{
                                               return  <View style={styles.categoryBox} key={key}>
                                                           <View style={styles.imageShadow}>
-                                                          <Image source={provider.image} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
+                                                          <Image source={provider.image ? provider.image : require('../images/name_placeholder.png')} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
                                                           <Image source={require('../images/check.png')} style={styles.check}/>
+                                                          {
+                                                              (!provider.image)?(
+                                                                <Text style={styles.letter} >
+                                                                    {provider.name[0]}
+                                                                </Text>
+                                                              ):(null)
+                                                          }
+                                                         
                                                           </View>
-                                                          <Text style={{paddingVertical:10,color:'#4A4A4A',fontSize:14}}>{provider.name}</Text>
+                                                          <Text style={styles.categoryStyle}>{provider.name}</Text>
                                                     </View>
                                         })
                                      ) : null
@@ -275,9 +282,9 @@ class HomeScreen extends Component {
 
 
                             <View style={styles.servicesBox}>
-                                <View style={{flexDirection:'row',justifyContent:'space-between'}}>
+                                <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}>
                                     <Text style={styles.textStyle}>Cars and Vehicles</Text>
-                                    <Text style={{fontSize:11,color:'#3E85EF',fontFamily:'Montserrat-Light'}}>VIEW ALL</Text>
+                                    <Text style={styles.view}>VIEW ALL</Text>
                                 </View>
                                 <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
                                 <ScrollView
@@ -291,7 +298,7 @@ class HomeScreen extends Component {
                                                           <View style={styles.imageShadow}>
                                                           <Image source={category.image} style={styles.img_placeholder}/>
                                                           </View>
-                                                          <Text style={{paddingVertical:10,color:'#4A4A4A',fontSize:14}}>{category.name}</Text>
+                                                          <Text style={styles.categoryStyle}>{category.name}</Text>
                                                     </View>
                                         })
                                      ) : null
@@ -323,7 +330,7 @@ const styles = StyleSheet.create({
     borderImg: {width:'100%',height:31},
     servicesBox: {
         flex: 1,
-        marginVertical: 20,
+        marginTop: 20,
         paddingHorizontal:20,
         paddingVertical:20,
         borderRadius:10,
@@ -333,8 +340,14 @@ const styles = StyleSheet.create({
         shadowRadius: 2,
         elevation: 3,
     },
+    view: {
+        fontSize:12,
+        color:'#3E85EF',
+        fontFamily:'Montserrat-Medium',
+    },
     textStyle: {
       fontFamily:"Montserrat-SemiBold",
+      color:'#22262C',
       fontSize:17
     },
       categoryContainer: {
@@ -375,9 +388,19 @@ const styles = StyleSheet.create({
         bottom: 0,
         left: 0
       },
+      letter: {
+        position: 'absolute',
+        top:22,
+        left:25,
+        fontFamily:'Montserrat-Regular',
+        color:'#4A4A4A',
+        fontSize:22
+      },
       mainBox: {width:90,height:110,marginHorizontal:5,marginVertical:20},
-      categoryStyle: {
-        color:'rgb(82,82,82)',
+      screenNameStyle: {
+        textAlign:'center',  
+        fontFamily:'Montserrat-Medium',  
+        color:'#4A4A4A',
         fontSize: 14,
         textAlign:'center'
     },
@@ -389,6 +412,7 @@ const styles = StyleSheet.create({
       justifyContent:'center',
       alignItems:'center',
     },
+    categoryStyle: {fontFamily:'Montserrat-Regular',paddingVertical:10,color:'#4A4A4A',fontSize:14}
 })
 
 

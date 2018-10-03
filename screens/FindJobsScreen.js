@@ -278,13 +278,14 @@ class FindJobScreen extends Component {
                                 }
                                 right={
                                     <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                       <TouchableOpacity style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                       <TouchableOpacity 
+                                           onPress={() => this.props.navigation.navigate('search')}
+                                           style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
                                              <Image source={require('../assets/icons/search_white.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                         <TouchableOpacity 
                                            onPress={() => this.props.navigation.navigate('filter')}
                                            style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
-                                           onPress={() => this.props.navigation.navigate('filter')}
                                            >
                                             <Image source={require('../assets/icons/filter.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>

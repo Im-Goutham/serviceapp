@@ -152,8 +152,8 @@ class FilterScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10,marginHorizontal:10}}>
-                          
-                   </View>
+                       
+                          </View>
                        }
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
@@ -161,35 +161,21 @@ class FilterScreen extends Component {
       justifyContent: 'space-between'
   }}>
         <View style={styles.container}>
-        <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}>
+        <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:15, paddingBottom:30,justifyContent:'space-between'}}>
 
         <View>
-
-        <View style={styles.inputField}>
-           <FloatingLabelInput
-                label="Current Location"
-                value={this.state.username}
-                autoCapitalize='none'
-                onSubmitEditing={() => {
-                  this.focusNextField('password');
-                }}
-                returnKeyType={ "next" }
-                ref={ input => {
-                  this.inputs['location'] = input;
-                }}
-                onChangeText={username => this.setState({ username })}
-                />
-         </View>
-
+                <View style={{marginVertical:20}}>
+                  <Text style={{ color:'#4A4A4A',fontFamily:'Montserrat-Medium',fontSize:13}}>Address</Text>
+                 <Item>
+                        <Input style={styles.inputLabel} placeholder="Current Location" />
+                </Item>
+                </View>
                      <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:10}}>
                   <FloatingLabelInput
                     label="City"
                     value={this.state.city}
                     autoCapitalize='none'
-                    onSubmitEditing={() => {
-                    this.focusNextField('password');
-                    }}
                     returnKeyType={ "next" }
                     ref={ input => {
                     this.inputs['city'] = input;
@@ -197,12 +183,9 @@ class FilterScreen extends Component {
                   </View>
                   <View style={{width:'50%',paddingLeft:10}}>
                   <FloatingLabelInput
-                    label="State (Optional)"
+                    label="State"
                     value={this.state.state}
                     autoCapitalize='none'
-                    onSubmitEditing={() => {
-                    this.focusNextField('password');
-                    }}
                     returnKeyType={ "next" }
                     ref={ input => {
                     this.inputs['state'] = input;
@@ -214,12 +197,9 @@ class FilterScreen extends Component {
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:10}}>
                   <FloatingLabelInput
-                    label="Zip"
+                    label="Zip Code"
                     value={this.state.zip}
                     autoCapitalize='none'
-                    onSubmitEditing={() => {
-                    this.focusNextField('password');
-                    }}
                     returnKeyType={ "next" }
                     ref={ input => {
                     this.inputs['zip'] = input;
@@ -230,15 +210,19 @@ class FilterScreen extends Component {
                     label="Country"
                     value={this.state.country}
                     autoCapitalize='none'
-                    onSubmitEditing={() => {
-                    this.focusNextField('password');
-                    }}
                     returnKeyType={ "next" }
                     ref={ input => {
                     this.inputs['country'] = input;
                     }}/>
                   </View>
                 </View>
+                <View style={{marginVertical:20}}>
+                <Text style={{ color:'#4A4A4A',fontFamily:'Montserrat-Medium',fontSize:13}}>Search Category</Text>
+                        <Item>
+                        <Input style={styles.inputLabel} placeholder="Enter Keyword" />
+                </Item>
+                </View>
+
 
         </View>
         <View style={styles.servicesBox}>
@@ -325,8 +309,7 @@ const styles = StyleSheet.create({
         elevation: 1,
     },
     textStyle: {
-      fontFamily:"Montserrat-Bold",
-      fontWeight:'bold',
+      fontFamily:"Montserrat-SemiBold",
       fontSize:17
     },
       categoryContainer: {
@@ -347,6 +330,7 @@ const styles = StyleSheet.create({
     inputLabel: {
         textAlign:'left',
         fontSize: 16,
+        marginLeft:0,
         fontFamily:'Montserrat-Light'
      },
 })

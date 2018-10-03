@@ -39,9 +39,6 @@ export default class ChangePassword extends Component {
                 label="Password"
                 value={this.state.password}
                 autoCapitalize='none'
-                onSubmitEditing={() => {
-                    
-                }}
                 returnKeyType={ "next" }
                 ref={ input => {
                     this.inputs['password'] = input;

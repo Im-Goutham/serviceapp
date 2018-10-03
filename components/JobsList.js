@@ -55,7 +55,7 @@ class JobsList extends Component {
             url: "http://facebook.github.io/react-native/",
             subject: "Share Link" //  for email
         };
-
+        var screen = this.props.navigation.state.routeName;
         const leftBtn = [
             {
                 component:
@@ -74,13 +74,18 @@ class JobsList extends Component {
                         }}>
                         <View>
                             <View style={{alignItems:'center',paddingVertical:10}}>
-                            <Image
-                                source={require('../assets/icons/tick_white.png')}
-                                style={{width:20,height:20}}
-                                resizeMode="contain" resizeMethod="resize"
-                                />
+                            {
+                                screen == 'findJobs' ? (null) :(
+                                    <Image
+                                    source={require('../assets/icons/cross_white.png')}
+                                    style={{width:20,height:20}}
+                                    resizeMode="contain" resizeMethod="resize"
+                                    />
+                                )
+                            }
+                           
                             </View>
-                          <Text style={{fontFamily:'Montserrat-Bold',color:'white',fontSize:16}}>Reject</Text>
+                          <Text style={{fontFamily:'Montserrat-Bold',color:'white',fontSize:16}}>{screen == 'findJobs' ? 'Remove' : 'Reject'}</Text>
                         </View>
                     </LinearGradient>,
                 backgroundColor: 'transparent',
@@ -133,6 +138,8 @@ class JobsList extends Component {
                             height:185,
                             marginLeft:10
                         }}>
+                       {
+                            screen == 'myJobs' ? (null) : (
                          <TouchableOpacity style={styles.iconButton} onPress={()=> this.setState({liked: !this.state.liked})}>
                             <Image 
                                 source={this.state.liked ? require('../assets/icons/heart_red.png'): require('../assets/icons/heart_white.png')}
@@ -140,13 +147,15 @@ class JobsList extends Component {
                                 resizeMode="contain" resizeMethod="resize"
                                 />
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.iconButton} onPress={()=> this.shareJob()}>
-                            <Image
-                            source={require('../assets/icons/send.png')}
-                            style={{width:20,height:20}}
-                            resizeMode="contain" resizeMethod="resize"
-                            />
-                        </TouchableOpacity>
+                            )
+                        }
+                            <TouchableOpacity style={styles.iconButton} onPress={()=> this.shareJob()}>
+                                <Image
+                                source={require('../assets/icons/send.png')}
+                                style={{width:20,height:20}}
+                                resizeMode="contain" resizeMethod="resize"
+                                />
+                            </TouchableOpacity>
                     </LinearGradient>,
                 backgroundColor: 'transparent',
             }
@@ -156,7 +165,7 @@ class JobsList extends Component {
             <Swipeout
                 sensitivity={1}
                 close={!(this.state.sectionID === sectionID && this.state.rowID === rowID)}
-                left={screen === 'myRequests'  ? screen == 'trackNow' ? null : leftBtn : null}
+                left={screen === 'myRequests' || 'findJobs' ? leftBtn : screen == 'trackNow' || 'myJobs' ? null : leftBtn }
                 right={screen === 'myRequests' ? rightBtn :  screen == 'trackNow' ? null :  btnsTypes}
                 rowID={rowID}
                 sectionID={sectionID}

@@ -45,14 +45,14 @@ export default class JobDetailScreen extends Component {
                 { name: 'Plumbing', image: require('../images/cat3.png') },
             ],
             serviceProviders: [
-                { name: 'Clayton', image: require('../images/svp1.png') },
-                { name: 'Luis', image: require('../images/svp2.png') },
-                { name: 'George', image: require('../images/svp3.png') },
-                { name: 'Billy', image: require('../images/svp1.png') },
-                { name: 'George', image: require('../images/svp1.png') },
-                { name: 'Luis', image: require('../images/svp2.png') },
-                { name: 'Clayton', image: require('../images/svp3.png') },
-            ],
+                {name:'Clayton',image: require('../images/svp1.png')},
+                {name:'Luis',image: require('../images/svp2.png')},
+                {name:'George',image: null},
+                {name:'Billy',image: require('../images/svp1.png')},
+                {name:'George',image: require('../images/svp1.png')},
+                {name:'Luis',image: require('../images/svp2.png')},
+                {name:'Clayton',image: null},
+              ],
             visible: false
         };
     }
@@ -122,7 +122,7 @@ export default class JobDetailScreen extends Component {
                                 </View>
                                 <View style={{ width: "70%", justifyContent: "space-between" }}>
                                     <View style={{ flexDirection: "row", }} >
-                                        <Text style={{ fontFamily: "Montserrat-Medium", fontSize: 16 }}>Trevors S.</Text>
+                                        <Text style={{ fontFamily: "Montserrat-Medium", fontSize: 16,color:'#22262C' }}>Trevors S.</Text>
                                         <Image source={require('../assets/icons/crown.png')} style={{ width: 20, height: 20, paddingHorizontal: 20 }} resizeMode="contain" resizeMethod="resize" />
                                     </View>
                                     <View style={{ flexDirection: "row", alignItems: "center", paddingVertical: 5 }}>
@@ -130,7 +130,7 @@ export default class JobDetailScreen extends Component {
                                             <Image source={require('../assets/icons/star_gold.png')} style={{ width: 15, height: 15 }} resizeMode="contain" resizeMethod="resize" />
                                             <Text style={{
                                                 fontSize: 14,
-                                                color: "#000",
+                                                color: "#4A4A4A",
                                                 fontFamily: "Montserrat-Bold",
                                                 // paddingRight: 10
                                             }}> 4 </Text>
@@ -138,7 +138,7 @@ export default class JobDetailScreen extends Component {
                                         <TouchableOpacity onPress={() => {this.props.navigation.navigate('rating')}}>
                                             <Text style={{
                                                 fontSize: 14,
-                                                color: "rgb(61, 133, 239)",
+                                                color: "#3E85EF",
                                                 fontFamily: "Montserrat-Regular",
                                                 paddingLeft: 10
                                             }}> 2  Reviews</Text>
@@ -152,29 +152,35 @@ export default class JobDetailScreen extends Component {
                                 </View>
                             </View>
                         </View>
-                        <View style={styles.servicesBox}>
+                        <View style={[styles.servicesBox,{marginTop:10}]}>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                 <Text style={styles.textStyle}>See people who applied</Text>
-                                <TouchableOpacity onPress={() => {this.props.navigation.navigate('allServiceProvider')}}><Text style={{ fontSize: 11, color: '#3E85EF', fontFamily: 'Montserrat-Light' }}>VIEW ALL</Text></TouchableOpacity>
+                                <TouchableOpacity onPress={() => {this.props.navigation.navigate('allServiceProvider')}}><Text style={{ fontSize: 11, color: '#3E85EF', fontFamily: 'Montserrat-Medium' }}>VIEW ALL</Text></TouchableOpacity>
                             </View>
                             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 20 }}>
                                 <ScrollView
                                     horizontal={true}
                                     showsHorizontalScrollIndicator={false}>
                                     {
-                                        serviceProviders ? (
-                                            serviceProviders.map((provider, key) => {
-                                                return (
-                                                    <View style={styles.categoryBox} key={key}>
-                                                        <View style={styles.imageShadow}>
-                                                            <Image source={provider.image} style={[styles.img_placeholder, { borderRadius: 35, width: 70, height: 70 }]} />
-                                                            <Image source={require('../images/check.png')} style={styles.check} />
-                                                        </View>
-                                                        <Text style={{ paddingVertical: 10, color: '#4A4A4A' }}>{provider.name}</Text>
+                                     serviceProviders ? (
+                                      serviceProviders.map((provider,key)=>{
+                                              return  <View style={styles.categoryBox} key={key}>
+                                                          <View style={styles.imageShadow}>
+                                                          <Image source={provider.image ? provider.image : require('../images/name_placeholder.png')} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
+                                                          <Image source={require('../images/check.png')} style={styles.check}/>
+                                                          {
+                                                              (!provider.image)?(
+                                                                <Text style={styles.letter} >
+                                                                    {provider.name[0]}
+                                                                </Text>
+                                                              ):(null)
+                                                          }
+                                                         
+                                                          </View>
+                                                          <Text style={styles.categoryStyle}>{provider.name}</Text>
                                                     </View>
-                                                )
-                                            })
-                                        ) : null
+                                        })
+                                     ) : null
                                     }
                                 </ScrollView>
                             </View>
@@ -255,10 +261,12 @@ export default class JobDetailScreen extends Component {
                     </View>
                     {
                             this.props.navigation.state.routeName === "jobDetail" ?
-                            <View style={{
-                                height: Platform.OS === 'ios' ? 100 : 64,
-                                backgroundColor: "transparent",
-                                justifyContent: "flex-start"
+                            <LinearGradient
+                            colors={['#3E85EF', '#3EBDEF']}
+                            start={{x: 0, y: 0}}
+                            end={{x: 1, y: 0}}
+                            style={{
+                               paddingVertical: 10
                             }}>
                                 <TouchableOpacity
                                     style={{height: 64, justifyContent: "center", alignItems: "center"}}
@@ -267,7 +275,7 @@ export default class JobDetailScreen extends Component {
                                     <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>Apply
                                         for this job</Text>
                                 </TouchableOpacity>
-                            </View>
+                            </LinearGradient>
                             :
                             <View/>
                     }
@@ -386,7 +394,7 @@ const styles = StyleSheet.create({
     desc: {
         // borderWidth:StyleSheet.hairlineWidth,
         paddingHorizontal: 20,
-        marginTop: 10,
+        marginVertical: 10,
         borderRadius: 10,
         backgroundColor: "#fff",
         shadowOffset: { width: 0, height: 2 },
@@ -470,16 +478,16 @@ const styles = StyleSheet.create({
         fontFamily: "Montserrat-SemiBold",
         fontSize: 14,
         paddingVertical: 3,
-        color: "rgb(74,74,74)"
+        color: "#4A4A4A"
     },
     categorytext: {
         fontFamily: "Montserrat-Regular",
         paddingVertical: 5,
         fontSize: 13,
-        color: "rgb(93,93,93)"
+        color: "#4A4A4A"
     },
     customerinfo: {
-        // marginVertical:10,
+        marginVertical:10,
         borderRadius: 10,
         backgroundColor: "#fff",
         shadowOffset: { width: 0, height: 2 },
@@ -502,6 +510,7 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         fontFamily: "Montserrat-SemiBold",
+        color:'#22262C',
         fontSize: 16
     },
     categoryBox: {
@@ -535,5 +544,13 @@ const styles = StyleSheet.create({
         // shadowOpacity: 0.2,
         // shadowRadius: 2,
         // elevation: 3
-    }
+    },
+    letter: {
+        position: 'absolute',
+        top:22,
+        left:25,
+        fontFamily:'Montserrat-Regular',
+        color:'#4A4A4A',
+        fontSize:22
+      },
 })

@@ -7,6 +7,8 @@ import RatingScreen from '../screens/RatingScreen';
 import AllServiceProvider from '../screens/AllServiceProvider';
 import MessageScreen from '../screens/MessageScreen';
 import FilterScreen from '../screens/FilterScreen';
+import SearchScreen from '../screens/SearchScreen';
+
 
 export default createStackNavigator({
     findJobs: { screen: FindJobsScreen },
@@ -15,7 +17,8 @@ export default createStackNavigator({
     rating: { screen: RatingScreen },
     giveRating: { screen: GiveRating },
     message: { screen: MessageScreen },
-    filter:  { screen: FilterScreen }
+    filter:  { screen: FilterScreen },
+    search:  { screen: SearchScreen },
    },{
      index: 0,
      initialRouteName: 'findJobs',

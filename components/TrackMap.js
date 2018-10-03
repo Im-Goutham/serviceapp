@@ -78,6 +78,11 @@ export default class RnDirectionsApp extends Component {
                      coordinate={{latitude: 17.704788, longitude: 83.297144  }}
                    >
                      <Image source={require('../assets/icons/map_location_red.png')} style={{ width: 30, height: 30 }} resizeMode="contain" resizeMethod="resize"/>
+                     <MapView.Callout tooltip >
+                      <View style={{justifyContent:'center'}}>
+                                <Text style={styles.tooltipStyle}>YOU ARE HERE</Text>
+                      </View>
+                  </MapView.Callout>
                    </Marker>
                     <Marker
                      coordinate={{latitude: 17.678948, longitude: 83.284446 }}
@@ -105,6 +110,18 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width,
     height: Dimensions.get('window').height
   },
+  tooltipStyle:{
+    width: 125,
+    backgroundColor: 'red',
+    borderRadius:5,
+    overflow:"hidden",
+    paddingVertical:2,
+    paddingLeft:10,
+    paddingRight:10,
+    color: 'white',
+    fontSize: 13,
+    fontFamily: 'Montserrat-Bold'
+},
 });
 
 

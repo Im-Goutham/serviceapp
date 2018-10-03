@@ -155,7 +155,7 @@ class AddServiceCatScreen extends Component {
       justifyContent: 'space-between'
   }}>
         <View style={styles.container}>
-        <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10,justifyContent:'space-between'}}>
+        <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10,paddingBottom:20,justifyContent:'space-between'}}>
 
 
         <View style={styles.servicesBox}>
@@ -231,7 +231,7 @@ const styles = StyleSheet.create({
     borderImg: {width:'100%',height:31},
     servicesBox: {
         flex: 1,
-        marginVertical: 20,
+        marginTop: 20,
         paddingHorizontal:20,
         paddingVertical: 20,
         borderRadius:10,

@@ -1,80 +1,82 @@
+
 import React, { Component } from 'react';
 import { View, StyleSheet, ActivityIndicator, TouchableOpacity,TouchableHighlight, Image, ScrollView,Platform,Dimensions} from 'react-native';
 import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Text, Icon, Textarea,Label } from 'native-base';
 import ImagePicker  from 'react-native-image-picker';
+import LinearGradient from 'react-native-linear-gradient';
+import OptionsMenu from "react-native-options-menu";
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-import LinearGradient from 'react-native-linear-gradient';
 import Documents from '../components/Documents';
 import Header from '../components/Header';
 import FloatingLabelInput from '../components/FloatingLabelInput';
-
+import HeaderScreen from './HeaderScreen';
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
 
-let back_arrow = require('../assets/icons/back-arrow.png');
 let menu = require('../assets/icons/menu.png');
+let back_arrow = require('../assets/icons/back-arrow.png');
 
 
 class PostJobScreen extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-        firstname: '', 
-        lastname: '',
-        error: null,
-        loading: false,  
-        avatarSource: null,
-        videoSource: null,
-        certificates: [
+      firstname: '', 
+      lastname: '',
+      error: null,
+      loading: false,  
+      avatarSource: null,
+      videoSource: null,
+      certificates: [
+          {
+              name: 'certificate1.jpg',
+              image: require('../images/documents/cert1.png')
+          },
+          {
+            name: 'certificate2.jpg',
+            image: require('../images/documents/cert2.png')
+          }
+      ],
+      works: [
             {
-                name: 'certificate1.jpg',
-                image: require('../images/documents/cert1.png')
-            },
+              name: 'work1.jpg',
+              image: require('../images/documents/work1.png')
+           },
+          {
+            name: 'work2.jpg',
+            image: require('../images/documents/work2.png')
+           }
+      ],
+      ids: [
             {
-              name: 'certificate2.jpg',
-              image: require('../images/documents/cert2.png')
+              name: 'id1.jpg',
+              image: require('../images/documents/id1.png')
             }
         ],
-        works: [
-              {
-                name: 'work1.jpg',
-                image: require('../images/documents/work1.png')
-             },
-            {
-              name: 'work2.jpg',
-              image: require('../images/documents/work2.png')
-             }
-        ],
-        ids: [
-              {
-                name: 'id1.jpg',
-                image: require('../images/documents/id1.png')
-              }
-          ],
-         videos: [
-            {
-              name: 'video1.jpg',
-              image: require('../images/documents/video1.png')
-            },
-            {
-              name: 'video2.jpg',
-              image: require('../images/documents/video2.png')
-            }
-        ], 
-        websites: [
+       videos: [
           {
             name: 'video1.jpg',
-            image: require('../images/documents/website1.png')
+            image: require('../images/documents/video1.png')
+          },
+          {
+            name: 'video2.jpg',
+            image: require('../images/documents/video2.png')
+          }
+      ], 
+      websites: [
+        {
+          name: 'video1.jpg',
+          image: require('../images/documents/website1.png')
+        },
+      ], 
+      profiles: [
+          {
+            name: 'profile1.jpg',
+            image: require('../images/documents/profile1.png')
           },
         ], 
-        profiles: [
-            {
-              name: 'profile1.jpg',
-              image: require('../images/documents/profile1.png')
-            },
-          ], 
-      };
+    };
     this.focusNextField = this.focusNextField.bind(this);
     this.inputs = {};
   }
@@ -166,47 +168,62 @@ class PostJobScreen extends Component {
       }
     });
   }
-
-
     render() {
       let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;  
-      const {params} = this.props.navigation.state;
       let { backButton } = this.props;
-      return ( 
-        <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={{flex:1}}>
-              <Header
-              navigation={this.props.navigation}
-              left = {
-                <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                {
-                    (backButton)?(
-                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                        </TouchableOpacity>
-                    ):(null)
-                }
-                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                </TouchableOpacity>
-             </View>
-              }
-              title={
-                <View style={{ justifyContent : 'center', alignItems: 'flex-start', width:"50%", height:54}}>
-                    <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Post a Job</Text>
-                </View>
-              }
-              right={
-                <View></View>
-              }
-              />
+       return (
+           <View style={{flex:1}}>
+               <LinearGradient
+                   colors={['#3E85EF', '#3EBDEF']}
+                   start={{x: 0, y: 0}}
+                   end={{x: 1, y: 0}}
+                   style={{
+                       flex: 1
+                   }}>
+                   <HeaderScreen
+                       header={
+                           <Header
+                               navigation={this.props.navigation}
+                               left = {
+                                <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                                {
+                                    (backButton)?(
+                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        </TouchableOpacity>
+                                    ):(null)
+                                }
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                </TouchableOpacity>
+                             </View>
+                               }
+                               title={
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Post a Job</Text>
+                               </View>
+                               }
+                               right={
+                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+
+                                   </View>
+                               }
+                           />
+                       }
+                       content={
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
+                       
+                   </View>
+                       }
+                   />
+                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
+                       
                    <ScrollView contentContainerStyle={{
           justifyContent: 'space-between'
         }}>
               <View style={styles.container}>   
-              <View style={{position:'relative'}}>
-                 <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
-              </View>  
-              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}> 
+
+              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingBottom:30,justifyContent:'space-between'}}> 
                 <View style={{justifyContent:'space-between'}}>
                   <TouchableOpacity 
                       onPress={()=>{this.props.navigation.navigate('addServiceCatScreen')}}
@@ -435,118 +452,122 @@ class PostJobScreen extends Component {
               </View>
                </View>
                </ScrollView>
+
+
+                       </View>
                </LinearGradient>
-      );
-    }
+              
+           </View>
+       )
+  }
 }
 
-
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'space-between',
-        marginTop:40
-    },
-    logoText: {
-      color:'white',
-      textAlign:'left',
-      fontSize:35,
-      fontWeight:'bold'
-    },
-    inputLabel: {
-       textAlign:'left',
-       fontSize: 16,
-       fontFamily:'Montserrat-Light'
-    },
-    inputField: {
-        marginVertical: 10
-    },
-    borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
-    text: {
-      marginBottom: 15,
-      marginTop: 15,
-      fontSize: 15,
-      textAlign: 'center',
-    },
-    button:{
-      backgroundColor:'#4A4A4A',
-      width: '100%',
-      borderRadius:30,
-      borderWidth: 1,
-      borderColor: '#fff',
-      marginTop:10,
-      paddingTop:16,
-      paddingBottom:16,
-  },
-  btnText: { 
-      textAlign:'center',
-      color:'white',
-      fontSize: 16,
-      fontFamily:'Montserrat-Bold'
-  },
-    socialBox:{
-      flexDirection:'row',
-      backgroundColor:'white',
-      borderRadius:20,
-      elevation: 3,
-    },
-    logoContainer: {
-      flex:1,
-      justifyContent: 'center',
-      alignItems: 'center'
-    },
-    imgsView: {
-      flex: 1,
-      padding:10,
-      position: 'relative',
-      top: 0,
-      left: 0
-    },
-    user_placeholder: {
-      paddingTop:20,
-      width: 140,
-      height: 140,
-      borderRadius:70,
-      justifyContent:'center',
-      alignItems:'center',
-    },
-    camera_icon: {
-      width: 40,
-      height: 40,
-      borderRadius:20,
-      position: 'absolute',
-      bottom: 10,
-      right: 10,
-      justifyContent:'center',
-      alignItems:'center',
-    },
- servicesBox: {
+  container: {
     flex: 1,
-    marginVertical: 20,
-    paddingVertical: 25,
-    paddingHorizontal:20,
-    borderRadius:10,
-    backgroundColor:'white',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 2,
-    elevation: 3,
+    justifyContent: 'space-between',
+},
+logoText: {
+  color:'white',
+  textAlign:'left',
+  fontSize:35,
+  fontWeight:'bold'
+},
+inputLabel: {
+   textAlign:'left',
+   fontSize: 16,
+   fontFamily:'Montserrat-Light'
+},
+inputField: {
+    marginVertical: 10
+},
+borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
+text: {
+  marginBottom: 15,
+  marginTop: 15,
+  fontSize: 15,
+  textAlign: 'center',
+},
+button:{
+  backgroundColor:'#4A4A4A',
+  width: '100%',
+  borderRadius:30,
+  borderWidth: 1,
+  borderColor: '#fff',
+  marginTop:10,
+  paddingTop:16,
+  paddingBottom:16,
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.2,
+  shadowRadius: 2,
+  elevation: 3,
+},
+btnText: { 
+  textAlign:'center',
+  color:'white',
+  fontSize: 16,
+  fontFamily:'Montserrat-Bold'
+},
+socialBox:{
+  flexDirection:'row',
+  backgroundColor:'white',
+  borderRadius:20,
+  elevation: 3,
+},
+logoContainer: {
+  flex:1,
+  justifyContent: 'center',
+  alignItems: 'center'
+},
+imgsView: {
+  flex: 1,
+  padding:10,
+  position: 'relative',
+  top: 0,
+  left: 0
+},
+user_placeholder: {
+  paddingTop:20,
+  width: 140,
+  height: 140,
+  borderRadius:70,
+  justifyContent:'center',
+  alignItems:'center',
+},
+camera_icon: {
+  width: 40,
+  height: 40,
+  borderRadius:20,
+  position: 'absolute',
+  bottom: 10,
+  right: 10,
+  justifyContent:'center',
+  alignItems:'center',
+},
+servicesBox: {
+flex: 1,
+marginTop: 20,
+paddingVertical: 25,
+paddingHorizontal:20,
+borderRadius:10,
+backgroundColor:'white',
+shadowOffset: { width: 0, height: 2 },
+shadowOpacity: 0.2,
+shadowRadius: 2,
+elevation: 3,
 },
 textStyle: {
-  fontFamily:"Montserrat-SemiBold",
-  color:'#22262C',
-  fontSize: 16,
-  paddingBottom:20
+fontFamily:"Montserrat-SemiBold",
+color:'#22262C',
+fontSize: 16,
+paddingBottom:20
 },
-      
 })
-
-
 
 
 const mapStateToProps = state=> ({ 
-  backButton:state.user.backButton,
-})
-
+    backButton:state.user.backButton,
+  })
+  
 export default connect(mapStateToProps, actions)(PostJobScreen);
 

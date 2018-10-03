@@ -60,6 +60,7 @@ export default class AllServiceProvider extends Component {
         tabindex : 0
       }
   }
+  
   tabrender(){
     return tabItems.map((value, index)=>{
       return (
@@ -70,7 +71,7 @@ export default class AllServiceProvider extends Component {
           // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
           height : 40,
           width: "50%",
-          justifyContent: "space-between",
+          justifyContent: "space-around",
           alignItems:'center',
         }}>
         <Text
@@ -80,7 +81,7 @@ export default class AllServiceProvider extends Component {
             fontFamily: 'Montserrat-Bold'
           }}>{value}</Text>
         <View style={{
-            width: 70,
+            width: 40,
             height: this.state.tabindex === index ? 3 : 0,
             backgroundColor: "#fff",
             borderRadius : 3

@@ -104,9 +104,6 @@ class LoginScreen extends Component {
                             label="Email / User ID"
                             value={this.state.username}
                             autoCapitalize='none'
-                            onSubmitEditing={() => {
-                              this.focusNextField('password');
-                            }}
                             returnKeyType={ "next" }
                             ref={ input => {
                               this.inputs['username'] = input;
@@ -115,22 +112,20 @@ class LoginScreen extends Component {
                             />
                  
               </View>
-              <View >
+              <View>
               <FloatingLabelInput
                             label="Password"
                             value={this.state.password}
                             autoCapitalize='none'
                             secureTextEntry={true}
-                            onSubmitEditing={() => {
-                                this.props.navigation.navigate('home')
-                            }}
                             returnKeyType={ "done" }
                             ref={ input => {
                               this.inputs['password'] = input;
                             }}
-                            style={{marginVertical: 5}}
+                            style={{marginVertical: 5,flex:1}}
                             onChangeText={password => this.setState({ password })}
                             />
+                   
               </View>
               </View>
               <View style={{flex:1,justifyContent:'space-between'}}>
@@ -141,7 +136,7 @@ class LoginScreen extends Component {
               <View style={{justifyContent: "center" }}>
                   {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                       <TouchableOpacity onPress={() => { this.handleSubmit()}}><Text style={styles.btnText}>SIGN IN</Text></TouchableOpacity>
+                       <TouchableOpacity onPress={() => { this.props.navigation.navigate('home');}}><Text style={styles.btnText}>SIGN IN</Text></TouchableOpacity>
                     </LinearGradient>
                   }
             </View>
@@ -261,7 +256,13 @@ const styles = StyleSheet.create({
        shadowOpacity: 0.2,
        shadowRadius: 2,
        elevation: 3,
-   }
+   },
+   inputContainer: {
+    flexDirection: 'row',
+    borderBottomWidth: 1,
+    borderColor: '#000',
+    paddingBottom: 10,
+  },
 })
 
 export default connect(null, actions)(LoginScreen);

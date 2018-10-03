@@ -22,8 +22,14 @@ class AccountScreen extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-        firstname: '', 
-        lastname: '',
+        firstname: 'John', 
+        lastname: 'Doe',
+        address: '1752 Sunny Day Drive',
+        city: 'Irvine',
+        state: 'California',
+        zip: '92664',
+        country: 'United States',
+        about:'Parturient aenean vestibulum ullamcorper dis rutrum imperdiet arcu parturient felis vestibulum vestibulum aenean rhoncus aliquest at ornare parturient nisi lectus nostra ullamcorper eros convallis eros ipsum. Curae a lacinia ac habitasse adipiscing per',
         error: null,
         loading: false,  
         avatarSource: null,
@@ -168,6 +174,7 @@ class AccountScreen extends Component {
       }
     });
   }
+  
     render() {
       let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;  
       let { backButton } = this.props;
@@ -219,10 +226,8 @@ class AccountScreen extends Component {
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
                        
                    <ScrollView style={{backgroundColor:'rgb(249, 252, 255)'}}>
-              <View >
-                 <Image style={styles.borderImg} source={require('../images/border_img.png')}/>
-              </View>  
-              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingVertical:30,justifyContent:'space-between'}}>
+
+              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:20, paddingBottom:30,justifyContent:'space-between'}}>
                 <View style={styles.logoContainer}>
                       <TouchableOpacity onPress={this.selectPhotoTapped.bind(this)}>
                         <View style={styles.imgsView}>
@@ -244,7 +249,7 @@ class AccountScreen extends Component {
                       </TouchableOpacity>
                 </View>  
                 <View style={{backgroundColor:"transparent", justifyContent:"center", alignItems:'center', flexDirection:"row",paddingVertical:20}}>
-                                <View style={{flexDirection: "row", paddingRight: 10, borderRightWidth: 2}}>
+                                <View style={{flexDirection: "row", paddingRight: 10, borderRightWidth: 1,borderRightColor: '#CCCCCC',paddingVertical:2}}>
                                     <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
                                     <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
                                     <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
@@ -252,7 +257,7 @@ class AccountScreen extends Component {
                                     <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
                                 </View>
                                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('rating')}}>
-                                  <Text style={{ fontFamily:"Montserrat-Medium", fontSize:15, color:"rgb(62, 133,240)", paddingLeft: 10}}>3 Reviews</Text>
+                                  <Text style={{ fontFamily:"Montserrat-Medium", fontSize:15, color:"#3E85EF", paddingLeft: 10}}>3 Reviews</Text>
                                 </TouchableOpacity>     
                 </View>
                 <View style={{flex:6,justifyContent:'space-between',marginBottom:30}}>
@@ -262,9 +267,6 @@ class AccountScreen extends Component {
                       label="First Name"
                       value={this.state.firstname}
                       autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
                       returnKeyType={ "next" }
                       ref={ input => {
                         this.inputs['firstname'] = input;
@@ -277,9 +279,6 @@ class AccountScreen extends Component {
                       label="Last Name"
                       value={this.state.lastname}
                       autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
                       returnKeyType={ "next" }
                       ref={ input => {
                         this.inputs['lastname'] = input;
@@ -294,9 +293,6 @@ class AccountScreen extends Component {
                       label="Date of Birth"
                       value={this.state.dob}
                       autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
                       returnKeyType={ "next" }
                       ref={ input => {
                         this.inputs['dob'] = input;
@@ -309,9 +305,6 @@ class AccountScreen extends Component {
                       label="Street Address"
                       value={this.state.address}
                       autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
                       returnKeyType={ "next" }
                       ref={ input => {
                         this.inputs['address'] = input;
@@ -325,9 +318,6 @@ class AccountScreen extends Component {
                       label="City"
                       value={this.state.city}
                       autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
                       returnKeyType={ "next" }
                       ref={ input => {
                         this.inputs['city'] = input;
@@ -340,9 +330,6 @@ class AccountScreen extends Component {
                       label="State"
                       value={this.state.state}
                       autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
                       returnKeyType={ "next" }
                       ref={ input => {
                         this.inputs['state'] = input;
@@ -358,9 +345,6 @@ class AccountScreen extends Component {
                       label="Zip"
                       value={this.state.zip}
                       autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
                       returnKeyType={ "next" }
                       ref={ input => {
                         this.inputs['zip'] = input;
@@ -373,9 +357,6 @@ class AccountScreen extends Component {
                       label="Country"
                       value={this.state.country}
                       autoCapitalize='none'
-                      onSubmitEditing={() => {
-                        this.focusNextField('password');
-                      }}
                       returnKeyType={ "next" }
                       ref={ input => {
                         this.inputs['country'] = input;
@@ -385,73 +366,72 @@ class AccountScreen extends Component {
                   </View>
                 </View>
                 <View style={[styles.servicesBox,{flexDirection:'row'}]}>
-                  <View style={{flex: 1}}><Text style={{color:'#3E85EF',fontWeight:'bold',fontSize: 17}}>Do you want to be a Service Provider</Text></View>
-                  <View style={{flex: 1,flexDirection: 'row', justifyContent:'flex-end'}}><Text style={{paddingRight:10}}>Yes</Text><Switch value={true} style={styles.switch}/></View>
+                  <View style={{flex: 2}}><Text style={{color:'#3E85EF',fontFamily:'Montserrat-Medium',fontSize: 16,lineHeight:23}}>Do you want to be a service Provider?</Text></View>
+                  <View style={{flex: 1,flexDirection: 'row', justifyContent:'flex-end',alignItems:'center'}}><Switch value={true} style={styles.switch}/></View>
               </View>  
 
 
-            <View style={styles.servicesBox}>
-                 <Text style={styles.textStyle}>Select which services you want to provide</Text>
-                 <List style={{paddingTop:20,paddingBottom:20}}>
-                    <ListItem>
-                    <Body>
-                        <Text>Waiter</Text>
-                          <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>   
-                    </Body>
-                    <Right>
-                      <OptionsMenu
-                            button={ require('../assets/icons/eclipse.png')}
-                            buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
-                            destructiveIndex={1}
-                            options={["Edit", "Delete"]}
-                            actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
-                    </Right>
-                    </ListItem>
-                    <ListItem>
-                    <Body>
-                        <Text>Painting</Text>
-                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>   
-                    </Body>
-                    <Right>
-                      <OptionsMenu
-                            button={ require('../assets/icons/eclipse.png')}
-                            buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
-                            destructiveIndex={1}
-                            options={["Edit", "Delete"]}
-                            actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
-                    </Right>
-                    </ListItem>
-                    <ListItem>
-                    <Body>
-                        <Text>Dog Walking</Text>
-                        <View style={{flexDirection:'row'}}><Text note style={{fontWeight:'bold',color:'rgb(169,169,169)'}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>   
-                    </Body>
-                    <Right>
-                      <OptionsMenu
-                            button={ require('../assets/icons/eclipse.png')}
-                            buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
-                            destructiveIndex={1}
-                            options={["Edit", "Delete"]}
-                            actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
-                    </Right>
-                    </ListItem>
-                </List>
+       <View style={styles.servicesBox}>
+                 <Text style={styles.textStyle}>Select the services you will provide</Text>
+                 <View style={{paddingBottom:20}}>
+                    <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
+                    <View style={{flex:1.5}}>
+                        <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Waiter</Text>
+                          <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                    </View>
+                    <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
+                        <OptionsMenu
+                          button={ require('../assets/icons/eclipse_blue.png')}
+                          buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                          destructiveIndex={1}
+                          options={["Edit", "Delete"]}
+                          actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
+                    </View>
+                    </View>
+                    <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
+                    <View style={{flex:1.5}}>
+                    <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Painting</Text>
+                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                    </View>
+                    <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
+                        <OptionsMenu
+                              button={ require('../assets/icons/eclipse_blue.png')}
+                              buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                              destructiveIndex={1}
+                              options={["Edit", "Delete"]}
+                              actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
+                    </View>
+                    </View>
+                    <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
+                    <View style={{flex:1.5}}>
+                    <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Dog Walking</Text>
+                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                    </View>
+                    <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
+                        <OptionsMenu
+                              button={ require('../assets/icons/eclipse_blue.png')}
+                              buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                              destructiveIndex={1}
+                              options={["Edit", "Delete"]}
+                              actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
+                    </View>
+                    </View>
+                </View>
                 <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#F2F2F2', '#CCCCCC']} style={styles.button}>
-                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceCatScreen',{mainScreen: 'account'})}}><Text style={[styles.btnText,{fontFamily:'Montserrat-Regular'}]}>ADD MORE SERVICES</Text></TouchableOpacity>
+                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceCatScreen',{mainScreen: 'account'})}}><Text style={[styles.btnText,{fontFamily:'Montserrat-Regular',color:'black'}]}>ADD SERVICES</Text></TouchableOpacity>
                     </LinearGradient>
                 </View>
-            </View>  
+            </View> 
               {/* Upload Certificates starts here */ }
               <View style={styles.servicesBox}>
-              <View style={{marginVertical:20}}>
+              <View style={{}}>
               <FloatingLabelInput
                 label="Write about your self"
                 value={this.state.about}
+                multiline={true}
+                numberOfLines={8}
                 autoCapitalize='none'
-                onSubmitEditing={() => {
-                  this.focusNextField('password');
-                }}
                 returnKeyType={ "next" }
                 ref={ input => {
                   this.inputs['about'] = input;
@@ -460,7 +440,7 @@ class AccountScreen extends Component {
                 />
     
                   </View>
-                <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
+                <View style={{flexDirection: 'row',alignItems:'center',paddingTop:20}}>
                     <Text style={styles.textStyle}>Upload Certificates</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
@@ -470,7 +450,7 @@ class AccountScreen extends Component {
               {/* Upload Certificates ends here */ } 
               {/* Upload Pics starts here */ }
              <View style={styles.servicesBox}>
-                <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
+                <View style={{flexDirection: 'row',alignItems:'center'}}>
                     <Text style={styles.textStyle}>Upload Pics of Work</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
@@ -480,9 +460,9 @@ class AccountScreen extends Component {
               {/* Upload Pics ends here */}
              {/* Upload Id starts here */ }
           <View style={styles.servicesBox}>
-                <View style={{marginVertical:20}}>
-                    <Text style={styles.textStyle}>Upload ID</Text>
-                    <Text style={{fontSize:13,marginVertical:10,fontFamily:'Montserrat-Light'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
+                <View style={{}}>
+                    <Text style={[styles.textStyle,{paddingBottom:10}]}>Upload ID</Text>
+                    <Text style={{fontSize:13,color:'#CCCCCC',marginBottom:10,fontFamily:'Montserrat-Medium'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={ids} placeholder={true}/>
@@ -491,8 +471,8 @@ class AccountScreen extends Component {
               {/* Upload Id ends here */}
            {/* Upload Video starts here */ }
            <View style={styles.servicesBox}>
-                <View style={{marginVertical:20}}>
-                    <Text style={styles.textStyle}>Add Video Link</Text>
+                <View style={{}}>
+                <Text style={[styles.textStyle]}>Add Video Link</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={videos} placeholder={true}/>
@@ -501,8 +481,8 @@ class AccountScreen extends Component {
               {/* Upload Video ends here */}
              {/* Upload Website starts here */ }
            <View style={styles.servicesBox}>
-                <View style={{marginVertical:20}}>
-                    <Text style={styles.textStyle}>Add Video Link</Text>
+                <View style={{}}>
+                <Text style={[styles.textStyle]}>Add Website Link</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={websites} placeholder={true}/>
@@ -511,8 +491,8 @@ class AccountScreen extends Component {
               {/* Upload Website ends here */}
           {/* Upload Linkedin starts here */ }
            <View style={styles.servicesBox}>
-                <View style={{marginVertical:20}}>
-                    <Text style={styles.textStyle}>Add Linkedin Profile Link</Text>
+                <View style={{}}>
+                <Text style={[styles.textStyle]}>Add Linkedin Profile Link</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={profiles} placeholder={true}/>
@@ -574,6 +554,10 @@ button:{
   marginTop:10,
   paddingTop:16,
   paddingBottom:16,
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.2,
+  shadowRadius: 2,
+  elevation: 3,
 },
 btnText: { 
   textAlign:'center',
@@ -619,7 +603,7 @@ camera_icon: {
 },
 servicesBox: {
 flex: 1,
-marginVertical: 20,
+marginTop: 20,
 paddingVertical: 25,
 paddingHorizontal:20,
 borderRadius:10,
@@ -630,8 +614,9 @@ shadowRadius: 2,
 elevation: 3,
 },
 textStyle: {
-fontFamily:"Montserrat-Bold",
-fontWeight:'bold'
+  fontFamily:"Montserrat-SemiBold",
+  fontSize: 16,
+  paddingBottom:20
 },
 star_style: {
 width:15, height:15, marginHorizontal:5

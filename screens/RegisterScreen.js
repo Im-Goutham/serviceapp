@@ -163,10 +163,6 @@ class RegisterScreen extends Component {
                                         label="Email"
                                         value={this.state.email}
                                         autoCapitalize='none'
-                                        secureTextEntry={true}
-                                        onSubmitEditing={() => {
-                                            this.handleSubmit()
-                                        }}
                                         returnKeyType={ "done" }
                                         ref={ input => {
                                         this.inputs['email'] = input;
@@ -182,9 +178,6 @@ class RegisterScreen extends Component {
                                         label="User ID"
                                         value={this.state.username}
                                         autoCapitalize='none'
-                                        onSubmitEditing={() => {
-                                            this.handleSubmit();
-                                        }}
                                         returnKeyType={ "next" }
                                         ref={ input => {
                                             this.inputs['username'] = input;
@@ -198,9 +191,6 @@ class RegisterScreen extends Component {
                                         label="Password"
                                         value={this.state.password}
                                         autoCapitalize='none'
-                                        onSubmitEditing={() => {
-                                            this.handleSubmit();
-                                        }}
                                         returnKeyType={ "next" }
                                         ref={ input => {
                                             this.inputs['password'] = input;
@@ -215,9 +205,6 @@ class RegisterScreen extends Component {
                                         label="Confirm Password"
                                         value={this.state.cfrmPassword}
                                         autoCapitalize='none'
-                                        onSubmitEditing={() => {
-                                            this.handleSubmit();
-                                        }}
                                         returnKeyType={ "next" }
                                         ref={ input => {
                                             this.inputs['cfrmPassword'] = input;
@@ -258,9 +245,6 @@ class RegisterScreen extends Component {
                                         label="Mobile Number"
                                         value={this.state.mobile}
                                         autoCapitalize='none'
-                                        onSubmitEditing={() => {
-                                            this.handleSubmit();
-                                        }}
                                         returnKeyType={ "next" }
                                         ref={ input => {
                                             this.inputs['mobile'] = input;
