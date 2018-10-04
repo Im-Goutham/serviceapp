@@ -1,5 +1,5 @@
 import React from 'react';
-import {  StatusBar, StyleSheet, View ,Platform} from 'react-native';
+import {  StatusBar, StyleSheet, View ,Platform, PixelRatio} from 'react-native';
 import MainNavigator from './navigation/MainNavigator';
 import { Provider } from 'react-redux';
 import SplashScreen from 'react-native-splash-screen'
@@ -17,6 +17,8 @@ export default class App extends React.Component {
       	// do stuff while splash screen is shown
           // After having done stuff (such as async tasks) hide the splash screen
          SplashScreen.hide();
+         console.log('pixel ratio is ', PixelRatio.getFontScale());
+         
   }
 
   render() {

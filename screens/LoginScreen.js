@@ -94,10 +94,10 @@ class LoginScreen extends Component {
       let { checked } = this.state;
       return (
          <View style={{flex:1,paddingHorizontal:15,justifyContent:'space-around'}} >
-             <View style={{flex:1.3,paddingVertical:20,justifyContent:'flex-end',alignItems:'flex-start'}}>
+             <View style={{flex:1.6,paddingVertical:20,justifyContent:'flex-end',alignItems:'flex-start'}}>
               <Image source={logo} style={{width:220,height: 40}} resizeMode="contain" resizeMethod="resize"/>
              </View>
-              <View style={[styles.loginBlox,{flex:4.9}]}>
+              <View style={[styles.loginBlox,{flex:3.0}]}>
               <View style={{flex:1,justifyContent:'space-around'}}>
               <View>
               <FloatingLabelInput
@@ -128,22 +128,24 @@ class LoginScreen extends Component {
                    
               </View>
               </View>
-              <View style={{flex:1,justifyContent:'space-between'}}>
+              <View style={{flex:1,justifyContent:'space-around'}}>
               <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:"flex-start"}}>
                     <CheckBox checked={checked} color='rgb(61,133,239)' style={{marginLeft:-10,marginTop:3,borderRadius:3}} onPress={()=>this.setState({checked: !checked})}/>
-                    <Text style={{marginLeft:20,fontSize:17,fontFamily: 'Montserrat-Regular',color:'rgb(74,74,74)'}}>Remember Me</Text>
+                    <Text style={{marginLeft:20,fontSize:17,fontFamily: 'Montserrat-Regular',color:'rgb(74,74,74)'}}>Remember me</Text>
               </View>
               <View style={{justifyContent: "center" }}>
                   {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
+                  <TouchableOpacity onPress={() => { this.props.navigation.navigate('home');}}>
                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                       <TouchableOpacity onPress={() => { this.props.navigation.navigate('home');}}><Text style={styles.btnText}>SIGN IN</Text></TouchableOpacity>
+                       <Text style={styles.btnText}>SIGN IN</Text>
                     </LinearGradient>
+                    </TouchableOpacity>
                   }
             </View>
             <Text style={styles.text} onPress={()=>{this.props.navigation.navigate('forgot')}}>Forgot ID/Password?</Text>
               </View> 
                  </View>
-                  <View style={{flex:1.8,marginVertical:10,flexDirection:'row',alignItems:'center',justifyContent:'flex-start'}}>
+                  <View style={{flex:1.8,marginTop:20,flexDirection:'row',alignItems:'flex-start',justifyContent:'flex-start'}}>
                  <View style={{flex:1,paddingRight:10}}>
                       <FacebookLogin />
                  </View>
@@ -179,7 +181,7 @@ class LoginScreen extends Component {
                                  <View style={{height:20, backgroundColor:"#F9FCFF"}}/>
                               </View>
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1,alignItems: 'center'}}>
-                                   <Text style={{marginVertical:20,color:'#808080',fontSize:17,textAlign:'center',fontFamily:'Montserrat-Regular'}}>Don't have an account  <Text style={{color:'#3581fc',fontFamily:'Montserrat-Bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign Up</Text></Text>
+                                   <Text style={{marginVertical:20,color:'#4A4A4A',fontSize:17,textAlign:'center',fontFamily:'Montserrat-Regular'}}>Don't have an account? <Text style={{color:'#3E85EF',fontFamily:'Montserrat-Bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign Up</Text></Text>
                         </View>
                   </View>  
                </ScrollView>

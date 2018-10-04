@@ -26,7 +26,7 @@ export default class SelectLocation extends Component {
 
   renderModalContent = () => (
     <View style={styles.modalContent}>
-     <View style={styles.heading}><Text style={styles.headingText}>Select Language</Text></View>
+     <View style={styles.heading}><Text style={styles.headingText}>Select a Language</Text></View>
      <View style={{flex:5,justifyContent:'center'}}>
      <Picker
             mode={'dialog'}

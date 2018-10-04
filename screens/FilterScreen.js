@@ -23,7 +23,7 @@ import CategoryContainer from '../components/CategoryContainer';
 import FloatingLabelInput from '../components/FloatingLabelInput';
 
 
-let back_arrow = require('../assets/icons/back-arrow.png');
+let back_arrow = require('../assets/icons/arrow_left.png');
 let menu = require('../assets/icons/menu.png');
 
 class FilterScreen extends Component {

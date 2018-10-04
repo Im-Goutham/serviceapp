@@ -22,7 +22,7 @@ class CategoryContainer extends Component {
 
 
 const styles = StyleSheet.create({
-    mainBox: {width:90,height:110,marginHorizontal:5,marginVertical:20},
+    mainBox: {width:90,marginHorizontal:5,marginVertical:20},
     categoryBox: {
       paddingVertical:20,
       flexDirection:'column',

@@ -27,7 +27,7 @@ var { height, width } = Dimensions.get('window');
 
 let logo = require('../images/logo.png');
 let menu = require('../assets/icons/menu.png');
-let back_arrow = require('../assets/icons/back-arrow.png');
+let back_arrow = require('../assets/icons/arrow_left.png');
 let border_img = require('../images/border_img.png');
 
 export default class MyJobDetailPage extends Component {

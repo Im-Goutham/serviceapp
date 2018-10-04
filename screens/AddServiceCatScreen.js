@@ -20,7 +20,7 @@ import SearchBar from '../components/SearchBar';
 import CategoryContainer from '../components/CategoryContainer';
 
 
-let back_arrow = require('../assets/icons/back-arrow.png');
+let back_arrow = require('../assets/icons/arrow_left.png');
 
 
 class AddServiceCatScreen extends Component {
@@ -85,13 +85,22 @@ class AddServiceCatScreen extends Component {
   }
 
   selectPopularCategory(index){
+       var {params} = this.props.navigation.state;
+       var {mainScreen} = params;
+
        let {popularCategories} = this.state;
        popularCategories[index].selected = !popularCategories[index].selected;
        this.setState({popularCategories});
        console.log(popularCategories);
+       if(popularCategories[index].selected){
+        this.props.navigation.navigate('addServiceSubCatScreen',{mainScreen:mainScreen})
+       }
+      
   }
 
   selectAllCategory(index){
+    var {params} = this.props.navigation.state;
+    var {mainScreen} = params;
     let {allCategories} = this.state;
   
     if(index == 0){
@@ -110,7 +119,13 @@ class AddServiceCatScreen extends Component {
             allCategories[0].selected = false;
         }
         this.setState({allCategories});
+        if(allCategories[index].selected){
+            this.props.navigation.navigate('addServiceSubCatScreen',{mainScreen:mainScreen})
+        }
+        
     }
+
+   
 }
 
 
@@ -135,7 +150,7 @@ class AddServiceCatScreen extends Component {
                                navigation={this.props.navigation}
                                left = {
                                    <TouchableOpacity
-                                       onPress={() => this.props.navigation.goBack()}
+                                       onPress={() => {this.props.navigation.goBack()}}
                                        style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
                                        <Image source={back_arrow} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
                                    </TouchableOpacity>
@@ -211,7 +226,7 @@ class AddServiceCatScreen extends Component {
                    style={{
                       paddingVertical: 25
                    }}>
-                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceSubCatScreen',{mainScreen:mainScreen})}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
+                 <TouchableOpacity onPress={() => {this.props.navigation.goBack()}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
                </LinearGradient>
 
                  </View>

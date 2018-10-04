@@ -15,7 +15,7 @@ const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
 
 let menu = require('../assets/icons/menu.png');
-let back_arrow = require('../assets/icons/back-arrow.png');
+let back_arrow = require('../assets/icons/arrow_left.png');
 
 
 class AccountScreen extends Component {
@@ -466,7 +466,7 @@ class AccountScreen extends Component {
               <View style={styles.servicesBox}>
               <View style={{}}>
               <FloatingLabelInput
-                label="Write about your self"
+                label="Write about yourself"
                 value={this.state.about}
                 multiline={true}
                 numberOfLines={8}

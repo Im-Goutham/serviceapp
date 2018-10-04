@@ -31,7 +31,7 @@ var BUTTONS = [
   
 
 
-let back_arrow = require('../assets/icons/back-arrow.png');
+let back_arrow = require('../assets/icons/arrow_left.png');
 
 class RegisterScreen extends Component {
     constructor(props) {
@@ -256,9 +256,9 @@ class RegisterScreen extends Component {
                         </View>
                         <Text style={{textAlign:'right',color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}>Verify</Text>
                         <View style={{flex:1,flexDirection:'row',flexWrap:'wrap',borderColor:'red',paddingVertical:30}}>
-                            <CheckBox checked={true} color='rgb(61,133,239)' style={{marginLeft:-10,marginTop:3,borderRadius:3,borderWidth:3}} onPress={()=>this.setState({checked: !checked})}/>
-                            <Text style={{fontSize:16,paddingLeft:10}}>  I agree to the <Text 
-                                style={{color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}
+                            <CheckBox checked={this.state.checked} color='#3E85EF' style={{marginLeft:-10,marginTop:3,borderRadius:3,borderWidth:3}} onPress={()=>this.setState({checked: !this.state.checked})}/>
+                            <Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A',fontSize:16,paddingLeft:10,paddingTop:3}}>  I agree to the <Text 
+                                style={{color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-Bold'}}
                                 onPress={()=>{this.props.navigation.navigate('terms')}}
                                 >Terms & Conditions</Text></Text>
                        </View>
@@ -269,9 +269,11 @@ class RegisterScreen extends Component {
                                     ?
                                     <ActivityIndicator color="#8E24AA" size="large" />
                                     :
+                                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('profile');}}>
                                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('profile');}}><Text style={styles.btnText}>SIGN UP</Text></TouchableOpacity>
+                                       <Text style={styles.btnText}>SIGN UP</Text>
                                     </LinearGradient>
+                                    </TouchableOpacity>
                             }
                             </View>
                         <View style={[styles.socialBox,{marginBottom:30}]}>

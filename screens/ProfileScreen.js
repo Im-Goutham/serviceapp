@@ -23,7 +23,7 @@ import FloatingLabelInput from '../components/FloatingLabelInput';
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
 
-let back_arrow = require('../assets/icons/back-arrow.png');
+let back_arrow = require('../assets/icons/arrow_left.png');
 
 class ProfileScreen extends Component {
   constructor(props){
@@ -356,7 +356,7 @@ class ProfileScreen extends Component {
                             onChangeText={dob => this.setState({ dob })}
                             />
                 </TouchableOpacity>
-                <Text style={{fontFamily:'Montserrat-Medium',color:'rgb(219,220,221)',fontSize:13}} >This information is not shared with other users.</Text>
+                <Text style={{fontFamily:'Montserrat-Medium',color:'#CCCCCC',fontSize:13}} >This information is not shared with other users.</Text>
                 <View style={styles.inputField}>
                 <FloatingLabelInput
                             label="Street Address"
@@ -561,9 +561,11 @@ class ProfileScreen extends Component {
              </View>
             {/* Upload Website ends here */}
             <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
+            <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                       <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>SIGN UP</Text></TouchableOpacity>
+                      <Text style={styles.btnText}>SIGN UP</Text>
                     </LinearGradient>
+              </TouchableOpacity>
             </View>
                 </View>
               </View>

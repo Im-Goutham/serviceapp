@@ -17,7 +17,7 @@ import HeaderScreen from './HeaderScreen';
 
 
 
-let back_arrow = require('../assets/icons/back-arrow.png');
+let back_arrow = require('../assets/icons/arrow_left.png');
 let menu = require('../assets/icons/menu.png');
 
 

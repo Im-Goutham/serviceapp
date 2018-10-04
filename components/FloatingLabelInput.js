@@ -44,6 +44,7 @@ export default class FloatingLabelInput extends Component {
 
   render() {
     const { label, ...props } = this.props;
+    var {isFocused} = this.state;
     const labelStyle = {
       fontFamily:'Montserrat-Medium',
       position: 'absolute',
@@ -62,7 +63,7 @@ export default class FloatingLabelInput extends Component {
       }),
     };
     return (
-      <View style={{ paddingTop: 18, flexDirection: 'row', borderBottomWidth: 1, borderBottomColor: 'rgb(217,213,220)' 
+      <View style={{ paddingTop: 18, flexDirection: 'row', borderBottomWidth: isFocused ? 2 : 1, borderBottomColor: isFocused ? '#3E85EF' :  '#D1D8E0' 
       }}>
         <Animated.Text style={labelStyle}>
           {label}

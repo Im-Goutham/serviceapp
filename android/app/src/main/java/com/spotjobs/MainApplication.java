@@ -9,7 +9,6 @@ import com.facebook.appevents.AppEventsLogger;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
-import com.sbugert.rnadmob.RNAdMobPackage;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
@@ -52,7 +51,6 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new RNAdMobPackage(),
             new MapsPackage(),
             new LinearGradientPackage(),
             new RNI18nPackage(),

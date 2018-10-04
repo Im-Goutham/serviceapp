@@ -114,9 +114,9 @@ const styles = StyleSheet.create({
       elevation: 3,
     },
     btnText: { 
-      fontSize: 18,
+      fontSize: 16,
       textAlign :'center',
       color:'white',
-      fontWeight:'bold'
+      fontFamily:'Montserrat-bold'
     }
 })

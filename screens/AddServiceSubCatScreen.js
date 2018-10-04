@@ -20,7 +20,7 @@ import SearchBar from '../components/SearchBar';
 import CategoryContainer from '../components/CategoryContainer';
 
 const { width, height } = Dimensions.get('window');
-let back_arrow = require('../assets/icons/back-arrow.png');
+let back_arrow = require('../assets/icons/arrow_left.png');
 
 
 class AddServiceSubCatScreen extends Component {
@@ -117,7 +117,7 @@ class AddServiceSubCatScreen extends Component {
                    style={{
                      paddingVertical: 25
                    }}>
-                 <TouchableOpacity onPress={() => {this.props.navigation.navigate(mainScreen)}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
+                 <TouchableOpacity onPress={() => this.props.navigation.goBack()}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
                </LinearGradient>
 
                  </View>

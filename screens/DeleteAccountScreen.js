@@ -26,7 +26,7 @@ let tabItems = ["List View", "Map View"];
 
 let logo = require('../images/logo.png');
 let menu = require('../assets/icons/menu.png');
-let back_arrow = require('../assets/icons/back-arrow.png');
+let back_arrow = require('../assets/icons/arrow_left.png');
 let border_img = require('../images/border_img.png');
 
 let maplocations = {
@@ -149,7 +149,7 @@ class DeleteAccountScreen extends Component {
                    </View>
                        }
                    />
-                   <View style={{flex:1}}>
+                   <ScrollView contentContainerStyle={{flexGrow:1}}>
                    <View style={{flex:8.5,backgroundColor :"rgb(249,252, 255)",paddingHorizontal:20}}>
                    <Text style={{color:'#22262C', fontSize:16,marginVertical:5,lineHeight:25,fontFamily:'Montserrat-Bold'}}>Are you sure you want to delete your account?</Text>
                          <Text style={{color:'#9B9B9B', fontSize:14,marginVertical:5,lineHeight:25,fontFamily:'Montserrat-Bold'}}>Please let us know why you are leaving</Text>
@@ -182,10 +182,10 @@ class DeleteAccountScreen extends Component {
                             </Item>
                          </View>
                    </View>
-                   <View style={{flex:1.5, justifyContent:'center',alignItems:'center'}}>
+                   <View style={{flex:1.5, justifyContent:'center',alignItems:'center',paddingVertical:20}}>
                        <Text style={{fontSize:18,color:'white',fontFamily:'Montserrat-Bold'}}>Delete My Account</Text>
                    </View>
-                       </View>
+                       </ScrollView>
                </LinearGradient>
               
            </View>

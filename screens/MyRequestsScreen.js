@@ -20,7 +20,7 @@ var {height, width} = Dimensions.get('window');
 let tabItems = ["Booking Requests", "Hiring Requests"];
 
 let menu = require('../assets/icons/menu.png');
-let back_arrow = require('../assets/icons/back-arrow.png');
+let back_arrow = require('../assets/icons/arrow_left.png');
 
 
 class MyRequestScreen extends Component {

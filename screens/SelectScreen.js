@@ -27,7 +27,7 @@ var {height, width} = Dimensions.get('window');
 let tabItems = ["List View", "Map View"];
 
 let logo = require('../images/logo.png');
-let back_arrow = require('../assets/icons/back-arrow.png');
+let back_arrow = require('../assets/icons/arrow_left.png');
 let menu = require('../assets/icons/menu.png');
 let border_img = require('../images/border_img.png');
 
