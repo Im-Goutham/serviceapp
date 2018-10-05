@@ -1,0 +1,1185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppTutorial snapshot 1`] = `
+<BVLinearGradient
+  colors={
+    Array [
+      4282287599,
+      4282301935,
+    ]
+  }
+  endPoint={
+    Object {
+      "x": 1,
+      "y": 0,
+    }
+  }
+  locations={null}
+  startPoint={
+    Object {
+      "x": 0,
+      "y": 0,
+    }
+  }
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <BVLinearGradient
+    colors={
+      Array [
+        4282287599,
+        4282301935,
+      ]
+    }
+    endPoint={
+      Object {
+        "x": 1,
+        "y": 0,
+      }
+    }
+    locations={null}
+    startPoint={
+      Object {
+        "x": 0,
+        "y": 0,
+      }
+    }
+    style={
+      Object {
+        "backgroundColor": "white",
+        "flex": 5,
+        "paddingHorizontal": 10,
+        "paddingVertical": 30,
+        "position": "relative",
+      }
+    }
+  >
+    <View
+      onLayout={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "flex": 1,
+            "position": "relative",
+          },
+          undefined,
+        ]
+      }
+    >
+      <RCTScrollView
+        activeDot={
+          <Component
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 0,
+                "height": 2,
+                "marginBottom": 3,
+                "marginLeft": 3,
+                "marginRight": 3,
+                "marginTop": 3,
+                "width": 20,
+              }
+            }
+          />
+        }
+        automaticallyAdjustContentInsets={false}
+        autoplay={false}
+        autoplayDirection={true}
+        autoplayTimeout={2.5}
+        bounces={false}
+        contentContainerStyle={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+          ]
+        }
+        contentOffset={
+          Object {
+            "x": 0,
+          }
+        }
+        disableNextButton={false}
+        dot={
+          <Component
+            style={
+              Object {
+                "backgroundColor": "#a2def6",
+                "borderRadius": 0,
+                "height": 2,
+                "marginBottom": 3,
+                "marginLeft": 3,
+                "marginRight": 3,
+                "marginTop": 3,
+                "width": 20,
+              }
+            }
+          />
+        }
+        horizontal={true}
+        index={0}
+        loadMinimal={false}
+        loadMinimalSize={1}
+        loop={true}
+        onIndexChanged={[Function]}
+        onMomentumScrollEnd={[Function]}
+        onScrollBeginDrag={[Function]}
+        onScrollEndDrag={[Function]}
+        pagingEnabled={true}
+        removeClippedSubviews={true}
+        scrollsToTop={false}
+        showsButtons={false}
+        showsHorizontalScrollIndicator={false}
+        showsPagination={true}
+        showsVerticalScrollIndicator={false}
+      >
+        <View>
+          <View
+            style={
+              Array [
+                Object {
+                  "height": 1334,
+                  "width": 750,
+                },
+                Object {
+                  "backgroundColor": "transparent",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 4,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Image
+                  resizeMethod="resize"
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "testUri": "../../../images/tutorial/img4.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 260,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 3,
+                    "justifyContent": "center",
+                    "paddingVertical": 30,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 17,
+                        "lineHeight": 22,
+                        "marginVertical": 10,
+                        "textAlign": "center",
+                      },
+                      Object {
+                        "fontFamily": "Montserrat-Bold",
+                        "fontSize": 20,
+                      },
+                    ]
+                  }
+                >
+                  View Ads And Earn Points
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 17,
+                      "lineHeight": 22,
+                      "marginVertical": 10,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Earn points and redeem them for premium membership and full access to all features.
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "height": 1334,
+                  "width": 750,
+                },
+                Object {
+                  "backgroundColor": "transparent",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 4,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Image
+                  resizeMethod="resize"
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "testUri": "../../../images/tutorial/img1.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 260,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 3,
+                    "justifyContent": "center",
+                    "paddingVertical": 30,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 17,
+                        "lineHeight": 22,
+                        "marginVertical": 10,
+                        "textAlign": "center",
+                      },
+                      Object {
+                        "fontFamily": "Montserrat-Bold",
+                        "fontSize": 20,
+                      },
+                    ]
+                  }
+                >
+                  Find Odd Jobs Near You.
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 17,
+                      "lineHeight": 22,
+                      "marginVertical": 10,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Use paid services between individuals to earn extra cash. Get paid directly, no commission or transaction fees.
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "height": 1334,
+                  "width": 750,
+                },
+                Object {
+                  "backgroundColor": "transparent",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 4,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Image
+                  resizeMethod="resize"
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "testUri": "../../../images/tutorial/img2.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 260,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 3,
+                    "justifyContent": "center",
+                    "paddingVertical": 30,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 17,
+                        "lineHeight": 22,
+                        "marginVertical": 10,
+                        "textAlign": "center",
+                      },
+                      Object {
+                        "fontFamily": "Montserrat-Bold",
+                        "fontSize": 20,
+                      },
+                    ]
+                  }
+                >
+                  Find Help For Your Project
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 17,
+                      "lineHeight": 22,
+                      "marginVertical": 10,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Post a job and get help on budget. Chatting available for your convenience.
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "height": 1334,
+                  "width": 750,
+                },
+                Object {
+                  "backgroundColor": "transparent",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 4,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Image
+                  resizeMethod="resize"
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "testUri": "../../../images/tutorial/img3.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 260,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 3,
+                    "justifyContent": "center",
+                    "paddingVertical": 30,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 17,
+                        "lineHeight": 22,
+                        "marginVertical": 10,
+                        "textAlign": "center",
+                      },
+                      Object {
+                        "fontFamily": "Montserrat-Bold",
+                        "fontSize": 20,
+                      },
+                    ]
+                  }
+                >
+                  Track Service Provider
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 17,
+                      "lineHeight": 22,
+                      "marginVertical": 10,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  View location of service provider on his way to appointment.
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "height": 1334,
+                  "width": 750,
+                },
+                Object {
+                  "backgroundColor": "transparent",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 4,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Image
+                  resizeMethod="resize"
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "testUri": "../../../images/tutorial/img4.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 260,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 3,
+                    "justifyContent": "center",
+                    "paddingVertical": 30,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 17,
+                        "lineHeight": 22,
+                        "marginVertical": 10,
+                        "textAlign": "center",
+                      },
+                      Object {
+                        "fontFamily": "Montserrat-Bold",
+                        "fontSize": 20,
+                      },
+                    ]
+                  }
+                >
+                  View Ads And Earn Points
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 17,
+                      "lineHeight": 22,
+                      "marginVertical": 10,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Earn points and redeem them for premium membership and full access to all features.
+                </Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "height": 1334,
+                  "width": 750,
+                },
+                Object {
+                  "backgroundColor": "transparent",
+                },
+              ]
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flex": 1,
+                  "justifyContent": "center",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 4,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Image
+                  resizeMethod="resize"
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "testUri": "../../../images/tutorial/img1.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 260,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "flex": 3,
+                    "justifyContent": "center",
+                    "paddingVertical": 30,
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Array [
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 17,
+                        "lineHeight": 22,
+                        "marginVertical": 10,
+                        "textAlign": "center",
+                      },
+                      Object {
+                        "fontFamily": "Montserrat-Bold",
+                        "fontSize": 20,
+                      },
+                    ]
+                  }
+                >
+                  Find Odd Jobs Near You.
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 17,
+                      "lineHeight": 22,
+                      "marginVertical": 10,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Use paid services between individuals to earn extra cash. Get paid directly, no commission or transaction fees.
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </RCTScrollView>
+      <View
+        pointerEvents="none"
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "bottom": 25,
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "left": 0,
+              "position": "absolute",
+              "right": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 0,
+              "height": 2,
+              "marginBottom": 3,
+              "marginLeft": 3,
+              "marginRight": 3,
+              "marginTop": 3,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "backgroundColor": "#a2def6",
+              "borderRadius": 0,
+              "height": 2,
+              "marginBottom": 3,
+              "marginLeft": 3,
+              "marginRight": 3,
+              "marginTop": 3,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "backgroundColor": "#a2def6",
+              "borderRadius": 0,
+              "height": 2,
+              "marginBottom": 3,
+              "marginLeft": 3,
+              "marginRight": 3,
+              "marginTop": 3,
+              "width": 20,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "backgroundColor": "#a2def6",
+              "borderRadius": 0,
+              "height": 2,
+              "marginBottom": 3,
+              "marginLeft": 3,
+              "marginRight": 3,
+              "marginTop": 3,
+              "width": 20,
+            }
+          }
+        />
+      </View>
+    </View>
+  </BVLinearGradient>
+  <Image
+    source={
+      Object {
+        "testUri": "../../../images/border_img.png",
+      }
+    }
+    style={
+      Object {
+        "height": 31,
+        "width": "100%",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "backgroundColor": "#F9FCFF",
+        "flex": 2,
+        "flexDirection": "column",
+        "justifyContent": "center",
+        "paddingHorizontal": 10,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      isTVSelectable={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <BVLinearGradient
+        colors={
+          Array [
+            4282287599,
+            4282301935,
+          ]
+        }
+        endPoint={
+          Object {
+            "x": 1,
+            "y": 0,
+          }
+        }
+        locations={null}
+        startPoint={
+          Object {
+            "x": 0,
+            "y": 0,
+          }
+        }
+        style={
+          Object {
+            "backgroundColor": "#4A4A4A",
+            "borderColor": "#fff",
+            "borderRadius": 30,
+            "elevation": 3,
+            "marginTop": 10,
+            "paddingBottom": 16,
+            "paddingTop": 16,
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.2,
+            "shadowRadius": 2,
+            "width": "100%",
+          }
+        }
+      >
+        <Text
+          style={
+            Object {
+              "color": "white",
+              "fontFamily": "Montserrat-Bold",
+              "fontSize": 16,
+              "textAlign": "center",
+            }
+          }
+        >
+           SIGN UP
+        </Text>
+      </BVLinearGradient>
+    </View>
+    <Text
+      style={
+        Object {
+          "color": "#4A4A4A",
+          "fontFamily": "Montserrat-Regular",
+          "fontSize": 17,
+          "marginVertical": 20,
+          "textAlign": "center",
+        }
+      }
+    >
+      Already have an account? 
+      <Text
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "#3E85EF",
+            "fontFamily": "Montserrat-Bold",
+          }
+        }
+      >
+        Sign In
+      </Text>
+    </Text>
+  </View>
+  <Modal
+    animationType="none"
+    hardwareAccelerated={false}
+    hideModalContentWhileAnimating={false}
+    onModalHide={[Function]}
+    onRequestClose={[Function]}
+    scrollOffset={0}
+    scrollOffsetMax={0}
+    scrollTo={null}
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
+    swipeThreshold={100}
+    transparent={true}
+    visible={true}
+  >
+    <View
+      accessible={true}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "black",
+          "bottom": 0,
+          "height": 1334,
+          "left": 0,
+          "opacity": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+          "width": 750,
+        }
+      }
+    />
+    <View
+      hideModalContentWhileAnimating={false}
+      onModalHide={[Function]}
+      pointerEvents="box-none"
+      scrollOffset={0}
+      scrollOffsetMax={0}
+      scrollTo={null}
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+          "margin": 37.5,
+          "transform": Array [
+            Object {
+              "translateY": 1334,
+            },
+          ],
+        }
+      }
+      supportedOrientations={
+        Array [
+          "portrait",
+          "landscape",
+        ]
+      }
+      swipeThreshold={100}
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "white",
+            "borderColor": "rgba(0, 0, 0, 0.1)",
+            "borderRadius": 10,
+            "height": 320,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomWidth": 1,
+              "borderColor": "#e6e6e6",
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "#22262C",
+                "fontFamily": "Montserrat-Medium",
+                "fontSize": 18,
+                "paddingVertical": 10,
+                "textAlign": "center",
+              }
+            }
+          >
+            Select a Language
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 5,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "height": "100%",
+              }
+            }
+          >
+            <RCTPicker
+              items={
+                Array [
+                  Object {
+                    "label": "English",
+                    "textColor": undefined,
+                    "value": "English",
+                  },
+                  Object {
+                    "label": "French",
+                    "textColor": undefined,
+                    "value": "French",
+                  },
+                  Object {
+                    "label": "Spanish",
+                    "textColor": undefined,
+                    "value": "Spanish",
+                  },
+                  Object {
+                    "label": "Italian",
+                    "textColor": undefined,
+                    "value": "Italian",
+                  },
+                  Object {
+                    "label": "Portuguese",
+                    "textColor": undefined,
+                    "value": "Portuguese",
+                  },
+                  Object {
+                    "label": "German",
+                    "textColor": undefined,
+                    "value": "German",
+                  },
+                  Object {
+                    "label": "Hindi",
+                    "textColor": undefined,
+                    "value": "Hindi",
+                  },
+                  Object {
+                    "label": "Bengali",
+                    "textColor": undefined,
+                    "value": "Bengali",
+                  },
+                  Object {
+                    "label": "Telugu",
+                    "textColor": undefined,
+                    "value": "Telugu",
+                  },
+                  Object {
+                    "label": "Marathi",
+                    "textColor": undefined,
+                    "value": "Marathi",
+                  },
+                  Object {
+                    "label": "Tamil",
+                    "textColor": undefined,
+                    "value": "Tamil",
+                  },
+                  Object {
+                    "label": "Gujarati",
+                    "textColor": undefined,
+                    "value": "Gujarati",
+                  },
+                  Object {
+                    "label": "Kannada",
+                    "textColor": undefined,
+                    "value": "Kannada",
+                  },
+                  Object {
+                    "label": "Malayalam",
+                    "textColor": undefined,
+                    "value": "Malayalam",
+                  },
+                ]
+              }
+              onChange={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              selectedIndex={0}
+              style={
+                Array [
+                  Object {
+                    "height": 216,
+                  },
+                  Object {
+                    "color": "#3581fc",
+                    "height": 200,
+                    "paddingVertical": 5,
+                  },
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <BVLinearGradient
+              colors={
+                Array [
+                  4282287599,
+                  4282301935,
+                ]
+              }
+              endPoint={
+                Object {
+                  "x": 1,
+                  "y": 0,
+                }
+              }
+              locations={null}
+              startPoint={
+                Object {
+                  "x": 0,
+                  "y": 0,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#4A4A4A",
+                  "borderBottomLeftRadius": 10,
+                  "borderBottomRightRadius": 10,
+                  "height": "100%",
+                  "justifyContent": "center",
+                  "width": "100%",
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "fontFamily": "Montserrat-Bold",
+                    "fontSize": 17,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                 
+                SELECT
+              </Text>
+            </BVLinearGradient>
+          </View>
+        </View>
+      </View>
+    </View>
+  </Modal>
+</BVLinearGradient>
+`;

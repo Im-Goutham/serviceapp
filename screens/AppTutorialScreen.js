@@ -9,6 +9,17 @@ const { width, height } = Dimensions.get('window')
 
 class AppTutorialScreen extends Component {
 
+    constructor(props){
+         super(props);
+         this.state = {
+               person: 'Goutham'
+         }
+
+    }
+
+    changeState = (a) => {
+         this.setState({person:a})
+    }
      
     render() {
        return (
