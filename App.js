@@ -17,7 +17,7 @@ export default class App extends React.Component {
       	// do stuff while splash screen is shown
           // After having done stuff (such as async tasks) hide the splash screen
          SplashScreen.hide();
-         console.log('pixel ratio is ', PixelRatio.getFontScale());
+         console.log('pixel ratio is ', PixelRatio.get());
          
   }
 

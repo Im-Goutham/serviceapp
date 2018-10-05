@@ -420,5 +420,11 @@ const styles = StyleSheet.create({
         // shadowOpacity: 0.2,
         // shadowRadius: 2,
         // elevation: 3
-    }
+    },
+    btnText: {
+        textAlign:'center',
+        color:'white',
+        fontFamily: 'Montserrat-Bold',
+        fontSize:15
+    },
 })

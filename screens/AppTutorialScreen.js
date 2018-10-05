@@ -12,7 +12,7 @@ class AppTutorialScreen extends Component {
      
     render() {
        return (
-        <View style={styles.container}>
+        <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']}  style={styles.container}>
         <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.appTutorial}>
            <Swiper 
              showsButtons={false}
@@ -56,8 +56,9 @@ class AppTutorialScreen extends Component {
                     </View>
                 </View>
             </Swiper> 
-            <Image style={{width:width,height:40,bottom:-10,position:'absolute'}} source={require('../images/border_img.png')}/>
+         
           </LinearGradient>
+          <Image source={require('../images/border_img.png')} style={{ width: '100%', height: Platform.OS==='ios'? 31 : 31}}/>
           <View style={styles.signUpBlock}>
           <TouchableOpacity onPress={() => {this.props.navigation.navigate('register')}}>
             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
@@ -67,7 +68,7 @@ class AppTutorialScreen extends Component {
               <Text style={{marginVertical:20,fontFamily:'Montserrat-Regular',color:'#4A4A4A',fontSize:17,textAlign:'center'}}>Already have an account? <Text style={{fontFamily:'Montserrat-Bold',color:'#3E85EF'}} onPress={()=>{this.props.navigation.navigate('login')}}>Sign In</Text></Text>
             </View>
             <SelectLanguage />  
-        </View>
+        </LinearGradient>
        )
     }
 }
