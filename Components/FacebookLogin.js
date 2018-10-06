@@ -83,13 +83,9 @@ export default class FacebookLogin extends Component {
     return (
             <TouchableOpacity style={styles.button} 
               onPress={() => this.handleFacebookLogin()}>
-              <View style={{flexDirection:'row',paddingVertical:1}}>
-                <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+              <View style={{flexDirection:'row',paddingVertical:1,justifyContent:'center',alignItems:'center'}}>
                   <Image source={require('../assets/icons/fb_transparent.png')} style={{ width: 20, height: 20}} resizeMode="contain" resizeMethod="resize"/>
-                  </View>
-                  <View style={{flex:2,justifyContent:'center',alignItems:'flex-start'}}>
                     <Text style={styles.btnText}>Facebook</Text>
-                  </View>
                 </View>
             </TouchableOpacity>
     );
@@ -114,8 +110,9 @@ const styles = StyleSheet.create({
       elevation: 3,
     },
     btnText: { 
+      paddingHorizontal:10,
       fontSize: 16,
-      textAlign :'center',
+      textAlign :'left',
       color:'white',
       fontFamily:'Montserrat-bold'
     }

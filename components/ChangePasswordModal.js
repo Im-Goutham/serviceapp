@@ -32,21 +32,13 @@ export default class ChangePassword extends Component {
      <View style={styles.heading}><Text style={styles.headingText}>Enter Current Password</Text></View>
      <View style={{height:230,paddingHorizontal:10}}>
         <View style={{paddingVertical:20}}>
-            <Text style={{textAlign:'center', color:'#9B9B9B'}}>For security reasons, please verify your password.</Text>
+            <Text style={{fontFamily:'Montserrat-Medium',fontSize:14,textAlign:'center', color:'#9B9B9B'}}>For security reasons, please verify your password.</Text>
         </View>
         <View style={{marginVertical:20}}>
-        <FloatingLabelInput
-                label="Password"
-                value={this.state.password}
-                autoCapitalize='none'
-                returnKeyType={ "next" }
-                ref={ input => {
-                    this.inputs['password'] = input;
-                }}
-                onChangeText={password => this.setState({ password })}
-                style={{marginVertical: 5}}
-                secureTextEntry={true}
-                />
+            <Text style={{ color:'#9B9B9B'}}>Password</Text>
+                <Item>
+                <Input style={styles.inputLabel} placeholder="Type here" placeholderTextColor='9B9B9B'/>
+           </Item>
          </View>
          <View style={{paddingVertical:10}}>
             <Text style={{textAlign:'right', color:'#3E85EF',fontFamily:'Montserrat-Medium'}}>Forgot password?</Text>
@@ -124,6 +116,8 @@ const styles = StyleSheet.create({
       inputLabel: {
         textAlign:'left',
         fontSize: 16,
-        fontFamily:'Montserrat-Light'
+        fontFamily:'Montserrat-Medium',
+
+        borderBottomColor: '#D1D8E0'
      },
 });

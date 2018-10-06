@@ -131,7 +131,7 @@ class LoginScreen extends Component {
               <View style={{flex:1,justifyContent:'space-around'}}>
               <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:"flex-start"}}>
                     <CheckBox checked={checked} color='rgb(61,133,239)' style={{marginLeft:-10,marginTop:3,borderRadius:3}} onPress={()=>this.setState({checked: !checked})}/>
-                    <Text style={{marginLeft:20,fontSize:17,fontFamily: 'Montserrat-Regular',color:'rgb(74,74,74)'}}>Remember me</Text>
+                    <Text style={{marginLeft:20,marginTop:2,fontSize:17,fontFamily: 'Montserrat-Regular',color:'rgb(74,74,74)'}}>Remember me</Text>
               </View>
               <View style={{justifyContent: "center" }}>
                   {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :

@@ -40,7 +40,7 @@ class SettingsList extends Component {
           </View>
           </TouchableOpacity>
           <View style={styles.mainBox}>
-              <View style={{flex:2,alignItems:'flex-start'}}><Text style={styles.textStyle}>Accound Active</Text></View>
+              <View style={{flex:2,alignItems:'flex-start'}}><Text style={styles.textStyle}>Account Active</Text></View>
               <View style={{flex:1,alignItems:'flex-end'}}><Switch value={true} style={styles.switch}/></View>
           </View>
           <TouchableOpacity  onPress={() => {this.props.navigation.navigate('chooseLanguage')}}>
@@ -55,7 +55,7 @@ class SettingsList extends Component {
          <TouchableOpacity  onPress={() => {this.props.navigation.navigate('deleteAccount')}}>
           <View style={styles.mainBox}>
               <View style={{flex:2,alignItems:'flex-start'}}>
-                   <Text style={styles.textStyle}>Delete my account</Text>
+                   <Text style={styles.textStyle}>Delete My Account</Text>
               </View>
               <View style={{flex:1,alignItems:'flex-end'}}><Image source={require('../assets/icons/arrow_right.png')} style={{width:8,height:12}}/></View>
           </View>

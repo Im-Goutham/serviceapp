@@ -74,13 +74,12 @@ export default class GoogleSigninSampleApp extends Component {
   render() {
       return (
         <TouchableOpacity style={styles.button} onPress={() => this._signIn()}> 
-         <View style={{flexDirection:'row'}}>
-            <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-            <Image source={require('../assets/icons/gmail_transparent.png')} style={{ width: 25, height: 25}} resizeMode="contain" resizeMethod="resize"/>
-            </View>
-            <View style={{flex:1,justifyContent:'center',alignItems:'flex-start'}}>
+         <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+
+            <Image source={require('../assets/icons/gmail_transparent.png')} style={{ width: 30, height: 30}} resizeMode="contain" resizeMethod="resize"/>
+
                <Text style={styles.btnText}>Gmail</Text>
-            </View>
+     
          </View>
          </TouchableOpacity>
       );
@@ -122,8 +121,8 @@ const styles = StyleSheet.create({
     backgroundColor:'#DC493D',
     width: '100%',
     borderRadius:30,
-    paddingTop:15,
-    paddingBottom:15,
+    paddingTop:11,
+    paddingBottom:11,
     marginTop: 5,
     marginBottom: 5,
     shadowOffset: { width: 0, height: 2 },
@@ -132,8 +131,9 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   btnText: { 
+    paddingHorizontal:10,
     fontSize: 16,
-    textAlign :'center',
+    textAlign :'left',
     color:'white',
     fontFamily:'Montserrat-bold'
   }

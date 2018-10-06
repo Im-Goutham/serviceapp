@@ -70,7 +70,7 @@ export default class FloatingLabelInput extends Component {
         </Animated.Text>
         <TextInput
           {...props}
-          style={{ flex:1,fontFamily:'Montserrat-Medium',height: this.props.multiline && this.props.value  ? 180 : 45 , fontSize: 16, color: '#4A4A4A'}}
+          style={{ flex:1,fontFamily:'Montserrat-Medium',height: this.props.multiline && this.props.value  ? 180 : 35 , fontSize: 16, color: '#4A4A4A'}}
           onFocus={this.handleFocus}
           autoCorrect={false}
           onBlur={this.handleBlur}

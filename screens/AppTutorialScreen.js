@@ -35,7 +35,7 @@ class AppTutorialScreen extends Component {
                         <Image source={require('../images/tutorial/img1.png')} style={styles.imgStyle}  resizeMode="contain" resizeMethod="resize" />
                     </View>    
                     <View style={styles.tutorialText}>
-                        <Text style={[styles.text,{fontSize:20,  fontFamily:'Montserrat-Bold'}]}>Find Odd Jobs Near You.</Text>
+                        <Text style={[styles.text,{fontSize:20,  fontFamily:'Montserrat-Bold'}]}>Find Odd Jobs Near You</Text>
                         <Text style={styles.text}>Use paid services between individuals to earn extra cash. Get paid directly, no commission or transaction fees.</Text>
                     </View> 
                 </View>

@@ -161,6 +161,7 @@ class JobsList extends Component {
             }
         ];
         var screen = this.props.navigation.state.routeName;
+        console.log('screen is ... ',screen);
         return (
             <Swipeout
                 sensitivity={1}
@@ -215,7 +216,7 @@ class JobsList extends Component {
                             }}>
 
                                  {
-                                     (screen == 'trackNow' ||  'findJobs' || 'select')?(
+                                     (screen == 'trackNow' ||  screen ==  'findJobs' || screen == 'select')?(
                                            <TouchableOpacity style={styles.button} onPress={() =>
                                             screen == 'select' ? this.props.navigation.goBack()
                                             : this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')
@@ -293,7 +294,7 @@ class JobsList extends Component {
                                         <View style={{flex: 1, flexDirection: 'row',}}>
                                             <Image style={{width: 15, height: 15}} source={require('../assets/icons/location_red.png')} resizeMode="contain" resizeMethod="resize"/>
                                             <Text style={{paddingLeft: 5, fontSize: 14, fontFamily: "Montserrat-Light"}}>
-                                                3 mi
+                                                3 mi.
                                             </Text>
                                         </View>
                                         <View style={{flex: 1, flexDirection: 'row'}}>
@@ -301,7 +302,7 @@ class JobsList extends Component {
                                                 fontSize: 14,
                                                 color: 'rgb(74,74,74)',
                                                 fontFamily: "Montserrat-Bold"
-                                            }}>Budget : </Text><Text style={{
+                                            }}>Budget: </Text><Text style={{
                                             fontSize: 14,
                                             color: 'rgb(80,174,87)',
                                             fontFamily: "Montserrat-Bold"

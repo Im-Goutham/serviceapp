@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppTutorial snapshot 1`] = `
+exports[`AppTutorial rendering 1`] = `
 <BVLinearGradient
   colors={
     Array [
@@ -307,7 +307,7 @@ exports[`AppTutorial snapshot 1`] = `
                     ]
                   }
                 >
-                  Find Odd Jobs Near You.
+                  Find Odd Jobs Near You
                 </Text>
                 <Text
                   style={
@@ -679,7 +679,7 @@ exports[`AppTutorial snapshot 1`] = `
                     ]
                   }
                 >
-                  Find Odd Jobs Near You.
+                  Find Odd Jobs Near You
                 </Text>
                 <Text
                   style={

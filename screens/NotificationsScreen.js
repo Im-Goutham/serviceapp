@@ -73,10 +73,14 @@ class NotificationScreen extends Component {
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
                        
-                   </View>
+                         </View>
                        }
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
+                        <TouchableOpacity>
+                            <Text style={styles.read}>Mark all as read</Text>
+                        </TouchableOpacity>
+                        
                          <NotificationsList navigation={this.props.navigation}/>
                        </View>
                </LinearGradient>
@@ -115,6 +119,14 @@ const styles = StyleSheet.create({
     paddingTop:5,
     paddingBottom:5,
 },
+read: {
+    color: '#22262C',
+    paddingRight:10,
+    paddingVertical:10,
+    fontSize:15,
+    textAlign: 'right',
+    fontFamily:'Montserrat-Medium'
+  },
 })
 
 

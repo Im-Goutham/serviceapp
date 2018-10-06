@@ -123,38 +123,44 @@ class FindHelpScreen extends Component {
                             </View>
                         </View>
                         <View style={{flex:7,paddingHorizontal:20}}>
-                            <View style={{flex:1}}>
-                                <Text style={{fontSize:18}}>Clayton L.</Text>
+                            <View style={{flex:1,flexDirection:'row'}}>
+                                <Text style={{fontFamily:'Montserrat-Medium',color:'#22262C',fontSize:18}}>Clayton L.</Text>
+                                <Image style={{
+                                    width: 20,
+                                    height: 20,
+                                    paddingHorizontal: 15,
+                                    backgroundColor: "transparent"
+                                }} source={require('../assets/icons/crown.png')} resizeMode="contain" resizeMethod="resize"/>
                             </View>
                             <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
-                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingRight:8}}><Image source={require('../assets/icons/star_gold.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{marginLeft:8,marginRight:8}}>4</Text></View>
-                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:8,borderLeftColor:'rgb(204,204,204)',borderLeftWidth:1,borderRightColor:'rgb(204,204,204)',borderRightWidth:1}}><Image source={require('../assets/icons/chat_green.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{marginLeft:8,marginRight:8}}>3</Text></View>
-                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:8}}><Image source={require('../assets/icons/location_red.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{marginLeft:8,marginRight:8}}>3 mi.</Text></View>
+                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingRight:8}}><Image source={require('../assets/icons/star_gold.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Bold',marginLeft:8,marginRight:8}}>4</Text></View>
+                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:8,borderLeftColor:'#CCCCCC',borderLeftWidth:1,borderRightColor:'#CCCCCC',borderRightWidth:1}}><Image source={require('../assets/icons/chat_green.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Regular',marginLeft:8,marginRight:8}}>3</Text></View>
+                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:8}}><Image source={require('../assets/icons/location_red.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A',marginLeft:8,marginRight:8}}>3 mi.</Text></View>
                             </View>
                             <View style={{flex:1}}>
-                                <Text>14 <Text style={{color:'rgb(74,74,74)'}}>Jobs done</Text></Text>
+                                <Text>14 <Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A)',fontSize:13}}>Jobs done</Text></Text>
                             </View>
                         </View>
                     </View>
                     <View style={{flex:1,flexDirection:'row',marginTop:10}}>
-                        <View style={{justifyContent:'center'}}><Text style={styles.tagStyle}>Plumber and 5 More</Text></View>
+                        <View style={{justifyContent:'center'}}><Text style={styles.tagStyle}>Plumber & 5 More</Text></View>
                         <View style={{flexDirection:'row',flex:1,justifyContent:'flex-end',alignItems:'center'}}>
-                          <TouchableOpacity onPress={()=>this.setState({liked: !this.state.liked})}>
-                                <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                        <Image source={this.state.liked ? require('../assets/icons/heart_red.png'): require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
-                                </LinearGradient>
-                            </TouchableOpacity>
+                        <TouchableOpacity onPress={()=>{this.setState({liked: !this.state.liked})}}> 
                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                <TouchableOpacity onPress={()=>this.shareJob()}>
-                                    <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
-                                </TouchableOpacity>
+                                    <Image source={this.state.liked ? require('../assets/icons/heart_red.png'): require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
                             </LinearGradient>
+                         </TouchableOpacity>
+                         <TouchableOpacity onPress={()=> this.shareJob()}>
+                            <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
+                                    <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
+                            </LinearGradient>
+                        </TouchableOpacity>
                         </View>
                     </View>
-                    <View style={{flexDirection:'row',marginTop:10}}>
+                    <View style={{flex:1,flexDirection:'row'}}>
                         {
                             this.state.images.map((image,key)=>{
-                                return  <TouchableWithoutFeedback  onPress={()=>{this.showImage(key)}} key={key}>
+                                return  <TouchableWithoutFeedback key={key}>
                                     <View style={styles.imgBox}>
                                         <ImageBackground style={styles.imgStyle} source={image.image}  resizeMode="contain" resizeMethod="resize">
                                             {(key == 2)? (
@@ -167,14 +173,16 @@ class FindHelpScreen extends Component {
                             })
                         }
                         </View>
-                    <View style={{flex:1,flexDirection:'row',paddingTop:10,paddingBottom:10}}>
+                    <View style={{flex:1,flexDirection:'row'}}>
                         <View style={{flex:5,paddingVertical:3}}>
                             <Text style={{color:'#9B9B9B',fontFamily:'Montserrat-Medium',fontSize:13}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
                         </View>
                         <View style={{flex:3}}>
+                        <TouchableOpacity onPress={()=> {this.props.navigation.navigate('select')}}>
                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                                <TouchableOpacity><Text style={styles.btnText}>HIRE NOW</Text></TouchableOpacity>
+                                <Text style={styles.btnText}>HIRE NOW</Text>
                             </LinearGradient>
+                     </TouchableOpacity>
                         </View>
                     </View>
               </View>
@@ -334,7 +342,7 @@ btnText: {
     textAlign:'center',
     color:'white',
     fontFamily: 'Montserrat-Bold',
-    fontSize:15
+    fontSize:14
 },
      iconButton: {
     marginHorizontal:5,

@@ -1,7 +1,8 @@
 import React from 'react';
+ import { shallow } from 'enzyme';
 import { Provider } from "react-redux";
-import configureMockStore from "redux-mock-store";
-import AppTutorialScreen from '../screens/AppTutorialScreen';
+// import configureMockStore from "redux-mock-store";
+import AppTutorialScreen from '../../screens/AppTutorialScreen';
 
 // const mockStore = configureMockStore();
 // const store = mockStore({});
@@ -22,12 +23,31 @@ let findElement = function(tree,element) {
 }
 
 
-test('AppTutorial snapshot', () => {
-  const tree = renderer.create(
-          <AppTutorialScreen />
-  ).toJSON();
-  expect(tree).toMatchSnapshot();
-});
+
+
+
+describe('AppTutorial', () => {
+ let wrapper;
+
+//  beforeEach(() => {
+//     wrapper = shallow(<AppTutorialScreen />);
+//  })
+
+//   it('snapshot',()=> {
+//     expect(wrapper).toMatchSnapshot();
+
+//  })
+
+ it('rendering',()=> {
+        const tree = renderer.create(
+                <AppTutorialScreen />
+        ).toJSON();
+        expect(tree).toMatchSnapshot()
+
+  })
+
+
+
 
 
 test('finction and state testing', () => {
@@ -38,7 +58,7 @@ test('finction and state testing', () => {
   expect(AppTutorialData.state.person).toEqual('React');
 });
 
-
+});
 // test('Find element', () => {
 //   const AppData = renderer.create(
 //           <AppTutorialScreen />

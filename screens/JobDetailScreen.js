@@ -116,11 +116,11 @@ export default class JobDetailScreen extends Component {
                         </View>
                         <View style={styles.customerinfo}>
                             <Text style={styles.textStyle}>Customer's info</Text>
-                            <View style={{ flexDirection: "row", paddingVertical: 20 }}>
-                                <View style={{ width: "30%" }}>
+                            <View style={{ flexDirection: "row", paddingVertical: 10 }}>
+                                <View style={{ flex: 2}}>
                                     <Image source={require('../images/svp2.png')} style={{ width: "100%", height: 70 }} resizeMode="contain" resizeMethod="resize" />
                                 </View>
-                                <View style={{ width: "70%", justifyContent: "space-between" }}>
+                                <View style={{  flex: 8, justifyContent: "space-between",paddingHorizontal:10 }}>
                                     <View style={{ flexDirection: "row", }} >
                                         <Text style={{ fontFamily: "Montserrat-Medium", fontSize: 16,color:'#22262C' }}>Trevors S.</Text>
                                         <Image source={require('../assets/icons/crown.png')} style={{ width: 20, height: 20, paddingHorizontal: 20 }} resizeMode="contain" resizeMethod="resize" />
@@ -139,7 +139,7 @@ export default class JobDetailScreen extends Component {
                                             <Text style={{
                                                 fontSize: 14,
                                                 color: "#3E85EF",
-                                                fontFamily: "Montserrat-Regular",
+                                                fontFamily: "Montserrat-Medium",
                                                 paddingLeft: 10
                                             }}> 2  Reviews</Text>
                                         </TouchableOpacity> 
@@ -147,7 +147,7 @@ export default class JobDetailScreen extends Component {
                                     <Text style={{
                                         fontSize: 14,
                                         color: "rgb(61, 133, 239)",
-                                        fontFamily: "Montserrat-Bold"
+                                        fontFamily: "Montserrat-Medium"
                                     }}>Other posted jobs</Text>
                                 </View>
                             </View>
@@ -272,7 +272,7 @@ export default class JobDetailScreen extends Component {
                                     style={{height: 64, justifyContent: "center", alignItems: "center"}}
                                     onPress={() => {this.setState({visible:true})}}
                                     >
-                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: 20, color: "#fff"}}>APPLY FOR THIS JOB</Text>
+                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: 16, color: "#fff"}}>APPLY FOR THIS JOB</Text>
                                 </TouchableOpacity>
                             </LinearGradient>
                             :

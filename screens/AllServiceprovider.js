@@ -97,21 +97,22 @@ export default class AllServiceProvider extends Component {
           return(
               <View style={{marginBottom: 10, width: "100%", backgroundColor:"#fff", borderRadius:10}} key={index}>
                     <View style={{backgroundColor:"transparent"}}>
-                        <View style={{flex:1,flexDirection:'row', paddingHorizontal:20,paddingVertical:10 }}>
-                            <View style={{flex:2,justifyContent:'center',alignItems:'center'}}>
+                    <View style={{flex:1,flexDirection:'row', paddingHorizontal:15,paddingVertical:10}}>
+                            <View style={{flex:2,justifyContent:'flex-start',alignItems:'flex-start'}}>
                                 <View style={styles.imageShadow}>
                                     <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
                                     <Image source={require('../images/check.png')} style={styles.check}/>
                                 </View>
                             </View>
-                            <View style={{flex:7,paddingHorizontal:20,paddingVertical:10,justifyContent:'space-between'}}>
+                            <View style={{flex:7,paddingHorizontal:20,paddingBottom:10,justifyContent:'space-between'}}>
                                 <View style={{flex:1}}>
-                                    <Text style={{fontSize:17,color:'rgb(85,85,85)'}}>Clayton L.</Text>
+                                    <Text style={{fontSize:17,color:'#4A4A4A'}}>Clayton L.</Text>
                                      <View style={{flexDirection:'row',paddingVertical:5}}>
-                                       <Image source={require('../assets/icons/star_gold.png')} style={{widh:15,height:15}} resizeMode="contain" resizeMethod="resize" />
-                                       <Text style={{fontFamily: 'Montserrat-Bold'}}>5</Text>
+                                       <Image source={require('../assets/icons/star_gold.png')} style={{width:15,height:15}} resizeMode="contain" resizeMethod="resize" />
+                                       <Text style={{color:'#4A4A4A',fontFamily: 'Montserrat-Bold',paddingLeft:6}}>5</Text>
                                      </View>
-                                    <Text style={{fontSize:14,color:'rgb(155,155,155)'}}>Plumber & 5 More</Text>
+                                    
+                                    <Text style={{fontFamily:'Montserrat-Medium',fontSize:14,color:'#9B9B9B'}}>Plumber & 5 More</Text>
                                 </View>
                             </View>
                         </View>

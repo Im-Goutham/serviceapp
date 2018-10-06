@@ -117,7 +117,7 @@ class AddServiceSubCatScreen extends Component {
                    style={{
                      paddingVertical: 25
                    }}>
-                 <TouchableOpacity onPress={() => this.props.navigation.goBack()}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
+                 <TouchableOpacity onPress={() => this.props.navigation.goBack()}><Text style={styles.btnText}>ADD SERVICE</Text></TouchableOpacity>
                </LinearGradient>
 
                  </View>

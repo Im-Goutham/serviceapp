@@ -74,9 +74,10 @@ class SubscriptionScreen extends Component {
                     </View>
                   </View>
                   <View style={{padding:10}}>
-                       <View style={{flexDirection:'row',justifyContent:'center'}}><Image source={require('../assets/icons/tick_green.png')} style={[styles.tick]}/><Text style={[styles.subTextStyle,{textAlign:'center'}]} resizeMode="contain" resizeMethod="resize">Ligula pharetra velit</Text></View> 
-                       <View style={{flexDirection:'row',justifyContent:'center'}}><Image source={require('../assets/icons/tick_green.png')} style={styles.tick}/><Text style={[styles.subTextStyle,{textAlign:'center'}]} resizeMode="contain" resizeMethod="resize">Pharetra velit at sociosqu</Text></View>
-                       <View style={{flexDirection:'row',justifyContent:'center'}}><Image source={require('../assets/icons/tick_green.png')} style={styles.tick}/><Text style={[styles.subTextStyle,{textAlign:'center'}]} resizeMode="contain" resizeMethod="resize"> Velit at sociosqu</Text></View>
+                       <View style={{flexDirection:'row',justifyContent:'flex-start',paddingVertical:6,borderWidth:1,borderColor:'white'}}><Image source={require('../assets/icons/tick_green.png')} style={[styles.tick]} resizeMode="contain" resizeMethod="resize" /><Text style={[styles.subTextStyle,{paddingRight:10}]} >Full access to the app</Text></View> 
+                       <View style={{flexDirection:'row',justifyContent:'flex-start',paddingVertical:6,borderWidth:1,borderColor:'white'}}><Image source={require('../assets/icons/tick_green.png')} style={styles.tick} resizeMode="contain" resizeMethod="resize" /><Text style={[styles.subTextStyle]}>Provide unlimited services</Text></View>
+                       <View style={{flexDirection:'row',justifyContent:'flex-start',paddingVertical:6,borderWidth:1,borderColor:'white'}}><Image source={require('../assets/icons/tick_green.png')} style={styles.tick} resizeMode="contain" resizeMethod="resize" /><Text style={[styles.subTextStyle]}>Upload more pictures & video links</Text></View>
+                       <View style={{flexDirection:'row',justifyContent:'flex-start',paddingVertical:6,borderWidth:1,borderColor:'white'}}><Image source={require('../assets/icons/tick_green.png')} style={styles.tick} resizeMode="contain" resizeMethod="resize" /><Text style={[styles.subTextStyle,{paddingRight:10}]}>Longer tracking available before & after the appointment date.</Text></View>
                       <View>
                         <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
                           <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>SELECT</Text></TouchableOpacity>
@@ -146,7 +147,7 @@ class SubscriptionScreen extends Component {
                               <Image source={border_img} style={{ width: '100%', height: Platform.OS==='ios'? 31 : 30}}/>
                                  <View style={{height:20, backgroundColor:"#F9FCFF"}}/>
                               </View>
-                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1,paddingHorizontal:20}}>
+                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1,paddingHorizontal:20,paddingBottom:30}}>
                         <View>
                             <Text style={[styles.textStyle,{textAlign:'center'}]}>0</Text>
                             <Text style={[styles.subTextStyle,{color:'rgb(34,38,34)',textAlign:'center',fontSize:15}]}>Points</Text>
@@ -156,9 +157,9 @@ class SubscriptionScreen extends Component {
                         </LinearGradient>
                 
                         <View style={{flexDirection:'row',justifyContent:'center'}}>
-                              <Image source={require('../images/card.png')} resizeMode="contain" resizeMethod="resize" style={{marginHorizontal:5,width:20,height:20,marginTop:15}}/>
+                              <Image source={require('../images/card.png')} resizeMode="contain" resizeMethod="resize" style={{marginHorizontal:5,width:28,height:28,marginTop:10}}/>
                               <Image source={require('../images/paypal.png')} resizeMode="contain" resizeMethod="resize" style={{marginHorizontal:5,width:20,height:20,marginTop:15}}/>
-                               <Text style={{textAlign:'center',paddingVertical:15}}>Accept PayPal & All Credit & Debit cards</Text> 
+                               <Text style={{textAlign:'center',paddingVertical:15,fontSize:12,fontFamily:'Montserrat-Medium',color:'#22262C'}}>Accept PayPal & All Credit & Debit cards</Text> 
                                </View> 
                            
                         </View>
@@ -215,17 +216,18 @@ servicesBox: {
     justifyContent:'center',
     alignItems:'center',
     paddingHorizontal:20,
+    paddingVertical:5
 },
 textStyle:{
-    fontSize:22,
-    color:'rgb(34,38,44)',
+    fontSize:24,
+    paddingBottom:10,
+    color:'#22262C',
     fontFamily:'Montserrat-Bold'
 },
 subTextStyle: {
-    fontSize:13,
-    marginVertical:5,
+    fontSize:15,
     fontFamily:'Montserrat-Medium',
-    color:'rgb(186,187,189)'
+    color:'#9B9B9B'
 },
 button:{
     backgroundColor:'#4A4A4A',
@@ -240,14 +242,14 @@ button:{
 btnText: { 
     textAlign:'center',
     color:'white',
-    fontSize: 16,
-    fontWeight:'bold'
+    fontSize:17,
+    fontFamily:'Montserrat-Bold'
 },
 tick:{
      height:15,
      width: 15,
+     marginTop:2,
      marginHorizontal:10,
-     marginTop:5
 }
 })
 

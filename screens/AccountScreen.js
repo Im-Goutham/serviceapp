@@ -588,8 +588,6 @@ button:{
   backgroundColor:'#4A4A4A',
   width: '100%',
   borderRadius:30,
-  borderWidth: 1,
-  borderColor: '#fff',
   marginTop:10,
   paddingTop:16,
   paddingBottom:16,

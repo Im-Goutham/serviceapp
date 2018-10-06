@@ -61,7 +61,7 @@ export default class ApplyModal extends Component {
      <View style={styles.heading}><Text style={styles.headingText}>Apply for the job</Text></View>
      <View style={{height:280,paddingHorizontal:10}}>
         <View style={{paddingVertical:20}}>
-            <Text style={{textAlign:'center', color:'#9B9B9B'}}>Suggest which day and time would work best for you.</Text>
+            <Text style={{fontFamily:'Montserrat-Medium',fontSize:14,textAlign:'center', color:'#9B9B9B',lineHeight: 25}}>Suggest which day and time would work best for you.</Text>
         </View>
   
           {

@@ -61,7 +61,7 @@ class NotificationsList extends Component {
                  <View style={{flex:7,paddingHorizontal:20}}>
                     <View style={{flex:1}}>
                          <Text style={{fontSize:16,color:'#3E85EF',fontFamily:'Montserrat-Medium'}}>You have a new message from <Text style={{fontFamily:'Montserrat-Bold'}}>Warren Pratt</Text></Text>
-                         <Text style={{fontSize:12,color:'#9B9B9B',marginVertical:10}}>On <Text style={{fontWeight:'bold'}}>06/18/2018</Text> at <Text style={{fontWeight:'bold'}}>08:00 PM</Text></Text>
+                         <Text style={{fontSize:13,color:'#9B9B9B',marginVertical:10}}>On <Text style={{fontFamily:'Montserrat-Bold'}}>06/18/2018</Text> at <Text style={{fontFamily:'Montserrat-Bold'}}>08:00 PM</Text></Text>
                     </View>
                    
                 
@@ -126,18 +126,6 @@ imgBox: {
     elevation: 3,
 
 },
-overlay: {
-  position: 'absolute',
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
-  borderRadius:5,
-  backgroundColor: 'rgba(0,0,0,.6)',
-  opacity: 2,
-  justifyContent:'center',
-  alignItems:'center'
-},
 imgStyle:{
     width:100,
     height:100,
@@ -145,9 +133,9 @@ imgStyle:{
 },
   servicesBox: {
     flex: 1,
-    marginVertical: 5,
+    marginVertical: 10,
     marginHorizontal: 10,
-    paddingVertical: 25,
+    paddingVertical: 15,
     paddingHorizontal:20,
     borderRadius:10,
     backgroundColor:'white',
@@ -181,16 +169,6 @@ imgStyle:{
   iconStyle: {
      width:15,
      height:15
-  },
-  tagStyle:{
-     backgroundColor: 'rgb(239,186,47)',
-     borderRadius:10,
-     overflow:"hidden",
-     paddingVertical:2,
-     paddingLeft:10,
-     paddingRight:30,
-     color: 'white',
-     fontFamily: 'Montserrat-Bold'
   },
   iconButton: {
     marginHorizontal:5,

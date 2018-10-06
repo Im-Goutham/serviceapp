@@ -33,22 +33,26 @@ class AllServiceList extends Component {
     
         return (
                 <View style={styles.servicesBox} >
-                    <View style={{backgroundColor:"transparent", paddingTop: 25,  }}>
-                        <View style={{flex:1,flexDirection:'row', paddingHorizontal:10}}>
-                            <View style={{flex:2,justifyContent:'center',alignItems:'center'}}>
+                    <View style={{backgroundColor:"transparent", paddingTop: 15,  }}>
+                        <View style={{flex:1,flexDirection:'row', paddingHorizontal:15}}>
+                            <View style={{flex:2,justifyContent:'flex-start',alignItems:'flex-start'}}>
                                 <View style={styles.imageShadow}>
                                     <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
                                     <Image source={require('../images/check.png')} style={styles.check}/>
                                 </View>
                             </View>
-                            <View style={{flex:7,paddingHorizontal:20,paddingVertical:10,justifyContent:'space-between'}}>
+                            <View style={{flex:7,paddingHorizontal:20,paddingBottom:10,justifyContent:'space-between'}}>
                                 <View style={{flex:1}}>
                                     <Text style={{fontSize:17,color:'#4A4A4A'}}>Clayton L.</Text>
                                      <View style={{flexDirection:'row',paddingVertical:5}}>
-                                       <Image source={require('../assets/icons/star_gold.png')} style={{widh:15,height:15}} resizeMode="contain" resizeMethod="resize" />
-                                       <Text style={{color:'#4A4A4A',fontFamily: 'Montserrat-Bold'}}>5</Text>
+                                       <Image source={require('../assets/icons/star_gold.png')} style={{width:15,height:15}} resizeMode="contain" resizeMethod="resize" />
+                                       <Text style={{color:'#4A4A4A',fontFamily: 'Montserrat-Bold',paddingLeft:6}}>5</Text>
                                      </View>
-                                    <Text style={{fontSize:14,color:'#9B9B9B'}}>Plumber & 5 More</Text>
+                                     <View style={{flexDirection:'row',paddingVertical:5}}>
+                                       <Image source={require('../assets/icons/calender.png')} style={{width:15,height:15}} resizeMode="contain" resizeMethod="resize" />
+                                       <Text style={{color:'#4A4A4A',fontFamily: 'Montserrat-Regular',paddingLeft:10}}>Appt. On 08 Nov 2018</Text>
+                                     </View>
+                                    <Text style={{fontFamily:'Montserrat-Medium',fontSize:14,color:'#9B9B9B'}}>Plumber & 5 More</Text>
                                 </View>
                             </View>
                         </View>
