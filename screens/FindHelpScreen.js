@@ -300,6 +300,7 @@ const styles = StyleSheet.create({
     marginBottom:scale(10),
     color: 'white',
     marginRight: scale(10),
+    fontSize: scale(14),
     fontFamily: 'Montserrat-Bold'
 },
     imgStyle:{

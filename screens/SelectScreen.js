@@ -9,27 +9,21 @@ import {
     Platform,
     Text, TouchableHighlight
 } from 'react-native';
- import {  Icon } from 'native-base'
-import Advertisement from '../components/Advertisement';
 import JobsList from '../components/JobsList';
-import Map from '../components/Map';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
-import Modal from 'react-native-modalbox';
-import {NavigationActions} from 'react-navigation';
+
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import SearchBar from '../components/SearchBar';
-
 import HeaderScreen from './HeaderScreen';
 
-var {height, width} = Dimensions.get('window');
-let tabItems = ["List View", "Map View"];
+import {scale} from '../global';
 
-let logo = require('../images/logo.png');
+
 let back_arrow = require('../assets/icons/arrow_left.png');
 let menu = require('../assets/icons/menu.png');
-let border_img = require('../images/border_img.png');
+
 
 
 
@@ -80,18 +74,18 @@ class SelectScreen extends Component {
                                left = {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
 
-                                        <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
 
-                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? scale(54) : "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                 </TouchableOpacity>
                              </View>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                    <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Select a Job</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                    <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>Select a Job</Text>
                                </View>
                                }
                                right={
@@ -100,7 +94,7 @@ class SelectScreen extends Component {
                            />
                        }
                        content={
-                        <View style={{backgroundColor :"transparent",justifyContent: "space-between",paddingTop: 10,paddingBottom:20,marginHorizontal:10}}>
+                        <View style={{backgroundColor :"transparent",justifyContent: "space-between",paddingTop: scale(10),paddingBottom:scale(20),marginHorizontal:scale(10)}}>
                           <SearchBar placeholder={'Search from your jobs...' } />
                        </View>
                        }
@@ -125,24 +119,24 @@ const styles = StyleSheet.create({
   },
 
   modal2: {
-    height: 230,
+    height: scale(230),
     backgroundColor: "#3B5998"
   },
 
   modal3: {
-    height: 300,
-    width: 300
+    height: scale(300),
+    width: scale(300)
   },
     button:{
     justifyContent:'center',
     alignItems:'center',
-    width: 100,
-    height: 40,
-    borderRadius:20,
+    width: scale(100),
+    height: scale(40),
+    borderRadius:scale(20),
     // borderWidth: 1,
     // borderColor: '#008000',
-    paddingTop:5,
-    paddingBottom:5,
+    paddingTop:scale(5),
+    paddingBottom:scale(5),
 },
 })
 

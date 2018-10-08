@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import {StyleSheet, ListView, Text, View,Dimensions, TouchableWithoutFeedback,Image,TouchableOpacity,ImageBackground} from 'react-native';
 const { width, height } = Dimensions.get('window');
 import Carousel , { Pagination } from 'react-native-snap-carousel';
+import {scale} from '../global';
 
 class CarouselComponent extends Component {
     constructor() {
@@ -30,10 +31,10 @@ class CarouselComponent extends Component {
               activeDotIndex={activeSlide}
               containerStyle={{ backgroundColor: 'transparent',paddingVertical:0}}
               dotStyle={{
-                 backgroundColor:'#0076E7', width: 24, height: 2,borderRadius: 0,marginHorizontal:-7
+                 backgroundColor:'#0076E7', width: scale(24), height: scale(2),borderRadius: 0,marginHorizontal:scale(-7)
               }}
               inactiveDotStyle={{
-                  backgroundColor:'#979797', width: 28, height: 2,borderRadius: 0, marginHorizontal:-7
+                  backgroundColor:'#979797', width: scale(28), height: scale(2),borderRadius: 0, marginHorizontal:scale(-7)
               }}
               inactiveDotOpacity={0.4}
               inactiveDotScale={0.8}
@@ -50,10 +51,10 @@ class CarouselComponent extends Component {
               data={this.state.entries}
               renderItem={this._renderItem}
               sliderWidth={width}
-              itemWidth={width-70}
+              itemWidth={width-scale(70)}
               onSnapToItem={(index) => this.setState({ activeSlide: index }) }
               />
-              <View style={{marginTop:10}}>
+              <View style={{marginTop:scale(10)}}>
                     { this.pagination }
               </View>
               
@@ -65,7 +66,7 @@ class CarouselComponent extends Component {
 var styles = StyleSheet.create({
      adBox: { 
         flex: 1,
-        borderRadius:10,
+        borderRadius:scale(10),
      },
      imgStyle:{
         width: '100%',

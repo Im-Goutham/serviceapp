@@ -12,7 +12,7 @@ import Header from '../components/Header';
 import FloatingLabelInput from '../components/FloatingLabelInput';
 import HeaderScreen from './HeaderScreen';
 const { width, height } = Dimensions.get('window');
-const isAndroid = Platform.OS === 'android';
+import {scale} from '../global';
 
 let menu = require('../assets/icons/menu.png');
 let back_arrow = require('../assets/icons/arrow_left.png');
@@ -223,19 +223,19 @@ class PostJobScreen extends Component {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                 {
                                     (backButton)?(
-                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     ):(null)
                                 }
-                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? scale(54) : "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                 </TouchableOpacity>
                              </View>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Post a Job</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>Post a Job</Text>
                                </View>
                                }
                                right={
@@ -246,7 +246,7 @@ class PostJobScreen extends Component {
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10)}}>
                        
                    </View>
                        }
@@ -258,7 +258,7 @@ class PostJobScreen extends Component {
         }}>
               <View style={styles.container}>   
 
-              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10, paddingBottom:30,justifyContent:'space-between'}}> 
+              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:scale(10), paddingBottom:scale(30),justifyContent:'space-between'}}> 
                 <View style={{justifyContent:'space-between'}}>
                   <TouchableOpacity 
                       onPress={()=>{this.props.navigation.navigate('addServiceCatScreen',{mainScreen:'postJob'})}}
@@ -267,7 +267,7 @@ class PostJobScreen extends Component {
                       <View style={{flex:1,flexDirection:'row'}}>
                             <View style={{flex:1,flexDirection:'column',alignItems:'flex-start'}}>
                                 <Text style={[styles.textStyle,{paddingBottom:0}]}>Select a Category</Text>
-                                <Text style={[styles.inputLabel,{fontSize:13,marginVertical:5,color:'#9B9B9B',fontFamily:'Montserrat-Medium'}]}>Home Exterior</Text>
+                                <Text style={[styles.inputLabel,{fontSize:scale(13),marginVertical:scale(5),color:'#9B9B9B',fontFamily:'Montserrat-Medium'}]}>Home Exterior</Text>
                             </View>
                            <View style={{flex:1,alignItems:'flex-end',justifyContent:'center'}}>
                                 <Image source={require('../assets/icons/arrow_right.png')} style={{width:15,height: 15}} resizeMode="contain" resizeMethod="resize"/>
@@ -278,7 +278,7 @@ class PostJobScreen extends Component {
                  <View style={styles.servicesBox}>
                       <View style={{flex:1}}>
                            <Text style={[styles.textStyle,{paddingBottom:0}]}>Enter Job Address</Text>
-                            <Text style={[styles.inputLabel,{fontSize:14,color:'#CCCCCC',marginVertical:5,fontFamily:'Montserrat-Medium'}]}>(It will show only when the job is Booked or Scheduled)</Text>
+                            <Text style={[styles.inputLabel,{fontSize:scale(14),color:'#CCCCCC',marginVertical:scale(5),fontFamily:'Montserrat-Medium'}]}>(It will show only when the job is Booked or Scheduled)</Text>
                       </View>
                      <View style={styles.inputField}>
                      <FloatingLabelInput
@@ -293,7 +293,7 @@ class PostJobScreen extends Component {
                             />
                     </View>
                      <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
-                          <View style={{width:'50%',paddingRight:10}}>
+                          <View style={{width:'50%',paddingRight:scale(10)}}>
                           <FloatingLabelInput
                             label="City"
                             value={this.state.city}
@@ -305,7 +305,7 @@ class PostJobScreen extends Component {
                             onChangeText={city => this.setState({ city })}
                             />
                       </View>
-                         <View style={{width:'50%',paddingLeft:10}}>
+                         <View style={{width:'50%',paddingLeft:scale(10)}}>
                          <FloatingLabelInput
                             label="State"
                             value={this.state.state}
@@ -319,7 +319,7 @@ class PostJobScreen extends Component {
                       </View>
                    </View>
                      <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
-                  <View style={{width:'50%',paddingRight:10}}>
+                  <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
                             label="Zip Code"
                             value={this.state.zip}
@@ -331,7 +331,7 @@ class PostJobScreen extends Component {
                             onChangeText={zip => this.setState({ zip })}
                             />
                   </View>
-                  <View style={{width:'50%',paddingLeft:10}}>
+                  <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
                             label="Country"
                             value={this.state.country}
@@ -441,8 +441,8 @@ class PostJobScreen extends Component {
              </View>   
               {/* Upload Video ends here */}
 
-            <View style={{justifyContent: "center" ,flexDirection:'row',marginBottom:20,marginTop:10}}>
-            <View style={{flex:1,paddingRight:10}}>
+            <View style={{justifyContent: "center" ,flexDirection:'row',marginBottom:scale(20),marginTop:scale(10)}}>
+            <View style={{flex:1,paddingRight:scale(10)}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={[ '#F2F2F2','#CCCCCC']} style={styles.button}>
                     <TouchableOpacity onPress={() => {this.props.navigation.navigate('homePage')}}><Text style={[styles.btnText,{color:'black',fontFamily:'MontSerrat-Regular'}]}>CANCEL</Text></TouchableOpacity>
                 </LinearGradient>
@@ -475,33 +475,33 @@ const styles = StyleSheet.create({
 logoText: {
   color:'white',
   textAlign:'left',
-  fontSize:35,
+  fontSize:scale(35),
   fontWeight:'bold'
 },
 inputLabel: {
    textAlign:'left',
-   fontSize: 16,
+   fontSize: scale(16),
    fontFamily:'Montserrat-Light'
 },
 inputField: {
-    marginVertical: 10
+    marginVertical: scale(10)
 },
-borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
+borderImg: {width:width,height:scale(40),bottom:scale(-10),position:'absolute'},
 text: {
-  marginBottom: 15,
-  marginTop: 15,
-  fontSize: 15,
+  marginBottom: scale(15),
+  marginTop: scale(15),
+  fontSize: scale(15),
   textAlign: 'center',
 },
 button:{
   backgroundColor:'#4A4A4A',
   width: '100%',
-  borderRadius:30,
+  borderRadius:scale(30),
   borderWidth: 1,
   borderColor: '#fff',
-  marginTop:10,
-  paddingTop:16,
-  paddingBottom:16,
+  marginTop:scale(10),
+  paddingTop:scale(16),
+  paddingBottom:scale(16),
   shadowOffset: { width: 0, height: 2 },
   shadowOpacity: 0.2,
   shadowRadius: 2,
@@ -510,13 +510,13 @@ button:{
 btnText: { 
   textAlign:'center',
   color:'white',
-  fontSize: 16,
+  fontSize: scale(16),
   fontFamily:'Montserrat-Bold'
 },
 socialBox:{
   flexDirection:'row',
   backgroundColor:'white',
-  borderRadius:20,
+  borderRadius:scale(20),
   elevation: 3,
 },
 logoContainer: {
@@ -532,29 +532,29 @@ imgsView: {
   left: 0
 },
 user_placeholder: {
-  paddingTop:20,
-  width: 140,
-  height: 140,
-  borderRadius:70,
+  paddingTop:scale(20),
+  width: scale(140),
+  height: scale(140),
+  borderRadius:scale(70),
   justifyContent:'center',
   alignItems:'center',
 },
 camera_icon: {
-  width: 40,
-  height: 40,
-  borderRadius:20,
+  width: scale(40),
+  height: scale(40),
+  borderRadius:scale(20),
   position: 'absolute',
-  bottom: 10,
-  right: 10,
+  bottom: scale(10),
+  right: scale(10),
   justifyContent:'center',
   alignItems:'center',
 },
 servicesBox: {
 flex: 1,
-marginTop: 20,
-paddingVertical: 25,
-paddingHorizontal:20,
-borderRadius:10,
+marginTop: scale(20),
+paddingVertical: scale(25),
+paddingHorizontal:scale(20),
+borderRadius:scale(10),
 backgroundColor:'white',
 shadowOffset: { width: 0, height: 2 },
 shadowOpacity: 0.2,
@@ -564,8 +564,8 @@ elevation: 3,
 textStyle: {
 fontFamily:"Montserrat-SemiBold",
 color:'#22262C',
-fontSize: 16,
-paddingBottom:20
+fontSize: scale(16),
+paddingBottom:scale(20)
 },
 })
 

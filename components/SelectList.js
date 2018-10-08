@@ -3,6 +3,7 @@ import Swipeout from 'react-native-swipeout';
 import React, {Component} from 'react';
 import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,TouchableHighlight} from 'react-native';
 import {Icon} from 'native-base';
+import {scale} from '../global';
 
 
 class SelectList extends Component {
@@ -47,7 +48,7 @@ class SelectList extends Component {
                 alignSelf: 'center',
                 alignContent: 'center'
               }}>
-              <Icon name='md-heart-outline' style={{color: 'white', fontSize: 27, textAlign: 'center'}}/>
+              <Icon name='md-heart-outline' style={{color: 'white', fontSize: scale(27), textAlign: 'center'}}/>
             </View>,
             backgroundColor: '#007FFA',
             onPress:()=>{console.log(rowData.text)}
@@ -61,7 +62,7 @@ class SelectList extends Component {
                 alignSelf: 'center',
                 alignContent: 'center'
               }}>
-              <Icon name='md-share' style={{color: 'white', fontSize: 27, textAlign: 'center'}}/>
+              <Icon name='md-share' style={{color: 'white', fontSize: scale(27), textAlign: 'center'}}/>
             </View>,
             backgroundColor: '#007FFA',
             onPress:()=>{console.log(rowData.text)}
@@ -90,29 +91,29 @@ class SelectList extends Component {
           <View style={styles.li} >
             <View style={{flex:1,flexDirection:'row'}}>
                 <View style={{flex:2}}>
-                    <Text style={{fontSize:16,fontWeight:'bold'}}>Need Cook</Text>
+                    <Text style={{fontSize:scale(16),fontWeight:'bold'}}>Need Cook</Text>
                  </View>   
                  <View style={{flex:1}}>
-                    <Text style={{fontSize:16,color:'#008000'}}>$240</Text>
+                    <Text style={{fontSize:scale(16),color:'#008000'}}>$240</Text>
                  </View> 
                  <View style={{flex:1}}>
                         <Text style={styles.btnText} onPress={()=> this.props.navigation.goBack()}>SELECT</Text>
                  </View> 
             </View>    
-            <View style={{flex:1,flexDirection:'row',marginTop:10}}>
+            <View style={{flex:1,flexDirection:'row',marginTop:scale(10)}}>
                 <View style={{flex:1}}>
-                    <Image style={{width:70,height:55}} source={require('../images/img_placeholder.png')} />
+                    <Image style={{width:scale(70),height:scale(55)}} source={require('../images/img_placeholder.png')} />
                  </View>   
                  <View style={{flex:3,flexDirection:'column'}}>
                     <View style={{flex:1}}>
-                      <Text style={{fontSize:12}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
+                      <Text style={{fontSize:scale(12)}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
                     </View>
-                    <View style={{flexDirection:'row',marginTop:5}}>
+                    <View style={{flexDirection:'row',marginTop:scale(5)}}>
                         <View style={{flex:2}}>
-                              <Text style={{fontSize:12,fontWeight:'bold'}}><Icon style={{color:'#007FFA',fontSize:15}} active name="ios-calendar-outline" /> <Text style={{paddingLeft:5}}>Before the 19 Sep 2018</Text></Text>
+                              <Text style={{fontSize:scale(12),fontWeight:'bold'}}><Icon style={{color:'#007FFA',fontSize:scale(15)}} active name="ios-calendar-outline" /> <Text style={{paddingLeft:scale(5)}}>Before the 19 Sep 2018</Text></Text>
                         </View>
                         <View style={{flex:1}}>
-                              <Text style={{fontSize:12,fontWeight:'bold'}}><Icon style={{color:'#c33c4c',fontSize:15}} active name="md-pin" />  <Text style={{paddingLeft:5}}>3km </Text></Text>
+                              <Text style={{fontSize:scale(12),fontWeight:'bold'}}><Icon style={{color:'#c33c4c',fontSize:scale(15)}} active name="md-pin" />  <Text style={{paddingLeft:scale(5)}}>3km </Text></Text>
                         </View>
                     </View>
                  </View> 
@@ -147,27 +148,27 @@ var styles = StyleSheet.create({
     borderBottomColor: '#eee',
     borderColor: 'transparent',
     borderWidth: 1,
-    padding: 16,
+    padding: scale(16),
     flex:1
   },
   liText: {
     color: '#333',
-    fontSize: 16,
+    fontSize: scale(16),
   },
   button:{
     backgroundColor:'#008000',
     width: '100%',
-    borderRadius:20,
-    borderWidth: 1,
+    borderRadius:scale(20),
+    borderWidth: scale(1),
     borderColor: '#008000',
-    paddingTop:5,
-    paddingBottom:5,
+    paddingTop:scale(5),
+    paddingBottom:scale(5),
 },
 btnText: { 
     textAlign:'center',
     color:'red',
     fontWeight:'bold',
-    fontSize:15
+    fontSize:scale(15)
 },
   })
 

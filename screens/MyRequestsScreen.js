@@ -16,7 +16,9 @@ import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import HeaderScreen from './HeaderScreen';
 
-var {height, width} = Dimensions.get('window');
+import {scale} from '../global';
+
+
 let tabItems = ["Booking Requests", "Hiring Requests"];
 
 let menu = require('../assets/icons/menu.png');
@@ -39,21 +41,21 @@ class MyRequestScreen extends Component {
           })}
           style={{
           // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
-          height : 40,
+          height : scale(40),
           justifyContent: "space-around",
           alignItems:'center',
         }}>
         <Text
           style={{
             color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
-            fontSize: 16,
+            fontSize: scale(16),
             fontFamily: 'Montserrat-Bold'
           }}>{value}</Text>
         <View style={{
-            width: 40,
-            height: this.state.tabindex === index ? 3 : 0,
+            width: scale(40),
+            height: this.state.tabindex === index ? scale(3) : 0,
             backgroundColor: "#fff",
-            borderRadius : 3
+            borderRadius : scale(3)
             // borderColor: this.state.tabindex === index ? "#fff": "transparent"
           }}/>
       </TouchableOpacity>
@@ -81,19 +83,19 @@ class MyRequestScreen extends Component {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                 {
                                     (backButton)?(
-                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     ):(null)
                                 }
-                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? scale(54) : "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                 </TouchableOpacity>
                              </View>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                  <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>My Requests</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                  <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>My Requests</Text>
                                </View>
                                }
                                right={
@@ -104,8 +106,8 @@ class MyRequestScreen extends Component {
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
-                          <View style={{ paddingVertical:10,flexDirection:'row',justifyContent:'space-around'}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10)}}>
+                          <View style={{ paddingVertical:scale(10),flexDirection:'row',justifyContent:'space-around'}}>
                            {this.tabrender()}
                            </View>
                    </View>
@@ -131,24 +133,24 @@ const styles = StyleSheet.create({
   },
 
   modal2: {
-    height: 230,
+    height: scale(230),
     backgroundColor: "#3B5998"
   },
 
   modal3: {
-    height: 300,
-    width: 300
+    height: scale(300),
+    width: scale(300)
   },
     button:{
     justifyContent:'center',
     alignItems:'center',
-    width: 100,
-    height: 40,
-    borderRadius:20,
+    width: scale(100),
+    height: scale(40),
+    borderRadius:scale(20),
     // borderWidth: 1,
     // borderColor: '#008000',
-    paddingTop:5,
-    paddingBottom:5,
+    paddingTop:scale(5),
+    paddingBottom:scale(5),
 },
 })
 

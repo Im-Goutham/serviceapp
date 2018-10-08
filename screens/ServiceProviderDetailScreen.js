@@ -10,19 +10,15 @@ import {
     Text
 } from 'react-native';
 import Swiper from 'react-native-swiper';
-import { Icon } from 'native-base'
-import Advertisement from '../components/Advertisement';
-import JobsList from '../components/JobsList';
-import Map from '../components/Map';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import Share, {ShareSheet, Button} from 'react-native-share';
 import HeaderScreen from './HeaderScreen';
 import PhotoGallery from '../components/PhotoGallery';
-var { height, width } = Dimensions.get('window');
 import Documents from '../components/Documents';
 
 
+import {scale} from '../global';
 
 let logo = require('../images/logo.png');
 let menu = require('../assets/icons/menu.png');
@@ -88,11 +84,11 @@ export default class ServiceProviderDetailScreen extends Component {
                         <PhotoGallery />
                         <View style={styles.desc}>
                             <View style={styles.budget}>
-                                <View style={{ flex:1,flexDirection: "row", height: 40, justifyContent: 'flex-start', alignItems: "center" }}>
+                                <View style={{ flex:1,flexDirection: "row", height: scale(40), justifyContent: 'flex-start', alignItems: "center" }}>
                                     <Text style={styles.budgettext}>Budget:</Text>
                                     <Text style={styles.pricetext}>$240</Text>
                                 </View>
-                                <View style={{ flex:1,flexDirection: "row", height: 40,backgroundColor: "transparent", justifyContent: 'flex-end', alignItems: "center" }}>
+                                <View style={{ flex:1,flexDirection: "row", height: scale(40),backgroundColor: "transparent", justifyContent: 'flex-end', alignItems: "center" }}>
                                     <Image source={require('../assets/icons/location_red.png')} style={styles.pinimage} resizeMode="contain" resizeMethod="resize" />
                                     <Text style={styles.distance}>3 mi</Text>
                                 </View>
@@ -112,7 +108,7 @@ export default class ServiceProviderDetailScreen extends Component {
                         </View>
                         <View style={styles.servicesBox}>
                             <View >
-                                <Text style={[styles.textStyle,{paddingBottom:20}]}>Area of Services</Text>
+                                <Text style={[styles.textStyle,{paddingBottom:scale(20)}]}>Area of Services</Text>
                             </View>
                             <View style={{flexDirection: 'row',flexWrap:'wrap'}}>
                                {
@@ -127,7 +123,7 @@ export default class ServiceProviderDetailScreen extends Component {
                         </View>
                         <View style={styles.servicesBox}>
                             <View >
-                                <Text style={[styles.textStyle,{paddingBottom:20}]}>Video Link</Text>
+                                <Text style={[styles.textStyle,{paddingBottom:scale(20)}]}>Video Link</Text>
                             </View>
                             <View style={{flexDirection: 'row',alignItems:'center'}}>
                             <Documents documents={videos}  placeholder={false}/>
@@ -135,7 +131,7 @@ export default class ServiceProviderDetailScreen extends Component {
                         </View>
                         <View style={styles.servicesBox}>
                             <View>
-                                <Text style={[styles.textStyle,{paddingBottom:20}]}>Website Link</Text>
+                                <Text style={[styles.textStyle,{paddingBottom:scale(20)}]}>Website Link</Text>
                             </View>
                             <View style={{flexDirection: 'row',alignItems:'center'}}>
                             <Documents documents={profiles} placeholder={false}/>
@@ -143,7 +139,7 @@ export default class ServiceProviderDetailScreen extends Component {
                         </View>
                         <View style={styles.servicesBox}>
                             <View>
-                                <Text style={[styles.textStyle,{paddingBottom:20}]}>Linkedin Profile Link</Text>
+                                <Text style={[styles.textStyle,{paddingBottom:scale(20)}]}>Linkedin Profile Link</Text>
                             </View>
                             <View style={{flexDirection: 'row',alignItems:'center'}}>
                             <Documents documents={profiles}  placeholder={false}/>
@@ -155,13 +151,14 @@ export default class ServiceProviderDetailScreen extends Component {
                    start={{x: 0, y: 0}}
                    end={{x: 1, y: 0}}
                    style={{
-                      paddingVertical: 10
+                      paddingVertical: scale(10),
+                      marginTop:scale(20)
                    }}>
                                 <TouchableOpacity
-                                    style={{height: 64, justifyContent: "center", alignItems: "center"}}
+                                    style={{height: scale(64), justifyContent: "center", alignItems: "center"}}
                                     onPress={()=>{this.props.navigation.navigate('select')}}
                                     >
-                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: 18, color: "#fff"}}>HIRE NOW</Text>
+                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: scale(18), color: "#fff"}}>HIRE NOW</Text>
                                 </TouchableOpacity>
                  </LinearGradient>
 
@@ -199,32 +196,32 @@ export default class ServiceProviderDetailScreen extends Component {
                             navigation={this.props.navigation}
                             left={
                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                    <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                    <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                    <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                    <Image source={menu} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                    <Image source={menu} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                 </View>
                             }
                             title={
-                                <View style={{ justifyContent: 'center', alignItems: 'flex-start', width: "100%", height: 54 }}>
-                                  <Text style={{ fontFamily: 'Montserrat-Bold', color: "#fff", fontSize: 20 }}>Need Cook</Text>
+                                <View style={{ justifyContent: 'center', alignItems: 'flex-start', width: "100%", height: scale(54) }}>
+                                  <Text style={{ fontFamily: 'Montserrat-Bold', color: "#fff", fontSize: scale(20) }}>Need Cook</Text>
                                 </View>
                             }
                             right={
                                 <View style={{ backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection: "row" }}>
                                       <TouchableOpacity 
-                                        style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
+                                        style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
                                         onPress={()=> this.setState({liked: !this.state.liked})}
                                         >
-                                         <Image source={this.state.liked ? require('../assets/icons/heart_red.png') :  require('../assets/icons/heart_white.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                         <Image source={this.state.liked ? require('../assets/icons/heart_red.png') :  require('../assets/icons/heart_white.png')} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                     <TouchableOpacity 
-                                         style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
+                                         style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
                                          onPress={()=> {this.shareJob()}}
                                          >
-                                        <Image source={require('../assets/icons/send_white.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        <Image source={require('../assets/icons/send_white.png')} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                 </View>
                             }
@@ -257,12 +254,12 @@ export default class ServiceProviderDetailScreen extends Component {
                     start={{ x: 0, y: 0 }}
                     end={{ x: 1, y: 0 }}
                     style={{
-                        bottom: 30,
-                        right: 10,
-                        width: 60, height: 60, backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
-                        borderRadius: 40
+                        bottom: scale(30),
+                        right: scale(10),
+                        width: scale(60), height: scale(60), backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
+                        borderRadius: scale(40)
                     }}>
-                       <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: 30 }} resizeMode="contain" resizeMethod="resize" />
+                       <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: scale(30) }} resizeMode="contain" resizeMethod="resize" />
                 </LinearGradient>
                 </TouchableOpacity>
         </View> 
@@ -273,13 +270,13 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: "#F9FCFF",
-        paddingHorizontal: 10
+        paddingHorizontal: scale(10)
     },
     desc: {
         // borderWidth:StyleSheet.hairlineWidth,
-        paddingHorizontal: 20,
-        marginTop: 10,
-        borderRadius: 10,
+        paddingHorizontal: scale(20),
+        marginTop: scale(10),
+        borderRadius: scale(10),
         backgroundColor: "#fff",
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
@@ -288,7 +285,7 @@ const styles = StyleSheet.create({
     },
    
     budget: {
-        height: 54,
+        height: scale(54),
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
@@ -296,88 +293,89 @@ const styles = StyleSheet.create({
     },
     tagStyle:{
         backgroundColor: 'rgb(239,186,47)',
-        borderRadius:10,
+        borderRadius:scale(10),
         overflow:"hidden",
-        paddingVertical:2,
-        paddingHorizontal:10,
-        marginBottom:10,
+        paddingVertical:scale(2),
+        paddingHorizontal:scale(10),
+        marginBottom:scale(10),
         color: 'white',
-        marginRight: 10,
+        fontSize: scale(14),
+        marginRight: scale(10),
         fontFamily: 'Montserrat-Bold'
     },
     budgettext: {
-        fontSize: 15,
+        fontSize: scale(15),
         color: "rgb(74,74,74)",
         fontFamily: "Montserrat-Bold"
     },
     pricetext: {
-        fontSize: 15,
-        paddingHorizontal: 10,
+        fontSize: scale(15),
+        paddingHorizontal: scale(10),
         color: "#009933"
     },
     pinimage: {
-        width: 16,
-        height: 16
+        width: scale(16),
+        height: scale(16)
     },
     distance: {
-        fontSize: 15,
-        paddingHorizontal: 10,
+        fontSize: scale(15),
+        paddingHorizontal: scale(10),
         fontFamily: 'Montserrat-Regular',
         color: "rgb(90,90,90)"
     },
     deadline: {
-        height: 54,
+        height: scale(54),
         justifyContent: "center"
     },
     title: {
         color: "rgb(244, 41, 34)",
-        fontSize: 15,
+        fontSize: scale(15),
         fontFamily: "Montserrat-SemiBold"
     },
     date: {
         color: "rgb(83,83,83)",
-        fontSize: 14,
-        paddingVertical: 5,
+        fontSize: scale(14),
+        paddingVertical: scale(5),
         fontFamily: "Montserrat-Regular"
     },
     detail: {
-        paddingVertical: 10
+        paddingVertical: scale(10)
     },
     detaildesc: {
         fontFamily: "Montserrat-Medium",
-        fontSize: 15,
-        lineHeight: 25,
+        fontSize: scale(15),
+        lineHeight: scale(25),
         color: "rgb(163,163,163)",
     },
    
     categorytitle: {
         fontFamily: "Montserrat-SemiBold",
-        fontSize: 14,
-        paddingVertical: 3,
+        fontSize: scale(14),
+        paddingVertical: scale(3),
         color: "rgb(74,74,74)"
     },
     categorytext: {
         fontFamily: "Montserrat-Regular",
-        paddingVertical: 5,
-        fontSize: 13,
+        paddingVertical: scale(5),
+        fontSize: scale(13),
         color: "rgb(93,93,93)"
     },
     customerinfo: {
         // marginVertical:10,
-        borderRadius: 10,
+        borderRadius: scale(10),
         backgroundColor: "#fff",
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
         elevation: 3,
-        padding: 20
+        padding: scale(20)
     },
     servicesBox: {
         flex: 1,
-        marginTop: 20,
-        paddingHorizontal: 20,
-        paddingVertical: 20,
-        borderRadius: 10,
+        marginTop: scale(20),
+        paddingHorizontal: scale(20),
+        paddingVertical: scale(20),
+        borderRadius: scale(10),
         backgroundColor: 'white',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
@@ -387,11 +385,11 @@ const styles = StyleSheet.create({
     textStyle: {
         fontFamily: "Montserrat-SemiBold",
         color:'#22262C',
-        fontSize: 16
+        fontSize: scale(16)
     },
     categoryBox: {
         flexDirection: 'column',
-        width: 100,
+        width: scale(100),
     },
     imageShadow: {
         shadowOffset: { width: 0, height: 3 },
@@ -399,17 +397,17 @@ const styles = StyleSheet.create({
         elevation: 3,
     },
     img_placeholder: {
-        width: 80,
-        height: 80,
-        borderRadius: 5,
+        width: scale(80),
+        height: scale(80),
+        borderRadius: scale(5),
         position: 'relative',
         top: 0,
         left: 0
     },
     check: {
-        width: 18,
+        width: scale(18),
         height: 18,
-        borderRadius: 9,
+        borderRadius: scale(9),
         position: 'absolute',
         bottom: 0,
         left: 0
@@ -425,6 +423,6 @@ const styles = StyleSheet.create({
         textAlign:'center',
         color:'white',
         fontFamily: 'Montserrat-Bold',
-        fontSize:15
+        fontSize:scale(15)
     },
 })

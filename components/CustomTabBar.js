@@ -5,7 +5,7 @@ import { View, StyleSheet, TouchableWithoutFeedback, Text, Dimensions ,Touchable
 const deviceWidth = Dimensions.get('window').width;
 // const deviceHeight = Dimensions.get('window').height;
 const tabWidth = ((deviceWidth * 13) / 25) / 2;
-
+import {scale} from '../global';
 
 
 class CustomTabBar extends Component {
@@ -39,7 +39,7 @@ renderTabBarButton(route, idx){
                backgroundColor:'white',
                borderColor: 'none',
                borderColor: 'rgb(255,255,255)',
-               borderWidth: 1
+               borderWidth: scale(1)
            }}>
                { renderIcon({ route, tintColor:color }) }
                <Text style={{ color }}>

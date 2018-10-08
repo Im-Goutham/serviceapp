@@ -5,7 +5,7 @@ import Modal from "react-native-modal";
 import LinearGradient from 'react-native-linear-gradient';
 import DatePicker from 'react-native-datepicker'
 import {  Item, Input, Toast, Switch, List, ListItem, Left, Body, Right, Thumbnail, Icon, Textarea,Label } from 'native-base';
-const { width, height } = Dimensions.get('window')
+import {scale} from '../global';
 
 export default class ApplyModal extends Component {
 
@@ -59,9 +59,9 @@ export default class ApplyModal extends Component {
   renderModalContent = () => (
     <View style={styles.modalContent}>
      <View style={styles.heading}><Text style={styles.headingText}>Apply for the job</Text></View>
-     <View style={{height:280,paddingHorizontal:10}}>
-        <View style={{paddingVertical:20}}>
-            <Text style={{fontFamily:'Montserrat-Medium',fontSize:14,textAlign:'center', color:'#9B9B9B',lineHeight: 25}}>Suggest which day and time would work best for you.</Text>
+     <View style={{height:scale(280),paddingHorizontal:scale(10)}}>
+        <View style={{paddingVertical:scale(20)}}>
+            <Text style={{fontFamily:'Montserrat-Medium',fontSize:scale(14),textAlign:'center', color:'#9B9B9B',lineHeight: scale(25)}}>Suggest which day and time would work best for you.</Text>
         </View>
   
           {
@@ -81,7 +81,7 @@ export default class ApplyModal extends Component {
                            <Text style={styles.textStyle}>Schedule date</Text>
                            <Item style={styles.inputBox}>
                                 <Input placeholder='' style={styles.inputField}   placeholderTextColor='rgb(188,188,188)'/>
-                                <Image source={require('../assets/icons/calender.png')} style={{ width: 20, height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                <Image source={require('../assets/icons/calender.png')} style={{ width: scale(20), height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                            </Item>
                        </TouchableOpacity>  
                        <View style={{flex:1,flexDirection:'row'}}>
@@ -92,7 +92,7 @@ export default class ApplyModal extends Component {
                              <Text style={styles.textStyle}>Hour</Text>
                              <Item style={styles.inputBox}>
                                 <Input placeholder='' style={styles.inputField}   placeholderTextColor='rgb(188,188,188)'/>
-                                <Image source={require('../assets/icons/arrow_down.png')} style={{ width: 10, height: 10}} resizeMode="contain" resizeMethod="resize"/>
+                                <Image source={require('../assets/icons/arrow_down.png')} style={{ width: scale(10), height: scale(10)}} resizeMode="contain" resizeMethod="resize"/>
                              </Item>
                          </TouchableOpacity>
                          <TouchableOpacity 
@@ -102,7 +102,7 @@ export default class ApplyModal extends Component {
                              <Text style={styles.textStyle}>Minute</Text>
                              <Item style={styles.inputBox}>
                                 <Input placeholder='' style={styles.inputField}   placeholderTextColor='rgb(188,188,188)'/>
-                                <Image source={require('../assets/icons/arrow_down.png')} style={{ width: 10, height: 10}} resizeMode="contain" resizeMethod="resize"/>
+                                <Image source={require('../assets/icons/arrow_down.png')} style={{ width: scale(10), height: scale(10)}} resizeMode="contain" resizeMethod="resize"/>
                            </Item>
                          </TouchableOpacity>
                        </View>  
@@ -112,17 +112,17 @@ export default class ApplyModal extends Component {
            
 
      </View>
-     <View style={{height:50,flexDirection:'row'}}>
+     <View style={{height:scale(50),flexDirection:'row'}}>
         <View style={{flex:1}}>
         <TouchableOpacity onPress={() => this.props.closeModal()}>
-            <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#F2F2F2', '#CCCCCC']} style={[styles.button,{borderBottomLeftRadius:10}]}>
+            <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#F2F2F2', '#CCCCCC']} style={[styles.button,{borderBottomLeftRadius:scale(10)}]}>
                 <Text style={[styles.btnText,{color:'black'}]}>SKIP</Text>
             </LinearGradient>
          </TouchableOpacity>
         </View>
         <View style={{flex:1}}>
         <TouchableOpacity onPress={() => this.props.closeModal()}>
-            <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={[styles.button,{borderBottomRightRadius:10}]}>
+            <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={[styles.button,{borderBottomRightRadius:scale(10)}]}>
                 <Text style={styles.btnText}>APPLY</Text>
             </LinearGradient>
          </TouchableOpacity>
@@ -147,17 +147,17 @@ export default class ApplyModal extends Component {
 
 const styles = StyleSheet.create({
     heading: {
-        height:60,
+        height:scale(60),
         alignItems:'center',
         justifyContent:'center',
-        borderBottomWidth :1,
+        borderBottomWidth :scale(1),
         borderColor: "#e6e6e6",
-        paddingVertical: 15
+        paddingVertical: scale(15)
     },
     headingText: {
          fontFamily:'Montserrat-Medium',
          color: '#22262C',
-         fontSize: 18,
+         fontSize: scale(18),
          textAlign: 'center',
  
     },
@@ -171,25 +171,25 @@ const styles = StyleSheet.create({
       btnText: { 
         textAlign:'center',
         color:'white',
-        fontSize: 16,
+        fontSize: scale(16)
     },
       modalContent: {
-        height:390,
+        height:scale(390),
         backgroundColor: "white",
         justifyContent: "center",
-        borderRadius: 10,
+        borderRadius: scale(10),
         borderColor: "rgba(0, 0, 0, 0.1)"
       },
       inputLabel: {
         textAlign:'left',
-        fontSize: 16,
+        fontSize: scale(16),
         fontFamily:'Montserrat-Light'
      },
         inputBox: {
             backgroundColor:'white',
-            borderRadius:10,
-            paddingHorizontal:15,
-            borderWidth:0.5
+            borderRadius:scale(10),
+            paddingHorizontal:scale(15),
+            borderWidth:scale(0.5)
         },
         inputField: {
         fontFamily: 'Montserrat-Regular',
@@ -197,8 +197,8 @@ const styles = StyleSheet.create({
         },
         textStyle:{
             color:'rgb(82,82,82)',
-            paddingLeft:5,
-            fontSize: 14,
+            paddingLeft:scale(5),
+            fontSize: scale(14),
             fontFamily:'Montserrat-Medium'
         }
 });

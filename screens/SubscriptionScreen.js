@@ -15,7 +15,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-import HeaderScreen from './HeaderScreen';
+import {scale} from '../global';
 
 var {height, width} = Dimensions.get('window');
 
@@ -62,8 +62,8 @@ class SubscriptionScreen extends Component {
       return (
          <View >
             <View style={styles.servicesBox}>
-                <View style={{marginHorizontal:20}}><Text style={{color:'rgb(62,136,235)',fontFamily:'Montserrat-Bold',fontSize:13}}>Most Popular</Text></View>
-                <View style={[styles.mainBox,{borderBottomWidth:1,borderBottomColor:'rgb(237,237,237)',paddingVertical:10}]}>
+                <View style={{marginHorizontal:scale(20)}}><Text style={{color:'rgb(62,136,235)',fontFamily:'Montserrat-Bold',fontSize:scale(13)}}>Most Popular</Text></View>
+                <View style={[styles.mainBox,{borderBottomWidth:1,borderBottomColor:'rgb(237,237,237)',paddingVertical:scale(10)}]}>
                         <View style={{flex:1,alignItems:'flex-start'}}>
                             <Text style={styles.textStyle}>Yearly</Text>
                             <Text style={styles.subTextStyle}>Subscription</Text>
@@ -73,7 +73,7 @@ class SubscriptionScreen extends Component {
                             <Text style={styles.subTextStyle}>/year</Text>
                     </View>
                   </View>
-                  <View style={{padding:10}}>
+                  <View style={{padding:scale(10)}}>
                        <View style={{flexDirection:'row',justifyContent:'flex-start',paddingVertical:6,borderWidth:1,borderColor:'white'}}><Image source={require('../assets/icons/tick_green.png')} style={[styles.tick]} resizeMode="contain" resizeMethod="resize" /><Text style={[styles.subTextStyle,{paddingRight:10}]} >Full access to the app</Text></View> 
                        <View style={{flexDirection:'row',justifyContent:'flex-start',paddingVertical:6,borderWidth:1,borderColor:'white'}}><Image source={require('../assets/icons/tick_green.png')} style={styles.tick} resizeMode="contain" resizeMethod="resize" /><Text style={[styles.subTextStyle]}>Provide unlimited services</Text></View>
                        <View style={{flexDirection:'row',justifyContent:'flex-start',paddingVertical:6,borderWidth:1,borderColor:'white'}}><Image source={require('../assets/icons/tick_green.png')} style={styles.tick} resizeMode="contain" resizeMethod="resize" /><Text style={[styles.subTextStyle]}>Upload more pictures & video links</Text></View>
@@ -121,45 +121,45 @@ class SubscriptionScreen extends Component {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                 {
                                     (backButton)?(
-                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     ):(null)
                                 }
-                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? scale(54) : "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                 </TouchableOpacity>
                              </View>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Subscriptions</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>Subscriptions</Text>
                                </View>
                                }
 
                            />
                   <ScrollView contentContainerStyle={{flexGrow:1}}>
-                    <View style={{backgroundColor :"transparent",paddingVertical:30}}>
+                    <View style={{backgroundColor :"transparent",paddingVertical:scale(30)}}>
                              {this.contentrender()}
 
                       </View>
   <View style={{width:'100%'}}>
-                              <Image source={border_img} style={{ width: '100%', height: Platform.OS==='ios'? 31 : 30}}/>
-                                 <View style={{height:20, backgroundColor:"#F9FCFF"}}/>
+                              <Image source={border_img} style={{ width: '100%', height: Platform.OS==='ios'? scale(31) : scale(30)}}/>
+                                 <View style={{height:scale(20), backgroundColor:"#F9FCFF"}}/>
                               </View>
-                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1,paddingHorizontal:20,paddingBottom:30}}>
+                   <View style={{backgroundColor :"rgb(249,252, 255)", flex:1,paddingHorizontal:scale(20),paddingBottom:scale(30)}}>
                         <View>
                             <Text style={[styles.textStyle,{textAlign:'center'}]}>0</Text>
-                            <Text style={[styles.subTextStyle,{color:'rgb(34,38,34)',textAlign:'center',fontSize:15}]}>Points</Text>
+                            <Text style={[styles.subTextStyle,{color:'rgb(34,38,34)',textAlign:'center',fontSize:scale(15)}]}>Points</Text>
                         </View>
                         <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
                           <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}><Text style={styles.btnText}>ADD CREDIT</Text></TouchableOpacity>
                         </LinearGradient>
                 
                         <View style={{flexDirection:'row',justifyContent:'center'}}>
-                              <Image source={require('../images/card.png')} resizeMode="contain" resizeMethod="resize" style={{marginHorizontal:5,width:28,height:28,marginTop:10}}/>
-                              <Image source={require('../images/paypal.png')} resizeMode="contain" resizeMethod="resize" style={{marginHorizontal:5,width:20,height:20,marginTop:15}}/>
-                               <Text style={{textAlign:'center',paddingVertical:15,fontSize:12,fontFamily:'Montserrat-Medium',color:'#22262C'}}>Accept PayPal & All Credit & Debit cards</Text> 
+                              <Image source={require('../images/card.png')} resizeMode="contain" resizeMethod="resize" style={{marginHorizontal:scale(5),width:scale(28),height:scale(28),marginTop:scale(10)}}/>
+                              <Image source={require('../images/paypal.png')} resizeMode="contain" resizeMethod="resize" style={{marginHorizontal:scale(5),width:scale(20),height:scale(20),marginTop:scale(15)}}/>
+                               <Text style={{textAlign:'center',paddingVertical:scale(15),fontSize:scale(12),fontFamily:'Montserrat-Medium',color:'#22262C'}}>Accept PayPal & All Credit & Debit cards</Text> 
                                </View> 
                            
                         </View>
@@ -181,30 +181,30 @@ const styles = StyleSheet.create({
   },
 
   modal2: {
-    height: 230,
+    height: scale(230),
     backgroundColor: "#3B5998"
   },
 
   modal3: {
-    height: 300,
-    width: 300
+    height: scale(300),
+    width: scale(300)
   },
     button:{
     justifyContent:'center',
     alignItems:'center',
-    width: 100,
-    height: 40,
-    borderRadius:20,
+    width: scale(100),
+    height: scale(40),
+    borderRadius:scale(20),
     // borderWidth: 1,
     // borderColor: '#008000',
-    paddingTop:5,
-    paddingBottom:5,
+    paddingTop:scale(5),
+    paddingBottom:scale(5),
 },
 servicesBox: {
-    marginVertical: 5,
-    marginHorizontal: 10,
-    paddingVertical: 15,
-    borderRadius:10,
+    marginVertical: scale(5),
+    marginHorizontal: scale(10),
+    paddingVertical: scale(15),
+    borderRadius:scale(10),
     backgroundColor:'white',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
@@ -215,41 +215,41 @@ servicesBox: {
     flexDirection: 'row',
     justifyContent:'center',
     alignItems:'center',
-    paddingHorizontal:20,
-    paddingVertical:5
+    paddingHorizontal:scale(20),
+    paddingVertical:scale(5)
 },
 textStyle:{
-    fontSize:24,
-    paddingBottom:10,
+    fontSize:scale(24),
+    paddingBottom:scale(10),
     color:'#22262C',
     fontFamily:'Montserrat-Bold'
 },
 subTextStyle: {
-    fontSize:15,
+    fontSize:scale(15),
     fontFamily:'Montserrat-Medium',
     color:'#9B9B9B'
 },
 button:{
     backgroundColor:'#4A4A4A',
     width: '100%',
-    borderRadius:30,
+    borderRadius:scale(30),
     borderWidth: 1,
     borderColor: '#fff',
-    marginTop:10,
-    paddingTop:16,
-    paddingBottom:16,
+    marginTop:scale(10),
+    paddingTop:scale(16),
+    paddingBottom:scale(16),
 },
 btnText: { 
     textAlign:'center',
     color:'white',
-    fontSize:17,
+    fontSize:scale(17),
     fontFamily:'Montserrat-Bold'
 },
 tick:{
-     height:15,
-     width: 15,
-     marginTop:2,
-     marginHorizontal:10,
+     height:scale(15),
+     width: scale(15),
+     marginTop:scale(2),
+     marginHorizontal:scale(10),
 }
 })
 

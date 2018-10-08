@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
 
   modal3: {
     height: scale(300),
-    width: scale(300
+    width: scale(300)
   },
     button:{
     justifyContent:'center',

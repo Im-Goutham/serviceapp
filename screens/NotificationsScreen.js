@@ -15,7 +15,7 @@ import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import HeaderScreen from './HeaderScreen';
 
-
+import {scale} from '../global';
 let menu = require('../assets/icons/menu.png');
 let back_arrow = require('../assets/icons/arrow_left.png');
 
@@ -48,19 +48,19 @@ class NotificationScreen extends Component {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                 {
                                     (backButton)?(
-                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     ):(null)
                                 }
-                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? scale(54) : "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                 </TouchableOpacity>
                              </View>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Notifications</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>Notifications</Text>
                                </View>
                                }
                                right={
@@ -71,7 +71,7 @@ class NotificationScreen extends Component {
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10)}}>
                        
                          </View>
                        }
@@ -100,30 +100,30 @@ const styles = StyleSheet.create({
   },
 
   modal2: {
-    height: 230,
+    height: scale(230),
     backgroundColor: "#3B5998"
   },
 
   modal3: {
-    height: 300,
-    width: 300
+    height: scale(300),
+    width: scale(300)
   },
     button:{
     justifyContent:'center',
     alignItems:'center',
-    width: 100,
-    height: 40,
-    borderRadius:20,
+    width: scale(100),
+    height: scale(40),
+    borderRadius:scale(20),
     // borderWidth: 1,
     // borderColor: '#008000',
-    paddingTop:5,
-    paddingBottom:5,
+    paddingTop:scale(5),
+    paddingBottom:scale(5),
 },
 read: {
     color: '#22262C',
-    paddingRight:10,
-    paddingVertical:10,
-    fontSize:15,
+    paddingRight:scale(10),
+    paddingVertical:scale(10),
+    fontSize:scale(15),
     textAlign: 'right',
     fontFamily:'Montserrat-Medium'
   },

@@ -4,6 +4,7 @@ const { width, height } = Dimensions.get('window')
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import PhotoView from './PhotoView';
+import {scale} from '../global';
 
 
 class PhotoGalley extends Component {
@@ -127,14 +128,14 @@ var styles = StyleSheet.create({
 
     },
     imgStyle:{
-        width:(width/2)-18,
-        height:(width/2)-18,
-        borderRadius: 40
+        width:(width/2)-scale(18),
+        height:(width/2)-scale(18),
+        borderRadius: scale(40)
     },
     smallImgStyle: {
-        width:(width/4)-10,
-        height:(width/4)-10,
-        borderRadius: 20
+        width:(width/4)-scale(10),
+        height:(width/4)-scale(10),
+        borderRadius: scale(20)
     },
     overlay: {
         position: 'absolute',
