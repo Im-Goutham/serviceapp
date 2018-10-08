@@ -10,7 +10,7 @@ const { width, height } = Dimensions.get('window');
        pixel = 1;
         break;
     case 2:
-       pixel = 1;
+       pixel = 1.15;
         break;
     case 1.5:
        pixel = 1.28;
@@ -29,4 +29,4 @@ const scale = size => size / pixel;
 const verticalScale = size => height / guidelineBaseHeight * size;
 const moderateScale = (size, factor = 0.5) => size + ( scale(size) - size ) * factor;
 
-export {scale, verticalScale, moderateScale};
+export {scale, verticalScale, moderateScale, width, height};

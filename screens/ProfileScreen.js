@@ -437,7 +437,7 @@ class ProfileScreen extends Component {
                     <View style={{flex:1,flexDirection:'row',paddingVertical:scale(10)}}>
                     <View style={{flex:1.5}}>
                         <Text style={{fontFamily:'Montserrat-Regular',fontSize:scale(16)}}>Waiter</Text>
-                          <View style={{flexDirection:'row',paddingVertical:scale(3),justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                          <View style={{flexDirection:'row',paddingVertical:scale(3),justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:scale(15),marginTop:scale(4)}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
@@ -451,12 +451,12 @@ class ProfileScreen extends Component {
                     <View style={{flex:1,flexDirection:'row',paddingVertical:scale(10)}}>
                     <View style={{flex:1.5}}>
                     <Text style={{fontFamily:'Montserrat-Regular',fontSize:scale(16)}}>Painting</Text>
-                        <View style={{flexDirection:'row',paddingVertical:scale(3),justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                        <View style={{flexDirection:'row',paddingVertical:scale(3),justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:scale(15),marginTop:scale(4)}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
                               button={ require('../assets/icons/eclipse_blue.png')}
-                              buttonStyle={{ width: scale(15), height: scale(15), margin: 7.5, resizeMode: "contain" }}
+                              buttonStyle={{ width: scale(15), height: scale(15), margin: scale(7.5), resizeMode: "contain" }}
                               destructiveIndex={1}
                               options={["Edit", "Delete"]}
                               actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
@@ -465,7 +465,7 @@ class ProfileScreen extends Component {
                     <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
                     <View style={{flex:1.5}}>
                     <Text style={{fontFamily:'Montserrat-Regular',fontSize:scale(16)}}>Dog Walking</Text>
-                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:scale(15),marginTop:scale(4)}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                        <View style={{flexDirection:'row',paddingVertical:scale(3),justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:scale(15),marginTop:scale(4)}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu

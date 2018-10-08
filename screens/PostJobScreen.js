@@ -497,8 +497,6 @@ button:{
   backgroundColor:'#4A4A4A',
   width: '100%',
   borderRadius:scale(30),
-  borderWidth: 1,
-  borderColor: '#fff',
   marginTop:scale(10),
   paddingTop:scale(16),
   paddingBottom:scale(16),

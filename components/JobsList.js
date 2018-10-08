@@ -74,18 +74,17 @@ class JobsList extends Component {
                             marginLeft:scale(-20)
                         }}>
                         <View>
-                            <View style={{alignItems:'center',paddingVertical:scale(10)}}>
                             {
                                 screen == 'findJobs' ? (null) :(
-                                    <Image
-                                    source={require('../assets/icons/cross_white.png')}
-                                    style={{width:scale(20),height:scale(20)}}
-                                    resizeMode="contain" resizeMethod="resize"
-                                    />
-                                )
-                            }
-                           
-                            </View>
+                                    <View style={{alignItems:'center',paddingVertical:scale(10)}}>
+                                        <Image
+                                        source={require('../assets/icons/cross_white.png')}
+                                        style={{width:scale(20),height:scale(20)}}
+                                        resizeMode="contain" resizeMethod="resize"
+                                        />
+                                   </View>
+                                        )
+                            }      
                           <Text style={{fontFamily:'Montserrat-Bold',color:'white',fontSize:scale(16)}}>{screen == 'findJobs' ? 'Remove' : 'Reject'}</Text>
                         </View>
                     </LinearGradient>,

@@ -225,6 +225,7 @@ textStyle:{
 },
 dateTextStyle:{
   fontFamily:'Montserrat-Bold',
+  fontSize: scale(12),
   textAlign:'right',
   color:'white',
   paddingTop:scale(8)

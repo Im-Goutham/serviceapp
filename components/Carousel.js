@@ -1,9 +1,8 @@
 
 import React, {Component} from 'react';
 import {StyleSheet, ListView, Text, View,Dimensions, TouchableWithoutFeedback,Image,TouchableOpacity,ImageBackground} from 'react-native';
-const { width, height } = Dimensions.get('window');
 import Carousel , { Pagination } from 'react-native-snap-carousel';
-import {scale} from '../global';
+import {scale,width} from '../global';
 
 class CarouselComponent extends Component {
     constructor() {
@@ -51,7 +50,7 @@ class CarouselComponent extends Component {
               data={this.state.entries}
               renderItem={this._renderItem}
               sliderWidth={width}
-              itemWidth={width-scale(70)}
+              itemWidth={width-width/4.2}
               onSnapToItem={(index) => this.setState({ activeSlide: index }) }
               />
               <View style={{marginTop:scale(10)}}>
@@ -65,11 +64,15 @@ class CarouselComponent extends Component {
 
 var styles = StyleSheet.create({
      adBox: { 
+        backgroundColor:'transparent', 
         flex: 1,
+        width:width-width/6,
+        paddingHorizontal:15,
         borderRadius:scale(10),
      },
      imgStyle:{
         width: '100%',
+        marginLeft:-15,
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
