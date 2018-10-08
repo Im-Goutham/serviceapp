@@ -21,7 +21,7 @@ import HeaderScreen from './HeaderScreen';
 import SearchBar from '../components/SearchBar';
 import CategoryContainer from '../components/CategoryContainer';
 import FloatingLabelInput from '../components/FloatingLabelInput';
-
+import {scale} from '../global';
 
 let back_arrow = require('../assets/icons/arrow_left.png');
 let menu = require('../assets/icons/menu.png');
@@ -138,28 +138,28 @@ class FilterScreen extends Component {
                                navigation={this.props.navigation}
                                left = {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                    <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                      <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                      <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                      <Image source={menu} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                      <Image source={menu} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                 </View>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Filter</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>Filter</Text>
                                </View>
                                }
                                right={
-                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', height:54 ,flexDirection:"row"}}>
-                                       <Text style={{ fontFamily: 'Montserrat-Regular', color:"#fff", fontSize: 14}}>Clear All</Text>
+                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', height:scale(54) ,flexDirection:"row"}}>
+                                       <Text style={{ fontFamily: 'Montserrat-Regular', color:"#fff", fontSize: scale(14)}}>Clear All</Text>
                                    </View>
                                }
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10,marginHorizontal:10}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10),marginHorizontal:scale(10)}}>
                        
                           </View>
                        }
@@ -169,17 +169,17 @@ class FilterScreen extends Component {
       justifyContent: 'space-between'
   }}>
         <View style={styles.container}>
-        <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:15, paddingBottom:30,justifyContent:'space-between'}}>
+        <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:scale(15), paddingBottom:scale(30),justifyContent:'space-between'}}>
 
         <View>
-                <View style={{marginVertical:20}}>
-                  <Text style={{ color:'#4A4A4A',fontFamily:'Montserrat-Medium',fontSize:13}}>Address</Text>
+                <View style={{marginVertical:scale(20)}}>
+                  <Text style={{ color:'#4A4A4A',fontFamily:'Montserrat-Medium',fontSize:scale(13)}}>Address</Text>
                  <Item>
                         <Input style={styles.inputLabel} placeholder="Current Location" />
                 </Item>
                 </View>
                      <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
-                  <View style={{width:'50%',paddingRight:10}}>
+                  <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
                     label="City"
                     value={this.state.city}
@@ -189,7 +189,7 @@ class FilterScreen extends Component {
                     this.inputs['city'] = input;
                     }}/>
                   </View>
-                  <View style={{width:'50%',paddingLeft:10}}>
+                  <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
                     label="State"
                     value={this.state.state}
@@ -203,7 +203,7 @@ class FilterScreen extends Component {
                 </View>
 
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
-                  <View style={{width:'50%',paddingRight:10}}>
+                  <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
                     label="Zip Code"
                     value={this.state.zip}
@@ -213,7 +213,7 @@ class FilterScreen extends Component {
                     this.inputs['zip'] = input;
                     }}/>
                   </View>
-                  <View style={{width:'50%',paddingLeft:10}}>
+                  <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
                     label="Country"
                     value={this.state.country}
@@ -224,7 +224,7 @@ class FilterScreen extends Component {
                     }}/>
                   </View>
                 </View>
-                <View style={{marginVertical:20}}>
+                <View style={{marginVertical:scale(20)}}>
                 <Text style={{ color:'#4A4A4A',fontFamily:'Montserrat-Medium',fontSize:13}}>Search Category</Text>
                         <Item>
                         <Input style={styles.inputLabel} placeholder="Enter Keyword" />
@@ -276,7 +276,7 @@ class FilterScreen extends Component {
                    start={{x: 0, y: 0}}
                    end={{x: 1, y: 0}}
                    style={{
-                      paddingVertical: 30
+                      paddingVertical: scale(30)
                    }}>
                  <TouchableOpacity onPress={() => {this.props.navigation.goBack()}}><Text style={styles.btnText}>APPLY FILTER</Text></TouchableOpacity>
                </LinearGradient>
@@ -300,16 +300,16 @@ const styles = StyleSheet.create({
     logoText: {
         color:'white',
         textAlign:'left',
-        fontSize:35,
+        fontSize:scale(35),
         fontWeight:'bold'
       },
-    borderImg: {width:'100%',height:31},
+    borderImg: {width:'100%',height:scale(31)},
     servicesBox: {
         flex: 1,
-        marginVertical: 20,
-        paddingHorizontal:20,
-        paddingVertical:20,
-        borderRadius:10,
+        marginVertical: scale(20),
+        paddingHorizontal:scale(20),
+        paddingVertical:scale(20),
+        borderRadius:scale(10),
         backgroundColor:'white',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
@@ -318,7 +318,7 @@ const styles = StyleSheet.create({
     },
     textStyle: {
       fontFamily:"Montserrat-SemiBold",
-      fontSize:17
+      fontSize:scale(17)
     },
       categoryContainer: {
         flex: 1,
@@ -329,15 +329,15 @@ const styles = StyleSheet.create({
     btnText: {
         textAlign:'center',
         color:'white',
-        fontSize: 18,
+        fontSize: scale(18),
         fontFamily:'Montserrat-Bold'
     },
     inputField: {
-        marginVertical: 10
+        marginVertical: scale(10)
     },
     inputLabel: {
         textAlign:'left',
-        fontSize: 16,
+        fontSize: scale(16),
         marginLeft:0,
         fontFamily:'Montserrat-Light'
      },

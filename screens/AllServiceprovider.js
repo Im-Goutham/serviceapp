@@ -14,12 +14,11 @@ import Advertisement from '../components/Advertisement';
 import AllServiceList from '../components/AllServiceList';
 import Map from '../components/Map';
 import Header from '../components/Header';
+import HeaderScreen from './HeaderScreen';
 import Modal from 'react-native-modalbox';
 import LinearGradient from 'react-native-linear-gradient';
-// import Icon from 'react-native-vector-icons/EvilIcons';
 
-import HeaderScreen from './HeaderScreen';
-
+import {scale} from '../global';
 var {height, width} = Dimensions.get('window');
 let tabItems = ["List View", "Map View"];
 
@@ -69,7 +68,7 @@ export default class AllServiceProvider extends Component {
           })}
           style={{
           // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
-          height : 40,
+          height : scale(40),
           width: "50%",
           justifyContent: "space-around",
           alignItems:'center',
@@ -77,14 +76,14 @@ export default class AllServiceProvider extends Component {
         <Text
           style={{
             color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
-            fontSize: 16,
+            fontSize: scale(16),
             fontFamily: 'Montserrat-Bold'
           }}>{value}</Text>
         <View style={{
-            width: 40,
-            height: this.state.tabindex === index ? 3 : 0,
+            width: scale(40),
+            height: this.state.tabindex === index ? scale(3) : 0,
             backgroundColor: "#fff",
-            borderRadius : 3
+            borderRadius : scale(3)
             // borderColor: this.state.tabindex === index ? "#fff": "transparent"
           }}/>
       </TouchableOpacity>
@@ -95,35 +94,35 @@ export default class AllServiceProvider extends Component {
   rendermapdata(){
       return maplocations.data.map((data, index)=>{
           return(
-              <View style={{marginBottom: 10, width: "100%", backgroundColor:"#fff", borderRadius:10}} key={index}>
+              <View style={{marginBottom: scale(10), width: "100%", backgroundColor:"#fff", borderRadius:scale(10)}} key={index}>
                     <View style={{backgroundColor:"transparent"}}>
-                    <View style={{flex:1,flexDirection:'row', paddingHorizontal:15,paddingVertical:10}}>
+                    <View style={{flex:1,flexDirection:'row', paddingHorizontal:scale(15),paddingVertical:scale(10)}}>
                             <View style={{flex:2,justifyContent:'flex-start',alignItems:'flex-start'}}>
                                 <View style={styles.imageShadow}>
-                                    <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
+                                    <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:scale(35),width:scale(70),height:scale(70)}]}/>
                                     <Image source={require('../images/check.png')} style={styles.check}/>
                                 </View>
                             </View>
-                            <View style={{flex:7,paddingHorizontal:20,paddingBottom:10,justifyContent:'space-between'}}>
+                            <View style={{flex:7,paddingHorizontal:scale(20),paddingBottom:(10),justifyContent:'space-between'}}>
                                 <View style={{flex:1}}>
-                                    <Text style={{fontSize:17,color:'#4A4A4A'}}>Clayton L.</Text>
+                                    <Text style={{fontSize:scale(17),color:'#4A4A4A'}}>Clayton L.</Text>
                                      <View style={{flexDirection:'row',paddingVertical:5}}>
-                                       <Image source={require('../assets/icons/star_gold.png')} style={{width:15,height:15}} resizeMode="contain" resizeMethod="resize" />
-                                       <Text style={{color:'#4A4A4A',fontFamily: 'Montserrat-Bold',paddingLeft:6}}>5</Text>
+                                       <Image source={require('../assets/icons/star_gold.png')} style={{width:scale(15),height:scale(15)}} resizeMode="contain" resizeMethod="resize" />
+                                       <Text style={{color:'#4A4A4A',fontFamily: 'Montserrat-Bold',paddingLeft:scale(6)}}>5</Text>
                                      </View>
                                     
-                                    <Text style={{fontFamily:'Montserrat-Medium',fontSize:14,color:'#9B9B9B'}}>Plumber & 5 More</Text>
+                                    <Text style={{fontFamily:'Montserrat-Medium',fontSize:scale(14),color:'#9B9B9B'}}>Plumber & 5 More</Text>
                                 </View>
                             </View>
                         </View>
                         <View style={{flexDirection:"row", justifyContent:'space-between'}}>
-                            <TouchableOpacity style={{ width : "30%", backgroundColor:"#CCCCCC", height : 40, borderBottomLeftRadius:10,justifyContent:"center", alignItems:"center"}}>
+                            <TouchableOpacity style={{ width : "30%", backgroundColor:"#CCCCCC", height : scale(40), borderBottomLeftRadius:scale(10),justifyContent:"center", alignItems:"center"}}>
                                 <LinearGradient
                                         colors={['#F2F2F2', '#CCCCCC']}
                                         start={{x: 0, y: 0}}
                                         end={{x: 1, y: 0}}
-                                        style={{height : 40, backgroundColor:"transparent", width : "100%", borderBottomLeftRadius:10,  justifyContent:"center", alignItems:"center"}}>
-                                        <Text style={{color:"black", fontFamily:"Montserrat-Regular", fontSize:15}}>REJECT</Text>
+                                        style={{height : scale(40), backgroundColor:"transparent", width : "100%", borderBottomLeftRadius:scale(10),  justifyContent:"center", alignItems:"center"}}>
+                                        <Text style={{color:"black", fontFamily:"Montserrat-Regular", fontSize:scale(15)}}>REJECT</Text>
                                     </LinearGradient>
                             </TouchableOpacity>
                             <TouchableOpacity style={{ width : "70%"}}>
@@ -131,8 +130,8 @@ export default class AllServiceProvider extends Component {
                                     colors={['#3E85EF', '#3EBDEF']}
                                     start={{x: 0, y: 0}}
                                     end={{x: 1, y: 0}}
-                                    style={{height : 40, backgroundColor:"transparent", width : "100%", borderBottomRightRadius:10,  justifyContent:"center", alignItems:"center"}}>
-                                    <Text style={{color:"#fff", fontFamily:"Montserrat-Bold", fontSize:15}}>ACCEPT</Text>
+                                    style={{height : scale(40), backgroundColor:"transparent", width : "100%", borderBottomRightRadius:scale(10),  justifyContent:"center", alignItems:"center"}}>
+                                    <Text style={{color:"#fff", fontFamily:"Montserrat-Bold", fontSize:scale(15)}}>ACCEPT</Text>
                                 </LinearGradient>
                             </TouchableOpacity>
                         </View>
@@ -157,17 +156,17 @@ export default class AllServiceProvider extends Component {
                                navigation={this.props.navigation}
                                left = {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                        <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
-                                        <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={menu} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={menu} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                   </View>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Total Service Providers (18)</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>Total Service Providers (18)</Text>
                                </View>
                                }
                                right={
@@ -176,8 +175,8 @@ export default class AllServiceProvider extends Component {
                            />
                        }
                        content={
-                        <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
-                            <View style={{ paddingTop:30,flexDirection:'row', paddingHorizontal: width/6}}>
+                        <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10)}}>
+                            <View style={{ paddingTop:scale(30),flexDirection:'row', paddingHorizontal: scale(width/6)}}>
                                 {this.tabrender()}
                             </View>
                          </View>
@@ -188,12 +187,12 @@ export default class AllServiceProvider extends Component {
                          {this.state.tabindex === 0 ?<AllServiceList navigation={this.props.navigation}/>:<Map pinPress={() => this.refs.modal1.open()}/>}
                        </View>
                        <Modal
-                   style={[styles.modal, { height: height/2+50, width: width-30, backgroundColor:"transparent" }]}
+                   style={[styles.modal, { height: scale(height/2+50), width: scale(width-30), backgroundColor:"transparent" }]}
                    position={"bottom"}
                    ref={"modal1"}
                    swipeToClose={false}
                    backdropPressToClose={false}>
-                   <View style={{ marginBottom: -10, width: 40, borderTopLeftRadius:10, borderTopRightRadius:10, paddingBottom:10, alignSelf:"flex-end", height: 45, backgroundColor: 'rgba(213,213,213,0.4)', justifyContent:'center', alignItems:'center', right:0}} >
+                   <View style={{ marginBottom: scale(-10), width: scale(40), borderTopLeftRadius:scale(10), borderTopRightRadius:scale(10), paddingBottom:scale(10), alignSelf:"flex-end", height: scale(45), backgroundColor: 'rgba(213,213,213,0.4)', justifyContent:'center', alignItems:'center', right:0}} >
                        <Icon name="close" style={{}} onPress={() => this.refs.modal1.close()}/>
                    </View>
                    <ScrollView >
@@ -212,17 +211,17 @@ const styles = StyleSheet.create({
     flex:1
   },
   img_placeholder: {
-    width: 80,
-    height: 80,
-    borderRadius:5,
+    width: scale(80),
+    height: scale(80),
+    borderRadius:scale(5),
     position: 'relative',
     top: 0,
     left: 0
 },
 check: {
-    width: 18,
-    height: 18,
-    borderRadius:9,
+    width: scale(18),
+    height: scale(18),
+    borderRadius:scale(9),
     position: 'absolute',
     bottom: 0,
     left: 0

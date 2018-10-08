@@ -20,6 +20,9 @@ import NotificationStackNavigator from './NotificationStackNavigator';
 import SubscriptionStackNavigator from './SubscriptionStackNavigator';
 
 
+
+import {scale} from '../global';
+
 export default createDrawerNavigator(
     {
         homePage: {
@@ -65,5 +68,5 @@ export default createDrawerNavigator(
     {
         initialRouteName: 'homePage',
         contentComponent: SideMenu,
-        drawerWidth: 300
+        drawerWidth: scale(300)
     });

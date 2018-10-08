@@ -12,6 +12,8 @@ import FloatingLabelInput from '../components/FloatingLabelInput';
 
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
+import {scale} from '../global';
+
 let border_img = require('../images/border_img.png');
 let logo = require('../images/logo.png');
 
@@ -93,9 +95,9 @@ class LoginScreen extends Component {
      contentrender(){
       let { checked } = this.state;
       return (
-         <View style={{flex:1,paddingHorizontal:15,justifyContent:'space-around'}} >
-             <View style={{flex:1.6,paddingVertical:20,justifyContent:'flex-end',alignItems:'flex-start'}}>
-              <Image source={logo} style={{width:220,height: 40}} resizeMode="contain" resizeMethod="resize"/>
+         <View style={{flex:1,paddingHorizontal:scale(15),justifyContent:'space-around'}} >
+             <View style={{flex:1.6,paddingVertical:scale(20),justifyContent:'flex-end',alignItems:'flex-start'}}>
+              <Image source={logo} style={{width:scale(220),height: scale(40)}} resizeMode="contain" resizeMethod="resize"/>
              </View>
               <View style={[styles.loginBlox,{flex:3.0}]}>
               <View style={{flex:1,justifyContent:'space-around'}}>
@@ -122,7 +124,7 @@ class LoginScreen extends Component {
                             ref={ input => {
                               this.inputs['password'] = input;
                             }}
-                            style={{marginVertical: 5,flex:1}}
+                            style={{marginVertical: scale(5),flex:1}}
                             onChangeText={password => this.setState({ password })}
                             />
                    
@@ -130,8 +132,8 @@ class LoginScreen extends Component {
               </View>
               <View style={{flex:1,justifyContent:'space-around'}}>
               <View style={{flexDirection:'row',justifyContent:'flex-start',alignItems:"flex-start"}}>
-                    <CheckBox checked={checked} color='rgb(61,133,239)' style={{marginLeft:-10,marginTop:3,borderRadius:3}} onPress={()=>this.setState({checked: !checked})}/>
-                    <Text style={{marginLeft:20,marginTop:2,fontSize:17,fontFamily: 'Montserrat-Regular',color:'rgb(74,74,74)'}}>Remember me</Text>
+                    <CheckBox checked={checked} color='rgb(61,133,239)' style={{marginLeft:scale(-10),marginTop:scale(3),borderRadius:scale(3)}} onPress={()=>this.setState({checked: !checked})}/>
+                    <Text style={{marginLeft:scale(20),marginTop:scale(2),fontSize:scale(17),fontFamily: 'Montserrat-Regular',color:'rgb(74,74,74)'}}>Remember me</Text>
               </View>
               <View style={{justifyContent: "center" }}>
                   {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
@@ -145,11 +147,11 @@ class LoginScreen extends Component {
             <Text style={styles.text} onPress={()=>{this.props.navigation.navigate('forgot')}}>Forgot ID/Password?</Text>
               </View> 
                  </View>
-                  <View style={{flex:1.8,marginTop:20,flexDirection:'row',alignItems:'flex-start',justifyContent:'flex-start'}}>
-                 <View style={{flex:1,paddingRight:10}}>
+                  <View style={{flex:1.8,marginTop:scale(20),flexDirection:'row',alignItems:'flex-start',justifyContent:'flex-start'}}>
+                 <View style={{flex:1,paddingRight:scale(10)}}>
                       <FacebookLogin />
                  </View>
-                 <View style={{flex:1,paddingLeft:10}}>
+                 <View style={{flex:1,paddingLeft:scale(10)}}>
                       <GoogleSignIn/>
                  </View>
             </View>
@@ -177,11 +179,11 @@ class LoginScreen extends Component {
                   </View>    
                   <View style={{flex:2}}>
                   <View style={{width:'100%'}}>
-                              <Image source={border_img} style={{ width: '100%', height: Platform.OS==='ios'? 31 : 30}}/>
-                                 <View style={{height:20, backgroundColor:"#F9FCFF"}}/>
+                              <Image source={border_img} style={{ width: '100%', height: Platform.OS==='ios'? scale(31) : scale(30)}}/>
+                                 <View style={{height:scale(20), backgroundColor:"#F9FCFF"}}/>
                               </View>
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1,alignItems: 'center'}}>
-                                   <Text style={{marginVertical:20,color:'#4A4A4A',fontSize:17,textAlign:'center',fontFamily:'Montserrat-Regular'}}>Don't have an account? <Text style={{color:'#3E85EF',fontFamily:'Montserrat-Bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign Up</Text></Text>
+                                   <Text style={{marginVertical:scale(20),color:'#4A4A4A',fontSize:scale(17),textAlign:'center',fontFamily:'Montserrat-Regular'}}>Don't have an account? <Text style={{color:'#3E85EF',fontFamily:'Montserrat-Bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign Up</Text></Text>
                         </View>
                   </View>  
                </ScrollView>
@@ -199,28 +201,28 @@ const styles = StyleSheet.create({
       section1: {
         flex:10, 
         backgroundColor:'white',
-        paddingHorizontal:10,
-        paddingVertical: isAndroid ? 0 : 50,
+        paddingHorizontal:scale(10),
+        paddingVertical: isAndroid ? 0 : scale(50),
         position:'relative'
     },
-    borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
+    borderImg: {width:width,height:scale(40),bottom:scale(-10),position:'absolute'},
     inputLabel: {color:'rgb(155,155,155)',
         textAlign:'left',
-        fontSize: 17,
-        marginBottom: 20,
+        fontSize: scale(17),
+        marginBottom: scale(20),
         fontFamily:'Montserrat-Medium'
    },
     logoText: {
         color:'white',
         textAlign:'left',
-        fontSize:45,
+        fontSize:scale(45),
         fontWeight:'bold'
     },
    text: {
-     fontSize: 15,
+     fontSize: scale(15),
      color:'rgb(99,99,99)',
      textAlign:'center',
-     marginVertical:15,
+     marginVertical:scale(15),
        fontFamily:'Montserrat-Medium'
    },
    signUpBlock: {
@@ -232,11 +234,11 @@ const styles = StyleSheet.create({
    button:{
        backgroundColor:'#4A4A4A',
        width: '100%',
-       borderRadius:30,
+       borderRadius:scale(30),
        borderColor: '#fff',
-       marginTop:10,
-       paddingTop:16,
-       paddingBottom:16,
+       marginTop:scale(10),
+       paddingTop:scale(16),
+       paddingBottom:scale(16),
        shadowOffset: { width: 0, height: 2 },
        shadowOpacity: 0.2,
        shadowRadius: 2,
@@ -245,16 +247,16 @@ const styles = StyleSheet.create({
    btnText: { 
        textAlign:'center',
        color:'white',
-       fontSize:17,
+       fontSize:scale(17),
        fontFamily:'Montserrat-Bold'
    },
    loginBlox: {
        flex:1,
        justifyContent:'space-between',
-       borderRadius: 10,
+       borderRadius: scale(10),
        backgroundColor:'white',
-       paddingHorizontal: 20,
-       shadowOffset: { width: 0, height: 2 },
+       paddingHorizontal: scale(20),
+       shadowOffset: { width: 0, height: scale(2) },
        shadowOpacity: 0.2,
        shadowRadius: 2,
        elevation: 3,
@@ -263,7 +265,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     borderBottomWidth: 1,
     borderColor: '#000',
-    paddingBottom: 10,
+    paddingBottom: scale(10),
   },
 })
 

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import {  StyleSheet, Text, View, TouchableOpacity, Platform, Image } from 'react-native';
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
-import { Icon} from 'native-base'
 import { Auth } from 'aws-amplify';
+import {scale} from '../global';
+
 
 export default class GoogleSigninSampleApp extends Component {
   constructor(props) {
@@ -76,7 +77,7 @@ export default class GoogleSigninSampleApp extends Component {
         <TouchableOpacity style={styles.button} onPress={() => this._signIn()}> 
          <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
 
-            <Image source={require('../assets/icons/gmail_transparent.png')} style={{ width: 30, height: 30}} resizeMode="contain" resizeMethod="resize"/>
+            <Image source={require('../assets/icons/gmail_transparent.png')} style={{ width: scale(30), height: scale(30)}} resizeMode="contain" resizeMethod="resize"/>
 
                <Text style={styles.btnText}>Gmail</Text>
      
@@ -120,19 +121,19 @@ const styles = StyleSheet.create({
   button:{
     backgroundColor:'#DC493D',
     width: '100%',
-    borderRadius:30,
-    paddingTop:11,
-    paddingBottom:11,
-    marginTop: 5,
-    marginBottom: 5,
+    borderRadius:scale(30),
+    paddingTop:scale(12),
+    paddingBottom:scale(12),
+    marginTop: scale(5),
+    marginBottom: scale(5),
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
     elevation: 3,
   },
   btnText: { 
-    paddingHorizontal:10,
-    fontSize: 16,
+    paddingHorizontal:scale(10),
+    fontSize: scale(16),
     textAlign :'left',
     color:'white',
     fontFamily:'Montserrat-bold'

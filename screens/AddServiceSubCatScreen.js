@@ -19,7 +19,8 @@ import HeaderScreen from './HeaderScreen';
 import SearchBar from '../components/SearchBar';
 import CategoryContainer from '../components/CategoryContainer';
 
-const { width, height } = Dimensions.get('window');
+import {scale} from '../global';
+
 let back_arrow = require('../assets/icons/arrow_left.png');
 
 
@@ -69,24 +70,24 @@ class AddServiceSubCatScreen extends Component {
                                left = {
                                    <TouchableOpacity
                                        onPress={() => this.props.navigation.goBack()}
-                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
-                                       <Image source={back_arrow} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                       style={{width : scale(54), height:scale(54), justifyContent:'center', alignItems: 'center'}}>
+                                       <Image source={back_arrow} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                    </TouchableOpacity>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Add Services</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>Add Services</Text>
                                </View>
                                }
                                right={
-                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', height:54 ,flexDirection:"row"}}>
-                                       <Text style={{ fontFamily: 'Montserrat-Regular', color:"#fff", fontSize: 14}}>Step 2/2</Text>
+                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', height:scale(54) ,flexDirection:"row"}}>
+                                       <Text style={{ fontFamily: 'Montserrat-Regular', color:"#fff", fontSize: scale(14)}}>Step 2/2</Text>
                                    </View>
                                }
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10,marginHorizontal:10}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10),marginHorizontal:scale(10)}}>
                               
                    </View>
                        }
@@ -94,9 +95,9 @@ class AddServiceSubCatScreen extends Component {
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
                <ScrollView contentContainerStyle={{flexGrow:1}}>
                 <View style={styles.container}>
-                <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10,justifyContent:'space-between'}}>
+                <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:scale(10),justifyContent:'space-between'}}>
               <View style={styles.servicesBox}>
-              <View style={{marginTop:20}}>
+              <View style={{marginTop:scale(20)}}>
                   <Text style={styles.textStyle}>Select Sub Category</Text>
               </View>
               <View style={styles.categoryContainer}>
@@ -115,7 +116,7 @@ class AddServiceSubCatScreen extends Component {
                    start={{x: 0, y: 0}}
                    end={{x: 1, y: 0}}
                    style={{
-                     paddingVertical: 25
+                     paddingVertical: scale(25)
                    }}>
                  <TouchableOpacity onPress={() => this.props.navigation.goBack()}><Text style={styles.btnText}>ADD SERVICE</Text></TouchableOpacity>
                </LinearGradient>

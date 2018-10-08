@@ -17,6 +17,7 @@ import Header from '../components/Header';
 import Modal from 'react-native-modalbox';
 import LinearGradient from 'react-native-linear-gradient';
 // import Icon from 'react-native-vector-icons/EvilIcons';
+import {scale} from '../global';
 
 import HeaderScreen from './HeaderScreen';
 
@@ -68,7 +69,7 @@ class ChooseLanguageScreen extends Component {
           })}
           style={{
           // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
-          height : 40,
+          height : scale(40),
           width: "50%",
           justifyContent: "space-between",
           alignItems:'center',
@@ -76,14 +77,14 @@ class ChooseLanguageScreen extends Component {
         <Text
           style={{
             color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
-            fontSize: 16,
+            fontSize: scale(16),
             fontFamily: 'Montserrat-Bold'
           }}>{value}</Text>
         <View style={{
-            width: 70,
-            height: this.state.tabindex === index ? 3 : 0,
+            width: scale(70),
+            height: this.state.tabindex === index ? scale(3) : 0,
             backgroundColor: "#fff",
-            borderRadius : 3
+            borderRadius : scale(3)
             // borderColor: this.state.tabindex === index ? "#fff": "transparent"
           }}/>
       </TouchableOpacity>
@@ -107,17 +108,17 @@ class ChooseLanguageScreen extends Component {
                                navigation={this.props.navigation}
                                left = {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                    <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                      <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                      <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                       <Image source={menu} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                       <Image source={menu} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                 </View>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Choose a Language</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>Choose a Language</Text>
                                </View>
                                }
                                right={
@@ -151,24 +152,24 @@ const styles = StyleSheet.create({
   },
 
   modal2: {
-    height: 230,
+    height: scale(230),
     backgroundColor: "#3B5998"
   },
 
   modal3: {
-    height: 300,
-    width: 300
+    height: scale(300),
+    width: scale(300)
   },
     button:{
     justifyContent:'center',
     alignItems:'center',
-    width: 100,
-    height: 40,
-    borderRadius:20,
+    width: scale(100),
+    height: scale(40),
+    borderRadius:scale(20),
     // borderWidth: 1,
     // borderColor: '#008000',
-    paddingTop:5,
-    paddingBottom:5,
+    paddingTop:scale(5),
+    paddingBottom:scale(5),
 },
 })
 

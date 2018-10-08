@@ -6,7 +6,7 @@ import { View, StyleSheet,Image, Platform, TouchableOpacity, ScrollView} from 'r
 import { List, ListItem, Left, Body, Right, Text , Icon} from 'native-base';
 import LinearGradient from 'react-native-linear-gradient';
 import * as actions from '../actions';
-
+import {scale} from '../global';
 
 let buttons = {
   data :[
@@ -123,7 +123,7 @@ class SideMenu extends Component {
        {
          (value.iconname)?(
             <View style={{flex:1, alignItems:'center',justifyContent:"center" }}>
-            <Image source={value.iconname} style={{marginTop:2,width:20,height:20}} resizeMode="contain" resizeMethod="resize"/>
+            <Image source={value.iconname} style={{marginTop:scale(2),width:scale(20),height:scale(20)}} resizeMode="contain" resizeMethod="resize"/>
           </View>
          ):(
            null
@@ -141,10 +141,10 @@ class SideMenu extends Component {
   }
   render () {
     return (
-      <ScrollView contentContainerStyle={[styles.container,{paddingBottom: Platform.OS == 'ios' ? 20: 0}]}>
-                    <ListItem avatar style={{paddingTop: Platform.OS == 'ios' ? 40: 0,paddingBottom:10}}>
+      <ScrollView contentContainerStyle={[styles.container,{paddingBottom: Platform.OS == 'ios' ?  scale(20): 0}]}>
+                    <ListItem avatar style={{paddingTop: Platform.OS == 'ios' ? scale(40): 0,paddingBottom:scale(10)}}>
                     <Left>
-                        <Image style={{width:70,height:70,borderRadius:25}} source={require('../images/svp1.png')} />
+                        <Image style={{width:scale(70),height:scale(70),borderRadius:scale(25)}} source={require('../images/svp1.png')} />
                     </Left>
                     <Body style={{borderBottomColor:'white'}}>
                     <Text style={styles.usernamestyle}>John Doe</Text>
@@ -171,33 +171,35 @@ const styles = StyleSheet.create({
     usernamestyle:{
       textAlign: 'left',
       color:'#000',
-      fontFamily:"Montserrat-Bold"
+      fontSize: scale(17),
+      fontFamily:"Montserrat-SemiBold"
     },
     premiumButton:{
       justifyContent:"center",
       alignItems: 'flex-start',
-      borderRadius:20,
-      paddingVertical: 2,
+      borderRadius:scale(20),
+      paddingVertical: scale(2),
       width: '100%',
     },
     premiumtext:{
       color:"#fff",
       fontFamily:"Montserrat-Bold",
-      paddingHorizontal:10,
-      borderRadius:20,
-      paddingVertical: 2,
+      paddingHorizontal:scale(10),
+      borderRadius:scale(20),
+      paddingVertical: scale(2),
       backgroundColor:'rgb(61, 133, 239)'
     },
     emailtext:{
-      fontFamily:"Montserrat-Light",
-      fontSize: 13,
-      lineHeight :30
+      fontFamily:"Montserrat-Medium",
+      color:'#9B9B9B',
+      fontSize: scale(13),
+      lineHeight :scale(30)
     },
     navItemStyle: {
       // flex:1,
       flexDirection:'row',
       // backgroundColor:"#666",
-      height: 54
+      height: scale(54)
     },
     navSectionStyle: {
       flex:1,
@@ -205,27 +207,28 @@ const styles = StyleSheet.create({
       // backgroundColor:"#666"
     },
     sectionHeadingStyle: {
-      paddingHorizontal: 5,
+      paddingHorizontal: scale(5),
     },
     textStyle: {
         textAlign: 'left',
         color:'#22262C',
-        fontSize:14,
+        fontSize:scale(14),
         fontFamily:"Montserrat-Regular"
     },
     logoutStyle: {
       textAlign: 'left',
-      fontSize:14,
+      fontSize:scale(14),
       fontFamily:"Montserrat-Medium",
       color:'rgb(189,190,192)',
-      paddingLeft:30
+      paddingLeft:scale(30)
     },
   tagStyle:{
     backgroundColor: '#3E85EF',
-    borderRadius:10,
+    borderRadius:scale(10),
     overflow:"hidden",
-    paddingVertical:2,
-    marginBottom:10,
+    paddingVertical:scale(2),
+    marginBottom:scale(10),
+    fontSize:scale(15),
     color: 'white',
     textAlign:'center',
     fontFamily: 'Montserrat-Bold'

@@ -8,7 +8,8 @@ import {
     Dimensions,
     Platform,
     Text, TouchableHighlight,
-    AsyncStorage
+    AsyncStorage,
+    PixelRatio
 } from 'react-native';
 import {NavigationActions} from 'react-navigation';
  import {  Icon } from 'native-base'
@@ -18,6 +19,7 @@ import Carousel from '../components/Carousel';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import * as actions from '../actions';
+import {scale} from '../global';
 
 
 
@@ -163,29 +165,29 @@ class HomeScreen extends Component {
                                left = {
                                    <TouchableOpacity
                                        onPress={() => this.props.navigation.openDrawer()}
-                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
-                                       <Image source={menu} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                       style={{width : scale(54), height:scale(54), justifyContent:'center', alignItems: 'center'}}>
+                                       <Image source={menu} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                    </TouchableOpacity>
                                }
                                title={
-                                <View style={{ justifyContent : 'center',width:'100%', alignItems: 'flex-start', height:54}}>
-                                    <Image source={logo} style={{  width:140,height: 24}} resizeMode="contain" resizeMethod="resize"/>
+                                <View style={{ justifyContent : 'center',width:'100%', alignItems: 'flex-start', height:scale(54)}}>
+                                    <Image source={logo} style={{  width:scale(140),height: scale(24)}} resizeMode="contain" resizeMethod="resize"/>
                                </View>
                                }
                                right={
                                    <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                        <TouchableOpacity 
-                                          style={{width: "100%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
+                                          style={{width: "100%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
                                           onPress={this.navigateToScreen('account')}
                                           >
-                                            <Image source={require('../images/svp1.png')} style={{ width: 35, height: 35,borderWidth:3,borderRadius:18,borderColor:'white',overflow: 'hidden'}} />
+                                            <Image source={require('../images/svp1.png')} style={{ width: scale(35), height: scale(35),borderWidth:scale(3),borderRadius:scale(18),borderColor:'white',overflow: 'hidden'}} />
                                        </TouchableOpacity>
                                    </View>
                                }
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingTop: 10,paddingBottom:20,marginHorizontal:10}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingTop: scale(10),paddingBottom:scale(20),marginHorizontal:scale(10)}}>
                                 <SearchBar placeholder={'Search here...' }/>
                    </View>
                        }
@@ -194,7 +196,7 @@ class HomeScreen extends Component {
                                <ScrollView contentContainerStyle={{
                           justifyContent: 'space-between'
                       }}>
-                            <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:15, paddingBottom:30,justifyContent:'space-between'}}>
+                            <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:scale(15), paddingBottom:scale(30),justifyContent:'space-between'}}>
                          <View style={{flex:1}}>
                              <Carousel/>
                          </View>
@@ -206,7 +208,7 @@ class HomeScreen extends Component {
                                                 return  <TouchableOpacity key={key} onPress={this.navigateToScreen(screen.routename)}>
                                                  <View style={styles.mainBox} key={key}>
                                                 <View style={styles.mainCategoryBox}>
-                                                      <Image source={screen.iconname} style={{ width: 40, height: 40}} resizeMode='contain' resizeMethod='resize' />
+                                                      <Image source={screen.iconname} style={{ width: scale(40), height: scale(40)}} resizeMode='contain' resizeMethod='resize' />
                                                 </View>
                                                 <Text style={styles.screenNameStyle}>{screen.title}</Text>
                                               </View>
@@ -225,7 +227,7 @@ class HomeScreen extends Component {
                                     <Text style={styles.view}>VIEW ALL</Text>
                                     </TouchableOpacity>
                                 </View>
-                                <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
+                                <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:scale(20)}}>
                                 <ScrollView
                                 horizontal={true}
                                 showsHorizontalScrollIndicator={false}
@@ -254,7 +256,7 @@ class HomeScreen extends Component {
                                     <Text style={styles.view}>VIEW ALL</Text>
                                     </TouchableOpacity>
                                 </View>
-                                <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
+                                <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:scale(20)}}>
                                 <ScrollView
                                 horizontal={true}
                                 showsHorizontalScrollIndicator={false}
@@ -292,7 +294,7 @@ class HomeScreen extends Component {
                                       <Text style={styles.view}>VIEW ALL</Text>
                                     </TouchableOpacity>
                                 </View>
-                                <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:20}}>
+                                <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center',marginTop:scale(20)}}>
                                 <ScrollView
                                 horizontal={true}
                                 showsHorizontalScrollIndicator={false}
@@ -330,16 +332,16 @@ const styles = StyleSheet.create({
     logoText: {
         color:'white',
         textAlign:'left',
-        fontSize:35,
+        fontSize:scale(35),
         fontWeight:'bold'
       },
-    borderImg: {width:'100%',height:31},
+    borderImg: {width:'100%',height:scale(31)},
     servicesBox: {
         flex: 1,
-        marginTop: 20,
-        paddingHorizontal:20,
-        paddingVertical:20,
-        borderRadius:10,
+        marginTop: scale(20),
+        paddingHorizontal:scale(20),
+        paddingVertical:scale(20),
+        borderRadius:scale(10),
         backgroundColor:'white',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
@@ -347,14 +349,14 @@ const styles = StyleSheet.create({
         elevation: 3,
     },
     view: {
-        fontSize:12,
+        fontSize:scale(12),
         color:'#3E85EF',
         fontFamily:'Montserrat-Medium',
     },
     textStyle: {
       fontFamily:"Montserrat-SemiBold",
       color:'#22262C',
-      fontSize:17
+      fontSize:scale(17)
     },
       categoryContainer: {
         flex: 1,
@@ -365,12 +367,12 @@ const styles = StyleSheet.create({
     btnText: {
         textAlign:'center',
         color:'white',
-        fontSize: 16,
+        fontSize: scale(16),
         fontWeight:'bold'
     },
     categoryBox: {
         flexDirection:'column',
-        width:100,
+        width:scale(100),
       },
       imageShadow: {
         shadowOffset: { width: 0, height: 2 },
@@ -379,46 +381,46 @@ const styles = StyleSheet.create({
         elevation: 3,
       },
       img_placeholder: {
-        width: 80,
-        height: 80,
-        borderRadius:5,
+        width: scale(80),
+        height: scale(80),
+        borderRadius:scale(5),
         position: 'relative',
         top: 0,
         left: 0
       },
       check: {
-        width: 18,
-        height: 18,
-        borderRadius:9,
+        width: scale(18),
+        height: scale(18),
+        borderRadius:scale(9),
         position: 'absolute',
         bottom: 0,
         left: 0
       },
       letter: {
         position: 'absolute',
-        top:22,
-        left:25,
+        top:scale(22),
+        left:scale(25),
         fontFamily:'Montserrat-Regular',
         color:'#4A4A4A',
-        fontSize:22
+        fontSize:scale(22)
       },
-      mainBox: {width:90,height:110,marginHorizontal:5,marginVertical:20},
+      mainBox: {width:scale(90),height:scale(110),marginHorizontal:scale(5),marginVertical:scale(20)},
       screenNameStyle: {
         textAlign:'center',  
         fontFamily:'Montserrat-Medium',  
         color:'#4A4A4A',
-        fontSize: 14,
+        fontSize: scale(14),
         textAlign:'center'
     },
     mainCategoryBox: {
-      paddingVertical:10,
+      paddingVertical:scale(10),
       flexDirection:'column',
       width: '100%',
-      height: 70,
+      height: scale(70),
       justifyContent:'center',
       alignItems:'center',
     },
-    categoryStyle: {fontFamily:'Montserrat-Regular',paddingVertical:10,color:'#4A4A4A',fontSize:14}
+    categoryStyle: {fontFamily:'Montserrat-Regular',paddingVertical:scale(10),color:'#4A4A4A',fontSize:scale(14)}
 })
 
 

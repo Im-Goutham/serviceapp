@@ -30,6 +30,7 @@ var BUTTONS = [
   var CANCEL_INDEX = 4;
   
 
+import {scale} from '../global';
 
 let back_arrow = require('../assets/icons/arrow_left.png');
 
@@ -128,17 +129,17 @@ class RegisterScreen extends Component {
                                    <TouchableOpacity
                                        onPress={() => this.props.navigation.navigate('login')}
                                        style={{
-                                           width: 54,
-                                           height: 54,
+                                           width: scale(54),
+                                           height: scale(54),
                                            justifyContent: 'center',
                                            alignItems: 'flex-start'
                                        }}>
-                                       <Image source={back_arrow} style={{width: '100%', height: 20,}}
+                                       <Image source={back_arrow} style={{width: '100%', height: scale(20)}}
                                               resizeMode="contain" resizeMethod="resize"/>
                                    </TouchableOpacity>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
 
                                </View>
                                }
@@ -151,7 +152,7 @@ class RegisterScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between"}}>
-                                 <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 35,paddingLeft:20,paddingBottom:10}}>Sign Up</Text>
+                                 <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(35),paddingLeft:scale(20),paddingBottom:scale(10)}}>Sign Up</Text>
 
                       </View>
                        }
@@ -167,7 +168,7 @@ class RegisterScreen extends Component {
                                         ref={ input => {
                                         this.inputs['email'] = input;
                                         }}
-                                        style={{marginVertical: 5}}
+                                        style={{marginVertical: scale(5)}}
                                         onChangeText={email => this.setState({ email })}
                                         />
                                         
@@ -183,7 +184,7 @@ class RegisterScreen extends Component {
                                             this.inputs['username'] = input;
                                         }}
                                         onChangeText={username => this.setState({ username })}
-                                        style={{marginVertical: 5}}
+                                        style={{marginVertical: scale(5)}}
                                         />
                         </View>
                         <View style={styles.inputField}>
@@ -210,7 +211,7 @@ class RegisterScreen extends Component {
                                             this.inputs['cfrmPassword'] = input;
                                         }}
                                         onChangeText={cfrmPassword => this.setState({ cfrmPassword })}
-                                        style={{marginVertical: 5}}
+                                        style={{marginVertical: scale(5)}}
                                         secureTextEntry={true}
                                         />
                         </View>
@@ -232,15 +233,15 @@ class RegisterScreen extends Component {
                             )}
                            >
                             <View style={{flex:3,flexDirection:'row'}}>
-                                <Image source={require('../assets/countries/India.png')} style={{ width: 30, height: 30}} resizeMode="contain" resizeMethod="resize"/>
-                                <Text style={{color:'rgb(74,74,74)',fontSize:15,fontFamily:'Montserrat-Medium',paddingLeft:10,paddingTop:5}}>+ 91</Text>
+                                <Image source={require('../assets/countries/India.png')} style={{ width: scale(30), height: scale(30)}} resizeMode="contain" resizeMethod="resize"/>
+                                <Text style={{color:'rgb(74,74,74)',fontSize:scale(15),fontFamily:'Montserrat-Medium',paddingLeft:scale(10),paddingTop:scale(5)}}>+ 91</Text>
                             </View>
                             <View style={{flex:1,}}>
-                                <Image source={require('../assets/icons/arrow_down.png')} style={{ width: 10, height: 10}} resizeMode="contain" resizeMethod="resize"/>
+                                <Image source={require('../assets/icons/arrow_down.png')} style={{ width: scale(10), height: scale(10)}} resizeMode="contain" resizeMethod="resize"/>
                             </View>
                             </TouchableOpacity>
                         </View>
-                            <View style={{flex:6,paddingLeft:10}}>
+                            <View style={{flex:6,paddingLeft:scale(10)}}>
                             <FloatingLabelInput
                                         label="Mobile Number"
                                         value={this.state.mobile}
@@ -250,20 +251,20 @@ class RegisterScreen extends Component {
                                             this.inputs['mobile'] = input;
                                         }}
                                         onChangeText={mobile => this.setState({ mobile })}
-                                        style={{marginVertical: 5}}
+                                        style={{marginVertical: scale(5)}}
                                         />
                             </View>
                         </View>
-                        <Text style={{textAlign:'right',color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-SemiBold'}}>Verify</Text>
-                        <View style={{flex:1,flexDirection:'row',flexWrap:'wrap',borderColor:'red',paddingVertical:30}}>
-                            <CheckBox checked={this.state.checked} color='#3E85EF' style={{marginLeft:-10,marginTop:3,borderRadius:3,borderWidth:3}} onPress={()=>this.setState({checked: !this.state.checked})}/>
-                            <Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A',fontSize:16,paddingLeft:10,paddingTop:3}}>  I agree to the <Text 
-                                style={{color:'#3E85EF',fontSize:16,fontFamily:'Montserrat-Bold'}}
+                        <Text style={{textAlign:'right',color:'#3E85EF',fontSize:scale(16),fontFamily:'Montserrat-SemiBold'}}>Verify</Text>
+                        <View style={{flex:1,flexDirection:'row',flexWrap:'wrap',borderColor:'red',paddingVertical:scale(30)}}>
+                            <CheckBox checked={this.state.checked} color='#3E85EF' style={{marginLeft:scale(-10),marginTop:scale(3),borderRadius:scale(3),borderWidth:scale(3)}} onPress={()=>this.setState({checked: !this.state.checked})}/>
+                            <Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A',fontSize:scale(16),paddingLeft:scale(10),paddingTop:scale(3)}}>  I agree to the <Text 
+                                style={{color:'#3E85EF',fontSize:scale(16),fontFamily:'Montserrat-Bold'}}
                                 onPress={()=>{this.props.navigation.navigate('terms')}}
                                 >Terms & Conditions</Text></Text>
                        </View>
 
-                        <View style={{justifyContent: "center",marginBottom:20 }}>
+                        <View style={{justifyContent: "center",marginBottom:scale(20) }}>
                             {
                                 this.state.loading
                                     ?
@@ -276,11 +277,11 @@ class RegisterScreen extends Component {
                                     </TouchableOpacity>
                             }
                             </View>
-                        <View style={[styles.socialBox,{marginBottom:30}]}>
-                            <View style={{flex:1,paddingHorizontal:10}}>
+                        <View style={[styles.socialBox,{marginBottom:scale(30)}]}>
+                            <View style={{flex:1,paddingHorizontal:scale(10)}}>
                                 <FacebookLogin />
                             </View>
-                            <View style={{flex:1,paddingHorizontal:10}}>
+                            <View style={{flex:1,paddingHorizontal:scale(10)}}>
                                 <GoogleSignIn/>
                             </View>
                         </View>
@@ -296,45 +297,45 @@ class RegisterScreen extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        paddingHorizontal:20,
-        marginBottom:20,
+        paddingHorizontal:scale(20),
+        marginBottom:scale(20),
         backgroundColor:"rgb(249,252,255)",
     },
     logoText: {
         color:'white',
         textAlign:'left',
-        fontSize:35,
-        fontWeight:'bold'
+        fontSize:scale(35),
+        fontFamily:'Montserrat-bold'
     },
     inputLabel: {
         color:'rgb(155,155,155)',
         textAlign:'left',
-        fontSize: 18,
-        marginBottom: 20
+        fontSize: scale(18),
+        marginBottom: scale(20)
     },
     inputField: {
-        marginVertical: 14
+        marginVertical: scale(14)
     },
     borderImg: {
         width:width,
-        height:40,
-        bottom:-10,
+        height:scale(40),
+        bottom:scale(-10),
         position:'absolute'
     },
     text: {
-        marginBottom: 15,
-        marginTop: 15,
-        fontSize: 15,
+        marginBottom: scale(15),
+        marginTop: scale(15),
+        fontSize: scale(15),
         textAlign: 'center',
     },
     button:{
         backgroundColor:'#4A4A4A',
         width: '100%',
-        borderRadius:30,
+        borderRadius:scale(30),
         borderColor: '#fff',
-        marginTop:10,
-        paddingTop:16,
-        paddingBottom:16,
+        marginTop:scale(10),
+        paddingTop:scale(16),
+        paddingBottom:scale(16),
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
@@ -344,15 +345,15 @@ const styles = StyleSheet.create({
     btnText: {
         textAlign:'center',
         color:'white',
-        fontSize:17,
+        fontSize:scale(17),
         fontFamily:'Montserrat-Bold'
     },
     socialBox:{
         flexDirection:'row',
         backgroundColor:'white',
-        borderRadius:10,
-        marginVertical: 20,
-        paddingVertical: 10,
+        borderRadius:scale(10),
+        marginVertical: scale(20),
+        paddingVertical: scale(10),
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 2,

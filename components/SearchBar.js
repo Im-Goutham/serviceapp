@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View,Image, StyleSheet} from 'react-native';
 import { Item, Input, Icon } from 'native-base';
-
+import {scale} from '../global';
 
 
 class SearchBar extends Component {
@@ -17,7 +17,7 @@ class SearchBar extends Component {
     return (
       <View>
          <Item style={styles.inputBox}>
-            <Image source={require('../assets/icons/search_black.png')} style={{ width: 18, height: 18}} resizeMode="contain" resizeMethod="resize"/>
+            <Image source={require('../assets/icons/search_black.png')} style={{ width: scale(18), height: scale(18)}} resizeMode="contain" resizeMethod="resize"/>
             <Input placeholder={placeholder}
             ref='searchField' 
             style={styles.inputField}   
@@ -33,12 +33,12 @@ class SearchBar extends Component {
 const styles = StyleSheet.create({
     inputBox: {
         backgroundColor:'white',
-        borderRadius:10,
-        paddingHorizontal:15,
+        borderRadius:scale(10),
+        paddingHorizontal:scale(15),
     },
     inputField: {
       fontFamily: 'Montserrat-Medium',
-      marginHorizontal:10,
+      marginHorizontal:scale(10),
     }
   })
   

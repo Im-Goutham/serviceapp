@@ -23,6 +23,8 @@ import * as actions from '../actions';
 import HeaderScreen from './HeaderScreen';
 
 var {height, width} = Dimensions.get('window');
+import {scale} from '../global';
+
 let tabItems = ["List View", "Map View"];
 let logo = require('../images/logo.png');
 let menu = require('../assets/icons/menu.png');
@@ -72,7 +74,7 @@ class FindJobScreen extends Component {
               })}
               style={{
               // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
-              height : 40,
+              height : scale(40),
               width: "50%",
               justifyContent: "space-around",
               alignItems:'center',
@@ -80,14 +82,14 @@ class FindJobScreen extends Component {
             <Text
               style={{
                 color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
-                fontSize: 16,
+                fontSize: scale(16),
                 fontFamily: 'Montserrat-Bold'
               }}>{value}</Text>
             <View style={{
-                width: 40,
-                height: this.state.tabindex === index ? 3 : 0,
+                width: scale(40),
+                height: this.state.tabindex === index ? scale(3) : 0,
                 backgroundColor: "#fff",
-                borderRadius : 3
+                borderRadius : scale(3)
                 // borderColor: this.state.tabindex === index ? "#fff": "transparent"
               }}/>
           </TouchableOpacity>
@@ -99,9 +101,9 @@ class FindJobScreen extends Component {
         var screen = this.props.navigation.state.routeName;
         return maplocations.data.map((data, index)=>{
             return(
-                <View style={{flex:1,marginBottom: 10, width: "100%", backgroundColor:"#fff", borderRadius:10,padding:20}} key={index}>
+                <View style={{flex:1,marginBottom: scale(10), width: "100%", backgroundColor:"#fff", borderRadius:scale(10),padding:scale(20)}} key={index}>
                   <View style={{
-                            height: 54,
+                            height: scale(54),
                             flexDirection: 'row',
                             backgroundColor: "transparent",
                             justifyContent: 'space-between',
@@ -112,17 +114,17 @@ class FindJobScreen extends Component {
                                 alignItems: 'center',
                                 backgroundColor: "transparent"
                             }}>
-                                <Text style={{fontSize: 16, fontFamily: 'Montserrat-Medium', color: "#000"}}>{data.jobtitle}</Text>
+                                <Text style={{fontSize: scale(16), fontFamily: 'Montserrat-Medium', color: "#000"}}>{data.jobtitle}</Text>
                                 <Image style={{
-                                    width: 20,
-                                    height: 20,
-                                    paddingHorizontal: 15,
+                                    width: scale(20),
+                                    height: scale(20),
+                                    paddingHorizontal: scale(15),
                                     backgroundColor: "transparent"
                                 }} source={data.icon} resizeMode="contain" resizeMethod="resize"/>
                             </View>
                             <View style={{
                                 width: "30%",
-                                height: 54,
+                                height: scale(54),
                                 backgroundColor: "transparent",
                                 alignItems: 'flex-end',
                                 justifyContent: 'center'
@@ -143,7 +145,7 @@ class FindJobScreen extends Component {
 
                                      ):(
                                        <TouchableHighlight  onPress={() => this.props.navigation.navigate(screen=='trackNow' ? 'jobTrack' : 'jobDetail')}>
-                                                <Image style={{width: 15, height: 15}} source={require('../assets/icons/eclipse.png')} resizeMode="contain" resizeMethod="resize"/>
+                                                <Image style={{width: scale(15), height: scale(15)}} source={require('../assets/icons/eclipse.png')} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableHighlight>
 
                                      )
@@ -152,17 +154,17 @@ class FindJobScreen extends Component {
                             </View>
                         </View>
                     <View style={{ width:"100%"}} >
-                       <Text style={{fontSize: 15, color: "#9B9B9B", fontFamily: "Montserrat-Medium"}}
+                       <Text style={{fontSize: scale(15), color: "#9B9B9B", fontFamily: "Montserrat-Medium"}}
                                           numberOfLines={3}>{data.detail}</Text>
                     </View>
-                    <View style={{flexDirection:'row',marginTop:10,justifyContent:'center',alignItems:'center'}}>
+                    <View style={{flexDirection:'row',marginTop:scale(10),justifyContent:'center',alignItems:'center'}}>
                         {
                             this.state.images.map((image,key)=>{
                                 return  <TouchableWithoutFeedback  onPress={()=>{this.showImage(key)}} key={key}>
                                     <View style={styles.imgBox}>
                                         <ImageBackground style={styles.imgStyle} source={image.image}  resizeMode="contain" resizeMethod="resize">
                                             {(key == 2)? (
-                                                <View style={styles.overlay}><Text style={{color:'white',fontSize:22,fontFamily:'Montserrat-Bold'}}>+5</Text></View>
+                                                <View style={styles.overlay}><Text style={{color:'white',fontSize:scale(22),fontFamily:'Montserrat-Bold'}}>+5</Text></View>
                                             ):(null)
                                             }
                                             </ImageBackground>
@@ -171,31 +173,31 @@ class FindJobScreen extends Component {
                             })
                         }
                         </View>
-                    <View style={{flexDirection:'row', backgroundColor:"#fff",paddingTop:10,alignItems:'space-between'}}>
+                    <View style={{flexDirection:'row', backgroundColor:"#fff",paddingTop:scale(10),alignItems:'space-between'}}>
                         <View style={{flex:1.3}}>
                           <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
-                                <Image style={{width: 15, height: 15}} source={require('../assets/icons/calender.png')} resizeMode="contain" resizeMethod="resize"/>
+                                <Image style={{width: scale(15), height: scale(15)}} source={require('../assets/icons/calender.png')} resizeMode="contain" resizeMethod="resize"/>
                                     <Text style={{
-                                        marginLeft: 10,
+                                        marginLeft: scale(10),
                                         fontFamily: "Montserrat-Regular",
-                                        fontSize: 14,
+                                        fontSize: scale(14),
                                         color: 'rgb(101,101,101)'
                                     }}>Before the 19 Sep 2018</Text>
                             </View>
                              <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                                     <View style={{flex: 1, flexDirection: 'row'}}>
-                                        <Image style={{width: 15, height: 15}} source={require('../assets/icons/location_red.png')} resizeMode="contain" resizeMethod="resize"/>
-                                        <Text style={{paddingLeft: 5, fontSize: 14, fontFamily: "Montserrat-Light"}}>
+                                        <Image style={{width: scale(15), height: scale(15)}} source={require('../assets/icons/location_red.png')} resizeMode="contain" resizeMethod="resize"/>
+                                        <Text style={{paddingLeft: scale(5), fontSize: scale(14), fontFamily: "Montserrat-Light"}}>
                                             3 mi
                                         </Text>
                                     </View>
                                     <View style={{flex: 1, flexDirection: 'row'}}>
                                         <Text style={{
-                                            fontSize: 14,
+                                            fontSize: scale(14),
                                             color: 'rgb(74,74,74)',
                                             fontFamily: "Montserrat-Bold"
                                         }}>Budget : </Text><Text style={{
-                                        fontSize: 14,
+                                        fontSize: scale(14),
                                         color: 'rgb(80,174,87)',
                                         fontFamily: "Montserrat-Bold"
                                     }}>$240</Text>
@@ -205,12 +207,12 @@ class FindJobScreen extends Component {
                          <View style={{flexDirection:'row',flex:1,justifyContent:'flex-end',alignItems:'center'}}>
                           <TouchableOpacity onPress={()=> this.setState({liked: !this.state.liked})}>
                                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                        <Image source={this.state.liked ? require('../assets/icons/heart_red.png') : require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
+                                        <Image source={this.state.liked ? require('../assets/icons/heart_red.png') : require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:scale(18),height:scale(18)}]}  resizeMode="contain" resizeMethod="resize"/>
                                 </LinearGradient>
                             </TouchableOpacity>
                             <TouchableOpacity  onPress={()=> this.shareJob()}>
                                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                        <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
+                                        <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:scale(18),height:scale(18)}]}  resizeMode="contain" resizeMethod="resize"/>
                                 </LinearGradient>
                             </TouchableOpacity>
                         </View>
@@ -261,40 +263,40 @@ class FindJobScreen extends Component {
                                     <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                     {
                                         (backButton)?(
-                                            <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                            <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                            <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                            <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                             </TouchableOpacity>
                                         ):(null)
                                     }
-                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                    <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? scale(54) : "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                    <Image source={menu} style={{ width: !backButton? '100%': '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                  </View>
                                     }
                                 title={
-                                    <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                        <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20,paddingLeft:10}}>Find Jobs</Text>
+                                    <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                        <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20),paddingLeft:scale(10)}}>Find Jobs</Text>
                                     </View>
                                 }
                                 right={
                                     <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                        <TouchableOpacity 
                                            onPress={() => this.props.navigation.navigate('search')}
-                                           style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                             <Image source={require('../assets/icons/search_white.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                           style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                             <Image source={require('../assets/icons/search_white.png')} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                         <TouchableOpacity 
                                            onPress={() => this.props.navigation.navigate('filter')}
-                                           style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
+                                           style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
                                            >
-                                            <Image source={require('../assets/icons/filter.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                            <Image source={require('../assets/icons/filter.png')} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     </View>
                                 }/>
                         }
                         content={
-                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
-                                <View style={{ paddingVertical:10,flexDirection:'row', paddingHorizontal: width/6}}>
+                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10)}}>
+                                <View style={{ paddingVertical:scale(10),flexDirection:'row', paddingHorizontal: scale(width/6)}}>
                                 {this.tabrender()}
                             </View>
                            </View>
@@ -311,12 +313,12 @@ class FindJobScreen extends Component {
                         </View>
                 </LinearGradient>
                 <Modal
-                    style={[styles.modal, { height: height/2+50, width: width-30, backgroundColor:"transparent" }]}
+                    style={[styles.modal, { height: scale(height/2+50), width: scale(width-30), backgroundColor:"transparent" }]}
                     position={"bottom"}
                     ref={"modal1"}
                     swipeToClose={false}
                     backdropPressToClose={false}>
-                    <View style={{ marginBottom: -10, width: 40, borderTopLeftRadius:10, borderTopRightRadius:10, paddingBottom:10, alignSelf:"flex-end", height: 45, backgroundColor: 'rgba(213,213,213,0.4)', justifyContent:'center', alignItems:'center', right:0}} >
+                    <View style={{ marginBottom: scale(-10), width: scale(40), borderTopLeftRadius:scale(10), borderTopRightRadius:scale(10), paddingBottom:scale(10), alignSelf:"flex-end", height: scale(45), backgroundColor: 'rgba(213,213,213,0.4)', justifyContent:'center', alignItems:'center', right:0}} >
                         <Icon name="close" style={{}} onPress={() => this.refs.modal1.close()}/>
                     </View>
                     <ScrollView ScrollView contentContainerStyle={{}}>
@@ -336,21 +338,21 @@ const styles = StyleSheet.create({
         // alignItems: 'center'
     },
     modal2: {
-        height: 230,
+        height: scale(230),
         backgroundColor: "#3B5998"
     },
     modal3: {
-        height: 300,
-        width: 300
+        height: scale(300),
+        width: scale(300)
     },
     button:{
         justifyContent:'center',
         alignItems:'center',
-        width: 100,
-        height: 40,
-        borderRadius:20,
-        paddingTop:5,
-        paddingBottom:5,
+        width: scale(100),
+        height: scale(40),
+        borderRadius:scale(20),
+        paddingTop:scale(5),
+        paddingBottom:scale(5),
     },
     imgBox: {
     flex:1,
@@ -368,23 +370,23 @@ overlay: {
         justifyContent:'center',
         alignItems:'center',
        width:'100%',
-      height:97,
-      borderRadius:10,
+      height:scale(97),
+      borderRadius:scale(10),
 },
       iconStyle: {
-     width:15,
-     height:15
+     width:scale(15),
+     height:scale(15)
   },
 imgStyle:{
     width:'100%',
-    height:110,
-    borderRadius:10,
+    height:scale(110),
+    borderRadius:scale(10),
 },
     iconButton: {
     marginHorizontal:5,
-    width: 45,
-    height:45,
-    borderRadius:30,
+    width: scale(45),
+    height:scale(45),
+    borderRadius:scale(30),
     justifyContent:'center',
     alignItems:'center'
   },
@@ -393,7 +395,7 @@ imgStyle:{
         textAlign:'center',
         color:'white',
         fontWeight:'bold',
-        fontSize:12
+        fontSize:scale(12)
     },
 })
 

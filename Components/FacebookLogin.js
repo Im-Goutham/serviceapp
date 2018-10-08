@@ -5,7 +5,7 @@ import { View, TouchableOpacity, StyleSheet,Text, Image } from 'react-native'
 import { Button ,Icon} from 'native-base'
 import { LoginManager, AccessToken, GraphRequest, GraphRequestManager } from 'react-native-fbsdk'
 import { Auth } from 'aws-amplify';
-
+import {scale} from '../global';
 
 export default class FacebookLogin extends Component {
 
@@ -84,7 +84,7 @@ export default class FacebookLogin extends Component {
             <TouchableOpacity style={styles.button} 
               onPress={() => this.handleFacebookLogin()}>
               <View style={{flexDirection:'row',paddingVertical:1,justifyContent:'center',alignItems:'center'}}>
-                  <Image source={require('../assets/icons/fb_transparent.png')} style={{ width: 20, height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                  <Image source={require('../assets/icons/fb_transparent.png')} style={{ width: scale(20), height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                     <Text style={styles.btnText}>Facebook</Text>
                 </View>
             </TouchableOpacity>
@@ -99,19 +99,19 @@ const styles = StyleSheet.create({
     button:{
       backgroundColor:'#3B5B95',
       width: '100%',
-      borderRadius:30,
-      paddingTop:15,
-      paddingBottom:15,
-      marginTop: 5,
-      marginBottom: 5,
+      borderRadius:scale(30),
+      paddingTop:scale(15),
+      paddingBottom:scale(15),
+      marginTop: scale(5),
+      marginBottom: scale(5),
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.2,
       shadowRadius: 2,
       elevation: 3,
     },
     btnText: { 
-      paddingHorizontal:10,
-      fontSize: 16,
+      paddingHorizontal:scale(10),
+      fontSize: scale(16),
       textAlign :'left',
       color:'white',
       fontFamily:'Montserrat-bold'

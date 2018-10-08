@@ -1,14 +1,19 @@
+jest.unmock('redux-mock-store')
+jest.unmock('redux-thunk')
+
+
 import React from 'react';
- import { shallow } from 'enzyme';
-import { Provider } from "react-redux";
-// import configureMockStore from "redux-mock-store";
+import { shallow } from 'enzyme';
+import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+
 import AppTutorialScreen from '../../screens/AppTutorialScreen';
+import AccountScreen from '../../screens/AccountScreen';
+import {initialState} from '../../config/jest/mockStore';
 
-// const mockStore = configureMockStore();
-// const store = mockStore({});
 
-
-import renderer from 'react-test-renderer';
+const middlewares = [thunk];
+const mockStore = configureMockStore(middlewares);
 
 
 let findElement = function(tree,element) {
@@ -23,40 +28,37 @@ let findElement = function(tree,element) {
 }
 
 
-
-
-
 describe('AppTutorial', () => {
  let wrapper;
 
-//  beforeEach(() => {
-//     wrapper = shallow(<AppTutorialScreen />);
-//  })
+ beforeEach(() => {
+    wrapper = shallow(<AppTutorialScreen />);
+ })
 
-//   it('snapshot',()=> {
-//     expect(wrapper).toMatchSnapshot();
+  it('snapshot',()=> {
+    expect(wrapper).toMatchSnapshot();
 
-//  })
+ })
 
- it('rendering',()=> {
-        const tree = renderer.create(
-                <AppTutorialScreen />
-        ).toJSON();
-        expect(tree).toMatchSnapshot()
+//  it('rendering',()=> {
+//         const tree = renderer.create(
+//                 <AppTutorialScreen />
+//         ).toJSON();
+//         expect(tree).toMatchSnapshot()
 
-  })
-
-
+//   })
 
 
 
-test('finction and state testing', () => {
-  const AppTutorialData = renderer.create(
-          <AppTutorialScreen />
-  ).getInstance();
-  AppTutorialData.changeState('React');
-  expect(AppTutorialData.state.person).toEqual('React');
-});
+
+
+// test('finction and state testing', () => {
+//   const AppTutorialData = renderer.create(
+//           <AppTutorialScreen />
+//   ).getInstance();
+//   AppTutorialData.changeState('React');
+//   expect(AppTutorialData.state.person).toEqual('React');
+// });
 
 });
 // test('Find element', () => {
@@ -66,3 +68,22 @@ test('finction and state testing', () => {
 
 //   expect(findElement(AppData,'username')).toBeDefined();
 // });
+
+
+
+
+describe('AccountScreen', () => {
+  let wrapper;
+ 
+  beforeEach(() => {
+     store = mockStore(initialState);
+     wrapper = shallow(<AccountScreen store={store} />).dive();
+  })
+ 
+   it('snapshot',()=> {
+     expect(wrapper).toMatchSnapshot();
+ 
+  })
+ 
+ 
+ });

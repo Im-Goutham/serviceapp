@@ -5,6 +5,7 @@ import {
   Animated,
   Image
 } from 'react-native';
+import {scale} from '../global';
 
 export default class FloatingLabelInput extends Component {
   state = {
@@ -51,11 +52,11 @@ export default class FloatingLabelInput extends Component {
       left: 0,
       top: this._animatedIsFocused.interpolate({
         inputRange: [0, 1],
-        outputRange: [18, 0],
+        outputRange: [scale(18), 0],
       }),
       fontSize: this._animatedIsFocused.interpolate({
         inputRange: [0, 1],
-        outputRange: [16, 14],
+        outputRange: [scale(16), scale(14)],
       }),
       color: this._animatedIsFocused.interpolate({
         inputRange: [0, 1],
@@ -63,14 +64,14 @@ export default class FloatingLabelInput extends Component {
       }),
     };
     return (
-      <View style={{ paddingTop: 18, flexDirection: 'row', borderBottomWidth: isFocused ? 2 : 1, borderBottomColor: isFocused ? '#3E85EF' :  '#D1D8E0' 
+      <View style={{ paddingTop: scale(18), flexDirection: 'row', borderBottomWidth: isFocused ? 2 : 1, borderBottomColor: isFocused ? '#3E85EF' :  '#D1D8E0' 
       }}>
         <Animated.Text style={labelStyle}>
           {label}
         </Animated.Text>
         <TextInput
           {...props}
-          style={{ flex:1,fontFamily:'Montserrat-Medium',height: this.props.multiline && this.props.value  ? 180 : 35 , fontSize: 16, color: '#4A4A4A'}}
+          style={{ flex:1,fontFamily:'Montserrat-Medium',height: this.props.multiline && this.props.value  ? scale(180) : 35 , fontSize: scale(16), color: '#4A4A4A'}}
           onFocus={this.handleFocus}
           autoCorrect={false}
           onBlur={this.handleBlur}
@@ -78,7 +79,7 @@ export default class FloatingLabelInput extends Component {
         />
         {
            (this.props.secureTextEntry)?(
-                <Image source={require('../assets/icons/eye.png')} style={{justifyContent:'flex-end', width: 18, height: 18}} resizeMode="contain" resizeMethod="resize"/>   
+                <Image source={require('../assets/icons/eye.png')} style={{justifyContent:'flex-end', width: scale(18), height: scale(18)}} resizeMode="contain" resizeMethod="resize"/>   
            ):(
                 null
            )

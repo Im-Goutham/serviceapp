@@ -18,6 +18,8 @@ export default class App extends React.Component {
           // After having done stuff (such as async tasks) hide the splash screen
          SplashScreen.hide();
          console.log('pixel ratio is ', PixelRatio.get());
+         console.log('pixel font is ', PixelRatio.getFontScale());
+         console.log('pixel layout is ', PixelRatio.getPixelSizeForLayoutSize());
          
   }
 

@@ -13,6 +13,7 @@ import FloatingLabelInput from '../components/FloatingLabelInput';
 import HeaderScreen from './HeaderScreen';
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
+import {scale} from '../global';
 
 let menu = require('../assets/icons/menu.png');
 let back_arrow = require('../assets/icons/arrow_left.png');
@@ -232,19 +233,19 @@ class AccountScreen extends Component {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                 {
                                     (backButton)?(
-                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     ):(null)
                                 }
-                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? scale(54) : "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                 </TouchableOpacity>
                              </View>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>User Profile</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>User Profile</Text>
                                </View>
                                }
                                right={
@@ -255,7 +256,7 @@ class AccountScreen extends Component {
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10)}}>
                        
                    </View>
                        }
@@ -264,7 +265,7 @@ class AccountScreen extends Component {
                        
                    <ScrollView style={{backgroundColor:'rgb(249, 252, 255)'}}>
 
-              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:20, paddingBottom:30,justifyContent:'space-between'}}>
+              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:scale(20), paddingBottom:scale(30),justifyContent:'space-between'}}>
                 <View style={styles.logoContainer}>
                       <TouchableOpacity onPress={this.selectPhotoTapped.bind(this)}>
                         <View style={styles.imgsView}>
@@ -285,8 +286,8 @@ class AccountScreen extends Component {
                         </View>  
                       </TouchableOpacity>
                 </View>  
-                <View style={{backgroundColor:"transparent", justifyContent:"center", alignItems:'center', flexDirection:"row",paddingVertical:20}}>
-                                <View style={{flexDirection: "row", paddingRight: 10, borderRightWidth: 1,borderRightColor: '#CCCCCC',paddingVertical:2}}>
+                <View style={{backgroundColor:"transparent", justifyContent:"center", alignItems:'center', flexDirection:"row",paddingVertical:scale(20)}}>
+                                <View style={{flexDirection: "row", paddingRight: scale(10), borderRightWidth: 1,borderRightColor: '#CCCCCC',paddingVertical:2}}>
                                     <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
                                     <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
                                     <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
@@ -294,12 +295,12 @@ class AccountScreen extends Component {
                                     <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
                                 </View>
                                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('rating')}}>
-                                  <Text style={{ fontFamily:"Montserrat-Medium", fontSize:15, color:"#3E85EF", paddingLeft: 10}}>3 Reviews</Text>
+                                  <Text style={{ fontFamily:"Montserrat-Medium", fontSize:scale(15), color:"#3E85EF", paddingLeft: scale(10)}}>3 Reviews</Text>
                                 </TouchableOpacity>     
                 </View>
-                <View style={{flex:6,justifyContent:'space-between',marginBottom:30}}>
+                <View style={{flex:6,justifyContent:'space-between',marginBottom:scale(30)}}>
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
-                  <View style={{width:'50%',paddingRight:10}}>
+                  <View style={{width:'50%',paddingRight:scale(10)}}>
                     <FloatingLabelInput
                       label="First Name"
                       value={this.state.firstname}
@@ -311,7 +312,7 @@ class AccountScreen extends Component {
                       onChangeText={firstname => this.setState({ firstname })}
                   />
                   </View>
-                  <View style={{width:'50%',paddingLeft:10}}>
+                  <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
                       label="Last Name"
                       value={this.state.lastname}
@@ -350,7 +351,7 @@ class AccountScreen extends Component {
                   />
                 </View>
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
-                  <View style={{width:'50%',paddingRight:10}}>
+                  <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
                       label="City"
                       value={this.state.city}
@@ -362,7 +363,7 @@ class AccountScreen extends Component {
                       onChangeText={city => this.setState({ city })}
                   />
                   </View>
-                  <View style={{width:'50%',paddingLeft:10}}>
+                  <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
                       label="State"
                       value={this.state.state}
@@ -377,7 +378,7 @@ class AccountScreen extends Component {
                 </View>
 
                  <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
-                  <View style={{width:'50%',paddingRight:10}}>
+                  <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
                       label="Zip"
                       value={this.state.zip}
@@ -389,7 +390,7 @@ class AccountScreen extends Component {
                       onChangeText={zip => this.setState({ zip })}
                   />
                   </View>
-                  <View style={{width:'50%',paddingLeft:10}}>
+                  <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
                       label="Country"
                       value={this.state.country}
@@ -403,58 +404,58 @@ class AccountScreen extends Component {
                   </View>
                 </View>
                 <View style={[styles.servicesBox,{flexDirection:'row'}]}>
-                  <View style={{flex: 2}}><Text style={{color:'#3E85EF',fontFamily:'Montserrat-Medium',fontSize: 16,lineHeight:23}}>Do you want to be a service Provider?</Text></View>
+                  <View style={{flex: 2}}><Text style={{color:'#3E85EF',fontFamily:'Montserrat-Medium',fontSize: scale(16),lineHeight:scale(23)}}>Do you want to be a service Provider?</Text></View>
                   <View style={{flex: 1,flexDirection: 'row', justifyContent:'flex-end',alignItems:'center'}}><Switch value={true} style={styles.switch}/></View>
               </View>  
 
 
        <View style={styles.servicesBox}>
                  <Text style={styles.textStyle}>Select the services you will provide</Text>
-                 <View style={{paddingBottom:20}}>
-                    <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
+                 <View style={{paddingBottom:scale(20)}}>
+                    <View style={{flex:1,flexDirection:'row',paddingVertical:scale(10)}}>
                     <View style={{flex:1.5}}>
-                        <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Waiter</Text>
-                          <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                        <Text style={{fontFamily:'Montserrat-Regular',fontSize:scale(16)}}>Waiter</Text>
+                          <View style={{flexDirection:'row',paddingVertical:scale(3),justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:scale(15),marginTop:scale(4)}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
                           button={ require('../assets/icons/eclipse_blue.png')}
-                          buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                          buttonStyle={{ width: scale(15), height: scale(15), margin: scale(7.5), resizeMode: "contain" }}
                           destructiveIndex={1}
                           options={["Edit", "Delete"]}
                           actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </View>
                     </View>
-                    <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
+                    <View style={{flex:1,flexDirection:'row',paddingVertical:scale(10)}}>
                     <View style={{flex:1.5}}>
-                    <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Painting</Text>
-                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                    <Text style={{fontFamily:'Montserrat-Regular',fontSize:scale(16)}}>Painting</Text>
+                        <View style={{flexDirection:'row',paddingVertical:scale(3),justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:scale(15),marginTop:scale(4)}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
                               button={ require('../assets/icons/eclipse_blue.png')}
-                              buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                              buttonStyle={{ width: scale(15), height: scale(15), margin: scale(7.5), resizeMode: "contain" }}
                               destructiveIndex={1}
                               options={["Edit", "Delete"]}
                               actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </View>
                     </View>
-                    <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
+                    <View style={{flex:1,flexDirection:'row',paddingVertical:scale(10)}}>
                     <View style={{flex:1.5}}>
-                    <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Dog Walking</Text>
-                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                    <Text style={{fontFamily:'Montserrat-Regular',fontSize:scale(16)}}>Dog Walking</Text>
+                        <View style={{flexDirection:'row',paddingVertical:scale(3),justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:scale(15),marginTop:scale(4)}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
                               button={ require('../assets/icons/eclipse_blue.png')}
-                              buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                              buttonStyle={{ width: scale(15), height: scale(15), margin: scale(7.5), resizeMode: "contain" }}
                               destructiveIndex={1}
                               options={["Edit", "Delete"]}
                               actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </View>
                     </View>
                 </View>
-                <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
+                <View style={{justifyContent: "center" ,marginBottom:scale(20),marginTop:scale(10)}}>
                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceCatScreen',{mainScreen: 'account'})}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#F2F2F2', '#CCCCCC']} style={styles.button}>
                     <Text style={[styles.btnText,{fontFamily:'Montserrat-Regular',color:'black'}]}>ADD SERVICES</Text>
@@ -479,7 +480,7 @@ class AccountScreen extends Component {
                 />
     
                   </View>
-                <View style={{flexDirection: 'row',alignItems:'center',paddingTop:20}}>
+                <View style={{flexDirection: 'row',alignItems:'center',paddingTop:scale(20)}}>
                     <Text style={styles.textStyle}>Upload Certificates</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
@@ -500,8 +501,8 @@ class AccountScreen extends Component {
              {/* Upload Id starts here */ }
           <View style={styles.servicesBox}>
                 <View style={{}}>
-                    <Text style={[styles.textStyle,{paddingBottom:10}]}>Upload ID</Text>
-                    <Text style={{fontSize:13,color:'#CCCCCC',marginBottom:10,fontFamily:'Montserrat-Medium'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
+                    <Text style={[styles.textStyle,{paddingBottom:scale(10)}]}>Upload ID</Text>
+                    <Text style={{fontSize:scale(13),color:'#CCCCCC',marginBottom:scale(10),fontFamily:'Montserrat-Medium'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
                 </View>  
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={ids} placeholder={true}   addDocument={this.selectDocumentTapped.bind(this)}/>
@@ -538,9 +539,9 @@ class AccountScreen extends Component {
                 </View> 
              </View>   
             {/* Upload Website ends here */}
-            <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
+            <View style={{justifyContent: "center" ,marginBottom:scale(20),marginTop:scale(10)}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                       <TouchableOpacity onPress={() => this.props.navigation.navigate('homePage')}><Text style={[styles.btnText,{color:'white'}]}>UPDATE PROFILE</Text></TouchableOpacity>
+                       <TouchableOpacity onPress={() => this.props.navigation.navigate('homePage')}><Text style={[styles.btnText,{color:'white'}]}>4</Text></TouchableOpacity>
                     </LinearGradient>
             </View>
                 </View>
@@ -566,31 +567,31 @@ const styles = StyleSheet.create({
 logoText: {
   color:'white',
   textAlign:'left',
-  fontSize:35,
+  fontSize:scale(35),
   fontWeight:'bold'
 },
 inputLabel: {
    textAlign:'left',
-   fontSize: 16,
+   fontSize: scale(16),
    fontFamily:'Montserrat-Light'
 },
 inputField: {
-    marginVertical: 10
+    marginVertical: scale(10)
 },
-borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
+borderImg: {width:width,height:scale(40),bottom:scale(-10),position:'absolute'},
 text: {
-  marginBottom: 15,
-  marginTop: 15,
-  fontSize: 15,
+  marginBottom: scale(15),
+  marginTop: scale(15),
+  fontSize: scale(15),
   textAlign: 'center',
 },
 button:{
   backgroundColor:'#4A4A4A',
   width: '100%',
-  borderRadius:30,
-  marginTop:10,
-  paddingTop:16,
-  paddingBottom:16,
+  borderRadius:scale(30),
+  marginTop:scale(10),
+  paddingTop:scale(16),
+  paddingBottom:scale(16),
   shadowOffset: { width: 0, height: 2 },
   shadowOpacity: 0.2,
   shadowRadius: 2,
@@ -599,13 +600,16 @@ button:{
 btnText: { 
   textAlign:'center',
   color:'black',
-  fontSize: 16,
+  fontSize: scale(16),
   fontFamily:'Montserrat-Bold'
 },
 socialBox:{
   flexDirection:'row',
   backgroundColor:'white',
-  borderRadius:20,
+  borderRadius:scale(20),
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.2,
+  shadowRadius: 2,
   elevation: 3,
 },
 logoContainer: {
@@ -615,35 +619,35 @@ logoContainer: {
 },
 imgsView: {
   flex: 1,
-  padding:10,
+  padding:scale(10),
   position: 'relative',
   top: 0,
   left: 0
 },
 user_placeholder: {
 
-  width: 140,
-  height: 140,
-  borderRadius:70,
+  width: scale(140),
+  height: scale(140),
+  borderRadius:scale(70),
   justifyContent:'center',
   alignItems:'center',
 },
 camera_icon: {
-  width: 40,
-  height: 40,
-  borderRadius:20,
+  width: scale(40),
+  height: scale(40),
+  borderRadius:scale(20),
   position: 'absolute',
-  bottom: 10,
-  right: 10,
+  bottom: scale(10),
+  right: scale(10),
   justifyContent:'center',
   alignItems:'center',
 },
 servicesBox: {
 flex: 1,
-marginTop: 20,
-paddingVertical: 25,
-paddingHorizontal:20,
-borderRadius:10,
+marginTop: scale(20),
+paddingVertical: scale(25),
+paddingHorizontal:scale(20),
+borderRadius:scale(10),
 backgroundColor:'white',
 shadowOffset: { width: 0, height: 2 },
 shadowOpacity: 0.2,
@@ -652,17 +656,17 @@ elevation: 3,
 },
 textStyle: {
   fontFamily:"Montserrat-SemiBold",
-  fontSize: 16,
-  paddingBottom:20
+  fontSize: scale(16),
+  paddingBottom:scale(20)
 },
 star_style: {
-width:15, height:15, marginHorizontal:5
+width:scale(15), height:scale(15), marginHorizontal:scale(5)
 },
 miniSwitch: {
-  transform: Platform.OS === 'ios' ? [{ scaleX: .6 }, { scaleY: .6 }] : [{ scaleX: .6}, { scaleY: .6 }]
+  transform: Platform.OS === 'ios' ? [{ scaleX: scale(.6) }, { scaleY: scale(.6) }] : [{ scaleX: scale(.6)}, { scaleY: scale(.6) }]
 },
 switch: {
-  transform: Platform.OS === 'ios' ? [{ scaleX: .9 }, { scaleY: .9 }] : [{ scaleX: .8 }, { scaleY: .8 }]
+  transform: Platform.OS === 'ios' ? [{ scaleX: scale(.9) }, { scaleY: scale(.9) }] : [{ scaleX: scale(.8) }, { scaleY: scale(.8) }]
 },
 })
 

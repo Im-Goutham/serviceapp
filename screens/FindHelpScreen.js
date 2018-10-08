@@ -22,6 +22,7 @@ import Share, {ShareSheet, Button} from 'react-native-share';
 
 import HeaderScreen from './HeaderScreen';
 import Swipeout from "react-native-swipeout";
+import {scale} from '../global';
 
 var {height, width} = Dimensions.get('window');
 let tabItems = ["List View", "Map View"];
@@ -76,7 +77,7 @@ class FindHelpScreen extends Component {
           })}
           style={{
           // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
-          height : 40,
+          height : scale(40),
           width: "50%",
           justifyContent: "space-around",
           alignItems:'center',
@@ -84,14 +85,14 @@ class FindHelpScreen extends Component {
         <Text
           style={{
             color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
-            fontSize: 16,
+            fontSize: scale(16),
             fontFamily: 'Montserrat-Bold'
           }}>{value}</Text>
         <View style={{
-            width: 40,
-            height: this.state.tabindex === index ? 3 : 0,
+            width: scale(40),
+            height: this.state.tabindex === index ? scale(3) : 0,
             backgroundColor: "#fff",
-            borderRadius : 3
+            borderRadius : scale(3)
             // borderColor: this.state.tabindex === index ? "#fff": "transparent"
           }}/>
       </TouchableOpacity>
@@ -114,35 +115,35 @@ class FindHelpScreen extends Component {
   rendermapdata(){
       return maplocations.data.map((data, index)=>{
           return(
-              <View style={{flex:1,marginBottom: 10,padding:20, width: "100%", backgroundColor:"#fff", borderRadius:10}} key={index}>
+              <View style={{flex:1,marginBottom: scale(10),padding:scale(20), width: "100%", backgroundColor:"#fff", borderRadius:scale(10)}} key={index}>
                     <View style={{flex:1,flexDirection:'row'}}>
                         <View style={{flex:2}}>
                             <View style={styles.imageShadow}>
-                                <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
+                                <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:scale(35),width:scale(70),height:scale(70)}]}/>
                                 <Image source={require('../images/check.png')} style={styles.check}/>
                             </View>
                         </View>
-                        <View style={{flex:7,paddingHorizontal:20}}>
+                        <View style={{flex:7,paddingHorizontal:scale(20)}}>
                             <View style={{flex:1,flexDirection:'row'}}>
-                                <Text style={{fontFamily:'Montserrat-Medium',color:'#22262C',fontSize:18}}>Clayton L.</Text>
+                                <Text style={{fontFamily:'Montserrat-Medium',color:'#22262C',fontSize:scale(18)}}>Clayton L.</Text>
                                 <Image style={{
-                                    width: 20,
-                                    height: 20,
-                                    paddingHorizontal: 15,
+                                    width: scale(20),
+                                    height: scale(20),
+                                    paddingHorizontal: scale(15),
                                     backgroundColor: "transparent"
                                 }} source={require('../assets/icons/crown.png')} resizeMode="contain" resizeMethod="resize"/>
                             </View>
-                            <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
-                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingRight:8}}><Image source={require('../assets/icons/star_gold.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Bold',marginLeft:8,marginRight:8}}>4</Text></View>
-                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:8,borderLeftColor:'#CCCCCC',borderLeftWidth:1,borderRightColor:'#CCCCCC',borderRightWidth:1}}><Image source={require('../assets/icons/chat_green.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Regular',marginLeft:8,marginRight:8}}>3</Text></View>
-                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:8}}><Image source={require('../assets/icons/location_red.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A',marginLeft:8,marginRight:8}}>3 mi.</Text></View>
+                            <View style={{flex:1,flexDirection:'row',paddingVertical:scale(10)}}>
+                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingRight:scale(8)}}><Image source={require('../assets/icons/star_gold.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Bold',marginLeft:scale(8),marginRight:scale(8)}}>4</Text></View>
+                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:scale(8),borderLeftColor:'#CCCCCC',borderLeftWidth:scale(1),borderRightColor:'#CCCCCC',borderRightWidth:scale(1)}}><Image source={require('../assets/icons/chat_green.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Regular',marginLeft:scale(8),marginRight:scale(8)}}>3</Text></View>
+                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:scale(8)}}><Image source={require('../assets/icons/location_red.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A',marginLeft:scale(8),marginRight:scale(8)}}>3 mi.</Text></View>
                             </View>
                             <View style={{flex:1}}>
-                                <Text>14 <Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A)',fontSize:13}}>Jobs done</Text></Text>
+                                <Text>14 <Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A)',fontSize:scale(13)}}>Jobs done</Text></Text>
                             </View>
                         </View>
                     </View>
-                    <View style={{flex:1,flexDirection:'row',marginTop:10}}>
+                    <View style={{flex:1,flexDirection:'row',marginTop:scale(10)}}>
                         <View style={{justifyContent:'center'}}><Text style={styles.tagStyle}>Plumber & 5 More</Text></View>
                         <View style={{flexDirection:'row',flex:1,justifyContent:'flex-end',alignItems:'center'}}>
                         <TouchableOpacity onPress={()=>{this.setState({liked: !this.state.liked})}}> 
@@ -152,7 +153,7 @@ class FindHelpScreen extends Component {
                          </TouchableOpacity>
                          <TouchableOpacity onPress={()=> this.shareJob()}>
                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                    <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
+                                    <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:scale(18),height:scale(18)}]}  resizeMode="contain" resizeMethod="resize"/>
                             </LinearGradient>
                         </TouchableOpacity>
                         </View>
@@ -164,7 +165,7 @@ class FindHelpScreen extends Component {
                                     <View style={styles.imgBox}>
                                         <ImageBackground style={styles.imgStyle} source={image.image}  resizeMode="contain" resizeMethod="resize">
                                             {(key == 2)? (
-                                                <View style={styles.overlay}><Text style={{color:'white',fontSize:22,fontFamily:'Montserrat-Bold'}}>+5</Text></View>
+                                                <View style={styles.overlay}><Text style={{color:'white',fontSize:scale(22),fontFamily:'Montserrat-Bold'}}>+5</Text></View>
                                             ):(null)
                                             }
                                             </ImageBackground>
@@ -174,8 +175,8 @@ class FindHelpScreen extends Component {
                         }
                         </View>
                     <View style={{flex:1,flexDirection:'row'}}>
-                        <View style={{flex:5,paddingVertical:3}}>
-                            <Text style={{color:'#9B9B9B',fontFamily:'Montserrat-Medium',fontSize:13}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
+                        <View style={{flex:5,paddingVertical:scale(3)}}>
+                            <Text style={{color:'#9B9B9B',fontFamily:'Montserrat-Medium',fontSize:scale(13)}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
                         </View>
                         <View style={{flex:3}}>
                         <TouchableOpacity onPress={()=> {this.props.navigation.navigate('select')}}>
@@ -208,41 +209,41 @@ class FindHelpScreen extends Component {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                 {
                                     (backButton)?(
-                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     ):(null)
                                 }
-                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? scale(54) : "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                 </TouchableOpacity>
                              </View>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Find Help</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>Find Help</Text>
                                </View>
                                }
                                right={
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                 <TouchableOpacity 
                                     onPress={() => this.props.navigation.navigate('search')}
-                                    style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                      <Image source={require('../assets/icons/search_white.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                      <Image source={require('../assets/icons/search_white.png')} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                  </TouchableOpacity>
                                  <TouchableOpacity 
                                     onPress={() => this.props.navigation.navigate('filter')}
-                                    style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
+                                    style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
                                     >
-                                     <Image source={require('../assets/icons/filter.png')} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                     <Image source={require('../assets/icons/filter.png')} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                  </TouchableOpacity>
                              </View>
                                }
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
-                                 <View style={{ paddingVertical:10,flexDirection:'row', paddingHorizontal: width/6}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10)}}>
+                                 <View style={{ paddingVertical:scale(10),flexDirection:'row', paddingHorizontal: scale(width/6)}}>
                                     {this.tabrender()}
                                 </View>
                            </View>
@@ -254,12 +255,12 @@ class FindHelpScreen extends Component {
                   </View>
                </LinearGradient>
                <Modal
-                   style={[styles.modal, { height: height/2+50, width: width-30, backgroundColor:"transparent" }]}
+                   style={[styles.modal, { height: scale(height/2+50), width: scale(width-30), backgroundColor:"transparent" }]}
                    position={"bottom"}
                    ref={"modal1"}
                    swipeToClose={false}
                    backdropPressToClose={false}>
-                   <View style={{ marginBottom: -10, width: 40, borderTopLeftRadius:10, borderTopRightRadius:10, paddingBottom:10, alignSelf:"flex-end", height: 45, backgroundColor: 'rgba(213,213,213,0.4)', justifyContent:'center', alignItems:'center', right:0}} >
+                   <View style={{ marginBottom: scale(-10), width: scale(40), borderTopLeftRadius:scale(10), borderTopRightRadius:scale(10), paddingBottom:scale(10), alignSelf:"flex-end", height: scale(45), backgroundColor: 'rgba(213,213,213,0.4)', justifyContent:'center', alignItems:'center', right:0}} >
                        <Icon name="close" style={{}} onPress={() => this.refs.modal1.close()}/>
                    </View>
                    <ScrollView >
@@ -283,28 +284,28 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
     img_placeholder: {
-    width: 80,
-    height: 80,
-    borderRadius:5,
+    width: scale(80),
+    height: scale(80),
+    borderRadius:scale(5),
     position: 'relative',
     top: 0,
     left: 0
   },
   tagStyle:{
     backgroundColor: 'rgb(239,186,47)',
-    borderRadius:10,
+    borderRadius:scale(10),
     overflow:"hidden",
-    paddingVertical:2,
-    paddingHorizontal:10,
-    marginBottom:10,
+    paddingVertical:scale(2),
+    paddingHorizontal:scale(10),
+    marginBottom:scale(10),
     color: 'white',
-    marginRight: 10,
+    marginRight: scale(10),
     fontFamily: 'Montserrat-Bold'
 },
     imgStyle:{
     width:'100%',
-    height:115,
-    borderRadius:10,
+    height:scale(115),
+    borderRadius:scale(10),
 },
     imgBox: {
     flex:1,
@@ -312,16 +313,16 @@ const styles = StyleSheet.create({
 
 },
 check: {
-    width: 18,
-    height: 18,
-    borderRadius:9,
+    width: scale(18),
+    height: scale(18),
+    borderRadius:scale(9),
     position: 'absolute',
     bottom: 0,
     left: 0
   },
     overlay: {
         position: 'absolute',
-        top: 8,
+        top: scale(8),
         right: 0,
         bottom: 0,
         left: 0,
@@ -330,30 +331,30 @@ check: {
             justifyContent:'center',
             alignItems:'center',
            width:'100%',
-          height:97,
-          borderRadius:10,
+          height:scale(97),
+          borderRadius:scale(10),
 },
       button:{
     width: '100%',
-    borderRadius:30,
-    paddingVertical:10
+    borderRadius:scale(30),
+    paddingVertical:scale(10)
 },
 btnText: {
     textAlign:'center',
     color:'white',
     fontFamily: 'Montserrat-Bold',
-    fontSize:14
+    fontSize:scale(14)
 },
      iconButton: {
-    marginHorizontal:5,
-    width: 45,
-    height:45,
-    borderRadius:30,
+    marginHorizontal:scale(5),
+    width: scale(45),
+    height:scale(45),
+    borderRadius:scale(30),
     justifyContent:'center',
     alignItems:'center'
   },  iconStyle: {
-     width:15,
-     height:15
+     width:scale(15),
+     height:scale(15)
   },
 })
 

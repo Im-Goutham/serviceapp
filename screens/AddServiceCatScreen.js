@@ -13,12 +13,11 @@ import {
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 
-
-
 import HeaderScreen from './HeaderScreen';
 import SearchBar from '../components/SearchBar';
 import CategoryContainer from '../components/CategoryContainer';
 
+import {scale} from '../global';
 
 let back_arrow = require('../assets/icons/arrow_left.png');
 
@@ -151,24 +150,24 @@ class AddServiceCatScreen extends Component {
                                left = {
                                    <TouchableOpacity
                                        onPress={() => {this.props.navigation.goBack()}}
-                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'center'}}>
-                                       <Image source={back_arrow} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                       style={{width : scale(54), height:scale(54), justifyContent:'center', alignItems: 'center'}}>
+                                       <Image source={back_arrow} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                    </TouchableOpacity>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Add Services</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>Add Services</Text>
                                </View>
                                }
                                right={
-                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', height:54 ,flexDirection:"row"}}>
-                                       <Text style={{ fontFamily: 'Montserrat-Regular', color:"#fff", fontSize: 14}}>Step 1/2</Text>
+                                   <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', height:scale(54) ,flexDirection:"row"}}>
+                                       <Text style={{ fontFamily: 'Montserrat-Regular', color:"#fff", fontSize: scale(14)}}>Step 1/2</Text>
                                    </View>
                                }
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingTop: 10,paddingBottom:20,marginHorizontal:10}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingTop: scale(10),paddingBottom:scale(20),marginHorizontal:scale(10)}}>
                                 <SearchBar placeholder={'Search here...' }/>
                    </View>
                        }
@@ -178,7 +177,7 @@ class AddServiceCatScreen extends Component {
       justifyContent: 'space-between'
   }}>
         <View style={styles.container}>
-        <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:10,paddingBottom:20,justifyContent:'space-between'}}>
+        <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:scale(10),paddingBottom:scale(20),justifyContent:'space-between'}}>
 
 
         <View style={styles.servicesBox}>
@@ -248,16 +247,16 @@ const styles = StyleSheet.create({
     logoText: {
         color:'white',
         textAlign:'left',
-        fontSize:35,
+        fontSize:scale(35),
         fontWeight:'bold'
       },
-    borderImg: {width:'100%',height:31},
+    borderImg: {width:'100%',height:scale(31)},
     servicesBox: {
         flex: 1,
-        marginTop: 20,
-        paddingHorizontal:20,
-        paddingVertical: 20,
-        borderRadius:10,
+        marginTop: scale(20),
+        paddingHorizontal:scale(20),
+        paddingVertical: scale(20),
+        borderRadius:scale(10),
         backgroundColor:'white',
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
@@ -266,11 +265,11 @@ const styles = StyleSheet.create({
     },
     textStyle: {
       fontFamily:"Montserrat-SemiBold",
-      fontSize:17
+      fontSize:scale(17)
     },
       categoryContainer: {
         flex: 1,
-        paddingVertical:10,
+        paddingVertical:scale(10),
         flexDirection: 'row',
         flexWrap:'wrap',
         justifyContent:'space-around',
@@ -278,7 +277,7 @@ const styles = StyleSheet.create({
     btnText: {
         textAlign:'center',
         color:'white',
-        fontSize: 18,
+        fontSize: scale(18),
         fontFamily:'Montserrat-Bold'
     }
 })

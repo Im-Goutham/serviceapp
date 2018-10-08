@@ -18,7 +18,7 @@ import Modal from 'react-native-modalbox';
 import LinearGradient from 'react-native-linear-gradient';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-
+import {scale} from '../global';
 // import Icon from 'react-native-vector-icons/EvilIcons';
 
 import HeaderScreen from './HeaderScreen';
@@ -72,7 +72,7 @@ class ChatScreen extends Component {
           })}
           style={{
           // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
-          height : 40,
+          height : scale(40),
           width: "50%",
           justifyContent: "space-between",
           alignItems:'center',
@@ -80,14 +80,14 @@ class ChatScreen extends Component {
         <Text
           style={{
             color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
-            fontSize: 16,
+            fontSize: scale(16),
             fontFamily: 'Montserrat-Bold'
           }}>{value}</Text>
         <View style={{
-            width: 70,
-            height: this.state.tabindex === index ? 3 : 0,
+            width: scale(70),
+            height: this.state.tabindex === index ? scale(3) : 0,
             backgroundColor: "#fff",
-            borderRadius : 3
+            borderRadius : scale(3)
             // borderColor: this.state.tabindex === index ? "#fff": "transparent"
           }}/>
       </TouchableOpacity>
@@ -98,11 +98,11 @@ class ChatScreen extends Component {
   rendermapdata(){
       return maplocations.data.map((data, index)=>{
           return(
-              <View style={{height:300,marginBottom: 10, width: "100%", backgroundColor:"#fff", borderRadius:10}} key={index}>
-                  <View style={{ flexDirection:"row", justifyContent:"space-between", height:50, alignItems:"center", paddingHorizontal:20}} >
+              <View style={{height:scale(300),marginBottom: scale(10), width: "100%", backgroundColor:"#fff", borderRadius:scale(10)}} key={index}>
+                  <View style={{ flexDirection:"row", justifyContent:"space-between", height:scale(50), alignItems:"center", paddingHorizontal:scale(20)}} >
                       <View style={{ flexDirection:"row"}} >
                           <Text style={{color:"#000", fontFamily:"Montserrat-regular"}}>{data.jobtitle}</Text>
-                          <Image style={{width:20,height:20, paddingHorizontal:15, backgroundColor:"transparent"}} source={data.icon}
+                          <Image style={{width:scale(20),height:scale(20), paddingHorizontal:scale(15), backgroundColor:"transparent"}} source={data.icon}
                                  resizeMode="contain" resizeMethod="resize"/>
                       </View>
                       <TouchableHighlight style={styles.button} onPress={()=>console.warn("nejkhknz")} >
@@ -115,33 +115,33 @@ class ChatScreen extends Component {
                           </LinearGradient>
                       </TouchableHighlight>
                   </View>
-                  <View style={{ width:"100%", padding:20}} >
+                  <View style={{ width:"100%", padding:scale(20)}} >
                       <Text style={{fontFamily:"Montserrat",}}>{data.detail}</Text>
                   </View>
                   <View style={{flexDirection:"row", backgroundColor:"#fff"}}>
-                      <View style={{ width : "30%",marginHorizontal: 5}} >
-                      <Image style={{width:"100%", height:100, borderRadius:10}} source={data.image}
+                      <View style={{ width : "30%",marginHorizontal: scale(5)}} >
+                      <Image style={{width:"100%", height:scale(100), borderRadius:scale(10)}} source={data.image}
                              resizeMode="contain" resizeMethod="resize"/>
                       </View>
                       <View style={{ width : "30%",marginHorizontal: 5}} >
-                      <Image style={{width:"100%", height:100, borderRadius:10}} source={data.image}
+                      <Image style={{width:"100%", height:scale(100), borderRadius:scale(10)}} source={data.image}
                              resizeMode="contain" resizeMethod="resize"/>
                       </View>
-                      <View style={{ width : "30%",marginHorizontal: 5}} >
-                      <Image style={{width:"100%", height:100, borderRadius:10}} source={data.image}
+                      <View style={{ width : "30%",marginHorizontal: scale(5)}} >
+                      <Image style={{width:"100%", height:scale(100), borderRadius:scale(10)}} source={data.image}
                              resizeMode="contain" resizeMethod="resize"/>
                       </View>
                   </View>
-                  <View style={{flexDirection:'row', backgroundColor:"#fff", paddingHorizontal:20}}>
+                  <View style={{flexDirection:'row', backgroundColor:"#fff", paddingHorizontal:scale(20)}}>
                       <View style={{flexDirection:'column', backgroundColor:"transparent", width:"70%"}}>
-                          <Text style={{fontSize:12}}><Icon style={{color:'#007FFA',fontSize:20}} active name="ios-calendar-outline" /> <Text style={{paddingLeft:5, fontFamily:"Montserrat-Regular",fontSize:15}}>Before the 19 Sep 2018</Text></Text>
-                          <Text style={{fontSize:15,}}><Icon style={{color:'#c33c4c',fontSize:20}} active name="md-pin" />  <Text style={{paddingLeft:5, fontFamily:"Montserrat-Light"}}>3km </Text></Text>
+                          <Text style={{fontSize:scale(12)}}><Icon style={{color:'#007FFA',fontSize:scale(20)}} active name="ios-calendar-outline" /> <Text style={{paddingLeft:scale(5), fontFamily:"Montserrat-Regular",fontSize:scale(15)}}>Before the 19 Sep 2018</Text></Text>
+                          <Text style={{fontSize:scale(15)}}><Icon style={{color:'#c33c4c',fontSize:scale(20)}} active name="md-pin" />  <Text style={{paddingLeft:scale(5), fontFamily:"Montserrat-Light"}}>3km </Text></Text>
                       </View>
                       <View style={{flexDirection:'column', backgroundColor:"transparent", width:"30%", flexDirection:"row", justifyContent:"space-between"}}>
                           <Image source={require("../assets/icons/heart.png")}
-                                 style={{width:"100%", height:30}} resizeMode="contain" resizeMethod="resize"/>
+                                 style={{width:"100%", height:scale(30)}} resizeMode="contain" resizeMethod="resize"/>
                           <Image source={require("../assets/icons/navigation.png")}
-                                 style={{width:"100%", height:30}} resizeMode="contain" resizeMethod="resize"/>
+                                 style={{width:"100%", height:scale(30)}} resizeMode="contain" resizeMethod="resize"/>
 
                       </View>
 
@@ -169,19 +169,19 @@ class ChatScreen extends Component {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                 {
                                     (backButton)?(
-                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                        <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                        <TouchableOpacity  onPress={() => this.props.navigation.navigate('homePage')}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                        <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                         </TouchableOpacity>
                                     ):(null)
                                 }
-                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? 54 : "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: !backButton ? scale(54) : "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={menu} style={{ width: !backButton? '100%': '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                 </TouchableOpacity>
                                 </View>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Chats</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>Chats</Text>
                                </View>
                                }
                                right={
@@ -192,7 +192,7 @@ class ChatScreen extends Component {
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between",paddingTop: 10,paddingBottom:20,marginHorizontal:10}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between",paddingTop: scale(10),paddingBottom:scale(20),marginHorizontal:scale(10)}}>
                                <SearchBar placeholder={'Search here...' }/>
                    </View>
                        }
@@ -218,24 +218,24 @@ const styles = StyleSheet.create({
   },
 
   modal2: {
-    height: 230,
+    height: scale(230),
     backgroundColor: "#3B5998"
   },
 
   modal3: {
-    height: 300,
-    width: 300
+    height: scale(300),
+    width: scale(300)
   },
     button:{
     justifyContent:'center',
     alignItems:'center',
-    width: 100,
-    height: 40,
-    borderRadius:20,
+    width: scale(100),
+    height: scale(40),
+    borderRadius:scale(20),
     // borderWidth: 1,
     // borderColor: '#008000',
-    paddingTop:5,
-    paddingBottom:5,
+    paddingTop:scale(5),
+    paddingBottom:scale(5),
 },
 })
 
