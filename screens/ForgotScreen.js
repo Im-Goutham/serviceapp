@@ -14,6 +14,8 @@ import FloatingLabelInput from '../components/FloatingLabelInput';
 
 const { width, height } = Dimensions.get('window');
 const isAndroid = Platform.OS === 'android';
+import {scale} from '../global';
+
 
 let menu = require('../assets/icons/menu.png');
 let back_arrow = require('../assets/icons/arrow_left.png');
@@ -47,17 +49,17 @@ class ForgetScreen extends Component {
                                 <TouchableOpacity
                                         onPress={() => this.props.navigation.navigate('login')}
                                         style={{
-                                            width: 54,
-                                            height: 54,
+                                            width: scale(54),
+                                            height: scale(54),
                                             justifyContent: 'center',
                                             alignItems: 'flex-start'
                                         }}>
-                                        <Image source={back_arrow} style={{width: '100%', height: 20,}}
+                                        <Image source={back_arrow} style={{width: '100%', height: scale(20)}}
                                             resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
 
                                </View>
                                }
@@ -70,7 +72,7 @@ class ForgetScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between"}}>
-                                 <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 31,paddingLeft:20,paddingBottom:20}}>Forgot ID/Password</Text>
+                                 <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(31),paddingLeft:scale(20),paddingBottom:scale(20)}}>Forgot ID/Password</Text>
 
                       </View>
                        }
@@ -87,7 +89,7 @@ class ForgetScreen extends Component {
                                 this.inputs['email'] = input;
                             }}
                             onChangeText={email => this.setState({ email })}
-                            style={{marginVertical: 5}}
+                            style={{marginVertical: scale(5)}}
                         />
                         </View>
                         <View style={{justifyContent: "center" }}>
@@ -114,46 +116,46 @@ class ForgetScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-        paddingHorizontal:20,
-        marginBottom:20,
+        paddingHorizontal:scale(20),
+        marginBottom:scale(20),
         backgroundColor:"rgb(249,252,255)",
     },
     logoText: {
         color:'white',
         textAlign:'left',
-        fontSize:35,
+        fontSize:scale(35),
         fontWeight:'bold'
     },
     inputLabel: {
         color:'rgb(155,155,155)',
         textAlign:'left',
-        fontSize: 18,
-        marginBottom: 20
+        fontSize: scale(18),
+        marginBottom: scale(20)
     },
     inputField: {
-        marginTop: 10,
-        marginBottom: 10
+        marginTop: scale(10),
+        marginBottom: scale(10)
     },
     borderImg: {
         width:width,
-        height:40,
-        bottom:-10,
+        height:scale(40),
+        bottom:scale(-10),
         position:'absolute'
     },
     text: {
-        marginBottom: 15,
-        marginTop: 15,
-        fontSize: 15,
+        marginBottom: scale(15),
+        marginTop: scale(15),
+        fontSize: scale(15),
         textAlign: 'center',
     },
     button:{
         backgroundColor:'#4A4A4A',
         width: '100%',
-        borderRadius:30,
+        borderRadius:scale(30),
         borderColor: '#fff',
-        marginTop:10,
-        paddingTop:16,
-        paddingBottom:16,
+        marginTop:scale(10),
+        paddingTop:scale(16),
+        paddingBottom:scale(16),
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.2,
         shadowRadius: 2,
@@ -163,7 +165,7 @@ const styles = StyleSheet.create({
     btnText: {
         textAlign:'center',
         color:'white',
-        fontSize:18,
+        fontSize:scale(18),
         fontFamily:'Montserrat-Bold'
     },
 })

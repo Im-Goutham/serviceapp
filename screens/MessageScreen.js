@@ -22,8 +22,7 @@ import ChatMessage from '../components/ChatMessage';
 
 import HeaderScreen from './HeaderScreen';
 
-var {height, width} = Dimensions.get('window');
-const isAndroid = Platform.OS === 'android';
+import {scale} from '../global';
 
 let menu = require('../assets/icons/menu.png');
 let back_arrow = require('../assets/icons/arrow_left.png');
@@ -232,7 +231,7 @@ class MessageScreen extends Component {
    
     return (
       <View style={{flexDirection:'row'}}>
-        <View style={{flex:9,paddingLeft:20}}>
+        <View style={{flex:9,paddingLeft:scale(20)}}>
              <Input 
                 
                  placeholder='Type here...'
@@ -241,8 +240,8 @@ class MessageScreen extends Component {
                  onSubmitEditing={this.onSend}
                  />
         </View>
-        <View style={{flex:1,paddingRight:20}}>
-           <Image source={require('../assets/icons/mic.png')} style={{ width: '100%', height: 22}} resizeMode="contain" resizeMethod="resize"/>
+        <View style={{flex:1,paddingRight:scale(20)}}>
+           <Image source={require('../assets/icons/mic.png')} style={{ width: '100%', height: scale(22)}} resizeMode="contain" resizeMethod="resize"/>
          </View>
         
         </View>
@@ -261,9 +260,9 @@ class MessageScreen extends Component {
     // Make "pure emoji" messages much bigger than plain text.
     if (currText && emojiUtils.isPureEmojiString(currText)) {
       messageTextStyle = {
-        fontSize: 28,
+        fontSize: scale(28),
         // Emoji get clipped if lineHeight isn't increased; make it consistent across platforms.
-        lineHeight: Platform.OS === 'android' ? 34 : 30,
+        lineHeight: Platform.OS === 'android' ? scale(34) : scale(30),
       };
     }
 
@@ -289,30 +288,30 @@ class MessageScreen extends Component {
                                navigation={this.props.navigation}
                                left = {
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                    <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                    <Image source={back_arrow} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                    <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                    <Image source={menu} style={{ width: '50%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                    <Image source={menu} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                     </TouchableOpacity>
                                 </View>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
-                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 20}}>Micheal Y.</Text>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                   <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20)}}>Micheal Y.</Text>
                                </View>
                                }
                                right={
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:54, backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                <Image source={require('../assets/icons/user_block.png')} style={{ width: '100%', height: 54}} resizeMode="contain" resizeMethod="resize"/>
+                                <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                <Image source={require('../assets/icons/user_block.png')} style={{ width: '100%', height: scale(54)}} resizeMode="contain" resizeMethod="resize"/>
                                 </TouchableOpacity>
                             </View>
                                }
                            />
                        }
                        content={
-                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: 10}}>
+                           <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10)}}>
                        
                    </View>
                        }
@@ -329,12 +328,12 @@ class MessageScreen extends Component {
                                 return (
                                     <Icon
                                         name="ios-mic"
-                                        size={35}
-                                        hitSlop={{ top: 20, bottom: 20, left: 50, right: 50 }}
+                                        size={scale(35)}
+                                        hitSlop={{ top: scale(20), bottom: scale(20), left: scale(50), right: scale(50) }}
                                         color={this.state.startAudio ? "red" : "black"}
                                         style={{
-                                            bottom: 10,
-                                            right: 5,
+                                            bottom: scale(10),
+                                            right: scale(5),
                                             position: "absolute",
                                             shadowColor: "#000",
                                             shadowOffset: { width: 0, height: 0 },
@@ -373,34 +372,34 @@ const styles = StyleSheet.create({
   },
 
   modal2: {
-    height: 230,
+    height: scale(230),
     backgroundColor: "#3B5998"
   },
 
   modal3: {
-    height: 300,
-    width: 300
+    height: scale(300),
+    width: scale(300)
   },
     button:{
     justifyContent:'center',
     alignItems:'center',
-    width: 100,
-    height: 40,
-    borderRadius:20,
+    width: scale(100),
+    height: scale(40),
+    borderRadius:scale(20),
     // borderWidth: 1,
     // borderColor: '#008000',
-    paddingTop:5,
-    paddingBottom:5,
+    paddingTop:scale(5),
+    paddingBottom:scale(5),
 },
 inputBox: {
   flex:1,
   backgroundColor:'white',
-  borderRadius:10,
-  paddingHorizontal:15,
+  borderRadius:scale(10),
+  paddingHorizontal:scale(15),
 },
 inputField: {
 fontFamily: 'Montserrat-Medium',
-marginHorizontal:10,
+marginHorizontal:scale(10),
 }
 })
 

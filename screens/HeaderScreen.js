@@ -9,40 +9,12 @@ import {
     Platform,
     Text, TouchableHighlight
 } from 'react-native';
- import {  Icon } from 'native-base'
-import Header from '../components/Header';
-import LinearGradient from 'react-native-linear-gradient';
+import {scale} from '../global';
 
 
-var {height, width} = Dimensions.get('window');
-let tabItems = ["List View", "Map View"];
-
-let logo = require('../images/logo.png');
-let menu = require('../assets/icons/menu.png');
 let border_img = require('../images/border_img.png');
 
-let maplocations = {
-    data : [
-         {
-      jobtitle: 'Need Cook',
-      icon: require('../assets/icons/crown.png'),
-      image: require('../images/cook.png'),
-      detail: "Lorem Ipsum has been the industrys standard dummy text ever",
-    },
-    {
-      jobtitle: 'Need Carpenter',
-      icon: require('../assets/icons/crown.png'),
-      image: require('../images/tutorial.png'),
-      detail: "Lorem Ipsum has been the industrys standard dummy text ever",
-    },
-    {
-      jobtitle: 'Need Cook',
-      icon: require('../assets/icons/crown.png'),
-      image: require('../images/tutorial.png'),
-      detail: "Lorem Ipsum has been the industrys standard dummy text ever",
-    }
-        ]
-}
+
 
 
 
@@ -53,8 +25,8 @@ class HeaderScreen extends Component {
                {this.props.header}
                {this.props.content}
                <View style={{width:'100%'}}>
-                   <Image source={border_img} style={{ width: '100%', height: Platform.OS==='ios'? 31 : 31}}/>
-                   <View style={{height:20, backgroundColor:"#F9FCFF"}}/>
+                   <Image source={border_img} style={{ width: '100%', height: Platform.OS==='ios'? scale(31) : scale(31)}}/>
+                   <View style={{height:scale(20), backgroundColor:"#F9FCFF"}}/>
                </View>
            </View>
        )
@@ -70,24 +42,24 @@ const styles = StyleSheet.create({
   },
 
   modal2: {
-    height: 230,
+    height: scale(230),
     backgroundColor: "#3B5998"
   },
 
   modal3: {
-    height: 300,
-    width: 300
+    height: scale(300),
+    width: scale(300
   },
     button:{
     justifyContent:'center',
     alignItems:'center',
-    width: 100,
-    height: 40,
-    borderRadius:20,
+    width: scale(100),
+    height: scale(40),
+    borderRadius:scale(20),
     // borderWidth: 1,
     // borderColor: '#008000',
-    paddingTop:5,
-    paddingBottom:5,
+    paddingTop:scale(5),
+    paddingBottom:scale(5),
 },
 })
 

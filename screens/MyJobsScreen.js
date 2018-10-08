@@ -12,23 +12,21 @@ import {
  import {  Icon } from 'native-base'
 import Advertisement from '../components/Advertisement';
 import JobsList from '../components/JobsList';
-import Map from '../components/Map';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import Modal from 'react-native-modalbox';
-// import Icon from 'react-native-vector-icons/EvilIcons';
+import {scale} from '../global';
 
 import HeaderScreen from './HeaderScreen';
 
 var {height, width} = Dimensions.get('window');
 let tabItems = ["Posted Jobs", "Applied Jobs", "Booked Jobs"];
 
-let logo = require('../images/logo.png');
 let menu = require('../assets/icons/menu.png');
 let back_arrow = require('../assets/icons/arrow_left.png');
-let border_img = require('../images/border_img.png');
+
 
 let maplocations = {
     data : [
@@ -71,21 +69,21 @@ class MyJobScreen extends Component {
           })}
           style={{
           // backgroundColor: this.state.tabindex === index ? "blue": "transparent",
-          height : 40,
+          height : scale(40),
           justifyContent: "space-around",
           alignItems:'center',
         }}>
         <Text
           style={{
             color: this.state.tabindex === index ? "#fff" : "rgb(158, 212, 247)",
-            fontSize: 16,
+            fontSize: scale(16),
             fontFamily: 'Montserrat-Bold'
           }}>{value}</Text>
         <View style={{
-            width: 40,
-            height: this.state.tabindex === index ? 3 : 0,
+            width: scale(40),
+            height: this.state.tabindex === index ? scale(3) : 0,
             backgroundColor: "#fff",
-            borderRadius : 3
+            borderRadius : scale(3)
             // borderColor: this.state.tabindex === index ? "#fff": "transparent"
           }}/>
       </TouchableOpacity>
@@ -97,7 +95,7 @@ class MyJobScreen extends Component {
   rendermapdata(){
       return maplocations.data.map((data, index)=>{
           return(
-              <View style={{height:300,marginBottom: 10, width: "100%", backgroundColor:"#fff", borderRadius:10}} key={index}>
+              <View style={{height:scale(300),marginBottom: scale(10), width: "100%", backgroundColor:"#fff", borderRadius:scale(10)}} key={index}>
                   <View style={{ flexDirection:"row", justifyContent:"space-between", height:50, alignItems:"center", paddingHorizontal:20}} >
                       <View style={{ flexDirection:"row"}} >
                           <Text style={{color:"#000", fontFamily:"Montserrat-regular"}}>{data.jobtitle}</Text>
