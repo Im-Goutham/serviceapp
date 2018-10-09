@@ -135,18 +135,18 @@ class FindHelpScreen extends Component {
                             </View>
                             <View style={{flex:1,flexDirection:'row',paddingVertical:scale(10)}}>
                                 <View style={{flexDirection:'row',justifyContent:'space-around',paddingRight:scale(8)}}><Image source={require('../assets/icons/star_gold.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Bold',marginLeft:scale(8),marginRight:scale(8)}}>4</Text></View>
-                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:scale(8),borderLeftColor:'#CCCCCC',borderLeftWidth:scale(1),borderRightColor:'#CCCCCC',borderRightWidth:scale(1)}}><Image source={require('../assets/icons/chat_green.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Regular',marginLeft:scale(8),marginRight:scale(8)}}>3</Text></View>
+                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:scale(8),borderLeftColor:'#CCCCCC',borderLeftWidth:scale(1),borderRightColor:'#CCCCCC',borderRightWidth:scale(1)}}><Image source={require('../assets/icons/chat_green.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'MontserratRegular',marginLeft:scale(8),marginRight:scale(8)}}>3</Text></View>
                                 <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:scale(8)}}><Image source={require('../assets/icons/location_red.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A',marginLeft:scale(8),marginRight:scale(8)}}>3 mi.</Text></View>
                             </View>
                             <View style={{flex:1}}>
-                                <Text>14 <Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A)',fontSize:scale(13)}}>Jobs done</Text></Text>
+                                <Text>14 <Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A',fontSize:scale(13)}}>Jobs done</Text></Text>
                             </View>
                         </View>
                     </View>
                     <View style={{flex:1,flexDirection:'row',marginTop:scale(10)}}>
                         <View style={{justifyContent:'center'}}><Text style={styles.tagStyle}>Plumber & 5 More</Text></View>
                         <View style={{flexDirection:'row',flex:1,justifyContent:'flex-end',alignItems:'center'}}>
-                        <TouchableOpacity onPress={()=>{this.setState({liked: !this.state.liked})}}> 
+                        <TouchableOpacity onPress={()=>{this.setState({liked: !this.state.liked})}}>
                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
                                     <Image source={this.state.liked ? require('../assets/icons/heart_red.png'): require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
                             </LinearGradient>
@@ -226,12 +226,12 @@ class FindHelpScreen extends Component {
                                }
                                right={
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                <TouchableOpacity 
+                                <TouchableOpacity
                                     onPress={() => this.props.navigation.navigate('search')}
                                     style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
                                       <Image source={require('../assets/icons/search_white.png')} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                  </TouchableOpacity>
-                                 <TouchableOpacity 
+                                 <TouchableOpacity
                                     onPress={() => this.props.navigation.navigate('filter')}
                                     style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
                                     >
@@ -360,8 +360,8 @@ btnText: {
 })
 
 
-const mapStateToProps = state=> ({ 
+const mapStateToProps = state=> ({
     backButton:state.user.backButton,
   })
-  
+
 export default connect(mapStateToProps, actions)(FindHelpScreen);

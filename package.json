@@ -91,7 +91,7 @@
       "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!react-native|native-base|react-navigation|radio-button-react-native|react-native-share)"
-    ]
+      "node_modules/(?!react-native|native-base|react-navigation|radio-button-react-native|react-native-share|react-native-google-signin|@expo)"
+  ]
   }
 }

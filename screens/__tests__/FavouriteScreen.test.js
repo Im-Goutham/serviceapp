@@ -19,7 +19,7 @@ describe('FavouriteScreen', () => {
         wrapper = shallow(
             <FavouriteScreen
                 store={store}
-                // navigation={{state: {params: {mainScreen:''}}}}
+                navigation={{state: {params: {mainScreen:''}}}}
                 />).dive();
     //    wrapper.setProps({navigation:});
     })

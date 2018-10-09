@@ -1,0 +1,4682 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginScreen snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LoginScreen
+    hidePhotoView={[Function]}
+    showBackButton={[Function]}
+    showPhotoView={[Function]}
+    signIn={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <ScrollView
+        contentContainerStyle={
+          Object {
+            "flexGrow": 1,
+          }
+        }
+      >
+        <Component
+          style={
+            Object {
+              "flex": 9,
+            }
+          }
+        >
+          <Component
+            style={
+              Object {
+                "flex": 1,
+                "justifyContent": "space-around",
+                "paddingHorizontal": 13.043478260869566,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 1.6,
+                  "justifyContent": "flex-end",
+                  "paddingVertical": 17.39130434782609,
+                }
+              }
+            >
+              <Image
+                resizeMethod="resize"
+                resizeMode="contain"
+                source={
+                  Object {
+                    "testUri": "../../../images/logo.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 34.78260869565218,
+                    "width": 191.30434782608697,
+                  }
+                }
+              />
+            </Component>
+            <Component
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "white",
+                    "borderRadius": 8.695652173913045,
+                    "elevation": 3,
+                    "flex": 1,
+                    "justifyContent": "space-between",
+                    "paddingHorizontal": 17.39130434782609,
+                    "shadowOffset": Object {
+                      "height": 1.7391304347826089,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 0.2,
+                    "shadowRadius": 2,
+                  },
+                  Object {
+                    "flex": 3,
+                  },
+                ]
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "flex": 1,
+                    "justifyContent": "space-around",
+                  }
+                }
+              >
+                <Component>
+                  <FloatingLabelInput
+                    autoCapitalize="none"
+                    label="Email / User ID"
+                    onChangeText={[Function]}
+                    returnKeyType="next"
+                    value=""
+                  />
+                </Component>
+                <Component>
+                  <FloatingLabelInput
+                    autoCapitalize="none"
+                    label="Password"
+                    onChangeText={[Function]}
+                    returnKeyType="done"
+                    secureTextEntry={true}
+                    style={
+                      Object {
+                        "flex": 1,
+                        "marginVertical": 4.347826086956522,
+                      }
+                    }
+                    value=""
+                  />
+                </Component>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "flex": 1,
+                    "justifyContent": "space-around",
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                    }
+                  }
+                >
+                  <Styled(CheckBox)
+                    checked={true}
+                    color="rgb(61,133,239)"
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "borderRadius": 2.608695652173913,
+                        "marginLeft": -8.695652173913045,
+                        "marginTop": 2.608695652173913,
+                      }
+                    }
+                  />
+                  <Component
+                    style={
+                      Object {
+                        "color": "rgb(74,74,74)",
+                        "fontFamily": "Montserrat-Regular",
+                        "fontSize": 14.782608695652176,
+                        "marginLeft": 17.39130434782609,
+                        "marginTop": 2.608695652173913,
+                      }
+                    }
+                  >
+                    Remember me
+                  </Component>
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                  >
+                    <LinearGradient
+                      colors={
+                        Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ]
+                      }
+                      end={
+                        Object {
+                          "x": 1,
+                          "y": 0,
+                        }
+                      }
+                      start={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "backgroundColor": "#4A4A4A",
+                          "borderColor": "#fff",
+                          "borderRadius": 26.086956521739133,
+                          "elevation": 3,
+                          "marginTop": 8.695652173913045,
+                          "paddingBottom": 13.913043478260871,
+                          "paddingTop": 13.913043478260871,
+                          "shadowOffset": Object {
+                            "height": 2,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 0.2,
+                          "shadowRadius": 2,
+                          "width": "100%",
+                        }
+                      }
+                    >
+                      <Component
+                        style={
+                          Object {
+                            "color": "white",
+                            "fontFamily": "Montserrat-Bold",
+                            "fontSize": 14.782608695652176,
+                            "textAlign": "center",
+                          }
+                        }
+                      >
+                        SIGN IN
+                      </Component>
+                    </LinearGradient>
+                  </TouchableOpacity>
+                </Component>
+                <Component
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "color": "rgb(99,99,99)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 13.043478260869566,
+                      "marginVertical": 13.043478260869566,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Forgot ID/Password?
+                </Component>
+              </Component>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 1.8,
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "marginTop": 17.39130434782609,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "flex": 1,
+                    "paddingRight": 8.695652173913045,
+                  }
+                }
+              >
+                <FacebookLogin />
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "flex": 1,
+                    "paddingLeft": 8.695652173913045,
+                  }
+                }
+              >
+                <GoogleSigninSampleApp />
+              </Component>
+            </Component>
+          </Component>
+        </Component>
+        <Component
+          style={
+            Object {
+              "flex": 2,
+            }
+          }
+        >
+          <Component
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <Image
+              source={
+                Object {
+                  "testUri": "../../../images/border_img.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 26.956521739130437,
+                  "width": "100%",
+                }
+              }
+            />
+            <Component
+              style={
+                Object {
+                  "backgroundColor": "#F9FCFF",
+                  "height": 17.39130434782609,
+                }
+              }
+            />
+          </Component>
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "rgb(249,252, 255)",
+                "flex": 1,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "color": "#4A4A4A",
+                  "fontFamily": "Montserrat-Regular",
+                  "fontSize": 14.782608695652176,
+                  "marginVertical": 17.39130434782609,
+                  "textAlign": "center",
+                }
+              }
+            >
+              Don't have an account? 
+              <Component
+                onPress={[Function]}
+                style={
+                  Object {
+                    "color": "#3E85EF",
+                    "fontFamily": "Montserrat-Bold",
+                  }
+                }
+              >
+                Sign Up
+              </Component>
+            </Component>
+          </Component>
+        </Component>
+      </ScrollView>,
+      "colors": Array [
+        "#3E85EF",
+        "#3EBDEF",
+      ],
+      "end": Object {
+        "x": 1,
+        "y": 0,
+      },
+      "start": Object {
+        "x": 0,
+        "y": 0,
+      },
+      "style": Object {
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Component
+            style={
+              Object {
+                "flex": 9,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "flex": 1,
+                  "justifyContent": "space-around",
+                  "paddingHorizontal": 13.043478260869566,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 1.6,
+                    "justifyContent": "flex-end",
+                    "paddingVertical": 17.39130434782609,
+                  }
+                }
+              >
+                <Image
+                  resizeMethod="resize"
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "testUri": "../../../images/logo.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 34.78260869565218,
+                      "width": 191.30434782608697,
+                    }
+                  }
+                />
+              </Component>
+              <Component
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "white",
+                      "borderRadius": 8.695652173913045,
+                      "elevation": 3,
+                      "flex": 1,
+                      "justifyContent": "space-between",
+                      "paddingHorizontal": 17.39130434782609,
+                      "shadowOffset": Object {
+                        "height": 1.7391304347826089,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.2,
+                      "shadowRadius": 2,
+                    },
+                    Object {
+                      "flex": 3,
+                    },
+                  ]
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "flex": 1,
+                      "justifyContent": "space-around",
+                    }
+                  }
+                >
+                  <Component>
+                    <FloatingLabelInput
+                      autoCapitalize="none"
+                      label="Email / User ID"
+                      onChangeText={[Function]}
+                      returnKeyType="next"
+                      value=""
+                    />
+                  </Component>
+                  <Component>
+                    <FloatingLabelInput
+                      autoCapitalize="none"
+                      label="Password"
+                      onChangeText={[Function]}
+                      returnKeyType="done"
+                      secureTextEntry={true}
+                      style={
+                        Object {
+                          "flex": 1,
+                          "marginVertical": 4.347826086956522,
+                        }
+                      }
+                      value=""
+                    />
+                  </Component>
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "flex": 1,
+                      "justifyContent": "space-around",
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "flex-start",
+                        "flexDirection": "row",
+                        "justifyContent": "flex-start",
+                      }
+                    }
+                  >
+                    <Styled(CheckBox)
+                      checked={true}
+                      color="rgb(61,133,239)"
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "borderRadius": 2.608695652173913,
+                          "marginLeft": -8.695652173913045,
+                          "marginTop": 2.608695652173913,
+                        }
+                      }
+                    />
+                    <Component
+                      style={
+                        Object {
+                          "color": "rgb(74,74,74)",
+                          "fontFamily": "Montserrat-Regular",
+                          "fontSize": 14.782608695652176,
+                          "marginLeft": 17.39130434782609,
+                          "marginTop": 2.608695652173913,
+                        }
+                      }
+                    >
+                      Remember me
+                    </Component>
+                  </Component>
+                  <Component
+                    style={
+                      Object {
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                    >
+                      <LinearGradient
+                        colors={
+                          Array [
+                            "#3E85EF",
+                            "#3EBDEF",
+                          ]
+                        }
+                        end={
+                          Object {
+                            "x": 1,
+                            "y": 0,
+                          }
+                        }
+                        start={
+                          Object {
+                            "x": 0,
+                            "y": 0,
+                          }
+                        }
+                        style={
+                          Object {
+                            "backgroundColor": "#4A4A4A",
+                            "borderColor": "#fff",
+                            "borderRadius": 26.086956521739133,
+                            "elevation": 3,
+                            "marginTop": 8.695652173913045,
+                            "paddingBottom": 13.913043478260871,
+                            "paddingTop": 13.913043478260871,
+                            "shadowOffset": Object {
+                              "height": 2,
+                              "width": 0,
+                            },
+                            "shadowOpacity": 0.2,
+                            "shadowRadius": 2,
+                            "width": "100%",
+                          }
+                        }
+                      >
+                        <Component
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontFamily": "Montserrat-Bold",
+                              "fontSize": 14.782608695652176,
+                              "textAlign": "center",
+                            }
+                          }
+                        >
+                          SIGN IN
+                        </Component>
+                      </LinearGradient>
+                    </TouchableOpacity>
+                  </Component>
+                  <Component
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "color": "rgb(99,99,99)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 13.043478260869566,
+                        "marginVertical": 13.043478260869566,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Forgot ID/Password?
+                  </Component>
+                </Component>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 1.8,
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start",
+                    "marginTop": 17.39130434782609,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingRight": 8.695652173913045,
+                    }
+                  }
+                >
+                  <FacebookLogin />
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingLeft": 8.695652173913045,
+                    }
+                  }
+                >
+                  <GoogleSigninSampleApp />
+                </Component>
+              </Component>
+            </Component>
+          </Component>,
+          <Component
+            style={
+              Object {
+                "flex": 2,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "testUri": "../../../images/border_img.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 26.956521739130437,
+                    "width": "100%",
+                  }
+                }
+              />
+              <Component
+                style={
+                  Object {
+                    "backgroundColor": "#F9FCFF",
+                    "height": 17.39130434782609,
+                  }
+                }
+              />
+            </Component>
+            <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(249,252, 255)",
+                  "flex": 1,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "#4A4A4A",
+                    "fontFamily": "Montserrat-Regular",
+                    "fontSize": 14.782608695652176,
+                    "marginVertical": 17.39130434782609,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Don't have an account? 
+                <Component
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "color": "#3E85EF",
+                      "fontFamily": "Montserrat-Bold",
+                    }
+                  }
+                >
+                  Sign Up
+                </Component>
+              </Component>
+            </Component>
+          </Component>,
+        ],
+        "contentContainerStyle": Object {
+          "flexGrow": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Component
+              style={
+                Object {
+                  "flex": 1,
+                  "justifyContent": "space-around",
+                  "paddingHorizontal": 13.043478260869566,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 1.6,
+                    "justifyContent": "flex-end",
+                    "paddingVertical": 17.39130434782609,
+                  }
+                }
+              >
+                <Image
+                  resizeMethod="resize"
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "testUri": "../../../images/logo.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 34.78260869565218,
+                      "width": 191.30434782608697,
+                    }
+                  }
+                />
+              </Component>
+              <Component
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "white",
+                      "borderRadius": 8.695652173913045,
+                      "elevation": 3,
+                      "flex": 1,
+                      "justifyContent": "space-between",
+                      "paddingHorizontal": 17.39130434782609,
+                      "shadowOffset": Object {
+                        "height": 1.7391304347826089,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.2,
+                      "shadowRadius": 2,
+                    },
+                    Object {
+                      "flex": 3,
+                    },
+                  ]
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "flex": 1,
+                      "justifyContent": "space-around",
+                    }
+                  }
+                >
+                  <Component>
+                    <FloatingLabelInput
+                      autoCapitalize="none"
+                      label="Email / User ID"
+                      onChangeText={[Function]}
+                      returnKeyType="next"
+                      value=""
+                    />
+                  </Component>
+                  <Component>
+                    <FloatingLabelInput
+                      autoCapitalize="none"
+                      label="Password"
+                      onChangeText={[Function]}
+                      returnKeyType="done"
+                      secureTextEntry={true}
+                      style={
+                        Object {
+                          "flex": 1,
+                          "marginVertical": 4.347826086956522,
+                        }
+                      }
+                      value=""
+                    />
+                  </Component>
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "flex": 1,
+                      "justifyContent": "space-around",
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "flex-start",
+                        "flexDirection": "row",
+                        "justifyContent": "flex-start",
+                      }
+                    }
+                  >
+                    <Styled(CheckBox)
+                      checked={true}
+                      color="rgb(61,133,239)"
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "borderRadius": 2.608695652173913,
+                          "marginLeft": -8.695652173913045,
+                          "marginTop": 2.608695652173913,
+                        }
+                      }
+                    />
+                    <Component
+                      style={
+                        Object {
+                          "color": "rgb(74,74,74)",
+                          "fontFamily": "Montserrat-Regular",
+                          "fontSize": 14.782608695652176,
+                          "marginLeft": 17.39130434782609,
+                          "marginTop": 2.608695652173913,
+                        }
+                      }
+                    >
+                      Remember me
+                    </Component>
+                  </Component>
+                  <Component
+                    style={
+                      Object {
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                    >
+                      <LinearGradient
+                        colors={
+                          Array [
+                            "#3E85EF",
+                            "#3EBDEF",
+                          ]
+                        }
+                        end={
+                          Object {
+                            "x": 1,
+                            "y": 0,
+                          }
+                        }
+                        start={
+                          Object {
+                            "x": 0,
+                            "y": 0,
+                          }
+                        }
+                        style={
+                          Object {
+                            "backgroundColor": "#4A4A4A",
+                            "borderColor": "#fff",
+                            "borderRadius": 26.086956521739133,
+                            "elevation": 3,
+                            "marginTop": 8.695652173913045,
+                            "paddingBottom": 13.913043478260871,
+                            "paddingTop": 13.913043478260871,
+                            "shadowOffset": Object {
+                              "height": 2,
+                              "width": 0,
+                            },
+                            "shadowOpacity": 0.2,
+                            "shadowRadius": 2,
+                            "width": "100%",
+                          }
+                        }
+                      >
+                        <Component
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontFamily": "Montserrat-Bold",
+                              "fontSize": 14.782608695652176,
+                              "textAlign": "center",
+                            }
+                          }
+                        >
+                          SIGN IN
+                        </Component>
+                      </LinearGradient>
+                    </TouchableOpacity>
+                  </Component>
+                  <Component
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "color": "rgb(99,99,99)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 13.043478260869566,
+                        "marginVertical": 13.043478260869566,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Forgot ID/Password?
+                  </Component>
+                </Component>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 1.8,
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start",
+                    "marginTop": 17.39130434782609,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingRight": 8.695652173913045,
+                    }
+                  }
+                >
+                  <FacebookLogin />
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingLeft": 8.695652173913045,
+                    }
+                  }
+                >
+                  <GoogleSigninSampleApp />
+                </Component>
+              </Component>
+            </Component>,
+            "style": Object {
+              "flex": 9,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "flex": 1.6,
+                      "justifyContent": "flex-end",
+                      "paddingVertical": 17.39130434782609,
+                    }
+                  }
+                >
+                  <Image
+                    resizeMethod="resize"
+                    resizeMode="contain"
+                    source={
+                      Object {
+                        "testUri": "../../../images/logo.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 34.78260869565218,
+                        "width": 191.30434782608697,
+                      }
+                    }
+                  />
+                </Component>,
+                <Component
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "white",
+                        "borderRadius": 8.695652173913045,
+                        "elevation": 3,
+                        "flex": 1,
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 17.39130434782609,
+                        "shadowOffset": Object {
+                          "height": 1.7391304347826089,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.2,
+                        "shadowRadius": 2,
+                      },
+                      Object {
+                        "flex": 3,
+                      },
+                    ]
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "flex": 1,
+                        "justifyContent": "space-around",
+                      }
+                    }
+                  >
+                    <Component>
+                      <FloatingLabelInput
+                        autoCapitalize="none"
+                        label="Email / User ID"
+                        onChangeText={[Function]}
+                        returnKeyType="next"
+                        value=""
+                      />
+                    </Component>
+                    <Component>
+                      <FloatingLabelInput
+                        autoCapitalize="none"
+                        label="Password"
+                        onChangeText={[Function]}
+                        returnKeyType="done"
+                        secureTextEntry={true}
+                        style={
+                          Object {
+                            "flex": 1,
+                            "marginVertical": 4.347826086956522,
+                          }
+                        }
+                        value=""
+                      />
+                    </Component>
+                  </Component>
+                  <Component
+                    style={
+                      Object {
+                        "flex": 1,
+                        "justifyContent": "space-around",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "alignItems": "flex-start",
+                          "flexDirection": "row",
+                          "justifyContent": "flex-start",
+                        }
+                      }
+                    >
+                      <Styled(CheckBox)
+                        checked={true}
+                        color="rgb(61,133,239)"
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "borderRadius": 2.608695652173913,
+                            "marginLeft": -8.695652173913045,
+                            "marginTop": 2.608695652173913,
+                          }
+                        }
+                      />
+                      <Component
+                        style={
+                          Object {
+                            "color": "rgb(74,74,74)",
+                            "fontFamily": "Montserrat-Regular",
+                            "fontSize": 14.782608695652176,
+                            "marginLeft": 17.39130434782609,
+                            "marginTop": 2.608695652173913,
+                          }
+                        }
+                      >
+                        Remember me
+                      </Component>
+                    </Component>
+                    <Component
+                      style={
+                        Object {
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                        onPress={[Function]}
+                      >
+                        <LinearGradient
+                          colors={
+                            Array [
+                              "#3E85EF",
+                              "#3EBDEF",
+                            ]
+                          }
+                          end={
+                            Object {
+                              "x": 1,
+                              "y": 0,
+                            }
+                          }
+                          start={
+                            Object {
+                              "x": 0,
+                              "y": 0,
+                            }
+                          }
+                          style={
+                            Object {
+                              "backgroundColor": "#4A4A4A",
+                              "borderColor": "#fff",
+                              "borderRadius": 26.086956521739133,
+                              "elevation": 3,
+                              "marginTop": 8.695652173913045,
+                              "paddingBottom": 13.913043478260871,
+                              "paddingTop": 13.913043478260871,
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 0.2,
+                              "shadowRadius": 2,
+                              "width": "100%",
+                            }
+                          }
+                        >
+                          <Component
+                            style={
+                              Object {
+                                "color": "white",
+                                "fontFamily": "Montserrat-Bold",
+                                "fontSize": 14.782608695652176,
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            SIGN IN
+                          </Component>
+                        </LinearGradient>
+                      </TouchableOpacity>
+                    </Component>
+                    <Component
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "color": "rgb(99,99,99)",
+                          "fontFamily": "Montserrat-Medium",
+                          "fontSize": 13.043478260869566,
+                          "marginVertical": 13.043478260869566,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Forgot ID/Password?
+                    </Component>
+                  </Component>
+                </Component>,
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "flex": 1.8,
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "marginTop": 17.39130434782609,
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8.695652173913045,
+                      }
+                    }
+                  >
+                    <FacebookLogin />
+                  </Component>
+                  <Component
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingLeft": 8.695652173913045,
+                      }
+                    }
+                  >
+                    <GoogleSigninSampleApp />
+                  </Component>
+                </Component>,
+              ],
+              "style": Object {
+                "flex": 1,
+                "justifyContent": "space-around",
+                "paddingHorizontal": 13.043478260869566,
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Image
+                    resizeMethod="resize"
+                    resizeMode="contain"
+                    source={
+                      Object {
+                        "testUri": "../../../images/logo.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 34.78260869565218,
+                        "width": 191.30434782608697,
+                      }
+                    }
+                  />,
+                  "style": Object {
+                    "alignItems": "flex-start",
+                    "flex": 1.6,
+                    "justifyContent": "flex-end",
+                    "paddingVertical": 17.39130434782609,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "resizeMethod": "resize",
+                    "resizeMode": "contain",
+                    "source": Object {
+                      "testUri": "../../../images/logo.png",
+                    },
+                    "style": Object {
+                      "height": 34.78260869565218,
+                      "width": 191.30434782608697,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Component
+                      style={
+                        Object {
+                          "flex": 1,
+                          "justifyContent": "space-around",
+                        }
+                      }
+                    >
+                      <Component>
+                        <FloatingLabelInput
+                          autoCapitalize="none"
+                          label="Email / User ID"
+                          onChangeText={[Function]}
+                          returnKeyType="next"
+                          value=""
+                        />
+                      </Component>
+                      <Component>
+                        <FloatingLabelInput
+                          autoCapitalize="none"
+                          label="Password"
+                          onChangeText={[Function]}
+                          returnKeyType="done"
+                          secureTextEntry={true}
+                          style={
+                            Object {
+                              "flex": 1,
+                              "marginVertical": 4.347826086956522,
+                            }
+                          }
+                          value=""
+                        />
+                      </Component>
+                    </Component>,
+                    <Component
+                      style={
+                        Object {
+                          "flex": 1,
+                          "justifyContent": "space-around",
+                        }
+                      }
+                    >
+                      <Component
+                        style={
+                          Object {
+                            "alignItems": "flex-start",
+                            "flexDirection": "row",
+                            "justifyContent": "flex-start",
+                          }
+                        }
+                      >
+                        <Styled(CheckBox)
+                          checked={true}
+                          color="rgb(61,133,239)"
+                          onPress={[Function]}
+                          style={
+                            Object {
+                              "borderRadius": 2.608695652173913,
+                              "marginLeft": -8.695652173913045,
+                              "marginTop": 2.608695652173913,
+                            }
+                          }
+                        />
+                        <Component
+                          style={
+                            Object {
+                              "color": "rgb(74,74,74)",
+                              "fontFamily": "Montserrat-Regular",
+                              "fontSize": 14.782608695652176,
+                              "marginLeft": 17.39130434782609,
+                              "marginTop": 2.608695652173913,
+                            }
+                          }
+                        >
+                          Remember me
+                        </Component>
+                      </Component>
+                      <Component
+                        style={
+                          Object {
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <TouchableOpacity
+                          activeOpacity={0.2}
+                          onPress={[Function]}
+                        >
+                          <LinearGradient
+                            colors={
+                              Array [
+                                "#3E85EF",
+                                "#3EBDEF",
+                              ]
+                            }
+                            end={
+                              Object {
+                                "x": 1,
+                                "y": 0,
+                              }
+                            }
+                            start={
+                              Object {
+                                "x": 0,
+                                "y": 0,
+                              }
+                            }
+                            style={
+                              Object {
+                                "backgroundColor": "#4A4A4A",
+                                "borderColor": "#fff",
+                                "borderRadius": 26.086956521739133,
+                                "elevation": 3,
+                                "marginTop": 8.695652173913045,
+                                "paddingBottom": 13.913043478260871,
+                                "paddingTop": 13.913043478260871,
+                                "shadowOffset": Object {
+                                  "height": 2,
+                                  "width": 0,
+                                },
+                                "shadowOpacity": 0.2,
+                                "shadowRadius": 2,
+                                "width": "100%",
+                              }
+                            }
+                          >
+                            <Component
+                              style={
+                                Object {
+                                  "color": "white",
+                                  "fontFamily": "Montserrat-Bold",
+                                  "fontSize": 14.782608695652176,
+                                  "textAlign": "center",
+                                }
+                              }
+                            >
+                              SIGN IN
+                            </Component>
+                          </LinearGradient>
+                        </TouchableOpacity>
+                      </Component>
+                      <Component
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "color": "rgb(99,99,99)",
+                            "fontFamily": "Montserrat-Medium",
+                            "fontSize": 13.043478260869566,
+                            "marginVertical": 13.043478260869566,
+                            "textAlign": "center",
+                          }
+                        }
+                      >
+                        Forgot ID/Password?
+                      </Component>
+                    </Component>,
+                  ],
+                  "style": Array [
+                    Object {
+                      "backgroundColor": "white",
+                      "borderRadius": 8.695652173913045,
+                      "elevation": 3,
+                      "flex": 1,
+                      "justifyContent": "space-between",
+                      "paddingHorizontal": 17.39130434782609,
+                      "shadowOffset": Object {
+                        "height": 1.7391304347826089,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.2,
+                      "shadowRadius": 2,
+                    },
+                    Object {
+                      "flex": 3,
+                    },
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <Component>
+                          <FloatingLabelInput
+                            autoCapitalize="none"
+                            label="Email / User ID"
+                            onChangeText={[Function]}
+                            returnKeyType="next"
+                            value=""
+                          />
+                        </Component>,
+                        <Component>
+                          <FloatingLabelInput
+                            autoCapitalize="none"
+                            label="Password"
+                            onChangeText={[Function]}
+                            returnKeyType="done"
+                            secureTextEntry={true}
+                            style={
+                              Object {
+                                "flex": 1,
+                                "marginVertical": 4.347826086956522,
+                              }
+                            }
+                            value=""
+                          />
+                        </Component>,
+                      ],
+                      "style": Object {
+                        "flex": 1,
+                        "justifyContent": "space-around",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": <FloatingLabelInput
+                            autoCapitalize="none"
+                            label="Email / User ID"
+                            onChangeText={[Function]}
+                            returnKeyType="next"
+                            value=""
+                          />,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "autoCapitalize": "none",
+                            "label": "Email / User ID",
+                            "onChangeText": [Function],
+                            "returnKeyType": "next",
+                            "value": "",
+                          },
+                          "ref": [Function],
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": <FloatingLabelInput
+                            autoCapitalize="none"
+                            label="Password"
+                            onChangeText={[Function]}
+                            returnKeyType="done"
+                            secureTextEntry={true}
+                            style={
+                              Object {
+                                "flex": 1,
+                                "marginVertical": 4.347826086956522,
+                              }
+                            }
+                            value=""
+                          />,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "autoCapitalize": "none",
+                            "label": "Password",
+                            "onChangeText": [Function],
+                            "returnKeyType": "done",
+                            "secureTextEntry": true,
+                            "style": Object {
+                              "flex": 1,
+                              "marginVertical": 4.347826086956522,
+                            },
+                            "value": "",
+                          },
+                          "ref": [Function],
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        "type": [Function],
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <Component
+                          style={
+                            Object {
+                              "alignItems": "flex-start",
+                              "flexDirection": "row",
+                              "justifyContent": "flex-start",
+                            }
+                          }
+                        >
+                          <Styled(CheckBox)
+                            checked={true}
+                            color="rgb(61,133,239)"
+                            onPress={[Function]}
+                            style={
+                              Object {
+                                "borderRadius": 2.608695652173913,
+                                "marginLeft": -8.695652173913045,
+                                "marginTop": 2.608695652173913,
+                              }
+                            }
+                          />
+                          <Component
+                            style={
+                              Object {
+                                "color": "rgb(74,74,74)",
+                                "fontFamily": "Montserrat-Regular",
+                                "fontSize": 14.782608695652176,
+                                "marginLeft": 17.39130434782609,
+                                "marginTop": 2.608695652173913,
+                              }
+                            }
+                          >
+                            Remember me
+                          </Component>
+                        </Component>,
+                        <Component
+                          style={
+                            Object {
+                              "justifyContent": "center",
+                            }
+                          }
+                        >
+                          <TouchableOpacity
+                            activeOpacity={0.2}
+                            onPress={[Function]}
+                          >
+                            <LinearGradient
+                              colors={
+                                Array [
+                                  "#3E85EF",
+                                  "#3EBDEF",
+                                ]
+                              }
+                              end={
+                                Object {
+                                  "x": 1,
+                                  "y": 0,
+                                }
+                              }
+                              start={
+                                Object {
+                                  "x": 0,
+                                  "y": 0,
+                                }
+                              }
+                              style={
+                                Object {
+                                  "backgroundColor": "#4A4A4A",
+                                  "borderColor": "#fff",
+                                  "borderRadius": 26.086956521739133,
+                                  "elevation": 3,
+                                  "marginTop": 8.695652173913045,
+                                  "paddingBottom": 13.913043478260871,
+                                  "paddingTop": 13.913043478260871,
+                                  "shadowOffset": Object {
+                                    "height": 2,
+                                    "width": 0,
+                                  },
+                                  "shadowOpacity": 0.2,
+                                  "shadowRadius": 2,
+                                  "width": "100%",
+                                }
+                              }
+                            >
+                              <Component
+                                style={
+                                  Object {
+                                    "color": "white",
+                                    "fontFamily": "Montserrat-Bold",
+                                    "fontSize": 14.782608695652176,
+                                    "textAlign": "center",
+                                  }
+                                }
+                              >
+                                SIGN IN
+                              </Component>
+                            </LinearGradient>
+                          </TouchableOpacity>
+                        </Component>,
+                        <Component
+                          onPress={[Function]}
+                          style={
+                            Object {
+                              "color": "rgb(99,99,99)",
+                              "fontFamily": "Montserrat-Medium",
+                              "fontSize": 13.043478260869566,
+                              "marginVertical": 13.043478260869566,
+                              "textAlign": "center",
+                            }
+                          }
+                        >
+                          Forgot ID/Password?
+                        </Component>,
+                      ],
+                      "style": Object {
+                        "flex": 1,
+                        "justifyContent": "space-around",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": Array [
+                            <Styled(CheckBox)
+                              checked={true}
+                              color="rgb(61,133,239)"
+                              onPress={[Function]}
+                              style={
+                                Object {
+                                  "borderRadius": 2.608695652173913,
+                                  "marginLeft": -8.695652173913045,
+                                  "marginTop": 2.608695652173913,
+                                }
+                              }
+                            />,
+                            <Component
+                              style={
+                                Object {
+                                  "color": "rgb(74,74,74)",
+                                  "fontFamily": "Montserrat-Regular",
+                                  "fontSize": 14.782608695652176,
+                                  "marginLeft": 17.39130434782609,
+                                  "marginTop": 2.608695652173913,
+                                }
+                              }
+                            >
+                              Remember me
+                            </Component>,
+                          ],
+                          "style": Object {
+                            "alignItems": "flex-start",
+                            "flexDirection": "row",
+                            "justifyContent": "flex-start",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "checked": true,
+                              "color": "rgb(61,133,239)",
+                              "onPress": [Function],
+                              "style": Object {
+                                "borderRadius": 2.608695652173913,
+                                "marginLeft": -8.695652173913045,
+                                "marginTop": 2.608695652173913,
+                              },
+                              "virtual": undefined,
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "children": "Remember me",
+                              "style": Object {
+                                "color": "rgb(74,74,74)",
+                                "fontFamily": "Montserrat-Regular",
+                                "fontSize": 14.782608695652176,
+                                "marginLeft": 17.39130434782609,
+                                "marginTop": 2.608695652173913,
+                              },
+                            },
+                            "ref": null,
+                            "rendered": "Remember me",
+                            "type": [Function],
+                          },
+                        ],
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": <TouchableOpacity
+                            activeOpacity={0.2}
+                            onPress={[Function]}
+                          >
+                            <LinearGradient
+                              colors={
+                                Array [
+                                  "#3E85EF",
+                                  "#3EBDEF",
+                                ]
+                              }
+                              end={
+                                Object {
+                                  "x": 1,
+                                  "y": 0,
+                                }
+                              }
+                              start={
+                                Object {
+                                  "x": 0,
+                                  "y": 0,
+                                }
+                              }
+                              style={
+                                Object {
+                                  "backgroundColor": "#4A4A4A",
+                                  "borderColor": "#fff",
+                                  "borderRadius": 26.086956521739133,
+                                  "elevation": 3,
+                                  "marginTop": 8.695652173913045,
+                                  "paddingBottom": 13.913043478260871,
+                                  "paddingTop": 13.913043478260871,
+                                  "shadowOffset": Object {
+                                    "height": 2,
+                                    "width": 0,
+                                  },
+                                  "shadowOpacity": 0.2,
+                                  "shadowRadius": 2,
+                                  "width": "100%",
+                                }
+                              }
+                            >
+                              <Component
+                                style={
+                                  Object {
+                                    "color": "white",
+                                    "fontFamily": "Montserrat-Bold",
+                                    "fontSize": 14.782608695652176,
+                                    "textAlign": "center",
+                                  }
+                                }
+                              >
+                                SIGN IN
+                              </Component>
+                            </LinearGradient>
+                          </TouchableOpacity>,
+                          "style": Object {
+                            "justifyContent": "center",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "activeOpacity": 0.2,
+                            "children": <LinearGradient
+                              colors={
+                                Array [
+                                  "#3E85EF",
+                                  "#3EBDEF",
+                                ]
+                              }
+                              end={
+                                Object {
+                                  "x": 1,
+                                  "y": 0,
+                                }
+                              }
+                              start={
+                                Object {
+                                  "x": 0,
+                                  "y": 0,
+                                }
+                              }
+                              style={
+                                Object {
+                                  "backgroundColor": "#4A4A4A",
+                                  "borderColor": "#fff",
+                                  "borderRadius": 26.086956521739133,
+                                  "elevation": 3,
+                                  "marginTop": 8.695652173913045,
+                                  "paddingBottom": 13.913043478260871,
+                                  "paddingTop": 13.913043478260871,
+                                  "shadowOffset": Object {
+                                    "height": 2,
+                                    "width": 0,
+                                  },
+                                  "shadowOpacity": 0.2,
+                                  "shadowRadius": 2,
+                                  "width": "100%",
+                                }
+                              }
+                            >
+                              <Component
+                                style={
+                                  Object {
+                                    "color": "white",
+                                    "fontFamily": "Montserrat-Bold",
+                                    "fontSize": 14.782608695652176,
+                                    "textAlign": "center",
+                                  }
+                                }
+                              >
+                                SIGN IN
+                              </Component>
+                            </LinearGradient>,
+                            "onPress": [Function],
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "children": <Component
+                                style={
+                                  Object {
+                                    "color": "white",
+                                    "fontFamily": "Montserrat-Bold",
+                                    "fontSize": 14.782608695652176,
+                                    "textAlign": "center",
+                                  }
+                                }
+                              >
+                                SIGN IN
+                              </Component>,
+                              "colors": Array [
+                                "#3E85EF",
+                                "#3EBDEF",
+                              ],
+                              "end": Object {
+                                "x": 1,
+                                "y": 0,
+                              },
+                              "start": Object {
+                                "x": 0,
+                                "y": 0,
+                              },
+                              "style": Object {
+                                "backgroundColor": "#4A4A4A",
+                                "borderColor": "#fff",
+                                "borderRadius": 26.086956521739133,
+                                "elevation": 3,
+                                "marginTop": 8.695652173913045,
+                                "paddingBottom": 13.913043478260871,
+                                "paddingTop": 13.913043478260871,
+                                "shadowOffset": Object {
+                                  "height": 2,
+                                  "width": 0,
+                                },
+                                "shadowOpacity": 0.2,
+                                "shadowRadius": 2,
+                                "width": "100%",
+                              },
+                            },
+                            "ref": null,
+                            "rendered": Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "class",
+                              "props": Object {
+                                "children": "SIGN IN",
+                                "style": Object {
+                                  "color": "white",
+                                  "fontFamily": "Montserrat-Bold",
+                                  "fontSize": 14.782608695652176,
+                                  "textAlign": "center",
+                                },
+                              },
+                              "ref": null,
+                              "rendered": "SIGN IN",
+                              "type": [Function],
+                            },
+                            "type": [Function],
+                          },
+                          "type": [Function],
+                        },
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "Forgot ID/Password?",
+                          "onPress": [Function],
+                          "style": Object {
+                            "color": "rgb(99,99,99)",
+                            "fontFamily": "Montserrat-Medium",
+                            "fontSize": 13.043478260869566,
+                            "marginVertical": 13.043478260869566,
+                            "textAlign": "center",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": "Forgot ID/Password?",
+                        "type": [Function],
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Component
+                      style={
+                        Object {
+                          "flex": 1,
+                          "paddingRight": 8.695652173913045,
+                        }
+                      }
+                    >
+                      <FacebookLogin />
+                    </Component>,
+                    <Component
+                      style={
+                        Object {
+                          "flex": 1,
+                          "paddingLeft": 8.695652173913045,
+                        }
+                      }
+                    >
+                      <GoogleSigninSampleApp />
+                    </Component>,
+                  ],
+                  "style": Object {
+                    "alignItems": "flex-start",
+                    "flex": 1.8,
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start",
+                    "marginTop": 17.39130434782609,
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <FacebookLogin />,
+                      "style": Object {
+                        "flex": 1,
+                        "paddingRight": 8.695652173913045,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {},
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": <GoogleSigninSampleApp />,
+                      "style": Object {
+                        "flex": 1,
+                        "paddingLeft": 8.695652173913045,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {},
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Component
+                style={
+                  Object {
+                    "width": "100%",
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../images/border_img.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 26.956521739130437,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Component
+                  style={
+                    Object {
+                      "backgroundColor": "#F9FCFF",
+                      "height": 17.39130434782609,
+                    }
+                  }
+                />
+              </Component>,
+              <Component
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "rgb(249,252, 255)",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "#4A4A4A",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 14.782608695652176,
+                      "marginVertical": 17.39130434782609,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Don't have an account? 
+                  <Component
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "color": "#3E85EF",
+                        "fontFamily": "Montserrat-Bold",
+                      }
+                    }
+                  >
+                    Sign Up
+                  </Component>
+                </Component>
+              </Component>,
+            ],
+            "style": Object {
+              "flex": 2,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Image
+                    source={
+                      Object {
+                        "testUri": "../../../images/border_img.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 26.956521739130437,
+                        "width": "100%",
+                      }
+                    }
+                  />,
+                  <Component
+                    style={
+                      Object {
+                        "backgroundColor": "#F9FCFF",
+                        "height": 17.39130434782609,
+                      }
+                    }
+                  />,
+                ],
+                "style": Object {
+                  "width": "100%",
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "source": Object {
+                      "testUri": "../../../images/border_img.png",
+                    },
+                    "style": Object {
+                      "height": 26.956521739130437,
+                      "width": "100%",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "style": Object {
+                      "backgroundColor": "#F9FCFF",
+                      "height": 17.39130434782609,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Component
+                  style={
+                    Object {
+                      "color": "#4A4A4A",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 14.782608695652176,
+                      "marginVertical": 17.39130434782609,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Don't have an account? 
+                  <Component
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "color": "#3E85EF",
+                        "fontFamily": "Montserrat-Bold",
+                      }
+                    }
+                  >
+                    Sign Up
+                  </Component>
+                </Component>,
+                "style": Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(249,252, 255)",
+                  "flex": 1,
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    "Don't have an account? ",
+                    <Component
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "color": "#3E85EF",
+                          "fontFamily": "Montserrat-Bold",
+                        }
+                      }
+                    >
+                      Sign Up
+                    </Component>,
+                  ],
+                  "style": Object {
+                    "color": "#4A4A4A",
+                    "fontFamily": "Montserrat-Regular",
+                    "fontSize": 14.782608695652176,
+                    "marginVertical": 17.39130434782609,
+                    "textAlign": "center",
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Don't have an account? ",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Sign Up",
+                      "onPress": [Function],
+                      "style": Object {
+                        "color": "#3E85EF",
+                        "fontFamily": "Montserrat-Bold",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "Sign Up",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [MockFunction],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <ScrollView
+          contentContainerStyle={
+            Object {
+              "flexGrow": 1,
+            }
+          }
+        >
+          <Component
+            style={
+              Object {
+                "flex": 9,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "flex": 1,
+                  "justifyContent": "space-around",
+                  "paddingHorizontal": 13.043478260869566,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 1.6,
+                    "justifyContent": "flex-end",
+                    "paddingVertical": 17.39130434782609,
+                  }
+                }
+              >
+                <Image
+                  resizeMethod="resize"
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "testUri": "../../../images/logo.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 34.78260869565218,
+                      "width": 191.30434782608697,
+                    }
+                  }
+                />
+              </Component>
+              <Component
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "white",
+                      "borderRadius": 8.695652173913045,
+                      "elevation": 3,
+                      "flex": 1,
+                      "justifyContent": "space-between",
+                      "paddingHorizontal": 17.39130434782609,
+                      "shadowOffset": Object {
+                        "height": 1.7391304347826089,
+                        "width": 0,
+                      },
+                      "shadowOpacity": 0.2,
+                      "shadowRadius": 2,
+                    },
+                    Object {
+                      "flex": 3,
+                    },
+                  ]
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "flex": 1,
+                      "justifyContent": "space-around",
+                    }
+                  }
+                >
+                  <Component>
+                    <FloatingLabelInput
+                      autoCapitalize="none"
+                      label="Email / User ID"
+                      onChangeText={[Function]}
+                      returnKeyType="next"
+                      value=""
+                    />
+                  </Component>
+                  <Component>
+                    <FloatingLabelInput
+                      autoCapitalize="none"
+                      label="Password"
+                      onChangeText={[Function]}
+                      returnKeyType="done"
+                      secureTextEntry={true}
+                      style={
+                        Object {
+                          "flex": 1,
+                          "marginVertical": 4.347826086956522,
+                        }
+                      }
+                      value=""
+                    />
+                  </Component>
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "flex": 1,
+                      "justifyContent": "space-around",
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "flex-start",
+                        "flexDirection": "row",
+                        "justifyContent": "flex-start",
+                      }
+                    }
+                  >
+                    <Styled(CheckBox)
+                      checked={true}
+                      color="rgb(61,133,239)"
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "borderRadius": 2.608695652173913,
+                          "marginLeft": -8.695652173913045,
+                          "marginTop": 2.608695652173913,
+                        }
+                      }
+                    />
+                    <Component
+                      style={
+                        Object {
+                          "color": "rgb(74,74,74)",
+                          "fontFamily": "Montserrat-Regular",
+                          "fontSize": 14.782608695652176,
+                          "marginLeft": 17.39130434782609,
+                          "marginTop": 2.608695652173913,
+                        }
+                      }
+                    >
+                      Remember me
+                    </Component>
+                  </Component>
+                  <Component
+                    style={
+                      Object {
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                    >
+                      <LinearGradient
+                        colors={
+                          Array [
+                            "#3E85EF",
+                            "#3EBDEF",
+                          ]
+                        }
+                        end={
+                          Object {
+                            "x": 1,
+                            "y": 0,
+                          }
+                        }
+                        start={
+                          Object {
+                            "x": 0,
+                            "y": 0,
+                          }
+                        }
+                        style={
+                          Object {
+                            "backgroundColor": "#4A4A4A",
+                            "borderColor": "#fff",
+                            "borderRadius": 26.086956521739133,
+                            "elevation": 3,
+                            "marginTop": 8.695652173913045,
+                            "paddingBottom": 13.913043478260871,
+                            "paddingTop": 13.913043478260871,
+                            "shadowOffset": Object {
+                              "height": 2,
+                              "width": 0,
+                            },
+                            "shadowOpacity": 0.2,
+                            "shadowRadius": 2,
+                            "width": "100%",
+                          }
+                        }
+                      >
+                        <Component
+                          style={
+                            Object {
+                              "color": "white",
+                              "fontFamily": "Montserrat-Bold",
+                              "fontSize": 14.782608695652176,
+                              "textAlign": "center",
+                            }
+                          }
+                        >
+                          SIGN IN
+                        </Component>
+                      </LinearGradient>
+                    </TouchableOpacity>
+                  </Component>
+                  <Component
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "color": "rgb(99,99,99)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 13.043478260869566,
+                        "marginVertical": 13.043478260869566,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Forgot ID/Password?
+                  </Component>
+                </Component>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 1.8,
+                    "flexDirection": "row",
+                    "justifyContent": "flex-start",
+                    "marginTop": 17.39130434782609,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingRight": 8.695652173913045,
+                    }
+                  }
+                >
+                  <FacebookLogin />
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "flex": 1,
+                      "paddingLeft": 8.695652173913045,
+                    }
+                  }
+                >
+                  <GoogleSigninSampleApp />
+                </Component>
+              </Component>
+            </Component>
+          </Component>
+          <Component
+            style={
+              Object {
+                "flex": 2,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "width": "100%",
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "testUri": "../../../images/border_img.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 26.956521739130437,
+                    "width": "100%",
+                  }
+                }
+              />
+              <Component
+                style={
+                  Object {
+                    "backgroundColor": "#F9FCFF",
+                    "height": 17.39130434782609,
+                  }
+                }
+              />
+            </Component>
+            <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "rgb(249,252, 255)",
+                  "flex": 1,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "#4A4A4A",
+                    "fontFamily": "Montserrat-Regular",
+                    "fontSize": 14.782608695652176,
+                    "marginVertical": 17.39130434782609,
+                    "textAlign": "center",
+                  }
+                }
+              >
+                Don't have an account? 
+                <Component
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "color": "#3E85EF",
+                      "fontFamily": "Montserrat-Bold",
+                    }
+                  }
+                >
+                  Sign Up
+                </Component>
+              </Component>
+            </Component>
+          </Component>
+        </ScrollView>,
+        "colors": Array [
+          "#3E85EF",
+          "#3EBDEF",
+        ],
+        "end": Object {
+          "x": 1,
+          "y": 0,
+        },
+        "start": Object {
+          "x": 0,
+          "y": 0,
+        },
+        "style": Object {
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Component
+              style={
+                Object {
+                  "flex": 9,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "flex": 1,
+                    "justifyContent": "space-around",
+                    "paddingHorizontal": 13.043478260869566,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "flex": 1.6,
+                      "justifyContent": "flex-end",
+                      "paddingVertical": 17.39130434782609,
+                    }
+                  }
+                >
+                  <Image
+                    resizeMethod="resize"
+                    resizeMode="contain"
+                    source={
+                      Object {
+                        "testUri": "../../../images/logo.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 34.78260869565218,
+                        "width": 191.30434782608697,
+                      }
+                    }
+                  />
+                </Component>
+                <Component
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "white",
+                        "borderRadius": 8.695652173913045,
+                        "elevation": 3,
+                        "flex": 1,
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 17.39130434782609,
+                        "shadowOffset": Object {
+                          "height": 1.7391304347826089,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.2,
+                        "shadowRadius": 2,
+                      },
+                      Object {
+                        "flex": 3,
+                      },
+                    ]
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "flex": 1,
+                        "justifyContent": "space-around",
+                      }
+                    }
+                  >
+                    <Component>
+                      <FloatingLabelInput
+                        autoCapitalize="none"
+                        label="Email / User ID"
+                        onChangeText={[Function]}
+                        returnKeyType="next"
+                        value=""
+                      />
+                    </Component>
+                    <Component>
+                      <FloatingLabelInput
+                        autoCapitalize="none"
+                        label="Password"
+                        onChangeText={[Function]}
+                        returnKeyType="done"
+                        secureTextEntry={true}
+                        style={
+                          Object {
+                            "flex": 1,
+                            "marginVertical": 4.347826086956522,
+                          }
+                        }
+                        value=""
+                      />
+                    </Component>
+                  </Component>
+                  <Component
+                    style={
+                      Object {
+                        "flex": 1,
+                        "justifyContent": "space-around",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "alignItems": "flex-start",
+                          "flexDirection": "row",
+                          "justifyContent": "flex-start",
+                        }
+                      }
+                    >
+                      <Styled(CheckBox)
+                        checked={true}
+                        color="rgb(61,133,239)"
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "borderRadius": 2.608695652173913,
+                            "marginLeft": -8.695652173913045,
+                            "marginTop": 2.608695652173913,
+                          }
+                        }
+                      />
+                      <Component
+                        style={
+                          Object {
+                            "color": "rgb(74,74,74)",
+                            "fontFamily": "Montserrat-Regular",
+                            "fontSize": 14.782608695652176,
+                            "marginLeft": 17.39130434782609,
+                            "marginTop": 2.608695652173913,
+                          }
+                        }
+                      >
+                        Remember me
+                      </Component>
+                    </Component>
+                    <Component
+                      style={
+                        Object {
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                        onPress={[Function]}
+                      >
+                        <LinearGradient
+                          colors={
+                            Array [
+                              "#3E85EF",
+                              "#3EBDEF",
+                            ]
+                          }
+                          end={
+                            Object {
+                              "x": 1,
+                              "y": 0,
+                            }
+                          }
+                          start={
+                            Object {
+                              "x": 0,
+                              "y": 0,
+                            }
+                          }
+                          style={
+                            Object {
+                              "backgroundColor": "#4A4A4A",
+                              "borderColor": "#fff",
+                              "borderRadius": 26.086956521739133,
+                              "elevation": 3,
+                              "marginTop": 8.695652173913045,
+                              "paddingBottom": 13.913043478260871,
+                              "paddingTop": 13.913043478260871,
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 0.2,
+                              "shadowRadius": 2,
+                              "width": "100%",
+                            }
+                          }
+                        >
+                          <Component
+                            style={
+                              Object {
+                                "color": "white",
+                                "fontFamily": "Montserrat-Bold",
+                                "fontSize": 14.782608695652176,
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            SIGN IN
+                          </Component>
+                        </LinearGradient>
+                      </TouchableOpacity>
+                    </Component>
+                    <Component
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "color": "rgb(99,99,99)",
+                          "fontFamily": "Montserrat-Medium",
+                          "fontSize": 13.043478260869566,
+                          "marginVertical": 13.043478260869566,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Forgot ID/Password?
+                    </Component>
+                  </Component>
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "flex": 1.8,
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "marginTop": 17.39130434782609,
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8.695652173913045,
+                      }
+                    }
+                  >
+                    <FacebookLogin />
+                  </Component>
+                  <Component
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingLeft": 8.695652173913045,
+                      }
+                    }
+                  >
+                    <GoogleSigninSampleApp />
+                  </Component>
+                </Component>
+              </Component>
+            </Component>,
+            <Component
+              style={
+                Object {
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "width": "100%",
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../images/border_img.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 26.956521739130437,
+                      "width": "100%",
+                    }
+                  }
+                />
+                <Component
+                  style={
+                    Object {
+                      "backgroundColor": "#F9FCFF",
+                      "height": 17.39130434782609,
+                    }
+                  }
+                />
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "rgb(249,252, 255)",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "#4A4A4A",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 14.782608695652176,
+                      "marginVertical": 17.39130434782609,
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  Don't have an account? 
+                  <Component
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "color": "#3E85EF",
+                        "fontFamily": "Montserrat-Bold",
+                      }
+                    }
+                  >
+                    Sign Up
+                  </Component>
+                </Component>
+              </Component>
+            </Component>,
+          ],
+          "contentContainerStyle": Object {
+            "flexGrow": 1,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Component
+                style={
+                  Object {
+                    "flex": 1,
+                    "justifyContent": "space-around",
+                    "paddingHorizontal": 13.043478260869566,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "flex": 1.6,
+                      "justifyContent": "flex-end",
+                      "paddingVertical": 17.39130434782609,
+                    }
+                  }
+                >
+                  <Image
+                    resizeMethod="resize"
+                    resizeMode="contain"
+                    source={
+                      Object {
+                        "testUri": "../../../images/logo.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 34.78260869565218,
+                        "width": 191.30434782608697,
+                      }
+                    }
+                  />
+                </Component>
+                <Component
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "white",
+                        "borderRadius": 8.695652173913045,
+                        "elevation": 3,
+                        "flex": 1,
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 17.39130434782609,
+                        "shadowOffset": Object {
+                          "height": 1.7391304347826089,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.2,
+                        "shadowRadius": 2,
+                      },
+                      Object {
+                        "flex": 3,
+                      },
+                    ]
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "flex": 1,
+                        "justifyContent": "space-around",
+                      }
+                    }
+                  >
+                    <Component>
+                      <FloatingLabelInput
+                        autoCapitalize="none"
+                        label="Email / User ID"
+                        onChangeText={[Function]}
+                        returnKeyType="next"
+                        value=""
+                      />
+                    </Component>
+                    <Component>
+                      <FloatingLabelInput
+                        autoCapitalize="none"
+                        label="Password"
+                        onChangeText={[Function]}
+                        returnKeyType="done"
+                        secureTextEntry={true}
+                        style={
+                          Object {
+                            "flex": 1,
+                            "marginVertical": 4.347826086956522,
+                          }
+                        }
+                        value=""
+                      />
+                    </Component>
+                  </Component>
+                  <Component
+                    style={
+                      Object {
+                        "flex": 1,
+                        "justifyContent": "space-around",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "alignItems": "flex-start",
+                          "flexDirection": "row",
+                          "justifyContent": "flex-start",
+                        }
+                      }
+                    >
+                      <Styled(CheckBox)
+                        checked={true}
+                        color="rgb(61,133,239)"
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "borderRadius": 2.608695652173913,
+                            "marginLeft": -8.695652173913045,
+                            "marginTop": 2.608695652173913,
+                          }
+                        }
+                      />
+                      <Component
+                        style={
+                          Object {
+                            "color": "rgb(74,74,74)",
+                            "fontFamily": "Montserrat-Regular",
+                            "fontSize": 14.782608695652176,
+                            "marginLeft": 17.39130434782609,
+                            "marginTop": 2.608695652173913,
+                          }
+                        }
+                      >
+                        Remember me
+                      </Component>
+                    </Component>
+                    <Component
+                      style={
+                        Object {
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                        onPress={[Function]}
+                      >
+                        <LinearGradient
+                          colors={
+                            Array [
+                              "#3E85EF",
+                              "#3EBDEF",
+                            ]
+                          }
+                          end={
+                            Object {
+                              "x": 1,
+                              "y": 0,
+                            }
+                          }
+                          start={
+                            Object {
+                              "x": 0,
+                              "y": 0,
+                            }
+                          }
+                          style={
+                            Object {
+                              "backgroundColor": "#4A4A4A",
+                              "borderColor": "#fff",
+                              "borderRadius": 26.086956521739133,
+                              "elevation": 3,
+                              "marginTop": 8.695652173913045,
+                              "paddingBottom": 13.913043478260871,
+                              "paddingTop": 13.913043478260871,
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 0.2,
+                              "shadowRadius": 2,
+                              "width": "100%",
+                            }
+                          }
+                        >
+                          <Component
+                            style={
+                              Object {
+                                "color": "white",
+                                "fontFamily": "Montserrat-Bold",
+                                "fontSize": 14.782608695652176,
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            SIGN IN
+                          </Component>
+                        </LinearGradient>
+                      </TouchableOpacity>
+                    </Component>
+                    <Component
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "color": "rgb(99,99,99)",
+                          "fontFamily": "Montserrat-Medium",
+                          "fontSize": 13.043478260869566,
+                          "marginVertical": 13.043478260869566,
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      Forgot ID/Password?
+                    </Component>
+                  </Component>
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "flex": 1.8,
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "marginTop": 17.39130434782609,
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingRight": 8.695652173913045,
+                      }
+                    }
+                  >
+                    <FacebookLogin />
+                  </Component>
+                  <Component
+                    style={
+                      Object {
+                        "flex": 1,
+                        "paddingLeft": 8.695652173913045,
+                      }
+                    }
+                  >
+                    <GoogleSigninSampleApp />
+                  </Component>
+                </Component>
+              </Component>,
+              "style": Object {
+                "flex": 9,
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "flex-start",
+                        "flex": 1.6,
+                        "justifyContent": "flex-end",
+                        "paddingVertical": 17.39130434782609,
+                      }
+                    }
+                  >
+                    <Image
+                      resizeMethod="resize"
+                      resizeMode="contain"
+                      source={
+                        Object {
+                          "testUri": "../../../images/logo.png",
+                        }
+                      }
+                      style={
+                        Object {
+                          "height": 34.78260869565218,
+                          "width": 191.30434782608697,
+                        }
+                      }
+                    />
+                  </Component>,
+                  <Component
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "white",
+                          "borderRadius": 8.695652173913045,
+                          "elevation": 3,
+                          "flex": 1,
+                          "justifyContent": "space-between",
+                          "paddingHorizontal": 17.39130434782609,
+                          "shadowOffset": Object {
+                            "height": 1.7391304347826089,
+                            "width": 0,
+                          },
+                          "shadowOpacity": 0.2,
+                          "shadowRadius": 2,
+                        },
+                        Object {
+                          "flex": 3,
+                        },
+                      ]
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "flex": 1,
+                          "justifyContent": "space-around",
+                        }
+                      }
+                    >
+                      <Component>
+                        <FloatingLabelInput
+                          autoCapitalize="none"
+                          label="Email / User ID"
+                          onChangeText={[Function]}
+                          returnKeyType="next"
+                          value=""
+                        />
+                      </Component>
+                      <Component>
+                        <FloatingLabelInput
+                          autoCapitalize="none"
+                          label="Password"
+                          onChangeText={[Function]}
+                          returnKeyType="done"
+                          secureTextEntry={true}
+                          style={
+                            Object {
+                              "flex": 1,
+                              "marginVertical": 4.347826086956522,
+                            }
+                          }
+                          value=""
+                        />
+                      </Component>
+                    </Component>
+                    <Component
+                      style={
+                        Object {
+                          "flex": 1,
+                          "justifyContent": "space-around",
+                        }
+                      }
+                    >
+                      <Component
+                        style={
+                          Object {
+                            "alignItems": "flex-start",
+                            "flexDirection": "row",
+                            "justifyContent": "flex-start",
+                          }
+                        }
+                      >
+                        <Styled(CheckBox)
+                          checked={true}
+                          color="rgb(61,133,239)"
+                          onPress={[Function]}
+                          style={
+                            Object {
+                              "borderRadius": 2.608695652173913,
+                              "marginLeft": -8.695652173913045,
+                              "marginTop": 2.608695652173913,
+                            }
+                          }
+                        />
+                        <Component
+                          style={
+                            Object {
+                              "color": "rgb(74,74,74)",
+                              "fontFamily": "Montserrat-Regular",
+                              "fontSize": 14.782608695652176,
+                              "marginLeft": 17.39130434782609,
+                              "marginTop": 2.608695652173913,
+                            }
+                          }
+                        >
+                          Remember me
+                        </Component>
+                      </Component>
+                      <Component
+                        style={
+                          Object {
+                            "justifyContent": "center",
+                          }
+                        }
+                      >
+                        <TouchableOpacity
+                          activeOpacity={0.2}
+                          onPress={[Function]}
+                        >
+                          <LinearGradient
+                            colors={
+                              Array [
+                                "#3E85EF",
+                                "#3EBDEF",
+                              ]
+                            }
+                            end={
+                              Object {
+                                "x": 1,
+                                "y": 0,
+                              }
+                            }
+                            start={
+                              Object {
+                                "x": 0,
+                                "y": 0,
+                              }
+                            }
+                            style={
+                              Object {
+                                "backgroundColor": "#4A4A4A",
+                                "borderColor": "#fff",
+                                "borderRadius": 26.086956521739133,
+                                "elevation": 3,
+                                "marginTop": 8.695652173913045,
+                                "paddingBottom": 13.913043478260871,
+                                "paddingTop": 13.913043478260871,
+                                "shadowOffset": Object {
+                                  "height": 2,
+                                  "width": 0,
+                                },
+                                "shadowOpacity": 0.2,
+                                "shadowRadius": 2,
+                                "width": "100%",
+                              }
+                            }
+                          >
+                            <Component
+                              style={
+                                Object {
+                                  "color": "white",
+                                  "fontFamily": "Montserrat-Bold",
+                                  "fontSize": 14.782608695652176,
+                                  "textAlign": "center",
+                                }
+                              }
+                            >
+                              SIGN IN
+                            </Component>
+                          </LinearGradient>
+                        </TouchableOpacity>
+                      </Component>
+                      <Component
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "color": "rgb(99,99,99)",
+                            "fontFamily": "Montserrat-Medium",
+                            "fontSize": 13.043478260869566,
+                            "marginVertical": 13.043478260869566,
+                            "textAlign": "center",
+                          }
+                        }
+                      >
+                        Forgot ID/Password?
+                      </Component>
+                    </Component>
+                  </Component>,
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "flex-start",
+                        "flex": 1.8,
+                        "flexDirection": "row",
+                        "justifyContent": "flex-start",
+                        "marginTop": 17.39130434782609,
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "flex": 1,
+                          "paddingRight": 8.695652173913045,
+                        }
+                      }
+                    >
+                      <FacebookLogin />
+                    </Component>
+                    <Component
+                      style={
+                        Object {
+                          "flex": 1,
+                          "paddingLeft": 8.695652173913045,
+                        }
+                      }
+                    >
+                      <GoogleSigninSampleApp />
+                    </Component>
+                  </Component>,
+                ],
+                "style": Object {
+                  "flex": 1,
+                  "justifyContent": "space-around",
+                  "paddingHorizontal": 13.043478260869566,
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <Image
+                      resizeMethod="resize"
+                      resizeMode="contain"
+                      source={
+                        Object {
+                          "testUri": "../../../images/logo.png",
+                        }
+                      }
+                      style={
+                        Object {
+                          "height": 34.78260869565218,
+                          "width": 191.30434782608697,
+                        }
+                      }
+                    />,
+                    "style": Object {
+                      "alignItems": "flex-start",
+                      "flex": 1.6,
+                      "justifyContent": "flex-end",
+                      "paddingVertical": 17.39130434782609,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "resizeMethod": "resize",
+                      "resizeMode": "contain",
+                      "source": Object {
+                        "testUri": "../../../images/logo.png",
+                      },
+                      "style": Object {
+                        "height": 34.78260869565218,
+                        "width": 191.30434782608697,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <Component
+                        style={
+                          Object {
+                            "flex": 1,
+                            "justifyContent": "space-around",
+                          }
+                        }
+                      >
+                        <Component>
+                          <FloatingLabelInput
+                            autoCapitalize="none"
+                            label="Email / User ID"
+                            onChangeText={[Function]}
+                            returnKeyType="next"
+                            value=""
+                          />
+                        </Component>
+                        <Component>
+                          <FloatingLabelInput
+                            autoCapitalize="none"
+                            label="Password"
+                            onChangeText={[Function]}
+                            returnKeyType="done"
+                            secureTextEntry={true}
+                            style={
+                              Object {
+                                "flex": 1,
+                                "marginVertical": 4.347826086956522,
+                              }
+                            }
+                            value=""
+                          />
+                        </Component>
+                      </Component>,
+                      <Component
+                        style={
+                          Object {
+                            "flex": 1,
+                            "justifyContent": "space-around",
+                          }
+                        }
+                      >
+                        <Component
+                          style={
+                            Object {
+                              "alignItems": "flex-start",
+                              "flexDirection": "row",
+                              "justifyContent": "flex-start",
+                            }
+                          }
+                        >
+                          <Styled(CheckBox)
+                            checked={true}
+                            color="rgb(61,133,239)"
+                            onPress={[Function]}
+                            style={
+                              Object {
+                                "borderRadius": 2.608695652173913,
+                                "marginLeft": -8.695652173913045,
+                                "marginTop": 2.608695652173913,
+                              }
+                            }
+                          />
+                          <Component
+                            style={
+                              Object {
+                                "color": "rgb(74,74,74)",
+                                "fontFamily": "Montserrat-Regular",
+                                "fontSize": 14.782608695652176,
+                                "marginLeft": 17.39130434782609,
+                                "marginTop": 2.608695652173913,
+                              }
+                            }
+                          >
+                            Remember me
+                          </Component>
+                        </Component>
+                        <Component
+                          style={
+                            Object {
+                              "justifyContent": "center",
+                            }
+                          }
+                        >
+                          <TouchableOpacity
+                            activeOpacity={0.2}
+                            onPress={[Function]}
+                          >
+                            <LinearGradient
+                              colors={
+                                Array [
+                                  "#3E85EF",
+                                  "#3EBDEF",
+                                ]
+                              }
+                              end={
+                                Object {
+                                  "x": 1,
+                                  "y": 0,
+                                }
+                              }
+                              start={
+                                Object {
+                                  "x": 0,
+                                  "y": 0,
+                                }
+                              }
+                              style={
+                                Object {
+                                  "backgroundColor": "#4A4A4A",
+                                  "borderColor": "#fff",
+                                  "borderRadius": 26.086956521739133,
+                                  "elevation": 3,
+                                  "marginTop": 8.695652173913045,
+                                  "paddingBottom": 13.913043478260871,
+                                  "paddingTop": 13.913043478260871,
+                                  "shadowOffset": Object {
+                                    "height": 2,
+                                    "width": 0,
+                                  },
+                                  "shadowOpacity": 0.2,
+                                  "shadowRadius": 2,
+                                  "width": "100%",
+                                }
+                              }
+                            >
+                              <Component
+                                style={
+                                  Object {
+                                    "color": "white",
+                                    "fontFamily": "Montserrat-Bold",
+                                    "fontSize": 14.782608695652176,
+                                    "textAlign": "center",
+                                  }
+                                }
+                              >
+                                SIGN IN
+                              </Component>
+                            </LinearGradient>
+                          </TouchableOpacity>
+                        </Component>
+                        <Component
+                          onPress={[Function]}
+                          style={
+                            Object {
+                              "color": "rgb(99,99,99)",
+                              "fontFamily": "Montserrat-Medium",
+                              "fontSize": 13.043478260869566,
+                              "marginVertical": 13.043478260869566,
+                              "textAlign": "center",
+                            }
+                          }
+                        >
+                          Forgot ID/Password?
+                        </Component>
+                      </Component>,
+                    ],
+                    "style": Array [
+                      Object {
+                        "backgroundColor": "white",
+                        "borderRadius": 8.695652173913045,
+                        "elevation": 3,
+                        "flex": 1,
+                        "justifyContent": "space-between",
+                        "paddingHorizontal": 17.39130434782609,
+                        "shadowOffset": Object {
+                          "height": 1.7391304347826089,
+                          "width": 0,
+                        },
+                        "shadowOpacity": 0.2,
+                        "shadowRadius": 2,
+                      },
+                      Object {
+                        "flex": 3,
+                      },
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          <Component>
+                            <FloatingLabelInput
+                              autoCapitalize="none"
+                              label="Email / User ID"
+                              onChangeText={[Function]}
+                              returnKeyType="next"
+                              value=""
+                            />
+                          </Component>,
+                          <Component>
+                            <FloatingLabelInput
+                              autoCapitalize="none"
+                              label="Password"
+                              onChangeText={[Function]}
+                              returnKeyType="done"
+                              secureTextEntry={true}
+                              style={
+                                Object {
+                                  "flex": 1,
+                                  "marginVertical": 4.347826086956522,
+                                }
+                              }
+                              value=""
+                            />
+                          </Component>,
+                        ],
+                        "style": Object {
+                          "flex": 1,
+                          "justifyContent": "space-around",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": <FloatingLabelInput
+                              autoCapitalize="none"
+                              label="Email / User ID"
+                              onChangeText={[Function]}
+                              returnKeyType="next"
+                              value=""
+                            />,
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "autoCapitalize": "none",
+                              "label": "Email / User ID",
+                              "onChangeText": [Function],
+                              "returnKeyType": "next",
+                              "value": "",
+                            },
+                            "ref": [Function],
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": <FloatingLabelInput
+                              autoCapitalize="none"
+                              label="Password"
+                              onChangeText={[Function]}
+                              returnKeyType="done"
+                              secureTextEntry={true}
+                              style={
+                                Object {
+                                  "flex": 1,
+                                  "marginVertical": 4.347826086956522,
+                                }
+                              }
+                              value=""
+                            />,
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "autoCapitalize": "none",
+                              "label": "Password",
+                              "onChangeText": [Function],
+                              "returnKeyType": "done",
+                              "secureTextEntry": true,
+                              "style": Object {
+                                "flex": 1,
+                                "marginVertical": 4.347826086956522,
+                              },
+                              "value": "",
+                            },
+                            "ref": [Function],
+                            "rendered": null,
+                            "type": [Function],
+                          },
+                          "type": [Function],
+                        },
+                      ],
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          <Component
+                            style={
+                              Object {
+                                "alignItems": "flex-start",
+                                "flexDirection": "row",
+                                "justifyContent": "flex-start",
+                              }
+                            }
+                          >
+                            <Styled(CheckBox)
+                              checked={true}
+                              color="rgb(61,133,239)"
+                              onPress={[Function]}
+                              style={
+                                Object {
+                                  "borderRadius": 2.608695652173913,
+                                  "marginLeft": -8.695652173913045,
+                                  "marginTop": 2.608695652173913,
+                                }
+                              }
+                            />
+                            <Component
+                              style={
+                                Object {
+                                  "color": "rgb(74,74,74)",
+                                  "fontFamily": "Montserrat-Regular",
+                                  "fontSize": 14.782608695652176,
+                                  "marginLeft": 17.39130434782609,
+                                  "marginTop": 2.608695652173913,
+                                }
+                              }
+                            >
+                              Remember me
+                            </Component>
+                          </Component>,
+                          <Component
+                            style={
+                              Object {
+                                "justifyContent": "center",
+                              }
+                            }
+                          >
+                            <TouchableOpacity
+                              activeOpacity={0.2}
+                              onPress={[Function]}
+                            >
+                              <LinearGradient
+                                colors={
+                                  Array [
+                                    "#3E85EF",
+                                    "#3EBDEF",
+                                  ]
+                                }
+                                end={
+                                  Object {
+                                    "x": 1,
+                                    "y": 0,
+                                  }
+                                }
+                                start={
+                                  Object {
+                                    "x": 0,
+                                    "y": 0,
+                                  }
+                                }
+                                style={
+                                  Object {
+                                    "backgroundColor": "#4A4A4A",
+                                    "borderColor": "#fff",
+                                    "borderRadius": 26.086956521739133,
+                                    "elevation": 3,
+                                    "marginTop": 8.695652173913045,
+                                    "paddingBottom": 13.913043478260871,
+                                    "paddingTop": 13.913043478260871,
+                                    "shadowOffset": Object {
+                                      "height": 2,
+                                      "width": 0,
+                                    },
+                                    "shadowOpacity": 0.2,
+                                    "shadowRadius": 2,
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <Component
+                                  style={
+                                    Object {
+                                      "color": "white",
+                                      "fontFamily": "Montserrat-Bold",
+                                      "fontSize": 14.782608695652176,
+                                      "textAlign": "center",
+                                    }
+                                  }
+                                >
+                                  SIGN IN
+                                </Component>
+                              </LinearGradient>
+                            </TouchableOpacity>
+                          </Component>,
+                          <Component
+                            onPress={[Function]}
+                            style={
+                              Object {
+                                "color": "rgb(99,99,99)",
+                                "fontFamily": "Montserrat-Medium",
+                                "fontSize": 13.043478260869566,
+                                "marginVertical": 13.043478260869566,
+                                "textAlign": "center",
+                              }
+                            }
+                          >
+                            Forgot ID/Password?
+                          </Component>,
+                        ],
+                        "style": Object {
+                          "flex": 1,
+                          "justifyContent": "space-around",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": Array [
+                              <Styled(CheckBox)
+                                checked={true}
+                                color="rgb(61,133,239)"
+                                onPress={[Function]}
+                                style={
+                                  Object {
+                                    "borderRadius": 2.608695652173913,
+                                    "marginLeft": -8.695652173913045,
+                                    "marginTop": 2.608695652173913,
+                                  }
+                                }
+                              />,
+                              <Component
+                                style={
+                                  Object {
+                                    "color": "rgb(74,74,74)",
+                                    "fontFamily": "Montserrat-Regular",
+                                    "fontSize": 14.782608695652176,
+                                    "marginLeft": 17.39130434782609,
+                                    "marginTop": 2.608695652173913,
+                                  }
+                                }
+                              >
+                                Remember me
+                              </Component>,
+                            ],
+                            "style": Object {
+                              "alignItems": "flex-start",
+                              "flexDirection": "row",
+                              "justifyContent": "flex-start",
+                            },
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "class",
+                              "props": Object {
+                                "checked": true,
+                                "color": "rgb(61,133,239)",
+                                "onPress": [Function],
+                                "style": Object {
+                                  "borderRadius": 2.608695652173913,
+                                  "marginLeft": -8.695652173913045,
+                                  "marginTop": 2.608695652173913,
+                                },
+                                "virtual": undefined,
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": [Function],
+                            },
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "class",
+                              "props": Object {
+                                "children": "Remember me",
+                                "style": Object {
+                                  "color": "rgb(74,74,74)",
+                                  "fontFamily": "Montserrat-Regular",
+                                  "fontSize": 14.782608695652176,
+                                  "marginLeft": 17.39130434782609,
+                                  "marginTop": 2.608695652173913,
+                                },
+                              },
+                              "ref": null,
+                              "rendered": "Remember me",
+                              "type": [Function],
+                            },
+                          ],
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": <TouchableOpacity
+                              activeOpacity={0.2}
+                              onPress={[Function]}
+                            >
+                              <LinearGradient
+                                colors={
+                                  Array [
+                                    "#3E85EF",
+                                    "#3EBDEF",
+                                  ]
+                                }
+                                end={
+                                  Object {
+                                    "x": 1,
+                                    "y": 0,
+                                  }
+                                }
+                                start={
+                                  Object {
+                                    "x": 0,
+                                    "y": 0,
+                                  }
+                                }
+                                style={
+                                  Object {
+                                    "backgroundColor": "#4A4A4A",
+                                    "borderColor": "#fff",
+                                    "borderRadius": 26.086956521739133,
+                                    "elevation": 3,
+                                    "marginTop": 8.695652173913045,
+                                    "paddingBottom": 13.913043478260871,
+                                    "paddingTop": 13.913043478260871,
+                                    "shadowOffset": Object {
+                                      "height": 2,
+                                      "width": 0,
+                                    },
+                                    "shadowOpacity": 0.2,
+                                    "shadowRadius": 2,
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <Component
+                                  style={
+                                    Object {
+                                      "color": "white",
+                                      "fontFamily": "Montserrat-Bold",
+                                      "fontSize": 14.782608695652176,
+                                      "textAlign": "center",
+                                    }
+                                  }
+                                >
+                                  SIGN IN
+                                </Component>
+                              </LinearGradient>
+                            </TouchableOpacity>,
+                            "style": Object {
+                              "justifyContent": "center",
+                            },
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "activeOpacity": 0.2,
+                              "children": <LinearGradient
+                                colors={
+                                  Array [
+                                    "#3E85EF",
+                                    "#3EBDEF",
+                                  ]
+                                }
+                                end={
+                                  Object {
+                                    "x": 1,
+                                    "y": 0,
+                                  }
+                                }
+                                start={
+                                  Object {
+                                    "x": 0,
+                                    "y": 0,
+                                  }
+                                }
+                                style={
+                                  Object {
+                                    "backgroundColor": "#4A4A4A",
+                                    "borderColor": "#fff",
+                                    "borderRadius": 26.086956521739133,
+                                    "elevation": 3,
+                                    "marginTop": 8.695652173913045,
+                                    "paddingBottom": 13.913043478260871,
+                                    "paddingTop": 13.913043478260871,
+                                    "shadowOffset": Object {
+                                      "height": 2,
+                                      "width": 0,
+                                    },
+                                    "shadowOpacity": 0.2,
+                                    "shadowRadius": 2,
+                                    "width": "100%",
+                                  }
+                                }
+                              >
+                                <Component
+                                  style={
+                                    Object {
+                                      "color": "white",
+                                      "fontFamily": "Montserrat-Bold",
+                                      "fontSize": 14.782608695652176,
+                                      "textAlign": "center",
+                                    }
+                                  }
+                                >
+                                  SIGN IN
+                                </Component>
+                              </LinearGradient>,
+                              "onPress": [Function],
+                            },
+                            "ref": null,
+                            "rendered": Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "class",
+                              "props": Object {
+                                "children": <Component
+                                  style={
+                                    Object {
+                                      "color": "white",
+                                      "fontFamily": "Montserrat-Bold",
+                                      "fontSize": 14.782608695652176,
+                                      "textAlign": "center",
+                                    }
+                                  }
+                                >
+                                  SIGN IN
+                                </Component>,
+                                "colors": Array [
+                                  "#3E85EF",
+                                  "#3EBDEF",
+                                ],
+                                "end": Object {
+                                  "x": 1,
+                                  "y": 0,
+                                },
+                                "start": Object {
+                                  "x": 0,
+                                  "y": 0,
+                                },
+                                "style": Object {
+                                  "backgroundColor": "#4A4A4A",
+                                  "borderColor": "#fff",
+                                  "borderRadius": 26.086956521739133,
+                                  "elevation": 3,
+                                  "marginTop": 8.695652173913045,
+                                  "paddingBottom": 13.913043478260871,
+                                  "paddingTop": 13.913043478260871,
+                                  "shadowOffset": Object {
+                                    "height": 2,
+                                    "width": 0,
+                                  },
+                                  "shadowOpacity": 0.2,
+                                  "shadowRadius": 2,
+                                  "width": "100%",
+                                },
+                              },
+                              "ref": null,
+                              "rendered": Object {
+                                "instance": null,
+                                "key": undefined,
+                                "nodeType": "class",
+                                "props": Object {
+                                  "children": "SIGN IN",
+                                  "style": Object {
+                                    "color": "white",
+                                    "fontFamily": "Montserrat-Bold",
+                                    "fontSize": 14.782608695652176,
+                                    "textAlign": "center",
+                                  },
+                                },
+                                "ref": null,
+                                "rendered": "SIGN IN",
+                                "type": [Function],
+                              },
+                              "type": [Function],
+                            },
+                            "type": [Function],
+                          },
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": "Forgot ID/Password?",
+                            "onPress": [Function],
+                            "style": Object {
+                              "color": "rgb(99,99,99)",
+                              "fontFamily": "Montserrat-Medium",
+                              "fontSize": 13.043478260869566,
+                              "marginVertical": 13.043478260869566,
+                              "textAlign": "center",
+                            },
+                          },
+                          "ref": null,
+                          "rendered": "Forgot ID/Password?",
+                          "type": [Function],
+                        },
+                      ],
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <Component
+                        style={
+                          Object {
+                            "flex": 1,
+                            "paddingRight": 8.695652173913045,
+                          }
+                        }
+                      >
+                        <FacebookLogin />
+                      </Component>,
+                      <Component
+                        style={
+                          Object {
+                            "flex": 1,
+                            "paddingLeft": 8.695652173913045,
+                          }
+                        }
+                      >
+                        <GoogleSigninSampleApp />
+                      </Component>,
+                    ],
+                    "style": Object {
+                      "alignItems": "flex-start",
+                      "flex": 1.8,
+                      "flexDirection": "row",
+                      "justifyContent": "flex-start",
+                      "marginTop": 17.39130434782609,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <FacebookLogin />,
+                        "style": Object {
+                          "flex": 1,
+                          "paddingRight": 8.695652173913045,
+                        },
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {},
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": <GoogleSigninSampleApp />,
+                        "style": Object {
+                          "flex": 1,
+                          "paddingLeft": 8.695652173913045,
+                        },
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {},
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Component
+                  style={
+                    Object {
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    source={
+                      Object {
+                        "testUri": "../../../images/border_img.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 26.956521739130437,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                  <Component
+                    style={
+                      Object {
+                        "backgroundColor": "#F9FCFF",
+                        "height": 17.39130434782609,
+                      }
+                    }
+                  />
+                </Component>,
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "rgb(249,252, 255)",
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "color": "#4A4A4A",
+                        "fontFamily": "Montserrat-Regular",
+                        "fontSize": 14.782608695652176,
+                        "marginVertical": 17.39130434782609,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Don't have an account? 
+                    <Component
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "color": "#3E85EF",
+                          "fontFamily": "Montserrat-Bold",
+                        }
+                      }
+                    >
+                      Sign Up
+                    </Component>
+                  </Component>
+                </Component>,
+              ],
+              "style": Object {
+                "flex": 2,
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Image
+                      source={
+                        Object {
+                          "testUri": "../../../images/border_img.png",
+                        }
+                      }
+                      style={
+                        Object {
+                          "height": 26.956521739130437,
+                          "width": "100%",
+                        }
+                      }
+                    />,
+                    <Component
+                      style={
+                        Object {
+                          "backgroundColor": "#F9FCFF",
+                          "height": 17.39130434782609,
+                        }
+                      }
+                    />,
+                  ],
+                  "style": Object {
+                    "width": "100%",
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "source": Object {
+                        "testUri": "../../../images/border_img.png",
+                      },
+                      "style": Object {
+                        "height": 26.956521739130437,
+                        "width": "100%",
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "style": Object {
+                        "backgroundColor": "#F9FCFF",
+                        "height": 17.39130434782609,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Component
+                    style={
+                      Object {
+                        "color": "#4A4A4A",
+                        "fontFamily": "Montserrat-Regular",
+                        "fontSize": 14.782608695652176,
+                        "marginVertical": 17.39130434782609,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Don't have an account? 
+                    <Component
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "color": "#3E85EF",
+                          "fontFamily": "Montserrat-Bold",
+                        }
+                      }
+                    >
+                      Sign Up
+                    </Component>
+                  </Component>,
+                  "style": Object {
+                    "alignItems": "center",
+                    "backgroundColor": "rgb(249,252, 255)",
+                    "flex": 1,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      "Don't have an account? ",
+                      <Component
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "color": "#3E85EF",
+                            "fontFamily": "Montserrat-Bold",
+                          }
+                        }
+                      >
+                        Sign Up
+                      </Component>,
+                    ],
+                    "style": Object {
+                      "color": "#4A4A4A",
+                      "fontFamily": "Montserrat-Regular",
+                      "fontSize": 14.782608695652176,
+                      "marginVertical": 17.39130434782609,
+                      "textAlign": "center",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Don't have an account? ",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "Sign Up",
+                        "onPress": [Function],
+                        "style": Object {
+                          "color": "#3E85EF",
+                          "fontFamily": "Montserrat-Bold",
+                        },
+                      },
+                      "ref": null,
+                      "rendered": "Sign Up",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [MockFunction],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

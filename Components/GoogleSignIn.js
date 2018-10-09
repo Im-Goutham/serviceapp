@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {  StyleSheet, Text, View, TouchableOpacity, Platform, Image } from 'react-native';
-import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
+import { GoogleSignin } from 'react-native-google-signin';
 import { Auth } from 'aws-amplify';
 import {scale} from '../global';
 
@@ -50,7 +50,7 @@ export default class GoogleSigninSampleApp extends Component {
 
 
     googleSignIn = (response) => {
-    
+
       var data = {
         token: response.accessToken,
         expires: response.accessTokenExpirationDate,
@@ -70,17 +70,17 @@ export default class GoogleSigninSampleApp extends Component {
         console.log('error in google signin --- ',e);
       });
     }
-  
+
 
   render() {
       return (
-        <TouchableOpacity style={styles.button} onPress={() => this._signIn()}> 
+        <TouchableOpacity style={styles.button} onPress={() => this._signIn()}>
          <View style={{flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
 
             <Image source={require('../assets/icons/gmail_transparent.png')} style={{ width: scale(30), height: scale(30)}} resizeMode="contain" resizeMethod="resize"/>
 
                <Text style={styles.btnText}>Gmail</Text>
-     
+
          </View>
          </TouchableOpacity>
       );
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 3,
   },
-  btnText: { 
+  btnText: {
     paddingHorizontal:scale(10),
     fontSize: scale(16),
     textAlign :'left',

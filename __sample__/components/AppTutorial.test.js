@@ -11,7 +11,6 @@ import AppTutorialScreen from '../../screens/AppTutorialScreen';
 import AccountScreen from '../../screens/AccountScreen';
 import {initialState} from '../../config/jest/mockStore';
 
-let store;
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 let store;

@@ -1,0 +1,2173 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageScreen snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Component
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  >
+    <LinearGradient
+      colors={
+        Array [
+          "#3E85EF",
+          "#3EBDEF",
+        ]
+      }
+      end={
+        Object {
+          "x": 1,
+          "y": 0,
+        }
+      }
+      start={
+        Object {
+          "x": 0,
+          "y": 0,
+        }
+      }
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <HeaderScreen
+        content={
+          <Component
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "justifyContent": "space-between",
+                "paddingVertical": 8.695652173913045,
+              }
+            }
+          />
+        }
+        header={
+          <Header
+            left={
+              <Component
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "height": 46.95652173913044,
+                      "justifyContent": "center",
+                      "width": "50%",
+                    }
+                  }
+                >
+                  <Image
+                    resizeMethod="resize"
+                    resizeMode="contain"
+                    source={
+                      Object {
+                        "testUri": "../../../assets/icons/arrow_left.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 17.39130434782609,
+                        "width": "50%",
+                      }
+                    }
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "height": 46.95652173913044,
+                      "justifyContent": "center",
+                      "width": "50%",
+                    }
+                  }
+                >
+                  <Image
+                    resizeMethod="resize"
+                    resizeMode="contain"
+                    source={
+                      Object {
+                        "testUri": "../../../assets/icons/menu.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 17.39130434782609,
+                        "width": "50%",
+                      }
+                    }
+                  />
+                </TouchableOpacity>
+              </Component>
+            }
+            navigation={
+              Object {
+                "state": Object {
+                  "params": Object {
+                    "mainScreen": "",
+                  },
+                },
+              }
+            }
+            right={
+              <Component
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "height": 46.95652173913044,
+                      "justifyContent": "center",
+                      "width": "50%",
+                    }
+                  }
+                >
+                  <Image
+                    resizeMethod="resize"
+                    resizeMode="contain"
+                    source={
+                      Object {
+                        "testUri": "../../../assets/icons/user_block.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 46.95652173913044,
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </TouchableOpacity>
+              </Component>
+            }
+            title={
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "height": 46.95652173913044,
+                    "justifyContent": "center",
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "#fff",
+                      "fontFamily": "Montserrat-Bold",
+                      "fontSize": 17.39130434782609,
+                    }
+                  }
+                >
+                  Micheal Y.
+                </Component>
+              </Component>
+            }
+          />
+        }
+      />
+      <Component
+        style={
+          Object {
+            "backgroundColor": "rgb(249,252, 255)",
+            "flex": 1,
+          }
+        }
+      >
+        <GiftedChat
+          bottomOffset={0}
+          dateFormat="ll"
+          forceGetKeyboardHeight={false}
+          imageProps={Object {}}
+          inverted={true}
+          isAnimated={true}
+          isLoadingEarlier={false}
+          keyboardShouldPersistTaps="never"
+          lightboxProps={Object {}}
+          listViewProps={Object {}}
+          loadEarlier={true}
+          locale={null}
+          maxInputLength={null}
+          messageIdGenerator={[Function]}
+          messages={
+            Array [
+              Object {
+                "_id": 660622,
+                "createdAt": 2016-08-30T17:20:00.000Z,
+                "received": true,
+                "sent": true,
+                "text": "Yes, and I use Gifted Chat!",
+                "user": Object {
+                  "_id": 1,
+                  "name": "Developer",
+                },
+              },
+              Object {
+                "_id": 709534,
+                "createdAt": 2016-08-30T17:20:00.000Z,
+                "text": "Are you building a chat app?",
+                "user": Object {
+                  "_id": 2,
+                  "name": "React Native",
+                },
+              },
+              Object {
+                "_id": 103811,
+                "createdAt": 2016-08-30T17:20:00.000Z,
+                "system": true,
+                "text": "You are officially rocking GiftedChat.",
+              },
+            ]
+          }
+          minInputToolbarHeight={44}
+          onInputTextChanged={null}
+          onLoadEarlier={[Function]}
+          onLongPress={null}
+          onPressActionButton={null}
+          onPressAvatar={null}
+          onSend={[Function]}
+          placeholder="Type a message..."
+          renderAccessory={null}
+          renderActions={[Function]}
+          renderAvatarOnTop={false}
+          renderBubble={null}
+          renderChatFooter={null}
+          renderComposer={null}
+          renderCustomView={null}
+          renderDay={null}
+          renderFooter={[Function]}
+          renderInputToolbar={[Function]}
+          renderLoadEarlier={null}
+          renderLoading={null}
+          renderMessage={[Function]}
+          renderMessageImage={null}
+          renderMessageText={null}
+          renderSend={null}
+          renderSystemMessage={null}
+          renderTime={null}
+          showUserAvatar={false}
+          textInputProps={Object {}}
+          timeFormat="LT"
+          user={Object {}}
+        />
+        <KeyboardAvoidingView
+          enabled={true}
+          keyboardVerticalOffset={0}
+        />
+      </Component>
+    </LinearGradient>
+  </Component>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <LinearGradient
+        colors={
+          Array [
+            "#3E85EF",
+            "#3EBDEF",
+          ]
+        }
+        end={
+          Object {
+            "x": 1,
+            "y": 0,
+          }
+        }
+        start={
+          Object {
+            "x": 0,
+            "y": 0,
+          }
+        }
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <HeaderScreen
+          content={
+            <Component
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "justifyContent": "space-between",
+                  "paddingVertical": 8.695652173913045,
+                }
+              }
+            />
+          }
+          header={
+            <Header
+              left={
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                        "width": "50%",
+                      }
+                    }
+                  >
+                    <Image
+                      resizeMethod="resize"
+                      resizeMode="contain"
+                      source={
+                        Object {
+                          "testUri": "../../../assets/icons/arrow_left.png",
+                        }
+                      }
+                      style={
+                        Object {
+                          "height": 17.39130434782609,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                        "width": "50%",
+                      }
+                    }
+                  >
+                    <Image
+                      resizeMethod="resize"
+                      resizeMode="contain"
+                      source={
+                        Object {
+                          "testUri": "../../../assets/icons/menu.png",
+                        }
+                      }
+                      style={
+                        Object {
+                          "height": 17.39130434782609,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </TouchableOpacity>
+                </Component>
+              }
+              navigation={
+                Object {
+                  "state": Object {
+                    "params": Object {
+                      "mainScreen": "",
+                    },
+                  },
+                }
+              }
+              right={
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                        "width": "50%",
+                      }
+                    }
+                  >
+                    <Image
+                      resizeMethod="resize"
+                      resizeMode="contain"
+                      source={
+                        Object {
+                          "testUri": "../../../assets/icons/user_block.png",
+                        }
+                      }
+                      style={
+                        Object {
+                          "height": 46.95652173913044,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </TouchableOpacity>
+                </Component>
+              }
+              title={
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "height": 46.95652173913044,
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontFamily": "Montserrat-Bold",
+                        "fontSize": 17.39130434782609,
+                      }
+                    }
+                  >
+                    Micheal Y.
+                  </Component>
+                </Component>
+              }
+            />
+          }
+        />
+        <Component
+          style={
+            Object {
+              "backgroundColor": "rgb(249,252, 255)",
+              "flex": 1,
+            }
+          }
+        >
+          <GiftedChat
+            bottomOffset={0}
+            dateFormat="ll"
+            forceGetKeyboardHeight={false}
+            imageProps={Object {}}
+            inverted={true}
+            isAnimated={true}
+            isLoadingEarlier={false}
+            keyboardShouldPersistTaps="never"
+            lightboxProps={Object {}}
+            listViewProps={Object {}}
+            loadEarlier={true}
+            locale={null}
+            maxInputLength={null}
+            messageIdGenerator={[Function]}
+            messages={
+              Array [
+                Object {
+                  "_id": 660622,
+                  "createdAt": 2016-08-30T17:20:00.000Z,
+                  "received": true,
+                  "sent": true,
+                  "text": "Yes, and I use Gifted Chat!",
+                  "user": Object {
+                    "_id": 1,
+                    "name": "Developer",
+                  },
+                },
+                Object {
+                  "_id": 709534,
+                  "createdAt": 2016-08-30T17:20:00.000Z,
+                  "text": "Are you building a chat app?",
+                  "user": Object {
+                    "_id": 2,
+                    "name": "React Native",
+                  },
+                },
+                Object {
+                  "_id": 103811,
+                  "createdAt": 2016-08-30T17:20:00.000Z,
+                  "system": true,
+                  "text": "You are officially rocking GiftedChat.",
+                },
+              ]
+            }
+            minInputToolbarHeight={44}
+            onInputTextChanged={null}
+            onLoadEarlier={[Function]}
+            onLongPress={null}
+            onPressActionButton={null}
+            onPressAvatar={null}
+            onSend={[Function]}
+            placeholder="Type a message..."
+            renderAccessory={null}
+            renderActions={[Function]}
+            renderAvatarOnTop={false}
+            renderBubble={null}
+            renderChatFooter={null}
+            renderComposer={null}
+            renderCustomView={null}
+            renderDay={null}
+            renderFooter={[Function]}
+            renderInputToolbar={[Function]}
+            renderLoadEarlier={null}
+            renderLoading={null}
+            renderMessage={[Function]}
+            renderMessageImage={null}
+            renderMessageText={null}
+            renderSend={null}
+            renderSystemMessage={null}
+            renderTime={null}
+            showUserAvatar={false}
+            textInputProps={Object {}}
+            timeFormat="LT"
+            user={Object {}}
+          />
+          <KeyboardAvoidingView
+            enabled={true}
+            keyboardVerticalOffset={0}
+          />
+        </Component>
+      </LinearGradient>,
+      "style": Object {
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <HeaderScreen
+            content={
+              <Component
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "justifyContent": "space-between",
+                    "paddingVertical": 8.695652173913045,
+                  }
+                }
+              />
+            }
+            header={
+              <Header
+                left={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                          "width": "50%",
+                        }
+                      }
+                    >
+                      <Image
+                        resizeMethod="resize"
+                        resizeMode="contain"
+                        source={
+                          Object {
+                            "testUri": "../../../assets/icons/arrow_left.png",
+                          }
+                        }
+                        style={
+                          Object {
+                            "height": 17.39130434782609,
+                            "width": "50%",
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                          "width": "50%",
+                        }
+                      }
+                    >
+                      <Image
+                        resizeMethod="resize"
+                        resizeMode="contain"
+                        source={
+                          Object {
+                            "testUri": "../../../assets/icons/menu.png",
+                          }
+                        }
+                        style={
+                          Object {
+                            "height": 17.39130434782609,
+                            "width": "50%",
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                }
+                navigation={
+                  Object {
+                    "state": Object {
+                      "params": Object {
+                        "mainScreen": "",
+                      },
+                    },
+                  }
+                }
+                right={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                          "width": "50%",
+                        }
+                      }
+                    >
+                      <Image
+                        resizeMethod="resize"
+                        resizeMode="contain"
+                        source={
+                          Object {
+                            "testUri": "../../../assets/icons/user_block.png",
+                          }
+                        }
+                        style={
+                          Object {
+                            "height": 46.95652173913044,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                }
+                title={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "flex-start",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "color": "#fff",
+                          "fontFamily": "Montserrat-Bold",
+                          "fontSize": 17.39130434782609,
+                        }
+                      }
+                    >
+                      Micheal Y.
+                    </Component>
+                  </Component>
+                }
+              />
+            }
+          />,
+          <Component
+            style={
+              Object {
+                "backgroundColor": "rgb(249,252, 255)",
+                "flex": 1,
+              }
+            }
+          >
+            <GiftedChat
+              bottomOffset={0}
+              dateFormat="ll"
+              forceGetKeyboardHeight={false}
+              imageProps={Object {}}
+              inverted={true}
+              isAnimated={true}
+              isLoadingEarlier={false}
+              keyboardShouldPersistTaps="never"
+              lightboxProps={Object {}}
+              listViewProps={Object {}}
+              loadEarlier={true}
+              locale={null}
+              maxInputLength={null}
+              messageIdGenerator={[Function]}
+              messages={
+                Array [
+                  Object {
+                    "_id": 660622,
+                    "createdAt": 2016-08-30T17:20:00.000Z,
+                    "received": true,
+                    "sent": true,
+                    "text": "Yes, and I use Gifted Chat!",
+                    "user": Object {
+                      "_id": 1,
+                      "name": "Developer",
+                    },
+                  },
+                  Object {
+                    "_id": 709534,
+                    "createdAt": 2016-08-30T17:20:00.000Z,
+                    "text": "Are you building a chat app?",
+                    "user": Object {
+                      "_id": 2,
+                      "name": "React Native",
+                    },
+                  },
+                  Object {
+                    "_id": 103811,
+                    "createdAt": 2016-08-30T17:20:00.000Z,
+                    "system": true,
+                    "text": "You are officially rocking GiftedChat.",
+                  },
+                ]
+              }
+              minInputToolbarHeight={44}
+              onInputTextChanged={null}
+              onLoadEarlier={[Function]}
+              onLongPress={null}
+              onPressActionButton={null}
+              onPressAvatar={null}
+              onSend={[Function]}
+              placeholder="Type a message..."
+              renderAccessory={null}
+              renderActions={[Function]}
+              renderAvatarOnTop={false}
+              renderBubble={null}
+              renderChatFooter={null}
+              renderComposer={null}
+              renderCustomView={null}
+              renderDay={null}
+              renderFooter={[Function]}
+              renderInputToolbar={[Function]}
+              renderLoadEarlier={null}
+              renderLoading={null}
+              renderMessage={[Function]}
+              renderMessageImage={null}
+              renderMessageText={null}
+              renderSend={null}
+              renderSystemMessage={null}
+              renderTime={null}
+              showUserAvatar={false}
+              textInputProps={Object {}}
+              timeFormat="LT"
+              user={Object {}}
+            />
+            <KeyboardAvoidingView
+              enabled={true}
+              keyboardVerticalOffset={0}
+            />
+          </Component>,
+        ],
+        "colors": Array [
+          "#3E85EF",
+          "#3EBDEF",
+        ],
+        "end": Object {
+          "x": 1,
+          "y": 0,
+        },
+        "start": Object {
+          "x": 0,
+          "y": 0,
+        },
+        "style": Object {
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "content": <Component
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "justifyContent": "space-between",
+                  "paddingVertical": 8.695652173913045,
+                }
+              }
+            />,
+            "header": <Header
+              left={
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                        "width": "50%",
+                      }
+                    }
+                  >
+                    <Image
+                      resizeMethod="resize"
+                      resizeMode="contain"
+                      source={
+                        Object {
+                          "testUri": "../../../assets/icons/arrow_left.png",
+                        }
+                      }
+                      style={
+                        Object {
+                          "height": 17.39130434782609,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                        "width": "50%",
+                      }
+                    }
+                  >
+                    <Image
+                      resizeMethod="resize"
+                      resizeMode="contain"
+                      source={
+                        Object {
+                          "testUri": "../../../assets/icons/menu.png",
+                        }
+                      }
+                      style={
+                        Object {
+                          "height": 17.39130434782609,
+                          "width": "50%",
+                        }
+                      }
+                    />
+                  </TouchableOpacity>
+                </Component>
+              }
+              navigation={
+                Object {
+                  "state": Object {
+                    "params": Object {
+                      "mainScreen": "",
+                    },
+                  },
+                }
+              }
+              right={
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                        "width": "50%",
+                      }
+                    }
+                  >
+                    <Image
+                      resizeMethod="resize"
+                      resizeMode="contain"
+                      source={
+                        Object {
+                          "testUri": "../../../assets/icons/user_block.png",
+                        }
+                      }
+                      style={
+                        Object {
+                          "height": 46.95652173913044,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </TouchableOpacity>
+                </Component>
+              }
+              title={
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "height": 46.95652173913044,
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontFamily": "Montserrat-Bold",
+                        "fontSize": 17.39130434782609,
+                      }
+                    }
+                  >
+                    Micheal Y.
+                  </Component>
+                </Component>
+              }
+            />,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <GiftedChat
+                bottomOffset={0}
+                dateFormat="ll"
+                forceGetKeyboardHeight={false}
+                imageProps={Object {}}
+                inverted={true}
+                isAnimated={true}
+                isLoadingEarlier={false}
+                keyboardShouldPersistTaps="never"
+                lightboxProps={Object {}}
+                listViewProps={Object {}}
+                loadEarlier={true}
+                locale={null}
+                maxInputLength={null}
+                messageIdGenerator={[Function]}
+                messages={
+                  Array [
+                    Object {
+                      "_id": 660622,
+                      "createdAt": 2016-08-30T17:20:00.000Z,
+                      "received": true,
+                      "sent": true,
+                      "text": "Yes, and I use Gifted Chat!",
+                      "user": Object {
+                        "_id": 1,
+                        "name": "Developer",
+                      },
+                    },
+                    Object {
+                      "_id": 709534,
+                      "createdAt": 2016-08-30T17:20:00.000Z,
+                      "text": "Are you building a chat app?",
+                      "user": Object {
+                        "_id": 2,
+                        "name": "React Native",
+                      },
+                    },
+                    Object {
+                      "_id": 103811,
+                      "createdAt": 2016-08-30T17:20:00.000Z,
+                      "system": true,
+                      "text": "You are officially rocking GiftedChat.",
+                    },
+                  ]
+                }
+                minInputToolbarHeight={44}
+                onInputTextChanged={null}
+                onLoadEarlier={[Function]}
+                onLongPress={null}
+                onPressActionButton={null}
+                onPressAvatar={null}
+                onSend={[Function]}
+                placeholder="Type a message..."
+                renderAccessory={null}
+                renderActions={[Function]}
+                renderAvatarOnTop={false}
+                renderBubble={null}
+                renderChatFooter={null}
+                renderComposer={null}
+                renderCustomView={null}
+                renderDay={null}
+                renderFooter={[Function]}
+                renderInputToolbar={[Function]}
+                renderLoadEarlier={null}
+                renderLoading={null}
+                renderMessage={[Function]}
+                renderMessageImage={null}
+                renderMessageText={null}
+                renderSend={null}
+                renderSystemMessage={null}
+                renderTime={null}
+                showUserAvatar={false}
+                textInputProps={Object {}}
+                timeFormat="LT"
+                user={Object {}}
+              />,
+              <KeyboardAvoidingView
+                enabled={true}
+                keyboardVerticalOffset={0}
+              />,
+            ],
+            "style": Object {
+              "backgroundColor": "rgb(249,252, 255)",
+              "flex": 1,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "bottomOffset": 0,
+                "dateFormat": "ll",
+                "forceGetKeyboardHeight": false,
+                "imageProps": Object {},
+                "inverted": true,
+                "isAnimated": true,
+                "isLoadingEarlier": false,
+                "keyboardShouldPersistTaps": "never",
+                "lightboxProps": Object {},
+                "listViewProps": Object {},
+                "loadEarlier": true,
+                "locale": null,
+                "maxInputLength": null,
+                "messageIdGenerator": [Function],
+                "messages": Array [
+                  Object {
+                    "_id": 660622,
+                    "createdAt": 2016-08-30T17:20:00.000Z,
+                    "received": true,
+                    "sent": true,
+                    "text": "Yes, and I use Gifted Chat!",
+                    "user": Object {
+                      "_id": 1,
+                      "name": "Developer",
+                    },
+                  },
+                  Object {
+                    "_id": 709534,
+                    "createdAt": 2016-08-30T17:20:00.000Z,
+                    "text": "Are you building a chat app?",
+                    "user": Object {
+                      "_id": 2,
+                      "name": "React Native",
+                    },
+                  },
+                  Object {
+                    "_id": 103811,
+                    "createdAt": 2016-08-30T17:20:00.000Z,
+                    "system": true,
+                    "text": "You are officially rocking GiftedChat.",
+                  },
+                ],
+                "minInputToolbarHeight": 44,
+                "onInputTextChanged": null,
+                "onLoadEarlier": [Function],
+                "onLongPress": null,
+                "onPressActionButton": null,
+                "onPressAvatar": null,
+                "onSend": [Function],
+                "placeholder": "Type a message...",
+                "renderAccessory": null,
+                "renderActions": [Function],
+                "renderAvatar": undefined,
+                "renderAvatarOnTop": false,
+                "renderBubble": null,
+                "renderChatFooter": null,
+                "renderComposer": null,
+                "renderCustomView": null,
+                "renderDay": null,
+                "renderFooter": [Function],
+                "renderInputToolbar": [Function],
+                "renderLoadEarlier": null,
+                "renderLoading": null,
+                "renderMessage": [Function],
+                "renderMessageImage": null,
+                "renderMessageText": null,
+                "renderSend": null,
+                "renderSystemMessage": null,
+                "renderTime": null,
+                "showUserAvatar": false,
+                "text": undefined,
+                "textInputProps": Object {},
+                "timeFormat": "LT",
+                "user": Object {},
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "enabled": true,
+                "keyboardVerticalOffset": 0,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": "View",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <LinearGradient
+          colors={
+            Array [
+              "#3E85EF",
+              "#3EBDEF",
+            ]
+          }
+          end={
+            Object {
+              "x": 1,
+              "y": 0,
+            }
+          }
+          start={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <HeaderScreen
+            content={
+              <Component
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "justifyContent": "space-between",
+                    "paddingVertical": 8.695652173913045,
+                  }
+                }
+              />
+            }
+            header={
+              <Header
+                left={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                          "width": "50%",
+                        }
+                      }
+                    >
+                      <Image
+                        resizeMethod="resize"
+                        resizeMode="contain"
+                        source={
+                          Object {
+                            "testUri": "../../../assets/icons/arrow_left.png",
+                          }
+                        }
+                        style={
+                          Object {
+                            "height": 17.39130434782609,
+                            "width": "50%",
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                          "width": "50%",
+                        }
+                      }
+                    >
+                      <Image
+                        resizeMethod="resize"
+                        resizeMode="contain"
+                        source={
+                          Object {
+                            "testUri": "../../../assets/icons/menu.png",
+                          }
+                        }
+                        style={
+                          Object {
+                            "height": 17.39130434782609,
+                            "width": "50%",
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                }
+                navigation={
+                  Object {
+                    "state": Object {
+                      "params": Object {
+                        "mainScreen": "",
+                      },
+                    },
+                  }
+                }
+                right={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                          "width": "50%",
+                        }
+                      }
+                    >
+                      <Image
+                        resizeMethod="resize"
+                        resizeMode="contain"
+                        source={
+                          Object {
+                            "testUri": "../../../assets/icons/user_block.png",
+                          }
+                        }
+                        style={
+                          Object {
+                            "height": 46.95652173913044,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                }
+                title={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "flex-start",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "color": "#fff",
+                          "fontFamily": "Montserrat-Bold",
+                          "fontSize": 17.39130434782609,
+                        }
+                      }
+                    >
+                      Micheal Y.
+                    </Component>
+                  </Component>
+                }
+              />
+            }
+          />
+          <Component
+            style={
+              Object {
+                "backgroundColor": "rgb(249,252, 255)",
+                "flex": 1,
+              }
+            }
+          >
+            <GiftedChat
+              bottomOffset={0}
+              dateFormat="ll"
+              forceGetKeyboardHeight={false}
+              imageProps={Object {}}
+              inverted={true}
+              isAnimated={true}
+              isLoadingEarlier={false}
+              keyboardShouldPersistTaps="never"
+              lightboxProps={Object {}}
+              listViewProps={Object {}}
+              loadEarlier={true}
+              locale={null}
+              maxInputLength={null}
+              messageIdGenerator={[Function]}
+              messages={
+                Array [
+                  Object {
+                    "_id": 660622,
+                    "createdAt": 2016-08-30T17:20:00.000Z,
+                    "received": true,
+                    "sent": true,
+                    "text": "Yes, and I use Gifted Chat!",
+                    "user": Object {
+                      "_id": 1,
+                      "name": "Developer",
+                    },
+                  },
+                  Object {
+                    "_id": 709534,
+                    "createdAt": 2016-08-30T17:20:00.000Z,
+                    "text": "Are you building a chat app?",
+                    "user": Object {
+                      "_id": 2,
+                      "name": "React Native",
+                    },
+                  },
+                  Object {
+                    "_id": 103811,
+                    "createdAt": 2016-08-30T17:20:00.000Z,
+                    "system": true,
+                    "text": "You are officially rocking GiftedChat.",
+                  },
+                ]
+              }
+              minInputToolbarHeight={44}
+              onInputTextChanged={null}
+              onLoadEarlier={[Function]}
+              onLongPress={null}
+              onPressActionButton={null}
+              onPressAvatar={null}
+              onSend={[Function]}
+              placeholder="Type a message..."
+              renderAccessory={null}
+              renderActions={[Function]}
+              renderAvatarOnTop={false}
+              renderBubble={null}
+              renderChatFooter={null}
+              renderComposer={null}
+              renderCustomView={null}
+              renderDay={null}
+              renderFooter={[Function]}
+              renderInputToolbar={[Function]}
+              renderLoadEarlier={null}
+              renderLoading={null}
+              renderMessage={[Function]}
+              renderMessageImage={null}
+              renderMessageText={null}
+              renderSend={null}
+              renderSystemMessage={null}
+              renderTime={null}
+              showUserAvatar={false}
+              textInputProps={Object {}}
+              timeFormat="LT"
+              user={Object {}}
+            />
+            <KeyboardAvoidingView
+              enabled={true}
+              keyboardVerticalOffset={0}
+            />
+          </Component>
+        </LinearGradient>,
+        "style": Object {
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <HeaderScreen
+              content={
+                <Component
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "justifyContent": "space-between",
+                      "paddingVertical": 8.695652173913045,
+                    }
+                  }
+                />
+              }
+              header={
+                <Header
+                  left={
+                    <Component
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "transparent",
+                            "height": 46.95652173913044,
+                            "justifyContent": "center",
+                            "width": "50%",
+                          }
+                        }
+                      >
+                        <Image
+                          resizeMethod="resize"
+                          resizeMode="contain"
+                          source={
+                            Object {
+                              "testUri": "../../../assets/icons/arrow_left.png",
+                            }
+                          }
+                          style={
+                            Object {
+                              "height": 17.39130434782609,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </TouchableOpacity>
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "transparent",
+                            "height": 46.95652173913044,
+                            "justifyContent": "center",
+                            "width": "50%",
+                          }
+                        }
+                      >
+                        <Image
+                          resizeMethod="resize"
+                          resizeMode="contain"
+                          source={
+                            Object {
+                              "testUri": "../../../assets/icons/menu.png",
+                            }
+                          }
+                          style={
+                            Object {
+                              "height": 17.39130434782609,
+                              "width": "50%",
+                            }
+                          }
+                        />
+                      </TouchableOpacity>
+                    </Component>
+                  }
+                  navigation={
+                    Object {
+                      "state": Object {
+                        "params": Object {
+                          "mainScreen": "",
+                        },
+                      },
+                    }
+                  }
+                  right={
+                    <Component
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "transparent",
+                            "height": 46.95652173913044,
+                            "justifyContent": "center",
+                            "width": "50%",
+                          }
+                        }
+                      >
+                        <Image
+                          resizeMethod="resize"
+                          resizeMode="contain"
+                          source={
+                            Object {
+                              "testUri": "../../../assets/icons/user_block.png",
+                            }
+                          }
+                          style={
+                            Object {
+                              "height": 46.95652173913044,
+                              "width": "100%",
+                            }
+                          }
+                        />
+                      </TouchableOpacity>
+                    </Component>
+                  }
+                  title={
+                    <Component
+                      style={
+                        Object {
+                          "alignItems": "flex-start",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <Component
+                        style={
+                          Object {
+                            "color": "#fff",
+                            "fontFamily": "Montserrat-Bold",
+                            "fontSize": 17.39130434782609,
+                          }
+                        }
+                      >
+                        Micheal Y.
+                      </Component>
+                    </Component>
+                  }
+                />
+              }
+            />,
+            <Component
+              style={
+                Object {
+                  "backgroundColor": "rgb(249,252, 255)",
+                  "flex": 1,
+                }
+              }
+            >
+              <GiftedChat
+                bottomOffset={0}
+                dateFormat="ll"
+                forceGetKeyboardHeight={false}
+                imageProps={Object {}}
+                inverted={true}
+                isAnimated={true}
+                isLoadingEarlier={false}
+                keyboardShouldPersistTaps="never"
+                lightboxProps={Object {}}
+                listViewProps={Object {}}
+                loadEarlier={true}
+                locale={null}
+                maxInputLength={null}
+                messageIdGenerator={[Function]}
+                messages={
+                  Array [
+                    Object {
+                      "_id": 660622,
+                      "createdAt": 2016-08-30T17:20:00.000Z,
+                      "received": true,
+                      "sent": true,
+                      "text": "Yes, and I use Gifted Chat!",
+                      "user": Object {
+                        "_id": 1,
+                        "name": "Developer",
+                      },
+                    },
+                    Object {
+                      "_id": 709534,
+                      "createdAt": 2016-08-30T17:20:00.000Z,
+                      "text": "Are you building a chat app?",
+                      "user": Object {
+                        "_id": 2,
+                        "name": "React Native",
+                      },
+                    },
+                    Object {
+                      "_id": 103811,
+                      "createdAt": 2016-08-30T17:20:00.000Z,
+                      "system": true,
+                      "text": "You are officially rocking GiftedChat.",
+                    },
+                  ]
+                }
+                minInputToolbarHeight={44}
+                onInputTextChanged={null}
+                onLoadEarlier={[Function]}
+                onLongPress={null}
+                onPressActionButton={null}
+                onPressAvatar={null}
+                onSend={[Function]}
+                placeholder="Type a message..."
+                renderAccessory={null}
+                renderActions={[Function]}
+                renderAvatarOnTop={false}
+                renderBubble={null}
+                renderChatFooter={null}
+                renderComposer={null}
+                renderCustomView={null}
+                renderDay={null}
+                renderFooter={[Function]}
+                renderInputToolbar={[Function]}
+                renderLoadEarlier={null}
+                renderLoading={null}
+                renderMessage={[Function]}
+                renderMessageImage={null}
+                renderMessageText={null}
+                renderSend={null}
+                renderSystemMessage={null}
+                renderTime={null}
+                showUserAvatar={false}
+                textInputProps={Object {}}
+                timeFormat="LT"
+                user={Object {}}
+              />
+              <KeyboardAvoidingView
+                enabled={true}
+                keyboardVerticalOffset={0}
+              />
+            </Component>,
+          ],
+          "colors": Array [
+            "#3E85EF",
+            "#3EBDEF",
+          ],
+          "end": Object {
+            "x": 1,
+            "y": 0,
+          },
+          "start": Object {
+            "x": 0,
+            "y": 0,
+          },
+          "style": Object {
+            "flex": 1,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "content": <Component
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "justifyContent": "space-between",
+                    "paddingVertical": 8.695652173913045,
+                  }
+                }
+              />,
+              "header": <Header
+                left={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                          "width": "50%",
+                        }
+                      }
+                    >
+                      <Image
+                        resizeMethod="resize"
+                        resizeMode="contain"
+                        source={
+                          Object {
+                            "testUri": "../../../assets/icons/arrow_left.png",
+                          }
+                        }
+                        style={
+                          Object {
+                            "height": 17.39130434782609,
+                            "width": "50%",
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                          "width": "50%",
+                        }
+                      }
+                    >
+                      <Image
+                        resizeMethod="resize"
+                        resizeMode="contain"
+                        source={
+                          Object {
+                            "testUri": "../../../assets/icons/menu.png",
+                          }
+                        }
+                        style={
+                          Object {
+                            "height": 17.39130434782609,
+                            "width": "50%",
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                }
+                navigation={
+                  Object {
+                    "state": Object {
+                      "params": Object {
+                        "mainScreen": "",
+                      },
+                    },
+                  }
+                }
+                right={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                          "width": "50%",
+                        }
+                      }
+                    >
+                      <Image
+                        resizeMethod="resize"
+                        resizeMode="contain"
+                        source={
+                          Object {
+                            "testUri": "../../../assets/icons/user_block.png",
+                          }
+                        }
+                        style={
+                          Object {
+                            "height": 46.95652173913044,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                }
+                title={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "flex-start",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "color": "#fff",
+                          "fontFamily": "Montserrat-Bold",
+                          "fontSize": 17.39130434782609,
+                        }
+                      }
+                    >
+                      Micheal Y.
+                    </Component>
+                  </Component>
+                }
+              />,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <GiftedChat
+                  bottomOffset={0}
+                  dateFormat="ll"
+                  forceGetKeyboardHeight={false}
+                  imageProps={Object {}}
+                  inverted={true}
+                  isAnimated={true}
+                  isLoadingEarlier={false}
+                  keyboardShouldPersistTaps="never"
+                  lightboxProps={Object {}}
+                  listViewProps={Object {}}
+                  loadEarlier={true}
+                  locale={null}
+                  maxInputLength={null}
+                  messageIdGenerator={[Function]}
+                  messages={
+                    Array [
+                      Object {
+                        "_id": 660622,
+                        "createdAt": 2016-08-30T17:20:00.000Z,
+                        "received": true,
+                        "sent": true,
+                        "text": "Yes, and I use Gifted Chat!",
+                        "user": Object {
+                          "_id": 1,
+                          "name": "Developer",
+                        },
+                      },
+                      Object {
+                        "_id": 709534,
+                        "createdAt": 2016-08-30T17:20:00.000Z,
+                        "text": "Are you building a chat app?",
+                        "user": Object {
+                          "_id": 2,
+                          "name": "React Native",
+                        },
+                      },
+                      Object {
+                        "_id": 103811,
+                        "createdAt": 2016-08-30T17:20:00.000Z,
+                        "system": true,
+                        "text": "You are officially rocking GiftedChat.",
+                      },
+                    ]
+                  }
+                  minInputToolbarHeight={44}
+                  onInputTextChanged={null}
+                  onLoadEarlier={[Function]}
+                  onLongPress={null}
+                  onPressActionButton={null}
+                  onPressAvatar={null}
+                  onSend={[Function]}
+                  placeholder="Type a message..."
+                  renderAccessory={null}
+                  renderActions={[Function]}
+                  renderAvatarOnTop={false}
+                  renderBubble={null}
+                  renderChatFooter={null}
+                  renderComposer={null}
+                  renderCustomView={null}
+                  renderDay={null}
+                  renderFooter={[Function]}
+                  renderInputToolbar={[Function]}
+                  renderLoadEarlier={null}
+                  renderLoading={null}
+                  renderMessage={[Function]}
+                  renderMessageImage={null}
+                  renderMessageText={null}
+                  renderSend={null}
+                  renderSystemMessage={null}
+                  renderTime={null}
+                  showUserAvatar={false}
+                  textInputProps={Object {}}
+                  timeFormat="LT"
+                  user={Object {}}
+                />,
+                <KeyboardAvoidingView
+                  enabled={true}
+                  keyboardVerticalOffset={0}
+                />,
+              ],
+              "style": Object {
+                "backgroundColor": "rgb(249,252, 255)",
+                "flex": 1,
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "bottomOffset": 0,
+                  "dateFormat": "ll",
+                  "forceGetKeyboardHeight": false,
+                  "imageProps": Object {},
+                  "inverted": true,
+                  "isAnimated": true,
+                  "isLoadingEarlier": false,
+                  "keyboardShouldPersistTaps": "never",
+                  "lightboxProps": Object {},
+                  "listViewProps": Object {},
+                  "loadEarlier": true,
+                  "locale": null,
+                  "maxInputLength": null,
+                  "messageIdGenerator": [Function],
+                  "messages": Array [
+                    Object {
+                      "_id": 660622,
+                      "createdAt": 2016-08-30T17:20:00.000Z,
+                      "received": true,
+                      "sent": true,
+                      "text": "Yes, and I use Gifted Chat!",
+                      "user": Object {
+                        "_id": 1,
+                        "name": "Developer",
+                      },
+                    },
+                    Object {
+                      "_id": 709534,
+                      "createdAt": 2016-08-30T17:20:00.000Z,
+                      "text": "Are you building a chat app?",
+                      "user": Object {
+                        "_id": 2,
+                        "name": "React Native",
+                      },
+                    },
+                    Object {
+                      "_id": 103811,
+                      "createdAt": 2016-08-30T17:20:00.000Z,
+                      "system": true,
+                      "text": "You are officially rocking GiftedChat.",
+                    },
+                  ],
+                  "minInputToolbarHeight": 44,
+                  "onInputTextChanged": null,
+                  "onLoadEarlier": [Function],
+                  "onLongPress": null,
+                  "onPressActionButton": null,
+                  "onPressAvatar": null,
+                  "onSend": [Function],
+                  "placeholder": "Type a message...",
+                  "renderAccessory": null,
+                  "renderActions": [Function],
+                  "renderAvatar": undefined,
+                  "renderAvatarOnTop": false,
+                  "renderBubble": null,
+                  "renderChatFooter": null,
+                  "renderComposer": null,
+                  "renderCustomView": null,
+                  "renderDay": null,
+                  "renderFooter": [Function],
+                  "renderInputToolbar": [Function],
+                  "renderLoadEarlier": null,
+                  "renderLoading": null,
+                  "renderMessage": [Function],
+                  "renderMessageImage": null,
+                  "renderMessageText": null,
+                  "renderSend": null,
+                  "renderSystemMessage": null,
+                  "renderTime": null,
+                  "showUserAvatar": false,
+                  "text": undefined,
+                  "textInputProps": Object {},
+                  "timeFormat": "LT",
+                  "user": Object {},
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "enabled": true,
+                  "keyboardVerticalOffset": 0,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": "View",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

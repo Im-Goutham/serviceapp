@@ -35,8 +35,8 @@ class MyRequestScreen extends Component {
   tabrender(){
     return tabItems.map((value, index)=>{
       return (
-          <View>
-        <TouchableOpacity key={index} onPress={()=>this.setState({
+          <View key={index}>
+        <TouchableOpacity onPress={()=>this.setState({
             tabindex: index
           })}
           style={{
@@ -155,9 +155,8 @@ const styles = StyleSheet.create({
 })
 
 
-const mapStateToProps = state=> ({ 
+const mapStateToProps = state=> ({
     backButton:state.user.backButton,
   })
-  
-export default connect(mapStateToProps, actions)(MyRequestScreen);
 
+export default connect(mapStateToProps, actions)(MyRequestScreen);
