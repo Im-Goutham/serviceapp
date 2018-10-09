@@ -301,7 +301,7 @@ class ProfileScreen extends Component {
                                </View>
                             ):(
                               <View  style={[styles.user_placeholder,{backgroundColor:'rgb(229, 239, 252)'}]}>
-                              <Image source={require('../images/user_placeholder.png')}  style={{width:'100%',height:'100%',borderRadius:scale(70)}}/>
+                              <Image source={require('../images/user_placeholder.png')}  style={{width:scale(100),height:scale(120),marginTop:scale(20)}}/>
                              </View>
                             )
                         }

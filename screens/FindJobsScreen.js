@@ -11,7 +11,7 @@ import {
     Text, TouchableHighlight, TouchableWithoutFeedback, ImageBackground
 } from 'react-native';
 import {  Icon } from 'native-base';
-import Share, {ShareSheet, Button} from 'react-native-share';
+import { Share } from 'react-native';
 import Advertisement from '../components/Advertisement';
 import JobsList from '../components/JobsList';
 import Map from '../components/Map';
@@ -223,14 +223,18 @@ class FindJobScreen extends Component {
     }
 
     shareJob() {
-        console.log('share icon clicked')
-        let shareOptions = {
-            title: "Need Cook",
-            message: "Eleifend suspendisse curae ur natoque leifend leifend suspendiss natoque ur n...",
-            url: "http://facebook.github.io/react-native/",
-            subject: "SpotJobs"
-        };
-        Share.open(shareOptions);
+        Share.share({
+            message: 'BAM: we\'re helping your business with awesome React Native apps',
+            url: 'http://bam.tech',
+            title: 'Wow, did you see that?'
+          }, {
+            // Android only:
+            dialogTitle: 'Share BAM goodness',
+            // iOS only:
+            excludedActivityTypes: [
+              'com.apple.UIKit.activity.PostToTwitter'
+            ]
+          })
     }
 
     showImage(index){

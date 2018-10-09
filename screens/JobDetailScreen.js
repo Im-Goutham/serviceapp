@@ -17,7 +17,7 @@ import Map from '../components/Map';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import Modal from 'react-native-modalbox';
-import Share, {ShareSheet, Button} from 'react-native-share';
+import { Share } from 'react-native';
 import HeaderScreen from './HeaderScreen';
 import PhotoGallery from '../components/PhotoGallery';
 import ApplyModal from '../components/ApplyModal';
@@ -284,14 +284,18 @@ export default class JobDetailScreen extends Component {
 
 
     shareJob() {
-        console.log('share icon clicked')
-        let shareOptions = {
-            title: "Need Cook",
-            message: "Eleifend suspendisse curae ur natoque leifend leifend suspendiss natoque ur n...",
-            url: "http://facebook.github.io/react-native/",
-            subject: "SpotJobs"
-        };
-        Share.open(shareOptions);
+        Share.share({
+            message: 'BAM: we\'re helping your business with awesome React Native apps',
+            url: 'http://bam.tech',
+            title: 'Wow, did you see that?'
+          }, {
+            // Android only:
+            dialogTitle: 'Share BAM goodness',
+            // iOS only:
+            excludedActivityTypes: [
+              'com.apple.UIKit.activity.PostToTwitter'
+            ]
+          })
     }
 
     render() {

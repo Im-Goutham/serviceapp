@@ -52,7 +52,6 @@
     "react-native-options-menu": "^2.0.2",
     "react-native-push-notification": "^3.1.1",
     "react-native-safe-area-view": "^0.9.0",
-    "react-native-share": "^1.1.1",
     "react-native-size-matters": "^0.1.4",
     "react-native-snap-carousel": "^3.7.4",
     "react-native-sound": "^0.10.9",
@@ -91,7 +90,7 @@
       "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
     },
     "transformIgnorePatterns": [
-      "node_modules/(?!react-native|native-base|react-navigation|radio-button-react-native|react-native-share)"
+      "node_modules/(?!react-native|native-base|react-navigation|radio-button-react-native)"
     ]
   }
 }

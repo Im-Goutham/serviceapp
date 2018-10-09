@@ -17,7 +17,6 @@ import com.oblador.vectoricons.VectorIconsPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.zmxv.RNSound.RNSoundPackage;
 import com.rnim.rn.audio.ReactNativeAudioPackage;
-import cl.json.RNSharePackage;
 import com.imagepicker.ImagePickerPackage;
 import com.amazonaws.RNAWSCognitoPackage;
 import com.dieam.reactnativepushnotification.ReactNativePushNotificationPackage;
@@ -58,7 +57,6 @@ public class MainApplication extends Application implements ReactApplication {
             new SplashScreenReactPackage(),
             new RNSoundPackage(),
             new ReactNativeAudioPackage(),
-            new RNSharePackage(),
             new ImagePickerPackage(),
             new RNAWSCognitoPackage(),
             new ReactNativePushNotificationPackage(),

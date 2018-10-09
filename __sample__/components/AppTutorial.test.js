@@ -4,7 +4,6 @@ jest.unmock('redux-thunk')
 
 import React from 'react';
 import  {TouchableOpacity} from 'react-native';
-import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
@@ -13,7 +12,6 @@ import AppTutorialScreen from '../../screens/AppTutorialScreen';
 import AccountScreen from '../../screens/AccountScreen';
 import {initialState} from '../../config/jest/mockStore';
 
-let store;
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 let store;

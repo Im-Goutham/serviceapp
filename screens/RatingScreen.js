@@ -67,7 +67,7 @@ class RatingScreen extends Component {
         return(
             <View style={styles.servicesBox} key={index} >
                 <View style={{flex:1,flexDirection:'row'}}>
-                    <View style={{flex:3}}>
+                    <View style={{flex:3,paddingVertical:scale(5)}}>
                         <View style={styles.imageShadow}>
                             <Image source={data.image} style={[styles.img_placeholder,{borderRadius:scale(35),width:scale(70),height:scale(70)}]}/>
                             <Image source={require('../images/check.png')} style={styles.check}/>
@@ -206,9 +206,11 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgb(239,186,47)',
         borderRadius:scale(10),
         overflow:"hidden",
-        paddingVertical:1,
-        paddingLeft:scale(10),
+        paddingVertical:scale(2),
+        paddingHorizontal:scale(10),
+        marginBottom:scale(10),
         color: 'white',
+        marginRight: scale(10),
         fontSize: scale(14),
         fontFamily: 'Montserrat-Bold'
     },

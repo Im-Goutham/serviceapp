@@ -2,7 +2,7 @@ import Swipeout from 'react-native-swipeout';
 import React, {Component} from 'react';
 import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,TouchableOpacity} from 'react-native';
 import {Icon} from 'native-base';
-import Share, {ShareSheet, Button} from 'react-native-share';
+import { Share } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 import OptionsMenu from "react-native-options-menu";
 import {scale} from '../global';
@@ -50,12 +50,7 @@ class JobsList extends Component {
     }
 
     _renderRow(data, sectionID, rowID) {
-        let shareOptions = {
-            title: "React Native",
-            message: "Hola mundo",
-            url: "http://facebook.github.io/react-native/",
-            subject: "Share Link" //  for email
-        };
+
         var screen = this.props.navigation.state.routeName;
         const leftBtn = [
             {
@@ -318,14 +313,21 @@ class JobsList extends Component {
     }
 
     shareJob() {
-        console.log('share icon clicked')
-        let shareOptions = {
-            title: "Need Cook",
-            message: "Eleifend suspendisse curae ur natoque leifend leifend suspendiss natoque ur n...",
-            url: "http://facebook.github.io/react-native/",
-            subject: "SpotJobs"
-        };
-        Share.open(shareOptions);
+        console.log('share icon clicked 1223')
+
+
+        Share.share({
+            message: 'BAM: we\'re helping your business with awesome React Native apps',
+            url: 'http://bam.tech',
+            title: 'Wow, did you see that?'
+          }, {
+            // Android only:
+            dialogTitle: 'Share BAM goodness',
+            // iOS only:
+            excludedActivityTypes: [
+              'com.apple.UIKit.activity.PostToTwitter'
+            ]
+          })
     }
 
     ListViewItemSeparator = () => {

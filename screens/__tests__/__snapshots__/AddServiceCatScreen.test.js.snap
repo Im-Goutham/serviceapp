@@ -42,14 +42,14 @@ ShallowWrapper {
               Object {
                 "backgroundColor": "transparent",
                 "justifyContent": "space-between",
-                "marginHorizontal": 10,
-                "paddingBottom": 20,
-                "paddingTop": 10,
+                "marginHorizontal": 8.695652173913045,
+                "paddingBottom": 17.39130434782609,
+                "paddingTop": 8.695652173913045,
               }
             }
           >
             <SearchBar
-              placeholder="Search here..."
+              placeholder="Search category..."
             />
           </Component>
         }
@@ -62,9 +62,9 @@ ShallowWrapper {
                 style={
                   Object {
                     "alignItems": "center",
-                    "height": 54,
+                    "height": 46.95652173913044,
                     "justifyContent": "center",
-                    "width": 54,
+                    "width": 46.95652173913044,
                   }
                 }
               >
@@ -78,7 +78,7 @@ ShallowWrapper {
                   }
                   style={
                     Object {
-                      "height": 20,
+                      "height": 17.39130434782609,
                       "width": "100%",
                     }
                   }
@@ -101,7 +101,7 @@ ShallowWrapper {
                     "alignItems": "center",
                     "backgroundColor": "transparent",
                     "flexDirection": "row",
-                    "height": 54,
+                    "height": 46.95652173913044,
                     "justifyContent": "center",
                   }
                 }
@@ -111,7 +111,7 @@ ShallowWrapper {
                     Object {
                       "color": "#fff",
                       "fontFamily": "Montserrat-Regular",
-                      "fontSize": 14,
+                      "fontSize": 12.173913043478262,
                     }
                   }
                 >
@@ -124,7 +124,7 @@ ShallowWrapper {
                 style={
                   Object {
                     "alignItems": "flex-start",
-                    "height": 54,
+                    "height": 46.95652173913044,
                     "justifyContent": "center",
                   }
                 }
@@ -134,7 +134,7 @@ ShallowWrapper {
                     Object {
                       "color": "#fff",
                       "fontFamily": "Montserrat-Bold",
-                      "fontSize": 20,
+                      "fontSize": 17.39130434782609,
                     }
                   }
                 >
@@ -173,8 +173,8 @@ ShallowWrapper {
                 Object {
                   "backgroundColor": "rgb(249, 252, 255)",
                   "justifyContent": "space-between",
-                  "paddingBottom": 20,
-                  "paddingHorizontal": 10,
+                  "paddingBottom": 17.39130434782609,
+                  "paddingHorizontal": 8.695652173913045,
                 }
               }
             >
@@ -182,12 +182,12 @@ ShallowWrapper {
                 style={
                   Object {
                     "backgroundColor": "white",
-                    "borderRadius": 10,
+                    "borderRadius": 8.695652173913045,
                     "elevation": 1,
                     "flex": 1,
-                    "marginTop": 20,
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 20,
+                    "marginTop": 17.39130434782609,
+                    "paddingHorizontal": 17.39130434782609,
+                    "paddingVertical": 17.39130434782609,
                     "shadowOffset": Object {
                       "height": 2,
                       "width": 0,
@@ -204,7 +204,7 @@ ShallowWrapper {
                     style={
                       Object {
                         "fontFamily": "Montserrat-SemiBold",
-                        "fontSize": 17,
+                        "fontSize": 14.782608695652176,
                       }
                     }
                   >
@@ -403,12 +403,12 @@ ShallowWrapper {
                 style={
                   Object {
                     "backgroundColor": "white",
-                    "borderRadius": 10,
+                    "borderRadius": 8.695652173913045,
                     "elevation": 1,
                     "flex": 1,
-                    "marginTop": 20,
-                    "paddingHorizontal": 20,
-                    "paddingVertical": 20,
+                    "marginTop": 17.39130434782609,
+                    "paddingHorizontal": 17.39130434782609,
+                    "paddingVertical": 17.39130434782609,
                     "shadowOffset": Object {
                       "height": 2,
                       "width": 0,
@@ -425,7 +425,7 @@ ShallowWrapper {
                     style={
                       Object {
                         "fontFamily": "Montserrat-SemiBold",
-                        "fontSize": 17,
+                        "fontSize": 14.782608695652176,
                       }
                     }
                   >
@@ -439,7 +439,7 @@ ShallowWrapper {
                       "flexDirection": "row",
                       "flexWrap": "wrap",
                       "justifyContent": "space-around",
-                      "paddingVertical": 10,
+                      "paddingVertical": 8.695652173913045,
                     }
                   }
                 >
@@ -948,7 +948,7 @@ ShallowWrapper {
                     Object {
                       "color": "white",
                       "fontFamily": "Montserrat-Bold",
-                      "fontSize": 18,
+                      "fontSize": 15.65217391304348,
                       "textAlign": "center",
                     }
                   }
@@ -1007,14 +1007,14 @@ ShallowWrapper {
                 Object {
                   "backgroundColor": "transparent",
                   "justifyContent": "space-between",
-                  "marginHorizontal": 10,
-                  "paddingBottom": 20,
-                  "paddingTop": 10,
+                  "marginHorizontal": 8.695652173913045,
+                  "paddingBottom": 17.39130434782609,
+                  "paddingTop": 8.695652173913045,
                 }
               }
             >
               <SearchBar
-                placeholder="Search here..."
+                placeholder="Search category..."
               />
             </Component>
           }
@@ -1027,9 +1027,9 @@ ShallowWrapper {
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 54,
+                      "height": 46.95652173913044,
                       "justifyContent": "center",
-                      "width": 54,
+                      "width": 46.95652173913044,
                     }
                   }
                 >
@@ -1043,7 +1043,7 @@ ShallowWrapper {
                     }
                     style={
                       Object {
-                        "height": 20,
+                        "height": 17.39130434782609,
                         "width": "100%",
                       }
                     }
@@ -1066,7 +1066,7 @@ ShallowWrapper {
                       "alignItems": "center",
                       "backgroundColor": "transparent",
                       "flexDirection": "row",
-                      "height": 54,
+                      "height": 46.95652173913044,
                       "justifyContent": "center",
                     }
                   }
@@ -1076,7 +1076,7 @@ ShallowWrapper {
                       Object {
                         "color": "#fff",
                         "fontFamily": "Montserrat-Regular",
-                        "fontSize": 14,
+                        "fontSize": 12.173913043478262,
                       }
                     }
                   >
@@ -1089,7 +1089,7 @@ ShallowWrapper {
                   style={
                     Object {
                       "alignItems": "flex-start",
-                      "height": 54,
+                      "height": 46.95652173913044,
                       "justifyContent": "center",
                     }
                   }
@@ -1099,7 +1099,7 @@ ShallowWrapper {
                       Object {
                         "color": "#fff",
                         "fontFamily": "Montserrat-Bold",
-                        "fontSize": 20,
+                        "fontSize": 17.39130434782609,
                       }
                     }
                   >
@@ -1138,8 +1138,8 @@ ShallowWrapper {
                   Object {
                     "backgroundColor": "rgb(249, 252, 255)",
                     "justifyContent": "space-between",
-                    "paddingBottom": 20,
-                    "paddingHorizontal": 10,
+                    "paddingBottom": 17.39130434782609,
+                    "paddingHorizontal": 8.695652173913045,
                   }
                 }
               >
@@ -1147,12 +1147,12 @@ ShallowWrapper {
                   style={
                     Object {
                       "backgroundColor": "white",
-                      "borderRadius": 10,
+                      "borderRadius": 8.695652173913045,
                       "elevation": 1,
                       "flex": 1,
-                      "marginTop": 20,
-                      "paddingHorizontal": 20,
-                      "paddingVertical": 20,
+                      "marginTop": 17.39130434782609,
+                      "paddingHorizontal": 17.39130434782609,
+                      "paddingVertical": 17.39130434782609,
                       "shadowOffset": Object {
                         "height": 2,
                         "width": 0,
@@ -1169,7 +1169,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "fontFamily": "Montserrat-SemiBold",
-                          "fontSize": 17,
+                          "fontSize": 14.782608695652176,
                         }
                       }
                     >
@@ -1368,12 +1368,12 @@ ShallowWrapper {
                   style={
                     Object {
                       "backgroundColor": "white",
-                      "borderRadius": 10,
+                      "borderRadius": 8.695652173913045,
                       "elevation": 1,
                       "flex": 1,
-                      "marginTop": 20,
-                      "paddingHorizontal": 20,
-                      "paddingVertical": 20,
+                      "marginTop": 17.39130434782609,
+                      "paddingHorizontal": 17.39130434782609,
+                      "paddingVertical": 17.39130434782609,
                       "shadowOffset": Object {
                         "height": 2,
                         "width": 0,
@@ -1390,7 +1390,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "fontFamily": "Montserrat-SemiBold",
-                          "fontSize": 17,
+                          "fontSize": 14.782608695652176,
                         }
                       }
                     >
@@ -1404,7 +1404,7 @@ ShallowWrapper {
                         "flexDirection": "row",
                         "flexWrap": "wrap",
                         "justifyContent": "space-around",
-                        "paddingVertical": 10,
+                        "paddingVertical": 8.695652173913045,
                       }
                     }
                   >
@@ -1913,7 +1913,7 @@ ShallowWrapper {
                       Object {
                         "color": "white",
                         "fontFamily": "Montserrat-Bold",
-                        "fontSize": 18,
+                        "fontSize": 15.65217391304348,
                         "textAlign": "center",
                       }
                     }
@@ -1944,14 +1944,14 @@ ShallowWrapper {
                   Object {
                     "backgroundColor": "transparent",
                     "justifyContent": "space-between",
-                    "marginHorizontal": 10,
-                    "paddingBottom": 20,
-                    "paddingTop": 10,
+                    "marginHorizontal": 8.695652173913045,
+                    "paddingBottom": 17.39130434782609,
+                    "paddingTop": 8.695652173913045,
                   }
                 }
               >
                 <SearchBar
-                  placeholder="Search here..."
+                  placeholder="Search category..."
                 />
               </Component>
             }
@@ -1964,9 +1964,9 @@ ShallowWrapper {
                     style={
                       Object {
                         "alignItems": "center",
-                        "height": 54,
+                        "height": 46.95652173913044,
                         "justifyContent": "center",
-                        "width": 54,
+                        "width": 46.95652173913044,
                       }
                     }
                   >
@@ -1980,7 +1980,7 @@ ShallowWrapper {
                       }
                       style={
                         Object {
-                          "height": 20,
+                          "height": 17.39130434782609,
                           "width": "100%",
                         }
                       }
@@ -2003,7 +2003,7 @@ ShallowWrapper {
                         "alignItems": "center",
                         "backgroundColor": "transparent",
                         "flexDirection": "row",
-                        "height": 54,
+                        "height": 46.95652173913044,
                         "justifyContent": "center",
                       }
                     }
@@ -2013,7 +2013,7 @@ ShallowWrapper {
                         Object {
                           "color": "#fff",
                           "fontFamily": "Montserrat-Regular",
-                          "fontSize": 14,
+                          "fontSize": 12.173913043478262,
                         }
                       }
                     >
@@ -2026,7 +2026,7 @@ ShallowWrapper {
                     style={
                       Object {
                         "alignItems": "flex-start",
-                        "height": 54,
+                        "height": 46.95652173913044,
                         "justifyContent": "center",
                       }
                     }
@@ -2036,7 +2036,7 @@ ShallowWrapper {
                         Object {
                           "color": "#fff",
                           "fontFamily": "Montserrat-Bold",
-                          "fontSize": 20,
+                          "fontSize": 17.39130434782609,
                         }
                       }
                     >
@@ -2075,8 +2075,8 @@ ShallowWrapper {
                     Object {
                       "backgroundColor": "rgb(249, 252, 255)",
                       "justifyContent": "space-between",
-                      "paddingBottom": 20,
-                      "paddingHorizontal": 10,
+                      "paddingBottom": 17.39130434782609,
+                      "paddingHorizontal": 8.695652173913045,
                     }
                   }
                 >
@@ -2084,12 +2084,12 @@ ShallowWrapper {
                     style={
                       Object {
                         "backgroundColor": "white",
-                        "borderRadius": 10,
+                        "borderRadius": 8.695652173913045,
                         "elevation": 1,
                         "flex": 1,
-                        "marginTop": 20,
-                        "paddingHorizontal": 20,
-                        "paddingVertical": 20,
+                        "marginTop": 17.39130434782609,
+                        "paddingHorizontal": 17.39130434782609,
+                        "paddingVertical": 17.39130434782609,
                         "shadowOffset": Object {
                           "height": 2,
                           "width": 0,
@@ -2106,7 +2106,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "fontFamily": "Montserrat-SemiBold",
-                            "fontSize": 17,
+                            "fontSize": 14.782608695652176,
                           }
                         }
                       >
@@ -2305,12 +2305,12 @@ ShallowWrapper {
                     style={
                       Object {
                         "backgroundColor": "white",
-                        "borderRadius": 10,
+                        "borderRadius": 8.695652173913045,
                         "elevation": 1,
                         "flex": 1,
-                        "marginTop": 20,
-                        "paddingHorizontal": 20,
-                        "paddingVertical": 20,
+                        "marginTop": 17.39130434782609,
+                        "paddingHorizontal": 17.39130434782609,
+                        "paddingVertical": 17.39130434782609,
                         "shadowOffset": Object {
                           "height": 2,
                           "width": 0,
@@ -2327,7 +2327,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "fontFamily": "Montserrat-SemiBold",
-                            "fontSize": 17,
+                            "fontSize": 14.782608695652176,
                           }
                         }
                       >
@@ -2341,7 +2341,7 @@ ShallowWrapper {
                           "flexDirection": "row",
                           "flexWrap": "wrap",
                           "justifyContent": "space-around",
-                          "paddingVertical": 10,
+                          "paddingVertical": 8.695652173913045,
                         }
                       }
                     >
@@ -2850,7 +2850,7 @@ ShallowWrapper {
                         Object {
                           "color": "white",
                           "fontFamily": "Montserrat-Bold",
-                          "fontSize": 18,
+                          "fontSize": 15.65217391304348,
                           "textAlign": "center",
                         }
                       }
@@ -2891,14 +2891,14 @@ ShallowWrapper {
                 Object {
                   "backgroundColor": "transparent",
                   "justifyContent": "space-between",
-                  "marginHorizontal": 10,
-                  "paddingBottom": 20,
-                  "paddingTop": 10,
+                  "marginHorizontal": 8.695652173913045,
+                  "paddingBottom": 17.39130434782609,
+                  "paddingTop": 8.695652173913045,
                 }
               }
             >
               <SearchBar
-                placeholder="Search here..."
+                placeholder="Search category..."
               />
             </Component>,
             "header": <Header
@@ -2909,9 +2909,9 @@ ShallowWrapper {
                   style={
                     Object {
                       "alignItems": "center",
-                      "height": 54,
+                      "height": 46.95652173913044,
                       "justifyContent": "center",
-                      "width": 54,
+                      "width": 46.95652173913044,
                     }
                   }
                 >
@@ -2925,7 +2925,7 @@ ShallowWrapper {
                     }
                     style={
                       Object {
-                        "height": 20,
+                        "height": 17.39130434782609,
                         "width": "100%",
                       }
                     }
@@ -2948,7 +2948,7 @@ ShallowWrapper {
                       "alignItems": "center",
                       "backgroundColor": "transparent",
                       "flexDirection": "row",
-                      "height": 54,
+                      "height": 46.95652173913044,
                       "justifyContent": "center",
                     }
                   }
@@ -2958,7 +2958,7 @@ ShallowWrapper {
                       Object {
                         "color": "#fff",
                         "fontFamily": "Montserrat-Regular",
-                        "fontSize": 14,
+                        "fontSize": 12.173913043478262,
                       }
                     }
                   >
@@ -2971,7 +2971,7 @@ ShallowWrapper {
                   style={
                     Object {
                       "alignItems": "flex-start",
-                      "height": 54,
+                      "height": 46.95652173913044,
                       "justifyContent": "center",
                     }
                   }
@@ -2981,7 +2981,7 @@ ShallowWrapper {
                       Object {
                         "color": "#fff",
                         "fontFamily": "Montserrat-Bold",
-                        "fontSize": 20,
+                        "fontSize": 17.39130434782609,
                       }
                     }
                   >
@@ -3020,8 +3020,8 @@ ShallowWrapper {
                     Object {
                       "backgroundColor": "rgb(249, 252, 255)",
                       "justifyContent": "space-between",
-                      "paddingBottom": 20,
-                      "paddingHorizontal": 10,
+                      "paddingBottom": 17.39130434782609,
+                      "paddingHorizontal": 8.695652173913045,
                     }
                   }
                 >
@@ -3029,12 +3029,12 @@ ShallowWrapper {
                     style={
                       Object {
                         "backgroundColor": "white",
-                        "borderRadius": 10,
+                        "borderRadius": 8.695652173913045,
                         "elevation": 1,
                         "flex": 1,
-                        "marginTop": 20,
-                        "paddingHorizontal": 20,
-                        "paddingVertical": 20,
+                        "marginTop": 17.39130434782609,
+                        "paddingHorizontal": 17.39130434782609,
+                        "paddingVertical": 17.39130434782609,
                         "shadowOffset": Object {
                           "height": 2,
                           "width": 0,
@@ -3051,7 +3051,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "fontFamily": "Montserrat-SemiBold",
-                            "fontSize": 17,
+                            "fontSize": 14.782608695652176,
                           }
                         }
                       >
@@ -3250,12 +3250,12 @@ ShallowWrapper {
                     style={
                       Object {
                         "backgroundColor": "white",
-                        "borderRadius": 10,
+                        "borderRadius": 8.695652173913045,
                         "elevation": 1,
                         "flex": 1,
-                        "marginTop": 20,
-                        "paddingHorizontal": 20,
-                        "paddingVertical": 20,
+                        "marginTop": 17.39130434782609,
+                        "paddingHorizontal": 17.39130434782609,
+                        "paddingVertical": 17.39130434782609,
                         "shadowOffset": Object {
                           "height": 2,
                           "width": 0,
@@ -3272,7 +3272,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "fontFamily": "Montserrat-SemiBold",
-                            "fontSize": 17,
+                            "fontSize": 14.782608695652176,
                           }
                         }
                       >
@@ -3286,7 +3286,7 @@ ShallowWrapper {
                           "flexDirection": "row",
                           "flexWrap": "wrap",
                           "justifyContent": "space-around",
-                          "paddingVertical": 10,
+                          "paddingVertical": 8.695652173913045,
                         }
                       }
                     >
@@ -3795,7 +3795,7 @@ ShallowWrapper {
                         Object {
                           "color": "white",
                           "fontFamily": "Montserrat-Bold",
-                          "fontSize": 18,
+                          "fontSize": 15.65217391304348,
                           "textAlign": "center",
                         }
                       }
@@ -3830,8 +3830,8 @@ ShallowWrapper {
                     Object {
                       "backgroundColor": "rgb(249, 252, 255)",
                       "justifyContent": "space-between",
-                      "paddingBottom": 20,
-                      "paddingHorizontal": 10,
+                      "paddingBottom": 17.39130434782609,
+                      "paddingHorizontal": 8.695652173913045,
                     }
                   }
                 >
@@ -3839,12 +3839,12 @@ ShallowWrapper {
                     style={
                       Object {
                         "backgroundColor": "white",
-                        "borderRadius": 10,
+                        "borderRadius": 8.695652173913045,
                         "elevation": 1,
                         "flex": 1,
-                        "marginTop": 20,
-                        "paddingHorizontal": 20,
-                        "paddingVertical": 20,
+                        "marginTop": 17.39130434782609,
+                        "paddingHorizontal": 17.39130434782609,
+                        "paddingVertical": 17.39130434782609,
                         "shadowOffset": Object {
                           "height": 2,
                           "width": 0,
@@ -3861,7 +3861,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "fontFamily": "Montserrat-SemiBold",
-                            "fontSize": 17,
+                            "fontSize": 14.782608695652176,
                           }
                         }
                       >
@@ -4060,12 +4060,12 @@ ShallowWrapper {
                     style={
                       Object {
                         "backgroundColor": "white",
-                        "borderRadius": 10,
+                        "borderRadius": 8.695652173913045,
                         "elevation": 1,
                         "flex": 1,
-                        "marginTop": 20,
-                        "paddingHorizontal": 20,
-                        "paddingVertical": 20,
+                        "marginTop": 17.39130434782609,
+                        "paddingHorizontal": 17.39130434782609,
+                        "paddingVertical": 17.39130434782609,
                         "shadowOffset": Object {
                           "height": 2,
                           "width": 0,
@@ -4082,7 +4082,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "fontFamily": "Montserrat-SemiBold",
-                            "fontSize": 17,
+                            "fontSize": 14.782608695652176,
                           }
                         }
                       >
@@ -4096,7 +4096,7 @@ ShallowWrapper {
                           "flexDirection": "row",
                           "flexWrap": "wrap",
                           "justifyContent": "space-around",
-                          "paddingVertical": 10,
+                          "paddingVertical": 8.695652173913045,
                         }
                       }
                     >
@@ -4605,7 +4605,7 @@ ShallowWrapper {
                         Object {
                           "color": "white",
                           "fontFamily": "Montserrat-Bold",
-                          "fontSize": 18,
+                          "fontSize": 15.65217391304348,
                           "textAlign": "center",
                         }
                       }
@@ -4631,8 +4631,8 @@ ShallowWrapper {
                       Object {
                         "backgroundColor": "rgb(249, 252, 255)",
                         "justifyContent": "space-between",
-                        "paddingBottom": 20,
-                        "paddingHorizontal": 10,
+                        "paddingBottom": 17.39130434782609,
+                        "paddingHorizontal": 8.695652173913045,
                       }
                     }
                   >
@@ -4640,12 +4640,12 @@ ShallowWrapper {
                       style={
                         Object {
                           "backgroundColor": "white",
-                          "borderRadius": 10,
+                          "borderRadius": 8.695652173913045,
                           "elevation": 1,
                           "flex": 1,
-                          "marginTop": 20,
-                          "paddingHorizontal": 20,
-                          "paddingVertical": 20,
+                          "marginTop": 17.39130434782609,
+                          "paddingHorizontal": 17.39130434782609,
+                          "paddingVertical": 17.39130434782609,
                           "shadowOffset": Object {
                             "height": 2,
                             "width": 0,
@@ -4662,7 +4662,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "fontFamily": "Montserrat-SemiBold",
-                              "fontSize": 17,
+                              "fontSize": 14.782608695652176,
                             }
                           }
                         >
@@ -4861,12 +4861,12 @@ ShallowWrapper {
                       style={
                         Object {
                           "backgroundColor": "white",
-                          "borderRadius": 10,
+                          "borderRadius": 8.695652173913045,
                           "elevation": 1,
                           "flex": 1,
-                          "marginTop": 20,
-                          "paddingHorizontal": 20,
-                          "paddingVertical": 20,
+                          "marginTop": 17.39130434782609,
+                          "paddingHorizontal": 17.39130434782609,
+                          "paddingVertical": 17.39130434782609,
                           "shadowOffset": Object {
                             "height": 2,
                             "width": 0,
@@ -4883,7 +4883,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "fontFamily": "Montserrat-SemiBold",
-                              "fontSize": 17,
+                              "fontSize": 14.782608695652176,
                             }
                           }
                         >
@@ -4897,7 +4897,7 @@ ShallowWrapper {
                             "flexDirection": "row",
                             "flexWrap": "wrap",
                             "justifyContent": "space-around",
-                            "paddingVertical": 10,
+                            "paddingVertical": 8.695652173913045,
                           }
                         }
                       >
@@ -5406,7 +5406,7 @@ ShallowWrapper {
                           Object {
                             "color": "white",
                             "fontFamily": "Montserrat-Bold",
-                            "fontSize": 18,
+                            "fontSize": 15.65217391304348,
                             "textAlign": "center",
                           }
                         }
@@ -5433,12 +5433,12 @@ ShallowWrapper {
                         style={
                           Object {
                             "backgroundColor": "white",
-                            "borderRadius": 10,
+                            "borderRadius": 8.695652173913045,
                             "elevation": 1,
                             "flex": 1,
-                            "marginTop": 20,
-                            "paddingHorizontal": 20,
-                            "paddingVertical": 20,
+                            "marginTop": 17.39130434782609,
+                            "paddingHorizontal": 17.39130434782609,
+                            "paddingVertical": 17.39130434782609,
                             "shadowOffset": Object {
                               "height": 2,
                               "width": 0,
@@ -5455,7 +5455,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "fontFamily": "Montserrat-SemiBold",
-                                "fontSize": 17,
+                                "fontSize": 14.782608695652176,
                               }
                             }
                           >
@@ -5654,12 +5654,12 @@ ShallowWrapper {
                         style={
                           Object {
                             "backgroundColor": "white",
-                            "borderRadius": 10,
+                            "borderRadius": 8.695652173913045,
                             "elevation": 1,
                             "flex": 1,
-                            "marginTop": 20,
-                            "paddingHorizontal": 20,
-                            "paddingVertical": 20,
+                            "marginTop": 17.39130434782609,
+                            "paddingHorizontal": 17.39130434782609,
+                            "paddingVertical": 17.39130434782609,
                             "shadowOffset": Object {
                               "height": 2,
                               "width": 0,
@@ -5676,7 +5676,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "fontFamily": "Montserrat-SemiBold",
-                                "fontSize": 17,
+                                "fontSize": 14.782608695652176,
                               }
                             }
                           >
@@ -5690,7 +5690,7 @@ ShallowWrapper {
                               "flexDirection": "row",
                               "flexWrap": "wrap",
                               "justifyContent": "space-around",
-                              "paddingVertical": 10,
+                              "paddingVertical": 8.695652173913045,
                             }
                           }
                         >
@@ -6168,8 +6168,8 @@ ShallowWrapper {
                     "style": Object {
                       "backgroundColor": "rgb(249, 252, 255)",
                       "justifyContent": "space-between",
-                      "paddingBottom": 20,
-                      "paddingHorizontal": 10,
+                      "paddingBottom": 17.39130434782609,
+                      "paddingHorizontal": 8.695652173913045,
                     },
                   },
                   "ref": null,
@@ -6187,7 +6187,7 @@ ShallowWrapper {
                               style={
                                 Object {
                                   "fontFamily": "Montserrat-SemiBold",
-                                  "fontSize": 17,
+                                  "fontSize": 14.782608695652176,
                                 }
                               }
                             >
@@ -6384,12 +6384,12 @@ ShallowWrapper {
                         ],
                         "style": Object {
                           "backgroundColor": "white",
-                          "borderRadius": 10,
+                          "borderRadius": 8.695652173913045,
                           "elevation": 1,
                           "flex": 1,
-                          "marginTop": 20,
-                          "paddingHorizontal": 20,
-                          "paddingVertical": 20,
+                          "marginTop": 17.39130434782609,
+                          "paddingHorizontal": 17.39130434782609,
+                          "paddingVertical": 17.39130434782609,
                           "shadowOffset": Object {
                             "height": 2,
                             "width": 0,
@@ -6409,7 +6409,7 @@ ShallowWrapper {
                               style={
                                 Object {
                                   "fontFamily": "Montserrat-SemiBold",
-                                  "fontSize": 17,
+                                  "fontSize": 14.782608695652176,
                                 }
                               }
                             >
@@ -6426,7 +6426,7 @@ ShallowWrapper {
                               "children": "Popular Categories",
                               "style": Object {
                                 "fontFamily": "Montserrat-SemiBold",
-                                "fontSize": 17,
+                                "fontSize": 14.782608695652176,
                               },
                             },
                             "ref": null,
@@ -6914,7 +6914,7 @@ ShallowWrapper {
                               style={
                                 Object {
                                   "fontFamily": "Montserrat-SemiBold",
-                                  "fontSize": 17,
+                                  "fontSize": 14.782608695652176,
                                 }
                               }
                             >
@@ -6928,7 +6928,7 @@ ShallowWrapper {
                                 "flexDirection": "row",
                                 "flexWrap": "wrap",
                                 "justifyContent": "space-around",
-                                "paddingVertical": 10,
+                                "paddingVertical": 8.695652173913045,
                               }
                             }
                           >
@@ -7404,12 +7404,12 @@ ShallowWrapper {
                         ],
                         "style": Object {
                           "backgroundColor": "white",
-                          "borderRadius": 10,
+                          "borderRadius": 8.695652173913045,
                           "elevation": 1,
                           "flex": 1,
-                          "marginTop": 20,
-                          "paddingHorizontal": 20,
-                          "paddingVertical": 20,
+                          "marginTop": 17.39130434782609,
+                          "paddingHorizontal": 17.39130434782609,
+                          "paddingVertical": 17.39130434782609,
                           "shadowOffset": Object {
                             "height": 2,
                             "width": 0,
@@ -7429,7 +7429,7 @@ ShallowWrapper {
                               style={
                                 Object {
                                   "fontFamily": "Montserrat-SemiBold",
-                                  "fontSize": 17,
+                                  "fontSize": 14.782608695652176,
                                 }
                               }
                             >
@@ -7446,7 +7446,7 @@ ShallowWrapper {
                               "children": "All Categories",
                               "style": Object {
                                 "fontFamily": "Montserrat-SemiBold",
-                                "fontSize": 17,
+                                "fontSize": 14.782608695652176,
                               },
                             },
                             "ref": null,
@@ -7935,7 +7935,7 @@ ShallowWrapper {
                               "flexDirection": "row",
                               "flexWrap": "wrap",
                               "justifyContent": "space-around",
-                              "paddingVertical": 10,
+                              "paddingVertical": 8.695652173913045,
                             },
                           },
                           "ref": null,
@@ -8647,7 +8647,7 @@ ShallowWrapper {
                           Object {
                             "color": "white",
                             "fontFamily": "Montserrat-Bold",
-                            "fontSize": 18,
+                            "fontSize": 15.65217391304348,
                             "textAlign": "center",
                           }
                         }
@@ -8683,7 +8683,7 @@ ShallowWrapper {
                           Object {
                             "color": "white",
                             "fontFamily": "Montserrat-Bold",
-                            "fontSize": 18,
+                            "fontSize": 15.65217391304348,
                             "textAlign": "center",
                           }
                         }
@@ -8702,7 +8702,7 @@ ShallowWrapper {
                         "style": Object {
                           "color": "white",
                           "fontFamily": "Montserrat-Bold",
-                          "fontSize": 18,
+                          "fontSize": 15.65217391304348,
                           "textAlign": "center",
                         },
                       },
@@ -8764,14 +8764,14 @@ ShallowWrapper {
                   Object {
                     "backgroundColor": "transparent",
                     "justifyContent": "space-between",
-                    "marginHorizontal": 10,
-                    "paddingBottom": 20,
-                    "paddingTop": 10,
+                    "marginHorizontal": 8.695652173913045,
+                    "paddingBottom": 17.39130434782609,
+                    "paddingTop": 8.695652173913045,
                   }
                 }
               >
                 <SearchBar
-                  placeholder="Search here..."
+                  placeholder="Search category..."
                 />
               </Component>
             }
@@ -8784,9 +8784,9 @@ ShallowWrapper {
                     style={
                       Object {
                         "alignItems": "center",
-                        "height": 54,
+                        "height": 46.95652173913044,
                         "justifyContent": "center",
-                        "width": 54,
+                        "width": 46.95652173913044,
                       }
                     }
                   >
@@ -8800,7 +8800,7 @@ ShallowWrapper {
                       }
                       style={
                         Object {
-                          "height": 20,
+                          "height": 17.39130434782609,
                           "width": "100%",
                         }
                       }
@@ -8823,7 +8823,7 @@ ShallowWrapper {
                         "alignItems": "center",
                         "backgroundColor": "transparent",
                         "flexDirection": "row",
-                        "height": 54,
+                        "height": 46.95652173913044,
                         "justifyContent": "center",
                       }
                     }
@@ -8833,7 +8833,7 @@ ShallowWrapper {
                         Object {
                           "color": "#fff",
                           "fontFamily": "Montserrat-Regular",
-                          "fontSize": 14,
+                          "fontSize": 12.173913043478262,
                         }
                       }
                     >
@@ -8846,7 +8846,7 @@ ShallowWrapper {
                     style={
                       Object {
                         "alignItems": "flex-start",
-                        "height": 54,
+                        "height": 46.95652173913044,
                         "justifyContent": "center",
                       }
                     }
@@ -8856,7 +8856,7 @@ ShallowWrapper {
                         Object {
                           "color": "#fff",
                           "fontFamily": "Montserrat-Bold",
-                          "fontSize": 20,
+                          "fontSize": 17.39130434782609,
                         }
                       }
                     >
@@ -8895,8 +8895,8 @@ ShallowWrapper {
                     Object {
                       "backgroundColor": "rgb(249, 252, 255)",
                       "justifyContent": "space-between",
-                      "paddingBottom": 20,
-                      "paddingHorizontal": 10,
+                      "paddingBottom": 17.39130434782609,
+                      "paddingHorizontal": 8.695652173913045,
                     }
                   }
                 >
@@ -8904,12 +8904,12 @@ ShallowWrapper {
                     style={
                       Object {
                         "backgroundColor": "white",
-                        "borderRadius": 10,
+                        "borderRadius": 8.695652173913045,
                         "elevation": 1,
                         "flex": 1,
-                        "marginTop": 20,
-                        "paddingHorizontal": 20,
-                        "paddingVertical": 20,
+                        "marginTop": 17.39130434782609,
+                        "paddingHorizontal": 17.39130434782609,
+                        "paddingVertical": 17.39130434782609,
                         "shadowOffset": Object {
                           "height": 2,
                           "width": 0,
@@ -8926,7 +8926,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "fontFamily": "Montserrat-SemiBold",
-                            "fontSize": 17,
+                            "fontSize": 14.782608695652176,
                           }
                         }
                       >
@@ -9125,12 +9125,12 @@ ShallowWrapper {
                     style={
                       Object {
                         "backgroundColor": "white",
-                        "borderRadius": 10,
+                        "borderRadius": 8.695652173913045,
                         "elevation": 1,
                         "flex": 1,
-                        "marginTop": 20,
-                        "paddingHorizontal": 20,
-                        "paddingVertical": 20,
+                        "marginTop": 17.39130434782609,
+                        "paddingHorizontal": 17.39130434782609,
+                        "paddingVertical": 17.39130434782609,
                         "shadowOffset": Object {
                           "height": 2,
                           "width": 0,
@@ -9147,7 +9147,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "fontFamily": "Montserrat-SemiBold",
-                            "fontSize": 17,
+                            "fontSize": 14.782608695652176,
                           }
                         }
                       >
@@ -9161,7 +9161,7 @@ ShallowWrapper {
                           "flexDirection": "row",
                           "flexWrap": "wrap",
                           "justifyContent": "space-around",
-                          "paddingVertical": 10,
+                          "paddingVertical": 8.695652173913045,
                         }
                       }
                     >
@@ -9670,7 +9670,7 @@ ShallowWrapper {
                         Object {
                           "color": "white",
                           "fontFamily": "Montserrat-Bold",
-                          "fontSize": 18,
+                          "fontSize": 15.65217391304348,
                           "textAlign": "center",
                         }
                       }
@@ -9701,14 +9701,14 @@ ShallowWrapper {
                     Object {
                       "backgroundColor": "transparent",
                       "justifyContent": "space-between",
-                      "marginHorizontal": 10,
-                      "paddingBottom": 20,
-                      "paddingTop": 10,
+                      "marginHorizontal": 8.695652173913045,
+                      "paddingBottom": 17.39130434782609,
+                      "paddingTop": 8.695652173913045,
                     }
                   }
                 >
                   <SearchBar
-                    placeholder="Search here..."
+                    placeholder="Search category..."
                   />
                 </Component>
               }
@@ -9721,9 +9721,9 @@ ShallowWrapper {
                       style={
                         Object {
                           "alignItems": "center",
-                          "height": 54,
+                          "height": 46.95652173913044,
                           "justifyContent": "center",
-                          "width": 54,
+                          "width": 46.95652173913044,
                         }
                       }
                     >
@@ -9737,7 +9737,7 @@ ShallowWrapper {
                         }
                         style={
                           Object {
-                            "height": 20,
+                            "height": 17.39130434782609,
                             "width": "100%",
                           }
                         }
@@ -9760,7 +9760,7 @@ ShallowWrapper {
                           "alignItems": "center",
                           "backgroundColor": "transparent",
                           "flexDirection": "row",
-                          "height": 54,
+                          "height": 46.95652173913044,
                           "justifyContent": "center",
                         }
                       }
@@ -9770,7 +9770,7 @@ ShallowWrapper {
                           Object {
                             "color": "#fff",
                             "fontFamily": "Montserrat-Regular",
-                            "fontSize": 14,
+                            "fontSize": 12.173913043478262,
                           }
                         }
                       >
@@ -9783,7 +9783,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "alignItems": "flex-start",
-                          "height": 54,
+                          "height": 46.95652173913044,
                           "justifyContent": "center",
                         }
                       }
@@ -9793,7 +9793,7 @@ ShallowWrapper {
                           Object {
                             "color": "#fff",
                             "fontFamily": "Montserrat-Bold",
-                            "fontSize": 20,
+                            "fontSize": 17.39130434782609,
                           }
                         }
                       >
@@ -9832,8 +9832,8 @@ ShallowWrapper {
                       Object {
                         "backgroundColor": "rgb(249, 252, 255)",
                         "justifyContent": "space-between",
-                        "paddingBottom": 20,
-                        "paddingHorizontal": 10,
+                        "paddingBottom": 17.39130434782609,
+                        "paddingHorizontal": 8.695652173913045,
                       }
                     }
                   >
@@ -9841,12 +9841,12 @@ ShallowWrapper {
                       style={
                         Object {
                           "backgroundColor": "white",
-                          "borderRadius": 10,
+                          "borderRadius": 8.695652173913045,
                           "elevation": 1,
                           "flex": 1,
-                          "marginTop": 20,
-                          "paddingHorizontal": 20,
-                          "paddingVertical": 20,
+                          "marginTop": 17.39130434782609,
+                          "paddingHorizontal": 17.39130434782609,
+                          "paddingVertical": 17.39130434782609,
                           "shadowOffset": Object {
                             "height": 2,
                             "width": 0,
@@ -9863,7 +9863,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "fontFamily": "Montserrat-SemiBold",
-                              "fontSize": 17,
+                              "fontSize": 14.782608695652176,
                             }
                           }
                         >
@@ -10062,12 +10062,12 @@ ShallowWrapper {
                       style={
                         Object {
                           "backgroundColor": "white",
-                          "borderRadius": 10,
+                          "borderRadius": 8.695652173913045,
                           "elevation": 1,
                           "flex": 1,
-                          "marginTop": 20,
-                          "paddingHorizontal": 20,
-                          "paddingVertical": 20,
+                          "marginTop": 17.39130434782609,
+                          "paddingHorizontal": 17.39130434782609,
+                          "paddingVertical": 17.39130434782609,
                           "shadowOffset": Object {
                             "height": 2,
                             "width": 0,
@@ -10084,7 +10084,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "fontFamily": "Montserrat-SemiBold",
-                              "fontSize": 17,
+                              "fontSize": 14.782608695652176,
                             }
                           }
                         >
@@ -10098,7 +10098,7 @@ ShallowWrapper {
                             "flexDirection": "row",
                             "flexWrap": "wrap",
                             "justifyContent": "space-around",
-                            "paddingVertical": 10,
+                            "paddingVertical": 8.695652173913045,
                           }
                         }
                       >
@@ -10607,7 +10607,7 @@ ShallowWrapper {
                           Object {
                             "color": "white",
                             "fontFamily": "Montserrat-Bold",
-                            "fontSize": 18,
+                            "fontSize": 15.65217391304348,
                             "textAlign": "center",
                           }
                         }
@@ -10648,14 +10648,14 @@ ShallowWrapper {
                   Object {
                     "backgroundColor": "transparent",
                     "justifyContent": "space-between",
-                    "marginHorizontal": 10,
-                    "paddingBottom": 20,
-                    "paddingTop": 10,
+                    "marginHorizontal": 8.695652173913045,
+                    "paddingBottom": 17.39130434782609,
+                    "paddingTop": 8.695652173913045,
                   }
                 }
               >
                 <SearchBar
-                  placeholder="Search here..."
+                  placeholder="Search category..."
                 />
               </Component>,
               "header": <Header
@@ -10666,9 +10666,9 @@ ShallowWrapper {
                     style={
                       Object {
                         "alignItems": "center",
-                        "height": 54,
+                        "height": 46.95652173913044,
                         "justifyContent": "center",
-                        "width": 54,
+                        "width": 46.95652173913044,
                       }
                     }
                   >
@@ -10682,7 +10682,7 @@ ShallowWrapper {
                       }
                       style={
                         Object {
-                          "height": 20,
+                          "height": 17.39130434782609,
                           "width": "100%",
                         }
                       }
@@ -10705,7 +10705,7 @@ ShallowWrapper {
                         "alignItems": "center",
                         "backgroundColor": "transparent",
                         "flexDirection": "row",
-                        "height": 54,
+                        "height": 46.95652173913044,
                         "justifyContent": "center",
                       }
                     }
@@ -10715,7 +10715,7 @@ ShallowWrapper {
                         Object {
                           "color": "#fff",
                           "fontFamily": "Montserrat-Regular",
-                          "fontSize": 14,
+                          "fontSize": 12.173913043478262,
                         }
                       }
                     >
@@ -10728,7 +10728,7 @@ ShallowWrapper {
                     style={
                       Object {
                         "alignItems": "flex-start",
-                        "height": 54,
+                        "height": 46.95652173913044,
                         "justifyContent": "center",
                       }
                     }
@@ -10738,7 +10738,7 @@ ShallowWrapper {
                         Object {
                           "color": "#fff",
                           "fontFamily": "Montserrat-Bold",
-                          "fontSize": 20,
+                          "fontSize": 17.39130434782609,
                         }
                       }
                     >
@@ -10777,8 +10777,8 @@ ShallowWrapper {
                       Object {
                         "backgroundColor": "rgb(249, 252, 255)",
                         "justifyContent": "space-between",
-                        "paddingBottom": 20,
-                        "paddingHorizontal": 10,
+                        "paddingBottom": 17.39130434782609,
+                        "paddingHorizontal": 8.695652173913045,
                       }
                     }
                   >
@@ -10786,12 +10786,12 @@ ShallowWrapper {
                       style={
                         Object {
                           "backgroundColor": "white",
-                          "borderRadius": 10,
+                          "borderRadius": 8.695652173913045,
                           "elevation": 1,
                           "flex": 1,
-                          "marginTop": 20,
-                          "paddingHorizontal": 20,
-                          "paddingVertical": 20,
+                          "marginTop": 17.39130434782609,
+                          "paddingHorizontal": 17.39130434782609,
+                          "paddingVertical": 17.39130434782609,
                           "shadowOffset": Object {
                             "height": 2,
                             "width": 0,
@@ -10808,7 +10808,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "fontFamily": "Montserrat-SemiBold",
-                              "fontSize": 17,
+                              "fontSize": 14.782608695652176,
                             }
                           }
                         >
@@ -11007,12 +11007,12 @@ ShallowWrapper {
                       style={
                         Object {
                           "backgroundColor": "white",
-                          "borderRadius": 10,
+                          "borderRadius": 8.695652173913045,
                           "elevation": 1,
                           "flex": 1,
-                          "marginTop": 20,
-                          "paddingHorizontal": 20,
-                          "paddingVertical": 20,
+                          "marginTop": 17.39130434782609,
+                          "paddingHorizontal": 17.39130434782609,
+                          "paddingVertical": 17.39130434782609,
                           "shadowOffset": Object {
                             "height": 2,
                             "width": 0,
@@ -11029,7 +11029,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "fontFamily": "Montserrat-SemiBold",
-                              "fontSize": 17,
+                              "fontSize": 14.782608695652176,
                             }
                           }
                         >
@@ -11043,7 +11043,7 @@ ShallowWrapper {
                             "flexDirection": "row",
                             "flexWrap": "wrap",
                             "justifyContent": "space-around",
-                            "paddingVertical": 10,
+                            "paddingVertical": 8.695652173913045,
                           }
                         }
                       >
@@ -11552,7 +11552,7 @@ ShallowWrapper {
                           Object {
                             "color": "white",
                             "fontFamily": "Montserrat-Bold",
-                            "fontSize": 18,
+                            "fontSize": 15.65217391304348,
                             "textAlign": "center",
                           }
                         }
@@ -11587,8 +11587,8 @@ ShallowWrapper {
                       Object {
                         "backgroundColor": "rgb(249, 252, 255)",
                         "justifyContent": "space-between",
-                        "paddingBottom": 20,
-                        "paddingHorizontal": 10,
+                        "paddingBottom": 17.39130434782609,
+                        "paddingHorizontal": 8.695652173913045,
                       }
                     }
                   >
@@ -11596,12 +11596,12 @@ ShallowWrapper {
                       style={
                         Object {
                           "backgroundColor": "white",
-                          "borderRadius": 10,
+                          "borderRadius": 8.695652173913045,
                           "elevation": 1,
                           "flex": 1,
-                          "marginTop": 20,
-                          "paddingHorizontal": 20,
-                          "paddingVertical": 20,
+                          "marginTop": 17.39130434782609,
+                          "paddingHorizontal": 17.39130434782609,
+                          "paddingVertical": 17.39130434782609,
                           "shadowOffset": Object {
                             "height": 2,
                             "width": 0,
@@ -11618,7 +11618,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "fontFamily": "Montserrat-SemiBold",
-                              "fontSize": 17,
+                              "fontSize": 14.782608695652176,
                             }
                           }
                         >
@@ -11817,12 +11817,12 @@ ShallowWrapper {
                       style={
                         Object {
                           "backgroundColor": "white",
-                          "borderRadius": 10,
+                          "borderRadius": 8.695652173913045,
                           "elevation": 1,
                           "flex": 1,
-                          "marginTop": 20,
-                          "paddingHorizontal": 20,
-                          "paddingVertical": 20,
+                          "marginTop": 17.39130434782609,
+                          "paddingHorizontal": 17.39130434782609,
+                          "paddingVertical": 17.39130434782609,
                           "shadowOffset": Object {
                             "height": 2,
                             "width": 0,
@@ -11839,7 +11839,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "fontFamily": "Montserrat-SemiBold",
-                              "fontSize": 17,
+                              "fontSize": 14.782608695652176,
                             }
                           }
                         >
@@ -11853,7 +11853,7 @@ ShallowWrapper {
                             "flexDirection": "row",
                             "flexWrap": "wrap",
                             "justifyContent": "space-around",
-                            "paddingVertical": 10,
+                            "paddingVertical": 8.695652173913045,
                           }
                         }
                       >
@@ -12362,7 +12362,7 @@ ShallowWrapper {
                           Object {
                             "color": "white",
                             "fontFamily": "Montserrat-Bold",
-                            "fontSize": 18,
+                            "fontSize": 15.65217391304348,
                             "textAlign": "center",
                           }
                         }
@@ -12388,8 +12388,8 @@ ShallowWrapper {
                         Object {
                           "backgroundColor": "rgb(249, 252, 255)",
                           "justifyContent": "space-between",
-                          "paddingBottom": 20,
-                          "paddingHorizontal": 10,
+                          "paddingBottom": 17.39130434782609,
+                          "paddingHorizontal": 8.695652173913045,
                         }
                       }
                     >
@@ -12397,12 +12397,12 @@ ShallowWrapper {
                         style={
                           Object {
                             "backgroundColor": "white",
-                            "borderRadius": 10,
+                            "borderRadius": 8.695652173913045,
                             "elevation": 1,
                             "flex": 1,
-                            "marginTop": 20,
-                            "paddingHorizontal": 20,
-                            "paddingVertical": 20,
+                            "marginTop": 17.39130434782609,
+                            "paddingHorizontal": 17.39130434782609,
+                            "paddingVertical": 17.39130434782609,
                             "shadowOffset": Object {
                               "height": 2,
                               "width": 0,
@@ -12419,7 +12419,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "fontFamily": "Montserrat-SemiBold",
-                                "fontSize": 17,
+                                "fontSize": 14.782608695652176,
                               }
                             }
                           >
@@ -12618,12 +12618,12 @@ ShallowWrapper {
                         style={
                           Object {
                             "backgroundColor": "white",
-                            "borderRadius": 10,
+                            "borderRadius": 8.695652173913045,
                             "elevation": 1,
                             "flex": 1,
-                            "marginTop": 20,
-                            "paddingHorizontal": 20,
-                            "paddingVertical": 20,
+                            "marginTop": 17.39130434782609,
+                            "paddingHorizontal": 17.39130434782609,
+                            "paddingVertical": 17.39130434782609,
                             "shadowOffset": Object {
                               "height": 2,
                               "width": 0,
@@ -12640,7 +12640,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "fontFamily": "Montserrat-SemiBold",
-                                "fontSize": 17,
+                                "fontSize": 14.782608695652176,
                               }
                             }
                           >
@@ -12654,7 +12654,7 @@ ShallowWrapper {
                               "flexDirection": "row",
                               "flexWrap": "wrap",
                               "justifyContent": "space-around",
-                              "paddingVertical": 10,
+                              "paddingVertical": 8.695652173913045,
                             }
                           }
                         >
@@ -13163,7 +13163,7 @@ ShallowWrapper {
                             Object {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
-                              "fontSize": 18,
+                              "fontSize": 15.65217391304348,
                               "textAlign": "center",
                             }
                           }
@@ -13190,12 +13190,12 @@ ShallowWrapper {
                           style={
                             Object {
                               "backgroundColor": "white",
-                              "borderRadius": 10,
+                              "borderRadius": 8.695652173913045,
                               "elevation": 1,
                               "flex": 1,
-                              "marginTop": 20,
-                              "paddingHorizontal": 20,
-                              "paddingVertical": 20,
+                              "marginTop": 17.39130434782609,
+                              "paddingHorizontal": 17.39130434782609,
+                              "paddingVertical": 17.39130434782609,
                               "shadowOffset": Object {
                                 "height": 2,
                                 "width": 0,
@@ -13212,7 +13212,7 @@ ShallowWrapper {
                               style={
                                 Object {
                                   "fontFamily": "Montserrat-SemiBold",
-                                  "fontSize": 17,
+                                  "fontSize": 14.782608695652176,
                                 }
                               }
                             >
@@ -13411,12 +13411,12 @@ ShallowWrapper {
                           style={
                             Object {
                               "backgroundColor": "white",
-                              "borderRadius": 10,
+                              "borderRadius": 8.695652173913045,
                               "elevation": 1,
                               "flex": 1,
-                              "marginTop": 20,
-                              "paddingHorizontal": 20,
-                              "paddingVertical": 20,
+                              "marginTop": 17.39130434782609,
+                              "paddingHorizontal": 17.39130434782609,
+                              "paddingVertical": 17.39130434782609,
                               "shadowOffset": Object {
                                 "height": 2,
                                 "width": 0,
@@ -13433,7 +13433,7 @@ ShallowWrapper {
                               style={
                                 Object {
                                   "fontFamily": "Montserrat-SemiBold",
-                                  "fontSize": 17,
+                                  "fontSize": 14.782608695652176,
                                 }
                               }
                             >
@@ -13447,7 +13447,7 @@ ShallowWrapper {
                                 "flexDirection": "row",
                                 "flexWrap": "wrap",
                                 "justifyContent": "space-around",
-                                "paddingVertical": 10,
+                                "paddingVertical": 8.695652173913045,
                               }
                             }
                           >
@@ -13925,8 +13925,8 @@ ShallowWrapper {
                       "style": Object {
                         "backgroundColor": "rgb(249, 252, 255)",
                         "justifyContent": "space-between",
-                        "paddingBottom": 20,
-                        "paddingHorizontal": 10,
+                        "paddingBottom": 17.39130434782609,
+                        "paddingHorizontal": 8.695652173913045,
                       },
                     },
                     "ref": null,
@@ -13944,7 +13944,7 @@ ShallowWrapper {
                                 style={
                                   Object {
                                     "fontFamily": "Montserrat-SemiBold",
-                                    "fontSize": 17,
+                                    "fontSize": 14.782608695652176,
                                   }
                                 }
                               >
@@ -14141,12 +14141,12 @@ ShallowWrapper {
                           ],
                           "style": Object {
                             "backgroundColor": "white",
-                            "borderRadius": 10,
+                            "borderRadius": 8.695652173913045,
                             "elevation": 1,
                             "flex": 1,
-                            "marginTop": 20,
-                            "paddingHorizontal": 20,
-                            "paddingVertical": 20,
+                            "marginTop": 17.39130434782609,
+                            "paddingHorizontal": 17.39130434782609,
+                            "paddingVertical": 17.39130434782609,
                             "shadowOffset": Object {
                               "height": 2,
                               "width": 0,
@@ -14166,7 +14166,7 @@ ShallowWrapper {
                                 style={
                                   Object {
                                     "fontFamily": "Montserrat-SemiBold",
-                                    "fontSize": 17,
+                                    "fontSize": 14.782608695652176,
                                   }
                                 }
                               >
@@ -14183,7 +14183,7 @@ ShallowWrapper {
                                 "children": "Popular Categories",
                                 "style": Object {
                                   "fontFamily": "Montserrat-SemiBold",
-                                  "fontSize": 17,
+                                  "fontSize": 14.782608695652176,
                                 },
                               },
                               "ref": null,
@@ -14671,7 +14671,7 @@ ShallowWrapper {
                                 style={
                                   Object {
                                     "fontFamily": "Montserrat-SemiBold",
-                                    "fontSize": 17,
+                                    "fontSize": 14.782608695652176,
                                   }
                                 }
                               >
@@ -14685,7 +14685,7 @@ ShallowWrapper {
                                   "flexDirection": "row",
                                   "flexWrap": "wrap",
                                   "justifyContent": "space-around",
-                                  "paddingVertical": 10,
+                                  "paddingVertical": 8.695652173913045,
                                 }
                               }
                             >
@@ -15161,12 +15161,12 @@ ShallowWrapper {
                           ],
                           "style": Object {
                             "backgroundColor": "white",
-                            "borderRadius": 10,
+                            "borderRadius": 8.695652173913045,
                             "elevation": 1,
                             "flex": 1,
-                            "marginTop": 20,
-                            "paddingHorizontal": 20,
-                            "paddingVertical": 20,
+                            "marginTop": 17.39130434782609,
+                            "paddingHorizontal": 17.39130434782609,
+                            "paddingVertical": 17.39130434782609,
                             "shadowOffset": Object {
                               "height": 2,
                               "width": 0,
@@ -15186,7 +15186,7 @@ ShallowWrapper {
                                 style={
                                   Object {
                                     "fontFamily": "Montserrat-SemiBold",
-                                    "fontSize": 17,
+                                    "fontSize": 14.782608695652176,
                                   }
                                 }
                               >
@@ -15203,7 +15203,7 @@ ShallowWrapper {
                                 "children": "All Categories",
                                 "style": Object {
                                   "fontFamily": "Montserrat-SemiBold",
-                                  "fontSize": 17,
+                                  "fontSize": 14.782608695652176,
                                 },
                               },
                               "ref": null,
@@ -15692,7 +15692,7 @@ ShallowWrapper {
                                 "flexDirection": "row",
                                 "flexWrap": "wrap",
                                 "justifyContent": "space-around",
-                                "paddingVertical": 10,
+                                "paddingVertical": 8.695652173913045,
                               },
                             },
                             "ref": null,
@@ -16404,7 +16404,7 @@ ShallowWrapper {
                             Object {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
-                              "fontSize": 18,
+                              "fontSize": 15.65217391304348,
                               "textAlign": "center",
                             }
                           }
@@ -16440,7 +16440,7 @@ ShallowWrapper {
                             Object {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
-                              "fontSize": 18,
+                              "fontSize": 15.65217391304348,
                               "textAlign": "center",
                             }
                           }
@@ -16459,7 +16459,7 @@ ShallowWrapper {
                           "style": Object {
                             "color": "white",
                             "fontFamily": "Montserrat-Bold",
-                            "fontSize": 18,
+                            "fontSize": 15.65217391304348,
                             "textAlign": "center",
                           },
                         },
