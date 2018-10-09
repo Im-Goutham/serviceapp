@@ -77,6 +77,11 @@ class AppTutorialScreen extends Component {
                <Text style={styles.btnText}> SIGN UP</Text>
             </LinearGradient>
             </TouchableOpacity>
+            <TouchableOpacity testID='signUp' onPress={() => {this.props.navigation.navigate('register')}}>
+            <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
+               <Text style={styles.btnText}> SIGN UP</Text>
+            </LinearGradient>
+            </TouchableOpacity>
               <Text style={{marginVertical:scale(20),fontFamily:'Montserrat-Regular',color:'#4A4A4A',fontSize:scale(17),textAlign:'center'}}>Already have an account? <Text style={{fontFamily:'Montserrat-Bold',color:'#3E85EF'}} onPress={()=>{this.props.navigation.navigate('login')}}>Sign In</Text></Text>
             </View>
             <SelectLanguage />  

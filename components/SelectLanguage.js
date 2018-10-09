@@ -27,11 +27,11 @@ export default class SelectLocation extends Component {
   renderModalContent = () => (
     <View style={styles.modalContent}>
      <View style={styles.heading}><Text style={styles.headingText}>Select a Language</Text></View>
-     <View style={{flex:5,justifyContent:'center'}}>
+     <View style={{flex:5,justifyContent:'center',alignItems:'center'}}>
      <Picker
             mode={'dialog'}
             selectedValue={this.state.language}
-            style={{height:'100%'}}
+            style={{height:'100%',width:150}}
             itemStyle={{color:'#3581fc',height:scale(200),paddingVertical:scale(5)}}
             onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
             {

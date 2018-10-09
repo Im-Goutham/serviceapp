@@ -168,7 +168,7 @@ class AddServiceCatScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingTop: scale(10),paddingBottom:scale(20),marginHorizontal:scale(10)}}>
-                                <SearchBar placeholder={'Search here...' }/>
+                                <SearchBar placeholder={'Search category...' }/>
                    </View>
                        }
                    />
