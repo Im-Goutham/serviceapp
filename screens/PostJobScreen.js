@@ -439,14 +439,18 @@ class PostJobScreen extends Component {
 
             <View style={{justifyContent: "center" ,flexDirection:'row',marginBottom:scale(20),marginTop:scale(10)}}>
             <View style={{flex:1,paddingRight:scale(10)}}>
+            <TouchableOpacity onPress={() => {this.props.navigation.navigate('homePage')}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={[ '#F2F2F2','#CCCCCC']} style={styles.button}>
-                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('homePage')}}><Text style={[styles.btnText,{color:'black',fontFamily:'MontSerrat-Regular'}]}>CANCEL</Text></TouchableOpacity>
+                   <Text style={[styles.btnText,{color:'black',fontFamily:'MontSerrat-Regular'}]}>CANCEL</Text>
                 </LinearGradient>
+              </TouchableOpacity>
             </View>
             <View style={{flex:1,paddingLeft:10}}>
-                <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('homePage')}}><Text style={styles.btnText}>POST A JOB</Text></TouchableOpacity>
-                </LinearGradient>
+              <TouchableOpacity onPress={() => {this.props.navigation.navigate('homePage')}}>
+                  <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
+                      <Text style={styles.btnText}>POST A JOB</Text>
+                  </LinearGradient>
+                </TouchableOpacity>
             </View>   
             </View>
                 </View>
