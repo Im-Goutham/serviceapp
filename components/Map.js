@@ -4,6 +4,7 @@ import {StyleSheet, View,TouchableHighlight,Image,Dimensions} from 'react-native
 import {Icon, Text } from 'native-base';
 import MapView, { Callout, Marker, ProviderPropType } from 'react-native-maps';
 const { width, height } = Dimensions.get('window')
+import {scale} from '../global';
 
 export default class Map extends Component {
 
@@ -93,14 +94,14 @@ export default class Map extends Component {
            key={key}
            onPress={()=>this.props.pinPress()}
          >
-          <Image source={require('../assets/icons/map_location_blue.png')} style={{ width: 30, height: 30 }} resizeMode="contain" resizeMethod="resize"/>
+          <Image source={require('../assets/icons/map_location_blue.png')} style={{ width: scale(30), height: scale(30) }} resizeMode="contain" resizeMethod="resize"/>
          </Marker>
        })
       }  
       <Marker
            coordinate={coordinate}
          >
-            <Image source={require('../assets/icons/map_location_red.png')} style={{ width: 30, height: 30 }} resizeMode="contain" resizeMethod="resize"/>
+            <Image source={require('../assets/icons/map_location_red.png')} style={{ width: scale(30), height: scale(30) }} resizeMode="contain" resizeMethod="resize"/>
             <MapView.Callout tooltip >
                <View style={{justifyContent:'center'}}>
                         <Text style={styles.tooltipStyle}>YOU ARE HERE</Text>
@@ -133,35 +134,35 @@ const styles = StyleSheet.create({
   li: {
     backgroundColor: '#fff',
     flex:1,
-    width:width-40,
-    padding:10
+    width:width-scale(40),
+    padding:scale(10)
   },
     button:{
       backgroundColor:'#008000',
       width: '100%',
-      borderRadius:20,
-      borderWidth: 1,
+      borderRadius:scale(20),
+      borderWidth: scale(1),
       borderColor: '#008000',
-      paddingTop:5,
-      paddingBottom:5,
+      paddingTop:scale(5),
+      paddingBottom:scale(5),
   },
   btnText: { 
       textAlign:'center',
       color:'white',
       fontWeight:'bold',
-      fontSize:12
+      fontSize:scale(12)
   },
   tooltipStyle:{
-    width: 125,
+    width: scale(125),
     backgroundColor: 'red',
-    borderRadius:5,
+    borderRadius:scale(5),
     overflow:"hidden",
-    paddingVertical:2,
-    paddingLeft:10,
-    paddingRight:10,
+    paddingVertical:scale(2),
+    paddingLeft:scale(10),
+    paddingRight:scale(10),
     color: 'white',
-    fontSize: 13,
+    fontSize: scale(13),
     fontFamily: 'Montserrat-Bold'
 },
-  imgStyle: {width:'100%',height:80}
+  imgStyle: {width:'100%',height:scale(80)}
 });

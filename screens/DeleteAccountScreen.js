@@ -176,7 +176,7 @@ class DeleteAccountScreen extends Component {
                          <View style={{marginVertical:scale(20),fontFamily:'Montserrat-Medium',color:'#9B9B9B'}}>
                                <Text>Write the reason</Text>
                                <Item>
-                                <Input placeholder="Type here" />
+                                <Input placeholder="Type here" style={styles.inputLabel}/>
                             </Item>
                          </View>
                    </View>
@@ -215,7 +215,12 @@ const styles = StyleSheet.create({
    selectBox: {
        flexDirection:'row',
        marginVertical:scale(10)
-    }
+    },
+    inputLabel: {
+        textAlign:'left',
+        fontSize: scale(16),
+        fontFamily:'Montserrat-Light',
+     },
 })
 
 

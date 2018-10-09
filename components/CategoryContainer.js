@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text,Image, StyleSheet, TouchableOpacity} from 'react-native';
-
+import {scale} from '../global';
 
 
 class CategoryContainer extends Component {
@@ -12,7 +12,7 @@ class CategoryContainer extends Component {
         onPress={()=>{this.props.selectCategory(index)}}
         >
         <View style={[styles.categoryBox,{borderColor: category.selected ? '#3E85EF' : '#EDEDED'}]}>
-              <Image source={category.image} style={{ width: 40, height: 40}} resizeMode="contain" resizeMethod="resize"/>
+              <Image source={category.image} style={{ width: scale(40), height: scale(40)}} resizeMode="contain" resizeMethod="resize"/>
         </View>
         <Text style={[styles.categoryStyle,{color: category.selected ? '#3E85EF' : '#4A4A4A'}]}>{category.name}</Text>
       </TouchableOpacity>     
@@ -22,23 +22,23 @@ class CategoryContainer extends Component {
 
 
 const styles = StyleSheet.create({
-    mainBox: {width:90,marginHorizontal:5,marginVertical:20},
+    mainBox: {width:scale(90),marginHorizontal:scale(5),marginVertical:scale(20)},
     categoryBox: {
-      paddingVertical:20,
+      paddingVertical:scale(20),
       flexDirection:'column',
-      borderRadius:10,
+      borderRadius:scale(10),
       width: '100%',
-      height: 90,
+      height: scale(90),
       justifyContent:'center',
       alignItems:'center',
-      borderWidth:1,
+      borderWidth:scale(1),
       borderColor:'#EDEDED',
     },
     categoryStyle: {
       color:'#4A4A4A',
       fontFamily:'Montserrat-Medium',
-      paddingVertical:10,
-      fontSize: 13,
+      paddingVertical:scale(10),
+      fontSize: scale(13),
       textAlign:'center'
   },
   })

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { View, Modal, TouchableOpacity, Platform } from 'react-native';
 import ImageViewer from 'react-native-image-zoom-viewer';
-import { Icon } from 'native-base';  
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import {scale} from '../global';
 
  class PhotoView extends Component {
     constructor(props){

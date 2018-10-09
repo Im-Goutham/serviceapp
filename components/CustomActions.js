@@ -12,9 +12,11 @@ import {
 } from 'react-native';
 import {  Icon } from 'native-base';
 
-// import CameraRollPicker from 'react-native-camera-roll-picker';
+
 import NavBar, { NavButton, NavButtonText, NavTitle } from 'react-native-nav';
 import { AudioRecorder, AudioUtils } from "react-native-audio";
+
+import {scale} from '../global';
 
 
 export default class CustomActions extends React.Component {
@@ -206,12 +208,12 @@ messageIdGenerator() {
         return (
             <Icon
                 name="ios-mic"
-                size={35}
-                hitSlop={{ top: 20, bottom: 20, left: 50, right: 50 }}
+                size={scale(35)}
+                hitSlop={{ top: scale(20), bottom: scale(20), left: scale(50), right: scale(50) }}
                 color={this.state.startAudio ? "red" : "black"}
                 style={{
-                    bottom: 50,
-                    right: Dimensions.get("window").width / 2,
+                    bottom: scale(50),
+                    right: scale(Dimensions.get("window").width / 2),
                     position: "absolute",
                     shadowColor: "#000",
                     shadowOffset: { width: 0, height: 0 },
@@ -327,10 +329,10 @@ handleAudio = async () => {
 
 const styles = StyleSheet.create({
   container: {
-    width: 26,
-    height: 26,
-    marginLeft: 15,
-    marginBottom: 15,
+    width: scale(26),
+    height: scale(26),
+    marginLeft: scale(15),
+    marginBottom: scale(15),
   },
   wrapper: {
     flex: 1,
@@ -338,7 +340,7 @@ const styles = StyleSheet.create({
   iconText: {
     color: '#b2b2b2',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: scale(16),
     backgroundColor: 'transparent',
     textAlign: 'center',
   },

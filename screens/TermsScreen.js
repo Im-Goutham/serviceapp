@@ -3,16 +3,11 @@ import {
     View,
     StyleSheet,
     Text,
-    ActivityIndicator,
-    TouchableOpacity,
-    TouchableHighlight,
-    Image,
     ScrollView,
     Platform,
-    Dimensions,
-    TouchableWithoutFeedback, ImageBackground
 } from 'react-native';
 import {Icon} from 'native-base';
+import {scale} from '../global';
 
 
 class TermsScreen extends Component {
@@ -28,15 +23,15 @@ class TermsScreen extends Component {
     render() {
         
         return (
-            <ScrollView style={{backgroundColor:'white',paddingVertical:Platform.OS === 'ios'? 30: 0, paddingHorizontal:20 }}>
+            <ScrollView style={{backgroundColor:'white',paddingVertical:Platform.OS === 'ios'? scale(30): 0, paddingHorizontal:scale(20) }}>
                 <View
                     style={{
                     flex: 1,
                     flexDirection: 'row',
                     backgroundColor:'transparent',
-                    borderBottomWidth:2,
+                    borderBottomWidth:scale(2),
                     borderBottomColor: 'rgb(223,223,223)',
-                    paddingVertical:20,
+                    paddingVertical:scale(20),
                     }}>
                 <View style={{flex:4}}>
                     <Text style={styles.heading}>Terms & Conditions</Text>
@@ -48,11 +43,11 @@ class TermsScreen extends Component {
              </View>
              {/* Terms starts */}
               <View>
-                  <View style={{flex:1,paddingVertical:20}}>
+                  <View style={{flex:1,paddingVertical:scale(20)}}>
                        <Text style={styles.subHeading}>1. Terms</Text>
                        <Text style={styles.text}>Conversations can be a tricky business. Sometimes, decoding what is said with what is meant is difficult at best. However, communication is a necessary tool in todays world. And it's not only speaking that can be difficult, but trying to interpret body language, and other language barriers are just a few of the obstacles barring effective communication. It's often been the case where one party completely miscommunicates to other.</Text>
                   </View>
-                  <View style={{flex:1,paddingVertical:20}}>
+                  <View style={{flex:1,paddingVertical:scale(20)}}>
                        <Text style={styles.subHeading}>2. Privacy Policy</Text>
                        <Text style={styles.text}>Conversations can be a tricky business. Sometimes, decoding what is said with what is meant is difficult at best. However, communication is a necessary tool in todays world. And it's not only speaking that can be difficult, but trying to interpret body language, and other language barriers are just a few of the obstacles barring effective communication. It's often been the case where one party completely miscommunicates to other.</Text>
                   </View>
@@ -69,19 +64,19 @@ const styles = StyleSheet.create({
      heading: {
          color:'rgb(91,91,91)',
          fontFamily:'Montserrat-Bold',
-         fontSize: 17,
-         paddingBottom:3
+         fontSize: scale(17),
+         paddingBottom:scale(3)
         },
         subHeading: {
             color:'rgb(91,91,91)',
             fontFamily:'Montserrat-SemiBold',
-            fontSize: 15,
-            paddingBottom:3
+            fontSize: scale(15),
+            paddingBottom:scale(3)
         },
         text :{
             color :'rgb(110,110,110)',
             fontFamily:'Montserrat-Regular',
-            lineHeight: 30
+            lineHeight: scale(30)
         }
 })
 export default TermsScreen;

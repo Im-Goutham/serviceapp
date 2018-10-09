@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {StyleSheet,View, Text, TouchableOpacity,Dimensions, Picker} from 'react-native';
 import Modal from "react-native-modal";
 import LinearGradient from 'react-native-linear-gradient';
-const { width, height } = Dimensions.get('window')
+import {scale} from '../global';
 
 export default class SelectLocation extends Component {
 
@@ -32,7 +32,7 @@ export default class SelectLocation extends Component {
             mode={'dialog'}
             selectedValue={this.state.language}
             style={{height:'100%'}}
-            itemStyle={{color:'#3581fc',height:200,paddingVertical:5}}
+            itemStyle={{color:'#3581fc',height:scale(200),paddingVertical:scale(5)}}
             onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
             {
                this.state.languages.map((language,key)=> {
@@ -65,15 +65,15 @@ const styles = StyleSheet.create({
         flex:1,
         alignItems:'center',
         justifyContent:'center',
-        borderBottomWidth :1,
+        borderBottomWidth :scale(1),
         borderColor: "#e6e6e6"
     },
     headingText: {
          fontFamily:'Montserrat-Medium',
          color: '#22262C',
-         fontSize: 18,
+         fontSize: scale(18),
          textAlign: 'center',
-         paddingVertical: 10
+         paddingVertical: scale(10)
     },
     button: {
         backgroundColor:'#4A4A4A',
@@ -81,21 +81,21 @@ const styles = StyleSheet.create({
         height: '100%',
         alignItems:'center',
         justifyContent:'center',
-        borderBottomLeftRadius:10,
-        borderBottomRightRadius:10
+        borderBottomLeftRadius:scale(10),
+        borderBottomRightRadius:scale(10)
       },
       btnText: { 
         textAlign:'center',
         color:'white',
-        fontSize:17,
+        fontSize:scale(17),
         fontFamily:'Montserrat-Bold'
     },
       modalContent: {
-        height:320,
+        height:scale(320),
         backgroundColor: "white",
         justifyContent: "center",
-        borderRadius: 4,
-        borderRadius:10,
+        borderRadius: scale(4),
+        borderRadius:scale(10),
         borderColor: "rgba(0, 0, 0, 0.1)"
       },
 });

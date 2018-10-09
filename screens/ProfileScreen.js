@@ -21,7 +21,7 @@ import HeaderScreen from './HeaderScreen';
 import Documents from '../components/Documents';
 import FloatingLabelInput from '../components/FloatingLabelInput';
 const { width, height } = Dimensions.get('window');
-const isAndroid = Platform.OS === 'android';
+import {scale} from '../global'; 
 
 let back_arrow = require('../assets/icons/arrow_left.png');
 
@@ -264,12 +264,12 @@ class ProfileScreen extends Component {
                                left = {
                                    <TouchableOpacity
                                        onPress={() => this.props.navigation.navigate('register')}
-                                       style={{width : 54, height:54, justifyContent:'center', alignItems: 'flex-start'}}>
-                                       <Image source={back_arrow} style={{ width: '100%', height: 20}} resizeMode="contain" resizeMethod="resize"/>
+                                       style={{width : scale(54), height:scale(54), justifyContent:'center', alignItems: 'flex-start'}}>
+                                       <Image source={back_arrow} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
                                    </TouchableOpacity>
                                }
                                title={
-                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:54}}>
+                                <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
 
                                </View>
                                }
@@ -282,7 +282,7 @@ class ProfileScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between"}}>
-                              <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: 33,paddingLeft:20,paddingBottom:20}}>User Profile</Text> 
+                              <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(33),paddingLeft:scale(20),paddingBottom:scale(20)}}>User Profile</Text> 
                       </View>
                        }
                    />
@@ -290,18 +290,18 @@ class ProfileScreen extends Component {
                             <ScrollView
                              >
               <View style={styles.container}>
-              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:20,justifyContent:'space-between'}}>
+              <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:scale(20),justifyContent:'space-between'}}>
                 <View style={styles.logoContainer}>
                       <TouchableOpacity onPress={this.selectPhotoTapped.bind(this)}>
                         <View style={styles.imgsView}>
                         {
                             (avatarSource)?(
                                <View style={[styles.user_placeholder,{backgroundColor:'rgb(249, 252, 255)'}]}>
-                                <Image source={avatarSource} style={{width:'100%',height:'100%',borderRadius:70}}/>
+                                <Image source={avatarSource} style={{width:'100%',height:'100%',borderRadius:scale(70)}}/>
                                </View>
                             ):(
                               <View  style={[styles.user_placeholder,{backgroundColor:'rgb(229, 239, 252)'}]}>
-                              <Image source={require('../images/user_placeholder.png')}  style={{width:'100%',height:'100%',borderRadius:70}}/>
+                              <Image source={require('../images/user_placeholder.png')}  style={{width:'100%',height:'100%',borderRadius:scale(70)}}/>
                              </View>
                             )
                         }
@@ -311,9 +311,9 @@ class ProfileScreen extends Component {
                         </View>
                       </TouchableOpacity>
                 </View>
-                <View style={{flex:6,justifyContent:'space-between',marginVertical:30}}>
+                <View style={{flex:6,justifyContent:'space-between',marginVertical:scale(30)}}>
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
-                  <View style={{width:'50%',paddingRight:10}}>
+                  <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
                             label="First Name"
                             value={this.state.firstname}
@@ -325,7 +325,7 @@ class ProfileScreen extends Component {
                             onChangeText={firstname => this.setState({ firstname })}
                             />
                   </View>
-                  <View style={{width:'50%',paddingLeft:10}}>
+                  <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
                             label="Last Name"
                             value={this.state.lastname}
@@ -356,7 +356,7 @@ class ProfileScreen extends Component {
                             onChangeText={dob => this.setState({ dob })}
                             />
                 </TouchableOpacity>
-                <Text style={{fontFamily:'Montserrat-Medium',color:'#CCCCCC',fontSize:13}} >This information is not shared with other users.</Text>
+                <Text style={{fontFamily:'Montserrat-Medium',color:'#CCCCCC',fontSize:scale(13)}} >This information is not shared with other users.</Text>
                 <View style={styles.inputField}>
                 <FloatingLabelInput
                             label="Street Address"
@@ -372,7 +372,7 @@ class ProfileScreen extends Component {
 
 
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
-                  <View style={{width:'50%',paddingRight:10}}>
+                  <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
                             label="City"
                             value={this.state.city}
@@ -385,7 +385,7 @@ class ProfileScreen extends Component {
                             />
                 
                   </View>
-                  <View style={{width:'50%',paddingLeft:10}}>
+                  <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
                             label="State"
                             value={this.state.state}
@@ -400,7 +400,7 @@ class ProfileScreen extends Component {
                 </View>
 
                  <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
-                  <View style={{width:'50%',paddingRight:10}}>
+                  <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
                             label="Zip Code"
                             value={this.state.zip}
@@ -412,7 +412,7 @@ class ProfileScreen extends Component {
                             onChangeText={zip => this.setState({ zip })}
                             />
                   </View>
-                  <View style={{width:'50%',paddingLeft:10}}>
+                  <View style={{width:'50%',paddingLeft:scale(10)}}>
                    <FloatingLabelInput
                             label="Country"
                             value={this.state.country}
@@ -426,37 +426,37 @@ class ProfileScreen extends Component {
                   </View>
                 </View>
                 <View style={[styles.servicesBox,{flexDirection:'row'}]}>
-                  <View style={{flex: 2}}><Text style={{color:'#3E85EF',fontFamily:'Montserrat-Medium',fontSize: 16,lineHeight:23}}>Do you want to be a service provider?</Text></View>
+                  <View style={{flex: 2}}><Text style={{color:'#3E85EF',fontFamily:'Montserrat-Medium',fontSize: scale(16),lineHeight:scale(23)}}>Do you want to be a service provider?</Text></View>
                   <View style={{flex: 1,flexDirection: 'row', justifyContent:'flex-end',alignItems:'center'}}><Switch value={true} style={styles.switch}/></View>
               </View>
 
 
             <View style={styles.servicesBox}>
                  <Text style={styles.textStyle}>Select the services you will provide</Text>
-                 <View style={{paddingBottom:20}}>
-                    <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
+                 <View style={{paddingBottom:scale(20)}}>
+                    <View style={{flex:1,flexDirection:'row',paddingVertical:scale(10)}}>
                     <View style={{flex:1.5}}>
-                        <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Waiter</Text>
-                          <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                        <Text style={{fontFamily:'Montserrat-Regular',fontSize:scale(16)}}>Waiter</Text>
+                          <View style={{flexDirection:'row',paddingVertical:scale(3),justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:scale(15),marginTop:scale(4)}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
                           button={ require('../assets/icons/eclipse_blue.png')}
-                          buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                          buttonStyle={{ width: scale(15), height: scale(15), margin: 7.5, resizeMode: "contain" }}
                           destructiveIndex={1}
                           options={["Edit", "Delete"]}
                           actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </View>
                     </View>
-                    <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
+                    <View style={{flex:1,flexDirection:'row',paddingVertical:scale(10)}}>
                     <View style={{flex:1.5}}>
-                    <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Painting</Text>
-                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                    <Text style={{fontFamily:'Montserrat-Regular',fontSize:scale(16)}}>Painting</Text>
+                        <View style={{flexDirection:'row',paddingVertical:scale(3),justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:scale(15),marginTop:scale(4)}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
                               button={ require('../assets/icons/eclipse_blue.png')}
-                              buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                              buttonStyle={{ width: scale(15), height: scale(15), margin: scale(7.5), resizeMode: "contain" }}
                               destructiveIndex={1}
                               options={["Edit", "Delete"]}
                               actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
@@ -464,20 +464,20 @@ class ProfileScreen extends Component {
                     </View>
                     <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
                     <View style={{flex:1.5}}>
-                    <Text style={{fontFamily:'Montserrat-Regular',fontSize:16}}>Dog Walking</Text>
-                        <View style={{flexDirection:'row',paddingVertical:3,justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:15,marginTop:4}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
+                    <Text style={{fontFamily:'Montserrat-Regular',fontSize:scale(16)}}>Dog Walking</Text>
+                        <View style={{flexDirection:'row',paddingVertical:scale(3),justifyContent:'space-between'}}><Text note style={{fontFamily:'Montserrat-Medium',color:'#9B9B9B',fontSize:scale(15),marginTop:scale(4)}}>Satus: Active </Text><Switch value={true} style={styles.miniSwitch}/></View>
                     </View>
                     <View style={{flex:1,alignItems:'flex-end',justifyContent:'flex-start'}}>
                         <OptionsMenu
                               button={ require('../assets/icons/eclipse_blue.png')}
-                              buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                              buttonStyle={{ width: scale(15), height: scale(15), margin: scale(7.5), resizeMode: "contain" }}
                               destructiveIndex={1}
                               options={["Edit", "Delete"]}
                               actions={[()=>console.log('Edit'),()=> console.log('Delete'),()=>console.log('Cancel')]}/>
                     </View>
                     </View>
                 </View>
-                <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
+                <View style={{justifyContent: "center" ,marginBottom:scale(20),marginTop:scale(10)}}>
                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceCatScreen',{mainScreen: 'profile'})}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#F2F2F2', '#CCCCCC']} style={styles.button}>
                        <Text style={[styles.btnText,{fontFamily:'Montserrat-Regular',color:'black'}]}>ADD SERVICES</Text>
@@ -487,7 +487,7 @@ class ProfileScreen extends Component {
             </View>
               {/* Upload Certificates starts here */ }
               <View style={styles.servicesBox}>
-              <View style={{marginVertical:20}}>
+              <View style={{marginVertical:scale(20)}}>
               <FloatingLabelInput
                             label="Write about yourself"
                             value={this.state.about}
@@ -501,7 +501,7 @@ class ProfileScreen extends Component {
                             onChangeText={about => this.setState({ about })}
                             />
                   </View>
-                <View style={{flexDirection: 'row',alignItems:'center',marginVertical:20}}>
+                <View style={{flexDirection: 'row',alignItems:'center',marginVertical:scale(20)}}>
                     <Text style={styles.textStyle}>Upload Certificates</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
@@ -523,7 +523,7 @@ class ProfileScreen extends Component {
           <View style={styles.servicesBox}>
                 <View >
                     <Text style={[styles.textStyle,{paddingBottom:0}]}>Upload ID</Text>
-                    <Text style={{fontSize:13,color:'#CCCCCC',marginVertical:10,fontFamily:'Montserrat-Medium'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
+                    <Text style={{fontSize:scale(13),color:'#CCCCCC',marginVertical:scale(10),fontFamily:'Montserrat-Medium'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
                 </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={ids}  placeholder={true}  addDocument={this.selectDocumentTapped.bind(this)}/>
@@ -560,7 +560,7 @@ class ProfileScreen extends Component {
                 </View>
              </View>
             {/* Upload Website ends here */}
-            <View style={{justifyContent: "center" ,marginBottom:20,marginTop:10}}>
+            <View style={{justifyContent: "center" ,marginBottom:scale(20),marginTop:scale(10)}}>
             <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
                       <Text style={styles.btnText}>SIGN UP</Text>
@@ -593,31 +593,31 @@ const styles = StyleSheet.create({
     logoText: {
       color:'white',
       textAlign:'left',
-      fontSize:35,
+      fontSize:scale(35),
       fontWeight:'bold'
     },
     inputLabel: {
        textAlign:'left',
-       fontSize: 16,
+       fontSize: scale(16),
        fontFamily:'Montserrat-Light'
     },
     inputField: {
-        marginVertical: 10
+        marginVertical: scale(10)
     },
-    borderImg: {width:width,height:40,bottom:-10,position:'absolute'},
+    borderImg: {width:width,height:scale(40),bottom:scale(-10),position:'absolute'},
     text: {
-      marginBottom: 15,
-      marginTop: 15,
-      fontSize: 15,
+      marginBottom: scale(15),
+      marginTop: scale(15),
+      fontSize: scale(15),
       textAlign: 'center',
     },
     button:{
       backgroundColor:'#4A4A4A',
       width: '100%',
-      borderRadius:30,
-      marginTop:10,
-      paddingTop:16,
-      paddingBottom:16,
+      borderRadius:scale(30),
+      marginTop:scale(10),
+      paddingTop:scale(16),
+      paddingBottom:scale(16),
       shadowOffset: { width: 0, height: 2 },
       shadowOpacity: 0.2,
       shadowRadius: 2,
@@ -626,13 +626,13 @@ const styles = StyleSheet.create({
   btnText: {
       textAlign:'center',
       color:'white',
-      fontSize:18,
+      fontSize:scale(18),
       fontFamily:'Montserrat-Bold'
   },
     socialBox:{
       flexDirection:'row',
       backgroundColor:'white',
-      borderRadius:20,
+      borderRadius:scale(20),
       elevation: 3,
     },
     logoContainer: {
@@ -642,34 +642,34 @@ const styles = StyleSheet.create({
     },
     imgsView: {
       flex: 1,
-      padding:10,
+      padding:scale(10),
       position: 'relative',
       top: 0,
       left: 0
     },
     user_placeholder: {
-      width: 140,
-      height: 140,
-      borderRadius:70,
+      width: scale(140),
+      height: scale(140),
+      borderRadius:scale(70),
       justifyContent:'center',
       alignItems:'center',
     },
     camera_icon: {
-      width: 40,
-      height: 40,
-      borderRadius:20,
+      width: scale(40),
+      height: scale(40),
+      borderRadius:scale(20),
       position: 'absolute',
-      bottom: 10,
-      right: 10,
+      bottom: scale(10),
+      right: scale(10),
       justifyContent:'center',
       alignItems:'center',
     },
  servicesBox: {
     flex: 1,
-    marginTop: 20,
-    paddingVertical: 25,
-    paddingHorizontal:20,
-    borderRadius:10,
+    marginTop: scale(20),
+    paddingVertical: scale(25),
+    paddingHorizontal:scale(20),
+    borderRadius:scale(10),
     backgroundColor:'white',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
@@ -678,8 +678,8 @@ const styles = StyleSheet.create({
 },
 textStyle: {
   fontFamily:"Montserrat-SemiBold",
-  fontSize: 16,
-  paddingBottom:20
+  fontSize: scale(16),
+  paddingBottom:scale(20)
 },
 miniSwitch: {
   transform: Platform.OS === 'ios' ? [{ scaleX: .6 }, { scaleY: .6 }] : [{ scaleX: .6}, { scaleY: .6 }]

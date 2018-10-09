@@ -233,7 +233,7 @@ class MessageScreen extends Component {
       <View style={{flexDirection:'row'}}>
         <View style={{flex:9,paddingLeft:scale(20)}}>
              <Input 
-                
+                 style={styles.inputLabel}
                  placeholder='Type here...'
                  value={this.state.message}
                  onChangeText={message => this.setState({ message })}
@@ -396,6 +396,11 @@ inputBox: {
   backgroundColor:'white',
   borderRadius:scale(10),
   paddingHorizontal:scale(15),
+},
+inputLabel: {
+  textAlign:'left',
+  fontSize: scale(16),
+  fontFamily:'Montserrat-Light',
 },
 inputField: {
 fontFamily: 'Montserrat-Medium',

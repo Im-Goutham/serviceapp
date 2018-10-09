@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text,TouchableOpacity, Platform} from 'react-native';
+import {scale} from '../global';
 // import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base'
 import { Icon } from 'native-base'
 
@@ -14,7 +15,7 @@ class Header extends Component {
       <View
         style={{
           // flex: 1,
-          height: Platform.OS === 'ios'? 84: 54,
+          height: Platform.OS === 'ios'? scale(84): scale(54),
           flexDirection: 'row',
           backgroundColor:'transparent',
           alignItems:'flex-end'

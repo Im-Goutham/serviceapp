@@ -15,7 +15,7 @@ import {
 
 import { MessageText, MessageImage, Time, utils } from 'react-native-gifted-chat';
 import LinearGradient from 'react-native-linear-gradient';
-
+import {scale} from '../global';
 const { isSameUser, isSameDay } = utils;
 
 export default class Bubble extends React.Component {
@@ -151,9 +151,9 @@ export default class Bubble extends React.Component {
    let {text, sent } = this.props.currentMessage;
    if(!sent){
       return (
-        <View style={{flex:1,flexDirection:'row',paddingHorizontal:10}}>
+        <View style={{flex:1,flexDirection:'row',paddingHorizontal:scale(10)}}>
              <View style={styles.imgBox}>
-             <Image source={require('../images/svp1.png')} style={{borderRadius:25,width:50,height:50}}/>
+             <Image source={require('../images/svp1.png')} style={{borderRadius:scale(25),width:scale(50),height:scale(50)}}/>
             </View>
             <View style={styles.textBox}>
             <LinearGradient
@@ -171,7 +171,7 @@ export default class Bubble extends React.Component {
    }
    else {
     return (
-     <View style={{flex:1,flexDirection:'row',paddingLeft:10,paddingRight:10}}>
+     <View style={{flex:1,flexDirection:'row',paddingLeft:scale(10),paddingRight:scale(10)}}>
           <View style={{flex:8}}>
             <LinearGradient
               colors={gradiant}
@@ -183,7 +183,7 @@ export default class Bubble extends React.Component {
           </LinearGradient>
           </View>
           <View style={styles.imgBox}>
-           <Image source={require('../images/svp2.png')} style={{borderRadius:25,width:50,height:50}}/>
+           <Image source={require('../images/svp2.png')} style={{borderRadius:scale(25),width:scale(50),height:scale(50)}}/>
           </View>
       </View>
 
@@ -198,7 +198,7 @@ export default class Bubble extends React.Component {
 // The "right" position is only used in the default Bubble.
 const styles = StyleSheet.create({
   standardFont: {
-    fontSize: 15,
+    fontSize: scale(15),
   },
   imgBox: {
     flex:2,
@@ -207,27 +207,28 @@ const styles = StyleSheet.create({
   },
   textBox: {
     flex:8,
-    borderRadius:10,
+    borderRadius:scale(10),
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
     shadowRadius: 2,
     elevation: 3,
 },
 gradiantStyle: {
-  padding :20,
-  borderRadius:10
+  padding :scale(20),
+  borderRadius:scale(10)
 },
 textStyle:{
   textAlign:'left',
-  fontSize:16,
+  fontSize:scale(16),
   fontFamily:'Montserrat-Regular',
   color:'white'
 },
 dateTextStyle:{
   fontFamily:'Montserrat-Bold',
+  fontSize: scale(12),
   textAlign:'right',
   color:'white',
-  paddingTop:8
+  paddingTop:scale(8)
 },
   slackMessageText: {
     marginLeft: 0,
@@ -239,8 +240,8 @@ dateTextStyle:{
     alignItems: 'flex-start',
   },
   wrapper: {
-    marginRight: 60,
-    minHeight: 20,
+    marginRight: scale(60),
+    minHeight: scale(20),
     justifyContent: 'flex-end',
   },
   username: {
@@ -248,7 +249,7 @@ dateTextStyle:{
   },
   time: {
     textAlign: 'left',
-    fontSize: 12,
+    fontSize: scale(12),
   },
   timeContainer: {
     marginLeft: 0,
@@ -256,11 +257,11 @@ dateTextStyle:{
     marginBottom: 0,
   },
   headerItem: {
-    marginRight: 10,
+    marginRight: scale(10),
   },
   headerView: {
     // Try to align it better with the avatar on Android.
-    marginTop: Platform.OS === 'android' ? -2 : 0,
+    marginTop: Platform.OS === 'android' ? scale(-2) : 0,
     flexDirection: 'row',
     alignItems: 'baseline',
   },
@@ -274,7 +275,7 @@ dateTextStyle:{
     flexDirection: 'row',
   },
   slackImage: {
-    borderRadius: 3,
+    borderRadius: scale(3),
     marginLeft: 0,
     marginRight: 0,
   },

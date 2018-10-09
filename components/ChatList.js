@@ -6,6 +6,8 @@ import {Icon} from 'native-base';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import LinearGradient from 'react-native-linear-gradient';
+import {scale} from '../global';
+
 
 class ChatList extends Component {
 
@@ -59,16 +61,16 @@ class ChatList extends Component {
             end={{x: 1, y: 0}}
             style={{
               width:'100%',
-              marginVertical:5,
+              marginVertical:scale(5),
               justifyContent: 'center',
               alignItems: 'center',
               alignSelf: 'center',
               alignContent: 'center',
-              borderRadius:10,
-              height:120
+              borderRadius:scale(10),
+              height:scale(120)
             }}>
-                <Image style={{width:30,height:30}} source={require('../assets/icons/user_block.png')}   resizeMode="contain" resizeMethod="resize"/>
-                <Text style={{color:'white', fontFamily:'Montserrat-Bold',paddingVertical:5}}>Block</Text>
+                <Image style={{width:scale(30),height:scale(30)}} source={require('../assets/icons/user_block.png')}   resizeMode="contain" resizeMethod="resize"/>
+                <Text style={{color:'white', fontFamily:'Montserrat-Bold',paddingVertical:scale(5)}}>Block</Text>
               </LinearGradient>,
              backgroundColor: 'transparent',
             onPress:()=>{console.log(rowData.text)}
@@ -83,7 +85,7 @@ class ChatList extends Component {
         right={btnsTypes}
         rowID={rowID}
         sectionID={sectionID}
-        buttonWidth={140}
+        buttonWidth={scale(140)}
         autoClose={rowData.autoClose}
         backgroundColor={'rgb(249,252,255)'}
         onOpen={(sectionID, rowID) => {
@@ -100,20 +102,20 @@ class ChatList extends Component {
             <View style={{flex:1,flexDirection:'row'}}>
                 <View style={{flex:2}}>
                     <View style={styles.imageShadow}>
-                                      <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
+                                      <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:scale(35),width:scale(70),height:scale(70)}]}/>
                      </View>
                  </View>   
-                 <View style={{flex:7,paddingHorizontal:10,justifyContent:'space-around'}}>
+                 <View style={{flex:7,paddingHorizontal:scale(10),justifyContent:'space-around'}}>
                   
                          <View style={{flexDirection:'row'}}>
                            <View style={{flex:2}}>
-                             <Text style={{fontSize:17,fontFamily:'Montserrat-Regular',color:'#3E85EF',textAlign:'left'}}>Micheal Y.∂∂</Text>
+                             <Text style={{fontSize:scale(17),fontFamily:'Montserrat-Regular',color:'#3E85EF',textAlign:'left'}}>Micheal Y.∂∂</Text>
                            </View>
                            <View style={{flex:1,alignItems:'flex-end'}}>
-                              <Text style={{textAlign:'right',fontFamily:'Montserrat-Regular',fontSize:13,color:'#3E85EF'}}>Yesterday</Text>
+                              <Text style={{textAlign:'right',fontFamily:'Montserrat-Regular',fontSize:scale(13),color:'#3E85EF'}}>Yesterday</Text>
                            </View>
                           </View>
-                         <View><Text style={{fontSize:14,fontFamily:'Montserrat-Regular',color:'#9B9B9B',marginVertical:10}}>A eget vestibulum magnis non..</Text></View>
+                         <View><Text style={{fontSize:scale(14),fontFamily:'Montserrat-Regular',color:'#9B9B9B',marginVertical:scale(10)}}>A eget vestibulum magnis non..</Text></View>
                          
 
                  </View> 
@@ -157,18 +159,18 @@ var styles = StyleSheet.create({
   },
   liText: {
     color: '#333',
-    fontSize: 16,
+    fontSize: scale(16),
   },
   button:{
     width: '100%',
-    borderRadius:30,
-    paddingVertical:10
+    borderRadius:scale(30),
+    paddingVertical:scale(10)
 },
 btnText: { 
     textAlign:'center',
     color:'white',
     fontFamily: 'Montserrat-Bold',
-    fontSize:15
+    fontSize:scale(15)
 },
 imgBox: {
     flex:1,
@@ -192,17 +194,17 @@ overlay: {
   alignItems:'center'
 },
 imgStyle:{
-    width:100,
-    height:100,
+    width:scale(100),
+    height:scale(100),
 
 },
   servicesBox: {
     flex: 1,
-    marginVertical: 5,
-    marginHorizontal: 10,
-    paddingVertical: 25,
-    paddingHorizontal:20,
-    borderRadius:10,
+    marginVertical: scale(5),
+    marginHorizontal: scale(10),
+    paddingVertical: scale(25),
+    paddingHorizontal:scale(20),
+    borderRadius:scale(10),
     backgroundColor:'white',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
@@ -216,40 +218,41 @@ imgStyle:{
     elevation: 3,
   },
   img_placeholder: {
-    width: 80,
-    height: 80,
-    borderRadius:5,
+    width: scale(80),
+    height: scale(80),
+    borderRadius:scale(5),
     position: 'relative',
     top: 0,
     left: 0
   },
   check: {
-    width: 18,
-    height: 18,
-    borderRadius:9,
+    width: scale(18),
+    height: scale(18),
+    borderRadius:scale(9),
     position: 'absolute',
     bottom: 0,
     left: 0
   },
   iconStyle: {
-     width:15,
-     height:15
+     width:scale(15),
+     height:scale(15)
   },
   tagStyle:{
      backgroundColor: 'rgb(239,186,47)',
-     borderRadius:10,
+     borderRadius:scale(10),
      overflow:"hidden",
-     paddingVertical:2,
-     paddingLeft:10,
-     paddingRight:30,
+     paddingVertical:scale(2),
+     paddingLeft:scale(10),
+     paddingRight:scale(30),
      color: 'white',
+     fontSize: scale(14),
      fontFamily: 'Montserrat-Bold'
   },
   iconButton: {
-    marginHorizontal:5,
-    width: 45,
-    height:45,
-    borderRadius:30,
+    marginHorizontal:scale(5),
+    width: scale(45),
+    height:scale(45),
+    borderRadius:scale(30),
     justifyContent:'center',
     alignItems:'center'
   }

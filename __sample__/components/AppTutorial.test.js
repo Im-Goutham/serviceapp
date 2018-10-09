@@ -14,7 +14,7 @@ import {initialState} from '../../config/jest/mockStore';
 let store;
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
-
+let store;
 
 let findElement = function(tree,element) {
    console.warn(tree);

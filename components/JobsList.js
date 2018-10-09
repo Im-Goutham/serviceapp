@@ -5,6 +5,7 @@ import {Icon} from 'native-base';
 import Share, {ShareSheet, Button} from 'react-native-share';
 import LinearGradient from 'react-native-linear-gradient';
 import OptionsMenu from "react-native-options-menu";
+import {scale} from '../global';
 
 import CancelModal from  '../components/CancelModal';
 
@@ -64,28 +65,27 @@ class JobsList extends Component {
                         end={{x: 1, y: 0}}
                         colors={['#F42922', '#A50600']} 
                         style={{
-                            borderTopRightRadius: 10,
-                            borderBottomRightRadius:10,
+                            borderTopRightRadius: scale(10),
+                            borderBottomRightRadius:scale(10),
                             justifyContent: 'center',
                             alignItems: 'center',
-                            height:185,
-                            marginRight:10,
-                            marginLeft:-20
+                            height:scale(185),
+                            marginRight:scale(10),
+                            marginLeft:scale(-20)
                         }}>
                         <View>
-                            <View style={{alignItems:'center',paddingVertical:10}}>
                             {
                                 screen == 'findJobs' ? (null) :(
-                                    <Image
-                                    source={require('../assets/icons/cross_white.png')}
-                                    style={{width:20,height:20}}
-                                    resizeMode="contain" resizeMethod="resize"
-                                    />
-                                )
-                            }
-                           
-                            </View>
-                          <Text style={{fontFamily:'Montserrat-Bold',color:'white',fontSize:16}}>{screen == 'findJobs' ? 'Remove' : 'Reject'}</Text>
+                                    <View style={{alignItems:'center',paddingVertical:scale(10)}}>
+                                        <Image
+                                        source={require('../assets/icons/cross_white.png')}
+                                        style={{width:scale(20),height:scale(20)}}
+                                        resizeMode="contain" resizeMethod="resize"
+                                        />
+                                   </View>
+                                        )
+                            }      
+                          <Text style={{fontFamily:'Montserrat-Bold',color:'white',fontSize:scale(16)}}>{screen == 'findJobs' ? 'Remove' : 'Reject'}</Text>
                         </View>
                     </LinearGradient>,
                 backgroundColor: 'transparent',
@@ -99,22 +99,22 @@ class JobsList extends Component {
                         end={{x: 1, y: 0}}
                         colors={['#01B151', '#00823B']} 
                         style={{
-                            borderTopLeftRadius: 10,
-                            borderBottomLeftRadius:10,
+                            borderTopLeftRadius: scale(10),
+                            borderBottomLeftRadius:scale(10),
                             justifyContent: 'center',
                             alignItems: 'center',
-                            height:185,
-                            marginLeft:10
+                            height:scale(185),
+                            marginLeft:scale(10)
                         }}>
                         <View>
-                            <View style={{alignItems:'center',paddingVertical:10}}>
+                            <View style={{alignItems:'center',paddingVertical:scale(10)}}>
                             <Image
                                 source={require('../assets/icons/tick_white.png')}
-                                style={{width:20,height:20}}
+                                style={{width:scale(20),height:scale(20)}}
                                 resizeMode="contain" resizeMethod="resize"
                                 />
                             </View>
-                          <Text style={{fontFamily:'Montserrat-Bold',color:'white',fontSize:16}}>Accept</Text>
+                          <Text style={{fontFamily:'Montserrat-Bold',color:'white',fontSize:scale(16)}}>Accept</Text>
                         </View>
                     </LinearGradient>,
                 backgroundColor: 'transparent',
@@ -131,19 +131,19 @@ class JobsList extends Component {
                         colors={['#3E85EF', '#3EBDEF']} 
                         style={{
                             flexDirection: 'row',
-                            borderTopLeftRadius: 10,
-                            borderBottomLeftRadius:10,
+                            borderTopLeftRadius: scale(10),
+                            borderBottomLeftRadius:scale(10),
                             justifyContent: 'space-around',
                             alignItems: 'center',
-                            height:185,
-                            marginLeft:10
+                            height:scale(185),
+                            marginLeft:scale(10)
                         }}>
                        {
                             screen == 'myJobs' ? (null) : (
                          <TouchableOpacity style={styles.iconButton} onPress={()=> this.setState({liked: !this.state.liked})}>
                             <Image 
                                 source={this.state.liked ? require('../assets/icons/heart_red.png'): require('../assets/icons/heart_white.png')}
-                                style={{width:20,height:20}}
+                                style={{width:scale(20),height:scale(20)}}
                                 resizeMode="contain" resizeMethod="resize"
                                 />
                         </TouchableOpacity>
@@ -152,7 +152,7 @@ class JobsList extends Component {
                             <TouchableOpacity style={styles.iconButton} onPress={()=> this.shareJob()}>
                                 <Image
                                 source={require('../assets/icons/send.png')}
-                                style={{width:20,height:20}}
+                                style={{width:scale(20),height:scale(20)}}
                                 resizeMode="contain" resizeMethod="resize"
                                 />
                             </TouchableOpacity>
@@ -171,7 +171,7 @@ class JobsList extends Component {
                 rowID={rowID}
                 sectionID={sectionID}
                 autoClose={data.autoClose}
-                buttonWidth={140}
+                buttonWidth={scale(140)}
                 backgroundColor={"#fff"}
                 onOpen={(sectionID, rowID) => {
                     this.setState({
@@ -187,7 +187,7 @@ class JobsList extends Component {
                 }}>
                     <View style={styles.li}>
                         <View style={{
-                            height: 54,
+                            height: scale(54),
                             flexDirection: 'row',
                             backgroundColor: "transparent",
                             justifyContent: 'space-between'
@@ -198,17 +198,17 @@ class JobsList extends Component {
                                 alignItems: 'center',
                                 backgroundColor: "transparent"
                             }}>
-                                <Text style={{fontSize: 16, fontFamily: 'Montserrat-Medium', color: "#000"}}>{data.jobtitle}</Text>
+                                <Text style={{fontSize: scale(16), fontFamily: 'Montserrat-Medium', color: "#000"}}>{data.jobtitle}</Text>
                                 <Image style={{
-                                    width: 20,
-                                    height: 20,
-                                    paddingHorizontal: 15,
+                                    width: scale(20),
+                                    height: scale(20),
+                                    paddingHorizontal: scale(15),
                                     backgroundColor: "transparent"
                                 }} source={data.icon} resizeMode="contain" resizeMethod="resize"/>
                             </View>
                             <View style={{
                                 width: "40%",
-                                height: 54,
+                                height: scale(54),
                                 backgroundColor: "transparent",
                                 alignItems: 'flex-end',
                                 justifyContent: 'center'
@@ -237,19 +237,19 @@ class JobsList extends Component {
                                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
                                                     <Image 
                                                      source={this.state.liked ? require('../assets/icons/heart_red.png'): require('../assets/icons/heart_white.png')}
-                                                     style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
+                                                     style={[styles.iconStyle,{width:scale(18),height:scale(18)}]}  resizeMode="contain" resizeMethod="resize"/>
                                             </LinearGradient>
                                             </TouchableOpacity>
                                             <TouchableOpacity>
                                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                                    <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
+                                                    <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:scale(18),height:scale(18)}]}  resizeMode="contain" resizeMethod="resize"/>
                                             </LinearGradient>
                                             </TouchableOpacity>
                                           </View>
                                          ) :(
                                             <OptionsMenu
                                             button={ require('../assets/icons/eclipse.png')}
-                                            buttonStyle={{ width: 15, height: 15, margin: 7.5, resizeMode: "contain" }}
+                                            buttonStyle={{ width: scale(15), height: scale(15), margin: scale(7.5), resizeMode: "contain" }}
                                             destructiveIndex={2}
                                             options={["Edit", "Cancel the Job", "Delete"]}
                                             actions={[()=>console.log('Edit'),() => { this.setState({visible:true})},()=>console.log('Delete')]}/>
@@ -270,40 +270,40 @@ class JobsList extends Component {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                             }}>
-                                <Image style={{width: "100%", height: 110, borderRadius: 10,}} source={data.image}
+                                <Image style={{width: "100%", height: scale(110), borderRadius: scale(10)}} source={data.image}
                                        resizeMode="contain" resizeMethod="resize"/>
                             </View>
                             <View style={{
                                 flex: 7,
                                 flexDirection: 'column',
-                                paddingHorizontal: 10,
+                                paddingHorizontal: scale(10),
                                 justifyContent:'space-between'
                             }}>
-                                <View><Text style={{fontSize: 15, color: "#9B9B9B", fontFamily: "Montserrat-Medium"}}
+                                <View><Text style={{fontSize: scale(15), color: "#9B9B9B", fontFamily: "Montserrat-Medium"}}
                                           numberOfLines={3}>{data.detail}</Text></View>
                                  <View style={{ flexDirection: 'row'}}>
-                                    <Image style={{width: 15, height: 15}} source={require('../assets/icons/calender.png')} resizeMode="contain" resizeMethod="resize"/>
+                                    <Image style={{width: scale(15), height: scale(15)}} source={require('../assets/icons/calender.png')} resizeMode="contain" resizeMethod="resize"/>
                                         <Text style={{
-                                            marginLeft: 10,
+                                            marginLeft: scale(10),
                                             fontFamily: "Montserrat-Regular",
-                                            fontSize: 14,
+                                            fontSize: scale(14),
                                             color: 'rgb(101,101,101)'
                                         }}>Before the 19 Sep 2018</Text>
                                 </View>
                                  <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                                         <View style={{flex: 1, flexDirection: 'row',}}>
-                                            <Image style={{width: 15, height: 15}} source={require('../assets/icons/location_red.png')} resizeMode="contain" resizeMethod="resize"/>
-                                            <Text style={{paddingLeft: 5, fontSize: 14, fontFamily: "Montserrat-Light"}}>
+                                            <Image style={{width: scale(15), height: scale(15)}} source={require('../assets/icons/location_red.png')} resizeMode="contain" resizeMethod="resize"/>
+                                            <Text style={{paddingLeft: scale(5), fontSize: scale(14), fontFamily: "Montserrat-Light"}}>
                                                 3 mi.
                                             </Text>
                                         </View>
                                         <View style={{flex: 1, flexDirection: 'row'}}>
                                             <Text style={{
-                                                fontSize: 14,
+                                                fontSize: scale(14),
                                                 color: 'rgb(74,74,74)',
                                                 fontFamily: "Montserrat-Bold"
                                             }}>Budget: </Text><Text style={{
-                                            fontSize: 14,
+                                            fontSize: scale(14),
                                             color: 'rgb(80,174,87)',
                                             fontFamily: "Montserrat-Bold"
                                         }}>$240</Text>
@@ -330,7 +330,7 @@ class JobsList extends Component {
 
     ListViewItemSeparator = () => {
         return (
-            <View style={{height: 5, width: "100%", backgroundColor: "transparent"}}/>
+            <View style={{height: scale(5), width: "100%", backgroundColor: "transparent"}}/>
         );
     }
 
@@ -352,17 +352,17 @@ class JobsList extends Component {
 }
     var styles = StyleSheet.create({
       listview: {
-        paddingHorizontal: 15,
+        paddingHorizontal: scale(15),
         backgroundColor:"rgb(249, 252, 255)",
         flex: 1
       },
       li: {
         backgroundColor: 'white',
-        borderRadius:10,
+        borderRadius:scale(10),
         // borderWidth: 1,
-        paddingHorizontal: 15,
-        paddingVertical:10,
-        marginBottom:20,
+        paddingHorizontal: scale(15),
+        paddingVertical:scale(10),
+        marginBottom:scale(20),
         shadowOffset: { width:  0, height:  2 },
         shadowOpacity: 0.2,
         shadowRadius:  2,
@@ -371,30 +371,30 @@ class JobsList extends Component {
       },
       liText: {
         color: '#333',
-        fontSize: 16,
+        fontSize: scale(16),
       },
       button:{
         justifyContent:'center',
         alignItems:'center',
-        height: 40,
-        borderRadius:20,
+        height: scale(40),
+        borderRadius:scale(20),
         // borderWidth: 1,
         // borderColor: '#008000',
-        paddingTop:5,
-        paddingBottom:5,
+        paddingTop:scale(5),
+        paddingBottom:scale(5),
     },
     btnText: {
       fontFamily:"Montserrat-Bold",
         textAlign:'center',
         color:'white',
-        paddingHorizontal:20,
-        fontSize:14
+        paddingHorizontal:scale(20),
+        fontSize:scale(14)
     },
     iconButton: {
-        marginHorizontal:5,
-        width: 45,
-        height:45,
-        borderRadius:30,
+        marginHorizontal:scale(5),
+        width: scale(45),
+        height:scale(45),
+        borderRadius:scale(30),
         justifyContent:'center',
         alignItems:'center',
         backgroundColor: 'rgba(255,255,255, 0.1)'

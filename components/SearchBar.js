@@ -12,7 +12,7 @@ class SearchBar extends Component {
     }
   }
   render() {
-    let {title, left, right, showKeyBoard,placeholder} = this.props;
+    let { showKeyBoard,placeholder} = this.props;
     console.log('showKeyBoard is ',showKeyBoard)
     return (
       <View>
@@ -37,7 +37,9 @@ const styles = StyleSheet.create({
         paddingHorizontal:scale(15),
     },
     inputField: {
+      height:scale(53),
       fontFamily: 'Montserrat-Medium',
+      fontSize: scale(17),
       marginHorizontal:scale(10),
     }
   })

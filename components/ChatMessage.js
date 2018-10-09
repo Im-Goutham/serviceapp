@@ -10,6 +10,7 @@ import {
 
 import { Avatar, Day, utils } from 'react-native-gifted-chat';
 import Bubble from './ChatBubble';
+import {scale} from '../global';
 
 const { isSameUser, isSameDay } = utils;
 
@@ -66,7 +67,7 @@ export default class Message extends React.Component {
 
   render() {
     // const marginBottom = isSameUser(this.props.currentMessage, this.props.nextMessage) ? 2 : 10;
-   const marginBottom = 10;
+   const marginBottom = scale(10);
     return (
       <View>
         {this.renderDay()}
@@ -91,14 +92,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-end',
     justifyContent: 'flex-start',
-    marginLeft: 8,
+    marginLeft: scale(8),
     marginRight: 0,
   },
   slackAvatar: {
     // The bottom should roughly line up with the first line of message text.
-    height: 40,
-    width: 40,
-    borderRadius: 3,
+    height: scale(40),
+    width: scale(40),
+    borderRadius: scale(3),
   },
 });
 

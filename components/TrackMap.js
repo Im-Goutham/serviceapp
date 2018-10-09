@@ -9,7 +9,8 @@ import {
 
 import MapView ,{ Marker } from 'react-native-maps';
 import Polyline from '@mapbox/polyline';
-
+import {scale} from '../global';
+ 
 export default class RnDirectionsApp extends Component {
   constructor(props) {
     super(props)
@@ -77,7 +78,7 @@ export default class RnDirectionsApp extends Component {
                   <Marker
                      coordinate={{latitude: 17.704788, longitude: 83.297144  }}
                    >
-                     <Image source={require('../assets/icons/map_location_red.png')} style={{ width: 30, height: 30 }} resizeMode="contain" resizeMethod="resize"/>
+                     <Image source={require('../assets/icons/map_location_red.png')} style={{ width: scale(30), height: scale(30) }} resizeMode="contain" resizeMethod="resize"/>
                      <MapView.Callout tooltip >
                       <View style={{justifyContent:'center'}}>
                                 <Text style={styles.tooltipStyle}>YOU ARE HERE</Text>
@@ -87,12 +88,12 @@ export default class RnDirectionsApp extends Component {
                     <Marker
                      coordinate={{latitude: 17.678948, longitude: 83.284446 }}
                      >
-                     <Image source={require('../assets/icons/car.png')} style={{ width: 50, height: 50 }} resizeMode="contain" resizeMethod="resize"/>
+                     <Image source={require('../assets/icons/car.png')} style={{ width: scale(50), height: scale(50) }} resizeMode="contain" resizeMethod="resize"/>
                    </Marker>
                    <Marker
                      coordinate={{latitude: 17.632535, longitude: 83.227539  }}
                      >
-                     <Image source={require('../assets/icons/map_location_blue.png')} style={{ width: 30, height: 30 }} resizeMode="contain" resizeMethod="resize"/>
+                     <Image source={require('../assets/icons/map_location_blue.png')} style={{ width: scale(30), height: scale(30) }} resizeMode="contain" resizeMethod="resize"/>
                    </Marker>
 
               </MapView>
@@ -111,15 +112,15 @@ const styles = StyleSheet.create({
     height: Dimensions.get('window').height
   },
   tooltipStyle:{
-    width: 125,
+    width: scale(125),
     backgroundColor: 'red',
-    borderRadius:5,
+    borderRadius:scale(5),
     overflow:"hidden",
-    paddingVertical:2,
-    paddingLeft:10,
-    paddingRight:10,
+    paddingVertical:scale(2),
+    paddingLeft:scale(10),
+    paddingRight:scale(10),
     color: 'white',
-    fontSize: 13,
+    fontSize: scale(13),
     fontFamily: 'Montserrat-Bold'
 },
 });

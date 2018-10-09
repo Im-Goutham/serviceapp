@@ -12,7 +12,7 @@ import {
 import { Icon } from 'native-base';
 import MapView from 'react-native-maps';
 import Sound from "react-native-sound";
-
+import {scale} from '../global';
 
 export default class CustomView extends React.Component {
 
@@ -89,18 +89,18 @@ const styles = StyleSheet.create({
   container: {
   },
   mapView: {
-    width: 150,
-    height: 100,
-    borderRadius: 13,
-    margin: 3,
+    width: scale(150),
+    height: scale(100),
+    borderRadius: scale(13),
+    margin: scale(3),
   },
   audioContainer: {
-      height:24,
+      height:scale(24),
       justifyContent: 'center',
       alignItems: 'center'
   },
   play: {
-     fontSize: 18
+     fontSize: scale(18)
   }
 });
 

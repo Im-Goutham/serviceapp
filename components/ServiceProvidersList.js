@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import LinearGradient from 'react-native-linear-gradient';
 import Share, {ShareSheet, Button} from 'react-native-share';
+import {scale} from '../global';
 
 class ServiceProvidersList extends Component {
     constructor() {
@@ -41,53 +42,53 @@ class ServiceProvidersList extends Component {
                     <View style={{flex:1,flexDirection:'row'}}>
                         <View style={{flex:2}}>
                             <View style={styles.imageShadow}>
-                                <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:35,width:70,height:70}]}/>
+                                <Image source={require('../images/svp1.png')} style={[styles.img_placeholder,{borderRadius:scale(35),width:scale(70),height:scale(70)}]}/>
                                 <Image source={require('../images/check.png')} style={styles.check}/>
                             </View>
                         </View>
-                        <View style={{flex:7,paddingHorizontal:20}}>
+                        <View style={{flex:7,paddingHorizontal:scale(20)}}>
                             <View style={{flex:1,flexDirection:'row'}}>
-                                <Text style={{fontFamily:'Montserrat-Medium',color:'#22262C',fontSize:18}}>Clayton L.</Text>
+                                <Text style={{fontFamily:'Montserrat-Medium',color:'#22262C',fontSize:scale(18)}}>Clayton L.</Text>
                                 <Image style={{
-                                    width: 20,
-                                    height: 20,
-                                    paddingHorizontal: 15,
+                                    width: scale(20),
+                                    height: scale(20),
+                                    paddingHorizontal: scale(15),
                                     backgroundColor: "transparent"
                                 }} source={require('../assets/icons/crown.png')} resizeMode="contain" resizeMethod="resize"/>
                             </View>
-                            <View style={{flex:1,flexDirection:'row',paddingVertical:10}}>
-                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingRight:8}}><Image source={require('../assets/icons/star_gold.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Bold',marginLeft:8,marginRight:8}}>4</Text></View>
-                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:8,borderLeftColor:'#CCCCCC',borderLeftWidth:1,borderRightColor:'#CCCCCC',borderRightWidth:1}}><Image source={require('../assets/icons/chat_green.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Regular',marginLeft:8,marginRight:8}}>3</Text></View>
-                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:8}}><Image source={require('../assets/icons/location_red.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A',marginLeft:8,marginRight:8}}>3 mi.</Text></View>
+                            <View style={{flex:1,flexDirection:'row',paddingVertical:scale(10)}}>
+                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingRight:scale(8)}}><Image source={require('../assets/icons/star_gold.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Bold',marginLeft:8,marginRight:8}}>4</Text></View>
+                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:scale(8),borderLeftColor:'#CCCCCC',borderLeftWidth:1,borderRightColor:'#CCCCCC',borderRightWidth:1}}><Image source={require('../assets/icons/chat_green.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Regular',marginLeft:8,marginRight:8}}>3</Text></View>
+                                <View style={{flexDirection:'row',justifyContent:'space-around',paddingHorizontal:scale(8)}}><Image source={require('../assets/icons/location_red.png')} style={styles.iconStyle}  resizeMode="contain" resizeMethod="resize"/><Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A',marginLeft:8,marginRight:8}}>3 mi.</Text></View>
                             </View>
                             <View style={{flex:1}}>
-                                <Text>14 <Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A)',fontSize:13}}>Jobs done</Text></Text>
+                                <Text>14 <Text style={{fontFamily:'Montserrat-Regular',color:'#4A4A4A)',fontSize:scale(13)}}>Jobs done</Text></Text>
                             </View>
                         </View>
                     </View>
-                    <View style={{flex:1,flexDirection:'row',marginTop:10}}>
+                    <View style={{flex:1,flexDirection:'row',marginTop:scale(10)}}>
                         <View style={{justifyContent:'center'}}><Text style={styles.tagStyle}>Plumber & 5 More</Text></View>
                         <View style={{flexDirection:'row',flex:1,justifyContent:'flex-end',alignItems:'center'}}>
                         <TouchableOpacity onPress={()=>{this.setState({liked: !this.state.liked})}}>
                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                    <Image source={this.state.liked ? require('../assets/icons/heart_red.png'): require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
+                                    <Image source={this.state.liked ? require('../assets/icons/heart_red.png'): require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:scale(18),height:scale(18)}]}  resizeMode="contain" resizeMethod="resize"/>
                             </LinearGradient>
                          </TouchableOpacity>
                          <TouchableOpacity onPress={()=> this.shareJob()}>
                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
-                                    <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:18,height:18}]}  resizeMode="contain" resizeMethod="resize"/>
+                                    <Image source={require('../assets/icons/send_white.png')} style={[styles.iconStyle,{width:scale(18),height:scale(18)}]}  resizeMode="contain" resizeMethod="resize"/>
                             </LinearGradient>
                         </TouchableOpacity>
                         </View>
                     </View>
-                    <View style={{flex:1,flexDirection:'row'}}>
+                    <View style={{flex:1,flexDirection:'row',paddingVertical:scale(3)}}>
                         {
                             this.state.images.map((image,key)=>{
                                 return  <TouchableWithoutFeedback key={key}>
                                     <View style={styles.imgBox}>
                                         <ImageBackground style={styles.imgStyle} source={image.image}  resizeMode="contain" resizeMethod="resize">
                                             {(key == 2)? (
-                                                <View style={styles.overlay}><Text style={{color:'white',fontSize:22,fontFamily:'Montserrat-Bold'}}>+5</Text></View>
+                                                <View style={styles.overlay}><Text style={{color:'white',fontSize:scale(22),fontFamily:'Montserrat-Bold'}}>+5</Text></View>
                                             ):(null)
                                             }
                                             </ImageBackground>
@@ -98,7 +99,7 @@ class ServiceProvidersList extends Component {
                         </View>
                     <View style={{flex:1,flexDirection:'row'}}>
                         <View style={{flex:5,paddingVertical:3}}>
-                            <Text style={{color:'#9B9B9B',fontFamily:'Montserrat-Medium',fontSize:13}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
+                            <Text style={{color:'#9B9B9B',fontFamily:'Montserrat-Medium',fontSize:scale(13)}} numberOfLines={2}>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</Text>
                         </View>
                         <View style={{flex:3}}>
                         <TouchableOpacity onPress={()=> {this.props.navigation.navigate('select')}}>
@@ -145,18 +146,18 @@ var styles = StyleSheet.create({
   },
   liText: {
     color: '#333',
-    fontSize: 16,
+    fontSize: scale(16),
   },
   button:{
     width: '100%',
-    borderRadius:30,
-    paddingVertical:10
+    borderRadius:scale(30),
+    paddingVertical:scale(10)
 },
 btnText: {
     textAlign:'center',
     color:'white',
     fontFamily: 'Montserrat-Bold',
-    fontSize:14
+    fontSize:scale(14)
 },
 imgBox: {
     flex:1,
@@ -165,7 +166,7 @@ imgBox: {
 },
 overlay: {
   position: 'absolute',
-  top: 6,
+  top: scale(6),
   right: 0,
   bottom: 0,
   left: 0,
@@ -174,21 +175,21 @@ overlay: {
       justifyContent:'center',
       alignItems:'center',
      width:'100%',
-    height:103,
-    borderRadius:10,
+    height:scale(103),
+    borderRadius:scale(10),
 },
 imgStyle:{
     width:'100%',
-    height:115,
-    borderRadius:10,
+    height:scale(115),
+    borderRadius:scale(10),
 },
   servicesBox: {
     flex: 1,
-    marginVertical: 5,
-    marginHorizontal: 10,
-    paddingVertical: 15,
-    paddingHorizontal:20,
-    borderRadius:10,
+    marginVertical: scale(5),
+    marginHorizontal: scale(10),
+    paddingVertical: scale(15),
+    paddingHorizontal: scale(20),
+    borderRadius: scale(10),
     backgroundColor:'white',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.2,
@@ -202,41 +203,42 @@ imgStyle:{
     elevation: 3,
   },
   img_placeholder: {
-    width: 80,
-    height: 80,
-    borderRadius:5,
+    width: scale(80),
+    height: scale(80),
+    borderRadius:scale(5),
     position: 'relative',
     top: 0,
     left: 0
   },
   check: {
-    width: 18,
-    height: 18,
-    borderRadius:9,
+    width: scale(18),
+    height: scale(18),
+    borderRadius:scale(9),
     position: 'absolute',
     bottom: 0,
     left: 0
   },
   iconStyle: {
-     width:15,
-     height:15
+     width:scale(15),
+     height:scale(15)
   },
   tagStyle:{
     backgroundColor: 'rgb(239,186,47)',
-    borderRadius:10,
+    borderRadius:scale(10),
     overflow:"hidden",
-    paddingVertical:2,
-    paddingHorizontal:10,
-    marginBottom:10,
+    paddingVertical:scale(2),
+    paddingHorizontal:scale(10),
+    marginBottom:scale(10),
     color: 'white',
-    marginRight: 10,
+    marginRight: scale(10),
+    fontSize: scale(14),
     fontFamily: 'Montserrat-Bold'
 },
   iconButton: {
-    marginHorizontal:5,
-    width: 45,
-    height:45,
-    borderRadius:30,
+    marginHorizontal:scale(5),
+    width: scale(45),
+    height:scale(45),
+    borderRadius:scale(30),
     justifyContent:'center',
     alignItems:'center',
     backgroundColor: 'rgba(255,255,255, 0.1)'

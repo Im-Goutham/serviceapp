@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { View, StyleSheet,Image, ScrollView,Text,TouchableOpacity} from 'react-native';
-import { Icon} from 'native-base';
+import {scale} from '../global';
 
 
 export default class Documents extends Component {
@@ -15,7 +15,7 @@ export default class Documents extends Component {
           {
               placeholder == true ? (
                 <TouchableOpacity
-                 style={{flexDirection:'column',width:100}}
+                 style={{flexDirection:'column',width:scale(100)}}
                  onPress={()=> {this.props.addDocument()}}
                  >
                     <View>
@@ -53,14 +53,14 @@ export default class Documents extends Component {
 const styles = StyleSheet.create({
     plus: {
         color:'#3399ff',
-        paddingLeft:10,
-        fontSize:20,
+        paddingLeft:scale(10),
+        fontSize:scale(20),
         fontWeight: 'bold'
     },
     img_placeholder: {
-        width: 90,
-        height: 90,
-        borderRadius:5,
+        width: scale(90),
+        height: scale(90),
+        borderRadius:scale(5),
         position: 'relative',
 		top: 0,
 		left: 0,
@@ -73,23 +73,22 @@ const styles = StyleSheet.create({
         elevation: 3,
       },
       close_img: {
-        width: 18,
-        height: 18,
-        borderRadius:9,
+        width: scale(18),
+        height: scale(18),
+        borderRadius:scale(9),
         position: 'absolute',
-		top: 10,
-		right: 15
+		top: scale(10),
+		right: scale(15)
       },
       documentBox: {
         flexDirection:'column',
-        width:100,
-
+        width:scale(100),
       },
       textStyle: {
-        paddingTop:5,
-        paddingBottom:5,
+        paddingTop:scale(5),
+        paddingBottom:scale(5),
         fontFamily: 'Montserrat-Regular',
-        fontSize:14,
+        fontSize:scale(14),
         color:'#4A4A4A'
       }
 })

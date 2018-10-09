@@ -6,7 +6,8 @@ import { connect } from 'react-redux';
 import ChangePasswordModal from './ChangePasswordModal';
 import * as actions from '../actions';
 import { Platform } from '@aws-amplify/core';
-var {height, width} = Dimensions.get('window');
+import {scale} from '../global';
+
 
 class SettingsList extends Component {
 
@@ -47,9 +48,9 @@ class SettingsList extends Component {
           <View style={styles.mainBox}>
                 <View style={{flex:2}}>
                 <Text style={styles.textStyle}>Change the language</Text>
-                <Text style={{fontSize:13,marginVertical:5,fontFamily:'Montserrat-Medium',color:'rgb(186,187,189)'}}>English</Text>
+                <Text style={{fontSize:scale(13),marginVertical:scale(5),fontFamily:'Montserrat-Medium',color:'rgb(186,187,189)'}}>English</Text>
                 </View>
-                <View style={{flex:1,alignItems:'flex-end'}}><Image source={require('../assets/icons/arrow_right.png')} style={{width:8,height:12}}/></View>
+                <View style={{flex:1,alignItems:'flex-end'}}><Image source={require('../assets/icons/arrow_right.png')} style={{width:scale(8),height:scale(12)}}/></View>
           </View>
          </TouchableOpacity>
          <TouchableOpacity  onPress={() => {this.props.navigation.navigate('deleteAccount')}}>
@@ -57,7 +58,7 @@ class SettingsList extends Component {
               <View style={{flex:2,alignItems:'flex-start'}}>
                    <Text style={styles.textStyle}>Delete My Account</Text>
               </View>
-              <View style={{flex:1,alignItems:'flex-end'}}><Image source={require('../assets/icons/arrow_right.png')} style={{width:8,height:12}}/></View>
+              <View style={{flex:1,alignItems:'flex-end'}}><Image source={require('../assets/icons/arrow_right.png')} style={{width:scale(8),height:scale(12)}}/></View>
           </View>
           </TouchableOpacity>
         <ChangePasswordModal visible={visible} closeModal={() => { this.setState({visible:false})}}/>
@@ -71,18 +72,18 @@ class SettingsList extends Component {
 var styles = StyleSheet.create({
        mainBox: {
              flexDirection: 'row',
-             height:80,
+             height:scale(80),
              justifyContent:'center',
              alignItems:'center',
-             paddingHorizontal:20,
-             borderBottomWidth:1,
+             paddingHorizontal:scale(20),
+             borderBottomWidth:scale(1),
              borderBottomColor:'rgb(237,237,237)'
        },
        switch: {
-            transform: Platform.OS === 'ios' ? [{ scaleX: .5 }, { scaleY: .5 }] : [{ scaleX: .8 }, { scaleY: .8 }]
+            transform: Platform.OS === 'ios' ? [{ scaleX: scale(.5) }, { scaleY: scale(.5) }] : [{ scaleX: scale(.8) }, { scaleY: scale(.8) }]
        },
        textStyle:{
-            fontSize:17,
+            fontSize:scale(17),
             color:'rgb(34,38,44)',
             fontFamily:'Montserrat-Medium'
        }

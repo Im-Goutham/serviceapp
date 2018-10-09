@@ -4,6 +4,7 @@ import {StyleSheet, ListView, Text, View, TouchableWithoutFeedback,Image,Touchab
 import {Switch} from 'native-base';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
+import {scale} from '../global';
 
 
 class LanguageList extends Component {
@@ -32,7 +33,7 @@ class LanguageList extends Component {
                 <View style={{flex:1,alignItems:'flex-end'}}>
                    {
                        (index === this.state.selectedkey)?(
-                         <Image source={require('../assets/icons/tick_green.png')} style={{width:16,height:16}}/>
+                         <Image source={require('../assets/icons/tick_green.png')} style={{width:scale(16),height:scale(16)}}/>
                        ):(null)
                    }
                   
@@ -51,18 +52,18 @@ class LanguageList extends Component {
 var styles = StyleSheet.create({
        mainBox: {
              flexDirection: 'row',
-             height:80,
+             height:scale(80),
              justifyContent:'center',
              alignItems:'center',
-             paddingHorizontal:20,
-             borderBottomWidth:1,
+             paddingHorizontal:scale(20),
+             borderBottomWidth:scale(1),
              borderBottomColor:'rgb(237,237,237)'
        },
        switch: {
-          transform: Platform.OS === 'ios' ? [{ scaleX: .5 }, { scaleY: .5 }] : [{ scaleX: .8 }, { scaleY: .8 }]
+          transform: Platform.OS === 'ios' ? [{ scaleX: scale(.5) }, { scaleY: scale(.5) }] : [{ scaleX: scale(.8) }, { scaleY: scale(.8) }]
        },
        textStyle:{
-            fontSize:17,
+            fontSize:scale(17),
             color:'rgb(34,38,44)',
             fontFamily:'Montserrat-Medium'
        }

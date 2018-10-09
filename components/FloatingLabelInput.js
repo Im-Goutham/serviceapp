@@ -64,7 +64,7 @@ export default class FloatingLabelInput extends Component {
       }),
     };
     return (
-      <View style={{ paddingTop: scale(18), flexDirection: 'row', borderBottomWidth: isFocused ? 2 : 1, borderBottomColor: isFocused ? '#3E85EF' :  '#D1D8E0' 
+      <View style={{ paddingTop: scale(18), flexDirection: 'row', borderBottomWidth: isFocused ? scale(2) : scale(1), borderBottomColor: isFocused ? '#3E85EF' :  '#D1D8E0' 
       }}>
         <Animated.Text style={labelStyle}>
           {label}
