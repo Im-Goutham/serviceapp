@@ -22,8 +22,8 @@ let back_arrow = require('../assets/icons/arrow_left.png');
 class AccountScreen extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-        firstname: 'John', 
+    this.state = {
+        firstname: 'John',
         lastname: 'Doe',
         address: '1752 Sunny Day Drive',
         city: 'Irvine',
@@ -32,7 +32,7 @@ class AccountScreen extends Component {
         country: 'United States',
         about:'Parturient aenean vestibulum ullamcorper dis rutrum imperdiet arcu parturient felis vestibulum vestibulum aenean rhoncus aliquest at ornare parturient nisi lectus nostra ullamcorper eros convallis eros ipsum. Curae a lacinia ac habitasse adipiscing per',
         error: null,
-        loading: false,  
+        loading: false,
         avatarSource: null,
         videoSource: null,
         certificates: [
@@ -70,24 +70,33 @@ class AccountScreen extends Component {
               name: 'video2.jpg',
               image: require('../images/documents/video2.png')
             }
-        ], 
+        ],
         websites: [
           {
             name: 'video1.jpg',
             image: require('../images/documents/website1.png')
           },
-        ], 
+        ],
         profiles: [
             {
               name: 'profile1.jpg',
               image: require('../images/documents/profile1.png')
             },
-          ], 
+          ],
       };
     this.focusNextField = this.focusNextField.bind(this);
     this.inputs = {};
   }
+<<<<<<< HEAD
+  hellome= (event) => {
+       this.setState({ firstname: event})
+  }
+  componentDidMount(){
+     console.log('login screen is called ...');
+  }
+=======
 
+>>>>>>> 9294cf32c4e24883ee485bf812b5bf417caa76e4
 
     focusNextField(id) {
         this.inputs[id]._root.focus();
@@ -97,7 +106,7 @@ class AccountScreen extends Component {
 
      handleSubmit = async () => {
         this.props.navigation.navigate('home');
-  
+
    }
 
    handleError(error){
@@ -174,12 +183,12 @@ class AccountScreen extends Component {
         // You can also display the image using data:
         // let source = { uri: 'data:image/jpeg;base64,' + response.data };
 
-      
+
       }
     });
   }
 
-  
+
 
   selectVideoTapped() {
     const options = {
@@ -208,9 +217,9 @@ class AccountScreen extends Component {
       }
     });
   }
-  
+
     render() {
-      let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;  
+      let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;
       let { backButton } = this.props;
        return (
            <View style={{flex:1}}>
@@ -253,12 +262,12 @@ class AccountScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10)}}>
-                       
+
                    </View>
                        }
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
-                       
+
                    <ScrollView style={{backgroundColor:'rgb(249, 252, 255)'}}>
 
               <View style={{backgroundColor:'rgb(249, 252, 255)',paddingHorizontal:scale(20), paddingBottom:scale(30),justifyContent:'space-between'}}>
@@ -269,19 +278,19 @@ class AccountScreen extends Component {
                             (avatarSource)?(
                                <View style={[styles.user_placeholder,{backgroundColor:'rgb(249, 252, 255)'}]}>
                                 <Image source={avatarSource} style={{width:'100%',height:'100%'}}   resizeMode="contain" resizeMethod="resize"/>
-                               </View> 
+                               </View>
                             ):(
                               <View  style={[styles.user_placeholder,{backgroundColor:'rgb(229, 239, 252)'}]}>
                               <Image source={require('../images/svp1.png')} style={{width:'100%',height:'100%'}}   resizeMode="contain" resizeMethod="resize"/>
-                             </View>  
+                             </View>
                             )
                         }
                             <View  style={[styles.camera_icon,{backgroundColor:'rgb(62, 136, 235)'}]}>
                                 <Image  source={require('../images/camera.png')} />
                             </View>
-                        </View>  
+                        </View>
                       </TouchableOpacity>
-                </View>  
+                </View>
                 <View style={{backgroundColor:"transparent", justifyContent:"center", alignItems:'center', flexDirection:"row",paddingVertical:scale(20)}}>
                                 <View style={{flexDirection: "row", paddingRight: scale(10), borderRightWidth: 1,borderRightColor: '#CCCCCC',paddingVertical:2}}>
                                     <Image source={require('../assets/icons/star_gold.png')} style={styles.star_style} resizeMode="contain" resizeMethod="resize"/>
@@ -292,7 +301,7 @@ class AccountScreen extends Component {
                                 </View>
                                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('rating')}}>
                                   <Text style={{ fontFamily:"Montserrat-Medium", fontSize:scale(15), color:"#3E85EF", paddingLeft: scale(10)}}>3 Reviews</Text>
-                                </TouchableOpacity>     
+                                </TouchableOpacity>
                 </View>
                 <View style={{flex:6,justifyContent:'space-between',marginBottom:scale(30)}}>
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
@@ -402,7 +411,7 @@ class AccountScreen extends Component {
                 <View style={[styles.servicesBox,{flexDirection:'row'}]}>
                   <View style={{flex: 2}}><Text style={{color:'#3E85EF',fontFamily:'Montserrat-Medium',fontSize: scale(16),lineHeight:scale(23)}}>Do you want to be a service Provider?</Text></View>
                   <View style={{flex: 1,flexDirection: 'row', justifyContent:'flex-end',alignItems:'center'}}><Switch value={true} style={styles.switch}/></View>
-              </View>  
+              </View>
 
 
        <View style={styles.servicesBox}>
@@ -455,10 +464,10 @@ class AccountScreen extends Component {
                 <TouchableOpacity onPress={() => {this.props.navigation.navigate('addServiceCatScreen',{mainScreen: 'account'})}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#F2F2F2', '#CCCCCC']} style={styles.button}>
                     <Text style={[styles.btnText,{fontFamily:'Montserrat-Regular',color:'black'}]}>ADD SERVICES</Text>
-                    </LinearGradient>  
+                    </LinearGradient>
                 </TouchableOpacity>
                 </View>
-            </View> 
+            </View>
               {/* Upload Certificates starts here */ }
               <View style={styles.servicesBox}>
               <View style={{}}>
@@ -474,66 +483,66 @@ class AccountScreen extends Component {
                 }}
                 onChangeText={about => this.setState({ about })}
                 />
-    
+
                   </View>
                 <View style={{flexDirection: 'row',alignItems:'center',paddingTop:scale(20)}}>
                     <Text style={styles.textStyle}>Upload Certificates</Text>
-                </View>  
+                </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={certificates} placeholder={true}   addDocument={this.selectDocumentTapped.bind(this)}/>
-                </View> 
-             </View>   
-              {/* Upload Certificates ends here */ } 
+                </View>
+             </View>
+              {/* Upload Certificates ends here */ }
               {/* Upload Pics starts here */ }
              <View style={styles.servicesBox}>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                     <Text style={styles.textStyle}>Upload Pics of Work</Text>
-                </View>  
+                </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents  documents={works} placeholder={true}   addDocument={this.selectDocumentTapped.bind(this)}/>
-                </View> 
-             </View>   
+                </View>
+             </View>
               {/* Upload Pics ends here */}
              {/* Upload Id starts here */ }
           <View style={styles.servicesBox}>
                 <View style={{}}>
                     <Text style={[styles.textStyle,{paddingBottom:scale(10)}]}>Upload ID</Text>
                     <Text style={{fontSize:scale(13),color:'#CCCCCC',marginBottom:scale(10),fontFamily:'Montserrat-Medium'}}>Being ID verified can get you more jobs. This info is not shared with other users.</Text>
-                </View>  
+                </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={ids} placeholder={true}   addDocument={this.selectDocumentTapped.bind(this)}/>
-                </View> 
-             </View>   
+                </View>
+             </View>
               {/* Upload Id ends here */}
            {/* Upload Video starts here */ }
            <View style={styles.servicesBox}>
                 <View style={{}}>
                 <Text style={[styles.textStyle]}>Add Video Link</Text>
-                </View>  
+                </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={videos} placeholder={true}   addDocument={this.selectDocumentTapped.bind(this)}/>
-                </View> 
-             </View>   
+                </View>
+             </View>
               {/* Upload Video ends here */}
              {/* Upload Website starts here */ }
            <View style={styles.servicesBox}>
                 <View style={{}}>
                 <Text style={[styles.textStyle]}>Add Website Link</Text>
-                </View>  
+                </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={websites} placeholder={true}   addDocument={this.selectDocumentTapped.bind(this)}/>
-                </View> 
-             </View>   
+                </View>
+             </View>
               {/* Upload Website ends here */}
           {/* Upload Linkedin starts here */ }
            <View style={styles.servicesBox}>
                 <View style={{}}>
                 <Text style={[styles.textStyle]}>Add Linkedin Profile Link</Text>
-                </View>  
+                </View>
                 <View style={{flexDirection: 'row',alignItems:'center'}}>
                    <Documents documents={profiles} placeholder={true}   addDocument={this.selectDocumentTapped.bind(this)}/>
-                </View> 
-             </View>   
+                </View>
+             </View>
             {/* Upload Website ends here */}
             <View style={{justifyContent: "center" ,marginBottom:scale(20),marginTop:scale(10)}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
@@ -548,7 +557,7 @@ class AccountScreen extends Component {
 
                        </View>
                </LinearGradient>
-              
+
            </View>
        )
   }
@@ -593,7 +602,7 @@ button:{
   shadowRadius: 2,
   elevation: 3,
 },
-btnText: { 
+btnText: {
   textAlign:'center',
   color:'black',
   fontSize: scale(16),
@@ -667,9 +676,8 @@ switch: {
 })
 
 
-const mapStateToProps = state=> ({ 
+const mapStateToProps = state=> ({
     backButton:state.user.backButton,
   })
-  
-export default connect(mapStateToProps, actions)(AccountScreen);
 
+export default connect(mapStateToProps, actions)(AccountScreen);
