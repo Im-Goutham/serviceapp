@@ -171,7 +171,7 @@ imgBox: {
 },
 overlay: {
   position: 'absolute',
-  top: scale(6),
+  top: scale(4),
   right: 0,
   bottom: 0,
   left: 0,
@@ -180,7 +180,7 @@ overlay: {
       justifyContent:'center',
       alignItems:'center',
      width:'100%',
-    height:scale(103),
+    height:scale(105),
     borderRadius:scale(10),
 },
 imgStyle:{

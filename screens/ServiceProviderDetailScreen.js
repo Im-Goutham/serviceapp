@@ -74,7 +74,7 @@ export default class ServiceProviderDetailScreen extends Component {
 
 
     renderJobDetail(){
-        console.log('params are .. ',this.props.navigation.state);
+
        
         let { videos, websites, profiles,tags} = this.state;
          return (

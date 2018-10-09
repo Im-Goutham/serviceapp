@@ -187,7 +187,7 @@ export default class AllServiceProvider extends Component {
                          {this.state.tabindex === 0 ?<AllServiceList navigation={this.props.navigation}/>:<Map pinPress={() => this.refs.modal1.open()}/>}
                        </View>
                        <Modal
-                   style={[styles.modal, { height: scale(height/2+50), width: scale(width-30), backgroundColor:"transparent" }]}
+                   style={[styles.modal, { height: height/2+scale(50), width: width-scale(30), backgroundColor:"transparent" }]}
                    position={"bottom"}
                    ref={"modal1"}
                    swipeToClose={false}

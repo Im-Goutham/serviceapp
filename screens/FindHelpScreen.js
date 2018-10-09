@@ -259,7 +259,7 @@ class FindHelpScreen extends Component {
                   </View>
                </LinearGradient>
                <Modal
-                   style={[styles.modal, { height: scale(height/2+50), width: scale(width-30), backgroundColor:"transparent" }]}
+                   style={[styles.modal, { height: height/2+scale(50), width: width-scale(30), backgroundColor:"transparent" }]}
                    position={"bottom"}
                    ref={"modal1"}
                    swipeToClose={false}
@@ -325,20 +325,20 @@ check: {
     bottom: 0,
     left: 0
   },
-    overlay: {
-        position: 'absolute',
-        top: scale(8),
-        right: 0,
-        bottom: 0,
-        left: 0,
-        backgroundColor: 'rgba(0,0,0,.6)',
-        opacity: 2,
-            justifyContent:'center',
-            alignItems:'center',
-           width:'100%',
-          height:scale(97),
-          borderRadius:scale(10),
-},
+  overlay: {
+    position: 'absolute',
+    top: scale(4),
+    right: 0,
+    bottom: 0,
+    left: 0,
+    backgroundColor: 'rgba(0,0,0,.6)',
+    opacity: 2,
+        justifyContent:'center',
+        alignItems:'center',
+       width:'100%',
+      height:scale(105),
+      borderRadius:scale(10),
+  },
       button:{
     width: '100%',
     borderRadius:scale(30),

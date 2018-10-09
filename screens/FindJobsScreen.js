@@ -175,8 +175,8 @@ class FindJobScreen extends Component {
                         </View>
                     <View style={{flexDirection:'row', backgroundColor:"#fff",paddingTop:scale(10),alignItems:'space-between'}}>
                         <View style={{flex:1.3}}>
-                          <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
-                                <Image style={{width: scale(15), height: scale(15)}} source={require('../assets/icons/calender.png')} resizeMode="contain" resizeMethod="resize"/>
+                          <View style={{ flexDirection: 'row'}}>
+                                <Image style={{width: scale(15), height: scale(15),marginTop:scale(3)}} source={require('../assets/icons/calender.png')} resizeMode="contain" resizeMethod="resize"/>
                                     <Text style={{
                                         marginLeft: scale(10),
                                         fontFamily: "Montserrat-Regular",
@@ -184,9 +184,9 @@ class FindJobScreen extends Component {
                                         color: 'rgb(101,101,101)'
                                     }}>Before the 19 Sep 2018</Text>
                             </View>
-                             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+                             <View style={{flexDirection: 'row', justifyContent: 'space-between',paddingTop:scale(3)}}>
                                     <View style={{flex: 1, flexDirection: 'row'}}>
-                                        <Image style={{width: scale(15), height: scale(15)}} source={require('../assets/icons/location_red.png')} resizeMode="contain" resizeMethod="resize"/>
+                                        <Image style={{width: scale(15), height: scale(15),marginTop:scale(3)}} source={require('../assets/icons/location_red.png')} resizeMode="contain" resizeMethod="resize"/>
                                         <Text style={{paddingLeft: scale(5), fontSize: scale(14), fontFamily: "Montserrat-Light"}}>
                                             3 mi
                                         </Text>
@@ -317,7 +317,7 @@ class FindJobScreen extends Component {
                         </View>
                 </LinearGradient>
                 <Modal
-                    style={[styles.modal, { height: scale(height/2+50), width: scale(width-30), backgroundColor:"transparent" }]}
+                    style={[styles.modal, { height: height/2+scale(50), width: width-scale(30), backgroundColor:"transparent" }]}
                     position={"bottom"}
                     ref={"modal1"}
                     swipeToClose={false}

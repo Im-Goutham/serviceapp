@@ -117,8 +117,9 @@ export default class Map extends Component {
                 onLoad={() => this.forceUpdate()}
                 /> */}
             <MapView.Callout tooltip >
-               <View style={{justifyContent:'center'}}>
+               <View style={{justifyContent:'center',flexDirection:'column'}}>
                         <Text style={styles.tooltipStyle}>YOU ARE HERE</Text>
+                        <Icon name='md-arrow-dropdown' style={{color:'#F42922',marginTop:scale(-13),marginLeft:scale(55)}}/> 
               </View>
            </MapView.Callout>
          </Marker> 
@@ -168,7 +169,7 @@ const styles = StyleSheet.create({
   },
   tooltipStyle:{
     width: scale(125),
-    backgroundColor: 'red',
+    backgroundColor: '#F42922',
     borderRadius:scale(5),
     overflow:"hidden",
     paddingVertical:scale(2),
