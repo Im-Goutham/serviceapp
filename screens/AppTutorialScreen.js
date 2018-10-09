@@ -28,8 +28,8 @@ class AppTutorialScreen extends Component {
         <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.appTutorial}>
            <Swiper
              showsButtons={false}
-             dot={<View style={{backgroundColor:'#a2def6', width: scale(20), height: scale(2),borderRadius: 0, marginLeft: scale(3), marginRight: scale(3), marginTop: scale(3), marginBottom: scale(3),}} />}
-             activeDot={<View style={{backgroundColor:'white', width: scale(20), height: scale(2),borderRadius: 0, marginLeft: scale(3), marginRight: scale(3), marginTop: scale(3), marginBottom: scale(3)}} />}
+             dot={<View style={{backgroundColor:'#a2def6', width: scale(20), height: scale(2),borderRadius: 0, marginLeft: scale(3), marginRight: scale(3), marginTop: scale(3), marginBottom: scale(-40),}} />}
+             activeDot={<View style={{backgroundColor:'white', width: scale(20), height: scale(2),borderRadius: 0, marginLeft: scale(3), marginRight: scale(3), marginTop: scale(3), marginBottom: scale(-40)}} />}
             >
                 <View style={styles.slide}>
                     <View style={styles.imgBox}>
@@ -70,16 +70,18 @@ class AppTutorialScreen extends Component {
             </Swiper>
 
           </LinearGradient>
-          <Image source={require('../images/border_img.png')} style={{ width: '100%', height: Platform.OS==='ios'? scale(31) : scale(31)}}/>
+          <View style={{flex:2.6}}>
+          <Image source={require('../images/border_img.png')} style={{ width: '100%', height: Platform.OS==='ios'? scale(31) : scale(35)}}  resizeMode="contain" resizeMethod="resize" />
           <View style={styles.signUpBlock}>
-          <TouchableOpacity  testID='username' onPress={() => {this.props.navigation.navigate('register')}}>
+          <TouchableOpacity  testID='usernameTest' onPress={() => {this.props.navigation.navigate('register')}}>
             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
                <Text style={styles.btnText}> SIGN UP</Text>
             </LinearGradient>
             </TouchableOpacity>
-              <Text style={{marginVertical:scale(20),fontFamily:'Montserrat-Regular',color:'#4A4A4A',fontSize:scale(17),textAlign:'center'}}>Already have an account? <Text style={{fontFamily:'Montserrat-Bold',color:'#3E85EF'}} onPress={()=>{this.props.navigation.navigate('login')}}>Sign In</Text></Text>
+              <Text style={{marginTop:scale(30),marginBottom:scale(20),fontFamily:'Montserrat-Regular',color:'#4A4A4A',fontSize:scale(17),textAlign:'center'}}>Already have an account? <Text style={{fontFamily:'Montserrat-Bold',color:'#3E85EF'}} onPress={()=>{this.props.navigation.navigate('login')}}>Sign In</Text></Text>
             </View>
             <SelectLanguage />
+          </View>
         </LinearGradient>
        )
     }
@@ -90,17 +92,19 @@ const styles = StyleSheet.create({
          flex: 1
     },
     appTutorial: {
-         flex:scale(5),
+         flex:5.5,
          backgroundColor:'white',
          paddingHorizontal:scale(10),
-         paddingVertical: Platform.OS == 'ios' ? scale(30): scale(10),
+         paddingTop: Platform.OS == 'ios' ? scale(50): scale(20),
+         paddingBottom: Platform.OS == 'ios' ? scale(30): scale(10),
          position:'relative'
      },
      tutorialText: {
          flex:3,
          justifyContent:'center',
          alignItems:'center',
-         paddingVertical:scale(30)
+         paddingTop:20,
+         paddingBottom:scale(30)
      },
     slide: {
       flex: 1,
@@ -111,7 +115,7 @@ const styles = StyleSheet.create({
       fontSize: scale(17),
       color:'#FFFFFF',
       fontFamily:'Montserrat-Medium',
-      lineHeight:scale(22),
+      lineHeight:scale(24),
       textAlign:'center',
       marginVertical:scale(10)
     },
@@ -119,7 +123,8 @@ const styles = StyleSheet.create({
         flex:2,
         paddingHorizontal:scale(10),
         flexDirection:'column',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
+        paddingTop:scale(30),
         backgroundColor:'#F9FCFF',
     },
     button:{
@@ -127,7 +132,6 @@ const styles = StyleSheet.create({
         width: '100%',
         borderRadius:scale(30),
         borderColor: '#fff',
-        marginTop:scale(10),
         paddingTop:scale(16),
         paddingBottom:scale(16),
         shadowOffset: { width: 0, height: 2 },
@@ -141,8 +145,8 @@ const styles = StyleSheet.create({
         fontSize: scale(16),
         fontFamily:'Montserrat-Bold'
     },
-    imgBox:{flex:4,justifyContent:'center',alignItems:'center'},
-    imgStyle: {height:scale(260)}
+    imgBox:{flex:7,justifyContent:'center',alignItems:'center'},
+    imgStyle: {height:scale(250)}
 })
 
 export default AppTutorialScreen;

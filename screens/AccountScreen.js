@@ -89,10 +89,6 @@ class AccountScreen extends Component {
   }
 
 
-  componentDidMount(){
-     console.log('login screen is called ...');
-  }
-
     focusNextField(id) {
         this.inputs[id]._root.focus();
     }

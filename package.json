@@ -61,6 +61,7 @@
     "react-native-swiper": "^1.5.13",
     "react-native-thumbnail-grid": "^0.3.0",
     "react-native-vector-icons": "^5.0.0",
+    "react-native-wheel-picker-android": "^1.1.4",
     "react-navigation": "^2.0.1",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
@@ -91,6 +92,6 @@
     },
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|native-base|react-navigation|radio-button-react-native|react-native-google-signin|@expo)"
-  ]
+    ]
   }
 }

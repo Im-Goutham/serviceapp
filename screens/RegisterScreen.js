@@ -41,9 +41,7 @@ class RegisterScreen extends Component {
         this.focusNextField = this.focusNextField.bind(this);
         this.inputs = {};
     }
-    componentDidMount(){
-        console.log('login screen is called ...');
-    }
+  
     focusNextField(id) {
         this.inputs[id]._root.focus();
     }

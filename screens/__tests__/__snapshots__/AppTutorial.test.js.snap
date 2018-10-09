@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppTutorial Screen snapshot 1`] = `
+exports[`AppTutorial snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <AppTutorialScreen />,
@@ -445,7 +445,7 @@ ShallowWrapper {
           <TouchableOpacity
             activeOpacity={0.2}
             onPress={[Function]}
-            testID="username"
+            testID="usernameTest"
           >
             <LinearGradient
               colors={
@@ -2264,7 +2264,7 @@ ShallowWrapper {
             <TouchableOpacity
               activeOpacity={0.2}
               onPress={[Function]}
-              testID="username"
+              testID="usernameTest"
             >
               <LinearGradient
                 colors={
@@ -2411,7 +2411,7 @@ ShallowWrapper {
                 </Component>
               </LinearGradient>,
               "onPress": [Function],
-              "testID": "username",
+              "testID": "usernameTest",
             },
             "ref": null,
             "rendered": Object {
@@ -2980,7 +2980,7 @@ ShallowWrapper {
             <TouchableOpacity
               activeOpacity={0.2}
               onPress={[Function]}
-              testID="username"
+              testID="usernameTest"
             >
               <LinearGradient
                 colors={
@@ -4799,7 +4799,7 @@ ShallowWrapper {
               <TouchableOpacity
                 activeOpacity={0.2}
                 onPress={[Function]}
-                testID="username"
+                testID="usernameTest"
               >
                 <LinearGradient
                   colors={
@@ -4946,7 +4946,7 @@ ShallowWrapper {
                   </Component>
                 </LinearGradient>,
                 "onPress": [Function],
-                "testID": "username",
+                "testID": "usernameTest",
               },
               "ref": null,
               "rendered": Object {

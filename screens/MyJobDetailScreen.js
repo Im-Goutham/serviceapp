@@ -53,7 +53,7 @@ export default class MyJobDetailPage extends Component {
 
 
     renderJobDetail(){
-        console.log('params are .. ',this.props.navigation.state);
+      
        
         let {  serviceProviders } = this.state;
          return (

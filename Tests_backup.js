@@ -19,7 +19,7 @@ const mockStore = configureMockStore(middlewares);
 let store;
 
 let findElement = function(tree,element) {
-   console.warn(tree.children);
+  // console.warn(tree.children);
    let result = undefined;
    for (node in tree.children){
      if(tree.children[node].props.testID == element){

@@ -27,7 +27,6 @@ describe('LoginScreen', () => {
     //    wrapper.setProps({navigation:});
     })
     it('snapshot',()=> {
-        console.warn(wrapper);
         expect(wrapper).toMatchSnapshot();
     })
 });

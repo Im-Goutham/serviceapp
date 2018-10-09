@@ -227,13 +227,19 @@ ShallowWrapper {
                   <Styled(Item)>
                     <Styled(Input)
                       placeholder="Current Location"
+                      placeholderTextColor="#9B9B9B"
                       style={
-                        Object {
-                          "fontFamily": "Montserrat-Light",
-                          "fontSize": 13.913043478260871,
-                          "marginLeft": 0,
-                          "textAlign": "left",
-                        }
+                        Array [
+                          Object {
+                            "fontFamily": "Montserrat-Medium",
+                            "fontSize": 13.913043478260871,
+                            "marginLeft": 0,
+                            "textAlign": "left",
+                          },
+                          Object {
+                            "paddingLeft": 0,
+                          },
+                        ]
                       }
                     />
                   </Styled(Item)>
@@ -345,7 +351,7 @@ ShallowWrapper {
                       placeholder="Enter Keyword"
                       style={
                         Object {
-                          "fontFamily": "Montserrat-Light",
+                          "fontFamily": "Montserrat-Medium",
                           "fontSize": 13.913043478260871,
                           "marginLeft": 0,
                           "textAlign": "left",
@@ -1332,13 +1338,19 @@ ShallowWrapper {
                     <Styled(Item)>
                       <Styled(Input)
                         placeholder="Current Location"
+                        placeholderTextColor="#9B9B9B"
                         style={
-                          Object {
-                            "fontFamily": "Montserrat-Light",
-                            "fontSize": 13.913043478260871,
-                            "marginLeft": 0,
-                            "textAlign": "left",
-                          }
+                          Array [
+                            Object {
+                              "fontFamily": "Montserrat-Medium",
+                              "fontSize": 13.913043478260871,
+                              "marginLeft": 0,
+                              "textAlign": "left",
+                            },
+                            Object {
+                              "paddingLeft": 0,
+                            },
+                          ]
                         }
                       />
                     </Styled(Item)>
@@ -1450,7 +1462,7 @@ ShallowWrapper {
                         placeholder="Enter Keyword"
                         style={
                           Object {
-                            "fontFamily": "Montserrat-Light",
+                            "fontFamily": "Montserrat-Medium",
                             "fontSize": 13.913043478260871,
                             "marginLeft": 0,
                             "textAlign": "left",
@@ -2409,13 +2421,19 @@ ShallowWrapper {
                       <Styled(Item)>
                         <Styled(Input)
                           placeholder="Current Location"
+                          placeholderTextColor="#9B9B9B"
                           style={
-                            Object {
-                              "fontFamily": "Montserrat-Light",
-                              "fontSize": 13.913043478260871,
-                              "marginLeft": 0,
-                              "textAlign": "left",
-                            }
+                            Array [
+                              Object {
+                                "fontFamily": "Montserrat-Medium",
+                                "fontSize": 13.913043478260871,
+                                "marginLeft": 0,
+                                "textAlign": "left",
+                              },
+                              Object {
+                                "paddingLeft": 0,
+                              },
+                            ]
                           }
                         />
                       </Styled(Item)>
@@ -2527,7 +2545,7 @@ ShallowWrapper {
                           placeholder="Enter Keyword"
                           style={
                             Object {
-                              "fontFamily": "Montserrat-Light",
+                              "fontFamily": "Montserrat-Medium",
                               "fontSize": 13.913043478260871,
                               "marginLeft": 0,
                               "textAlign": "left",
@@ -3494,13 +3512,19 @@ ShallowWrapper {
                       <Styled(Item)>
                         <Styled(Input)
                           placeholder="Current Location"
+                          placeholderTextColor="#9B9B9B"
                           style={
-                            Object {
-                              "fontFamily": "Montserrat-Light",
-                              "fontSize": 13.913043478260871,
-                              "marginLeft": 0,
-                              "textAlign": "left",
-                            }
+                            Array [
+                              Object {
+                                "fontFamily": "Montserrat-Medium",
+                                "fontSize": 13.913043478260871,
+                                "marginLeft": 0,
+                                "textAlign": "left",
+                              },
+                              Object {
+                                "paddingLeft": 0,
+                              },
+                            ]
                           }
                         />
                       </Styled(Item)>
@@ -3612,7 +3636,7 @@ ShallowWrapper {
                           placeholder="Enter Keyword"
                           style={
                             Object {
-                              "fontFamily": "Montserrat-Light",
+                              "fontFamily": "Montserrat-Medium",
                               "fontSize": 13.913043478260871,
                               "marginLeft": 0,
                               "textAlign": "left",
@@ -4417,13 +4441,19 @@ ShallowWrapper {
                       <Styled(Item)>
                         <Styled(Input)
                           placeholder="Current Location"
+                          placeholderTextColor="#9B9B9B"
                           style={
-                            Object {
-                              "fontFamily": "Montserrat-Light",
-                              "fontSize": 13.913043478260871,
-                              "marginLeft": 0,
-                              "textAlign": "left",
-                            }
+                            Array [
+                              Object {
+                                "fontFamily": "Montserrat-Medium",
+                                "fontSize": 13.913043478260871,
+                                "marginLeft": 0,
+                                "textAlign": "left",
+                              },
+                              Object {
+                                "paddingLeft": 0,
+                              },
+                            ]
                           }
                         />
                       </Styled(Item)>
@@ -4535,7 +4565,7 @@ ShallowWrapper {
                           placeholder="Enter Keyword"
                           style={
                             Object {
-                              "fontFamily": "Montserrat-Light",
+                              "fontFamily": "Montserrat-Medium",
                               "fontSize": 13.913043478260871,
                               "marginLeft": 0,
                               "textAlign": "left",
@@ -5331,13 +5361,19 @@ ShallowWrapper {
                         <Styled(Item)>
                           <Styled(Input)
                             placeholder="Current Location"
+                            placeholderTextColor="#9B9B9B"
                             style={
-                              Object {
-                                "fontFamily": "Montserrat-Light",
-                                "fontSize": 13.913043478260871,
-                                "marginLeft": 0,
-                                "textAlign": "left",
-                              }
+                              Array [
+                                Object {
+                                  "fontFamily": "Montserrat-Medium",
+                                  "fontSize": 13.913043478260871,
+                                  "marginLeft": 0,
+                                  "textAlign": "left",
+                                },
+                                Object {
+                                  "paddingLeft": 0,
+                                },
+                              ]
                             }
                           />
                         </Styled(Item)>
@@ -5449,7 +5485,7 @@ ShallowWrapper {
                             placeholder="Enter Keyword"
                             style={
                               Object {
-                                "fontFamily": "Montserrat-Light",
+                                "fontFamily": "Montserrat-Medium",
                                 "fontSize": 13.913043478260871,
                                 "marginLeft": 0,
                                 "textAlign": "left",
@@ -6237,13 +6273,19 @@ ShallowWrapper {
                           <Styled(Item)>
                             <Styled(Input)
                               placeholder="Current Location"
+                              placeholderTextColor="#9B9B9B"
                               style={
-                                Object {
-                                  "fontFamily": "Montserrat-Light",
-                                  "fontSize": 13.913043478260871,
-                                  "marginLeft": 0,
-                                  "textAlign": "left",
-                                }
+                                Array [
+                                  Object {
+                                    "fontFamily": "Montserrat-Medium",
+                                    "fontSize": 13.913043478260871,
+                                    "marginLeft": 0,
+                                    "textAlign": "left",
+                                  },
+                                  Object {
+                                    "paddingLeft": 0,
+                                  },
+                                ]
                               }
                             />
                           </Styled(Item)>
@@ -6355,7 +6397,7 @@ ShallowWrapper {
                               placeholder="Enter Keyword"
                               style={
                                 Object {
-                                  "fontFamily": "Montserrat-Light",
+                                  "fontFamily": "Montserrat-Medium",
                                   "fontSize": 13.913043478260871,
                                   "marginLeft": 0,
                                   "textAlign": "left",
@@ -7100,13 +7142,19 @@ ShallowWrapper {
                             <Styled(Item)>
                               <Styled(Input)
                                 placeholder="Current Location"
+                                placeholderTextColor="#9B9B9B"
                                 style={
-                                  Object {
-                                    "fontFamily": "Montserrat-Light",
-                                    "fontSize": 13.913043478260871,
-                                    "marginLeft": 0,
-                                    "textAlign": "left",
-                                  }
+                                  Array [
+                                    Object {
+                                      "fontFamily": "Montserrat-Medium",
+                                      "fontSize": 13.913043478260871,
+                                      "marginLeft": 0,
+                                      "textAlign": "left",
+                                    },
+                                    Object {
+                                      "paddingLeft": 0,
+                                    },
+                                  ]
                                 }
                               />
                             </Styled(Item)>
@@ -7218,7 +7266,7 @@ ShallowWrapper {
                                 placeholder="Enter Keyword"
                                 style={
                                   Object {
-                                    "fontFamily": "Montserrat-Light",
+                                    "fontFamily": "Montserrat-Medium",
                                     "fontSize": 13.913043478260871,
                                     "marginLeft": 0,
                                     "textAlign": "left",
@@ -7251,13 +7299,19 @@ ShallowWrapper {
                               <Styled(Item)>
                                 <Styled(Input)
                                   placeholder="Current Location"
+                                  placeholderTextColor="#9B9B9B"
                                   style={
-                                    Object {
-                                      "fontFamily": "Montserrat-Light",
-                                      "fontSize": 13.913043478260871,
-                                      "marginLeft": 0,
-                                      "textAlign": "left",
-                                    }
+                                    Array [
+                                      Object {
+                                        "fontFamily": "Montserrat-Medium",
+                                        "fontSize": 13.913043478260871,
+                                        "marginLeft": 0,
+                                        "textAlign": "left",
+                                      },
+                                      Object {
+                                        "paddingLeft": 0,
+                                      },
+                                    ]
                                   }
                                 />
                               </Styled(Item)>,
@@ -7291,13 +7345,19 @@ ShallowWrapper {
                               "props": Object {
                                 "children": <Styled(Input)
                                   placeholder="Current Location"
+                                  placeholderTextColor="#9B9B9B"
                                   style={
-                                    Object {
-                                      "fontFamily": "Montserrat-Light",
-                                      "fontSize": 13.913043478260871,
-                                      "marginLeft": 0,
-                                      "textAlign": "left",
-                                    }
+                                    Array [
+                                      Object {
+                                        "fontFamily": "Montserrat-Medium",
+                                        "fontSize": 13.913043478260871,
+                                        "marginLeft": 0,
+                                        "textAlign": "left",
+                                      },
+                                      Object {
+                                        "paddingLeft": 0,
+                                      },
+                                    ]
                                   }
                                 />,
                                 "virtual": undefined,
@@ -7309,12 +7369,18 @@ ShallowWrapper {
                                 "nodeType": "class",
                                 "props": Object {
                                   "placeholder": "Current Location",
-                                  "style": Object {
-                                    "fontFamily": "Montserrat-Light",
-                                    "fontSize": 13.913043478260871,
-                                    "marginLeft": 0,
-                                    "textAlign": "left",
-                                  },
+                                  "placeholderTextColor": "#9B9B9B",
+                                  "style": Array [
+                                    Object {
+                                      "fontFamily": "Montserrat-Medium",
+                                      "fontSize": 13.913043478260871,
+                                      "marginLeft": 0,
+                                      "textAlign": "left",
+                                    },
+                                    Object {
+                                      "paddingLeft": 0,
+                                    },
+                                  ],
                                   "virtual": undefined,
                                 },
                                 "ref": null,
@@ -7576,7 +7642,7 @@ ShallowWrapper {
                                   placeholder="Enter Keyword"
                                   style={
                                     Object {
-                                      "fontFamily": "Montserrat-Light",
+                                      "fontFamily": "Montserrat-Medium",
                                       "fontSize": 13.913043478260871,
                                       "marginLeft": 0,
                                       "textAlign": "left",
@@ -7616,7 +7682,7 @@ ShallowWrapper {
                                   placeholder="Enter Keyword"
                                   style={
                                     Object {
-                                      "fontFamily": "Montserrat-Light",
+                                      "fontFamily": "Montserrat-Medium",
                                       "fontSize": 13.913043478260871,
                                       "marginLeft": 0,
                                       "textAlign": "left",
@@ -7633,7 +7699,7 @@ ShallowWrapper {
                                 "props": Object {
                                   "placeholder": "Enter Keyword",
                                   "style": Object {
-                                    "fontFamily": "Montserrat-Light",
+                                    "fontFamily": "Montserrat-Medium",
                                     "fontSize": 13.913043478260871,
                                     "marginLeft": 0,
                                     "textAlign": "left",
@@ -10317,13 +10383,19 @@ ShallowWrapper {
                       <Styled(Item)>
                         <Styled(Input)
                           placeholder="Current Location"
+                          placeholderTextColor="#9B9B9B"
                           style={
-                            Object {
-                              "fontFamily": "Montserrat-Light",
-                              "fontSize": 13.913043478260871,
-                              "marginLeft": 0,
-                              "textAlign": "left",
-                            }
+                            Array [
+                              Object {
+                                "fontFamily": "Montserrat-Medium",
+                                "fontSize": 13.913043478260871,
+                                "marginLeft": 0,
+                                "textAlign": "left",
+                              },
+                              Object {
+                                "paddingLeft": 0,
+                              },
+                            ]
                           }
                         />
                       </Styled(Item)>
@@ -10435,7 +10507,7 @@ ShallowWrapper {
                           placeholder="Enter Keyword"
                           style={
                             Object {
-                              "fontFamily": "Montserrat-Light",
+                              "fontFamily": "Montserrat-Medium",
                               "fontSize": 13.913043478260871,
                               "marginLeft": 0,
                               "textAlign": "left",
@@ -11394,13 +11466,19 @@ ShallowWrapper {
                         <Styled(Item)>
                           <Styled(Input)
                             placeholder="Current Location"
+                            placeholderTextColor="#9B9B9B"
                             style={
-                              Object {
-                                "fontFamily": "Montserrat-Light",
-                                "fontSize": 13.913043478260871,
-                                "marginLeft": 0,
-                                "textAlign": "left",
-                              }
+                              Array [
+                                Object {
+                                  "fontFamily": "Montserrat-Medium",
+                                  "fontSize": 13.913043478260871,
+                                  "marginLeft": 0,
+                                  "textAlign": "left",
+                                },
+                                Object {
+                                  "paddingLeft": 0,
+                                },
+                              ]
                             }
                           />
                         </Styled(Item)>
@@ -11512,7 +11590,7 @@ ShallowWrapper {
                             placeholder="Enter Keyword"
                             style={
                               Object {
-                                "fontFamily": "Montserrat-Light",
+                                "fontFamily": "Montserrat-Medium",
                                 "fontSize": 13.913043478260871,
                                 "marginLeft": 0,
                                 "textAlign": "left",
@@ -12479,13 +12557,19 @@ ShallowWrapper {
                         <Styled(Item)>
                           <Styled(Input)
                             placeholder="Current Location"
+                            placeholderTextColor="#9B9B9B"
                             style={
-                              Object {
-                                "fontFamily": "Montserrat-Light",
-                                "fontSize": 13.913043478260871,
-                                "marginLeft": 0,
-                                "textAlign": "left",
-                              }
+                              Array [
+                                Object {
+                                  "fontFamily": "Montserrat-Medium",
+                                  "fontSize": 13.913043478260871,
+                                  "marginLeft": 0,
+                                  "textAlign": "left",
+                                },
+                                Object {
+                                  "paddingLeft": 0,
+                                },
+                              ]
                             }
                           />
                         </Styled(Item)>
@@ -12597,7 +12681,7 @@ ShallowWrapper {
                             placeholder="Enter Keyword"
                             style={
                               Object {
-                                "fontFamily": "Montserrat-Light",
+                                "fontFamily": "Montserrat-Medium",
                                 "fontSize": 13.913043478260871,
                                 "marginLeft": 0,
                                 "textAlign": "left",
@@ -13402,13 +13486,19 @@ ShallowWrapper {
                         <Styled(Item)>
                           <Styled(Input)
                             placeholder="Current Location"
+                            placeholderTextColor="#9B9B9B"
                             style={
-                              Object {
-                                "fontFamily": "Montserrat-Light",
-                                "fontSize": 13.913043478260871,
-                                "marginLeft": 0,
-                                "textAlign": "left",
-                              }
+                              Array [
+                                Object {
+                                  "fontFamily": "Montserrat-Medium",
+                                  "fontSize": 13.913043478260871,
+                                  "marginLeft": 0,
+                                  "textAlign": "left",
+                                },
+                                Object {
+                                  "paddingLeft": 0,
+                                },
+                              ]
                             }
                           />
                         </Styled(Item)>
@@ -13520,7 +13610,7 @@ ShallowWrapper {
                             placeholder="Enter Keyword"
                             style={
                               Object {
-                                "fontFamily": "Montserrat-Light",
+                                "fontFamily": "Montserrat-Medium",
                                 "fontSize": 13.913043478260871,
                                 "marginLeft": 0,
                                 "textAlign": "left",
@@ -14316,13 +14406,19 @@ ShallowWrapper {
                           <Styled(Item)>
                             <Styled(Input)
                               placeholder="Current Location"
+                              placeholderTextColor="#9B9B9B"
                               style={
-                                Object {
-                                  "fontFamily": "Montserrat-Light",
-                                  "fontSize": 13.913043478260871,
-                                  "marginLeft": 0,
-                                  "textAlign": "left",
-                                }
+                                Array [
+                                  Object {
+                                    "fontFamily": "Montserrat-Medium",
+                                    "fontSize": 13.913043478260871,
+                                    "marginLeft": 0,
+                                    "textAlign": "left",
+                                  },
+                                  Object {
+                                    "paddingLeft": 0,
+                                  },
+                                ]
                               }
                             />
                           </Styled(Item)>
@@ -14434,7 +14530,7 @@ ShallowWrapper {
                               placeholder="Enter Keyword"
                               style={
                                 Object {
-                                  "fontFamily": "Montserrat-Light",
+                                  "fontFamily": "Montserrat-Medium",
                                   "fontSize": 13.913043478260871,
                                   "marginLeft": 0,
                                   "textAlign": "left",
@@ -15222,13 +15318,19 @@ ShallowWrapper {
                             <Styled(Item)>
                               <Styled(Input)
                                 placeholder="Current Location"
+                                placeholderTextColor="#9B9B9B"
                                 style={
-                                  Object {
-                                    "fontFamily": "Montserrat-Light",
-                                    "fontSize": 13.913043478260871,
-                                    "marginLeft": 0,
-                                    "textAlign": "left",
-                                  }
+                                  Array [
+                                    Object {
+                                      "fontFamily": "Montserrat-Medium",
+                                      "fontSize": 13.913043478260871,
+                                      "marginLeft": 0,
+                                      "textAlign": "left",
+                                    },
+                                    Object {
+                                      "paddingLeft": 0,
+                                    },
+                                  ]
                                 }
                               />
                             </Styled(Item)>
@@ -15340,7 +15442,7 @@ ShallowWrapper {
                                 placeholder="Enter Keyword"
                                 style={
                                   Object {
-                                    "fontFamily": "Montserrat-Light",
+                                    "fontFamily": "Montserrat-Medium",
                                     "fontSize": 13.913043478260871,
                                     "marginLeft": 0,
                                     "textAlign": "left",
@@ -16085,13 +16187,19 @@ ShallowWrapper {
                               <Styled(Item)>
                                 <Styled(Input)
                                   placeholder="Current Location"
+                                  placeholderTextColor="#9B9B9B"
                                   style={
-                                    Object {
-                                      "fontFamily": "Montserrat-Light",
-                                      "fontSize": 13.913043478260871,
-                                      "marginLeft": 0,
-                                      "textAlign": "left",
-                                    }
+                                    Array [
+                                      Object {
+                                        "fontFamily": "Montserrat-Medium",
+                                        "fontSize": 13.913043478260871,
+                                        "marginLeft": 0,
+                                        "textAlign": "left",
+                                      },
+                                      Object {
+                                        "paddingLeft": 0,
+                                      },
+                                    ]
                                   }
                                 />
                               </Styled(Item)>
@@ -16203,7 +16311,7 @@ ShallowWrapper {
                                   placeholder="Enter Keyword"
                                   style={
                                     Object {
-                                      "fontFamily": "Montserrat-Light",
+                                      "fontFamily": "Montserrat-Medium",
                                       "fontSize": 13.913043478260871,
                                       "marginLeft": 0,
                                       "textAlign": "left",
@@ -16236,13 +16344,19 @@ ShallowWrapper {
                                 <Styled(Item)>
                                   <Styled(Input)
                                     placeholder="Current Location"
+                                    placeholderTextColor="#9B9B9B"
                                     style={
-                                      Object {
-                                        "fontFamily": "Montserrat-Light",
-                                        "fontSize": 13.913043478260871,
-                                        "marginLeft": 0,
-                                        "textAlign": "left",
-                                      }
+                                      Array [
+                                        Object {
+                                          "fontFamily": "Montserrat-Medium",
+                                          "fontSize": 13.913043478260871,
+                                          "marginLeft": 0,
+                                          "textAlign": "left",
+                                        },
+                                        Object {
+                                          "paddingLeft": 0,
+                                        },
+                                      ]
                                     }
                                   />
                                 </Styled(Item)>,
@@ -16276,13 +16390,19 @@ ShallowWrapper {
                                 "props": Object {
                                   "children": <Styled(Input)
                                     placeholder="Current Location"
+                                    placeholderTextColor="#9B9B9B"
                                     style={
-                                      Object {
-                                        "fontFamily": "Montserrat-Light",
-                                        "fontSize": 13.913043478260871,
-                                        "marginLeft": 0,
-                                        "textAlign": "left",
-                                      }
+                                      Array [
+                                        Object {
+                                          "fontFamily": "Montserrat-Medium",
+                                          "fontSize": 13.913043478260871,
+                                          "marginLeft": 0,
+                                          "textAlign": "left",
+                                        },
+                                        Object {
+                                          "paddingLeft": 0,
+                                        },
+                                      ]
                                     }
                                   />,
                                   "virtual": undefined,
@@ -16294,12 +16414,18 @@ ShallowWrapper {
                                   "nodeType": "class",
                                   "props": Object {
                                     "placeholder": "Current Location",
-                                    "style": Object {
-                                      "fontFamily": "Montserrat-Light",
-                                      "fontSize": 13.913043478260871,
-                                      "marginLeft": 0,
-                                      "textAlign": "left",
-                                    },
+                                    "placeholderTextColor": "#9B9B9B",
+                                    "style": Array [
+                                      Object {
+                                        "fontFamily": "Montserrat-Medium",
+                                        "fontSize": 13.913043478260871,
+                                        "marginLeft": 0,
+                                        "textAlign": "left",
+                                      },
+                                      Object {
+                                        "paddingLeft": 0,
+                                      },
+                                    ],
                                     "virtual": undefined,
                                   },
                                   "ref": null,
@@ -16561,7 +16687,7 @@ ShallowWrapper {
                                     placeholder="Enter Keyword"
                                     style={
                                       Object {
-                                        "fontFamily": "Montserrat-Light",
+                                        "fontFamily": "Montserrat-Medium",
                                         "fontSize": 13.913043478260871,
                                         "marginLeft": 0,
                                         "textAlign": "left",
@@ -16601,7 +16727,7 @@ ShallowWrapper {
                                     placeholder="Enter Keyword"
                                     style={
                                       Object {
-                                        "fontFamily": "Montserrat-Light",
+                                        "fontFamily": "Montserrat-Medium",
                                         "fontSize": 13.913043478260871,
                                         "marginLeft": 0,
                                         "textAlign": "left",
@@ -16618,7 +16744,7 @@ ShallowWrapper {
                                   "props": Object {
                                     "placeholder": "Enter Keyword",
                                     "style": Object {
-                                      "fontFamily": "Montserrat-Light",
+                                      "fontFamily": "Montserrat-Medium",
                                       "fontSize": 13.913043478260871,
                                       "marginLeft": 0,
                                       "textAlign": "left",

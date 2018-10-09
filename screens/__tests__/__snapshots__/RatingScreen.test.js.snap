@@ -390,6 +390,7 @@ ShallowWrapper {
                   style={
                     Object {
                       "flex": 3,
+                      "paddingVertical": 4.347826086956522,
                     }
                   }
                 >
@@ -577,9 +578,11 @@ ShallowWrapper {
                           "color": "white",
                           "fontFamily": "Montserrat-Bold",
                           "fontSize": 12.173913043478262,
+                          "marginBottom": 8.695652173913045,
+                          "marginRight": 8.695652173913045,
                           "overflow": "hidden",
-                          "paddingLeft": 8.695652173913045,
-                          "paddingVertical": 1,
+                          "paddingHorizontal": 8.695652173913045,
+                          "paddingVertical": 1.7391304347826089,
                         }
                       }
                     >
@@ -663,6 +666,7 @@ ShallowWrapper {
                   style={
                     Object {
                       "flex": 3,
+                      "paddingVertical": 4.347826086956522,
                     }
                   }
                 >
@@ -850,9 +854,11 @@ ShallowWrapper {
                           "color": "white",
                           "fontFamily": "Montserrat-Bold",
                           "fontSize": 12.173913043478262,
+                          "marginBottom": 8.695652173913045,
+                          "marginRight": 8.695652173913045,
                           "overflow": "hidden",
-                          "paddingLeft": 8.695652173913045,
-                          "paddingVertical": 1,
+                          "paddingHorizontal": 8.695652173913045,
+                          "paddingVertical": 1.7391304347826089,
                         }
                       }
                     >
@@ -936,6 +942,7 @@ ShallowWrapper {
                   style={
                     Object {
                       "flex": 3,
+                      "paddingVertical": 4.347826086956522,
                     }
                   }
                 >
@@ -1123,9 +1130,11 @@ ShallowWrapper {
                           "color": "white",
                           "fontFamily": "Montserrat-Bold",
                           "fontSize": 12.173913043478262,
+                          "marginBottom": 8.695652173913045,
+                          "marginRight": 8.695652173913045,
                           "overflow": "hidden",
-                          "paddingLeft": 8.695652173913045,
-                          "paddingVertical": 1,
+                          "paddingHorizontal": 8.695652173913045,
+                          "paddingVertical": 1.7391304347826089,
                         }
                       }
                     >
@@ -1576,6 +1585,7 @@ ShallowWrapper {
                     style={
                       Object {
                         "flex": 3,
+                        "paddingVertical": 4.347826086956522,
                       }
                     }
                   >
@@ -1763,9 +1773,11 @@ ShallowWrapper {
                             "color": "white",
                             "fontFamily": "Montserrat-Bold",
                             "fontSize": 12.173913043478262,
+                            "marginBottom": 8.695652173913045,
+                            "marginRight": 8.695652173913045,
                             "overflow": "hidden",
-                            "paddingLeft": 8.695652173913045,
-                            "paddingVertical": 1,
+                            "paddingHorizontal": 8.695652173913045,
+                            "paddingVertical": 1.7391304347826089,
                           }
                         }
                       >
@@ -1849,6 +1861,7 @@ ShallowWrapper {
                     style={
                       Object {
                         "flex": 3,
+                        "paddingVertical": 4.347826086956522,
                       }
                     }
                   >
@@ -2036,9 +2049,11 @@ ShallowWrapper {
                             "color": "white",
                             "fontFamily": "Montserrat-Bold",
                             "fontSize": 12.173913043478262,
+                            "marginBottom": 8.695652173913045,
+                            "marginRight": 8.695652173913045,
                             "overflow": "hidden",
-                            "paddingLeft": 8.695652173913045,
-                            "paddingVertical": 1,
+                            "paddingHorizontal": 8.695652173913045,
+                            "paddingVertical": 1.7391304347826089,
                           }
                         }
                       >
@@ -2122,6 +2137,7 @@ ShallowWrapper {
                     style={
                       Object {
                         "flex": 3,
+                        "paddingVertical": 4.347826086956522,
                       }
                     }
                   >
@@ -2309,9 +2325,11 @@ ShallowWrapper {
                             "color": "white",
                             "fontFamily": "Montserrat-Bold",
                             "fontSize": 12.173913043478262,
+                            "marginBottom": 8.695652173913045,
+                            "marginRight": 8.695652173913045,
                             "overflow": "hidden",
-                            "paddingLeft": 8.695652173913045,
-                            "paddingVertical": 1,
+                            "paddingHorizontal": 8.695652173913045,
+                            "paddingVertical": 1.7391304347826089,
                           }
                         }
                       >
@@ -2734,6 +2752,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "flex": 3,
+                          "paddingVertical": 4.347826086956522,
                         }
                       }
                     >
@@ -2921,9 +2940,11 @@ ShallowWrapper {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
                               "fontSize": 12.173913043478262,
+                              "marginBottom": 8.695652173913045,
+                              "marginRight": 8.695652173913045,
                               "overflow": "hidden",
-                              "paddingLeft": 8.695652173913045,
-                              "paddingVertical": 1,
+                              "paddingHorizontal": 8.695652173913045,
+                              "paddingVertical": 1.7391304347826089,
                             }
                           }
                         >
@@ -3007,6 +3028,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "flex": 3,
+                          "paddingVertical": 4.347826086956522,
                         }
                       }
                     >
@@ -3194,9 +3216,11 @@ ShallowWrapper {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
                               "fontSize": 12.173913043478262,
+                              "marginBottom": 8.695652173913045,
+                              "marginRight": 8.695652173913045,
                               "overflow": "hidden",
-                              "paddingLeft": 8.695652173913045,
-                              "paddingVertical": 1,
+                              "paddingHorizontal": 8.695652173913045,
+                              "paddingVertical": 1.7391304347826089,
                             }
                           }
                         >
@@ -3280,6 +3304,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "flex": 3,
+                          "paddingVertical": 4.347826086956522,
                         }
                       }
                     >
@@ -3467,9 +3492,11 @@ ShallowWrapper {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
                               "fontSize": 12.173913043478262,
+                              "marginBottom": 8.695652173913045,
+                              "marginRight": 8.695652173913045,
                               "overflow": "hidden",
-                              "paddingLeft": 8.695652173913045,
-                              "paddingVertical": 1,
+                              "paddingHorizontal": 8.695652173913045,
+                              "paddingVertical": 1.7391304347826089,
                             }
                           }
                         >
@@ -3899,6 +3926,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "flex": 3,
+                          "paddingVertical": 4.347826086956522,
                         }
                       }
                     >
@@ -4086,9 +4114,11 @@ ShallowWrapper {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
                               "fontSize": 12.173913043478262,
+                              "marginBottom": 8.695652173913045,
+                              "marginRight": 8.695652173913045,
                               "overflow": "hidden",
-                              "paddingLeft": 8.695652173913045,
-                              "paddingVertical": 1,
+                              "paddingHorizontal": 8.695652173913045,
+                              "paddingVertical": 1.7391304347826089,
                             }
                           }
                         >
@@ -4172,6 +4202,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "flex": 3,
+                          "paddingVertical": 4.347826086956522,
                         }
                       }
                     >
@@ -4359,9 +4390,11 @@ ShallowWrapper {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
                               "fontSize": 12.173913043478262,
+                              "marginBottom": 8.695652173913045,
+                              "marginRight": 8.695652173913045,
                               "overflow": "hidden",
-                              "paddingLeft": 8.695652173913045,
-                              "paddingVertical": 1,
+                              "paddingHorizontal": 8.695652173913045,
+                              "paddingVertical": 1.7391304347826089,
                             }
                           }
                         >
@@ -4445,6 +4478,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "flex": 3,
+                          "paddingVertical": 4.347826086956522,
                         }
                       }
                     >
@@ -4632,9 +4666,11 @@ ShallowWrapper {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
                               "fontSize": 12.173913043478262,
+                              "marginBottom": 8.695652173913045,
+                              "marginRight": 8.695652173913045,
                               "overflow": "hidden",
-                              "paddingLeft": 8.695652173913045,
-                              "paddingVertical": 1,
+                              "paddingHorizontal": 8.695652173913045,
+                              "paddingVertical": 1.7391304347826089,
                             }
                           }
                         >
@@ -4934,6 +4970,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "flex": 3,
+                          "paddingVertical": 4.347826086956522,
                         }
                       }
                     >
@@ -5121,9 +5158,11 @@ ShallowWrapper {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
                               "fontSize": 12.173913043478262,
+                              "marginBottom": 8.695652173913045,
+                              "marginRight": 8.695652173913045,
                               "overflow": "hidden",
-                              "paddingLeft": 8.695652173913045,
-                              "paddingVertical": 1,
+                              "paddingHorizontal": 8.695652173913045,
+                              "paddingVertical": 1.7391304347826089,
                             }
                           }
                         >
@@ -5207,6 +5246,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "flex": 3,
+                          "paddingVertical": 4.347826086956522,
                         }
                       }
                     >
@@ -5394,9 +5434,11 @@ ShallowWrapper {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
                               "fontSize": 12.173913043478262,
+                              "marginBottom": 8.695652173913045,
+                              "marginRight": 8.695652173913045,
                               "overflow": "hidden",
-                              "paddingLeft": 8.695652173913045,
-                              "paddingVertical": 1,
+                              "paddingHorizontal": 8.695652173913045,
+                              "paddingVertical": 1.7391304347826089,
                             }
                           }
                         >
@@ -5480,6 +5522,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "flex": 3,
+                          "paddingVertical": 4.347826086956522,
                         }
                       }
                     >
@@ -5667,9 +5710,11 @@ ShallowWrapper {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
                               "fontSize": 12.173913043478262,
+                              "marginBottom": 8.695652173913045,
+                              "marginRight": 8.695652173913045,
                               "overflow": "hidden",
-                              "paddingLeft": 8.695652173913045,
-                              "paddingVertical": 1,
+                              "paddingHorizontal": 8.695652173913045,
+                              "paddingVertical": 1.7391304347826089,
                             }
                           }
                         >
@@ -5955,6 +6000,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "flex": 3,
+                              "paddingVertical": 4.347826086956522,
                             }
                           }
                         >
@@ -6142,9 +6188,11 @@ ShallowWrapper {
                                   "color": "white",
                                   "fontFamily": "Montserrat-Bold",
                                   "fontSize": 12.173913043478262,
+                                  "marginBottom": 8.695652173913045,
+                                  "marginRight": 8.695652173913045,
                                   "overflow": "hidden",
-                                  "paddingLeft": 8.695652173913045,
-                                  "paddingVertical": 1,
+                                  "paddingHorizontal": 8.695652173913045,
+                                  "paddingVertical": 1.7391304347826089,
                                 }
                               }
                             >
@@ -6228,6 +6276,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "flex": 3,
+                              "paddingVertical": 4.347826086956522,
                             }
                           }
                         >
@@ -6415,9 +6464,11 @@ ShallowWrapper {
                                   "color": "white",
                                   "fontFamily": "Montserrat-Bold",
                                   "fontSize": 12.173913043478262,
+                                  "marginBottom": 8.695652173913045,
+                                  "marginRight": 8.695652173913045,
                                   "overflow": "hidden",
-                                  "paddingLeft": 8.695652173913045,
-                                  "paddingVertical": 1,
+                                  "paddingHorizontal": 8.695652173913045,
+                                  "paddingVertical": 1.7391304347826089,
                                 }
                               }
                             >
@@ -6501,6 +6552,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "flex": 3,
+                              "paddingVertical": 4.347826086956522,
                             }
                           }
                         >
@@ -6688,9 +6740,11 @@ ShallowWrapper {
                                   "color": "white",
                                   "fontFamily": "Montserrat-Bold",
                                   "fontSize": 12.173913043478262,
+                                  "marginBottom": 8.695652173913045,
+                                  "marginRight": 8.695652173913045,
                                   "overflow": "hidden",
-                                  "paddingLeft": 8.695652173913045,
-                                  "paddingVertical": 1,
+                                  "paddingHorizontal": 8.695652173913045,
+                                  "paddingVertical": 1.7391304347826089,
                                 }
                               }
                             >
@@ -7367,6 +7421,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "flex": 3,
+                              "paddingVertical": 4.347826086956522,
                             }
                           }
                         >
@@ -7554,9 +7609,11 @@ ShallowWrapper {
                                   "color": "white",
                                   "fontFamily": "Montserrat-Bold",
                                   "fontSize": 12.173913043478262,
+                                  "marginBottom": 8.695652173913045,
+                                  "marginRight": 8.695652173913045,
                                   "overflow": "hidden",
-                                  "paddingLeft": 8.695652173913045,
-                                  "paddingVertical": 1,
+                                  "paddingHorizontal": 8.695652173913045,
+                                  "paddingVertical": 1.7391304347826089,
                                 }
                               }
                             >
@@ -7637,6 +7694,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "flex": 3,
+                                "paddingVertical": 4.347826086956522,
                               }
                             }
                           >
@@ -7824,9 +7882,11 @@ ShallowWrapper {
                                     "color": "white",
                                     "fontFamily": "Montserrat-Bold",
                                     "fontSize": 12.173913043478262,
+                                    "marginBottom": 8.695652173913045,
+                                    "marginRight": 8.695652173913045,
                                     "overflow": "hidden",
-                                    "paddingLeft": 8.695652173913045,
-                                    "paddingVertical": 1,
+                                    "paddingHorizontal": 8.695652173913045,
+                                    "paddingVertical": 1.7391304347826089,
                                   }
                                 }
                               >
@@ -7885,6 +7945,7 @@ ShallowWrapper {
                             </Component>,
                             "style": Object {
                               "flex": 3,
+                              "paddingVertical": 4.347826086956522,
                             },
                           },
                           "ref": null,
@@ -8123,9 +8184,11 @@ ShallowWrapper {
                                       "color": "white",
                                       "fontFamily": "Montserrat-Bold",
                                       "fontSize": 12.173913043478262,
+                                      "marginBottom": 8.695652173913045,
+                                      "marginRight": 8.695652173913045,
                                       "overflow": "hidden",
-                                      "paddingLeft": 8.695652173913045,
-                                      "paddingVertical": 1,
+                                      "paddingHorizontal": 8.695652173913045,
+                                      "paddingVertical": 1.7391304347826089,
                                     }
                                   }
                                 >
@@ -8427,9 +8490,11 @@ ShallowWrapper {
                                       "color": "white",
                                       "fontFamily": "Montserrat-Bold",
                                       "fontSize": 12.173913043478262,
+                                      "marginBottom": 8.695652173913045,
+                                      "marginRight": 8.695652173913045,
                                       "overflow": "hidden",
-                                      "paddingLeft": 8.695652173913045,
-                                      "paddingVertical": 1,
+                                      "paddingHorizontal": 8.695652173913045,
+                                      "paddingVertical": 1.7391304347826089,
                                     }
                                   }
                                 >
@@ -8452,9 +8517,11 @@ ShallowWrapper {
                                     "color": "white",
                                     "fontFamily": "Montserrat-Bold",
                                     "fontSize": 12.173913043478262,
+                                    "marginBottom": 8.695652173913045,
+                                    "marginRight": 8.695652173913045,
                                     "overflow": "hidden",
-                                    "paddingLeft": 8.695652173913045,
-                                    "paddingVertical": 1,
+                                    "paddingHorizontal": 8.695652173913045,
+                                    "paddingVertical": 1.7391304347826089,
                                   },
                                 },
                                 "ref": null,
@@ -8599,6 +8666,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "flex": 3,
+                              "paddingVertical": 4.347826086956522,
                             }
                           }
                         >
@@ -8786,9 +8854,11 @@ ShallowWrapper {
                                   "color": "white",
                                   "fontFamily": "Montserrat-Bold",
                                   "fontSize": 12.173913043478262,
+                                  "marginBottom": 8.695652173913045,
+                                  "marginRight": 8.695652173913045,
                                   "overflow": "hidden",
-                                  "paddingLeft": 8.695652173913045,
-                                  "paddingVertical": 1,
+                                  "paddingHorizontal": 8.695652173913045,
+                                  "paddingVertical": 1.7391304347826089,
                                 }
                               }
                             >
@@ -8869,6 +8939,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "flex": 3,
+                                "paddingVertical": 4.347826086956522,
                               }
                             }
                           >
@@ -9056,9 +9127,11 @@ ShallowWrapper {
                                     "color": "white",
                                     "fontFamily": "Montserrat-Bold",
                                     "fontSize": 12.173913043478262,
+                                    "marginBottom": 8.695652173913045,
+                                    "marginRight": 8.695652173913045,
                                     "overflow": "hidden",
-                                    "paddingLeft": 8.695652173913045,
-                                    "paddingVertical": 1,
+                                    "paddingHorizontal": 8.695652173913045,
+                                    "paddingVertical": 1.7391304347826089,
                                   }
                                 }
                               >
@@ -9117,6 +9190,7 @@ ShallowWrapper {
                             </Component>,
                             "style": Object {
                               "flex": 3,
+                              "paddingVertical": 4.347826086956522,
                             },
                           },
                           "ref": null,
@@ -9355,9 +9429,11 @@ ShallowWrapper {
                                       "color": "white",
                                       "fontFamily": "Montserrat-Bold",
                                       "fontSize": 12.173913043478262,
+                                      "marginBottom": 8.695652173913045,
+                                      "marginRight": 8.695652173913045,
                                       "overflow": "hidden",
-                                      "paddingLeft": 8.695652173913045,
-                                      "paddingVertical": 1,
+                                      "paddingHorizontal": 8.695652173913045,
+                                      "paddingVertical": 1.7391304347826089,
                                     }
                                   }
                                 >
@@ -9659,9 +9735,11 @@ ShallowWrapper {
                                       "color": "white",
                                       "fontFamily": "Montserrat-Bold",
                                       "fontSize": 12.173913043478262,
+                                      "marginBottom": 8.695652173913045,
+                                      "marginRight": 8.695652173913045,
                                       "overflow": "hidden",
-                                      "paddingLeft": 8.695652173913045,
-                                      "paddingVertical": 1,
+                                      "paddingHorizontal": 8.695652173913045,
+                                      "paddingVertical": 1.7391304347826089,
                                     }
                                   }
                                 >
@@ -9684,9 +9762,11 @@ ShallowWrapper {
                                     "color": "white",
                                     "fontFamily": "Montserrat-Bold",
                                     "fontSize": 12.173913043478262,
+                                    "marginBottom": 8.695652173913045,
+                                    "marginRight": 8.695652173913045,
                                     "overflow": "hidden",
-                                    "paddingLeft": 8.695652173913045,
-                                    "paddingVertical": 1,
+                                    "paddingHorizontal": 8.695652173913045,
+                                    "paddingVertical": 1.7391304347826089,
                                   },
                                 },
                                 "ref": null,
@@ -9831,6 +9911,7 @@ ShallowWrapper {
                           style={
                             Object {
                               "flex": 3,
+                              "paddingVertical": 4.347826086956522,
                             }
                           }
                         >
@@ -10018,9 +10099,11 @@ ShallowWrapper {
                                   "color": "white",
                                   "fontFamily": "Montserrat-Bold",
                                   "fontSize": 12.173913043478262,
+                                  "marginBottom": 8.695652173913045,
+                                  "marginRight": 8.695652173913045,
                                   "overflow": "hidden",
-                                  "paddingLeft": 8.695652173913045,
-                                  "paddingVertical": 1,
+                                  "paddingHorizontal": 8.695652173913045,
+                                  "paddingVertical": 1.7391304347826089,
                                 }
                               }
                             >
@@ -10101,6 +10184,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "flex": 3,
+                                "paddingVertical": 4.347826086956522,
                               }
                             }
                           >
@@ -10288,9 +10372,11 @@ ShallowWrapper {
                                     "color": "white",
                                     "fontFamily": "Montserrat-Bold",
                                     "fontSize": 12.173913043478262,
+                                    "marginBottom": 8.695652173913045,
+                                    "marginRight": 8.695652173913045,
                                     "overflow": "hidden",
-                                    "paddingLeft": 8.695652173913045,
-                                    "paddingVertical": 1,
+                                    "paddingHorizontal": 8.695652173913045,
+                                    "paddingVertical": 1.7391304347826089,
                                   }
                                 }
                               >
@@ -10349,6 +10435,7 @@ ShallowWrapper {
                             </Component>,
                             "style": Object {
                               "flex": 3,
+                              "paddingVertical": 4.347826086956522,
                             },
                           },
                           "ref": null,
@@ -10587,9 +10674,11 @@ ShallowWrapper {
                                       "color": "white",
                                       "fontFamily": "Montserrat-Bold",
                                       "fontSize": 12.173913043478262,
+                                      "marginBottom": 8.695652173913045,
+                                      "marginRight": 8.695652173913045,
                                       "overflow": "hidden",
-                                      "paddingLeft": 8.695652173913045,
-                                      "paddingVertical": 1,
+                                      "paddingHorizontal": 8.695652173913045,
+                                      "paddingVertical": 1.7391304347826089,
                                     }
                                   }
                                 >
@@ -10891,9 +10980,11 @@ ShallowWrapper {
                                       "color": "white",
                                       "fontFamily": "Montserrat-Bold",
                                       "fontSize": 12.173913043478262,
+                                      "marginBottom": 8.695652173913045,
+                                      "marginRight": 8.695652173913045,
                                       "overflow": "hidden",
-                                      "paddingLeft": 8.695652173913045,
-                                      "paddingVertical": 1,
+                                      "paddingHorizontal": 8.695652173913045,
+                                      "paddingVertical": 1.7391304347826089,
                                     }
                                   }
                                 >
@@ -10916,9 +11007,11 @@ ShallowWrapper {
                                     "color": "white",
                                     "fontFamily": "Montserrat-Bold",
                                     "fontSize": 12.173913043478262,
+                                    "marginBottom": 8.695652173913045,
+                                    "marginRight": 8.695652173913045,
                                     "overflow": "hidden",
-                                    "paddingLeft": 8.695652173913045,
-                                    "paddingVertical": 1,
+                                    "paddingHorizontal": 8.695652173913045,
+                                    "paddingVertical": 1.7391304347826089,
                                   },
                                 },
                                 "ref": null,
@@ -11443,6 +11536,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "flex": 3,
+                          "paddingVertical": 4.347826086956522,
                         }
                       }
                     >
@@ -11630,9 +11724,11 @@ ShallowWrapper {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
                               "fontSize": 12.173913043478262,
+                              "marginBottom": 8.695652173913045,
+                              "marginRight": 8.695652173913045,
                               "overflow": "hidden",
-                              "paddingLeft": 8.695652173913045,
-                              "paddingVertical": 1,
+                              "paddingHorizontal": 8.695652173913045,
+                              "paddingVertical": 1.7391304347826089,
                             }
                           }
                         >
@@ -11716,6 +11812,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "flex": 3,
+                          "paddingVertical": 4.347826086956522,
                         }
                       }
                     >
@@ -11903,9 +12000,11 @@ ShallowWrapper {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
                               "fontSize": 12.173913043478262,
+                              "marginBottom": 8.695652173913045,
+                              "marginRight": 8.695652173913045,
                               "overflow": "hidden",
-                              "paddingLeft": 8.695652173913045,
-                              "paddingVertical": 1,
+                              "paddingHorizontal": 8.695652173913045,
+                              "paddingVertical": 1.7391304347826089,
                             }
                           }
                         >
@@ -11989,6 +12088,7 @@ ShallowWrapper {
                       style={
                         Object {
                           "flex": 3,
+                          "paddingVertical": 4.347826086956522,
                         }
                       }
                     >
@@ -12176,9 +12276,11 @@ ShallowWrapper {
                               "color": "white",
                               "fontFamily": "Montserrat-Bold",
                               "fontSize": 12.173913043478262,
+                              "marginBottom": 8.695652173913045,
+                              "marginRight": 8.695652173913045,
                               "overflow": "hidden",
-                              "paddingLeft": 8.695652173913045,
-                              "paddingVertical": 1,
+                              "paddingHorizontal": 8.695652173913045,
+                              "paddingVertical": 1.7391304347826089,
                             }
                           }
                         >
@@ -12601,6 +12703,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "flex": 3,
+                            "paddingVertical": 4.347826086956522,
                           }
                         }
                       >
@@ -12788,9 +12891,11 @@ ShallowWrapper {
                                 "color": "white",
                                 "fontFamily": "Montserrat-Bold",
                                 "fontSize": 12.173913043478262,
+                                "marginBottom": 8.695652173913045,
+                                "marginRight": 8.695652173913045,
                                 "overflow": "hidden",
-                                "paddingLeft": 8.695652173913045,
-                                "paddingVertical": 1,
+                                "paddingHorizontal": 8.695652173913045,
+                                "paddingVertical": 1.7391304347826089,
                               }
                             }
                           >
@@ -12874,6 +12979,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "flex": 3,
+                            "paddingVertical": 4.347826086956522,
                           }
                         }
                       >
@@ -13061,9 +13167,11 @@ ShallowWrapper {
                                 "color": "white",
                                 "fontFamily": "Montserrat-Bold",
                                 "fontSize": 12.173913043478262,
+                                "marginBottom": 8.695652173913045,
+                                "marginRight": 8.695652173913045,
                                 "overflow": "hidden",
-                                "paddingLeft": 8.695652173913045,
-                                "paddingVertical": 1,
+                                "paddingHorizontal": 8.695652173913045,
+                                "paddingVertical": 1.7391304347826089,
                               }
                             }
                           >
@@ -13147,6 +13255,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "flex": 3,
+                            "paddingVertical": 4.347826086956522,
                           }
                         }
                       >
@@ -13334,9 +13443,11 @@ ShallowWrapper {
                                 "color": "white",
                                 "fontFamily": "Montserrat-Bold",
                                 "fontSize": 12.173913043478262,
+                                "marginBottom": 8.695652173913045,
+                                "marginRight": 8.695652173913045,
                                 "overflow": "hidden",
-                                "paddingLeft": 8.695652173913045,
-                                "paddingVertical": 1,
+                                "paddingHorizontal": 8.695652173913045,
+                                "paddingVertical": 1.7391304347826089,
                               }
                             }
                           >
@@ -13766,6 +13877,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "flex": 3,
+                            "paddingVertical": 4.347826086956522,
                           }
                         }
                       >
@@ -13953,9 +14065,11 @@ ShallowWrapper {
                                 "color": "white",
                                 "fontFamily": "Montserrat-Bold",
                                 "fontSize": 12.173913043478262,
+                                "marginBottom": 8.695652173913045,
+                                "marginRight": 8.695652173913045,
                                 "overflow": "hidden",
-                                "paddingLeft": 8.695652173913045,
-                                "paddingVertical": 1,
+                                "paddingHorizontal": 8.695652173913045,
+                                "paddingVertical": 1.7391304347826089,
                               }
                             }
                           >
@@ -14039,6 +14153,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "flex": 3,
+                            "paddingVertical": 4.347826086956522,
                           }
                         }
                       >
@@ -14226,9 +14341,11 @@ ShallowWrapper {
                                 "color": "white",
                                 "fontFamily": "Montserrat-Bold",
                                 "fontSize": 12.173913043478262,
+                                "marginBottom": 8.695652173913045,
+                                "marginRight": 8.695652173913045,
                                 "overflow": "hidden",
-                                "paddingLeft": 8.695652173913045,
-                                "paddingVertical": 1,
+                                "paddingHorizontal": 8.695652173913045,
+                                "paddingVertical": 1.7391304347826089,
                               }
                             }
                           >
@@ -14312,6 +14429,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "flex": 3,
+                            "paddingVertical": 4.347826086956522,
                           }
                         }
                       >
@@ -14499,9 +14617,11 @@ ShallowWrapper {
                                 "color": "white",
                                 "fontFamily": "Montserrat-Bold",
                                 "fontSize": 12.173913043478262,
+                                "marginBottom": 8.695652173913045,
+                                "marginRight": 8.695652173913045,
                                 "overflow": "hidden",
-                                "paddingLeft": 8.695652173913045,
-                                "paddingVertical": 1,
+                                "paddingHorizontal": 8.695652173913045,
+                                "paddingVertical": 1.7391304347826089,
                               }
                             }
                           >
@@ -14801,6 +14921,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "flex": 3,
+                            "paddingVertical": 4.347826086956522,
                           }
                         }
                       >
@@ -14988,9 +15109,11 @@ ShallowWrapper {
                                 "color": "white",
                                 "fontFamily": "Montserrat-Bold",
                                 "fontSize": 12.173913043478262,
+                                "marginBottom": 8.695652173913045,
+                                "marginRight": 8.695652173913045,
                                 "overflow": "hidden",
-                                "paddingLeft": 8.695652173913045,
-                                "paddingVertical": 1,
+                                "paddingHorizontal": 8.695652173913045,
+                                "paddingVertical": 1.7391304347826089,
                               }
                             }
                           >
@@ -15074,6 +15197,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "flex": 3,
+                            "paddingVertical": 4.347826086956522,
                           }
                         }
                       >
@@ -15261,9 +15385,11 @@ ShallowWrapper {
                                 "color": "white",
                                 "fontFamily": "Montserrat-Bold",
                                 "fontSize": 12.173913043478262,
+                                "marginBottom": 8.695652173913045,
+                                "marginRight": 8.695652173913045,
                                 "overflow": "hidden",
-                                "paddingLeft": 8.695652173913045,
-                                "paddingVertical": 1,
+                                "paddingHorizontal": 8.695652173913045,
+                                "paddingVertical": 1.7391304347826089,
                               }
                             }
                           >
@@ -15347,6 +15473,7 @@ ShallowWrapper {
                         style={
                           Object {
                             "flex": 3,
+                            "paddingVertical": 4.347826086956522,
                           }
                         }
                       >
@@ -15534,9 +15661,11 @@ ShallowWrapper {
                                 "color": "white",
                                 "fontFamily": "Montserrat-Bold",
                                 "fontSize": 12.173913043478262,
+                                "marginBottom": 8.695652173913045,
+                                "marginRight": 8.695652173913045,
                                 "overflow": "hidden",
-                                "paddingLeft": 8.695652173913045,
-                                "paddingVertical": 1,
+                                "paddingHorizontal": 8.695652173913045,
+                                "paddingVertical": 1.7391304347826089,
                               }
                             }
                           >
@@ -15822,6 +15951,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "flex": 3,
+                                "paddingVertical": 4.347826086956522,
                               }
                             }
                           >
@@ -16009,9 +16139,11 @@ ShallowWrapper {
                                     "color": "white",
                                     "fontFamily": "Montserrat-Bold",
                                     "fontSize": 12.173913043478262,
+                                    "marginBottom": 8.695652173913045,
+                                    "marginRight": 8.695652173913045,
                                     "overflow": "hidden",
-                                    "paddingLeft": 8.695652173913045,
-                                    "paddingVertical": 1,
+                                    "paddingHorizontal": 8.695652173913045,
+                                    "paddingVertical": 1.7391304347826089,
                                   }
                                 }
                               >
@@ -16095,6 +16227,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "flex": 3,
+                                "paddingVertical": 4.347826086956522,
                               }
                             }
                           >
@@ -16282,9 +16415,11 @@ ShallowWrapper {
                                     "color": "white",
                                     "fontFamily": "Montserrat-Bold",
                                     "fontSize": 12.173913043478262,
+                                    "marginBottom": 8.695652173913045,
+                                    "marginRight": 8.695652173913045,
                                     "overflow": "hidden",
-                                    "paddingLeft": 8.695652173913045,
-                                    "paddingVertical": 1,
+                                    "paddingHorizontal": 8.695652173913045,
+                                    "paddingVertical": 1.7391304347826089,
                                   }
                                 }
                               >
@@ -16368,6 +16503,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "flex": 3,
+                                "paddingVertical": 4.347826086956522,
                               }
                             }
                           >
@@ -16555,9 +16691,11 @@ ShallowWrapper {
                                     "color": "white",
                                     "fontFamily": "Montserrat-Bold",
                                     "fontSize": 12.173913043478262,
+                                    "marginBottom": 8.695652173913045,
+                                    "marginRight": 8.695652173913045,
                                     "overflow": "hidden",
-                                    "paddingLeft": 8.695652173913045,
-                                    "paddingVertical": 1,
+                                    "paddingHorizontal": 8.695652173913045,
+                                    "paddingVertical": 1.7391304347826089,
                                   }
                                 }
                               >
@@ -17234,6 +17372,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "flex": 3,
+                                "paddingVertical": 4.347826086956522,
                               }
                             }
                           >
@@ -17421,9 +17560,11 @@ ShallowWrapper {
                                     "color": "white",
                                     "fontFamily": "Montserrat-Bold",
                                     "fontSize": 12.173913043478262,
+                                    "marginBottom": 8.695652173913045,
+                                    "marginRight": 8.695652173913045,
                                     "overflow": "hidden",
-                                    "paddingLeft": 8.695652173913045,
-                                    "paddingVertical": 1,
+                                    "paddingHorizontal": 8.695652173913045,
+                                    "paddingVertical": 1.7391304347826089,
                                   }
                                 }
                               >
@@ -17504,6 +17645,7 @@ ShallowWrapper {
                               style={
                                 Object {
                                   "flex": 3,
+                                  "paddingVertical": 4.347826086956522,
                                 }
                               }
                             >
@@ -17691,9 +17833,11 @@ ShallowWrapper {
                                       "color": "white",
                                       "fontFamily": "Montserrat-Bold",
                                       "fontSize": 12.173913043478262,
+                                      "marginBottom": 8.695652173913045,
+                                      "marginRight": 8.695652173913045,
                                       "overflow": "hidden",
-                                      "paddingLeft": 8.695652173913045,
-                                      "paddingVertical": 1,
+                                      "paddingHorizontal": 8.695652173913045,
+                                      "paddingVertical": 1.7391304347826089,
                                     }
                                   }
                                 >
@@ -17752,6 +17896,7 @@ ShallowWrapper {
                               </Component>,
                               "style": Object {
                                 "flex": 3,
+                                "paddingVertical": 4.347826086956522,
                               },
                             },
                             "ref": null,
@@ -17990,9 +18135,11 @@ ShallowWrapper {
                                         "color": "white",
                                         "fontFamily": "Montserrat-Bold",
                                         "fontSize": 12.173913043478262,
+                                        "marginBottom": 8.695652173913045,
+                                        "marginRight": 8.695652173913045,
                                         "overflow": "hidden",
-                                        "paddingLeft": 8.695652173913045,
-                                        "paddingVertical": 1,
+                                        "paddingHorizontal": 8.695652173913045,
+                                        "paddingVertical": 1.7391304347826089,
                                       }
                                     }
                                   >
@@ -18294,9 +18441,11 @@ ShallowWrapper {
                                         "color": "white",
                                         "fontFamily": "Montserrat-Bold",
                                         "fontSize": 12.173913043478262,
+                                        "marginBottom": 8.695652173913045,
+                                        "marginRight": 8.695652173913045,
                                         "overflow": "hidden",
-                                        "paddingLeft": 8.695652173913045,
-                                        "paddingVertical": 1,
+                                        "paddingHorizontal": 8.695652173913045,
+                                        "paddingVertical": 1.7391304347826089,
                                       }
                                     }
                                   >
@@ -18319,9 +18468,11 @@ ShallowWrapper {
                                       "color": "white",
                                       "fontFamily": "Montserrat-Bold",
                                       "fontSize": 12.173913043478262,
+                                      "marginBottom": 8.695652173913045,
+                                      "marginRight": 8.695652173913045,
                                       "overflow": "hidden",
-                                      "paddingLeft": 8.695652173913045,
-                                      "paddingVertical": 1,
+                                      "paddingHorizontal": 8.695652173913045,
+                                      "paddingVertical": 1.7391304347826089,
                                     },
                                   },
                                   "ref": null,
@@ -18466,6 +18617,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "flex": 3,
+                                "paddingVertical": 4.347826086956522,
                               }
                             }
                           >
@@ -18653,9 +18805,11 @@ ShallowWrapper {
                                     "color": "white",
                                     "fontFamily": "Montserrat-Bold",
                                     "fontSize": 12.173913043478262,
+                                    "marginBottom": 8.695652173913045,
+                                    "marginRight": 8.695652173913045,
                                     "overflow": "hidden",
-                                    "paddingLeft": 8.695652173913045,
-                                    "paddingVertical": 1,
+                                    "paddingHorizontal": 8.695652173913045,
+                                    "paddingVertical": 1.7391304347826089,
                                   }
                                 }
                               >
@@ -18736,6 +18890,7 @@ ShallowWrapper {
                               style={
                                 Object {
                                   "flex": 3,
+                                  "paddingVertical": 4.347826086956522,
                                 }
                               }
                             >
@@ -18923,9 +19078,11 @@ ShallowWrapper {
                                       "color": "white",
                                       "fontFamily": "Montserrat-Bold",
                                       "fontSize": 12.173913043478262,
+                                      "marginBottom": 8.695652173913045,
+                                      "marginRight": 8.695652173913045,
                                       "overflow": "hidden",
-                                      "paddingLeft": 8.695652173913045,
-                                      "paddingVertical": 1,
+                                      "paddingHorizontal": 8.695652173913045,
+                                      "paddingVertical": 1.7391304347826089,
                                     }
                                   }
                                 >
@@ -18984,6 +19141,7 @@ ShallowWrapper {
                               </Component>,
                               "style": Object {
                                 "flex": 3,
+                                "paddingVertical": 4.347826086956522,
                               },
                             },
                             "ref": null,
@@ -19222,9 +19380,11 @@ ShallowWrapper {
                                         "color": "white",
                                         "fontFamily": "Montserrat-Bold",
                                         "fontSize": 12.173913043478262,
+                                        "marginBottom": 8.695652173913045,
+                                        "marginRight": 8.695652173913045,
                                         "overflow": "hidden",
-                                        "paddingLeft": 8.695652173913045,
-                                        "paddingVertical": 1,
+                                        "paddingHorizontal": 8.695652173913045,
+                                        "paddingVertical": 1.7391304347826089,
                                       }
                                     }
                                   >
@@ -19526,9 +19686,11 @@ ShallowWrapper {
                                         "color": "white",
                                         "fontFamily": "Montserrat-Bold",
                                         "fontSize": 12.173913043478262,
+                                        "marginBottom": 8.695652173913045,
+                                        "marginRight": 8.695652173913045,
                                         "overflow": "hidden",
-                                        "paddingLeft": 8.695652173913045,
-                                        "paddingVertical": 1,
+                                        "paddingHorizontal": 8.695652173913045,
+                                        "paddingVertical": 1.7391304347826089,
                                       }
                                     }
                                   >
@@ -19551,9 +19713,11 @@ ShallowWrapper {
                                       "color": "white",
                                       "fontFamily": "Montserrat-Bold",
                                       "fontSize": 12.173913043478262,
+                                      "marginBottom": 8.695652173913045,
+                                      "marginRight": 8.695652173913045,
                                       "overflow": "hidden",
-                                      "paddingLeft": 8.695652173913045,
-                                      "paddingVertical": 1,
+                                      "paddingHorizontal": 8.695652173913045,
+                                      "paddingVertical": 1.7391304347826089,
                                     },
                                   },
                                   "ref": null,
@@ -19698,6 +19862,7 @@ ShallowWrapper {
                             style={
                               Object {
                                 "flex": 3,
+                                "paddingVertical": 4.347826086956522,
                               }
                             }
                           >
@@ -19885,9 +20050,11 @@ ShallowWrapper {
                                     "color": "white",
                                     "fontFamily": "Montserrat-Bold",
                                     "fontSize": 12.173913043478262,
+                                    "marginBottom": 8.695652173913045,
+                                    "marginRight": 8.695652173913045,
                                     "overflow": "hidden",
-                                    "paddingLeft": 8.695652173913045,
-                                    "paddingVertical": 1,
+                                    "paddingHorizontal": 8.695652173913045,
+                                    "paddingVertical": 1.7391304347826089,
                                   }
                                 }
                               >
@@ -19968,6 +20135,7 @@ ShallowWrapper {
                               style={
                                 Object {
                                   "flex": 3,
+                                  "paddingVertical": 4.347826086956522,
                                 }
                               }
                             >
@@ -20155,9 +20323,11 @@ ShallowWrapper {
                                       "color": "white",
                                       "fontFamily": "Montserrat-Bold",
                                       "fontSize": 12.173913043478262,
+                                      "marginBottom": 8.695652173913045,
+                                      "marginRight": 8.695652173913045,
                                       "overflow": "hidden",
-                                      "paddingLeft": 8.695652173913045,
-                                      "paddingVertical": 1,
+                                      "paddingHorizontal": 8.695652173913045,
+                                      "paddingVertical": 1.7391304347826089,
                                     }
                                   }
                                 >
@@ -20216,6 +20386,7 @@ ShallowWrapper {
                               </Component>,
                               "style": Object {
                                 "flex": 3,
+                                "paddingVertical": 4.347826086956522,
                               },
                             },
                             "ref": null,
@@ -20454,9 +20625,11 @@ ShallowWrapper {
                                         "color": "white",
                                         "fontFamily": "Montserrat-Bold",
                                         "fontSize": 12.173913043478262,
+                                        "marginBottom": 8.695652173913045,
+                                        "marginRight": 8.695652173913045,
                                         "overflow": "hidden",
-                                        "paddingLeft": 8.695652173913045,
-                                        "paddingVertical": 1,
+                                        "paddingHorizontal": 8.695652173913045,
+                                        "paddingVertical": 1.7391304347826089,
                                       }
                                     }
                                   >
@@ -20758,9 +20931,11 @@ ShallowWrapper {
                                         "color": "white",
                                         "fontFamily": "Montserrat-Bold",
                                         "fontSize": 12.173913043478262,
+                                        "marginBottom": 8.695652173913045,
+                                        "marginRight": 8.695652173913045,
                                         "overflow": "hidden",
-                                        "paddingLeft": 8.695652173913045,
-                                        "paddingVertical": 1,
+                                        "paddingHorizontal": 8.695652173913045,
+                                        "paddingVertical": 1.7391304347826089,
                                       }
                                     }
                                   >
@@ -20783,9 +20958,11 @@ ShallowWrapper {
                                       "color": "white",
                                       "fontFamily": "Montserrat-Bold",
                                       "fontSize": 12.173913043478262,
+                                      "marginBottom": 8.695652173913045,
+                                      "marginRight": 8.695652173913045,
                                       "overflow": "hidden",
-                                      "paddingLeft": 8.695652173913045,
-                                      "paddingVertical": 1,
+                                      "paddingHorizontal": 8.695652173913045,
+                                      "paddingVertical": 1.7391304347826089,
                                     },
                                   },
                                   "ref": null,

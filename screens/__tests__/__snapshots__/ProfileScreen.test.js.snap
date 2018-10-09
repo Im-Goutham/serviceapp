@@ -192,9 +192,9 @@ ShallowWrapper {
                         }
                         style={
                           Object {
-                            "borderRadius": 60.86956521739131,
-                            "height": "100%",
-                            "width": "100%",
+                            "height": 104.34782608695653,
+                            "marginTop": 17.39130434782609,
+                            "width": 86.95652173913044,
                           }
                         }
                       />
@@ -1386,7 +1386,7 @@ ShallowWrapper {
     <CustomDatePickerIOS
       cancelTextIOS="Cancel"
       confirmTextIOS="Confirm"
-      date={2018-10-09T09:47:54.053Z}
+      date={2018-10-09T10:38:34.858Z}
       isVisible={false}
       mode="date"
       neverDisableConfirmIOS={false}
@@ -1594,9 +1594,9 @@ ShallowWrapper {
                             }
                             style={
                               Object {
-                                "borderRadius": 60.86956521739131,
-                                "height": "100%",
-                                "width": "100%",
+                                "height": 104.34782608695653,
+                                "marginTop": 17.39130434782609,
+                                "width": 86.95652173913044,
                               }
                             }
                           />
@@ -2788,7 +2788,7 @@ ShallowWrapper {
         <CustomDatePickerIOS
           cancelTextIOS="Cancel"
           confirmTextIOS="Confirm"
-          date={2018-10-09T09:47:54.053Z}
+          date={2018-10-09T10:38:34.858Z}
           isVisible={false}
           mode="date"
           neverDisableConfirmIOS={false}
@@ -2969,9 +2969,9 @@ ShallowWrapper {
                               }
                               style={
                                 Object {
-                                  "borderRadius": 60.86956521739131,
-                                  "height": "100%",
-                                  "width": "100%",
+                                  "height": 104.34782608695653,
+                                  "marginTop": 17.39130434782609,
+                                  "width": 86.95652173913044,
                                 }
                               }
                             />
@@ -4336,9 +4336,9 @@ ShallowWrapper {
                               }
                               style={
                                 Object {
-                                  "borderRadius": 60.86956521739131,
-                                  "height": "100%",
-                                  "width": "100%",
+                                  "height": 104.34782608695653,
+                                  "marginTop": 17.39130434782609,
+                                  "width": 86.95652173913044,
                                 }
                               }
                             />
@@ -5601,9 +5601,9 @@ ShallowWrapper {
                               }
                               style={
                                 Object {
-                                  "borderRadius": 60.86956521739131,
-                                  "height": "100%",
-                                  "width": "100%",
+                                  "height": 104.34782608695653,
+                                  "marginTop": 17.39130434782609,
+                                  "width": 86.95652173913044,
                                 }
                               }
                             />
@@ -6853,9 +6853,9 @@ ShallowWrapper {
                               }
                               style={
                                 Object {
-                                  "borderRadius": 60.86956521739131,
-                                  "height": "100%",
-                                  "width": "100%",
+                                  "height": 104.34782608695653,
+                                  "marginTop": 17.39130434782609,
+                                  "width": 86.95652173913044,
                                 }
                               }
                             />
@@ -8100,9 +8100,9 @@ ShallowWrapper {
                                 }
                                 style={
                                   Object {
-                                    "borderRadius": 60.86956521739131,
-                                    "height": "100%",
-                                    "width": "100%",
+                                    "height": 104.34782608695653,
+                                    "marginTop": 17.39130434782609,
+                                    "width": 86.95652173913044,
                                   }
                                 }
                               />
@@ -9339,9 +9339,9 @@ ShallowWrapper {
                                 }
                                 style={
                                   Object {
-                                    "borderRadius": 60.86956521739131,
-                                    "height": "100%",
-                                    "width": "100%",
+                                    "height": 104.34782608695653,
+                                    "marginTop": 17.39130434782609,
+                                    "width": 86.95652173913044,
                                   }
                                 }
                               />
@@ -9423,9 +9423,9 @@ ShallowWrapper {
                                 }
                                 style={
                                   Object {
-                                    "borderRadius": 60.86956521739131,
-                                    "height": "100%",
-                                    "width": "100%",
+                                    "height": 104.34782608695653,
+                                    "marginTop": 17.39130434782609,
+                                    "width": 86.95652173913044,
                                   }
                                 }
                               />
@@ -9491,9 +9491,9 @@ ShallowWrapper {
                                   }
                                   style={
                                     Object {
-                                      "borderRadius": 60.86956521739131,
-                                      "height": "100%",
-                                      "width": "100%",
+                                      "height": 104.34782608695653,
+                                      "marginTop": 17.39130434782609,
+                                      "width": 86.95652173913044,
                                     }
                                   }
                                 />
@@ -9549,9 +9549,9 @@ ShallowWrapper {
                                   }
                                   style={
                                     Object {
-                                      "borderRadius": 60.86956521739131,
-                                      "height": "100%",
-                                      "width": "100%",
+                                      "height": 104.34782608695653,
+                                      "marginTop": 17.39130434782609,
+                                      "width": 86.95652173913044,
                                     }
                                   }
                                 />,
@@ -9578,9 +9578,9 @@ ShallowWrapper {
                                     "testUri": "../../../images/user_placeholder.png",
                                   },
                                   "style": Object {
-                                    "borderRadius": 60.86956521739131,
-                                    "height": "100%",
-                                    "width": "100%",
+                                    "height": 104.34782608695653,
+                                    "marginTop": 17.39130434782609,
+                                    "width": 86.95652173913044,
                                   },
                                 },
                                 "ref": null,
@@ -14755,7 +14755,7 @@ ShallowWrapper {
         "props": Object {
           "cancelTextIOS": "Cancel",
           "confirmTextIOS": "Confirm",
-          "date": 2018-10-09T09:47:54.053Z,
+          "date": 2018-10-09T10:38:34.858Z,
           "isVisible": false,
           "mode": "date",
           "neverDisableConfirmIOS": false,
@@ -14962,9 +14962,9 @@ ShallowWrapper {
                               }
                               style={
                                 Object {
-                                  "borderRadius": 60.86956521739131,
-                                  "height": "100%",
-                                  "width": "100%",
+                                  "height": 104.34782608695653,
+                                  "marginTop": 17.39130434782609,
+                                  "width": 86.95652173913044,
                                 }
                               }
                             />
@@ -16156,7 +16156,7 @@ ShallowWrapper {
           <CustomDatePickerIOS
             cancelTextIOS="Cancel"
             confirmTextIOS="Confirm"
-            date={2018-10-09T09:47:54.053Z}
+            date={2018-10-09T10:38:34.858Z}
             isVisible={false}
             mode="date"
             neverDisableConfirmIOS={false}
@@ -16337,9 +16337,9 @@ ShallowWrapper {
                                 }
                                 style={
                                   Object {
-                                    "borderRadius": 60.86956521739131,
-                                    "height": "100%",
-                                    "width": "100%",
+                                    "height": 104.34782608695653,
+                                    "marginTop": 17.39130434782609,
+                                    "width": 86.95652173913044,
                                   }
                                 }
                               />
@@ -17704,9 +17704,9 @@ ShallowWrapper {
                                 }
                                 style={
                                   Object {
-                                    "borderRadius": 60.86956521739131,
-                                    "height": "100%",
-                                    "width": "100%",
+                                    "height": 104.34782608695653,
+                                    "marginTop": 17.39130434782609,
+                                    "width": 86.95652173913044,
                                   }
                                 }
                               />
@@ -18969,9 +18969,9 @@ ShallowWrapper {
                                 }
                                 style={
                                   Object {
-                                    "borderRadius": 60.86956521739131,
-                                    "height": "100%",
-                                    "width": "100%",
+                                    "height": 104.34782608695653,
+                                    "marginTop": 17.39130434782609,
+                                    "width": 86.95652173913044,
                                   }
                                 }
                               />
@@ -20221,9 +20221,9 @@ ShallowWrapper {
                                 }
                                 style={
                                   Object {
-                                    "borderRadius": 60.86956521739131,
-                                    "height": "100%",
-                                    "width": "100%",
+                                    "height": 104.34782608695653,
+                                    "marginTop": 17.39130434782609,
+                                    "width": 86.95652173913044,
                                   }
                                 }
                               />
@@ -21468,9 +21468,9 @@ ShallowWrapper {
                                   }
                                   style={
                                     Object {
-                                      "borderRadius": 60.86956521739131,
-                                      "height": "100%",
-                                      "width": "100%",
+                                      "height": 104.34782608695653,
+                                      "marginTop": 17.39130434782609,
+                                      "width": 86.95652173913044,
                                     }
                                   }
                                 />
@@ -22707,9 +22707,9 @@ ShallowWrapper {
                                   }
                                   style={
                                     Object {
-                                      "borderRadius": 60.86956521739131,
-                                      "height": "100%",
-                                      "width": "100%",
+                                      "height": 104.34782608695653,
+                                      "marginTop": 17.39130434782609,
+                                      "width": 86.95652173913044,
                                     }
                                   }
                                 />
@@ -22791,9 +22791,9 @@ ShallowWrapper {
                                   }
                                   style={
                                     Object {
-                                      "borderRadius": 60.86956521739131,
-                                      "height": "100%",
-                                      "width": "100%",
+                                      "height": 104.34782608695653,
+                                      "marginTop": 17.39130434782609,
+                                      "width": 86.95652173913044,
                                     }
                                   }
                                 />
@@ -22859,9 +22859,9 @@ ShallowWrapper {
                                     }
                                     style={
                                       Object {
-                                        "borderRadius": 60.86956521739131,
-                                        "height": "100%",
-                                        "width": "100%",
+                                        "height": 104.34782608695653,
+                                        "marginTop": 17.39130434782609,
+                                        "width": 86.95652173913044,
                                       }
                                     }
                                   />
@@ -22917,9 +22917,9 @@ ShallowWrapper {
                                     }
                                     style={
                                       Object {
-                                        "borderRadius": 60.86956521739131,
-                                        "height": "100%",
-                                        "width": "100%",
+                                        "height": 104.34782608695653,
+                                        "marginTop": 17.39130434782609,
+                                        "width": 86.95652173913044,
                                       }
                                     }
                                   />,
@@ -22946,9 +22946,9 @@ ShallowWrapper {
                                       "testUri": "../../../images/user_placeholder.png",
                                     },
                                     "style": Object {
-                                      "borderRadius": 60.86956521739131,
-                                      "height": "100%",
-                                      "width": "100%",
+                                      "height": 104.34782608695653,
+                                      "marginTop": 17.39130434782609,
+                                      "width": 86.95652173913044,
                                     },
                                   },
                                   "ref": null,
@@ -28123,7 +28123,7 @@ ShallowWrapper {
           "props": Object {
             "cancelTextIOS": "Cancel",
             "confirmTextIOS": "Confirm",
-            "date": 2018-10-09T09:47:54.053Z,
+            "date": 2018-10-09T10:38:34.858Z,
             "isVisible": false,
             "mode": "date",
             "neverDisableConfirmIOS": false,

@@ -133,7 +133,6 @@ class AddServiceCatScreen extends Component {
 
       var {params} = this.props.navigation.state;
       var {mainScreen} = params;
-      console.log('props are in category page .. ',mainScreen);
        return (
            <View style={{flex:1}}>
                <LinearGradient

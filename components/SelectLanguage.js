@@ -1,9 +1,9 @@
 
 import React, { Component } from 'react';
-import {StyleSheet,View, Text, TouchableOpacity,Dimensions, Picker} from 'react-native';
+import {StyleSheet,View, Text, TouchableOpacity, ScrollView} from 'react-native';
 import Modal from "react-native-modal";
 import LinearGradient from 'react-native-linear-gradient';
-import {scale} from '../global';
+import {scale,width} from '../global';
 
 export default class SelectLocation extends Component {
 
@@ -27,19 +27,16 @@ export default class SelectLocation extends Component {
   renderModalContent = () => (
     <View style={styles.modalContent}>
      <View style={styles.heading}><Text style={styles.headingText}>Select a Language</Text></View>
-     <View style={{flex:5,justifyContent:'center',alignItems:'center'}}>
-     <Picker
-            mode={'dialog'}
-            selectedValue={this.state.language}
-            style={{height:'100%',width:150}}
-            itemStyle={{color:'#3581fc',height:scale(200),paddingVertical:scale(5)}}
-            onValueChange={(itemValue, itemIndex) => this.setState({language: itemValue})}>
-            {
-               this.state.languages.map((language,key)=> {
-                    return  <Picker.Item key={key} label={language} value={language} />
-               })
-            }
-            </Picker>
+     <View style={{flex:6}}>
+      <ScrollView style={{}}>
+        {
+          this.state.languages.map((language,key)=>{
+               return  <TouchableOpacity onPress={()=>{this.setState({language})}}>
+                          <Text style={[styles.languageStyle,{color: language == this.state.language ? '#3E85EF' : 'rgba(0, 0, 0,0.3)'}]}>{language}</Text>
+                       </TouchableOpacity>
+          })
+        } 
+      </ScrollView>
      </View>
      <View style={{flex:1}}>
         {this.renderButton("SELECT", () => this.setState({ visibleModal: false }))}
@@ -62,16 +59,16 @@ export default class SelectLocation extends Component {
 
 const styles = StyleSheet.create({
     heading: {
-        flex:1,
+        flex:1.2,
         alignItems:'center',
         justifyContent:'center',
-        borderBottomWidth :scale(1),
+        borderBottomWidth :scale(0.5),
         borderColor: "#e6e6e6"
     },
     headingText: {
          fontFamily:'Montserrat-Medium',
          color: '#22262C',
-         fontSize: scale(18),
+         fontSize: scale(19),
          textAlign: 'center',
          paddingVertical: scale(10)
     },
@@ -91,11 +88,20 @@ const styles = StyleSheet.create({
         fontFamily:'Montserrat-Bold'
     },
       modalContent: {
-        height:scale(320),
+        height:scale(420),
+        width: width-scale(70),
+        marginLeft:scale(15),
         backgroundColor: "white",
         justifyContent: "center",
         borderRadius: scale(4),
         borderRadius:scale(10),
         borderColor: "rgba(0, 0, 0, 0.1)"
       },
+      languageStyle:{
+        paddingVertical:scale(15),
+        textAlign:'center',
+        fontSize:scale(16),
+        fontFamily:'Montserrat-Medium',
+        color:'rgba(0, 0, 0,0.3)'
+      }
 });
