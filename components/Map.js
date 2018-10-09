@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import {StyleSheet, View,TouchableHighlight,Image,Dimensions} from 'react-native';
+import {StyleSheet, View,TouchableHighlight,Image,Dimensions,ImageBackground} from 'react-native';
 import {Icon, Text } from 'native-base';
 import MapView, { Callout, Marker, ProviderPropType } from 'react-native-maps';
 const { width, height } = Dimensions.get('window')
@@ -93,15 +93,29 @@ export default class Map extends Component {
            coordinate={coordinate}
            key={key}
            onPress={()=>this.props.pinPress()}
+           image={require('../assets/icons/map_location_blue.png')}
          >
-          <Image source={require('../assets/icons/map_location_blue.png')} style={{ width: scale(30), height: scale(30) }} resizeMode="contain" resizeMethod="resize"/>
+          {/* <ImageBackground 
+            source={require('../assets/icons/map_location_blue.png')} 
+            style={{ width: scale(30), height: scale(30) }}
+            resizeMode="contain" 
+            resizeMethod="resize" 
+            onLoad={() => this.forceUpdate()}
+             /> */}
          </Marker>
        })
       }  
       <Marker
            coordinate={coordinate}
+           image={require('../assets/icons/map_location_red.png')}
          >
-            <Image source={require('../assets/icons/map_location_red.png')} style={{ width: scale(30), height: scale(30) }} resizeMode="contain" resizeMethod="resize"/>
+            {/* <ImageBackground 
+                source={require('../assets/icons/map_location_red.png')} 
+                style={{ width: scale(30), height: scale(30) }} 
+                resizeMode="contain" 
+                resizeMethod="resize"
+                onLoad={() => this.forceUpdate()}
+                /> */}
             <MapView.Callout tooltip >
                <View style={{justifyContent:'center'}}>
                         <Text style={styles.tooltipStyle}>YOU ARE HERE</Text>

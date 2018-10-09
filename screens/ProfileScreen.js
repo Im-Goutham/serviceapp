@@ -492,6 +492,7 @@ class ProfileScreen extends Component {
                             label="Write about yourself"
                             value={this.state.about}
                             multiline={true}
+         
                             numberOfLines={8}
                             autoCapitalize='none'
                             returnKeyType={ "next" }

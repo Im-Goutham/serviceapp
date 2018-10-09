@@ -8,22 +8,23 @@ import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import renderer from 'react-test-renderer';
+
 import AppTutorialScreen from '../../screens/AppTutorialScreen';
 import AccountScreen from '../../screens/AccountScreen';
 import {initialState} from '../../config/jest/mockStore';
+
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 let store;
 
 let findElement = function(tree,element) {
-   console.warn(tree);
+   console.warn(tree.children);
    let result = undefined;
-   for (let node in tree.children){
-    // if(tree.children[node].props.testID == element){
+   for (node in tree.children){
+     if(tree.children[node].props.testID == element){
          result = true;
-//     }
+     }
    }
    return result;
 }
@@ -79,11 +80,13 @@ test('Click events tesing ', () => {
 
 
 });
-test('Find element', () => {
-  const AppData = renderer.create(<AppTutorialScreen />).toJSON();
+// test('Find element', () => {
+//   const AppData = renderer.create(
+//           <AppTutorialScreen />
+//   ).toJSON();
 
-  expect(findElement(AppData,'username')).toBeDefined();
-});
+//   expect(findElement(AppData,'username')).toBeDefined();
+// });
 
 
 

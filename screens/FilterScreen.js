@@ -175,7 +175,11 @@ class FilterScreen extends Component {
                 <View style={{marginVertical:scale(20)}}>
                   <Text style={{ color:'#4A4A4A',fontFamily:'Montserrat-Medium',fontSize:scale(13)}}>Address</Text>
                  <Item>
-                        <Input style={styles.inputLabel} placeholder="Current Location" />
+                        <Input 
+                           style={[styles.inputLabel,{paddingLeft:0}]} 
+                           placeholder="Current Location" 
+                           placeholderTextColor='#9B9B9B'
+                           />
                 </Item>
                 </View>
                      <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
@@ -339,7 +343,7 @@ const styles = StyleSheet.create({
         textAlign:'left',
         fontSize: scale(16),
         marginLeft:0,
-        fontFamily:'Montserrat-Light'
+        fontFamily:'Montserrat-Medium'
      },
 })
 
