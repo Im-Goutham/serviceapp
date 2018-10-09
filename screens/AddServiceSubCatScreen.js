@@ -44,16 +44,13 @@ class AddServiceSubCatScreen extends Component {
             subCategories[index].selected = !subCategories[index].selected;
             this.setState({subCategories});
             console.log(subCategories);
-    }  
+    }
 
 
 
     render() {
-      let {subCategories} = this.state;
+      let {subCategories} = this.state; 
 
-      var {params} = this.props.navigation.state;
-      let {mainScreen} = params;
-      console.log('props are in subcategory page .. ',mainScreen);
        return (
            <View style={{flex:1}}>
                <LinearGradient
@@ -88,7 +85,7 @@ class AddServiceSubCatScreen extends Component {
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10),marginHorizontal:scale(10)}}>
-                              
+
                    </View>
                        }
                    />

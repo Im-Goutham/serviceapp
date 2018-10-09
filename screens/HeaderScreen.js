@@ -40,15 +40,13 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     // alignItems: 'center'
   },
-
   modal2: {
     height: scale(230),
     backgroundColor: "#3B5998"
   },
-
   modal3: {
     height: scale(300),
-    width: scale(300
+    width: scale(300)
   },
     button:{
     justifyContent:'center',
@@ -56,8 +54,6 @@ const styles = StyleSheet.create({
     width: scale(100),
     height: scale(40),
     borderRadius:scale(20),
-    // borderWidth: 1,
-    // borderColor: '#008000',
     paddingTop:scale(5),
     paddingBottom:scale(5),
 },
