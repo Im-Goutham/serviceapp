@@ -29,9 +29,9 @@ class AllServiceList extends Component {
         };
     }
 
-    
+
     _renderRow(rowData, sectionID, rowID) {
-    
+
         return (
                 <View style={styles.servicesBox} >
                     <View style={{backgroundColor:"transparent", paddingTop: scale(15)  }}>
@@ -92,8 +92,9 @@ class AllServiceList extends Component {
     render() {
         let {images,imgIndex,photoShow} = this.state;
         return (
-            <View style={{flex:1,backgroundColor:"rgb(249,252,255)"}}>
+            <View style={{flex:1,backgroundColor:"rgb(249,252,255)"}} testID="servicesBox">
                 <ListView
+                    testID='indianic'
                     scrollEnabled
                     dataSource={this.state.dataSource}
                     renderRow={this._renderRow.bind(this)}

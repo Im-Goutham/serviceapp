@@ -7,24 +7,21 @@ import {
     TouchableOpacity,
     Dimensions,
     Platform,
-    Text, TouchableHighlight
+    Text,
+    TouchableHighlight
 } from 'react-native';
- import {  Icon, Radio, Item, Input} from 'native-base'
+import {  Icon, Radio, Item, Input} from 'native-base';
+import Modal from 'react-native-modalbox';
+import LinearGradient from 'react-native-linear-gradient';
+import RadioButton from 'radio-button-react-native';
 import Advertisement from '../components/Advertisement';
 import LanguageList from '../components/LanguageList';
 import Map from '../components/Map';
 import Header from '../components/Header';
-import Modal from 'react-native-modalbox';
-import LinearGradient from 'react-native-linear-gradient';
-import RadioButton from 'radio-button-react-native';
-
-
 import HeaderScreen from './HeaderScreen';
 
 import {scale} from '../global';
-
 let tabItems = ["List View", "Map View"];
-
 let logo = require('../images/logo.png');
 let menu = require('../assets/icons/menu.png');
 let back_arrow = require('../assets/icons/arrow_left.png');
@@ -139,14 +136,14 @@ class DeleteAccountScreen extends Component {
                                }
                                right={
                                    <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                     
+
                                    </View>
                                }
                            />
                        }
                        content={
                            <View style={{backgroundColor :"transparent",justifyContent: "space-between", paddingVertical: scale(10)}}>
-                       
+
                    </View>
                        }
                    />
@@ -154,13 +151,13 @@ class DeleteAccountScreen extends Component {
                    <View style={{flex:8.5,backgroundColor :"rgb(249,252, 255)",paddingHorizontal:scale(20)}}>
                    <Text style={{color:'#22262C', fontSize:scale(16),marginVertical:scale(5),lineHeight:scale(25),fontFamily:'Montserrat-Bold'}}>Are you sure you want to delete your account?</Text>
                          <Text style={{color:'#9B9B9B', fontSize:scale(14),marginVertical:scale(5),lineHeight:scale(25),fontFamily:'Montserrat-Bold'}}>Please let us know why you are leaving</Text>
-                         <View style={{}}> 
+                         <View style={{}}>
                          {
                                  this.state.options.map((option,index)=>{
-                                    return  <View style={{paddingVertical:scale(10)}}>
+                                    return  <View style={{paddingVertical:scale(10)}} key={index}>
                                                 <RadioButton
                                                    currentValue={this.state.value}
-                                                   value={option.value} 
+                                                   value={option.value}
                                                    onPress={()=>this.setState({value : option.value})}
                                                    outerCircleColor='rgb(211,217,226)'
                                                    outerCircleSize={scale(24)}
@@ -188,7 +185,7 @@ class DeleteAccountScreen extends Component {
                    </View>
                        </ScrollView>
                </LinearGradient>
-              
+
            </View>
        )
   }
@@ -228,6 +225,5 @@ const styles = StyleSheet.create({
 
 
 
-  
-export default DeleteAccountScreen;
 
+export default DeleteAccountScreen;

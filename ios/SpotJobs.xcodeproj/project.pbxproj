@@ -540,7 +540,6 @@
 		A99B996A2152228A00792601 /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppUtilities.framework; path = "../node_modules/react-native-google-signin/ios/GoogleSdk/GoogleAppUtilities.framework"; sourceTree = "<group>"; };
 		A99B996B2152228A00792601 /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = "../node_modules/react-native-google-signin/ios/GoogleSdk/GoogleSignIn.framework"; sourceTree = "<group>"; };
 		A99B9970215226B900792601 /* RNGoogleSignin */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RNGoogleSignin; path = "../node_modules/react-native-google-signin/ios/RNGoogleSignin"; sourceTree = "<group>"; };
-		A9AA92B4215C98BD001C8420 /* IndiaNIC_WildCard_Dev_Profile.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = IndiaNIC_WildCard_Dev_Profile.mobileprovision; sourceTree = "<group>"; };
 		A9E456C7215245F000964295 /* RCTPushNotification.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTPushNotification.xcodeproj; path = "../node_modules/react-native/Libraries/PushNotificationIOS/RCTPushNotification.xcodeproj"; sourceTree = "<group>"; };
 		A9E4571A21524B6900964295 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A9FBD9DA21536C3400380AEE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -835,7 +834,6 @@
 		A99B993921521EB400792601 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				A9AA92B4215C98BD001C8420 /* IndiaNIC_WildCard_Dev_Profile.mobileprovision */,
 				EE57728A9CC8444486F3E54D /* libRNGoogleSignin.a */,
 				2F0B3393DA89447CBEAF891A /* libRNI18n.a */,
 				A5835492FFC64A6FA9D91BE7 /* libRNImagePicker.a */,

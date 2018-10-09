@@ -202,7 +202,7 @@ class ChatScreen extends Component {
                           <ChatList navigation={this.props.navigation}/>
                        </View>
                </LinearGradient>
-              
+
            </View>
        )
   }
@@ -241,8 +241,8 @@ const styles = StyleSheet.create({
 
 
 
-const mapStateToProps = state=> ({ 
+const mapStateToProps = state=> ({
     backButton:state.user.backButton,
   })
-  
+
 export default connect(mapStateToProps, actions)(ChatScreen);

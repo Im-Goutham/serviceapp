@@ -32,9 +32,9 @@ class ServiceProvidersList extends Component {
         };
     }
     _renderRow(rowData, sectionID, rowID) {
-       
+
         return (
-    
+
                  <TouchableWithoutFeedback onPress={() => {
                     this.props.navigation.navigate('jobDetail')
                 }}>
@@ -69,7 +69,7 @@ class ServiceProvidersList extends Component {
                     <View style={{flex:1,flexDirection:'row',marginTop:scale(10)}}>
                         <View style={{justifyContent:'center'}}><Text style={styles.tagStyle}>Plumber & 5 More</Text></View>
                         <View style={{flexDirection:'row',flex:1,justifyContent:'flex-end',alignItems:'center'}}>
-                        <TouchableOpacity onPress={()=>{this.setState({liked: !this.state.liked})}}> 
+                        <TouchableOpacity onPress={()=>{this.setState({liked: !this.state.liked})}}>
                             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.iconButton}>
                                     <Image source={this.state.liked ? require('../assets/icons/heart_red.png'): require('../assets/icons/heart_white.png')} style={[styles.iconStyle,{width:scale(18),height:scale(18)}]}  resizeMode="contain" resizeMethod="resize"/>
                             </LinearGradient>

@@ -94,14 +94,14 @@ class AddServiceCatScreen extends Component {
        if(popularCategories[index].selected){
         this.props.navigation.navigate('addServiceSubCatScreen',{mainScreen:mainScreen})
        }
-      
+
   }
 
   selectAllCategory(index){
     var {params} = this.props.navigation.state;
     var {mainScreen} = params;
     let {allCategories} = this.state;
-  
+
     if(index == 0){
         allCategories[0].selected = !allCategories[0].selected;
         var data = allCategories.map((category,key)=> {
@@ -121,16 +121,16 @@ class AddServiceCatScreen extends Component {
         if(allCategories[index].selected){
             this.props.navigation.navigate('addServiceSubCatScreen',{mainScreen:mainScreen})
         }
-        
+
     }
 
-   
+
 }
 
 
     render() {
       let {popularCategories, allCategories} = this.state;
-   
+
       var {params} = this.props.navigation.state;
       var {mainScreen} = params;
       console.log('props are in category page .. ',mainScreen);
