@@ -15,46 +15,32 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe('LoginScreen', () => {
-    let wrapper;
-    beforeEach(() => {
-        store = mockStore(initialState);
-        wrapper = shallow(
-            <LoginScreen
-                store={store}
-                // navigation={{state: {params: {mainScreen:''}}}}
-                />).dive();
-    //    wrapper.setProps({navigation:});
-    })
-
-    describe('Component rendering',()=>{
-        it('should render the login screen without crashing',()=>{
-                    const rendered = renderer.create(<LoginScreen store={store}/>).toJSON();
-                    expect(rendered).toBeTruthy();
-         })
+  
+    let component;
+    const mockFunc = jest.fn();
+    const navigation = {
+        navigate: mockFunc,
+        goBack: mockFunc
+    }
+    beforeEach(() => { 
+          store = mockStore(initialState);
+           component = shallow(<LoginScreen store={store} onPress={mockFunc} navigation={navigation} />).dive()
     })
 
     describe('Snapshot testing',()=>{
         it('should have same snapshot',()=> {
-            expect(wrapper).toMatchSnapshot();
+            expect(component).toMatchSnapshot();
         })
-    })
+     })
 
-    describe('Function testing',()=>{
+     describe('Function testing',()=>{
     
-    })
+     })
+
 
 
     describe('Form field testing',()=>{
-                let component;
-                const mockFunc = jest.fn();
-                const navigation = {
-                    navigate: mockFunc,
-                    goBack: mockFunc
-                }
-                beforeEach(() => { 
-                component = shallow(<LoginScreen store={store} onPress={mockFunc} navigation={navigation} />).dive();
-                })
-
+     
             it('should change value for username input ',()=>{
                     component.find({testID:'username'}).getElement().props.onChangeText('username entered')
                     var value = component.find({testID:'username'}).getElement().props.value;
@@ -83,15 +69,15 @@ describe('LoginScreen', () => {
             })
     })
 
-     describe('State testing',()=>{
+    describe('State testing',()=>{
     
 
-     })
-
-
-    describe('Props testing',()=>{
- 
     })
+
+
+   describe('Props testing',()=>{
+ 
+   })
 
 
 

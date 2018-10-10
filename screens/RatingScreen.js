@@ -190,18 +190,6 @@ const styles = StyleSheet.create({
     star_style: {
         width:scale(15), height:scale(15), marginHorizontal:scale(5)
     },
-    servicesBox: {
-        flex: 1,
-        marginHorizontal: scale(10),
-        paddingVertical: scale(25),
-        paddingHorizontal: scale(20),
-        borderRadius:scale(10),
-        backgroundColor:'white',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
-        shadowRadius: 2,
-        elevation: 3
-    },
     tagStyle:{
         backgroundColor: 'rgb(239,186,47)',
         borderRadius:scale(10),
@@ -298,7 +286,7 @@ const styles = StyleSheet.create({
     },
     servicesBox: {
         flex: 1,
-        marginVertical: scale(20),
+        marginTop: scale(20),
         paddingVertical: scale(25),
         paddingHorizontal:scale(20),
         borderRadius:scale(10),

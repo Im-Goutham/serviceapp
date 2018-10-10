@@ -155,7 +155,9 @@ class RegisterScreen extends Component {
                       </View>
                        }
                    />
+       
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
+                   
                    <ScrollView style={styles.container}>
                     <View style={styles.inputField}>
                     <FloatingLabelInput

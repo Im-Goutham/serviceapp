@@ -90,6 +90,11 @@ class ProfileScreen extends Component {
     this.offset = 0;
   }
 
+
+  state={
+     qwerty:''
+  }
+
  
 
     focusNextField(id) {
@@ -315,6 +320,7 @@ class ProfileScreen extends Component {
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
+                            testID='firstname'
                             label="First Name"
                             value={this.state.firstname}
                             autoCapitalize='none'
@@ -327,6 +333,7 @@ class ProfileScreen extends Component {
                   </View>
                   <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
+                            testID='lastname' 
                             label="Last Name"
                             value={this.state.lastname}
                             autoCapitalize='none'
@@ -345,6 +352,7 @@ class ProfileScreen extends Component {
                    onPress={this._showDateTimePicker}
                  >
                 <FloatingLabelInput
+                            testID='dob' 
                             label="Date of Birth"
                             value={this.state.dob}
                             onFocus={ this._showDateTimePicker }
@@ -359,6 +367,7 @@ class ProfileScreen extends Component {
                 <Text style={{fontFamily:'Montserrat-Medium',color:'#CCCCCC',fontSize:scale(13)}} >This information is not shared with other users.</Text>
                 <View style={styles.inputField}>
                 <FloatingLabelInput
+                            testID='address' 
                             label="Street Address"
                             value={this.state.address}
                             autoCapitalize='none'
@@ -374,6 +383,7 @@ class ProfileScreen extends Component {
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
+                            testID='city' 
                             label="City"
                             value={this.state.city}
                             autoCapitalize='none'
@@ -383,10 +393,10 @@ class ProfileScreen extends Component {
                             }}
                             onChangeText={city => this.setState({ city })}
                             />
-                
                   </View>
                   <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
+                            testID='state' 
                             label="State"
                             value={this.state.state}
                             autoCapitalize='none'
@@ -398,10 +408,10 @@ class ProfileScreen extends Component {
                             />
                   </View>
                 </View>
-
                  <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
+                            testID='zip' 
                             label="Zip Code"
                             value={this.state.zip}
                             autoCapitalize='none'
@@ -414,6 +424,7 @@ class ProfileScreen extends Component {
                   </View>
                   <View style={{width:'50%',paddingLeft:scale(10)}}>
                    <FloatingLabelInput
+                            testID='country'
                             label="Country"
                             value={this.state.country}
                             autoCapitalize='none'
@@ -489,6 +500,7 @@ class ProfileScreen extends Component {
               <View style={styles.servicesBox}>
               <View style={{marginVertical:scale(20)}}>
               <FloatingLabelInput
+                            testID='about'
                             label="Write about yourself"
                             value={this.state.about}
                             multiline={true}
@@ -562,7 +574,9 @@ class ProfileScreen extends Component {
              </View>
             {/* Upload Website ends here */}
             <View style={{justifyContent: "center" ,marginBottom:scale(20),marginTop:scale(10)}}>
-            <TouchableOpacity onPress={() => {this.props.navigation.navigate('home')}}>
+            <TouchableOpacity 
+                testID='signUpButton'
+                onPress={() => {this.props.navigation.navigate('home')}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
                       <Text style={styles.btnText}>SIGN UP</Text>
                     </LinearGradient>

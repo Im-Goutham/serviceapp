@@ -100,8 +100,7 @@ class SelectScreen extends Component {
                        }
                    />
                     <View style={{backgroundColor :"#009933", flex:1}}>
-                  
-                           <JobsList  navigation={this.props.navigation}/>
+                           <JobsList type='select' navigation={this.props.navigation}/>
                        </View>
                </LinearGradient>
            </View>
