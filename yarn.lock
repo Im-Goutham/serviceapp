@@ -653,9 +653,9 @@
   integrity sha512-5Vu99e/+kVF0h0eiWa3er3bYnjorq6SGTn06HqeinFAETlQpcHGj7+DanmFlNyXkgvRcKi0nQytuMm6QA2CkAQ==
 
 "@types/node@*":
-  version "10.11.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.11.5.tgz#6489ebda4452592d3fd37aefa57eedc01ed13378"
-  integrity sha512-3j1EFLfrjYRHRFjBb+RIXXwr1YGzcfpQVMP39thZa6tMY+JjVgQddPF+hsdV800JqbuLwpwAWclDpbGSAw44vQ==
+  version "10.11.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.11.6.tgz#ce5690df6cd917a9178439a1013e39a7e565c46e"
+  integrity sha512-fnA7yvqg3oKQDb3skBif9w5RRKVKAaeKeNuLzZL37XcSiWL4IoSXQnnbchR3UnBu2EMLHBip7ZVEkqoIVBP8QQ==
 
 "@types/zen-observable@^0.5.3":
   version "0.5.4"
@@ -1096,9 +1096,9 @@ aws-sdk@2.198.0:
     xmlbuilder "4.2.1"
 
 aws-sdk@^2.312.0:
-  version "2.330.0"
-  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.330.0.tgz#29574fbc63412ab8d41d29535d10dd678acdcf25"
-  integrity sha512-biW3J8S9/b9uqeED2jbBHEbscwIclc0PBiylUkd3lJ5s226Yuv7mwSOfoI2Eogpyg/i97phK3uiUb/Q89/pCpQ==
+  version "2.331.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.331.0.tgz#39cf61040a33c2e4a576fe4d5ec15259a89f9bbe"
+  integrity sha512-+Kd0wUxoLFUOM3+pbKcPLSGIXsXCaFBaneUe6xFr/Nkn8YAwkH05ufSVdK6Q1AjdNnc1sR0HNV8R18dM8riXOQ==
   dependencies:
     buffer "4.9.1"
     events "1.1.1"
@@ -3550,9 +3550,9 @@ flush-write-stream@^1.0.0:
     readable-stream "^2.0.4"
 
 follow-redirects@^1.2.5, follow-redirects@^1.3.0:
-  version "1.5.8"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.8.tgz#1dbfe13e45ad969f813e86c00e5296f525c885a1"
-  integrity sha512-sy1mXPmv7kLAMKW/8XofG7o9T+6gAjzdZK4AJF6ryqQYUa/hnzgiypoeUecZ53x7XiqKNEpNqLtS97MshW2nxg==
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.9.tgz#c9ed9d748b814a39535716e531b9196a845d89c6"
+  integrity sha512-Bh65EZI/RU8nx0wbYF9shkFZlqLP+6WT/5FnA3cE/djNSuKNHJEinGGZgu/cQEkeeb2GdFOgenAmn8qaqYke2w==
   dependencies:
     debug "=3.1.0"
 
@@ -5931,11 +5931,6 @@ mocha@^5.2.0:
     mkdirp "0.5.1"
     supports-color "5.4.0"
 
-moment@2.22.0:
-  version "2.22.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.0.tgz#7921ade01017dd45186e7fee5f424f0b8663a730"
-  integrity sha512-1muXCh8jb1N/gHRbn9VDUBr0GYb8A/aVcHlII9QSB68a50spqEVLIGN6KVmCOnSvJrUhC0edGgKU5ofnGXdYdg==
-
 moment@^2.19.0, moment@^2.22.0:
   version "2.22.2"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
@@ -7673,13 +7668,6 @@ react-native-vector-icons@^5.0.0:
     lodash "^4.0.0"
     prop-types "^15.5.10"
     yargs "^8.0.2"
-
-react-native-wheel-picker-android@^1.1.4:
-  version "1.1.4"
-  resolved "https://registry.yarnpkg.com/react-native-wheel-picker-android/-/react-native-wheel-picker-android-1.1.4.tgz#0b2a0c2ff950d43de9670bce24e42e10af22a7aa"
-  integrity sha512-QSDFVfhlpoGYzuDKj8hjfLJ9xNHlAiUSYZhSJt3menQFgPMUGV7/CUjffJzrmyk8DXufLg7lDExOKBieHsPiQg==
-  dependencies:
-    moment "2.22.0"
 
 react-native@0.56.0:
   version "0.56.0"

@@ -37,7 +37,7 @@ let back_arrow = require('../assets/icons/arrow_left.png');
 class RegisterScreen extends Component {
     constructor(props) {
         super(props);
-        this.state = { username: '', password: '', error: null, loading: false, checked: true };
+        this.state = { email: '', userId: '', password: '', cfrmPassword:'', error: null, loading: false, checked: true };
         this.focusNextField = this.focusNextField.bind(this);
         this.inputs = {};
     }
@@ -159,6 +159,7 @@ class RegisterScreen extends Component {
                    <ScrollView style={styles.container}>
                     <View style={styles.inputField}>
                     <FloatingLabelInput
+                                        testID='email'
                                         label="Email"
                                         value={this.state.email}
                                         autoCapitalize='none'
@@ -174,19 +175,21 @@ class RegisterScreen extends Component {
                         </View>
                         <View style={styles.inputField}>
                         <FloatingLabelInput
+                                        testID='userId'
                                         label="User ID"
-                                        value={this.state.username}
+                                        value={this.state.userId}
                                         autoCapitalize='none'
                                         returnKeyType={ "next" }
                                         ref={ input => {
-                                            this.inputs['username'] = input;
+                                            this.inputs['userId'] = input;
                                         }}
-                                        onChangeText={username => this.setState({ username })}
+                                        onChangeText={userId => this.setState({ userId })}
                                         style={{marginVertical: scale(5)}}
                                         />
                         </View>
                         <View style={styles.inputField}>
                             <FloatingLabelInput
+                                        testID='password'
                                         label="Password"
                                         value={this.state.password}
                                         autoCapitalize='none'
@@ -201,6 +204,7 @@ class RegisterScreen extends Component {
                         </View>
                         <View style={styles.inputField}>
                         <FloatingLabelInput
+                                        testID='cfrmPassword'
                                         label="Confirm Password"
                                         value={this.state.cfrmPassword}
                                         autoCapitalize='none'
@@ -268,7 +272,7 @@ class RegisterScreen extends Component {
                                     ?
                                     <ActivityIndicator color="#8E24AA" size="large" />
                                     :
-                                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('profile');}}>
+                                    <TouchableOpacity testID='signUpButton' onPress={() => {this.props.navigation.navigate('profile');}}>
                                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
                                        <Text style={styles.btnText}>SIGN UP</Text>
                                     </LinearGradient>

@@ -100,6 +100,7 @@ class LoginScreen extends Component {
               <View style={{flex:1,justifyContent:'space-around'}}>
               <View>
               <FloatingLabelInput
+                            testID='username'
                             label="Email / User ID"
                             value={this.state.username}
                             autoCapitalize='none'
@@ -113,6 +114,7 @@ class LoginScreen extends Component {
               </View>
               <View>
               <FloatingLabelInput
+                            testID='password'
                             label="Password"
                             value={this.state.password}
                             autoCapitalize='none'
@@ -134,14 +136,14 @@ class LoginScreen extends Component {
               </View>
               <View style={{justifyContent: "center" }}>
                   {this.state.loading ? <ActivityIndicator color="#8E24AA" size="large" /> :
-                  <TouchableOpacity onPress={() => { this.props.navigation.navigate('home');}}>
+                  <TouchableOpacity testID='signInButton' onPress={() => { this.props.navigation.navigate('home');}}>
                     <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
                        <Text style={styles.btnText}>SIGN IN</Text>
                     </LinearGradient>
                     </TouchableOpacity>
                   }
             </View>
-            <Text style={styles.text} onPress={()=>{this.props.navigation.navigate('forgot')}}>Forgot ID/Password?</Text>
+            <Text testID='forgetButton' style={styles.text} onPress={()=>{this.props.navigation.navigate('forgot')}}>Forgot ID/Password?</Text>
               </View> 
                  </View>
                   <View style={{flex:1.8,marginTop:scale(20),flexDirection:'row',alignItems:'flex-start',justifyContent:'flex-start'}}>

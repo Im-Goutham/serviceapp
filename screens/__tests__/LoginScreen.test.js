@@ -1,13 +1,12 @@
 jest.unmock('redux-mock-store')
 jest.unmock('redux-thunk')
-// jest.mock('react-native-google-signin', () => {
-//       return {};
-//     });
+
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import renderer from 'react-test-renderer';
+// import { expect } from 'chai';
 import LoginScreen from '../LoginScreen';
 import {initialState} from '../../config/jest/mockStore';
 
@@ -26,7 +25,75 @@ describe('LoginScreen', () => {
                 />).dive();
     //    wrapper.setProps({navigation:});
     })
-    it('snapshot',()=> {
-        expect(wrapper).toMatchSnapshot();
+
+    describe('Component rendering',()=>{
+        it('should render the login screen without crashing',()=>{
+                    const rendered = renderer.create(<LoginScreen store={store}/>).toJSON();
+                    expect(rendered).toBeTruthy();
+         })
     })
+
+    describe('Snapshot testing',()=>{
+        it('should have same snapshot',()=> {
+            expect(wrapper).toMatchSnapshot();
+        })
+    })
+
+    describe('Function testing',()=>{
+    
+    })
+
+
+    describe('Form field testing',()=>{
+                let component;
+                const mockFunc = jest.fn();
+                const navigation = {
+                    navigate: mockFunc,
+                    goBack: mockFunc
+                }
+                beforeEach(() => { 
+                component = shallow(<LoginScreen store={store} onPress={mockFunc} navigation={navigation} />).dive();
+                })
+
+            it('should change value for username input ',()=>{
+                    component.find({testID:'username'}).getElement().props.onChangeText('username entered')
+                    var value = component.find({testID:'username'}).getElement().props.value;
+                    console.log(value);
+                    expect(value).toEqual('username entered');
+            })
+
+
+            it('should change value for password input ',()=>{
+                component.find({testID:'password'}).getElement().props.onChangeText('password entered')
+                var value = component.find({testID:'password'}).getElement().props.value;
+                console.log(value);
+                expect(value).toEqual('password entered');
+             })
+
+
+                
+            it('should press signin button ',()=>{
+                    component.find({testID:'signInButton'}).simulate('press');
+                    expect(mockFunc).toHaveBeenCalled();
+            })
+            it('should press forget button ',()=>{
+                component.find({testID:'forgetButton'}).simulate('press');
+                console.log('username input  ...  ',);
+                expect(mockFunc).toHaveBeenCalled();
+            })
+    })
+
+     describe('State testing',()=>{
+    
+
+     })
+
+
+    describe('Props testing',()=>{
+ 
+    })
+
+
+
+
 });

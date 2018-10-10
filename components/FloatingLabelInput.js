@@ -14,8 +14,6 @@ export default class FloatingLabelInput extends Component {
 
   componentWillMount() {
     this._animatedIsFocused = new Animated.Value(0);
-    console.log('value is ',this.props.value);
-   
   }
 
   componentDidMount(){
