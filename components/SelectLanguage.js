@@ -30,8 +30,8 @@ export default class SelectLocation extends Component {
      <View style={{flex:6}}>
       <ScrollView style={{}}>
         {
-          this.state.languages.map((language,key)=>{
-               return  <TouchableOpacity onPress={()=>{this.setState({language})}}>
+          this.state.languages.map((language,index)=>{
+               return  <TouchableOpacity onPress={()=>{this.setState({language})}} key={index}>
                           <Text style={[styles.languageStyle,{color: language == this.state.language ? '#3E85EF' : 'rgba(0, 0, 0,0.3)'}]}>{language}</Text>
                        </TouchableOpacity>
           })

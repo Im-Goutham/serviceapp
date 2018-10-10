@@ -87,17 +87,12 @@ class AccountScreen extends Component {
     this.focusNextField = this.focusNextField.bind(this);
     this.inputs = {};
   }
-<<<<<<< HEAD
   hellome= (event) => {
        this.setState({ firstname: event})
   }
   componentDidMount(){
      console.log('login screen is called ...');
   }
-=======
-
->>>>>>> 9294cf32c4e24883ee485bf812b5bf417caa76e4
-
     focusNextField(id) {
         this.inputs[id]._root.focus();
     }
