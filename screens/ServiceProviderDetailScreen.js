@@ -16,10 +16,7 @@ import { Share } from 'react-native';
 import HeaderScreen from './HeaderScreen';
 import PhotoGallery from '../components/PhotoGallery';
 import Documents from '../components/Documents';
-
-
-import {scale} from '../global';
-
+import { scale } from '../global';
 let logo = require('../images/logo.png');
 let menu = require('../assets/icons/menu.png');
 let back_arrow = require('../assets/icons/arrow_left.png');
@@ -47,124 +44,117 @@ export default class ServiceProviderDetailScreen extends Component {
             ],
             videos: [
                 {
-                  name: 'video1.jpg',
-                  image: require('../images/documents/video1.png')
+                    name: 'video1.jpg',
+                    image: require('../images/documents/video1.png')
                 },
                 {
-                  name: 'video2.jpg',
-                  image: require('../images/documents/video2.png')
+                    name: 'video2.jpg',
+                    image: require('../images/documents/video2.png')
                 }
             ],
             websites: [
-              {
-                name: 'video1.jpg',
-                image: require('../images/documents/website1.png')
-              },
+                {
+                    name: 'video1.jpg',
+                    image: require('../images/documents/website1.png')
+                },
             ],
             profiles: [
                 {
-                  name: 'profile1.jpg',
-                  image: require('../images/documents/profile1.png')
+                    name: 'profile1.jpg',
+                    image: require('../images/documents/profile1.png')
                 },
-              ],
+            ],
             tags: ['Plumber', 'Tree Service', 'Fencing', 'Mounting and Installing', 'Painting', 'Hair'],
             liked: true
         };
     }
-
-
-    renderJobDetail(){
-
-       
-        let { videos, websites, profiles,tags} = this.state;
-         return (
-           
-                <ScrollView >
-                    <View style={styles.container}>
-                        <PhotoGallery />
-                        <View style={styles.desc}>
-                            <View style={styles.budget}>
-                                <View style={{ flex:1,flexDirection: "row", height: scale(40), justifyContent: 'flex-start', alignItems: "center" }}>
-                                    <Text style={styles.budgettext}>Budget:</Text>
-                                    <Text style={styles.pricetext}>$240</Text>
-                                </View>
-                                <View style={{ flex:1,flexDirection: "row", height: scale(40),backgroundColor: "transparent", justifyContent: 'flex-end', alignItems: "center" }}>
-                                    <Image source={require('../assets/icons/location_red.png')} style={styles.pinimage} resizeMode="contain" resizeMethod="resize" />
-                                    <Text style={styles.distance}>3 mi</Text>
-                                </View>
+    renderJobDetail() {
+        let { videos, websites, profiles, tags } = this.state;
+        return (
+            <ScrollView >
+                <View style={styles.container}>
+                    <PhotoGallery />
+                    <View style={styles.desc}>
+                        <View style={styles.budget}>
+                            <View style={{ flex: 1, flexDirection: "row", height: scale(40), justifyContent: 'flex-start', alignItems: "center" }}>
+                                <Text style={styles.budgettext}>Budget:</Text>
+                                <Text style={styles.pricetext}>$240</Text>
                             </View>
-                            <View style={styles.deadline}>
-                                <Text style={styles.title}>Need it done before</Text>
-                                <Text style={styles.date}>10 jul 2018, 6:44 PM</Text>
-                            </View>
-                            <View style={styles.detail}>
-                                <Text style={styles.detaildesc}>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                                    <Image source={require('../assets/icons/plus.png')} style={[styles.pinimage,{height:20}]} resizeMode="contain" resizeMethod="resize" />
-                                </Text>
+                            <View style={{ flex: 1, flexDirection: "row", height: scale(40), backgroundColor: "transparent", justifyContent: 'flex-end', alignItems: "center" }}>
+                                <Image source={require('../assets/icons/location_red.png')} style={styles.pinimage} resizeMode="contain" resizeMethod="resize" />
+                                <Text style={styles.distance}>3 mi</Text>
                             </View>
                         </View>
-                        <View style={styles.servicesBox}>
-                            <View >
-                                <Text style={[styles.textStyle,{paddingBottom:scale(20)}]}>Area of Services</Text>
-                            </View>
-                            <View style={{flexDirection: 'row',flexWrap:'wrap'}}>
-                               {
-                                    tags.map((tag,key)=>{
-                                         return (
-                                             <Text style={styles.tagStyle} key={key}>{tag}</Text>
-                                         )
-                                    })
-                               }
-                                
-                            </View>
+                        <View style={styles.deadline}>
+                            <Text style={styles.title}>Need it done before</Text>
+                            <Text style={styles.date}>10 jul 2018, 6:44 PM</Text>
                         </View>
-                        <View style={styles.servicesBox}>
-                            <View >
-                                <Text style={[styles.textStyle,{paddingBottom:scale(20)}]}>Video Link</Text>
-                            </View>
-                            <View style={{flexDirection: 'row',alignItems:'center'}}>
-                            <Documents documents={videos}  placeholder={false}/>
-                            </View>
-                        </View>
-                        <View style={styles.servicesBox}>
-                            <View>
-                                <Text style={[styles.textStyle,{paddingBottom:scale(20)}]}>Website Link</Text>
-                            </View>
-                            <View style={{flexDirection: 'row',alignItems:'center'}}>
-                            <Documents documents={profiles} placeholder={false}/>
-                            </View>
-                        </View>
-                        <View style={styles.servicesBox}>
-                            <View>
-                                <Text style={[styles.textStyle,{paddingBottom:scale(20)}]}>Linkedin Profile Link</Text>
-                            </View>
-                            <View style={{flexDirection: 'row',alignItems:'center'}}>
-                            <Documents documents={profiles}  placeholder={false}/>
-                            </View>
+                        <View style={styles.detail}>
+                            <Text style={styles.detaildesc}>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                                    <Image source={require('../assets/icons/plus.png')} style={[styles.pinimage, { height: 20 }]} resizeMode="contain" resizeMethod="resize" />
+                            </Text>
                         </View>
                     </View>
-                    <LinearGradient
-                   colors={['#3E85EF', '#3EBDEF']}
-                   start={{x: 0, y: 0}}
-                   end={{x: 1, y: 0}}
-                   style={{
-                      paddingVertical: scale(10),
-                      marginTop:scale(20)
-                   }}>
-                                <TouchableOpacity
-                                    style={{height: scale(64), justifyContent: "center", alignItems: "center"}}
-                                    onPress={()=>{this.props.navigation.navigate('select')}}
-                                    >
-                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: scale(18), color: "#fff"}}>HIRE NOW</Text>
-                                </TouchableOpacity>
-                 </LinearGradient>
+                    <View style={styles.servicesBox}>
+                        <View >
+                            <Text style={[styles.textStyle, { paddingBottom: scale(20) }]}>Area of Services</Text>
+                        </View>
+                        <View style={{ flexDirection: 'row', flexWrap: 'wrap' }}>
+                            {
+                                tags.map((tag, key) => {
+                                    return (
+                                        <Text style={styles.tagStyle} key={key}>{tag}</Text>
+                                    )
+                                })
+                            }
 
-                </ScrollView>
-
-         )
+                        </View>
+                    </View>
+                    <View style={styles.servicesBox}>
+                        <View >
+                            <Text style={[styles.textStyle, { paddingBottom: scale(20) }]}>Video Link</Text>
+                        </View>
+                        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                            <Documents documents={videos} placeholder={false} />
+                        </View>
+                    </View>
+                    <View style={styles.servicesBox}>
+                        <View>
+                            <Text style={[styles.textStyle, { paddingBottom: scale(20) }]}>Website Link</Text>
+                        </View>
+                        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                            <Documents documents={profiles} placeholder={false} />
+                        </View>
+                    </View>
+                    <View style={styles.servicesBox}>
+                        <View>
+                            <Text style={[styles.textStyle, { paddingBottom: scale(20) }]}>Linkedin Profile Link</Text>
+                        </View>
+                        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                            <Documents documents={profiles} placeholder={false} />
+                        </View>
+                    </View>
+                </View>
+                <LinearGradient
+                    colors={['#3E85EF', '#3EBDEF']}
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 1, y: 0 }}
+                    style={{
+                        paddingVertical: scale(10),
+                        marginTop: scale(20)
+                    }}>
+                    <TouchableOpacity
+                        style={{ height: scale(64), justifyContent: "center", alignItems: "center" }}
+                        onPress={() => { this.props.navigation.navigate('select') }}
+                    >
+                        <Text style={{ fontFamily: "Montserrat-bold", fontSize: scale(18), color: "#fff" }}>HIRE NOW</Text>
+                    </TouchableOpacity>
+                </LinearGradient>
+            </ScrollView>
+        )
     }
 
     shareJob() {
@@ -172,101 +162,98 @@ export default class ServiceProviderDetailScreen extends Component {
             message: 'BAM: we\'re helping your business with awesome React Native apps',
             url: 'http://bam.tech',
             title: 'Wow, did you see that?'
-          }, {
-            // Android only:
-            dialogTitle: 'Share BAM goodness',
-            // iOS only:
-            excludedActivityTypes: [
-              'com.apple.UIKit.activity.PostToTwitter'
-            ]
-          })
+        }, {
+                // Android only:
+                dialogTitle: 'Share BAM goodness',
+                // iOS only:
+                excludedActivityTypes: [
+                    'com.apple.UIKit.activity.PostToTwitter'
+                ]
+            })
     }
-    
     render() {
-
-      
         return (
             <View style={{ flex: 1 }}>
-            <LinearGradient
-                colors={['#3E85EF', '#3EBDEF']}
-                start={{ x: 0, y: 0 }}
-                end={{ x: 1, y: 0 }}
-                style={{
-                    flex: 1
-                }}>
-                <HeaderScreen
-                    header={
-                        <Header
-                            navigation={this.props.navigation}
-                            left={
-                                  <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                    <TouchableOpacity  onPress={() => this.props.navigation.goBack()}  style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                    <Image source={back_arrow} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
-                                    </TouchableOpacity>
-                                    <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                    <Image source={menu} style={{ width: '50%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
-                                    </TouchableOpacity>
-                                </View>
-                            }
-                            title={
-                                <View style={{ justifyContent: 'center', alignItems: 'flex-start', width: "100%", height: scale(54) }}>
-                                  <Text style={{ fontFamily: 'Montserrat-Bold', color: "#fff", fontSize: scale(20) }}>Need Cook</Text>
-                                </View>
-                            }
-                            right={
-                                <View style={{ backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection: "row" }}>
-                                      <TouchableOpacity 
-                                        style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
-                                        onPress={()=> this.setState({liked: !this.state.liked})}
-                                        >
-                                         <Image source={this.state.liked ? require('../assets/icons/heart_red.png') :  require('../assets/icons/heart_white.png')} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
-                                    </TouchableOpacity>
-                                    <TouchableOpacity 
-                                         style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}
-                                         onPress={()=> {this.shareJob()}}
-                                         >
-                                        <Image source={require('../assets/icons/send_white.png')} style={{ width: '100%', height: scale(20)}} resizeMode="contain" resizeMethod="resize"/>
-                                    </TouchableOpacity>
-                                </View>
-                            }
-                        />
-                    }
-                />
-            <Swiper 
-             showsButtons={false}
-             dot={<View/>}
-             activeDot={<View/>}
-             style={{backgroundColor :"rgb(249,252, 255)"}}
-            >
-                <View style={{flex:1}}>
-                   {this.renderJobDetail()}
-                </View>
-                <View style={{flex:1}}>
-                  {this.renderJobDetail()}
-                </View>
-                <View style={{flex:1}}>
-                  {this.renderJobDetail()}
-                </View>
-                <View style={{flex:1}}>
-                  {this.renderJobDetail()}
-                </View>
-            </Swiper> 
-            </LinearGradient>
-            <TouchableOpacity onPress={() => { this.props.navigation.navigate('message')}}>
-              <LinearGradient
+                <LinearGradient
                     colors={['#3E85EF', '#3EBDEF']}
                     start={{ x: 0, y: 0 }}
                     end={{ x: 1, y: 0 }}
                     style={{
-                        bottom: scale(30),
-                        right: scale(10),
-                        width: scale(60), height: scale(60), backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
-                        borderRadius: scale(40)
+                        flex: 1
                     }}>
-                       <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: scale(30) }} resizeMode="contain" resizeMethod="resize" />
+                    <HeaderScreen
+                        header={
+                            <Header
+                                navigation={this.props.navigation}
+                                left={
+                                    <View style={{ backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection: "row" }}>
+                                        <TouchableOpacity onPress={() => this.props.navigation.goBack()} style={{ width: "50%", height: scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}>
+                                            <Image source={back_arrow} style={{ width: '50%', height: scale(20) }} resizeMode="contain" resizeMethod="resize" />
+                                        </TouchableOpacity>
+                                        <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{ width: "50%", height: scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}>
+                                            <Image source={menu} style={{ width: '50%', height: scale(20) }} resizeMode="contain" resizeMethod="resize" />
+                                        </TouchableOpacity>
+                                    </View>
+                                }
+                                title={
+                                    <View style={{ justifyContent: 'center', alignItems: 'flex-start', width: "100%", height: scale(54) }}>
+                                        <Text style={{ fontFamily: 'Montserrat-Bold', color: "#fff", fontSize: scale(20) }}>Need Cook</Text>
+                                    </View>
+                                }
+                                right={
+                                    <View style={{ backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection: "row" }}>
+                                        <TouchableOpacity
+                                            style={{ width: "50%", height: scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}
+                                            onPress={() => this.setState({ liked: !this.state.liked })}
+                                        >
+                                            <Image source={this.state.liked ? require('../assets/icons/heart_red.png') : require('../assets/icons/heart_white.png')} style={{ width: '100%', height: scale(20) }} resizeMode="contain" resizeMethod="resize" />
+                                        </TouchableOpacity>
+                                        <TouchableOpacity
+                                            style={{ width: "50%", height: scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}
+                                            onPress={() => { this.shareJob() }}
+                                        >
+                                            <Image source={require('../assets/icons/send_white.png')} style={{ width: '100%', height: scale(20) }} resizeMode="contain" resizeMethod="resize" />
+                                        </TouchableOpacity>
+                                    </View>
+                                }
+                            />
+                        }
+                    />
+                    <Swiper
+                        showsButtons={false}
+                        dot={<View />}
+                        activeDot={<View />}
+                        style={{ backgroundColor: "rgb(249,252, 255)" }}
+                    >
+                        <View style={{ flex: 1 }}>
+                            {this.renderJobDetail()}
+                        </View>
+                        <View style={{ flex: 1 }}>
+                            {this.renderJobDetail()}
+                        </View>
+                        <View style={{ flex: 1 }}>
+                            {this.renderJobDetail()}
+                        </View>
+                        <View style={{ flex: 1 }}>
+                            {this.renderJobDetail()}
+                        </View>
+                    </Swiper>
                 </LinearGradient>
+                <TouchableOpacity onPress={() => { this.props.navigation.navigate('message') }}>
+                    <LinearGradient
+                        colors={['#3E85EF', '#3EBDEF']}
+                        start={{ x: 0, y: 0 }}
+                        end={{ x: 1, y: 0 }}
+                        style={{
+                            bottom: scale(30),
+                            right: scale(10),
+                            width: scale(60), height: scale(60), backgroundColor: "blue", justifyContent: "center", alignItems: "center", position: "absolute",
+                            borderRadius: scale(40)
+                        }}>
+                        <Image source={require('../assets/icons/chat_white.png')} style={{ width: "100%", height: scale(30) }} resizeMode="contain" resizeMethod="resize" />
+                    </LinearGradient>
                 </TouchableOpacity>
-        </View> 
+            </View>
         );
     }
 }
@@ -287,7 +274,6 @@ const styles = StyleSheet.create({
         shadowRadius: 2,
         elevation: 3
     },
-   
     budget: {
         height: scale(54),
         flexDirection: "row",
@@ -295,13 +281,13 @@ const styles = StyleSheet.create({
         alignItems: "center",
         // backgroundColor:"#666"
     },
-    tagStyle:{
+    tagStyle: {
         backgroundColor: 'rgb(239,186,47)',
-        borderRadius:scale(10),
-        overflow:"hidden",
-        paddingVertical:scale(2),
-        paddingHorizontal:scale(10),
-        marginBottom:scale(10),
+        borderRadius: scale(10),
+        overflow: "hidden",
+        paddingVertical: scale(2),
+        paddingHorizontal: scale(10),
+        marginBottom: scale(10),
         color: 'white',
         fontSize: scale(14),
         marginRight: scale(10),
@@ -351,7 +337,7 @@ const styles = StyleSheet.create({
         lineHeight: scale(25),
         color: "rgb(163,163,163)",
     },
-   
+
     categorytitle: {
         fontFamily: "Montserrat-SemiBold",
         fontSize: scale(14),
@@ -388,7 +374,7 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         fontFamily: "Montserrat-SemiBold",
-        color:'#22262C',
+        color: '#22262C',
         fontSize: scale(16)
     },
     categoryBox: {
@@ -416,17 +402,17 @@ const styles = StyleSheet.create({
         bottom: 0,
         left: 0
     },
-    livetrackbox:{
-        flexDirection : 'row',
+    livetrackbox: {
+        flexDirection: 'row',
         // shadowOffset: { width: 0, height: 2 },
         // shadowOpacity: 0.2,
         // shadowRadius: 2,
         // elevation: 3
     },
     btnText: {
-        textAlign:'center',
-        color:'white',
+        textAlign: 'center',
+        color: 'white',
         fontFamily: 'Montserrat-Bold',
-        fontSize:scale(15)
+        fontSize: scale(15)
     },
 })
