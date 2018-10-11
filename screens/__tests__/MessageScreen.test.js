@@ -8,23 +8,39 @@ import renderer from 'react-test-renderer';
 import MessageScreen from '../MessageScreen';
 import {initialState} from '../../config/jest/mockStore';
 
-let store;
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
+let store = mockStore(initialState);
+
+
 describe('MessageScreen', () => {
-    let wrapper;
-    beforeEach(() => {
-        store = mockStore(initialState);
-        wrapper = shallow(
-            <MessageScreen
-                store={store}
-                navigation={{state: {params: {mainScreen:''}}}}
-                />).dive();
-    //    wrapper.setProps({navigation:});
+    let component;
+    const mockFunc = jest.fn();
+    const navigation = {
+        navigate: mockFunc,
+        goBack: mockFunc
+    }
+    beforeEach(() => { 
+    component = shallow(<MessageScreen store={store} onPress={mockFunc} navigation={navigation} />).dive();
     })
+
+    describe('Snapshot testing',()=>{
+        it('should have same snapshot',()=> {
+            expect(component).toMatchSnapshot();
+        })
+     })
+
+     describe('Function testing',()=>{
     
-    it('snapshot',()=> {
-        expect(wrapper).toMatchSnapshot();
-    })
+     })
+
+
+    //   describe('Form field testing',()=>{
+           
+    //         it('should press signUp button ',()=>{
+    //                 component.find({testID:'signUpButton'}).simulate('press');
+    //                 expect(mockFunc).toHaveBeenCalled();
+    //         })
+    //     })
 });

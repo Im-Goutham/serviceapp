@@ -1,11 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MyRequestsScreen snapshot 1`] = `
+exports[`MyRequestsScreen Snapshot testing should have same snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MyRequestScreen
     backButton={false}
     hidePhotoView={[Function]}
+    navigation={
+      Object {
+        "goBack": [MockFunction],
+        "navigate": [MockFunction],
+      }
+    }
+    onPress={[MockFunction]}
     showBackButton={[Function]}
     showPhotoView={[Function]}
     signIn={[Function]}
@@ -216,6 +223,12 @@ ShallowWrapper {
                   </TouchableOpacity>
                 </Component>
               }
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
               right={
                 <Component
                   style={
@@ -263,7 +276,14 @@ ShallowWrapper {
           }
         >
           <Advertisement />
-          <JobsList />
+          <JobsList
+            navigation={
+              Object {
+                "goBack": [MockFunction],
+                "navigate": [MockFunction],
+              }
+            }
+          />
         </Component>
       </LinearGradient>,
       "style": Object {
@@ -414,6 +434,12 @@ ShallowWrapper {
                     </TouchableOpacity>
                   </Component>
                 }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
                 right={
                   <Component
                     style={
@@ -461,7 +487,14 @@ ShallowWrapper {
             }
           >
             <Advertisement />
-            <JobsList />
+            <JobsList
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
+            />
           </Component>,
         ],
         "colors": Array [
@@ -620,6 +653,12 @@ ShallowWrapper {
                   </TouchableOpacity>
                 </Component>
               }
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
               right={
                 <Component
                   style={
@@ -668,7 +707,14 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Advertisement />,
-              <JobsList />,
+              <JobsList
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
+              />,
             ],
             "style": Object {
               "backgroundColor": "rgb(249,252, 255)",
@@ -691,7 +737,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "navigation": undefined,
+                "navigation": Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                },
               },
               "ref": null,
               "rendered": null,
@@ -873,6 +922,12 @@ ShallowWrapper {
                     </TouchableOpacity>
                   </Component>
                 }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
                 right={
                   <Component
                     style={
@@ -920,7 +975,14 @@ ShallowWrapper {
             }
           >
             <Advertisement />
-            <JobsList />
+            <JobsList
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
+            />
           </Component>
         </LinearGradient>,
         "style": Object {
@@ -1071,6 +1133,12 @@ ShallowWrapper {
                       </TouchableOpacity>
                     </Component>
                   }
+                  navigation={
+                    Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
+                    }
+                  }
                   right={
                     <Component
                       style={
@@ -1118,7 +1186,14 @@ ShallowWrapper {
               }
             >
               <Advertisement />
-              <JobsList />
+              <JobsList
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
+              />
             </Component>,
           ],
           "colors": Array [
@@ -1277,6 +1352,12 @@ ShallowWrapper {
                     </TouchableOpacity>
                   </Component>
                 }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
                 right={
                   <Component
                     style={
@@ -1325,7 +1406,14 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Advertisement />,
-                <JobsList />,
+                <JobsList
+                  navigation={
+                    Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
+                    }
+                  }
+                />,
               ],
               "style": Object {
                 "backgroundColor": "rgb(249,252, 255)",
@@ -1348,7 +1436,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "navigation": undefined,
+                  "navigation": Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  },
                 },
                 "ref": null,
                 "rendered": null,

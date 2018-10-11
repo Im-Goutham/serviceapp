@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FavouriteScreen snapshot 1`] = `
+exports[`FavouriteScreen Snapshot testing should have same snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <FavoritesScreen
@@ -8,13 +8,18 @@ ShallowWrapper {
     hidePhotoView={[Function]}
     navigation={
       Object {
+        "goBack": [MockFunction],
+        "navigate": [MockFunction],
         "state": Object {
           "params": Object {
-            "mainScreen": "",
+            "state": Object {
+              "backButton": true,
+            },
           },
         },
       }
     }
+    onPress={[MockFunction]}
     showBackButton={[Function]}
     showPhotoView={[Function]}
     signIn={[Function]}
@@ -225,9 +230,13 @@ ShallowWrapper {
                 }
                 navigation={
                   Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
                     "state": Object {
                       "params": Object {
-                        "mainScreen": "",
+                        "state": Object {
+                          "backButton": true,
+                        },
                       },
                     },
                   }
@@ -282,9 +291,13 @@ ShallowWrapper {
             <JobsList
               navigation={
                 Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
                   "state": Object {
                     "params": Object {
-                      "mainScreen": "",
+                      "state": Object {
+                        "backButton": true,
+                      },
                     },
                   },
                 }
@@ -1498,9 +1511,13 @@ ShallowWrapper {
                   }
                   navigation={
                     Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
                       "state": Object {
                         "params": Object {
-                          "mainScreen": "",
+                          "state": Object {
+                            "backButton": true,
+                          },
                         },
                       },
                     }
@@ -1555,9 +1572,13 @@ ShallowWrapper {
               <JobsList
                 navigation={
                   Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
                     "state": Object {
                       "params": Object {
-                        "mainScreen": "",
+                        "state": Object {
+                          "backButton": true,
+                        },
                       },
                     },
                   }
@@ -1720,9 +1741,13 @@ ShallowWrapper {
                 }
                 navigation={
                   Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
                     "state": Object {
                       "params": Object {
-                        "mainScreen": "",
+                        "state": Object {
+                          "backButton": true,
+                        },
                       },
                     },
                   }
@@ -1778,9 +1803,13 @@ ShallowWrapper {
                 <JobsList
                   navigation={
                     Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
                       "state": Object {
                         "params": Object {
-                          "mainScreen": "",
+                          "state": Object {
+                            "backButton": true,
+                          },
                         },
                       },
                     }
@@ -1809,9 +1838,13 @@ ShallowWrapper {
                 "nodeType": "class",
                 "props": Object {
                   "navigation": Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
                     "state": Object {
                       "params": Object {
-                        "mainScreen": "",
+                        "state": Object {
+                          "backButton": true,
+                        },
                       },
                     },
                   },
@@ -8140,9 +8173,13 @@ ShallowWrapper {
                   }
                   navigation={
                     Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
                       "state": Object {
                         "params": Object {
-                          "mainScreen": "",
+                          "state": Object {
+                            "backButton": true,
+                          },
                         },
                       },
                     }
@@ -8197,9 +8234,13 @@ ShallowWrapper {
               <JobsList
                 navigation={
                   Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
                     "state": Object {
                       "params": Object {
-                        "mainScreen": "",
+                        "state": Object {
+                          "backButton": true,
+                        },
                       },
                     },
                   }
@@ -9413,9 +9454,13 @@ ShallowWrapper {
                     }
                     navigation={
                       Object {
+                        "goBack": [MockFunction],
+                        "navigate": [MockFunction],
                         "state": Object {
                           "params": Object {
-                            "mainScreen": "",
+                            "state": Object {
+                              "backButton": true,
+                            },
                           },
                         },
                       }
@@ -9470,9 +9515,13 @@ ShallowWrapper {
                 <JobsList
                   navigation={
                     Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
                       "state": Object {
                         "params": Object {
-                          "mainScreen": "",
+                          "state": Object {
+                            "backButton": true,
+                          },
                         },
                       },
                     }
@@ -9635,9 +9684,13 @@ ShallowWrapper {
                   }
                   navigation={
                     Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
                       "state": Object {
                         "params": Object {
-                          "mainScreen": "",
+                          "state": Object {
+                            "backButton": true,
+                          },
                         },
                       },
                     }
@@ -9693,9 +9746,13 @@ ShallowWrapper {
                   <JobsList
                     navigation={
                       Object {
+                        "goBack": [MockFunction],
+                        "navigate": [MockFunction],
                         "state": Object {
                           "params": Object {
-                            "mainScreen": "",
+                            "state": Object {
+                              "backButton": true,
+                            },
                           },
                         },
                       }
@@ -9724,9 +9781,13 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "navigation": Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
                       "state": Object {
                         "params": Object {
-                          "mainScreen": "",
+                          "state": Object {
+                            "backButton": true,
+                          },
                         },
                       },
                     },

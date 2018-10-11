@@ -217,15 +217,19 @@ class AddServiceCatScreen extends Component {
 
 
                 </View>
-               <LinearGradient
-                   colors={['#3E85EF', '#3EBDEF']}
-                   start={{x: 0, y: 0}}
-                   end={{x: 1, y: 0}}
-                   style={{
-                      paddingVertical: 25
-                   }}>
-                 <TouchableOpacity onPress={() => {this.props.navigation.goBack()}}><Text style={styles.btnText}>CONTINUE</Text></TouchableOpacity>
-               </LinearGradient>
+                <TouchableOpacity 
+                     testID='continueButton'
+                     onPress={() => {this.props.navigation.goBack()}}>
+                    <LinearGradient
+                        colors={['#3E85EF', '#3EBDEF']}
+                        start={{x: 0, y: 0}}
+                        end={{x: 1, y: 0}}
+                        style={{
+                            paddingVertical: 25
+                        }}>
+                         <Text style={styles.btnText}>CONTINUE</Text>
+                    </LinearGradient>
+               </TouchableOpacity>
 
                  </View>
 

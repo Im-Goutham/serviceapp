@@ -1,10 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HomeScreen snapshot 1`] = `
+exports[`HomeScreen Snapshot testing should have same snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <HomeScreen
     hidePhotoView={[Function]}
+    navigation={
+      Object {
+        "goBack": [MockFunction],
+        "navigate": [MockFunction],
+      }
+    }
+    onPress={[MockFunction]}
     showBackButton={[Function]}
     showPhotoView={[Function]}
     signIn={[Function]}
@@ -106,6 +113,12 @@ ShallowWrapper {
                     }
                   />
                 </TouchableOpacity>
+              }
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
               }
               right={
                 <Component
@@ -2495,6 +2508,12 @@ ShallowWrapper {
                       }
                     />
                   </TouchableOpacity>
+                }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
                 }
                 right={
                   <Component
@@ -4892,6 +4911,12 @@ ShallowWrapper {
                     }
                   />
                 </TouchableOpacity>
+              }
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
               }
               right={
                 <Component
@@ -23462,6 +23487,12 @@ ShallowWrapper {
                     />
                   </TouchableOpacity>
                 }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
                 right={
                   <Component
                     style={
@@ -25850,6 +25881,12 @@ ShallowWrapper {
                         }
                       />
                     </TouchableOpacity>
+                  }
+                  navigation={
+                    Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
+                    }
                   }
                   right={
                     <Component
@@ -28247,6 +28284,12 @@ ShallowWrapper {
                       }
                     />
                   </TouchableOpacity>
+                }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
                 }
                 right={
                   <Component

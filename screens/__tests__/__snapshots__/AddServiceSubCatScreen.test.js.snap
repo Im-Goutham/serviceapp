@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AddServiceSubCatScreen snapshot 1`] = `
+exports[`AddServiceSubCatScreen Snapshot testing should have same snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Component
@@ -79,6 +79,17 @@ ShallowWrapper {
                   }
                 />
               </TouchableOpacity>
+            }
+            navigation={
+              Object {
+                "goBack": [MockFunction],
+                "navigate": [MockFunction],
+                "state": Object {
+                  "params": Object {
+                    "mainScreen": "",
+                  },
+                },
+              }
             }
             right={
               <Component
@@ -273,34 +284,35 @@ ShallowWrapper {
                 </Component>
               </Component>
             </Component>
-            <LinearGradient
-              colors={
-                Array [
-                  "#3E85EF",
-                  "#3EBDEF",
-                ]
-              }
-              end={
-                Object {
-                  "x": 1,
-                  "y": 0,
-                }
-              }
-              start={
-                Object {
-                  "x": 0,
-                  "y": 0,
-                }
-              }
-              style={
-                Object {
-                  "paddingVertical": 21.73913043478261,
-                }
-              }
+            <TouchableOpacity
+              activeOpacity={0.2}
+              onPress={[Function]}
+              testID="addServiceButton"
             >
-              <TouchableOpacity
-                activeOpacity={0.2}
-                onPress={[Function]}
+              <LinearGradient
+                colors={
+                  Array [
+                    "#3E85EF",
+                    "#3EBDEF",
+                  ]
+                }
+                end={
+                  Object {
+                    "x": 1,
+                    "y": 0,
+                  }
+                }
+                start={
+                  Object {
+                    "x": 0,
+                    "y": 0,
+                  }
+                }
+                style={
+                  Object {
+                    "paddingVertical": 21.73913043478261,
+                  }
+                }
               >
                 <Component
                   style={
@@ -314,8 +326,8 @@ ShallowWrapper {
                 >
                   ADD SERVICE
                 </Component>
-              </TouchableOpacity>
-            </LinearGradient>
+              </LinearGradient>
+            </TouchableOpacity>
           </Component>
         </ScrollView>
       </Component>
@@ -403,6 +415,17 @@ ShallowWrapper {
                     }
                   />
                 </TouchableOpacity>
+              }
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                  "state": Object {
+                    "params": Object {
+                      "mainScreen": "",
+                    },
+                  },
+                }
               }
               right={
                 <Component
@@ -597,34 +620,35 @@ ShallowWrapper {
                   </Component>
                 </Component>
               </Component>
-              <LinearGradient
-                colors={
-                  Array [
-                    "#3E85EF",
-                    "#3EBDEF",
-                  ]
-                }
-                end={
-                  Object {
-                    "x": 1,
-                    "y": 0,
-                  }
-                }
-                start={
-                  Object {
-                    "x": 0,
-                    "y": 0,
-                  }
-                }
-                style={
-                  Object {
-                    "paddingVertical": 21.73913043478261,
-                  }
-                }
+              <TouchableOpacity
+                activeOpacity={0.2}
+                onPress={[Function]}
+                testID="addServiceButton"
               >
-                <TouchableOpacity
-                  activeOpacity={0.2}
-                  onPress={[Function]}
+                <LinearGradient
+                  colors={
+                    Array [
+                      "#3E85EF",
+                      "#3EBDEF",
+                    ]
+                  }
+                  end={
+                    Object {
+                      "x": 1,
+                      "y": 0,
+                    }
+                  }
+                  start={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "paddingVertical": 21.73913043478261,
+                    }
+                  }
                 >
                   <Component
                     style={
@@ -638,8 +662,8 @@ ShallowWrapper {
                   >
                     ADD SERVICE
                   </Component>
-                </TouchableOpacity>
-              </LinearGradient>
+                </LinearGradient>
+              </TouchableOpacity>
             </Component>
           </ScrollView>
         </Component>
@@ -699,6 +723,17 @@ ShallowWrapper {
                       }
                     />
                   </TouchableOpacity>
+                }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                    "state": Object {
+                      "params": Object {
+                        "mainScreen": "",
+                      },
+                    },
+                  }
                 }
                 right={
                   <Component
@@ -893,34 +928,35 @@ ShallowWrapper {
                     </Component>
                   </Component>
                 </Component>
-                <LinearGradient
-                  colors={
-                    Array [
-                      "#3E85EF",
-                      "#3EBDEF",
-                    ]
-                  }
-                  end={
-                    Object {
-                      "x": 1,
-                      "y": 0,
-                    }
-                  }
-                  start={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "paddingVertical": 21.73913043478261,
-                    }
-                  }
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  testID="addServiceButton"
                 >
-                  <TouchableOpacity
-                    activeOpacity={0.2}
-                    onPress={[Function]}
+                  <LinearGradient
+                    colors={
+                      Array [
+                        "#3E85EF",
+                        "#3EBDEF",
+                      ]
+                    }
+                    end={
+                      Object {
+                        "x": 1,
+                        "y": 0,
+                      }
+                    }
+                    start={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "paddingVertical": 21.73913043478261,
+                      }
+                    }
                   >
                     <Component
                       style={
@@ -934,8 +970,8 @@ ShallowWrapper {
                     >
                       ADD SERVICE
                     </Component>
-                  </TouchableOpacity>
-                </LinearGradient>
+                  </LinearGradient>
+                </TouchableOpacity>
               </Component>
             </ScrollView>
           </Component>,
@@ -1003,6 +1039,17 @@ ShallowWrapper {
                     }
                   />
                 </TouchableOpacity>
+              }
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                  "state": Object {
+                    "params": Object {
+                      "mainScreen": "",
+                    },
+                  },
+                }
               }
               right={
                 <Component
@@ -1197,34 +1244,35 @@ ShallowWrapper {
                     </Component>
                   </Component>
                 </Component>
-                <LinearGradient
-                  colors={
-                    Array [
-                      "#3E85EF",
-                      "#3EBDEF",
-                    ]
-                  }
-                  end={
-                    Object {
-                      "x": 1,
-                      "y": 0,
-                    }
-                  }
-                  start={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "paddingVertical": 21.73913043478261,
-                    }
-                  }
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  testID="addServiceButton"
                 >
-                  <TouchableOpacity
-                    activeOpacity={0.2}
-                    onPress={[Function]}
+                  <LinearGradient
+                    colors={
+                      Array [
+                        "#3E85EF",
+                        "#3EBDEF",
+                      ]
+                    }
+                    end={
+                      Object {
+                        "x": 1,
+                        "y": 0,
+                      }
+                    }
+                    start={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "paddingVertical": 21.73913043478261,
+                      }
+                    }
                   >
                     <Component
                       style={
@@ -1238,8 +1286,8 @@ ShallowWrapper {
                     >
                       ADD SERVICE
                     </Component>
-                  </TouchableOpacity>
-                </LinearGradient>
+                  </LinearGradient>
+                </TouchableOpacity>
               </Component>
             </ScrollView>,
             "style": Object {
@@ -1380,34 +1428,35 @@ ShallowWrapper {
                     </Component>
                   </Component>
                 </Component>
-                <LinearGradient
-                  colors={
-                    Array [
-                      "#3E85EF",
-                      "#3EBDEF",
-                    ]
-                  }
-                  end={
-                    Object {
-                      "x": 1,
-                      "y": 0,
-                    }
-                  }
-                  start={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "paddingVertical": 21.73913043478261,
-                    }
-                  }
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  testID="addServiceButton"
                 >
-                  <TouchableOpacity
-                    activeOpacity={0.2}
-                    onPress={[Function]}
+                  <LinearGradient
+                    colors={
+                      Array [
+                        "#3E85EF",
+                        "#3EBDEF",
+                      ]
+                    }
+                    end={
+                      Object {
+                        "x": 1,
+                        "y": 0,
+                      }
+                    }
+                    start={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "paddingVertical": 21.73913043478261,
+                      }
+                    }
                   >
                     <Component
                       style={
@@ -1421,8 +1470,8 @@ ShallowWrapper {
                     >
                       ADD SERVICE
                     </Component>
-                  </TouchableOpacity>
-                </LinearGradient>
+                  </LinearGradient>
+                </TouchableOpacity>
               </Component>,
               "contentContainerStyle": Object {
                 "flexGrow": 1,
@@ -1554,34 +1603,35 @@ ShallowWrapper {
                       </Component>
                     </Component>
                   </Component>,
-                  <LinearGradient
-                    colors={
-                      Array [
-                        "#3E85EF",
-                        "#3EBDEF",
-                      ]
-                    }
-                    end={
-                      Object {
-                        "x": 1,
-                        "y": 0,
-                      }
-                    }
-                    start={
-                      Object {
-                        "x": 0,
-                        "y": 0,
-                      }
-                    }
-                    style={
-                      Object {
-                        "paddingVertical": 21.73913043478261,
-                      }
-                    }
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    testID="addServiceButton"
                   >
-                    <TouchableOpacity
-                      activeOpacity={0.2}
-                      onPress={[Function]}
+                    <LinearGradient
+                      colors={
+                        Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ]
+                      }
+                      end={
+                        Object {
+                          "x": 1,
+                          "y": 0,
+                        }
+                      }
+                      start={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "paddingVertical": 21.73913043478261,
+                        }
+                      }
                     >
                       <Component
                         style={
@@ -1595,8 +1645,8 @@ ShallowWrapper {
                       >
                         ADD SERVICE
                       </Component>
-                    </TouchableOpacity>
-                  </LinearGradient>,
+                    </LinearGradient>
+                  </TouchableOpacity>,
                 ],
                 "style": Object {
                   "flex": 1,
@@ -2057,9 +2107,31 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "children": <TouchableOpacity
-                      activeOpacity={0.2}
-                      onPress={[Function]}
+                    "activeOpacity": 0.2,
+                    "children": <LinearGradient
+                      colors={
+                        Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ]
+                      }
+                      end={
+                        Object {
+                          "x": 1,
+                          "y": 0,
+                        }
+                      }
+                      start={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "paddingVertical": 21.73913043478261,
+                        }
+                      }
                     >
                       <Component
                         style={
@@ -2073,22 +2145,9 @@ ShallowWrapper {
                       >
                         ADD SERVICE
                       </Component>
-                    </TouchableOpacity>,
-                    "colors": Array [
-                      "#3E85EF",
-                      "#3EBDEF",
-                    ],
-                    "end": Object {
-                      "x": 1,
-                      "y": 0,
-                    },
-                    "start": Object {
-                      "x": 0,
-                      "y": 0,
-                    },
-                    "style": Object {
-                      "paddingVertical": 21.73913043478261,
-                    },
+                    </LinearGradient>,
+                    "onPress": [Function],
+                    "testID": "addServiceButton",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -2096,7 +2155,6 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
-                      "activeOpacity": 0.2,
                       "children": <Component
                         style={
                           Object {
@@ -2109,7 +2167,21 @@ ShallowWrapper {
                       >
                         ADD SERVICE
                       </Component>,
-                      "onPress": [Function],
+                      "colors": Array [
+                        "#3E85EF",
+                        "#3EBDEF",
+                      ],
+                      "end": Object {
+                        "x": 1,
+                        "y": 0,
+                      },
+                      "start": Object {
+                        "x": 0,
+                        "y": 0,
+                      },
+                      "style": Object {
+                        "paddingVertical": 21.73913043478261,
+                      },
                     },
                     "ref": null,
                     "rendered": Object {
@@ -2220,6 +2292,17 @@ ShallowWrapper {
                       }
                     />
                   </TouchableOpacity>
+                }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                    "state": Object {
+                      "params": Object {
+                        "mainScreen": "",
+                      },
+                    },
+                  }
                 }
                 right={
                   <Component
@@ -2414,34 +2497,35 @@ ShallowWrapper {
                     </Component>
                   </Component>
                 </Component>
-                <LinearGradient
-                  colors={
-                    Array [
-                      "#3E85EF",
-                      "#3EBDEF",
-                    ]
-                  }
-                  end={
-                    Object {
-                      "x": 1,
-                      "y": 0,
-                    }
-                  }
-                  start={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "paddingVertical": 21.73913043478261,
-                    }
-                  }
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  testID="addServiceButton"
                 >
-                  <TouchableOpacity
-                    activeOpacity={0.2}
-                    onPress={[Function]}
+                  <LinearGradient
+                    colors={
+                      Array [
+                        "#3E85EF",
+                        "#3EBDEF",
+                      ]
+                    }
+                    end={
+                      Object {
+                        "x": 1,
+                        "y": 0,
+                      }
+                    }
+                    start={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "paddingVertical": 21.73913043478261,
+                      }
+                    }
                   >
                     <Component
                       style={
@@ -2455,8 +2539,8 @@ ShallowWrapper {
                     >
                       ADD SERVICE
                     </Component>
-                  </TouchableOpacity>
-                </LinearGradient>
+                  </LinearGradient>
+                </TouchableOpacity>
               </Component>
             </ScrollView>
           </Component>
@@ -2516,6 +2600,17 @@ ShallowWrapper {
                         }
                       />
                     </TouchableOpacity>
+                  }
+                  navigation={
+                    Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
+                      "state": Object {
+                        "params": Object {
+                          "mainScreen": "",
+                        },
+                      },
+                    }
                   }
                   right={
                     <Component
@@ -2710,34 +2805,35 @@ ShallowWrapper {
                       </Component>
                     </Component>
                   </Component>
-                  <LinearGradient
-                    colors={
-                      Array [
-                        "#3E85EF",
-                        "#3EBDEF",
-                      ]
-                    }
-                    end={
-                      Object {
-                        "x": 1,
-                        "y": 0,
-                      }
-                    }
-                    start={
-                      Object {
-                        "x": 0,
-                        "y": 0,
-                      }
-                    }
-                    style={
-                      Object {
-                        "paddingVertical": 21.73913043478261,
-                      }
-                    }
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    testID="addServiceButton"
                   >
-                    <TouchableOpacity
-                      activeOpacity={0.2}
-                      onPress={[Function]}
+                    <LinearGradient
+                      colors={
+                        Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ]
+                      }
+                      end={
+                        Object {
+                          "x": 1,
+                          "y": 0,
+                        }
+                      }
+                      start={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "paddingVertical": 21.73913043478261,
+                        }
+                      }
                     >
                       <Component
                         style={
@@ -2751,8 +2847,8 @@ ShallowWrapper {
                       >
                         ADD SERVICE
                       </Component>
-                    </TouchableOpacity>
-                  </LinearGradient>
+                    </LinearGradient>
+                  </TouchableOpacity>
                 </Component>
               </ScrollView>
             </Component>,
@@ -2820,6 +2916,17 @@ ShallowWrapper {
                       }
                     />
                   </TouchableOpacity>
+                }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                    "state": Object {
+                      "params": Object {
+                        "mainScreen": "",
+                      },
+                    },
+                  }
                 }
                 right={
                   <Component
@@ -3014,34 +3121,35 @@ ShallowWrapper {
                       </Component>
                     </Component>
                   </Component>
-                  <LinearGradient
-                    colors={
-                      Array [
-                        "#3E85EF",
-                        "#3EBDEF",
-                      ]
-                    }
-                    end={
-                      Object {
-                        "x": 1,
-                        "y": 0,
-                      }
-                    }
-                    start={
-                      Object {
-                        "x": 0,
-                        "y": 0,
-                      }
-                    }
-                    style={
-                      Object {
-                        "paddingVertical": 21.73913043478261,
-                      }
-                    }
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    testID="addServiceButton"
                   >
-                    <TouchableOpacity
-                      activeOpacity={0.2}
-                      onPress={[Function]}
+                    <LinearGradient
+                      colors={
+                        Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ]
+                      }
+                      end={
+                        Object {
+                          "x": 1,
+                          "y": 0,
+                        }
+                      }
+                      start={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "paddingVertical": 21.73913043478261,
+                        }
+                      }
                     >
                       <Component
                         style={
@@ -3055,8 +3163,8 @@ ShallowWrapper {
                       >
                         ADD SERVICE
                       </Component>
-                    </TouchableOpacity>
-                  </LinearGradient>
+                    </LinearGradient>
+                  </TouchableOpacity>
                 </Component>
               </ScrollView>,
               "style": Object {
@@ -3197,34 +3305,35 @@ ShallowWrapper {
                       </Component>
                     </Component>
                   </Component>
-                  <LinearGradient
-                    colors={
-                      Array [
-                        "#3E85EF",
-                        "#3EBDEF",
-                      ]
-                    }
-                    end={
-                      Object {
-                        "x": 1,
-                        "y": 0,
-                      }
-                    }
-                    start={
-                      Object {
-                        "x": 0,
-                        "y": 0,
-                      }
-                    }
-                    style={
-                      Object {
-                        "paddingVertical": 21.73913043478261,
-                      }
-                    }
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    testID="addServiceButton"
                   >
-                    <TouchableOpacity
-                      activeOpacity={0.2}
-                      onPress={[Function]}
+                    <LinearGradient
+                      colors={
+                        Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ]
+                      }
+                      end={
+                        Object {
+                          "x": 1,
+                          "y": 0,
+                        }
+                      }
+                      start={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "paddingVertical": 21.73913043478261,
+                        }
+                      }
                     >
                       <Component
                         style={
@@ -3238,8 +3347,8 @@ ShallowWrapper {
                       >
                         ADD SERVICE
                       </Component>
-                    </TouchableOpacity>
-                  </LinearGradient>
+                    </LinearGradient>
+                  </TouchableOpacity>
                 </Component>,
                 "contentContainerStyle": Object {
                   "flexGrow": 1,
@@ -3371,34 +3480,35 @@ ShallowWrapper {
                         </Component>
                       </Component>
                     </Component>,
-                    <LinearGradient
-                      colors={
-                        Array [
-                          "#3E85EF",
-                          "#3EBDEF",
-                        ]
-                      }
-                      end={
-                        Object {
-                          "x": 1,
-                          "y": 0,
-                        }
-                      }
-                      start={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
-                      style={
-                        Object {
-                          "paddingVertical": 21.73913043478261,
-                        }
-                      }
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      testID="addServiceButton"
                     >
-                      <TouchableOpacity
-                        activeOpacity={0.2}
-                        onPress={[Function]}
+                      <LinearGradient
+                        colors={
+                          Array [
+                            "#3E85EF",
+                            "#3EBDEF",
+                          ]
+                        }
+                        end={
+                          Object {
+                            "x": 1,
+                            "y": 0,
+                          }
+                        }
+                        start={
+                          Object {
+                            "x": 0,
+                            "y": 0,
+                          }
+                        }
+                        style={
+                          Object {
+                            "paddingVertical": 21.73913043478261,
+                          }
+                        }
                       >
                         <Component
                           style={
@@ -3412,8 +3522,8 @@ ShallowWrapper {
                         >
                           ADD SERVICE
                         </Component>
-                      </TouchableOpacity>
-                    </LinearGradient>,
+                      </LinearGradient>
+                    </TouchableOpacity>,
                   ],
                   "style": Object {
                     "flex": 1,
@@ -3874,9 +3984,31 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
-                      "children": <TouchableOpacity
-                        activeOpacity={0.2}
-                        onPress={[Function]}
+                      "activeOpacity": 0.2,
+                      "children": <LinearGradient
+                        colors={
+                          Array [
+                            "#3E85EF",
+                            "#3EBDEF",
+                          ]
+                        }
+                        end={
+                          Object {
+                            "x": 1,
+                            "y": 0,
+                          }
+                        }
+                        start={
+                          Object {
+                            "x": 0,
+                            "y": 0,
+                          }
+                        }
+                        style={
+                          Object {
+                            "paddingVertical": 21.73913043478261,
+                          }
+                        }
                       >
                         <Component
                           style={
@@ -3890,22 +4022,9 @@ ShallowWrapper {
                         >
                           ADD SERVICE
                         </Component>
-                      </TouchableOpacity>,
-                      "colors": Array [
-                        "#3E85EF",
-                        "#3EBDEF",
-                      ],
-                      "end": Object {
-                        "x": 1,
-                        "y": 0,
-                      },
-                      "start": Object {
-                        "x": 0,
-                        "y": 0,
-                      },
-                      "style": Object {
-                        "paddingVertical": 21.73913043478261,
-                      },
+                      </LinearGradient>,
+                      "onPress": [Function],
+                      "testID": "addServiceButton",
                     },
                     "ref": null,
                     "rendered": Object {
@@ -3913,7 +4032,6 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "activeOpacity": 0.2,
                         "children": <Component
                           style={
                             Object {
@@ -3926,7 +4044,21 @@ ShallowWrapper {
                         >
                           ADD SERVICE
                         </Component>,
-                        "onPress": [Function],
+                        "colors": Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ],
+                        "end": Object {
+                          "x": 1,
+                          "y": 0,
+                        },
+                        "start": Object {
+                          "x": 0,
+                          "y": 0,
+                        },
+                        "style": Object {
+                          "paddingVertical": 21.73913043478261,
+                        },
                       },
                       "ref": null,
                       "rendered": Object {

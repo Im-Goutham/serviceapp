@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AllServiceProvider snapshot 1`] = `
+exports[`AllServiceProvider Snapshot testing should have same snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Component
@@ -199,6 +199,12 @@ ShallowWrapper {
                 </TouchableOpacity>
               </Component>
             }
+            navigation={
+              Object {
+                "goBack": [MockFunction],
+                "navigate": [MockFunction],
+              }
+            }
             right={null}
             title={
               <Component
@@ -235,7 +241,14 @@ ShallowWrapper {
         }
       >
         <Advertisement />
-        <Connect(AllServiceList) />
+        <Connect(AllServiceList)
+          navigation={
+            Object {
+              "goBack": [MockFunction],
+              "navigate": [MockFunction],
+            }
+          }
+        />
       </Component>
       <ModalBox
         animationDuration={400}
@@ -1351,6 +1364,12 @@ ShallowWrapper {
                   </TouchableOpacity>
                 </Component>
               }
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
               right={null}
               title={
                 <Component
@@ -1387,7 +1406,14 @@ ShallowWrapper {
           }
         >
           <Advertisement />
-          <Connect(AllServiceList) />
+          <Connect(AllServiceList)
+            navigation={
+              Object {
+                "goBack": [MockFunction],
+                "navigate": [MockFunction],
+              }
+            }
+          />
         </Component>
         <ModalBox
           animationDuration={400}
@@ -2475,6 +2501,12 @@ ShallowWrapper {
                     </TouchableOpacity>
                   </Component>
                 }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
                 right={null}
                 title={
                   <Component
@@ -2511,7 +2543,14 @@ ShallowWrapper {
             }
           >
             <Advertisement />
-            <Connect(AllServiceList) />
+            <Connect(AllServiceList)
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
+            />
           </Component>,
           <ModalBox
             animationDuration={400}
@@ -3607,6 +3646,12 @@ ShallowWrapper {
                   </TouchableOpacity>
                 </Component>
               }
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
               right={null}
               title={
                 <Component
@@ -3644,7 +3689,14 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Advertisement />,
-              <Connect(AllServiceList) />,
+              <Connect(AllServiceList)
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
+              />,
             ],
             "style": Object {
               "backgroundColor": "rgb(249,252, 255)",
@@ -3667,7 +3719,10 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "navigation": undefined,
+                "navigation": Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                },
               },
               "ref": null,
               "rendered": null,
@@ -10278,6 +10333,12 @@ ShallowWrapper {
                     </TouchableOpacity>
                   </Component>
                 }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
                 right={null}
                 title={
                   <Component
@@ -10314,7 +10375,14 @@ ShallowWrapper {
             }
           >
             <Advertisement />
-            <Connect(AllServiceList) />
+            <Connect(AllServiceList)
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
+            />
           </Component>
           <ModalBox
             animationDuration={400}
@@ -11402,6 +11470,12 @@ ShallowWrapper {
                       </TouchableOpacity>
                     </Component>
                   }
+                  navigation={
+                    Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
+                    }
+                  }
                   right={null}
                   title={
                     <Component
@@ -11438,7 +11512,14 @@ ShallowWrapper {
               }
             >
               <Advertisement />
-              <Connect(AllServiceList) />
+              <Connect(AllServiceList)
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
+              />
             </Component>,
             <ModalBox
               animationDuration={400}
@@ -12534,6 +12615,12 @@ ShallowWrapper {
                     </TouchableOpacity>
                   </Component>
                 }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
                 right={null}
                 title={
                   <Component
@@ -12571,7 +12658,14 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <Advertisement />,
-                <Connect(AllServiceList) />,
+                <Connect(AllServiceList)
+                  navigation={
+                    Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
+                    }
+                  }
+                />,
               ],
               "style": Object {
                 "backgroundColor": "rgb(249,252, 255)",
@@ -12594,7 +12688,10 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
-                  "navigation": undefined,
+                  "navigation": Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  },
                 },
                 "ref": null,
                 "rendered": null,

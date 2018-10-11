@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ServiceProviderDetailScreen snapshot 1`] = `
+exports[`ServiceProviderDetailScreen Snapshot testing should have same snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Component
@@ -111,11 +111,8 @@ ShallowWrapper {
             }
             navigation={
               Object {
-                "state": Object {
-                  "params": Object {
-                    "mainScreen": "",
-                  },
-                },
+                "goBack": [MockFunction],
+                "navigate": [MockFunction],
               }
             }
             right={
@@ -2764,11 +2761,8 @@ ShallowWrapper {
                 }
                 navigation={
                   Object {
-                    "state": Object {
-                      "params": Object {
-                        "mainScreen": "",
-                      },
-                    },
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
                   }
                 }
                 right={
@@ -5390,11 +5384,8 @@ ShallowWrapper {
                   }
                   navigation={
                     Object {
-                      "state": Object {
-                        "params": Object {
-                          "mainScreen": "",
-                        },
-                      },
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
                     }
                   }
                   right={
@@ -7970,11 +7961,8 @@ ShallowWrapper {
                 }
                 navigation={
                   Object {
-                    "state": Object {
-                      "params": Object {
-                        "mainScreen": "",
-                      },
-                    },
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
                   }
                 }
                 right={
@@ -24299,11 +24287,8 @@ ShallowWrapper {
                   }
                   navigation={
                     Object {
-                      "state": Object {
-                        "params": Object {
-                          "mainScreen": "",
-                        },
-                      },
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
                     }
                   }
                   right={
@@ -26925,11 +26910,8 @@ ShallowWrapper {
                     }
                     navigation={
                       Object {
-                        "state": Object {
-                          "params": Object {
-                            "mainScreen": "",
-                          },
-                        },
+                        "goBack": [MockFunction],
+                        "navigate": [MockFunction],
                       }
                     }
                     right={
@@ -29505,11 +29487,8 @@ ShallowWrapper {
                   }
                   navigation={
                     Object {
-                      "state": Object {
-                        "params": Object {
-                          "mainScreen": "",
-                        },
-                      },
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
                     }
                   }
                   right={

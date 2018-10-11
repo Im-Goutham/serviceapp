@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AddServiceCatScreen snapshot 1`] = `
+exports[`AddServiceCatScreen Snapshot testing should have same snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Component
@@ -87,6 +87,8 @@ ShallowWrapper {
             }
             navigation={
               Object {
+                "goBack": [MockFunction],
+                "navigate": [MockFunction],
                 "state": Object {
                   "params": Object {
                     "mainScreen": "",
@@ -914,34 +916,35 @@ ShallowWrapper {
                 </Component>
               </Component>
             </Component>
-            <LinearGradient
-              colors={
-                Array [
-                  "#3E85EF",
-                  "#3EBDEF",
-                ]
-              }
-              end={
-                Object {
-                  "x": 1,
-                  "y": 0,
-                }
-              }
-              start={
-                Object {
-                  "x": 0,
-                  "y": 0,
-                }
-              }
-              style={
-                Object {
-                  "paddingVertical": 25,
-                }
-              }
+            <TouchableOpacity
+              activeOpacity={0.2}
+              onPress={[Function]}
+              testID="continueButton"
             >
-              <TouchableOpacity
-                activeOpacity={0.2}
-                onPress={[Function]}
+              <LinearGradient
+                colors={
+                  Array [
+                    "#3E85EF",
+                    "#3EBDEF",
+                  ]
+                }
+                end={
+                  Object {
+                    "x": 1,
+                    "y": 0,
+                  }
+                }
+                start={
+                  Object {
+                    "x": 0,
+                    "y": 0,
+                  }
+                }
+                style={
+                  Object {
+                    "paddingVertical": 25,
+                  }
+                }
               >
                 <Component
                   style={
@@ -955,8 +958,8 @@ ShallowWrapper {
                 >
                   CONTINUE
                 </Component>
-              </TouchableOpacity>
-            </LinearGradient>
+              </LinearGradient>
+            </TouchableOpacity>
           </Component>
         </ScrollView>
       </Component>
@@ -1052,6 +1055,8 @@ ShallowWrapper {
               }
               navigation={
                 Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
                   "state": Object {
                     "params": Object {
                       "mainScreen": "",
@@ -1879,34 +1884,35 @@ ShallowWrapper {
                   </Component>
                 </Component>
               </Component>
-              <LinearGradient
-                colors={
-                  Array [
-                    "#3E85EF",
-                    "#3EBDEF",
-                  ]
-                }
-                end={
-                  Object {
-                    "x": 1,
-                    "y": 0,
-                  }
-                }
-                start={
-                  Object {
-                    "x": 0,
-                    "y": 0,
-                  }
-                }
-                style={
-                  Object {
-                    "paddingVertical": 25,
-                  }
-                }
+              <TouchableOpacity
+                activeOpacity={0.2}
+                onPress={[Function]}
+                testID="continueButton"
               >
-                <TouchableOpacity
-                  activeOpacity={0.2}
-                  onPress={[Function]}
+                <LinearGradient
+                  colors={
+                    Array [
+                      "#3E85EF",
+                      "#3EBDEF",
+                    ]
+                  }
+                  end={
+                    Object {
+                      "x": 1,
+                      "y": 0,
+                    }
+                  }
+                  start={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "paddingVertical": 25,
+                    }
+                  }
                 >
                   <Component
                     style={
@@ -1920,8 +1926,8 @@ ShallowWrapper {
                   >
                     CONTINUE
                   </Component>
-                </TouchableOpacity>
-              </LinearGradient>
+                </LinearGradient>
+              </TouchableOpacity>
             </Component>
           </ScrollView>
         </Component>
@@ -1989,6 +1995,8 @@ ShallowWrapper {
                 }
                 navigation={
                   Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
                     "state": Object {
                       "params": Object {
                         "mainScreen": "",
@@ -2816,34 +2824,35 @@ ShallowWrapper {
                     </Component>
                   </Component>
                 </Component>
-                <LinearGradient
-                  colors={
-                    Array [
-                      "#3E85EF",
-                      "#3EBDEF",
-                    ]
-                  }
-                  end={
-                    Object {
-                      "x": 1,
-                      "y": 0,
-                    }
-                  }
-                  start={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "paddingVertical": 25,
-                    }
-                  }
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  testID="continueButton"
                 >
-                  <TouchableOpacity
-                    activeOpacity={0.2}
-                    onPress={[Function]}
+                  <LinearGradient
+                    colors={
+                      Array [
+                        "#3E85EF",
+                        "#3EBDEF",
+                      ]
+                    }
+                    end={
+                      Object {
+                        "x": 1,
+                        "y": 0,
+                      }
+                    }
+                    start={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "paddingVertical": 25,
+                      }
+                    }
                   >
                     <Component
                       style={
@@ -2857,8 +2866,8 @@ ShallowWrapper {
                     >
                       CONTINUE
                     </Component>
-                  </TouchableOpacity>
-                </LinearGradient>
+                  </LinearGradient>
+                </TouchableOpacity>
               </Component>
             </ScrollView>
           </Component>,
@@ -2934,6 +2943,8 @@ ShallowWrapper {
               }
               navigation={
                 Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
                   "state": Object {
                     "params": Object {
                       "mainScreen": "",
@@ -3761,34 +3772,35 @@ ShallowWrapper {
                     </Component>
                   </Component>
                 </Component>
-                <LinearGradient
-                  colors={
-                    Array [
-                      "#3E85EF",
-                      "#3EBDEF",
-                    ]
-                  }
-                  end={
-                    Object {
-                      "x": 1,
-                      "y": 0,
-                    }
-                  }
-                  start={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "paddingVertical": 25,
-                    }
-                  }
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  testID="continueButton"
                 >
-                  <TouchableOpacity
-                    activeOpacity={0.2}
-                    onPress={[Function]}
+                  <LinearGradient
+                    colors={
+                      Array [
+                        "#3E85EF",
+                        "#3EBDEF",
+                      ]
+                    }
+                    end={
+                      Object {
+                        "x": 1,
+                        "y": 0,
+                      }
+                    }
+                    start={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "paddingVertical": 25,
+                      }
+                    }
                   >
                     <Component
                       style={
@@ -3802,8 +3814,8 @@ ShallowWrapper {
                     >
                       CONTINUE
                     </Component>
-                  </TouchableOpacity>
-                </LinearGradient>
+                  </LinearGradient>
+                </TouchableOpacity>
               </Component>
             </ScrollView>,
             "style": Object {
@@ -4571,34 +4583,35 @@ ShallowWrapper {
                     </Component>
                   </Component>
                 </Component>
-                <LinearGradient
-                  colors={
-                    Array [
-                      "#3E85EF",
-                      "#3EBDEF",
-                    ]
-                  }
-                  end={
-                    Object {
-                      "x": 1,
-                      "y": 0,
-                    }
-                  }
-                  start={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "paddingVertical": 25,
-                    }
-                  }
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  testID="continueButton"
                 >
-                  <TouchableOpacity
-                    activeOpacity={0.2}
-                    onPress={[Function]}
+                  <LinearGradient
+                    colors={
+                      Array [
+                        "#3E85EF",
+                        "#3EBDEF",
+                      ]
+                    }
+                    end={
+                      Object {
+                        "x": 1,
+                        "y": 0,
+                      }
+                    }
+                    start={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "paddingVertical": 25,
+                      }
+                    }
                   >
                     <Component
                       style={
@@ -4612,8 +4625,8 @@ ShallowWrapper {
                     >
                       CONTINUE
                     </Component>
-                  </TouchableOpacity>
-                </LinearGradient>
+                  </LinearGradient>
+                </TouchableOpacity>
               </Component>,
               "contentContainerStyle": Object {
                 "justifyContent": "space-between",
@@ -5372,34 +5385,35 @@ ShallowWrapper {
                       </Component>
                     </Component>
                   </Component>,
-                  <LinearGradient
-                    colors={
-                      Array [
-                        "#3E85EF",
-                        "#3EBDEF",
-                      ]
-                    }
-                    end={
-                      Object {
-                        "x": 1,
-                        "y": 0,
-                      }
-                    }
-                    start={
-                      Object {
-                        "x": 0,
-                        "y": 0,
-                      }
-                    }
-                    style={
-                      Object {
-                        "paddingVertical": 25,
-                      }
-                    }
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    testID="continueButton"
                   >
-                    <TouchableOpacity
-                      activeOpacity={0.2}
-                      onPress={[Function]}
+                    <LinearGradient
+                      colors={
+                        Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ]
+                      }
+                      end={
+                        Object {
+                          "x": 1,
+                          "y": 0,
+                        }
+                      }
+                      start={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "paddingVertical": 25,
+                        }
+                      }
                     >
                       <Component
                         style={
@@ -5413,8 +5427,8 @@ ShallowWrapper {
                       >
                         CONTINUE
                       </Component>
-                    </TouchableOpacity>
-                  </LinearGradient>,
+                    </LinearGradient>
+                  </TouchableOpacity>,
                 ],
                 "style": Object {
                   "flex": 1,
@@ -8638,9 +8652,31 @@ ShallowWrapper {
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
-                    "children": <TouchableOpacity
-                      activeOpacity={0.2}
-                      onPress={[Function]}
+                    "activeOpacity": 0.2,
+                    "children": <LinearGradient
+                      colors={
+                        Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ]
+                      }
+                      end={
+                        Object {
+                          "x": 1,
+                          "y": 0,
+                        }
+                      }
+                      start={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "paddingVertical": 25,
+                        }
+                      }
                     >
                       <Component
                         style={
@@ -8654,22 +8690,9 @@ ShallowWrapper {
                       >
                         CONTINUE
                       </Component>
-                    </TouchableOpacity>,
-                    "colors": Array [
-                      "#3E85EF",
-                      "#3EBDEF",
-                    ],
-                    "end": Object {
-                      "x": 1,
-                      "y": 0,
-                    },
-                    "start": Object {
-                      "x": 0,
-                      "y": 0,
-                    },
-                    "style": Object {
-                      "paddingVertical": 25,
-                    },
+                    </LinearGradient>,
+                    "onPress": [Function],
+                    "testID": "continueButton",
                   },
                   "ref": null,
                   "rendered": Object {
@@ -8677,7 +8700,6 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
-                      "activeOpacity": 0.2,
                       "children": <Component
                         style={
                           Object {
@@ -8690,7 +8712,21 @@ ShallowWrapper {
                       >
                         CONTINUE
                       </Component>,
-                      "onPress": [Function],
+                      "colors": Array [
+                        "#3E85EF",
+                        "#3EBDEF",
+                      ],
+                      "end": Object {
+                        "x": 1,
+                        "y": 0,
+                      },
+                      "start": Object {
+                        "x": 0,
+                        "y": 0,
+                      },
+                      "style": Object {
+                        "paddingVertical": 25,
+                      },
                     },
                     "ref": null,
                     "rendered": Object {
@@ -8809,6 +8845,8 @@ ShallowWrapper {
                 }
                 navigation={
                   Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
                     "state": Object {
                       "params": Object {
                         "mainScreen": "",
@@ -9636,34 +9674,35 @@ ShallowWrapper {
                     </Component>
                   </Component>
                 </Component>
-                <LinearGradient
-                  colors={
-                    Array [
-                      "#3E85EF",
-                      "#3EBDEF",
-                    ]
-                  }
-                  end={
-                    Object {
-                      "x": 1,
-                      "y": 0,
-                    }
-                  }
-                  start={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "paddingVertical": 25,
-                    }
-                  }
+                <TouchableOpacity
+                  activeOpacity={0.2}
+                  onPress={[Function]}
+                  testID="continueButton"
                 >
-                  <TouchableOpacity
-                    activeOpacity={0.2}
-                    onPress={[Function]}
+                  <LinearGradient
+                    colors={
+                      Array [
+                        "#3E85EF",
+                        "#3EBDEF",
+                      ]
+                    }
+                    end={
+                      Object {
+                        "x": 1,
+                        "y": 0,
+                      }
+                    }
+                    start={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "paddingVertical": 25,
+                      }
+                    }
                   >
                     <Component
                       style={
@@ -9677,8 +9716,8 @@ ShallowWrapper {
                     >
                       CONTINUE
                     </Component>
-                  </TouchableOpacity>
-                </LinearGradient>
+                  </LinearGradient>
+                </TouchableOpacity>
               </Component>
             </ScrollView>
           </Component>
@@ -9746,6 +9785,8 @@ ShallowWrapper {
                   }
                   navigation={
                     Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
                       "state": Object {
                         "params": Object {
                           "mainScreen": "",
@@ -10573,34 +10614,35 @@ ShallowWrapper {
                       </Component>
                     </Component>
                   </Component>
-                  <LinearGradient
-                    colors={
-                      Array [
-                        "#3E85EF",
-                        "#3EBDEF",
-                      ]
-                    }
-                    end={
-                      Object {
-                        "x": 1,
-                        "y": 0,
-                      }
-                    }
-                    start={
-                      Object {
-                        "x": 0,
-                        "y": 0,
-                      }
-                    }
-                    style={
-                      Object {
-                        "paddingVertical": 25,
-                      }
-                    }
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    testID="continueButton"
                   >
-                    <TouchableOpacity
-                      activeOpacity={0.2}
-                      onPress={[Function]}
+                    <LinearGradient
+                      colors={
+                        Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ]
+                      }
+                      end={
+                        Object {
+                          "x": 1,
+                          "y": 0,
+                        }
+                      }
+                      start={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "paddingVertical": 25,
+                        }
+                      }
                     >
                       <Component
                         style={
@@ -10614,8 +10656,8 @@ ShallowWrapper {
                       >
                         CONTINUE
                       </Component>
-                    </TouchableOpacity>
-                  </LinearGradient>
+                    </LinearGradient>
+                  </TouchableOpacity>
                 </Component>
               </ScrollView>
             </Component>,
@@ -10691,6 +10733,8 @@ ShallowWrapper {
                 }
                 navigation={
                   Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
                     "state": Object {
                       "params": Object {
                         "mainScreen": "",
@@ -11518,34 +11562,35 @@ ShallowWrapper {
                       </Component>
                     </Component>
                   </Component>
-                  <LinearGradient
-                    colors={
-                      Array [
-                        "#3E85EF",
-                        "#3EBDEF",
-                      ]
-                    }
-                    end={
-                      Object {
-                        "x": 1,
-                        "y": 0,
-                      }
-                    }
-                    start={
-                      Object {
-                        "x": 0,
-                        "y": 0,
-                      }
-                    }
-                    style={
-                      Object {
-                        "paddingVertical": 25,
-                      }
-                    }
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    testID="continueButton"
                   >
-                    <TouchableOpacity
-                      activeOpacity={0.2}
-                      onPress={[Function]}
+                    <LinearGradient
+                      colors={
+                        Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ]
+                      }
+                      end={
+                        Object {
+                          "x": 1,
+                          "y": 0,
+                        }
+                      }
+                      start={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "paddingVertical": 25,
+                        }
+                      }
                     >
                       <Component
                         style={
@@ -11559,8 +11604,8 @@ ShallowWrapper {
                       >
                         CONTINUE
                       </Component>
-                    </TouchableOpacity>
-                  </LinearGradient>
+                    </LinearGradient>
+                  </TouchableOpacity>
                 </Component>
               </ScrollView>,
               "style": Object {
@@ -12328,34 +12373,35 @@ ShallowWrapper {
                       </Component>
                     </Component>
                   </Component>
-                  <LinearGradient
-                    colors={
-                      Array [
-                        "#3E85EF",
-                        "#3EBDEF",
-                      ]
-                    }
-                    end={
-                      Object {
-                        "x": 1,
-                        "y": 0,
-                      }
-                    }
-                    start={
-                      Object {
-                        "x": 0,
-                        "y": 0,
-                      }
-                    }
-                    style={
-                      Object {
-                        "paddingVertical": 25,
-                      }
-                    }
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    testID="continueButton"
                   >
-                    <TouchableOpacity
-                      activeOpacity={0.2}
-                      onPress={[Function]}
+                    <LinearGradient
+                      colors={
+                        Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ]
+                      }
+                      end={
+                        Object {
+                          "x": 1,
+                          "y": 0,
+                        }
+                      }
+                      start={
+                        Object {
+                          "x": 0,
+                          "y": 0,
+                        }
+                      }
+                      style={
+                        Object {
+                          "paddingVertical": 25,
+                        }
+                      }
                     >
                       <Component
                         style={
@@ -12369,8 +12415,8 @@ ShallowWrapper {
                       >
                         CONTINUE
                       </Component>
-                    </TouchableOpacity>
-                  </LinearGradient>
+                    </LinearGradient>
+                  </TouchableOpacity>
                 </Component>,
                 "contentContainerStyle": Object {
                   "justifyContent": "space-between",
@@ -13129,34 +13175,35 @@ ShallowWrapper {
                         </Component>
                       </Component>
                     </Component>,
-                    <LinearGradient
-                      colors={
-                        Array [
-                          "#3E85EF",
-                          "#3EBDEF",
-                        ]
-                      }
-                      end={
-                        Object {
-                          "x": 1,
-                          "y": 0,
-                        }
-                      }
-                      start={
-                        Object {
-                          "x": 0,
-                          "y": 0,
-                        }
-                      }
-                      style={
-                        Object {
-                          "paddingVertical": 25,
-                        }
-                      }
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      testID="continueButton"
                     >
-                      <TouchableOpacity
-                        activeOpacity={0.2}
-                        onPress={[Function]}
+                      <LinearGradient
+                        colors={
+                          Array [
+                            "#3E85EF",
+                            "#3EBDEF",
+                          ]
+                        }
+                        end={
+                          Object {
+                            "x": 1,
+                            "y": 0,
+                          }
+                        }
+                        start={
+                          Object {
+                            "x": 0,
+                            "y": 0,
+                          }
+                        }
+                        style={
+                          Object {
+                            "paddingVertical": 25,
+                          }
+                        }
                       >
                         <Component
                           style={
@@ -13170,8 +13217,8 @@ ShallowWrapper {
                         >
                           CONTINUE
                         </Component>
-                      </TouchableOpacity>
-                    </LinearGradient>,
+                      </LinearGradient>
+                    </TouchableOpacity>,
                   ],
                   "style": Object {
                     "flex": 1,
@@ -16395,9 +16442,31 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
-                      "children": <TouchableOpacity
-                        activeOpacity={0.2}
-                        onPress={[Function]}
+                      "activeOpacity": 0.2,
+                      "children": <LinearGradient
+                        colors={
+                          Array [
+                            "#3E85EF",
+                            "#3EBDEF",
+                          ]
+                        }
+                        end={
+                          Object {
+                            "x": 1,
+                            "y": 0,
+                          }
+                        }
+                        start={
+                          Object {
+                            "x": 0,
+                            "y": 0,
+                          }
+                        }
+                        style={
+                          Object {
+                            "paddingVertical": 25,
+                          }
+                        }
                       >
                         <Component
                           style={
@@ -16411,22 +16480,9 @@ ShallowWrapper {
                         >
                           CONTINUE
                         </Component>
-                      </TouchableOpacity>,
-                      "colors": Array [
-                        "#3E85EF",
-                        "#3EBDEF",
-                      ],
-                      "end": Object {
-                        "x": 1,
-                        "y": 0,
-                      },
-                      "start": Object {
-                        "x": 0,
-                        "y": 0,
-                      },
-                      "style": Object {
-                        "paddingVertical": 25,
-                      },
+                      </LinearGradient>,
+                      "onPress": [Function],
+                      "testID": "continueButton",
                     },
                     "ref": null,
                     "rendered": Object {
@@ -16434,7 +16490,6 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "activeOpacity": 0.2,
                         "children": <Component
                           style={
                             Object {
@@ -16447,7 +16502,21 @@ ShallowWrapper {
                         >
                           CONTINUE
                         </Component>,
-                        "onPress": [Function],
+                        "colors": Array [
+                          "#3E85EF",
+                          "#3EBDEF",
+                        ],
+                        "end": Object {
+                          "x": 1,
+                          "y": 0,
+                        },
+                        "start": Object {
+                          "x": 0,
+                          "y": 0,
+                        },
+                        "style": Object {
+                          "paddingVertical": 25,
+                        },
                       },
                       "ref": null,
                       "rendered": Object {
