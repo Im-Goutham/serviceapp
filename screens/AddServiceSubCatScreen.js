@@ -108,16 +108,17 @@ class AddServiceSubCatScreen extends Component {
               </View>
               </View>
                 </View>
-              <LinearGradient
-                   colors={['#3E85EF', '#3EBDEF']}
-                   start={{x: 0, y: 0}}
-                   end={{x: 1, y: 0}}
-                   style={{
-                     paddingVertical: scale(25)
-                   }}>
-                 <TouchableOpacity onPress={() => this.props.navigation.goBack()}><Text style={styles.btnText}>ADD SERVICE</Text></TouchableOpacity>
-               </LinearGradient>
-
+              <TouchableOpacity testID='addServiceButton' onPress={() => this.props.navigation.goBack()}>
+                    <LinearGradient
+                        colors={['#3E85EF', '#3EBDEF']}
+                        start={{x: 0, y: 0}}
+                        end={{x: 1, y: 0}}
+                        style={{
+                            paddingVertical: scale(25)
+                        }}>
+                        <Text style={styles.btnText}>ADD SERVICE</Text>
+                    </LinearGradient>
+               </TouchableOpacity>
                  </View>
 
                  </ScrollView>

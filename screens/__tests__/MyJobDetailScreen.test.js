@@ -1,8 +1,5 @@
 jest.unmock('redux-mock-store')
 jest.unmock('redux-thunk')
-// jest.mock('react-native-google-signin', () => {
-//       return {};
-//     });
 import React from 'react';
 import { shallow, mount, render } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
@@ -11,22 +8,39 @@ import renderer from 'react-test-renderer';
 import MyJobDetailScreen from '../MyJobDetailScreen';
 import {initialState} from '../../config/jest/mockStore';
 
-let store;
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
+let store = mockStore(initialState);
+
+
 describe('MyJobDetailScreen', () => {
-    let wrapper;
-    beforeEach(() => {
-        store = mockStore(initialState);
-        wrapper = shallow(
-            <MyJobDetailScreen
-                store={store}
-                navigation={{state: {params: {mainScreen:''}}}}
-                />).dive();
-    //    wrapper.setProps({navigation:});
+    let component;
+    const mockFunc = jest.fn();
+    const navigation = {
+        navigate: mockFunc,
+        goBack: mockFunc
+    }
+    beforeEach(() => { 
+    component = shallow(<MyJobDetailScreen store={store} onPress={mockFunc} navigation={navigation} />).dive();
     })
-    it('snapshot',()=> {
-        expect(wrapper).toMatchSnapshot();
-    })
+
+    describe('Snapshot testing',()=>{
+        it('should have same snapshot',()=> {
+            expect(component).toMatchSnapshot();
+        })
+     })
+
+     describe('Function testing',()=>{
+    
+     })
+
+
+    //   describe('Form field testing',()=>{
+           
+    //         it('should press signUp button ',()=>{
+    //                 component.find({testID:'signUpButton'}).simulate('press');
+    //                 expect(mockFunc).toHaveBeenCalled();
+    //         })
+    //     })
 });

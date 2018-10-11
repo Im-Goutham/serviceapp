@@ -73,7 +73,7 @@ class AppTutorialScreen extends Component {
           <View style={{flex:2.6}}>
           <Image source={require('../images/border_img.png')} style={{ width: '100%', height: Platform.OS==='ios'? scale(31) : scale(35)}}  resizeMode="contain" resizeMethod="resize" />
           <View style={styles.signUpBlock}>
-          <TouchableOpacity  testID='usernameTest' onPress={() => {this.props.navigation.navigate('register')}}>
+          <TouchableOpacity  testID='signUpButton' onPress={() => {this.props.navigation.navigate('register')}}>
             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
                <Text style={styles.btnText}> SIGN UP</Text>
             </LinearGradient>

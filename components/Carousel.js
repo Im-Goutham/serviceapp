@@ -66,7 +66,7 @@ var styles = StyleSheet.create({
      adBox: { 
         backgroundColor:'transparent', 
         flex: 1,
-        width:width-width/scale(6),
+        width:width-scale(width/6),
         paddingHorizontal:scale(15),
         borderRadius:scale(10),
      },

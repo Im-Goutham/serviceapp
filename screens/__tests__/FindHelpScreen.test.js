@@ -5,25 +5,42 @@ import { shallow, mount, render } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import renderer from 'react-test-renderer';
-import FindHelpScreen from '../FindHelpScreen';
+import FilterScreen from '../FilterScreen';
 import {initialState} from '../../config/jest/mockStore';
 
-let store;
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-describe('FindHelpScreen', () => {
-    let wrapper;
-    beforeEach(() => {
-        store = mockStore(initialState);
-        wrapper = shallow(
-            <FindHelpScreen
-                store={store}
-                // navigation={{state: {params: {mainScreen:''}}}}
-                />).dive();
-    //    wrapper.setProps({navigation:});
+let store = mockStore(initialState);
+
+
+describe('FilterScreen', () => {
+    let component;
+    const mockFunc = jest.fn();
+    const navigation = {
+        navigate: mockFunc,
+        goBack: mockFunc
+    }
+    beforeEach(() => { 
+    component = shallow(<FilterScreen store={store} onPress={mockFunc} navigation={navigation} />).dive();
     })
-    it('snapshot',()=> {
-        expect(wrapper).toMatchSnapshot();
-    })
+
+    describe('Snapshot testing',()=>{
+        it('should have same snapshot',()=> {
+            expect(component).toMatchSnapshot();
+        })
+     })
+
+     describe('Function testing',()=>{
+    
+     })
+
+
+    //   describe('Form field testing',()=>{
+           
+    //         it('should press signUp button ',()=>{
+    //                 component.find({testID:'signUpButton'}).simulate('press');
+    //                 expect(mockFunc).toHaveBeenCalled();
+    //         })
+    //     })
 });

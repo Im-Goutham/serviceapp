@@ -216,7 +216,7 @@ class AccountScreen extends Component {
     render() {
       let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;
       let { backButton } = this.props;
-      console.log("firstname", this.state);
+      // console.log("firstname", this.state);
        return (
            <View style={{flex:1}}>
                <LinearGradient

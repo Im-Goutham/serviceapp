@@ -8,22 +8,47 @@ import renderer from 'react-test-renderer';
 import NotificationsScreen from '../NotificationsScreen';
 import {initialState} from '../../config/jest/mockStore';
 
-let store;
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
+let store = mockStore(initialState);
+
+
 describe('NotificationsScreen', () => {
-    let wrapper;
-    beforeEach(() => {
-        store = mockStore(initialState);
-        wrapper = shallow(
-            <NotificationsScreen
-                store={store}
-                navigation={{state: {params: {mainScreen:''}}}}
-                />).dive();
-    //    wrapper.setProps({navigation:});
+    let component;
+    const mockFunc = jest.fn();
+    const navigation = {
+        navigate: mockFunc,
+        goBack: mockFunc,
+        state: {
+            params: {
+                state:  {
+                    backButton: true,
+                    routeName: 'findJob'
+                    }
+            }      
+       }
+    }
+    beforeEach(() => { 
+    component = shallow(<NotificationsScreen store={store} onPress={mockFunc} navigation={navigation} />).dive();
     })
-    it('snapshot',()=> {
-        expect(wrapper).toMatchSnapshot();
-    })
+
+    describe('Snapshot testing',()=>{
+        it('should have same snapshot',()=> {
+            expect(component).toMatchSnapshot();
+        })
+     })
+
+     describe('Function testing',()=>{
+    
+     })
+
+
+    //   describe('Form field testing',()=>{
+           
+    //         it('should press signUp button ',()=>{
+    //                 component.find({testID:'signUpButton'}).simulate('press');
+    //                 expect(mockFunc).toHaveBeenCalled();
+    //         })
+    //     })
 });
