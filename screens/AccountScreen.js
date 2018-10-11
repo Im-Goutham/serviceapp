@@ -87,8 +87,8 @@ class AccountScreen extends Component {
     this.focusNextField = this.focusNextField.bind(this);
     this.inputs = {};
   }
-  hellome= (event) => {
-       this.setState({ firstname: event})
+  updateFormField = fieldName => text => {
+    this.setState({ [fieldName]: text })
   }
   componentDidMount(){
      console.log('login screen is called ...');
@@ -216,6 +216,7 @@ class AccountScreen extends Component {
     render() {
       let {avatarSource,certificates,works,ids,videos,websites,profiles} = this.state;
       let { backButton } = this.props;
+      console.log("firstname", this.state);
        return (
            <View style={{flex:1}}>
                <LinearGradient
@@ -309,7 +310,8 @@ class AccountScreen extends Component {
                       ref={ input => {
                         this.inputs['firstname'] = input;
                       }}
-                      onChangeText={firstname => this.setState({ firstname })}
+                      onChangeText={this.updateFormField('firstname')}
+                      // onChangeText={firstname => this.setState({ firstname })}
                   />
                   </View>
                   <View style={{width:'50%',paddingLeft:scale(10)}}>
@@ -321,7 +323,8 @@ class AccountScreen extends Component {
                       ref={ input => {
                         this.inputs['lastname'] = input;
                       }}
-                      onChangeText={lastname => this.setState({ lastname })}
+                      onChangeText={this.updateFormField('lastname')}
+                      // onChangeText={lastname => this.setState({ lastname })}
                   />
                   </View>
                 </View>
@@ -541,7 +544,7 @@ class AccountScreen extends Component {
             {/* Upload Website ends here */}
             <View style={{justifyContent: "center" ,marginBottom:scale(20),marginTop:scale(10)}}>
                 <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                       <TouchableOpacity onPress={() => this.props.navigation.navigate('homePage')}><Text style={[styles.btnText,{color:'white'}]}>4</Text></TouchableOpacity>
+                       <TouchableOpacity testID="submit" onPress={() => this.props.navigation.navigate('homePage')}><Text style={[styles.btnText,{color:'white'}]}>4</Text></TouchableOpacity>
                     </LinearGradient>
             </View>
                 </View>

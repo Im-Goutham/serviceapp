@@ -11,12 +11,13 @@ import {initialState} from '../../config/jest/mockStore';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
+let store ;
 
-let store = mockStore(initialState);
 
-describe('AppTutorial', () => {
+describe('AccountScreen', () => {
     let wrapper;
     beforeEach(() => {
+        store = mockStore(initialState);
         wrapper = shallow(<AccountScreen store={store}/>).dive();
     })
     it('snapshot',()=> {
@@ -34,15 +35,19 @@ describe('AppTutorial', () => {
     /// For state testing  ---- > component.instance().state
     /// For finding button and simulating component.dive().find({ testID: 'signUp' }).first().simulate('press');
 
-    // it('Click events tesing ', () => {
-    //     const mockFunc = jest.fn();
-    //     const navigation = {
-    //         navigate: mockFunc,
-    //         goBack: mockFunc
-    //     }
-    //     const component = shallow(<AccountScreen onPress={mockFunc} navigation={navigation} />);
-    //     console.log(component.instance().state)
-    //     component.dive().find(TouchableOpacity).first().simulate('press');
-    //     expect(mockFunc).toHaveBeenCalled();
-    // });
+    it('Click events tesing ', () => {
+        const mockFunc = jest.fn();
+        const navigation = {
+            navigate: mockFunc,
+            goBack: mockFunc
+        }
+        const component = shallow(<AccountScreen onPress={mockFunc} navigation={navigation} store={store} />).dive();
+        console.log( component.find({testID:'submit'}))
+         component.find({testID:'submit'}).simulate('press');
+
+        // const component = shallow(<AccountScreen onPress={mockFunc} navigation={navigation} store={store} backButton={true}/>);
+        // console.log( component.dive().find({testID:'menu'}).length)
+        // component.dive().find({testID:'menu'}).simulate('press');
+        expect(mockFunc).toHaveBeenCalled();
+    });
 });
