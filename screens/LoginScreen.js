@@ -178,8 +178,12 @@ class LoginScreen extends Component {
                   </View>    
                   <View style={{flex:2}}>
                   <View style={{width:'100%'}}>
-                              <Image source={border_img} style={{ width: '100%', height: Platform.OS==='ios'? scale(31) : scale(30)}}/>
-                                 <View style={{height:scale(20), backgroundColor:"#F9FCFF"}}/>
+                          <Image source={require('../images/border_img.png')} style={{ 
+                      width: '100%', 
+                      height: Platform.OS==='ios'? 
+                      height > 800 ? scale(31): height > 580 ? scale(37) :  scale(31)
+                      : scale(35)
+                      }}  resizeMode="contain" resizeMethod="resize" />
                               </View>
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1,alignItems: 'center'}}>
                                    <Text style={{marginVertical:scale(20),color:'#4A4A4A',fontSize:scale(17),textAlign:'center',fontFamily:'Montserrat-Regular'}}>Don't have an account? <Text style={{color:'#3E85EF',fontFamily:'Montserrat-Bold'}} onPress={()=>{this.props.navigation.navigate('register')}}>Sign Up</Text></Text>

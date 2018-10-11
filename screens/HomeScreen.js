@@ -182,7 +182,7 @@ class HomeScreen extends Component {
                             justifyContent: 'space-between'
                         }}>
                             <View style={{ backgroundColor: 'rgb(249, 252, 255)', paddingHorizontal: scale(15), paddingBottom: scale(30), justifyContent: 'space-between' }}>
-                                <View style={{ flex: 1 }}>
+                                <View style={{ flex: 1,marginHorizontal:scale(-14) }}>
                                     <Carousel />
                                 </View>
                                 <View style={[styles.servicesBox, { paddingVertical: 0 }]}>

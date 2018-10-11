@@ -5,7 +5,7 @@ import { shallow, mount, render } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import renderer from 'react-test-renderer';
-import FilterScreen from '../FilterScreen';
+import FindHelpScreen from '../FindHelpScreen';
 import {initialState} from '../../config/jest/mockStore';
 
 const middlewares = [thunk];
@@ -14,7 +14,7 @@ const mockStore = configureMockStore(middlewares);
 let store = mockStore(initialState);
 
 
-describe('FilterScreen', () => {
+describe('FindHelpScreen', () => {
     let component;
     const mockFunc = jest.fn();
     const navigation = {
@@ -22,7 +22,7 @@ describe('FilterScreen', () => {
         goBack: mockFunc
     }
     beforeEach(() => { 
-    component = shallow(<FilterScreen store={store} onPress={mockFunc} navigation={navigation} />).dive();
+    component = shallow(<FindHelpScreen store={store} onPress={mockFunc} navigation={navigation} />).dive();
     })
 
     describe('Snapshot testing',()=>{

@@ -9,7 +9,7 @@ import {
     Platform,
     Text, TouchableHighlight
 } from 'react-native';
-import {scale} from '../global';
+import {scale,height} from '../global';
 
 
 let border_img = require('../images/border_img.png');
@@ -25,7 +25,12 @@ class HeaderScreen extends Component {
                {this.props.header}
                {this.props.content}
                <View style={{width:'100%'}}>
-                   <Image source={border_img} style={{ width: '100%', height: Platform.OS==='ios'? scale(31) : scale(31)}}/>
+                 <Image source={require('../images/border_img.png')} style={{ 
+                    width: '100%', 
+                    height: Platform.OS==='ios'? 
+                    height > 800 ? scale(31): height > 580 ? scale(36) :  scale(31)
+                    : scale(35)
+                    }}  resizeMode="contain" resizeMethod="resize" />
                    <View style={{height:scale(20), backgroundColor:"#F9FCFF"}}/>
                </View>
            </View>

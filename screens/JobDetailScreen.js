@@ -271,7 +271,7 @@ export default class JobDetailScreen extends Component {
                                     style={{height: scale(64), justifyContent: "center", alignItems: "center"}}
                                     onPress={() => {this.setState({visible:true})}}
                                     >
-                                    <Text style={{fontFamily: "Montserrat-bold", fontSize: scale(16), color: "#fff"}}>APPLY FOR THIS JOB</Text>
+                                    <Text style={{fontFamily: "Montserrat-Medium", fontSize: scale(16), color: "#fff"}}>APPLY FOR THIS JOB</Text>
                                 </TouchableOpacity>
                             </LinearGradient>
                             :

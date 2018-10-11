@@ -5,6 +5,7 @@ import {
     Text,
     ScrollView,
     Platform,
+    TouchableOpacity
 } from 'react-native';
 import { Icon } from 'native-base';
 import { scale } from '../global';
@@ -30,9 +31,12 @@ class TermsScreen extends Component {
                         <Text style={styles.heading}>Terms & Conditions</Text>
                         <Text style={{ color: 'rgb(161,161,161)' }}>Important information about our Terms. Please read thoroughly.</Text>
                     </View>
-                    <View style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'flex-start' }}>
-                        <Icon name="close" style={{}} onPress={() => { this.props.navigation.navigate('register'); }} />
-                    </View>
+                    <TouchableOpacity   onPress={() => { this.props.navigation.navigate('register'); }} style={{ flex: 1, alignItems: 'flex-end', justifyContent: 'flex-start' }}>
+                    
+                   
+                            <Icon name="close" style={{width:30}}/>
+                      
+                    </TouchableOpacity>
                 </View>
                 {/* Terms starts */}
                 <View>

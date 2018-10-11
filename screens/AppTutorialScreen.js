@@ -23,6 +23,7 @@ class AppTutorialScreen extends Component {
     }
 
     render() {
+        console.log("height", height)
        return (
         <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']}  style={styles.container}>
         <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.appTutorial}>
@@ -71,7 +72,12 @@ class AppTutorialScreen extends Component {
 
           </LinearGradient>
           <View style={{flex:2.6}}>
-          <Image source={require('../images/border_img.png')} style={{ width: '100%', height: Platform.OS==='ios'? scale(31) : scale(35)}}  resizeMode="contain" resizeMethod="resize" />
+          <Image source={require('../images/border_img.png')} style={{ 
+              width: '100%', 
+              height: Platform.OS==='ios'? 
+              height > 800 ? scale(31): height > 580 ? scale(37) :  scale(31)
+              : scale(35)
+              }}  resizeMode="contain" resizeMethod="resize" />
           <View style={styles.signUpBlock}>
           <TouchableOpacity  testID='signUpButton' onPress={() => {this.props.navigation.navigate('register')}}>
             <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
