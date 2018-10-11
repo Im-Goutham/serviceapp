@@ -35,7 +35,7 @@ class ServiceProvidersList extends Component {
 
         return (
 
-                 <TouchableWithoutFeedback onPress={() => {
+                 <TouchableWithoutFeedback key={rowID} onPress={() => {
                     this.props.navigation.navigate('jobDetail')
                 }}>
                 <View style={styles.servicesBox} >

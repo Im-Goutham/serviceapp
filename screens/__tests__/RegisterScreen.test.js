@@ -7,15 +7,15 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import renderer from 'react-test-renderer';
 // import { expect } from 'chai';
-import LoginScreen from '../LoginScreen';
+import RegisterScreen from '../RegisterScreen';
 import {initialState} from '../../config/jest/mockStore';
 
 let store;
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-describe('LoginScreen', () => {
-  
+describe('RegisterScreen', () => {
+
     let component;
     const mockFunc = jest.fn();
     const navigation = {
@@ -24,7 +24,7 @@ describe('LoginScreen', () => {
     }
     beforeEach(() => { 
           store = mockStore(initialState);
-           component = shallow(<LoginScreen store={store} onPress={mockFunc} navigation={navigation} />).dive()
+           component = shallow(<RegisterScreen store={store} onPress={mockFunc} navigation={navigation} />);
     })
 
     describe('Snapshot testing',()=>{
@@ -38,16 +38,26 @@ describe('LoginScreen', () => {
      })
 
 
-
-    describe('Form field testing',()=>{
-     
-            it('should change value for username input ',()=>{
-                    component.find({testID:'username'}).getElement().props.onChangeText('username entered')
-                    var value = component.find({testID:'username'}).getElement().props.value;
+    describe('Form field testing', ()=>{
+        
+            it('should change value for email input ',()=>{
+                console.log('register before -->  ',component.find({testID:'email'}).getElement().props.value);
+                   component.find({testID:'email'}).getElement().props.onChangeText('email entered');
+                   console.log('register after -->  ',component.find({testID:'email'}).getElement().props.value);
+                    var value = component.find({testID:'email'}).getElement().props.value;
                     console.log(value);
-                    expect(value).toEqual('username entered');
+                    expect(value).toEqual('email entered');
+                
             })
 
+            it('should change value for userId input ',()=>{
+                component.find({testID:'userId'}).getElement().props.onChangeText('userId entered')
+                var value = component.find({testID:'userId'}).getElement().props.value;
+                console.log(value);
+                expect(value).toEqual('userId entered');
+             })
+
+            
 
             it('should change value for password input ',()=>{
                 component.find({testID:'password'}).getElement().props.onChangeText('password entered')
@@ -59,15 +69,11 @@ describe('LoginScreen', () => {
 
                 
             it('should press signin button ',()=>{
-                    component.find({testID:'signInButton'}).simulate('press');
+                    component.find({testID:'signUpButton'}).simulate('press');
                     expect(mockFunc).toHaveBeenCalled();
             })
-            it('should press forget button ',()=>{
-                component.find({testID:'forgetButton'}).simulate('press');
-                console.log('username input  ...  ',);
-                expect(mockFunc).toHaveBeenCalled();
-            })
-    })
+   
+   })
 
     describe('State testing',()=>{
     

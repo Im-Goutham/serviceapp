@@ -50,7 +50,7 @@ class JobsList extends Component {
     }
 
     _renderRow(data, sectionID, rowID) {
-
+        console.log('rowid is... ',rowID);
         var screen = this.props.navigation.state.routeName;
         const leftBtn = [
             {
@@ -176,6 +176,7 @@ class JobsList extends Component {
                 }}
                 onClose={() => console.log('===close')}
                 scroll={event => console.log('scroll event')}
+                key={rowID}
                 >
                 <TouchableWithoutFeedback onPress={() => {
                     this.props.navigation.navigate('jobDetail')
@@ -345,8 +346,9 @@ class JobsList extends Component {
                     scrollEnabled
                     dataSource={this.state.dataSource}
                     renderRow={this._renderRow.bind(this)}
+                    removeClippedSubviews={false}
                     style={styles.listview}/>
-               <CancelModal visible={visible} closeModal={() => { this.setState({visible:false})}}/>
+          
             </View>
            
         );

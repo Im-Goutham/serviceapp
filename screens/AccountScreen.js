@@ -303,6 +303,7 @@ class AccountScreen extends Component {
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:scale(10)}}>
                     <FloatingLabelInput
+                      testID='firstname'
                       label="First Name"
                       value={this.state.firstname}
                       autoCapitalize='none'
@@ -316,6 +317,7 @@ class AccountScreen extends Component {
                   </View>
                   <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
+                      testID='lastname'
                       label="Last Name"
                       value={this.state.lastname}
                       autoCapitalize='none'
@@ -331,6 +333,7 @@ class AccountScreen extends Component {
 
                 <View style={styles.inputField}>
                 <FloatingLabelInput
+                      testID='dob'
                       label="Date of Birth"
                       value={this.state.dob}
                       autoCapitalize='none'
@@ -343,6 +346,7 @@ class AccountScreen extends Component {
                 </View>
                 <View style={styles.inputField}>
                 <FloatingLabelInput
+                      testID='address'
                       label="Street Address"
                       value={this.state.address}
                       autoCapitalize='none'
@@ -356,6 +360,7 @@ class AccountScreen extends Component {
                 <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
+                      testID='city'
                       label="City"
                       value={this.state.city}
                       autoCapitalize='none'
@@ -368,6 +373,7 @@ class AccountScreen extends Component {
                   </View>
                   <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
+                      testID='state'
                       label="State"
                       value={this.state.state}
                       autoCapitalize='none'
@@ -383,6 +389,7 @@ class AccountScreen extends Component {
                  <View style={[styles.inputField,{width:'100%',flexDirection:'row'}]}>
                   <View style={{width:'50%',paddingRight:scale(10)}}>
                   <FloatingLabelInput
+                      testID='zip'
                       label="Zip"
                       value={this.state.zip}
                       autoCapitalize='none'
@@ -395,6 +402,7 @@ class AccountScreen extends Component {
                   </View>
                   <View style={{width:'50%',paddingLeft:scale(10)}}>
                   <FloatingLabelInput
+                      testID='country'
                       label="Country"
                       value={this.state.country}
                       autoCapitalize='none'
@@ -470,6 +478,7 @@ class AccountScreen extends Component {
               <View style={styles.servicesBox}>
               <View style={{}}>
               <FloatingLabelInput
+                testID='about'
                 label="Write about yourself"
                 value={this.state.about}
                 multiline={true}
@@ -543,9 +552,13 @@ class AccountScreen extends Component {
              </View>
             {/* Upload Website ends here */}
             <View style={{justifyContent: "center" ,marginBottom:scale(20),marginTop:scale(10)}}>
-                <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
-                       <TouchableOpacity testID="submit" onPress={() => this.props.navigation.navigate('homePage')}><Text style={[styles.btnText,{color:'white'}]}>4</Text></TouchableOpacity>
+            <TouchableOpacity 
+                  testID='updateButton'
+                  onPress={() => this.props.navigation.navigate('homePage')}> 
+                  <LinearGradient  start={{x: 0, y: 0}} end={{x: 1, y: 0}} colors={['#3E85EF', '#3EBDEF']} style={styles.button}>
+                     <Text style={[styles.btnText,{color:'white'}]}>UPDATE PROFILE</Text>
                     </LinearGradient>
+             </TouchableOpacity>
             </View>
                 </View>
               </View>

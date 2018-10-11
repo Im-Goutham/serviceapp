@@ -23,6 +23,7 @@ describe('MessageScreen', () => {
                 />).dive();
     //    wrapper.setProps({navigation:});
     })
+    
     it('snapshot',()=> {
         expect(wrapper).toMatchSnapshot();
     })
