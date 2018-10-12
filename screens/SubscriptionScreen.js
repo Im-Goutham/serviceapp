@@ -124,7 +124,7 @@ class SubscriptionScreen extends Component {
                             </View>
                         }
                     />
-                    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+                    <ScrollView contentContainerStyle={{ flexGrow: 1 }} bounces={false}>
                         <View style={{ backgroundColor: "transparent", paddingVertical: scale(30) }}>
                             {this.contentrender()}
                         </View>

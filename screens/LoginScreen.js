@@ -171,7 +171,7 @@ class LoginScreen extends Component {
             flex: 1,
 
         }}>
-           <ScrollView contentContainerStyle={{flexGrow:1}}>
+           <ScrollView contentContainerStyle={{flexGrow:1}} bounces={false}>
          
                   <View style={{flex:9}}>
                        {this.contentrender()}

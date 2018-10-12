@@ -78,7 +78,7 @@ class ForgetScreen extends Component {
                        }
                    />
                    <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
-                           <ScrollView style={styles.container}>
+                           <ScrollView style={styles.container} bounces={false}>
                       <View style={styles.inputField}>
                       <FloatingLabelInput
                             testID='email'
