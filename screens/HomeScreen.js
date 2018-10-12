@@ -156,17 +156,14 @@ class HomeScreen extends Component {
                                     </TouchableOpacity>
                                 }
                                 title={
-                                    <View style={{ backgroundColor:"transparent", justifyContent: 'center', width: '100%', alignItems: 'flex-start', height: scale(54) }}>
+                                    <View style={{ backgroundColor:"transparent", justifyContent: 'center', width: '100%', alignItems: 'flex-start', height: scale(54),paddingTop:scale(3) }}>
                                         <Image source={logo} style={{ width: scale(140), height: scale(24) }} resizeMode="contain" resizeMethod="resize" />
                                     </View>
                                 }
                                 right={
-                                    <View style={{ backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection: "row" }}>
-                                        <TouchableOpacity
-                                            style={{ width: "100%", height: scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}
-                                            onPress={this.navigateToScreen('account')}
-                                        >
-                                            <Image source={require('../images/svp1.png')} style={{ width: scale(35), height: scale(35), borderWidth: scale(3), borderRadius: scale(18), borderColor: 'white', overflow: 'hidden' }} />
+                                    <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+                                    <TouchableOpacity onPress={this.navigateToScreen('account')} style={{width: "75%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
+                                            <Image source={require('../images/svp1.png')} style={{ width:scale(36), height: scale(36), borderRadius: scale(18),borderWidth:scale(3), borderColor: 'white', overflow: 'hidden' }}resizeMode="contain" resizeMethod="resize" />
                                         </TouchableOpacity>
                                     </View>
                                 }
