@@ -185,7 +185,7 @@ const styles = StyleSheet.create({
         color:'white',
         textAlign:'left',
         fontSize:scale(35),
-        fontWeight:'bold'
+        fontFamily: 'Montserrat-Bold',
     },
     star_style: {
         width:scale(15), height:scale(15), marginHorizontal:scale(5)
@@ -244,7 +244,7 @@ const styles = StyleSheet.create({
         textAlign:'center',
         color:'black',
         fontSize: scale(16),
-        fontWeight:'bold'
+        fontFamily: 'Montserrat-Bold',
     },
     socialBox:{
         flexDirection:'row',
@@ -298,7 +298,7 @@ const styles = StyleSheet.create({
     },
     textStyle: {
         fontFamily:"Montserrat-Bold",
-        fontWeight:'bold'
+        fontFamily: 'Montserrat-Bold',
     }
 })
 

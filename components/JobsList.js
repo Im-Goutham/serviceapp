@@ -222,7 +222,7 @@ class JobsList extends Component {
                                                 start={{x: 0, y: 0}}
                                                 end={{x: 1, y: 0}}
                                                 style={styles.button}>
-                                                <Text style={styles.btnText}>{screen=='trackNow' ? 'TRACK NOW' : screen == 'select' ? 'SELECT' : 'APPLY'}</Text>
+                                                <Text style={[styles.btnText,{fontFamily:'Montserrat-Bold'}]}>{screen=='trackNow' ? 'TRACK NOW' : screen == 'select' ? 'SELECT' : 'APPLY'}</Text>
                                             </LinearGradient>
                                         </TouchableOpacity>
 
@@ -288,7 +288,7 @@ class JobsList extends Component {
                                 </View>
                                  <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
                                         <View style={{flex: 1, flexDirection: 'row',}}>
-                                            <Image style={{width: scale(15), height: scale(15)}} source={require('../assets/icons/location_red.png')} resizeMode="contain" resizeMethod="resize"/>
+                                            <Image style={{width: scale(15), height: scale(15)}} source={require('../assets/icons/map_location_red.png')} resizeMode="contain" resizeMethod="resize"/>
                                             <Text style={{paddingLeft: scale(5), fontSize: scale(14), fontFamily: "Montserrat-Light"}}>
                                                 3 mi.
                                             </Text>

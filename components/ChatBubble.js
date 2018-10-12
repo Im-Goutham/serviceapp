@@ -245,7 +245,7 @@ dateTextStyle:{
     justifyContent: 'flex-end',
   },
   username: {
-    fontWeight: 'bold',
+    fontFamily: 'Montserrat-Bold',
   },
   time: {
     textAlign: 'left',

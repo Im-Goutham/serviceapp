@@ -68,7 +68,7 @@ export default class MyJobDetailPage extends Component {
                                     <Text style={styles.pricetext}>$240</Text>
                                 </View>
                                 <View style={{ flex:1,flexDirection: "row", height: scale(40),backgroundColor: "transparent", justifyContent: 'flex-end', alignItems: "center" }}>
-                                    <Image source={require('../assets/icons/location_red.png')} style={styles.pinimage} resizeMode="contain" resizeMethod="resize" />
+                                    <Image source={require('../assets/icons/map_location_red.png')} style={styles.pinimage} resizeMode="contain" resizeMethod="resize" />
                                     <Text style={styles.distance}>3 mi</Text>
                                 </View>
                             </View>

@@ -219,7 +219,7 @@ const styles = StyleSheet.create({
         color:'white',
         textAlign:'left',
         fontSize:scale(45),
-        fontWeight:'bold'
+        fontFamily: 'Montserrat-Bold',
     },
    text: {
      fontSize: scale(15),

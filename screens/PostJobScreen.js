@@ -476,7 +476,7 @@ logoText: {
   color:'white',
   textAlign:'left',
   fontSize:scale(35),
-  fontWeight:'bold'
+  fontFamily: 'Montserrat-Bold',
 },
 inputLabel: {
    textAlign:'left',

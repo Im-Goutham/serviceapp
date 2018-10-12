@@ -220,7 +220,7 @@ ShallowWrapper {
           messages={
             Array [
               Object {
-                "_id": 243114,
+                "_id": 988728,
                 "createdAt": 2016-08-30T17:20:00.000Z,
                 "received": true,
                 "sent": true,
@@ -231,7 +231,7 @@ ShallowWrapper {
                 },
               },
               Object {
-                "_id": 538806,
+                "_id": 975595,
                 "createdAt": 2016-08-30T17:20:00.000Z,
                 "text": "Are you building a chat app?",
                 "user": Object {
@@ -240,7 +240,7 @@ ShallowWrapper {
                 },
               },
               Object {
-                "_id": 531682,
+                "_id": 284295,
                 "createdAt": 2016-08-30T17:20:00.000Z,
                 "system": true,
                 "text": "You are officially rocking GiftedChat.",
@@ -508,7 +508,7 @@ ShallowWrapper {
             messages={
               Array [
                 Object {
-                  "_id": 243114,
+                  "_id": 988728,
                   "createdAt": 2016-08-30T17:20:00.000Z,
                   "received": true,
                   "sent": true,
@@ -519,7 +519,7 @@ ShallowWrapper {
                   },
                 },
                 Object {
-                  "_id": 538806,
+                  "_id": 975595,
                   "createdAt": 2016-08-30T17:20:00.000Z,
                   "text": "Are you building a chat app?",
                   "user": Object {
@@ -528,7 +528,7 @@ ShallowWrapper {
                   },
                 },
                 Object {
-                  "_id": 531682,
+                  "_id": 284295,
                   "createdAt": 2016-08-30T17:20:00.000Z,
                   "system": true,
                   "text": "You are officially rocking GiftedChat.",
@@ -768,7 +768,7 @@ ShallowWrapper {
               messages={
                 Array [
                   Object {
-                    "_id": 243114,
+                    "_id": 988728,
                     "createdAt": 2016-08-30T17:20:00.000Z,
                     "received": true,
                     "sent": true,
@@ -779,7 +779,7 @@ ShallowWrapper {
                     },
                   },
                   Object {
-                    "_id": 538806,
+                    "_id": 975595,
                     "createdAt": 2016-08-30T17:20:00.000Z,
                     "text": "Are you building a chat app?",
                     "user": Object {
@@ -788,7 +788,7 @@ ShallowWrapper {
                     },
                   },
                   Object {
-                    "_id": 531682,
+                    "_id": 284295,
                     "createdAt": 2016-08-30T17:20:00.000Z,
                     "system": true,
                     "text": "You are officially rocking GiftedChat.",
@@ -1037,7 +1037,7 @@ ShallowWrapper {
                 messages={
                   Array [
                     Object {
-                      "_id": 243114,
+                      "_id": 988728,
                       "createdAt": 2016-08-30T17:20:00.000Z,
                       "received": true,
                       "sent": true,
@@ -1048,7 +1048,7 @@ ShallowWrapper {
                       },
                     },
                     Object {
-                      "_id": 538806,
+                      "_id": 975595,
                       "createdAt": 2016-08-30T17:20:00.000Z,
                       "text": "Are you building a chat app?",
                       "user": Object {
@@ -1057,7 +1057,7 @@ ShallowWrapper {
                       },
                     },
                     Object {
-                      "_id": 531682,
+                      "_id": 284295,
                       "createdAt": 2016-08-30T17:20:00.000Z,
                       "system": true,
                       "text": "You are officially rocking GiftedChat.",
@@ -1128,7 +1128,7 @@ ShallowWrapper {
                 "messageIdGenerator": [Function],
                 "messages": Array [
                   Object {
-                    "_id": 243114,
+                    "_id": 988728,
                     "createdAt": 2016-08-30T17:20:00.000Z,
                     "received": true,
                     "sent": true,
@@ -1139,7 +1139,7 @@ ShallowWrapper {
                     },
                   },
                   Object {
-                    "_id": 538806,
+                    "_id": 975595,
                     "createdAt": 2016-08-30T17:20:00.000Z,
                     "text": "Are you building a chat app?",
                     "user": Object {
@@ -1148,7 +1148,7 @@ ShallowWrapper {
                     },
                   },
                   Object {
-                    "_id": 531682,
+                    "_id": 284295,
                     "createdAt": 2016-08-30T17:20:00.000Z,
                     "system": true,
                     "text": "You are officially rocking GiftedChat.",
@@ -1427,7 +1427,7 @@ ShallowWrapper {
               messages={
                 Array [
                   Object {
-                    "_id": 243114,
+                    "_id": 988728,
                     "createdAt": 2016-08-30T17:20:00.000Z,
                     "received": true,
                     "sent": true,
@@ -1438,7 +1438,7 @@ ShallowWrapper {
                     },
                   },
                   Object {
-                    "_id": 538806,
+                    "_id": 975595,
                     "createdAt": 2016-08-30T17:20:00.000Z,
                     "text": "Are you building a chat app?",
                     "user": Object {
@@ -1447,7 +1447,7 @@ ShallowWrapper {
                     },
                   },
                   Object {
-                    "_id": 531682,
+                    "_id": 284295,
                     "createdAt": 2016-08-30T17:20:00.000Z,
                     "system": true,
                     "text": "You are officially rocking GiftedChat.",
@@ -1687,7 +1687,7 @@ ShallowWrapper {
                 messages={
                   Array [
                     Object {
-                      "_id": 243114,
+                      "_id": 988728,
                       "createdAt": 2016-08-30T17:20:00.000Z,
                       "received": true,
                       "sent": true,
@@ -1698,7 +1698,7 @@ ShallowWrapper {
                       },
                     },
                     Object {
-                      "_id": 538806,
+                      "_id": 975595,
                       "createdAt": 2016-08-30T17:20:00.000Z,
                       "text": "Are you building a chat app?",
                       "user": Object {
@@ -1707,7 +1707,7 @@ ShallowWrapper {
                       },
                     },
                     Object {
-                      "_id": 531682,
+                      "_id": 284295,
                       "createdAt": 2016-08-30T17:20:00.000Z,
                       "system": true,
                       "text": "You are officially rocking GiftedChat.",
@@ -1956,7 +1956,7 @@ ShallowWrapper {
                   messages={
                     Array [
                       Object {
-                        "_id": 243114,
+                        "_id": 988728,
                         "createdAt": 2016-08-30T17:20:00.000Z,
                         "received": true,
                         "sent": true,
@@ -1967,7 +1967,7 @@ ShallowWrapper {
                         },
                       },
                       Object {
-                        "_id": 538806,
+                        "_id": 975595,
                         "createdAt": 2016-08-30T17:20:00.000Z,
                         "text": "Are you building a chat app?",
                         "user": Object {
@@ -1976,7 +1976,7 @@ ShallowWrapper {
                         },
                       },
                       Object {
-                        "_id": 531682,
+                        "_id": 284295,
                         "createdAt": 2016-08-30T17:20:00.000Z,
                         "system": true,
                         "text": "You are officially rocking GiftedChat.",
@@ -2047,7 +2047,7 @@ ShallowWrapper {
                   "messageIdGenerator": [Function],
                   "messages": Array [
                     Object {
-                      "_id": 243114,
+                      "_id": 988728,
                       "createdAt": 2016-08-30T17:20:00.000Z,
                       "received": true,
                       "sent": true,
@@ -2058,7 +2058,7 @@ ShallowWrapper {
                       },
                     },
                     Object {
-                      "_id": 538806,
+                      "_id": 975595,
                       "createdAt": 2016-08-30T17:20:00.000Z,
                       "text": "Are you building a chat app?",
                       "user": Object {
@@ -2067,7 +2067,7 @@ ShallowWrapper {
                       },
                     },
                     Object {
-                      "_id": 531682,
+                      "_id": 284295,
                       "createdAt": 2016-08-30T17:20:00.000Z,
                       "system": true,
                       "text": "You are officially rocking GiftedChat.",

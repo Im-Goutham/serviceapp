@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import JobsList from '../components/JobsList';
 import Header from '../components/Header';
+import Advertisement from '../components/Advertisement';
 import LinearGradient from 'react-native-linear-gradient';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
@@ -85,7 +86,8 @@ class SelectScreen extends Component {
                             </View>
                         }
                     />
-                    <View style={{ backgroundColor: "#009933", flex: 1 }}>
+                     <View style={{backgroundColor :"rgb(249,252, 255)", flex:1}}>
+                    <Advertisement/>
                         <JobsList type='select' navigation={this.props.navigation} />
                     </View>
                 </LinearGradient>

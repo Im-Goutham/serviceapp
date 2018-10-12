@@ -1,6 +1,8 @@
 
 
 import React, {Component} from 'react';
+import {View, Image} from 'react-native';
+import { scale } from '../global';
 // import {
 //     AdMobBanner,
 //     AdMobInterstitial,
@@ -12,7 +14,9 @@ export default class Advertisement extends Component {
 
   render() {
     return (
- null
+        <View style={{ height: scale(90)}}>
+               <Image source={require('../images/advertisement.png')} style={{ width: '100%', height: scale(90) }} resizeMode="contain" resizeMethod="resize" />
+        </View>
     );
   }
 }

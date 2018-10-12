@@ -74,7 +74,7 @@ export default class JobDetailScreen extends Component {
                                     <Text style={styles.pricetext}>$240</Text>
                                 </View>
                                 <View style={{ flex:1,flexDirection: "row", height: scale(40),backgroundColor: "transparent", justifyContent: 'flex-end', alignItems: "center" }}>
-                                    <Image source={require('../assets/icons/location_red.png')} style={styles.pinimage} resizeMode="contain" resizeMethod="resize" />
+                                    <Image source={require('../assets/icons/map_location_red.png')} style={styles.pinimage} resizeMode="contain" resizeMethod="resize" />
                                     <Text style={styles.distance}>3 mi</Text>
                                 </View>
                             </View>
@@ -271,7 +271,7 @@ export default class JobDetailScreen extends Component {
                                     style={{height: scale(64), justifyContent: "center", alignItems: "center"}}
                                     onPress={() => {this.setState({visible:true})}}
                                     >
-                                    <Text style={{fontFamily: "Montserrat-Medium", fontSize: scale(16), color: "#fff"}}>APPLY FOR THIS JOB</Text>
+                                    <Text style={{fontFamily: "Montserrat-Bold", fontSize: scale(16), color: "#fff"}}>APPLY FOR THIS JOB</Text>
                                 </TouchableOpacity>
                             </LinearGradient>
                             :
@@ -355,15 +355,19 @@ export default class JobDetailScreen extends Component {
              style={{backgroundColor :"rgb(249,252, 255)"}}
             >
                 <View style={{flex:1}}>
+                 <Advertisement/>
                    {this.renderJobDetail()}
                 </View>
                 <View style={{flex:1}}>
+                <Advertisement/>
                   {this.renderJobDetail()}
                 </View>
                 <View style={{flex:1}}>
+                <Advertisement/>
                   {this.renderJobDetail()}
                 </View>
                 <View style={{flex:1}}>
+                <Advertisement/>
                   {this.renderJobDetail()}
                 </View>
             </Swiper> 

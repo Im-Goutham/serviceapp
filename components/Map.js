@@ -81,49 +81,51 @@ export default class Map extends Component {
     let {region,coordinate} = this.state;
     console.log('coordinate is - ',coordinate);
     return (
-      <MapView
-      style={ styles.map }
-      initialRegion={region}
-      onRegionChange={this.onRegionChange}
-      onPoiClick={this.onPoiClick}
-      >
-      {
-       this.state.markers.map((coordinate,key)=>{
-           return   <Marker
-           coordinate={coordinate}
-           key={key}
-           onPress={()=>this.props.pinPress()}
-           image={require('../assets/icons/map_location_blue.png')}
-         >
-          {/* <ImageBackground 
-            source={require('../assets/icons/map_location_blue.png')} 
-            style={{ width: scale(30), height: scale(30) }}
-            resizeMode="contain" 
-            resizeMethod="resize" 
-            onLoad={() => this.forceUpdate()}
-             /> */}
-         </Marker>
-       })
-      }  
-      <Marker
-           coordinate={coordinate}
-           image={require('../assets/icons/map_location_red.png')}
-         >
-            {/* <ImageBackground 
-                source={require('../assets/icons/map_location_red.png')} 
-                style={{ width: scale(30), height: scale(30) }} 
+      <View style={{flex:1}}>
+    <MapView
+          style={ styles.map }
+          initialRegion={region}
+          onRegionChange={this.onRegionChange}
+          onPoiClick={this.onPoiClick}
+          >
+          {
+          this.state.markers.map((coordinate,key)=>{
+              return   <Marker
+              coordinate={coordinate}
+              key={key}
+              onPress={()=>this.props.pinPress()}
+              image={require('../assets/icons/map_location_blue.png')}
+            >
+              {/* <ImageBackground 
+                source={require('../assets/icons/map_location_blue.png')} 
+                style={{ width: scale(30), height: scale(30) }}
                 resizeMode="contain" 
-                resizeMethod="resize"
+                resizeMethod="resize" 
                 onLoad={() => this.forceUpdate()}
                 /> */}
-            <MapView.Callout tooltip >
-               <View style={{justifyContent:'center',flexDirection:'column'}}>
-                        <Text style={styles.tooltipStyle}>YOU ARE HERE</Text>
-                        <Icon name='md-arrow-dropdown' style={{color:'#F42922',marginTop:scale(-13),marginLeft:scale(55)}}/> 
-              </View>
-           </MapView.Callout>
-         </Marker> 
-      </MapView>
+            </Marker>
+          })
+          }  
+          <Marker
+              coordinate={coordinate}
+              image={require('../assets/icons/map_location_red.png')}
+            >
+                {/* <ImageBackground 
+                    source={require('../assets/icons/map_location_red.png')} 
+                    style={{ width: scale(30), height: scale(30) }} 
+                    resizeMode="contain" 
+                    resizeMethod="resize"
+                    onLoad={() => this.forceUpdate()}
+                    /> */}
+                <MapView.Callout tooltip >
+                  <View style={{justifyContent:'center',flexDirection:'column'}}>
+                            <Text style={styles.tooltipStyle}>YOU ARE HERE</Text>
+                            <Icon name='md-arrow-dropdown' style={{color:'#F42922',marginTop:scale(-13),marginLeft:scale(55)}}/> 
+                  </View>
+              </MapView.Callout>
+            </Marker> 
+          </MapView>
+      </View>
     );
   }
 }
@@ -164,7 +166,7 @@ const styles = StyleSheet.create({
   btnText: { 
       textAlign:'center',
       color:'white',
-      fontWeight:'bold',
+      fontFamily: 'Montserrat-Bold',
       fontSize:scale(12)
   },
   tooltipStyle:{
