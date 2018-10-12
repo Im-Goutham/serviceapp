@@ -1,0 +1,335 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FloatingLabelInput Snapshot testing should have same snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Component
+    style={
+      Object {
+        "borderBottomColor": "#D1D8E0",
+        "borderBottomWidth": 0.8695652173913044,
+        "flexDirection": "row",
+        "paddingTop": 15.65217391304348,
+      }
+    }
+  >
+    <AnimatedComponent
+      style={
+        Object {
+          "color": "rgba(170, 170, 170, 1)",
+          "fontFamily": "Montserrat-Medium",
+          "fontSize": 13.913043478260871,
+          "left": 0,
+          "position": "absolute",
+          "top": 15.65217391304348,
+        }
+      }
+    />
+    <TextInput
+      allowFontScaling={true}
+      autoCorrect={false}
+      blurOnSubmit={true}
+      navigation={
+        Object {
+          "goBack": [MockFunction],
+          "navigate": [MockFunction],
+        }
+      }
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onPress={[MockFunction]}
+      store={
+        Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        }
+      }
+      style={
+        Object {
+          "color": "#4A4A4A",
+          "flex": 1,
+          "fontFamily": "Montserrat-Medium",
+          "fontSize": 13.913043478260871,
+          "height": 35,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+  </Component>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <AnimatedComponent
+          style={
+            Object {
+              "color": "rgba(170, 170, 170, 1)",
+              "fontFamily": "Montserrat-Medium",
+              "fontSize": 13.913043478260871,
+              "left": 0,
+              "position": "absolute",
+              "top": 15.65217391304348,
+            }
+          }
+        />,
+        <TextInput
+          allowFontScaling={true}
+          autoCorrect={false}
+          blurOnSubmit={true}
+          navigation={
+            Object {
+              "goBack": [MockFunction],
+              "navigate": [MockFunction],
+            }
+          }
+          onBlur={[Function]}
+          onFocus={[Function]}
+          onPress={[MockFunction]}
+          store={
+            Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            }
+          }
+          style={
+            Object {
+              "color": "#4A4A4A",
+              "flex": 1,
+              "fontFamily": "Montserrat-Medium",
+              "fontSize": 13.913043478260871,
+              "height": 35,
+            }
+          }
+          underlineColorAndroid="transparent"
+        />,
+        null,
+      ],
+      "style": Object {
+        "borderBottomColor": "#D1D8E0",
+        "borderBottomWidth": 0.8695652173913044,
+        "flexDirection": "row",
+        "paddingTop": 15.65217391304348,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": undefined,
+          "style": Object {
+            "color": "rgba(170, 170, 170, 1)",
+            "fontFamily": "Montserrat-Medium",
+            "fontSize": 13.913043478260871,
+            "left": 0,
+            "position": "absolute",
+            "top": 15.65217391304348,
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "allowFontScaling": true,
+          "autoCorrect": false,
+          "blurOnSubmit": true,
+          "navigation": Object {
+            "goBack": [MockFunction],
+            "navigate": [MockFunction],
+          },
+          "onBlur": [Function],
+          "onFocus": [Function],
+          "onPress": [MockFunction],
+          "store": Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          },
+          "style": Object {
+            "color": "#4A4A4A",
+            "flex": 1,
+            "fontFamily": "Montserrat-Medium",
+            "fontSize": 13.913043478260871,
+            "height": 35,
+          },
+          "underlineColorAndroid": "transparent",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      null,
+    ],
+    "type": "View",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <AnimatedComponent
+            style={
+              Object {
+                "color": "rgba(170, 170, 170, 1)",
+                "fontFamily": "Montserrat-Medium",
+                "fontSize": 13.913043478260871,
+                "left": 0,
+                "position": "absolute",
+                "top": 15.65217391304348,
+              }
+            }
+          />,
+          <TextInput
+            allowFontScaling={true}
+            autoCorrect={false}
+            blurOnSubmit={true}
+            navigation={
+              Object {
+                "goBack": [MockFunction],
+                "navigate": [MockFunction],
+              }
+            }
+            onBlur={[Function]}
+            onFocus={[Function]}
+            onPress={[MockFunction]}
+            store={
+              Object {
+                "clearActions": [Function],
+                "dispatch": [Function],
+                "getActions": [Function],
+                "getState": [Function],
+                "replaceReducer": [Function],
+                "subscribe": [Function],
+              }
+            }
+            style={
+              Object {
+                "color": "#4A4A4A",
+                "flex": 1,
+                "fontFamily": "Montserrat-Medium",
+                "fontSize": 13.913043478260871,
+                "height": 35,
+              }
+            }
+            underlineColorAndroid="transparent"
+          />,
+          null,
+        ],
+        "style": Object {
+          "borderBottomColor": "#D1D8E0",
+          "borderBottomWidth": 0.8695652173913044,
+          "flexDirection": "row",
+          "paddingTop": 15.65217391304348,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": undefined,
+            "style": Object {
+              "color": "rgba(170, 170, 170, 1)",
+              "fontFamily": "Montserrat-Medium",
+              "fontSize": 13.913043478260871,
+              "left": 0,
+              "position": "absolute",
+              "top": 15.65217391304348,
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowFontScaling": true,
+            "autoCorrect": false,
+            "blurOnSubmit": true,
+            "navigation": Object {
+              "goBack": [MockFunction],
+              "navigate": [MockFunction],
+            },
+            "onBlur": [Function],
+            "onFocus": [Function],
+            "onPress": [MockFunction],
+            "store": Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            },
+            "style": Object {
+              "color": "#4A4A4A",
+              "flex": 1,
+              "fontFamily": "Montserrat-Medium",
+              "fontSize": 13.913043478260871,
+              "height": 35,
+            },
+            "underlineColorAndroid": "transparent",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        null,
+      ],
+      "type": "View",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

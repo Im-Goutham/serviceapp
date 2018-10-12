@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FacebookLogin Snapshot testing should have same snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#3B5B95",
+        "borderRadius": 26.086956521739133,
+        "elevation": 3,
+        "marginBottom": 4.347826086956522,
+        "marginTop": 4.347826086956522,
+        "paddingBottom": 13.043478260869566,
+        "paddingTop": 13.043478260869566,
+        "shadowOffset": Object {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.2,
+        "shadowRadius": 2,
+        "width": "100%",
+      }
+    }
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "paddingVertical": 1,
+        }
+      }
+    >
+      <Image
+        resizeMethod="resize"
+        resizeMode="contain"
+        source={
+          Object {
+            "testUri": "../../../assets/icons/fb_transparent.png",
+          }
+        }
+        style={
+          Object {
+            "height": 17.39130434782609,
+            "width": 17.39130434782609,
+          }
+        }
+      />
+      <Component
+        style={
+          Object {
+            "color": "white",
+            "fontFamily": "Montserrat-bold",
+            "fontSize": 13.913043478260871,
+            "paddingHorizontal": 8.695652173913045,
+            "textAlign": "left",
+          }
+        }
+      >
+        Facebook
+      </Component>
+    </Component>
+  </TouchableOpacity>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "accessibilityComponentType": undefined,
+      "accessibilityLabel": undefined,
+      "accessibilityTraits": undefined,
+      "accessible": true,
+      "children": Array [
+        <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "paddingVertical": 1,
+            }
+          }
+        >
+          <Image
+            resizeMethod="resize"
+            resizeMode="contain"
+            source={
+              Object {
+                "testUri": "../../../assets/icons/fb_transparent.png",
+              }
+            }
+            style={
+              Object {
+                "height": 17.39130434782609,
+                "width": 17.39130434782609,
+              }
+            }
+          />
+          <Component
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "Montserrat-bold",
+                "fontSize": 13.913043478260871,
+                "paddingHorizontal": 8.695652173913045,
+                "textAlign": "left",
+              }
+            }
+          >
+            Facebook
+          </Component>
+        </Component>,
+        null,
+      ],
+      "hasTVPreferredFocus": undefined,
+      "hitSlop": undefined,
+      "isTVSelectable": true,
+      "nativeID": undefined,
+      "onLayout": undefined,
+      "onResponderGrant": [Function],
+      "onResponderMove": [Function],
+      "onResponderRelease": [Function],
+      "onResponderTerminate": [Function],
+      "onResponderTerminationRequest": [Function],
+      "onStartShouldSetResponder": [Function],
+      "style": Array [
+        Object {
+          "backgroundColor": "#3B5B95",
+          "borderRadius": 26.086956521739133,
+          "elevation": 3,
+          "marginBottom": 4.347826086956522,
+          "marginTop": 4.347826086956522,
+          "paddingBottom": 13.043478260869566,
+          "paddingTop": 13.043478260869566,
+          "shadowOffset": Object {
+            "height": 2,
+            "width": 0,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 2,
+          "width": "100%",
+        },
+        Object {
+          "opacity": 1,
+        },
+      ],
+      "testID": undefined,
+      "tvParallaxProperties": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Image
+              resizeMethod="resize"
+              resizeMode="contain"
+              source={
+                Object {
+                  "testUri": "../../../assets/icons/fb_transparent.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 17.39130434782609,
+                  "width": 17.39130434782609,
+                }
+              }
+            />,
+            <Component
+              style={
+                Object {
+                  "color": "white",
+                  "fontFamily": "Montserrat-bold",
+                  "fontSize": 13.913043478260871,
+                  "paddingHorizontal": 8.695652173913045,
+                  "textAlign": "left",
+                }
+              }
+            >
+              Facebook
+            </Component>,
+          ],
+          "style": Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "paddingVertical": 1,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "resizeMethod": "resize",
+              "resizeMode": "contain",
+              "source": Object {
+                "testUri": "../../../assets/icons/fb_transparent.png",
+              },
+              "style": Object {
+                "height": 17.39130434782609,
+                "width": 17.39130434782609,
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Facebook",
+              "style": Object {
+                "color": "white",
+                "fontFamily": "Montserrat-bold",
+                "fontSize": 13.913043478260871,
+                "paddingHorizontal": 8.695652173913045,
+                "textAlign": "left",
+              },
+            },
+            "ref": null,
+            "rendered": "Facebook",
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      null,
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "accessibilityComponentType": undefined,
+        "accessibilityLabel": undefined,
+        "accessibilityTraits": undefined,
+        "accessible": true,
+        "children": Array [
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "paddingVertical": 1,
+              }
+            }
+          >
+            <Image
+              resizeMethod="resize"
+              resizeMode="contain"
+              source={
+                Object {
+                  "testUri": "../../../assets/icons/fb_transparent.png",
+                }
+              }
+              style={
+                Object {
+                  "height": 17.39130434782609,
+                  "width": 17.39130434782609,
+                }
+              }
+            />
+            <Component
+              style={
+                Object {
+                  "color": "white",
+                  "fontFamily": "Montserrat-bold",
+                  "fontSize": 13.913043478260871,
+                  "paddingHorizontal": 8.695652173913045,
+                  "textAlign": "left",
+                }
+              }
+            >
+              Facebook
+            </Component>
+          </Component>,
+          null,
+        ],
+        "hasTVPreferredFocus": undefined,
+        "hitSlop": undefined,
+        "isTVSelectable": true,
+        "nativeID": undefined,
+        "onLayout": undefined,
+        "onResponderGrant": [Function],
+        "onResponderMove": [Function],
+        "onResponderRelease": [Function],
+        "onResponderTerminate": [Function],
+        "onResponderTerminationRequest": [Function],
+        "onStartShouldSetResponder": [Function],
+        "style": Array [
+          Object {
+            "backgroundColor": "#3B5B95",
+            "borderRadius": 26.086956521739133,
+            "elevation": 3,
+            "marginBottom": 4.347826086956522,
+            "marginTop": 4.347826086956522,
+            "paddingBottom": 13.043478260869566,
+            "paddingTop": 13.043478260869566,
+            "shadowOffset": Object {
+              "height": 2,
+              "width": 0,
+            },
+            "shadowOpacity": 0.2,
+            "shadowRadius": 2,
+            "width": "100%",
+          },
+          Object {
+            "opacity": 1,
+          },
+        ],
+        "testID": undefined,
+        "tvParallaxProperties": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Image
+                resizeMethod="resize"
+                resizeMode="contain"
+                source={
+                  Object {
+                    "testUri": "../../../assets/icons/fb_transparent.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 17.39130434782609,
+                    "width": 17.39130434782609,
+                  }
+                }
+              />,
+              <Component
+                style={
+                  Object {
+                    "color": "white",
+                    "fontFamily": "Montserrat-bold",
+                    "fontSize": 13.913043478260871,
+                    "paddingHorizontal": 8.695652173913045,
+                    "textAlign": "left",
+                  }
+                }
+              >
+                Facebook
+              </Component>,
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "paddingVertical": 1,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "resizeMethod": "resize",
+                "resizeMode": "contain",
+                "source": Object {
+                  "testUri": "../../../assets/icons/fb_transparent.png",
+                },
+                "style": Object {
+                  "height": 17.39130434782609,
+                  "width": 17.39130434782609,
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Facebook",
+                "style": Object {
+                  "color": "white",
+                  "fontFamily": "Montserrat-bold",
+                  "fontSize": 13.913043478260871,
+                  "paddingHorizontal": 8.695652173913045,
+                  "textAlign": "left",
+                },
+              },
+              "ref": null,
+              "rendered": "Facebook",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        null,
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -1,0 +1,1475 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyRequestsScreen Snapshot testing should have same snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MyRequestScreen
+    backButton={false}
+    hidePhotoView={[Function]}
+    navigation={
+      Object {
+        "goBack": [MockFunction],
+        "navigate": [MockFunction],
+      }
+    }
+    onPress={[MockFunction]}
+    showBackButton={[Function]}
+    showPhotoView={[Function]}
+    signIn={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+    storeSubscription={
+      Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <LinearGradient
+        colors={
+          Array [
+            "#3E85EF",
+            "#3EBDEF",
+          ]
+        }
+        end={
+          Object {
+            "x": 1,
+            "y": 0,
+          }
+        }
+        start={
+          Object {
+            "x": 0,
+            "y": 0,
+          }
+        }
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        <HeaderScreen
+          content={
+            <Component
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "justifyContent": "space-between",
+                  "paddingVertical": 8.695652173913045,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                    "paddingVertical": 8.695652173913045,
+                  }
+                }
+              >
+                <Component>
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "height": 34.78260869565218,
+                        "justifyContent": "space-around",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "color": "#fff",
+                          "fontFamily": "Montserrat-Bold",
+                          "fontSize": 13.913043478260871,
+                        }
+                      }
+                    >
+                      Booking Requests
+                    </Component>
+                    <Component
+                      style={
+                        Object {
+                          "backgroundColor": "#fff",
+                          "borderRadius": 2.608695652173913,
+                          "height": 2.608695652173913,
+                          "width": 34.78260869565218,
+                        }
+                      }
+                    />
+                  </TouchableOpacity>
+                </Component>
+                <Component>
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "height": 34.78260869565218,
+                        "justifyContent": "space-around",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "color": "rgb(158, 212, 247)",
+                          "fontFamily": "Montserrat-Bold",
+                          "fontSize": 13.913043478260871,
+                        }
+                      }
+                    >
+                      Hiring Requests
+                    </Component>
+                    <Component
+                      style={
+                        Object {
+                          "backgroundColor": "#fff",
+                          "borderRadius": 2.608695652173913,
+                          "height": 0,
+                          "width": 34.78260869565218,
+                        }
+                      }
+                    />
+                  </TouchableOpacity>
+                </Component>
+              </Component>
+            </Component>
+          }
+          header={
+            <Header
+              left={
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                        "width": 46.95652173913044,
+                      }
+                    }
+                  >
+                    <Image
+                      resizeMethod="resize"
+                      resizeMode="contain"
+                      source={
+                        Object {
+                          "testUri": "../../../assets/icons/menu.png",
+                        }
+                      }
+                      style={
+                        Object {
+                          "height": 17.39130434782609,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </TouchableOpacity>
+                </Component>
+              }
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
+              right={
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    }
+                  }
+                />
+              }
+              title={
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "height": 46.95652173913044,
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontFamily": "Montserrat-Bold",
+                        "fontSize": 17.39130434782609,
+                      }
+                    }
+                  >
+                    My Requests
+                  </Component>
+                </Component>
+              }
+            />
+          }
+        />
+        <Component
+          style={
+            Object {
+              "backgroundColor": "rgb(249,252, 255)",
+              "flex": 1,
+            }
+          }
+        >
+          <Advertisement />
+          <JobsList
+            navigation={
+              Object {
+                "goBack": [MockFunction],
+                "navigate": [MockFunction],
+              }
+            }
+          />
+        </Component>
+      </LinearGradient>,
+      "style": Object {
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <HeaderScreen
+            content={
+              <Component
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "justifyContent": "space-between",
+                    "paddingVertical": 8.695652173913045,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-around",
+                      "paddingVertical": 8.695652173913045,
+                    }
+                  }
+                >
+                  <Component>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "height": 34.78260869565218,
+                          "justifyContent": "space-around",
+                        }
+                      }
+                    >
+                      <Component
+                        style={
+                          Object {
+                            "color": "#fff",
+                            "fontFamily": "Montserrat-Bold",
+                            "fontSize": 13.913043478260871,
+                          }
+                        }
+                      >
+                        Booking Requests
+                      </Component>
+                      <Component
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "borderRadius": 2.608695652173913,
+                            "height": 2.608695652173913,
+                            "width": 34.78260869565218,
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                  <Component>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "height": 34.78260869565218,
+                          "justifyContent": "space-around",
+                        }
+                      }
+                    >
+                      <Component
+                        style={
+                          Object {
+                            "color": "rgb(158, 212, 247)",
+                            "fontFamily": "Montserrat-Bold",
+                            "fontSize": 13.913043478260871,
+                          }
+                        }
+                      >
+                        Hiring Requests
+                      </Component>
+                      <Component
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "borderRadius": 2.608695652173913,
+                            "height": 0,
+                            "width": 34.78260869565218,
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                </Component>
+              </Component>
+            }
+            header={
+              <Header
+                left={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                          "width": 46.95652173913044,
+                        }
+                      }
+                    >
+                      <Image
+                        resizeMethod="resize"
+                        resizeMode="contain"
+                        source={
+                          Object {
+                            "testUri": "../../../assets/icons/menu.png",
+                          }
+                        }
+                        style={
+                          Object {
+                            "height": 17.39130434782609,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
+                right={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                }
+                title={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "flex-start",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "color": "#fff",
+                          "fontFamily": "Montserrat-Bold",
+                          "fontSize": 17.39130434782609,
+                        }
+                      }
+                    >
+                      My Requests
+                    </Component>
+                  </Component>
+                }
+              />
+            }
+          />,
+          <Component
+            style={
+              Object {
+                "backgroundColor": "rgb(249,252, 255)",
+                "flex": 1,
+              }
+            }
+          >
+            <Advertisement />
+            <JobsList
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
+            />
+          </Component>,
+        ],
+        "colors": Array [
+          "#3E85EF",
+          "#3EBDEF",
+        ],
+        "end": Object {
+          "x": 1,
+          "y": 0,
+        },
+        "start": Object {
+          "x": 0,
+          "y": 0,
+        },
+        "style": Object {
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "content": <Component
+              style={
+                Object {
+                  "backgroundColor": "transparent",
+                  "justifyContent": "space-between",
+                  "paddingVertical": 8.695652173913045,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                    "paddingVertical": 8.695652173913045,
+                  }
+                }
+              >
+                <Component>
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "height": 34.78260869565218,
+                        "justifyContent": "space-around",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "color": "#fff",
+                          "fontFamily": "Montserrat-Bold",
+                          "fontSize": 13.913043478260871,
+                        }
+                      }
+                    >
+                      Booking Requests
+                    </Component>
+                    <Component
+                      style={
+                        Object {
+                          "backgroundColor": "#fff",
+                          "borderRadius": 2.608695652173913,
+                          "height": 2.608695652173913,
+                          "width": 34.78260869565218,
+                        }
+                      }
+                    />
+                  </TouchableOpacity>
+                </Component>
+                <Component>
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "height": 34.78260869565218,
+                        "justifyContent": "space-around",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "color": "rgb(158, 212, 247)",
+                          "fontFamily": "Montserrat-Bold",
+                          "fontSize": 13.913043478260871,
+                        }
+                      }
+                    >
+                      Hiring Requests
+                    </Component>
+                    <Component
+                      style={
+                        Object {
+                          "backgroundColor": "#fff",
+                          "borderRadius": 2.608695652173913,
+                          "height": 0,
+                          "width": 34.78260869565218,
+                        }
+                      }
+                    />
+                  </TouchableOpacity>
+                </Component>
+              </Component>
+            </Component>,
+            "header": <Header
+              left={
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <TouchableOpacity
+                    activeOpacity={0.2}
+                    onPress={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                        "width": 46.95652173913044,
+                      }
+                    }
+                  >
+                    <Image
+                      resizeMethod="resize"
+                      resizeMode="contain"
+                      source={
+                        Object {
+                          "testUri": "../../../assets/icons/menu.png",
+                        }
+                      }
+                      style={
+                        Object {
+                          "height": 17.39130434782609,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </TouchableOpacity>
+                </Component>
+              }
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
+              right={
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "transparent",
+                      "flexDirection": "row",
+                      "justifyContent": "center",
+                    }
+                  }
+                />
+              }
+              title={
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "height": 46.95652173913044,
+                      "justifyContent": "center",
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "color": "#fff",
+                        "fontFamily": "Montserrat-Bold",
+                        "fontSize": 17.39130434782609,
+                      }
+                    }
+                  >
+                    My Requests
+                  </Component>
+                </Component>
+              }
+            />,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Advertisement />,
+              <JobsList
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
+              />,
+            ],
+            "style": Object {
+              "backgroundColor": "rgb(249,252, 255)",
+              "flex": 1,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "navigation": Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <LinearGradient
+          colors={
+            Array [
+              "#3E85EF",
+              "#3EBDEF",
+            ]
+          }
+          end={
+            Object {
+              "x": 1,
+              "y": 0,
+            }
+          }
+          start={
+            Object {
+              "x": 0,
+              "y": 0,
+            }
+          }
+          style={
+            Object {
+              "flex": 1,
+            }
+          }
+        >
+          <HeaderScreen
+            content={
+              <Component
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "justifyContent": "space-between",
+                    "paddingVertical": 8.695652173913045,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-around",
+                      "paddingVertical": 8.695652173913045,
+                    }
+                  }
+                >
+                  <Component>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "height": 34.78260869565218,
+                          "justifyContent": "space-around",
+                        }
+                      }
+                    >
+                      <Component
+                        style={
+                          Object {
+                            "color": "#fff",
+                            "fontFamily": "Montserrat-Bold",
+                            "fontSize": 13.913043478260871,
+                          }
+                        }
+                      >
+                        Booking Requests
+                      </Component>
+                      <Component
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "borderRadius": 2.608695652173913,
+                            "height": 2.608695652173913,
+                            "width": 34.78260869565218,
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                  <Component>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "height": 34.78260869565218,
+                          "justifyContent": "space-around",
+                        }
+                      }
+                    >
+                      <Component
+                        style={
+                          Object {
+                            "color": "rgb(158, 212, 247)",
+                            "fontFamily": "Montserrat-Bold",
+                            "fontSize": 13.913043478260871,
+                          }
+                        }
+                      >
+                        Hiring Requests
+                      </Component>
+                      <Component
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "borderRadius": 2.608695652173913,
+                            "height": 0,
+                            "width": 34.78260869565218,
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                </Component>
+              </Component>
+            }
+            header={
+              <Header
+                left={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                          "width": 46.95652173913044,
+                        }
+                      }
+                    >
+                      <Image
+                        resizeMethod="resize"
+                        resizeMode="contain"
+                        source={
+                          Object {
+                            "testUri": "../../../assets/icons/menu.png",
+                          }
+                        }
+                        style={
+                          Object {
+                            "height": 17.39130434782609,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
+                right={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                }
+                title={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "flex-start",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "color": "#fff",
+                          "fontFamily": "Montserrat-Bold",
+                          "fontSize": 17.39130434782609,
+                        }
+                      }
+                    >
+                      My Requests
+                    </Component>
+                  </Component>
+                }
+              />
+            }
+          />
+          <Component
+            style={
+              Object {
+                "backgroundColor": "rgb(249,252, 255)",
+                "flex": 1,
+              }
+            }
+          >
+            <Advertisement />
+            <JobsList
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
+            />
+          </Component>
+        </LinearGradient>,
+        "style": Object {
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <HeaderScreen
+              content={
+                <Component
+                  style={
+                    Object {
+                      "backgroundColor": "transparent",
+                      "justifyContent": "space-between",
+                      "paddingVertical": 8.695652173913045,
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "flexDirection": "row",
+                        "justifyContent": "space-around",
+                        "paddingVertical": 8.695652173913045,
+                      }
+                    }
+                  >
+                    <Component>
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "height": 34.78260869565218,
+                            "justifyContent": "space-around",
+                          }
+                        }
+                      >
+                        <Component
+                          style={
+                            Object {
+                              "color": "#fff",
+                              "fontFamily": "Montserrat-Bold",
+                              "fontSize": 13.913043478260871,
+                            }
+                          }
+                        >
+                          Booking Requests
+                        </Component>
+                        <Component
+                          style={
+                            Object {
+                              "backgroundColor": "#fff",
+                              "borderRadius": 2.608695652173913,
+                              "height": 2.608695652173913,
+                              "width": 34.78260869565218,
+                            }
+                          }
+                        />
+                      </TouchableOpacity>
+                    </Component>
+                    <Component>
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "height": 34.78260869565218,
+                            "justifyContent": "space-around",
+                          }
+                        }
+                      >
+                        <Component
+                          style={
+                            Object {
+                              "color": "rgb(158, 212, 247)",
+                              "fontFamily": "Montserrat-Bold",
+                              "fontSize": 13.913043478260871,
+                            }
+                          }
+                        >
+                          Hiring Requests
+                        </Component>
+                        <Component
+                          style={
+                            Object {
+                              "backgroundColor": "#fff",
+                              "borderRadius": 2.608695652173913,
+                              "height": 0,
+                              "width": 34.78260869565218,
+                            }
+                          }
+                        />
+                      </TouchableOpacity>
+                    </Component>
+                  </Component>
+                </Component>
+              }
+              header={
+                <Header
+                  left={
+                    <Component
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <TouchableOpacity
+                        activeOpacity={0.2}
+                        onPress={[Function]}
+                        style={
+                          Object {
+                            "alignItems": "center",
+                            "backgroundColor": "transparent",
+                            "height": 46.95652173913044,
+                            "justifyContent": "center",
+                            "width": 46.95652173913044,
+                          }
+                        }
+                      >
+                        <Image
+                          resizeMethod="resize"
+                          resizeMode="contain"
+                          source={
+                            Object {
+                              "testUri": "../../../assets/icons/menu.png",
+                            }
+                          }
+                          style={
+                            Object {
+                              "height": 17.39130434782609,
+                              "width": "100%",
+                            }
+                          }
+                        />
+                      </TouchableOpacity>
+                    </Component>
+                  }
+                  navigation={
+                    Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
+                    }
+                  }
+                  right={
+                    <Component
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "flexDirection": "row",
+                          "justifyContent": "center",
+                        }
+                      }
+                    />
+                  }
+                  title={
+                    <Component
+                      style={
+                        Object {
+                          "alignItems": "flex-start",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                        }
+                      }
+                    >
+                      <Component
+                        style={
+                          Object {
+                            "color": "#fff",
+                            "fontFamily": "Montserrat-Bold",
+                            "fontSize": 17.39130434782609,
+                          }
+                        }
+                      >
+                        My Requests
+                      </Component>
+                    </Component>
+                  }
+                />
+              }
+            />,
+            <Component
+              style={
+                Object {
+                  "backgroundColor": "rgb(249,252, 255)",
+                  "flex": 1,
+                }
+              }
+            >
+              <Advertisement />
+              <JobsList
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
+              />
+            </Component>,
+          ],
+          "colors": Array [
+            "#3E85EF",
+            "#3EBDEF",
+          ],
+          "end": Object {
+            "x": 1,
+            "y": 0,
+          },
+          "start": Object {
+            "x": 0,
+            "y": 0,
+          },
+          "style": Object {
+            "flex": 1,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "content": <Component
+                style={
+                  Object {
+                    "backgroundColor": "transparent",
+                    "justifyContent": "space-between",
+                    "paddingVertical": 8.695652173913045,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "flexDirection": "row",
+                      "justifyContent": "space-around",
+                      "paddingVertical": 8.695652173913045,
+                    }
+                  }
+                >
+                  <Component>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "height": 34.78260869565218,
+                          "justifyContent": "space-around",
+                        }
+                      }
+                    >
+                      <Component
+                        style={
+                          Object {
+                            "color": "#fff",
+                            "fontFamily": "Montserrat-Bold",
+                            "fontSize": 13.913043478260871,
+                          }
+                        }
+                      >
+                        Booking Requests
+                      </Component>
+                      <Component
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "borderRadius": 2.608695652173913,
+                            "height": 2.608695652173913,
+                            "width": 34.78260869565218,
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                  <Component>
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "height": 34.78260869565218,
+                          "justifyContent": "space-around",
+                        }
+                      }
+                    >
+                      <Component
+                        style={
+                          Object {
+                            "color": "rgb(158, 212, 247)",
+                            "fontFamily": "Montserrat-Bold",
+                            "fontSize": 13.913043478260871,
+                          }
+                        }
+                      >
+                        Hiring Requests
+                      </Component>
+                      <Component
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "borderRadius": 2.608695652173913,
+                            "height": 0,
+                            "width": 34.78260869565218,
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                </Component>
+              </Component>,
+              "header": <Header
+                left={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <TouchableOpacity
+                      activeOpacity={0.2}
+                      onPress={[Function]}
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "backgroundColor": "transparent",
+                          "height": 46.95652173913044,
+                          "justifyContent": "center",
+                          "width": 46.95652173913044,
+                        }
+                      }
+                    >
+                      <Image
+                        resizeMethod="resize"
+                        resizeMode="contain"
+                        source={
+                          Object {
+                            "testUri": "../../../assets/icons/menu.png",
+                          }
+                        }
+                        style={
+                          Object {
+                            "height": 17.39130434782609,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </TouchableOpacity>
+                  </Component>
+                }
+                navigation={
+                  Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  }
+                }
+                right={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "transparent",
+                        "flexDirection": "row",
+                        "justifyContent": "center",
+                      }
+                    }
+                  />
+                }
+                title={
+                  <Component
+                    style={
+                      Object {
+                        "alignItems": "flex-start",
+                        "height": 46.95652173913044,
+                        "justifyContent": "center",
+                      }
+                    }
+                  >
+                    <Component
+                      style={
+                        Object {
+                          "color": "#fff",
+                          "fontFamily": "Montserrat-Bold",
+                          "fontSize": 17.39130434782609,
+                        }
+                      }
+                    >
+                      My Requests
+                    </Component>
+                  </Component>
+                }
+              />,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Advertisement />,
+                <JobsList
+                  navigation={
+                    Object {
+                      "goBack": [MockFunction],
+                      "navigate": [MockFunction],
+                    }
+                  }
+                />,
+              ],
+              "style": Object {
+                "backgroundColor": "rgb(249,252, 255)",
+                "flex": 1,
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "navigation": Object {
+                    "goBack": [MockFunction],
+                    "navigate": [MockFunction],
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -1,0 +1,280 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Snapshot testing should have same snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Component
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "backgroundColor": "transparent",
+        "flexDirection": "row",
+        "height": 73.04347826086958,
+      }
+    }
+  >
+    <Component
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "backgroundColor": "transparent",
+          "justifyContent": "center",
+          "width": "20%",
+        }
+      }
+    />
+    <Component
+      style={
+        Object {
+          "alignItems": "flex-start",
+          "backgroundColor": "transparent",
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    />
+    <Component
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "flexDirection": "row",
+          "justifyContent": "center",
+          "width": "0%",
+        }
+      }
+    />
+  </Component>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Component
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "backgroundColor": "transparent",
+              "justifyContent": "center",
+              "width": "20%",
+            }
+          }
+        />,
+        <Component
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "backgroundColor": "transparent",
+              "justifyContent": "center",
+              "width": "100%",
+            }
+          }
+        />,
+        <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "width": "0%",
+            }
+          }
+        />,
+      ],
+      "style": Object {
+        "alignItems": "flex-end",
+        "backgroundColor": "transparent",
+        "flexDirection": "row",
+        "height": 73.04347826086958,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": undefined,
+          "style": Object {
+            "alignItems": "flex-start",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+            "width": "20%",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": undefined,
+          "style": Object {
+            "alignItems": "flex-start",
+            "backgroundColor": "transparent",
+            "justifyContent": "center",
+            "width": "100%",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": undefined,
+          "style": Object {
+            "alignItems": "center",
+            "backgroundColor": "transparent",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "width": "0%",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "View",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Component
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+                "width": "20%",
+              }
+            }
+          />,
+          <Component
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+                "width": "100%",
+              }
+            }
+          />,
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "width": "0%",
+              }
+            }
+          />,
+        ],
+        "style": Object {
+          "alignItems": "flex-end",
+          "backgroundColor": "transparent",
+          "flexDirection": "row",
+          "height": 73.04347826086958,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": undefined,
+            "style": Object {
+              "alignItems": "flex-start",
+              "backgroundColor": "transparent",
+              "justifyContent": "center",
+              "width": "20%",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": undefined,
+            "style": Object {
+              "alignItems": "flex-start",
+              "backgroundColor": "transparent",
+              "justifyContent": "center",
+              "width": "100%",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": undefined,
+            "style": Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "width": "0%",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "View",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
