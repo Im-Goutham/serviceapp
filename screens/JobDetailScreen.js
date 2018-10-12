@@ -64,7 +64,7 @@ export default class JobDetailScreen extends Component {
 
          return (
         
-                <ScrollView>
+                <ScrollView bounces={false}>
                     <View style={styles.container}>
                         <PhotoGallery />
                         <View style={styles.desc}>
