@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         color: 'white',
         textAlign: 'left',
         fontSize: scale(35),
-        fontWeight: 'bold'
+        fontFamily: 'Montserrat-Bold',
     },
     borderImg: { width: '100%', height: scale(31) },
 })

@@ -98,7 +98,7 @@ ShallowWrapper {
         </Component>
         <Component>
           <DatePickerIOS
-            date={2018-10-12T08:04:04.458Z}
+            date={2018-10-12T08:11:55.815Z}
             onDateChange={[Function]}
           />
         </Component>
@@ -397,7 +397,7 @@ ShallowWrapper {
               </Component>
               <Component>
                 <DatePickerIOS
-                  date={2018-10-12T08:04:04.458Z}
+                  date={2018-10-12T08:11:55.815Z}
                   onDateChange={[Function]}
                 />
               </Component>
@@ -706,7 +706,7 @@ ShallowWrapper {
               </Component>
               <Component>
                 <DatePickerIOS
-                  date={2018-10-12T08:04:04.458Z}
+                  date={2018-10-12T08:11:55.815Z}
                   onDateChange={[Function]}
                 />
               </Component>
@@ -949,7 +949,7 @@ ShallowWrapper {
                 </Component>
                 <Component>
                   <DatePickerIOS
-                    date={2018-10-12T08:04:04.458Z}
+                    date={2018-10-12T08:11:55.815Z}
                     onDateChange={[Function]}
                   />
                 </Component>
@@ -1172,7 +1172,7 @@ ShallowWrapper {
                   </Component>,
                   <Component>
                     <DatePickerIOS
-                      date={2018-10-12T08:04:04.458Z}
+                      date={2018-10-12T08:11:55.815Z}
                       onDateChange={[Function]}
                     />
                   </Component>,
@@ -1233,7 +1233,7 @@ ShallowWrapper {
                   "nodeType": "class",
                   "props": Object {
                     "children": <DatePickerIOS
-                      date={2018-10-12T08:04:04.458Z}
+                      date={2018-10-12T08:11:55.815Z}
                       onDateChange={[Function]}
                     />,
                   },
@@ -1243,7 +1243,7 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "class",
                     "props": Object {
-                      "date": 2018-10-12T08:04:04.458Z,
+                      "date": 2018-10-12T08:11:55.815Z,
                       "onDateChange": [Function],
                     },
                     "ref": null,
@@ -1936,7 +1936,7 @@ ShallowWrapper {
                 </Component>
                 <Component>
                   <DatePickerIOS
-                    date={2018-10-12T08:04:04.458Z}
+                    date={2018-10-12T08:11:55.815Z}
                     onDateChange={[Function]}
                   />
                 </Component>
@@ -2245,7 +2245,7 @@ ShallowWrapper {
                 </Component>
                 <Component>
                   <DatePickerIOS
-                    date={2018-10-12T08:04:04.458Z}
+                    date={2018-10-12T08:11:55.815Z}
                     onDateChange={[Function]}
                   />
                 </Component>
@@ -2488,7 +2488,7 @@ ShallowWrapper {
                   </Component>
                   <Component>
                     <DatePickerIOS
-                      date={2018-10-12T08:04:04.458Z}
+                      date={2018-10-12T08:11:55.815Z}
                       onDateChange={[Function]}
                     />
                   </Component>
@@ -2711,7 +2711,7 @@ ShallowWrapper {
                     </Component>,
                     <Component>
                       <DatePickerIOS
-                        date={2018-10-12T08:04:04.458Z}
+                        date={2018-10-12T08:11:55.815Z}
                         onDateChange={[Function]}
                       />
                     </Component>,
@@ -2772,7 +2772,7 @@ ShallowWrapper {
                     "nodeType": "class",
                     "props": Object {
                       "children": <DatePickerIOS
-                        date={2018-10-12T08:04:04.458Z}
+                        date={2018-10-12T08:11:55.815Z}
                         onDateChange={[Function]}
                       />,
                     },
@@ -2782,7 +2782,7 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "class",
                       "props": Object {
-                        "date": 2018-10-12T08:04:04.458Z,
+                        "date": 2018-10-12T08:11:55.815Z,
                         "onDateChange": [Function],
                       },
                       "ref": null,

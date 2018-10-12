@@ -6,7 +6,7 @@ import {
   View,
   Dimensions
 } from 'react-native';
-
+import {Icon} from 'native-base';
 import MapView ,{ Marker } from 'react-native-maps';
 import Polyline from '@mapbox/polyline';
 import {scale} from '../global';
@@ -64,7 +64,7 @@ export default class RnDirectionsApp extends Component {
   render() {
       let {showDirection} = this.state;
     return (
-
+      <View style={{flex:1}}>
               <MapView style={styles.map} initialRegion={{
                   latitude: 17.678948, longitude: 83.284446,
                   latitudeDelta: 0.0922,
@@ -77,26 +77,28 @@ export default class RnDirectionsApp extends Component {
                             strokeColor="rgb(62,132,235)"/>
                   <Marker
                      coordinate={{latitude: 17.704788, longitude: 83.297144  }}
+                     image={require('../assets/icons/map_location_red.png')}
                    >
-                     <Image source={require('../assets/icons/map_location_red.png')} style={{ width: scale(30), height: scale(30) }} resizeMode="contain" resizeMethod="resize"/>
                      <MapView.Callout tooltip >
-                      <View style={{justifyContent:'center'}}>
-                                <Text style={styles.tooltipStyle}>YOU ARE HERE</Text>
-                      </View>
+                     <View style={{justifyContent:'center',flexDirection:'column'}}>
+                        <Text style={styles.tooltipStyle}>YOU ARE HERE</Text>
+                        <Icon name='md-arrow-dropdown' style={{color:'#F42922',marginTop:scale(-13),marginLeft:scale(55)}}/> 
+                     </View>
                   </MapView.Callout>
                    </Marker>
                     <Marker
                      coordinate={{latitude: 17.678948, longitude: 83.284446 }}
+                     image={require('../assets/icons/car.png')}
                      >
-                     <Image source={require('../assets/icons/car.png')} style={{ width: scale(50), height: scale(50) }} resizeMode="contain" resizeMethod="resize"/>
                    </Marker>
                    <Marker
                      coordinate={{latitude: 17.632535, longitude: 83.227539  }}
+                     image={require('../assets/icons/map_location_blue.png')}
                      >
-                     <Image source={require('../assets/icons/map_location_blue.png')} style={{ width: scale(30), height: scale(30) }} resizeMode="contain" resizeMethod="resize"/>
                    </Marker>
 
               </MapView>
+              </View>
     );
   }
 }

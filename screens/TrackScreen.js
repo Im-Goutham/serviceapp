@@ -78,10 +78,10 @@ class TrackScreen extends Component {
                                 right={
                                     <View style={{ backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection: "row" }}>
                                         <TouchableOpacity style={{ width: "50%", height: scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}>
-                                            <Icon name='md-search' style={{ color: '#fff', fontSize: scale(25), fontWeight: 'bold' }} />
+                                            <Icon name='md-search' style={{ color: '#fff', fontSize: scale(25),fontFamily: 'Montserrat-Bold' }} />
                                         </TouchableOpacity>
                                         <TouchableOpacity onPress={this.navigateToScreen('account')} style={{ width: "50%", height: scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}>
-                                            <Icon name='md-person' style={{ color: '#fff', fontSize: scale(25), fontWeight: 'bold' }} />
+                                            <Icon name='md-person' style={{ color: '#fff', fontSize: scale(25), fontFamily: 'Montserrat-Bold' }} />
                                         </TouchableOpacity>
                                     </View>
                                 }

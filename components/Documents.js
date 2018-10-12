@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         color:'#3399ff',
         paddingLeft:scale(10),
         fontSize:scale(20),
-        fontWeight: 'bold'
+        fontFamily: 'Montserrat-Bold',
     },
     img_placeholder: {
         width: scale(90),

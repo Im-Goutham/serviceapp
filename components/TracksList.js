@@ -90,7 +90,7 @@ class TracksList extends Component {
           <View style={styles.li} >
             <View style={{flex:1,flexDirection:'row'}}>
                 <View style={{flex:2}}>
-                    <Text style={{fontSize:scale(16),fontWeight:'bold'}}>Need Cook</Text>
+                    <Text style={{fontSize:scale(16),fontFamily: 'Montserrat-Bold'}}>Need Cook</Text>
                  </View>   
                  <View style={{flex:1}}>
                     <Text style={{fontSize:scale(16),color:'#008000'}}>$240</Text>
@@ -109,10 +109,10 @@ class TracksList extends Component {
                     </View>
                     <View style={{flexDirection:'row',marginTop:scale(5)}}>
                         <View style={{flex:2}}>
-                              <Text style={{fontSize:scale(12),fontWeight:'bold'}}><Icon style={{color:'#007FFA',fontSize:scale(15)}} active name="ios-calendar-outline" /> <Text style={{paddingLeft:scale(5)}}>Before the 19 Sep 2018</Text></Text>
+                              <Text style={{fontSize:scale(12),fontFamily: 'Montserrat-Bold',}}><Icon style={{color:'#007FFA',fontSize:scale(15)}} active name="ios-calendar-outline" /> <Text style={{paddingLeft:scale(5)}}>Before the 19 Sep 2018</Text></Text>
                         </View>
                         <View style={{flex:1}}>
-                              <Text style={{fontSize:scale(12),fontWeight:'bold'}}><Icon style={{color:'#c33c4c',fontSize:scale(15)}} active name="md-pin" />  <Text style={{paddingLeft:scale(5)}}>3km </Text></Text>
+                              <Text style={{fontSize:scale(12),fontFamily: 'Montserrat-Bold'}}><Icon style={{color:'#c33c4c',fontSize:scale(15)}} active name="md-pin" />  <Text style={{paddingLeft:scale(5)}}>3km </Text></Text>
                         </View>
                     </View>
                  </View> 
@@ -166,7 +166,7 @@ var styles = StyleSheet.create({
 btnText: { 
     textAlign:'center',
     color:'red',
-    fontWeight:'bold',
+    fontFamily: 'Montserrat-Bold',
     fontSize:scale(15)
 },
   })

@@ -186,7 +186,7 @@ class FindJobScreen extends Component {
                             </View>
                              <View style={{flexDirection: 'row', justifyContent: 'space-between',paddingTop:scale(3)}}>
                                     <View style={{flex: 1, flexDirection: 'row'}}>
-                                        <Image style={{width: scale(15), height: scale(15),marginTop:scale(3)}} source={require('../assets/icons/location_red.png')} resizeMode="contain" resizeMethod="resize"/>
+                                        <Image style={{width: scale(15), height: scale(15),marginTop:scale(3)}} source={require('../assets/icons/map_location_red.png')} resizeMode="contain" resizeMethod="resize"/>
                                         <Text style={{paddingLeft: scale(5), fontSize: scale(14), fontFamily: "Montserrat-Light"}}>
                                             3 mi
                                         </Text>
@@ -398,7 +398,6 @@ imgStyle:{
       fontFamily:"Montserrat-Bold",
         textAlign:'center',
         color:'white',
-        fontWeight:'bold',
         fontSize:scale(12)
     },
 })

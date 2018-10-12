@@ -19,7 +19,7 @@ import Carousel from '../components/Carousel';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import * as actions from '../actions';
-import { scale,height } from '../global';
+import { scale } from '../global';
 import HeaderScreen from './HeaderScreen';
 import SearchBar from '../components/SearchBar';
 let menu = require('../assets/icons/menu.png');
@@ -313,7 +313,7 @@ const styles = StyleSheet.create({
         color: 'white',
         textAlign: 'left',
         fontSize: scale(35),
-        fontWeight: 'bold'
+        fontFamily: 'Montserrat-Bold',
     },
     borderImg: { width: '100%', height: scale(31) },
     servicesBox: {
@@ -348,7 +348,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         color: 'white',
         fontSize: scale(16),
-        fontWeight: 'bold'
+        fontFamily: 'Montserrat-Bold',
     },
     categoryBox: {
         flexDirection: 'column',
