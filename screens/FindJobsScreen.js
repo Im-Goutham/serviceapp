@@ -260,6 +260,7 @@ class FindJobScreen extends Component {
                         flex: 1
                     }}>
                     <HeaderScreen
+                        is_home={true}
                         header={
                             <Header
                                 navigation={this.props.navigation}
@@ -278,8 +279,10 @@ class FindJobScreen extends Component {
                                  </View>
                                     }
                                 title={
-                                    <View style={{ justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
-                                        <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20),paddingLeft:scale(10)}}>Find Jobs</Text>
+                                    <View style={{ backgroundColor: 'transparent', justifyContent : 'center', alignItems: 'flex-start', height:scale(54)}}>
+                                        <Text style={{ fontFamily: 'Montserrat-Bold', color:"#fff", fontSize: scale(20), 
+                                        // paddingLeft:scale(10)
+                                        }}>Find Jobs</Text>
                                     </View>
                                 }
                                 right={

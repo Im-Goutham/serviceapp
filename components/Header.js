@@ -21,13 +21,13 @@ class Header extends Component {
           alignItems:'flex-end'
           // borderRadius: 5
         }}>
-        <View style={{width: "20%", backgroundColor: 'transparent', justifyContent:"center", alignItems: "flex-start" }}>
+        <View style={{ width: this.props.is_home ? "15%" : "20%", backgroundColor: 'transparent', justifyContent:"center", alignItems: "flex-start", paddingRight:scale(10) }}>
           {left}
         </View>
-        <View style={{width: right ? "60%" : '100%', backgroundColor: 'transparent', justifyContent: "center", alignItems: 'flex-start'}}>
+        <View style={{width: right ? this.props.is_home ? "60%" : "55%" : '100%', backgroundColor: 'transparent', justifyContent: "center", alignItems: 'flex-start'}}>
           {title}
         </View>
-        <View style={{width: right ? "20%" : '0%', backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
+        <View style={{width: right ? "25%" : '0%', backgroundColor: 'transparent', justifyContent: "flex-end", alignItems: 'center', flexDirection:"row"}}>
           {right}
         </View>
 

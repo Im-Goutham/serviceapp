@@ -304,7 +304,7 @@ class MessageScreen extends Component {
                                right={
                                 <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
                                 <TouchableOpacity onPress={() => this.props.navigation.openDrawer()} style={{width: "50%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                <Image source={require('../assets/icons/user_block.png')} style={{ width: '100%', height: scale(54)}} resizeMode="contain" resizeMethod="resize"/>
+                                <Image source={require('../assets/icons/user_block.png')} style={{ width: '100%', height: scale(25)}} resizeMode="contain" resizeMethod="resize"/>
                                 </TouchableOpacity>
                             </View>
                                }
