@@ -146,6 +146,7 @@ class HomeScreen extends Component {
                     <HeaderScreen
                         header={
                             <Header
+                            is_home={true}
                                 navigation={this.props.navigation}
                                 left={
                                     <TouchableOpacity
@@ -155,7 +156,7 @@ class HomeScreen extends Component {
                                     </TouchableOpacity>
                                 }
                                 title={
-                                    <View style={{ justifyContent: 'center', width: '100%', alignItems: 'flex-start', height: scale(54) }}>
+                                    <View style={{ backgroundColor:"transparent", justifyContent: 'center', width: '100%', alignItems: 'flex-start', height: scale(54) }}>
                                         <Image source={logo} style={{ width: scale(140), height: scale(24) }} resizeMode="contain" resizeMethod="resize" />
                                     </View>
                                 }
