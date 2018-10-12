@@ -1,0 +1,447 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChatMessage Snapshot testing should have same snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Component>
+    <Component
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+            "marginLeft": 6.9565217391304355,
+            "marginRight": 0,
+          },
+          Object {
+            "marginBottom": 8.695652173913045,
+          },
+          Object {},
+        ]
+      }
+    >
+      <Bubble
+        containerStyle={Object {}}
+        containerToNextStyle={Object {}}
+        containerToPreviousStyle={Object {}}
+        currentMessage={Object {}}
+        isSameDay={[Function]}
+        isSameUser={[Function]}
+        navigation={
+          Object {
+            "goBack": [MockFunction],
+            "navigate": [MockFunction],
+          }
+        }
+        nextMessage={Object {}}
+        onLongPress={null}
+        onPress={[MockFunction]}
+        position="left"
+        previousMessage={Object {}}
+        renderBubble={null}
+        renderCustomView={null}
+        renderDay={null}
+        renderMessageImage={null}
+        renderMessageText={null}
+        renderTime={null}
+        store={
+          Object {
+            "clearActions": [Function],
+            "dispatch": [Function],
+            "getActions": [Function],
+            "getState": [Function],
+            "replaceReducer": [Function],
+            "subscribe": [Function],
+          }
+        }
+        tickStyle={Object {}}
+        touchableProps={Object {}}
+        user={Object {}}
+        wrapperStyle={Object {}}
+      />
+    </Component>
+  </Component>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        null,
+        <Component
+          style={
+            Array [
+              Object {
+                "alignItems": "flex-end",
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+                "marginLeft": 6.9565217391304355,
+                "marginRight": 0,
+              },
+              Object {
+                "marginBottom": 8.695652173913045,
+              },
+              Object {},
+            ]
+          }
+        >
+          <Bubble
+            containerStyle={Object {}}
+            containerToNextStyle={Object {}}
+            containerToPreviousStyle={Object {}}
+            currentMessage={Object {}}
+            isSameDay={[Function]}
+            isSameUser={[Function]}
+            navigation={
+              Object {
+                "goBack": [MockFunction],
+                "navigate": [MockFunction],
+              }
+            }
+            nextMessage={Object {}}
+            onLongPress={null}
+            onPress={[MockFunction]}
+            position="left"
+            previousMessage={Object {}}
+            renderBubble={null}
+            renderCustomView={null}
+            renderDay={null}
+            renderMessageImage={null}
+            renderMessageText={null}
+            renderTime={null}
+            store={
+              Object {
+                "clearActions": [Function],
+                "dispatch": [Function],
+                "getActions": [Function],
+                "getState": [Function],
+                "replaceReducer": [Function],
+                "subscribe": [Function],
+              }
+            }
+            tickStyle={Object {}}
+            touchableProps={Object {}}
+            user={Object {}}
+            wrapperStyle={Object {}}
+          />
+        </Component>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      null,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Bubble
+            containerStyle={Object {}}
+            containerToNextStyle={Object {}}
+            containerToPreviousStyle={Object {}}
+            currentMessage={Object {}}
+            isSameDay={[Function]}
+            isSameUser={[Function]}
+            navigation={
+              Object {
+                "goBack": [MockFunction],
+                "navigate": [MockFunction],
+              }
+            }
+            nextMessage={Object {}}
+            onLongPress={null}
+            onPress={[MockFunction]}
+            position="left"
+            previousMessage={Object {}}
+            renderBubble={null}
+            renderCustomView={null}
+            renderDay={null}
+            renderMessageImage={null}
+            renderMessageText={null}
+            renderTime={null}
+            store={
+              Object {
+                "clearActions": [Function],
+                "dispatch": [Function],
+                "getActions": [Function],
+                "getState": [Function],
+                "replaceReducer": [Function],
+                "subscribe": [Function],
+              }
+            }
+            tickStyle={Object {}}
+            touchableProps={Object {}}
+            user={Object {}}
+            wrapperStyle={Object {}}
+          />,
+          "style": Array [
+            Object {
+              "alignItems": "flex-end",
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+              "marginLeft": 6.9565217391304355,
+              "marginRight": 0,
+            },
+            Object {
+              "marginBottom": 8.695652173913045,
+            },
+            Object {},
+          ],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "containerStyle": Object {},
+            "containerToNextStyle": Object {},
+            "containerToPreviousStyle": Object {},
+            "currentMessage": Object {},
+            "isSameDay": [Function],
+            "isSameUser": [Function],
+            "navigation": Object {
+              "goBack": [MockFunction],
+              "navigate": [MockFunction],
+            },
+            "nextMessage": Object {},
+            "onLongPress": null,
+            "onPress": [MockFunction],
+            "position": "left",
+            "previousMessage": Object {},
+            "renderAvatar": undefined,
+            "renderBubble": null,
+            "renderCustomView": null,
+            "renderDay": null,
+            "renderMessageImage": null,
+            "renderMessageText": null,
+            "renderTime": null,
+            "store": Object {
+              "clearActions": [Function],
+              "dispatch": [Function],
+              "getActions": [Function],
+              "getState": [Function],
+              "replaceReducer": [Function],
+              "subscribe": [Function],
+            },
+            "tickStyle": Object {},
+            "touchableProps": Object {},
+            "user": Object {},
+            "wrapperStyle": Object {},
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "View",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          null,
+          <Component
+            style={
+              Array [
+                Object {
+                  "alignItems": "flex-end",
+                  "flexDirection": "row",
+                  "justifyContent": "flex-start",
+                  "marginLeft": 6.9565217391304355,
+                  "marginRight": 0,
+                },
+                Object {
+                  "marginBottom": 8.695652173913045,
+                },
+                Object {},
+              ]
+            }
+          >
+            <Bubble
+              containerStyle={Object {}}
+              containerToNextStyle={Object {}}
+              containerToPreviousStyle={Object {}}
+              currentMessage={Object {}}
+              isSameDay={[Function]}
+              isSameUser={[Function]}
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
+              nextMessage={Object {}}
+              onLongPress={null}
+              onPress={[MockFunction]}
+              position="left"
+              previousMessage={Object {}}
+              renderBubble={null}
+              renderCustomView={null}
+              renderDay={null}
+              renderMessageImage={null}
+              renderMessageText={null}
+              renderTime={null}
+              store={
+                Object {
+                  "clearActions": [Function],
+                  "dispatch": [Function],
+                  "getActions": [Function],
+                  "getState": [Function],
+                  "replaceReducer": [Function],
+                  "subscribe": [Function],
+                }
+              }
+              tickStyle={Object {}}
+              touchableProps={Object {}}
+              user={Object {}}
+              wrapperStyle={Object {}}
+            />
+          </Component>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        null,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Bubble
+              containerStyle={Object {}}
+              containerToNextStyle={Object {}}
+              containerToPreviousStyle={Object {}}
+              currentMessage={Object {}}
+              isSameDay={[Function]}
+              isSameUser={[Function]}
+              navigation={
+                Object {
+                  "goBack": [MockFunction],
+                  "navigate": [MockFunction],
+                }
+              }
+              nextMessage={Object {}}
+              onLongPress={null}
+              onPress={[MockFunction]}
+              position="left"
+              previousMessage={Object {}}
+              renderBubble={null}
+              renderCustomView={null}
+              renderDay={null}
+              renderMessageImage={null}
+              renderMessageText={null}
+              renderTime={null}
+              store={
+                Object {
+                  "clearActions": [Function],
+                  "dispatch": [Function],
+                  "getActions": [Function],
+                  "getState": [Function],
+                  "replaceReducer": [Function],
+                  "subscribe": [Function],
+                }
+              }
+              tickStyle={Object {}}
+              touchableProps={Object {}}
+              user={Object {}}
+              wrapperStyle={Object {}}
+            />,
+            "style": Array [
+              Object {
+                "alignItems": "flex-end",
+                "flexDirection": "row",
+                "justifyContent": "flex-start",
+                "marginLeft": 6.9565217391304355,
+                "marginRight": 0,
+              },
+              Object {
+                "marginBottom": 8.695652173913045,
+              },
+              Object {},
+            ],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "containerStyle": Object {},
+              "containerToNextStyle": Object {},
+              "containerToPreviousStyle": Object {},
+              "currentMessage": Object {},
+              "isSameDay": [Function],
+              "isSameUser": [Function],
+              "navigation": Object {
+                "goBack": [MockFunction],
+                "navigate": [MockFunction],
+              },
+              "nextMessage": Object {},
+              "onLongPress": null,
+              "onPress": [MockFunction],
+              "position": "left",
+              "previousMessage": Object {},
+              "renderAvatar": undefined,
+              "renderBubble": null,
+              "renderCustomView": null,
+              "renderDay": null,
+              "renderMessageImage": null,
+              "renderMessageText": null,
+              "renderTime": null,
+              "store": Object {
+                "clearActions": [Function],
+                "dispatch": [Function],
+                "getActions": [Function],
+                "getState": [Function],
+                "replaceReducer": [Function],
+                "subscribe": [Function],
+              },
+              "tickStyle": Object {},
+              "touchableProps": Object {},
+              "user": Object {},
+              "wrapperStyle": Object {},
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "View",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -19,7 +19,7 @@ import Carousel from '../components/Carousel';
 import Header from '../components/Header';
 import LinearGradient from 'react-native-linear-gradient';
 import * as actions from '../actions';
-import { scale } from '../global';
+import { scale,height } from '../global';
 import HeaderScreen from './HeaderScreen';
 import SearchBar from '../components/SearchBar';
 let menu = require('../assets/icons/menu.png');
@@ -177,10 +177,12 @@ class HomeScreen extends Component {
                             </View>
                         }
                     />
+                    
                     <View style={{ backgroundColor: "rgb(249,252, 255)", flex: 1 }}>
                         <ScrollView contentContainerStyle={{
                             justifyContent: 'space-between'
                         }}>
+                         
                             <View style={{ backgroundColor: 'rgb(249, 252, 255)', paddingHorizontal: scale(15), paddingBottom: scale(30), justifyContent: 'space-between' }}>
                                 <View style={{ flex: 1,marginHorizontal:scale(-14) }}>
                                     <Carousel />

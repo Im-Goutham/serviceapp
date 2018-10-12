@@ -1,32 +1,46 @@
 jest.unmock('redux-mock-store')
 jest.unmock('redux-thunk')
-
-import React, {Component} from 'react';
-import { View, Text, StyleSheet, ListView } from 'react-native';
-import { shallow } from 'enzyme';
+import React from 'react';
+import { shallow, mount, render } from 'enzyme';
 import configureMockStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import renderer from 'react-test-renderer';
 import AllServiceList from '../AllServiceList';
 import {initialState} from '../../config/jest/mockStore';
 
-import thunk from 'redux-thunk';
-let store;
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-function sum(a, b) {
-  return a + b;
-}
+let store = mockStore(initialState);
+
 
 describe('AllServiceList', () => {
-    let wrapper;
-    beforeEach(() => {
-        store = mockStore(initialState);
-        wrapper = shallow(<AllServiceList store={store}/>).dive();
+    let component;
+    const mockFunc = jest.fn();
+    const navigation = {
+        navigate: mockFunc,
+        goBack: mockFunc
+    }
+    beforeEach(() => { 
+    component = shallow(<AllServiceList store={store} onPress={mockFunc} navigation={navigation} />).dive();
     })
-    it('it should render 1 view component', () => {
-        expect(wrapper.find(ListView)).toBeDefined();
-    });
-    it('should return the sum of two numbers (4 + 5 = 9)', () => {
-      expect(sum(4, 5)).toEqual(9);
-    });
+
+    describe('Snapshot testing',()=>{
+        it('should have same snapshot',()=> {
+            expect(component).toMatchSnapshot();
+        })
+     })
+
+     describe('Function testing',()=>{
+    
+     })
+
+
+    //   describe('Form field testing',()=>{
+           
+    //         it('should press signUp button ',()=>{
+    //                 component.find({testID:'signUpButton'}).simulate('press');
+    //                 expect(mockFunc).toHaveBeenCalled();
+    //         })
+    //     })
 });

@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TracksList Snapshot testing should have same snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ListViewMock
+    dataSource={
+      ListViewDataSource {
+        "items": 5,
+      }
+    }
+    renderRow={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEnabled={true}
+    style={
+      Object {
+        "flex": 1,
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        undefined,
+        <StaticRenderer
+          render={[Function]}
+          shouldUpdate={true}
+        />,
+        <StaticRenderer
+          render={[Function]}
+          shouldUpdate={true}
+        />,
+        <StaticRenderer
+          render={[Function]}
+          shouldUpdate={true}
+        />,
+        <StaticRenderer
+          render={[Function]}
+          shouldUpdate={true}
+        />,
+        <StaticRenderer
+          render={[Function]}
+          shouldUpdate={true}
+        />,
+      ],
+      "dataSource": ListViewDataSource {
+        "items": 5,
+      },
+      "renderRow": [Function],
+      "renderScrollComponent": [Function],
+      "scrollEnabled": true,
+      "style": Object {
+        "flex": 1,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      undefined,
+      Object {
+        "instance": null,
+        "key": "section_s1_row_0",
+        "nodeType": "class",
+        "props": Object {
+          "render": [Function],
+          "shouldUpdate": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "section_s1_row_1",
+        "nodeType": "class",
+        "props": Object {
+          "render": [Function],
+          "shouldUpdate": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "section_s1_row_2",
+        "nodeType": "class",
+        "props": Object {
+          "render": [Function],
+          "shouldUpdate": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "section_s1_row_3",
+        "nodeType": "class",
+        "props": Object {
+          "render": [Function],
+          "shouldUpdate": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "section_s1_row_4",
+        "nodeType": "class",
+        "props": Object {
+          "render": [Function],
+          "shouldUpdate": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [MockFunction],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          undefined,
+          <StaticRenderer
+            render={[Function]}
+            shouldUpdate={true}
+          />,
+          <StaticRenderer
+            render={[Function]}
+            shouldUpdate={true}
+          />,
+          <StaticRenderer
+            render={[Function]}
+            shouldUpdate={true}
+          />,
+          <StaticRenderer
+            render={[Function]}
+            shouldUpdate={true}
+          />,
+          <StaticRenderer
+            render={[Function]}
+            shouldUpdate={true}
+          />,
+        ],
+        "dataSource": ListViewDataSource {
+          "items": 5,
+        },
+        "renderRow": [Function],
+        "renderScrollComponent": [Function],
+        "scrollEnabled": true,
+        "style": Object {
+          "flex": 1,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        undefined,
+        Object {
+          "instance": null,
+          "key": "section_s1_row_0",
+          "nodeType": "class",
+          "props": Object {
+            "render": [Function],
+            "shouldUpdate": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "section_s1_row_1",
+          "nodeType": "class",
+          "props": Object {
+            "render": [Function],
+            "shouldUpdate": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "section_s1_row_2",
+          "nodeType": "class",
+          "props": Object {
+            "render": [Function],
+            "shouldUpdate": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "section_s1_row_3",
+          "nodeType": "class",
+          "props": Object {
+            "render": [Function],
+            "shouldUpdate": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "section_s1_row_4",
+          "nodeType": "class",
+          "props": Object {
+            "render": [Function],
+            "shouldUpdate": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [MockFunction],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

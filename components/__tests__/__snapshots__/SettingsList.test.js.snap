@@ -1,0 +1,3179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SettingsList Snapshot testing should have same snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SettingsList
+    hidePhotoView={[Function]}
+    navigation={
+      Object {
+        "goBack": [MockFunction],
+        "navigate": [MockFunction],
+      }
+    }
+    onPress={[MockFunction]}
+    showBackButton={[Function]}
+    showPhotoView={[Function]}
+    signIn={[Function]}
+    store={
+      Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgb(237,237,237)",
+              "borderBottomWidth": 0.8695652173913044,
+              "flexDirection": "row",
+              "height": 69.56521739130436,
+              "justifyContent": "center",
+              "paddingHorizontal": 17.39130434782609,
+            }
+          }
+        >
+          <Component
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 2,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "color": "rgb(34,38,44)",
+                  "fontFamily": "Montserrat-Medium",
+                  "fontSize": 14.782608695652176,
+                }
+              }
+            >
+              Notifications
+            </Component>
+          </Component>
+          <Component
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "flex": 1,
+              }
+            }
+          >
+            <Styled(Switch)
+              style={
+                Object {
+                  "transform": Array [
+                    Object {
+                      "scaleX": 0.6956521739130436,
+                    },
+                    Object {
+                      "scaleY": 0.6956521739130436,
+                    },
+                  ],
+                }
+              }
+              value={true}
+            />
+          </Component>
+        </Component>,
+        <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgb(237,237,237)",
+              "borderBottomWidth": 0.8695652173913044,
+              "flexDirection": "row",
+              "height": 69.56521739130436,
+              "justifyContent": "center",
+              "paddingHorizontal": 17.39130434782609,
+            }
+          }
+        >
+          <Component
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 2,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "color": "rgb(34,38,44)",
+                  "fontFamily": "Montserrat-Medium",
+                  "fontSize": 14.782608695652176,
+                }
+              }
+            >
+              Job alerts
+            </Component>
+          </Component>
+          <Component
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "flex": 1,
+              }
+            }
+          >
+            <Styled(Switch)
+              style={
+                Object {
+                  "transform": Array [
+                    Object {
+                      "scaleX": 0.6956521739130436,
+                    },
+                    Object {
+                      "scaleY": 0.6956521739130436,
+                    },
+                  ],
+                }
+              }
+              value={true}
+            />
+          </Component>
+        </Component>,
+        <TouchableOpacity
+          activeOpacity={0.2}
+          onPress={[Function]}
+        >
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgb(237,237,237)",
+                "borderBottomWidth": 0.8695652173913044,
+                "flexDirection": "row",
+                "height": 69.56521739130436,
+                "justifyContent": "center",
+                "paddingHorizontal": 17.39130434782609,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Change Password
+              </Component>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "testUri": "../../../assets/icons/arrow_right.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 12,
+                    "width": 8,
+                  }
+                }
+              />
+            </Component>
+          </Component>
+        </TouchableOpacity>,
+        <Component
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgb(237,237,237)",
+              "borderBottomWidth": 0.8695652173913044,
+              "flexDirection": "row",
+              "height": 69.56521739130436,
+              "justifyContent": "center",
+              "paddingHorizontal": 17.39130434782609,
+            }
+          }
+        >
+          <Component
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "flex": 2,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "color": "rgb(34,38,44)",
+                  "fontFamily": "Montserrat-Medium",
+                  "fontSize": 14.782608695652176,
+                }
+              }
+            >
+              Account Active
+            </Component>
+          </Component>
+          <Component
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "flex": 1,
+              }
+            }
+          >
+            <Styled(Switch)
+              style={
+                Object {
+                  "transform": Array [
+                    Object {
+                      "scaleX": 0.6956521739130436,
+                    },
+                    Object {
+                      "scaleY": 0.6956521739130436,
+                    },
+                  ],
+                }
+              }
+              value={true}
+            />
+          </Component>
+        </Component>,
+        <TouchableOpacity
+          activeOpacity={0.2}
+          onPress={[Function]}
+        >
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgb(237,237,237)",
+                "borderBottomWidth": 0.8695652173913044,
+                "flexDirection": "row",
+                "height": 69.56521739130436,
+                "justifyContent": "center",
+                "paddingHorizontal": 17.39130434782609,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Change the language
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(186,187,189)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 11.304347826086957,
+                    "marginVertical": 4.347826086956522,
+                  }
+                }
+              >
+                English
+              </Component>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "testUri": "../../../assets/icons/arrow_right.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 10.434782608695652,
+                    "width": 6.9565217391304355,
+                  }
+                }
+              />
+            </Component>
+          </Component>
+        </TouchableOpacity>,
+        <TouchableOpacity
+          activeOpacity={0.2}
+          onPress={[Function]}
+        >
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgb(237,237,237)",
+                "borderBottomWidth": 0.8695652173913044,
+                "flexDirection": "row",
+                "height": 69.56521739130436,
+                "justifyContent": "center",
+                "paddingHorizontal": 17.39130434782609,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Delete My Account
+              </Component>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "testUri": "../../../assets/icons/arrow_right.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 10.434782608695652,
+                    "width": 6.9565217391304355,
+                  }
+                }
+              />
+            </Component>
+          </Component>
+        </TouchableOpacity>,
+        <ChangePassword
+          closeModal={[Function]}
+          visible={false}
+        />,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Notifications
+              </Component>
+            </Component>,
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                }
+              }
+            >
+              <Styled(Switch)
+                style={
+                  Object {
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6956521739130436,
+                      },
+                      Object {
+                        "scaleY": 0.6956521739130436,
+                      },
+                    ],
+                  }
+                }
+                value={true}
+              />
+            </Component>,
+          ],
+          "style": Object {
+            "alignItems": "center",
+            "borderBottomColor": "rgb(237,237,237)",
+            "borderBottomWidth": 0.8695652173913044,
+            "flexDirection": "row",
+            "height": 69.56521739130436,
+            "justifyContent": "center",
+            "paddingHorizontal": 17.39130434782609,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Notifications
+              </Component>,
+              "style": Object {
+                "alignItems": "flex-start",
+                "flex": 2,
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Notifications",
+                "style": Object {
+                  "color": "rgb(34,38,44)",
+                  "fontFamily": "Montserrat-Medium",
+                  "fontSize": 14.782608695652176,
+                },
+              },
+              "ref": null,
+              "rendered": "Notifications",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Styled(Switch)
+                style={
+                  Object {
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6956521739130436,
+                      },
+                      Object {
+                        "scaleY": 0.6956521739130436,
+                      },
+                    ],
+                  }
+                }
+                value={true}
+              />,
+              "style": Object {
+                "alignItems": "flex-end",
+                "flex": 1,
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "style": Object {
+                  "transform": Array [
+                    Object {
+                      "scaleX": 0.6956521739130436,
+                    },
+                    Object {
+                      "scaleY": 0.6956521739130436,
+                    },
+                  ],
+                },
+                "value": true,
+                "virtual": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Job alerts
+              </Component>
+            </Component>,
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                }
+              }
+            >
+              <Styled(Switch)
+                style={
+                  Object {
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6956521739130436,
+                      },
+                      Object {
+                        "scaleY": 0.6956521739130436,
+                      },
+                    ],
+                  }
+                }
+                value={true}
+              />
+            </Component>,
+          ],
+          "style": Object {
+            "alignItems": "center",
+            "borderBottomColor": "rgb(237,237,237)",
+            "borderBottomWidth": 0.8695652173913044,
+            "flexDirection": "row",
+            "height": 69.56521739130436,
+            "justifyContent": "center",
+            "paddingHorizontal": 17.39130434782609,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Job alerts
+              </Component>,
+              "style": Object {
+                "alignItems": "flex-start",
+                "flex": 2,
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Job alerts",
+                "style": Object {
+                  "color": "rgb(34,38,44)",
+                  "fontFamily": "Montserrat-Medium",
+                  "fontSize": 14.782608695652176,
+                },
+              },
+              "ref": null,
+              "rendered": "Job alerts",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Styled(Switch)
+                style={
+                  Object {
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6956521739130436,
+                      },
+                      Object {
+                        "scaleY": 0.6956521739130436,
+                      },
+                    ],
+                  }
+                }
+                value={true}
+              />,
+              "style": Object {
+                "alignItems": "flex-end",
+                "flex": 1,
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "style": Object {
+                  "transform": Array [
+                    Object {
+                      "scaleX": 0.6956521739130436,
+                    },
+                    Object {
+                      "scaleY": 0.6956521739130436,
+                    },
+                  ],
+                },
+                "value": true,
+                "virtual": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "activeOpacity": 0.2,
+          "children": <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgb(237,237,237)",
+                "borderBottomWidth": 0.8695652173913044,
+                "flexDirection": "row",
+                "height": 69.56521739130436,
+                "justifyContent": "center",
+                "paddingHorizontal": 17.39130434782609,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Change Password
+              </Component>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "testUri": "../../../assets/icons/arrow_right.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 12,
+                    "width": 8,
+                  }
+                }
+              />
+            </Component>
+          </Component>,
+          "onPress": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Change Password
+                </Component>
+              </Component>,
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 12,
+                      "width": 8,
+                    }
+                  }
+                />
+              </Component>,
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgb(237,237,237)",
+              "borderBottomWidth": 0.8695652173913044,
+              "flexDirection": "row",
+              "height": 69.56521739130436,
+              "justifyContent": "center",
+              "paddingHorizontal": 17.39130434782609,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Change Password
+                </Component>,
+                "style": Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Change Password",
+                  "style": Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  },
+                },
+                "ref": null,
+                "rendered": "Change Password",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 12,
+                      "width": 8,
+                    }
+                  }
+                />,
+                "style": Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "source": Object {
+                    "testUri": "../../../assets/icons/arrow_right.png",
+                  },
+                  "style": Object {
+                    "height": 12,
+                    "width": 8,
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Account Active
+              </Component>
+            </Component>,
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                }
+              }
+            >
+              <Styled(Switch)
+                style={
+                  Object {
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6956521739130436,
+                      },
+                      Object {
+                        "scaleY": 0.6956521739130436,
+                      },
+                    ],
+                  }
+                }
+                value={true}
+              />
+            </Component>,
+          ],
+          "style": Object {
+            "alignItems": "center",
+            "borderBottomColor": "rgb(237,237,237)",
+            "borderBottomWidth": 0.8695652173913044,
+            "flexDirection": "row",
+            "height": 69.56521739130436,
+            "justifyContent": "center",
+            "paddingHorizontal": 17.39130434782609,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Account Active
+              </Component>,
+              "style": Object {
+                "alignItems": "flex-start",
+                "flex": 2,
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Account Active",
+                "style": Object {
+                  "color": "rgb(34,38,44)",
+                  "fontFamily": "Montserrat-Medium",
+                  "fontSize": 14.782608695652176,
+                },
+              },
+              "ref": null,
+              "rendered": "Account Active",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Styled(Switch)
+                style={
+                  Object {
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6956521739130436,
+                      },
+                      Object {
+                        "scaleY": 0.6956521739130436,
+                      },
+                    ],
+                  }
+                }
+                value={true}
+              />,
+              "style": Object {
+                "alignItems": "flex-end",
+                "flex": 1,
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "style": Object {
+                  "transform": Array [
+                    Object {
+                      "scaleX": 0.6956521739130436,
+                    },
+                    Object {
+                      "scaleY": 0.6956521739130436,
+                    },
+                  ],
+                },
+                "value": true,
+                "virtual": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "activeOpacity": 0.2,
+          "children": <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgb(237,237,237)",
+                "borderBottomWidth": 0.8695652173913044,
+                "flexDirection": "row",
+                "height": 69.56521739130436,
+                "justifyContent": "center",
+                "paddingHorizontal": 17.39130434782609,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Change the language
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(186,187,189)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 11.304347826086957,
+                    "marginVertical": 4.347826086956522,
+                  }
+                }
+              >
+                English
+              </Component>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "testUri": "../../../assets/icons/arrow_right.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 10.434782608695652,
+                    "width": 6.9565217391304355,
+                  }
+                }
+              />
+            </Component>
+          </Component>,
+          "onPress": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Component
+                style={
+                  Object {
+                    "flex": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Change the language
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(186,187,189)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 11.304347826086957,
+                      "marginVertical": 4.347826086956522,
+                    }
+                  }
+                >
+                  English
+                </Component>
+              </Component>,
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 10.434782608695652,
+                      "width": 6.9565217391304355,
+                    }
+                  }
+                />
+              </Component>,
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgb(237,237,237)",
+              "borderBottomWidth": 0.8695652173913044,
+              "flexDirection": "row",
+              "height": 69.56521739130436,
+              "justifyContent": "center",
+              "paddingHorizontal": 17.39130434782609,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Component
+                    style={
+                      Object {
+                        "color": "rgb(34,38,44)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 14.782608695652176,
+                      }
+                    }
+                  >
+                    Change the language
+                  </Component>,
+                  <Component
+                    style={
+                      Object {
+                        "color": "rgb(186,187,189)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 11.304347826086957,
+                        "marginVertical": 4.347826086956522,
+                      }
+                    }
+                  >
+                    English
+                  </Component>,
+                ],
+                "style": Object {
+                  "flex": 2,
+                },
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Change the language",
+                    "style": Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "Change the language",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "English",
+                    "style": Object {
+                      "color": "rgb(186,187,189)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 11.304347826086957,
+                      "marginVertical": 4.347826086956522,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "English",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 10.434782608695652,
+                      "width": 6.9565217391304355,
+                    }
+                  }
+                />,
+                "style": Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "source": Object {
+                    "testUri": "../../../assets/icons/arrow_right.png",
+                  },
+                  "style": Object {
+                    "height": 10.434782608695652,
+                    "width": 6.9565217391304355,
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "activeOpacity": 0.2,
+          "children": <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgb(237,237,237)",
+                "borderBottomWidth": 0.8695652173913044,
+                "flexDirection": "row",
+                "height": 69.56521739130436,
+                "justifyContent": "center",
+                "paddingHorizontal": 17.39130434782609,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Delete My Account
+              </Component>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                }
+              }
+            >
+              <Image
+                source={
+                  Object {
+                    "testUri": "../../../assets/icons/arrow_right.png",
+                  }
+                }
+                style={
+                  Object {
+                    "height": 10.434782608695652,
+                    "width": 6.9565217391304355,
+                  }
+                }
+              />
+            </Component>
+          </Component>,
+          "onPress": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Delete My Account
+                </Component>
+              </Component>,
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 10.434782608695652,
+                      "width": 6.9565217391304355,
+                    }
+                  }
+                />
+              </Component>,
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgb(237,237,237)",
+              "borderBottomWidth": 0.8695652173913044,
+              "flexDirection": "row",
+              "height": 69.56521739130436,
+              "justifyContent": "center",
+              "paddingHorizontal": 17.39130434782609,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Delete My Account
+                </Component>,
+                "style": Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Delete My Account",
+                  "style": Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  },
+                },
+                "ref": null,
+                "rendered": "Delete My Account",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 10.434782608695652,
+                      "width": 6.9565217391304355,
+                    }
+                  }
+                />,
+                "style": Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "source": Object {
+                    "testUri": "../../../assets/icons/arrow_right.png",
+                  },
+                  "style": Object {
+                    "height": 10.434782608695652,
+                    "width": 6.9565217391304355,
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "closeModal": [Function],
+          "visible": false,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [MockFunction],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgb(237,237,237)",
+                "borderBottomWidth": 0.8695652173913044,
+                "flexDirection": "row",
+                "height": 69.56521739130436,
+                "justifyContent": "center",
+                "paddingHorizontal": 17.39130434782609,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Notifications
+              </Component>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                }
+              }
+            >
+              <Styled(Switch)
+                style={
+                  Object {
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6956521739130436,
+                      },
+                      Object {
+                        "scaleY": 0.6956521739130436,
+                      },
+                    ],
+                  }
+                }
+                value={true}
+              />
+            </Component>
+          </Component>,
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgb(237,237,237)",
+                "borderBottomWidth": 0.8695652173913044,
+                "flexDirection": "row",
+                "height": 69.56521739130436,
+                "justifyContent": "center",
+                "paddingHorizontal": 17.39130434782609,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Job alerts
+              </Component>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                }
+              }
+            >
+              <Styled(Switch)
+                style={
+                  Object {
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6956521739130436,
+                      },
+                      Object {
+                        "scaleY": 0.6956521739130436,
+                      },
+                    ],
+                  }
+                }
+                value={true}
+              />
+            </Component>
+          </Component>,
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderBottomColor": "rgb(237,237,237)",
+                  "borderBottomWidth": 0.8695652173913044,
+                  "flexDirection": "row",
+                  "height": 69.56521739130436,
+                  "justifyContent": "center",
+                  "paddingHorizontal": 17.39130434782609,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Change Password
+                </Component>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 12,
+                      "width": 8,
+                    }
+                  }
+                />
+              </Component>
+            </Component>
+          </TouchableOpacity>,
+          <Component
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgb(237,237,237)",
+                "borderBottomWidth": 0.8695652173913044,
+                "flexDirection": "row",
+                "height": 69.56521739130436,
+                "justifyContent": "center",
+                "paddingHorizontal": 17.39130434782609,
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  }
+                }
+              >
+                Account Active
+              </Component>
+            </Component>
+            <Component
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                }
+              }
+            >
+              <Styled(Switch)
+                style={
+                  Object {
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6956521739130436,
+                      },
+                      Object {
+                        "scaleY": 0.6956521739130436,
+                      },
+                    ],
+                  }
+                }
+                value={true}
+              />
+            </Component>
+          </Component>,
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderBottomColor": "rgb(237,237,237)",
+                  "borderBottomWidth": 0.8695652173913044,
+                  "flexDirection": "row",
+                  "height": 69.56521739130436,
+                  "justifyContent": "center",
+                  "paddingHorizontal": 17.39130434782609,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "flex": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Change the language
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(186,187,189)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 11.304347826086957,
+                      "marginVertical": 4.347826086956522,
+                    }
+                  }
+                >
+                  English
+                </Component>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 10.434782608695652,
+                      "width": 6.9565217391304355,
+                    }
+                  }
+                />
+              </Component>
+            </Component>
+          </TouchableOpacity>,
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderBottomColor": "rgb(237,237,237)",
+                  "borderBottomWidth": 0.8695652173913044,
+                  "flexDirection": "row",
+                  "height": 69.56521739130436,
+                  "justifyContent": "center",
+                  "paddingHorizontal": 17.39130434782609,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Delete My Account
+                </Component>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 10.434782608695652,
+                      "width": 6.9565217391304355,
+                    }
+                  }
+                />
+              </Component>
+            </Component>
+          </TouchableOpacity>,
+          <ChangePassword
+            closeModal={[Function]}
+            visible={false}
+          />,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Notifications
+                </Component>
+              </Component>,
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Styled(Switch)
+                  style={
+                    Object {
+                      "transform": Array [
+                        Object {
+                          "scaleX": 0.6956521739130436,
+                        },
+                        Object {
+                          "scaleY": 0.6956521739130436,
+                        },
+                      ],
+                    }
+                  }
+                  value={true}
+                />
+              </Component>,
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgb(237,237,237)",
+              "borderBottomWidth": 0.8695652173913044,
+              "flexDirection": "row",
+              "height": 69.56521739130436,
+              "justifyContent": "center",
+              "paddingHorizontal": 17.39130434782609,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Notifications
+                </Component>,
+                "style": Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Notifications",
+                  "style": Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  },
+                },
+                "ref": null,
+                "rendered": "Notifications",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Styled(Switch)
+                  style={
+                    Object {
+                      "transform": Array [
+                        Object {
+                          "scaleX": 0.6956521739130436,
+                        },
+                        Object {
+                          "scaleY": 0.6956521739130436,
+                        },
+                      ],
+                    }
+                  }
+                  value={true}
+                />,
+                "style": Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "style": Object {
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6956521739130436,
+                      },
+                      Object {
+                        "scaleY": 0.6956521739130436,
+                      },
+                    ],
+                  },
+                  "value": true,
+                  "virtual": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Job alerts
+                </Component>
+              </Component>,
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Styled(Switch)
+                  style={
+                    Object {
+                      "transform": Array [
+                        Object {
+                          "scaleX": 0.6956521739130436,
+                        },
+                        Object {
+                          "scaleY": 0.6956521739130436,
+                        },
+                      ],
+                    }
+                  }
+                  value={true}
+                />
+              </Component>,
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgb(237,237,237)",
+              "borderBottomWidth": 0.8695652173913044,
+              "flexDirection": "row",
+              "height": 69.56521739130436,
+              "justifyContent": "center",
+              "paddingHorizontal": 17.39130434782609,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Job alerts
+                </Component>,
+                "style": Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Job alerts",
+                  "style": Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  },
+                },
+                "ref": null,
+                "rendered": "Job alerts",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Styled(Switch)
+                  style={
+                    Object {
+                      "transform": Array [
+                        Object {
+                          "scaleX": 0.6956521739130436,
+                        },
+                        Object {
+                          "scaleY": 0.6956521739130436,
+                        },
+                      ],
+                    }
+                  }
+                  value={true}
+                />,
+                "style": Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "style": Object {
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6956521739130436,
+                      },
+                      Object {
+                        "scaleY": 0.6956521739130436,
+                      },
+                    ],
+                  },
+                  "value": true,
+                  "virtual": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activeOpacity": 0.2,
+            "children": <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderBottomColor": "rgb(237,237,237)",
+                  "borderBottomWidth": 0.8695652173913044,
+                  "flexDirection": "row",
+                  "height": 69.56521739130436,
+                  "justifyContent": "center",
+                  "paddingHorizontal": 17.39130434782609,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Change Password
+                </Component>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 12,
+                      "width": 8,
+                    }
+                  }
+                />
+              </Component>
+            </Component>,
+            "onPress": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "flex": 2,
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "color": "rgb(34,38,44)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 14.782608695652176,
+                      }
+                    }
+                  >
+                    Change Password
+                  </Component>
+                </Component>,
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <Image
+                    source={
+                      Object {
+                        "testUri": "../../../assets/icons/arrow_right.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 12,
+                        "width": 8,
+                      }
+                    }
+                  />
+                </Component>,
+              ],
+              "style": Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgb(237,237,237)",
+                "borderBottomWidth": 0.8695652173913044,
+                "flexDirection": "row",
+                "height": 69.56521739130436,
+                "justifyContent": "center",
+                "paddingHorizontal": 17.39130434782609,
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Component
+                    style={
+                      Object {
+                        "color": "rgb(34,38,44)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 14.782608695652176,
+                      }
+                    }
+                  >
+                    Change Password
+                  </Component>,
+                  "style": Object {
+                    "alignItems": "flex-start",
+                    "flex": 2,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Change Password",
+                    "style": Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "Change Password",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Image
+                    source={
+                      Object {
+                        "testUri": "../../../assets/icons/arrow_right.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 12,
+                        "width": 8,
+                      }
+                    }
+                  />,
+                  "style": Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "source": Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    },
+                    "style": Object {
+                      "height": 12,
+                      "width": 8,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Account Active
+                </Component>
+              </Component>,
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Styled(Switch)
+                  style={
+                    Object {
+                      "transform": Array [
+                        Object {
+                          "scaleX": 0.6956521739130436,
+                        },
+                        Object {
+                          "scaleY": 0.6956521739130436,
+                        },
+                      ],
+                    }
+                  }
+                  value={true}
+                />
+              </Component>,
+            ],
+            "style": Object {
+              "alignItems": "center",
+              "borderBottomColor": "rgb(237,237,237)",
+              "borderBottomWidth": 0.8695652173913044,
+              "flexDirection": "row",
+              "height": 69.56521739130436,
+              "justifyContent": "center",
+              "paddingHorizontal": 17.39130434782609,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Account Active
+                </Component>,
+                "style": Object {
+                  "alignItems": "flex-start",
+                  "flex": 2,
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Account Active",
+                  "style": Object {
+                    "color": "rgb(34,38,44)",
+                    "fontFamily": "Montserrat-Medium",
+                    "fontSize": 14.782608695652176,
+                  },
+                },
+                "ref": null,
+                "rendered": "Account Active",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Styled(Switch)
+                  style={
+                    Object {
+                      "transform": Array [
+                        Object {
+                          "scaleX": 0.6956521739130436,
+                        },
+                        Object {
+                          "scaleY": 0.6956521739130436,
+                        },
+                      ],
+                    }
+                  }
+                  value={true}
+                />,
+                "style": Object {
+                  "alignItems": "flex-end",
+                  "flex": 1,
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "style": Object {
+                    "transform": Array [
+                      Object {
+                        "scaleX": 0.6956521739130436,
+                      },
+                      Object {
+                        "scaleY": 0.6956521739130436,
+                      },
+                    ],
+                  },
+                  "value": true,
+                  "virtual": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activeOpacity": 0.2,
+            "children": <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderBottomColor": "rgb(237,237,237)",
+                  "borderBottomWidth": 0.8695652173913044,
+                  "flexDirection": "row",
+                  "height": 69.56521739130436,
+                  "justifyContent": "center",
+                  "paddingHorizontal": 17.39130434782609,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "flex": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Change the language
+                </Component>
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(186,187,189)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 11.304347826086957,
+                      "marginVertical": 4.347826086956522,
+                    }
+                  }
+                >
+                  English
+                </Component>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 10.434782608695652,
+                      "width": 6.9565217391304355,
+                    }
+                  }
+                />
+              </Component>
+            </Component>,
+            "onPress": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Component
+                  style={
+                    Object {
+                      "flex": 2,
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "color": "rgb(34,38,44)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 14.782608695652176,
+                      }
+                    }
+                  >
+                    Change the language
+                  </Component>
+                  <Component
+                    style={
+                      Object {
+                        "color": "rgb(186,187,189)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 11.304347826086957,
+                        "marginVertical": 4.347826086956522,
+                      }
+                    }
+                  >
+                    English
+                  </Component>
+                </Component>,
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <Image
+                    source={
+                      Object {
+                        "testUri": "../../../assets/icons/arrow_right.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 10.434782608695652,
+                        "width": 6.9565217391304355,
+                      }
+                    }
+                  />
+                </Component>,
+              ],
+              "style": Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgb(237,237,237)",
+                "borderBottomWidth": 0.8695652173913044,
+                "flexDirection": "row",
+                "height": 69.56521739130436,
+                "justifyContent": "center",
+                "paddingHorizontal": 17.39130434782609,
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Component
+                      style={
+                        Object {
+                          "color": "rgb(34,38,44)",
+                          "fontFamily": "Montserrat-Medium",
+                          "fontSize": 14.782608695652176,
+                        }
+                      }
+                    >
+                      Change the language
+                    </Component>,
+                    <Component
+                      style={
+                        Object {
+                          "color": "rgb(186,187,189)",
+                          "fontFamily": "Montserrat-Medium",
+                          "fontSize": 11.304347826086957,
+                          "marginVertical": 4.347826086956522,
+                        }
+                      }
+                    >
+                      English
+                    </Component>,
+                  ],
+                  "style": Object {
+                    "flex": 2,
+                  },
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "Change the language",
+                      "style": Object {
+                        "color": "rgb(34,38,44)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 14.782608695652176,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "Change the language",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "English",
+                      "style": Object {
+                        "color": "rgb(186,187,189)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 11.304347826086957,
+                        "marginVertical": 4.347826086956522,
+                      },
+                    },
+                    "ref": null,
+                    "rendered": "English",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Image
+                    source={
+                      Object {
+                        "testUri": "../../../assets/icons/arrow_right.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 10.434782608695652,
+                        "width": 6.9565217391304355,
+                      }
+                    }
+                  />,
+                  "style": Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "source": Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    },
+                    "style": Object {
+                      "height": 10.434782608695652,
+                      "width": 6.9565217391304355,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "activeOpacity": 0.2,
+            "children": <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "borderBottomColor": "rgb(237,237,237)",
+                  "borderBottomWidth": 0.8695652173913044,
+                  "flexDirection": "row",
+                  "height": 69.56521739130436,
+                  "justifyContent": "center",
+                  "paddingHorizontal": 17.39130434782609,
+                }
+              }
+            >
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "flex": 2,
+                  }
+                }
+              >
+                <Component
+                  style={
+                    Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    }
+                  }
+                >
+                  Delete My Account
+                </Component>
+              </Component>
+              <Component
+                style={
+                  Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  }
+                }
+              >
+                <Image
+                  source={
+                    Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    }
+                  }
+                  style={
+                    Object {
+                      "height": 10.434782608695652,
+                      "width": 6.9565217391304355,
+                    }
+                  }
+                />
+              </Component>
+            </Component>,
+            "onPress": [Function],
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "flex": 2,
+                    }
+                  }
+                >
+                  <Component
+                    style={
+                      Object {
+                        "color": "rgb(34,38,44)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 14.782608695652176,
+                      }
+                    }
+                  >
+                    Delete My Account
+                  </Component>
+                </Component>,
+                <Component
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <Image
+                    source={
+                      Object {
+                        "testUri": "../../../assets/icons/arrow_right.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 10.434782608695652,
+                        "width": 6.9565217391304355,
+                      }
+                    }
+                  />
+                </Component>,
+              ],
+              "style": Object {
+                "alignItems": "center",
+                "borderBottomColor": "rgb(237,237,237)",
+                "borderBottomWidth": 0.8695652173913044,
+                "flexDirection": "row",
+                "height": 69.56521739130436,
+                "justifyContent": "center",
+                "paddingHorizontal": 17.39130434782609,
+              },
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Component
+                    style={
+                      Object {
+                        "color": "rgb(34,38,44)",
+                        "fontFamily": "Montserrat-Medium",
+                        "fontSize": 14.782608695652176,
+                      }
+                    }
+                  >
+                    Delete My Account
+                  </Component>,
+                  "style": Object {
+                    "alignItems": "flex-start",
+                    "flex": 2,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Delete My Account",
+                    "style": Object {
+                      "color": "rgb(34,38,44)",
+                      "fontFamily": "Montserrat-Medium",
+                      "fontSize": 14.782608695652176,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "Delete My Account",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Image
+                    source={
+                      Object {
+                        "testUri": "../../../assets/icons/arrow_right.png",
+                      }
+                    }
+                    style={
+                      Object {
+                        "height": 10.434782608695652,
+                        "width": 6.9565217391304355,
+                      }
+                    }
+                  />,
+                  "style": Object {
+                    "alignItems": "flex-end",
+                    "flex": 1,
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "source": Object {
+                      "testUri": "../../../assets/icons/arrow_right.png",
+                    },
+                    "style": Object {
+                      "height": 10.434782608695652,
+                      "width": 6.9565217391304355,
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "closeModal": [Function],
+            "visible": false,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [MockFunction],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

@@ -13,7 +13,7 @@ class LanguageList extends Component {
     super();
 
     this.state = {
-          languages: ['English', 'french', 'Spanish', 'Italian', 'Portuguese', 'German','Hindi', 'Bengali', 'Telugu', 'Marathi', 'Tamil', 'Gujarati', 'Kannada',  'Malayalam'],
+          languages: ['English', 'French', 'Spanish', 'Italian', 'Portuguese', 'German','Hindi', 'Bengali', 'Telugu', 'Marathi', 'Tamil', 'Gujarati', 'Kannada',  'Malayalam'],
           selectedkey: 0
     };
   }
@@ -27,7 +27,7 @@ class LanguageList extends Component {
       <View style={{flex:1}}>
       {
             languages.map((language,index)=>{
-                return  <TouchableOpacity  onPress={()=>this.setState({selectedkey : index})}>
+                return  <TouchableOpacity key={index} onPress={()=>this.setState({selectedkey : index})}>
                 <View style={styles.mainBox}>
                 <View style={{flex:2}}><Text style={[styles.textStyle,{ color: index === this.state.selectedkey ? "rgb(61, 133, 239)" : "#000" }]}>{language}</Text></View>
                 <View style={{flex:1,alignItems:'flex-end'}}>
