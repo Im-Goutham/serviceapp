@@ -146,7 +146,7 @@ class HomeScreen extends Component {
                     <HeaderScreen
                         header={
                             <Header
-                            is_home={true}
+                                is_home={true}
                                 navigation={this.props.navigation}
                                 left={
                                     <TouchableOpacity
@@ -156,14 +156,14 @@ class HomeScreen extends Component {
                                     </TouchableOpacity>
                                 }
                                 title={
-                                    <View style={{ backgroundColor:"transparent", justifyContent: 'center', width: '100%', alignItems: 'flex-start', height: scale(54),paddingTop:scale(3) }}>
+                                    <View style={{ backgroundColor: "transparent", justifyContent: 'center', width: '100%', alignItems: 'flex-start', height: scale(54), paddingTop: scale(3) }}>
                                         <Image source={logo} style={{ width: scale(140), height: scale(24) }} resizeMode="contain" resizeMethod="resize" />
                                     </View>
                                 }
                                 right={
-                                    <View style={{backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection:"row"}}>
-                                    <TouchableOpacity onPress={this.navigateToScreen('account')} style={{width: "75%", height:scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center'}}>
-                                            <Image source={require('../images/svp1.png')} style={{ width:scale(36), height: scale(36), borderRadius: scale(18),borderWidth:scale(3), borderColor: 'white', overflow: 'hidden' }}resizeMode="contain" resizeMethod="resize" />
+                                    <View style={{ backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center', flexDirection: "row" }}>
+                                        <TouchableOpacity onPress={this.navigateToScreen('account')} style={{ width: "75%", height: scale(54), backgroundColor: 'transparent', justifyContent: "center", alignItems: 'center' }}>
+                                            <Image source={require('../images/svp1.png')} style={{ width: scale(36), height: scale(36), borderRadius: scale(18), borderWidth: scale(3), borderColor: 'white', overflow: 'hidden' }} resizeMode="contain" resizeMethod="resize" />
                                         </TouchableOpacity>
                                     </View>
                                 }
@@ -175,14 +175,14 @@ class HomeScreen extends Component {
                             </View>
                         }
                     />
-                    
+
                     <View style={{ backgroundColor: "rgb(249,252, 255)", flex: 1 }}>
                         <ScrollView contentContainerStyle={{
                             justifyContent: 'space-between'
                         }}>
-                         
+
                             <View style={{ backgroundColor: 'rgb(249, 252, 255)', paddingHorizontal: scale(15), paddingBottom: scale(30), justifyContent: 'space-between' }}>
-                                <View style={{ flex: 1,marginHorizontal:scale(-14) }}>
+                                <View style={{ flex: 1, marginHorizontal: scale(-14) }}>
                                     <Carousel />
                                 </View>
                                 <View style={[styles.servicesBox, { paddingVertical: 0 }]}>

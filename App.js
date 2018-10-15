@@ -20,16 +20,24 @@ export default class App extends React.Component {
     componentDidMount() {
         // do stuff while splash screen is shown
         // After having done stuff (such as async tasks) hide the splash screen
-        SplashScreen.hide();
-        setTimeout(() => { this.setState({ isloading: false }) }, 5000)
         console.log('pixel ratio is ', PixelRatio.get());
         console.log('pixel font is ', PixelRatio.getFontScale());
         console.log('pixel layout is ', PixelRatio.getPixelSizeForLayoutSize());
     }
+
+
+
+    _finishLoading() {
+        console.log("Finished loading");
+        SplashScreen.hide();
+        setTimeout(() => { this.setState({ isloading: false }) }, 4000)
+    }
+
+
     render() {
         console.log("isloading", this.state.isloading);
         if (this.state.isloading === true) {
-            return <Loading />
+            return <Loading imageLoaded={this._finishLoading.bind(this)}/>
         }
         return (
             <Provider store={store}>

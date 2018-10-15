@@ -114,6 +114,6 @@ const styles = StyleSheet.create({
       fontSize: scale(16),
       textAlign :'left',
       color:'white',
-      fontFamily:'Montserrat-bold'
+      fontFamily:'Montserrat-Bold'
     }
 })
